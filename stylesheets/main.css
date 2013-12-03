@@ -108,11 +108,13 @@ input, textarea, select, button {
 }
 input[type="submit"], button { cursor: pointer; }
 
-.container {
+.container, .content-container {
 	margin: 0 auto;
-	max-width: 1040px; max-width: 104rem;
 	padding: 0 20px; padding: 0 2rem;
 }
+.container { max-width: 1040px; max-width: 104rem; }
+.content-container { max-width: 600px; max-width: 60rem; }
+
 .half-container {
 	max-width: 498px; max-width: 49.8rem;
 	width: 100%;
