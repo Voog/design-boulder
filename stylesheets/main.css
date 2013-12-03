@@ -26,7 +26,7 @@ table {
 .element img, .flags a, .menu li a { display: block; }
 .lang-menu-popover, .main-menu .menu .mobile-lang, .menu-btn { display: none; }
 
-.lang-menu-popover, .flags a:after { position: absolute; }
+.lang-menu-popover, .flags a:after, .top-bar { position: absolute; }
 .flags a { position: relative; }
 /*.something { position: static; }*/
 
@@ -207,10 +207,15 @@ input[type="submit"], button { cursor: pointer; }
 
 /* Header */
 .site-header {
-	border-bottom: 1px solid #e5e5e5; border-bottom: 1px solid rgba(229,229,229,1);
+	background-position: cover;
 	line-height: 1;
+	min-height: 623px; min-height: 62.3rem;
+	/*padding: 24px 0; padding: 2.4rem 0;*/
+}
+.top-bar {
+	border-bottom: 1px solid #e5e5e5; border-bottom: 1px solid rgba(229,229,229,1);
 	min-height: 79px; min-height: 7.9rem;
-	padding: 24px 0; padding: 2.4rem 0;
+	width: 100%;
 }
 .site-header-right { margin-top: 5px; margin-top: 0.5rem; }
 .header-logo {
