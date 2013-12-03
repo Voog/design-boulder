@@ -21,9 +21,9 @@ table {
 }
 
 /* Displaying */
-.content-header h1 { display: inline; }
+.content-header h1, .post-title { display: inline; }
 .half-container, .horizontal li, .lang-btn, .lang-menu, .large-btn, .main-menu, .search-area, .site-header-left, .site-header-right { display: inline-block; }
-.content-container > img, .element img, .flags a, .menu li a { display: block; }
+.content-container > img, .element img, .flags a, .menu li a, .post-date { display: block; }
 .vertical-align { display: table; }
 .align-middle { display: table-cell; }
 .lang-menu-popover, .main-menu .menu .mobile-lang, .menu-btn { display: none; }
@@ -43,7 +43,7 @@ input, select, .align-middle, .site-header-left, .site-header-right, .main-menu,
 
 /*.something { text-align: left; }*/
 .flags { text-align: right; }
-.align-center, .contacts, .content-header { text-align: center; }
+.align-center, .contacts, .content-header, .post-header { text-align: center; }
 /*.something { text-align: justify; }*/
 
 /* Remove flicker bug from animamated elements in Safari */
@@ -301,6 +301,8 @@ input[type="submit"], button { cursor: pointer; }
 .content-container > ul, .content-container > ol { padding: 0 40px; padding: 0 4rem; }
  .content-container > table { padding: 0; }
 .content-header {	margin-bottom: 1rem; }
+
+/* Blog */
 
 /* Tables */
 .page-content td { padding: 18px; padding: 1.8rem; }
