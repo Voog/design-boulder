@@ -32,7 +32,7 @@
 					<li>Another item</li>
 					<li>Third one</li>
 				</ol>
-				If you require a more thorough product database or e-commerce, then we've got some great custom solutions for you. Contact Edicy support and let's get it done!
+				<div>If you require a more thorough product database or e-commerce, then we've got some great custom solutions for you. Contact Edicy support and let's get it done!</div>
 					<!-- {% content %} -->
 			</div>
 		</main>

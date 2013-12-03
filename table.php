@@ -12,38 +12,40 @@
 			<!-- {% include "site-header" %} -->
 
 		<main class="page-content cfx" role="main">
-			<h1>Here's a good place for your slogan.</h1>
-				<!-- <h1>{% contentblock name="slogan" %}{{ "title_goes_here" | lc }}{% endcontentblock %}</h1> -->
-				<table width="100%">
-					<tbody>
-						<tr>
-							<td><b>First name</b></td>
-							<td><b>Last name</b></td>
-							<td><b>Points</b></td>
-						</tr>
-						<tr>
-							<td>Jill</td>
-							<td>Smith</td>
-							<td>50</td>
-						</tr>
-						<tr>
-							<td>Eve</td>
-							<td>Jackson</td>
-							<td>94</td>
-						</tr>
-						<tr>
-							<td>John</td>
-							<td>Doe</td>
-							<td>80</td>
-						</tr>
-						<tr>
-							<td>Adam</td>
-							<td>Johnson</td>
-							<td>67</td>
-						</tr>
-					</tbody>
-				</table>
-				<!-- {% content only="text" %} -->
+			<div class="content-container">
+				<h1>Here's a good place for your table.</h1>
+					<!-- <h1>{% contentblock name="slogan" %}{{ "title_goes_here" | lc }}{% endcontentblock %}</h1> -->
+					<table width="100%">
+						<tbody>
+							<tr>
+								<td><b>First name</b></td>
+								<td><b>Last name</b></td>
+								<td><b>Points</b></td>
+							</tr>
+							<tr>
+								<td>Jill</td>
+								<td>Smith</td>
+								<td>50</td>
+							</tr>
+							<tr>
+								<td>Eve</td>
+								<td>Jackson</td>
+								<td>94</td>
+							</tr>
+							<tr>
+								<td>John</td>
+								<td>Doe</td>
+								<td>80</td>
+							</tr>
+							<tr>
+								<td>Adam</td>
+								<td>Johnson</td>
+								<td>67</td>
+							</tr>
+						</tbody>
+					</table>
+						<!-- {% content only="text" %} -->
+				</div>
 		</main>
 
 		<?php require("components/site-footer.php") ?>
