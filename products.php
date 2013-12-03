@@ -17,6 +17,7 @@
 					<h1>This is where your products live.</h1>
 					<!-- <h1>{% contentblock name="slogan" %}{{ "title_goes_here" | lc }}{% endcontentblock %}</h1> -->
 				</header>
+				<img src="http://placeimg.com/700/256/any">
 				<h2>INTRODUCTION</h2>
 				<p>Introduce your products by writing text, showing pictures, building forms, adding galleries. If you don't need a Products page you can rename or delete it from the page properties tool on the lower right corner.</p>
 				<h3>This is an example unordered list</h3>
