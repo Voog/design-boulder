@@ -1,2 +1,6 @@
 
 sftp-config.json
+
+*.html
+
+site.json
