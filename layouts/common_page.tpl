@@ -1,24 +1,16 @@
 <!DOCTYPE html>
-<html lang="{{ page.language_code }}" class="full-height">
-<head>
-  {% include "html-head" %}
-</head>
+<html class="{% if editmode %}editmode{% else %}public{% endif %}" lang="{{ page.language_code }}">
+  <head>
+    {% include "html-head" %}
+    <meta property="og:url" content="{{ site.url }}">
+    <meta property="og:title" content="{{ site.name }}">
+    <meta property="og:description" content="{{ page.description }}">
+    <meta property="og:image" content="{{ site.url }}{{ photos_path }}/{{ page.data.fbimage }}"><!-- TODO: Add image location data tag -->
+  </head>
 
-<body>
-  <section class="site-content cfx">
-    {% include "site-header" %}
-
-    <main class="page-content cfx" role="main">
-      <section class="content-container">
-        <header class="content-header">
-          <h1>{% contentblock name="slogan" %}{{ "title_goes_here" | lc }}{% endcontentblock %}</h1>
-        </header>
-        <div class="content-body">{% content %}</div>
-      </section>
-    </main>
-    
-    {% include "site-footer" %}
-  </section>
-  <script>project.initCommonPage();</script>
-</body>
+  <body class="front-page">
+    <div class="container js-container">
+      Common page
+    </div>
+  </body>
 </html>
