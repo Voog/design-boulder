@@ -11,7 +11,11 @@
   <body class="front-page">
     <div class="container js-container">
       {% include "header" %}
-      Muna
+      <main class="content" role="main">
+        <section class="content-formatted">
+          {% content %}
+        </section>
+      </main>
     </div>
 
     {% include "javascripts" %}
