@@ -15,14 +15,6 @@ body {
   color: #444444;
 }
 
-.stretch {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
 .container {
   margin: 0 auto;
 }
@@ -32,6 +24,26 @@ body {
 .container .wrap {
   max-width: 1000px;
   margin: 0 auto;
+}
+.container .btn {
+  margin: 0;
+  padding: 15px 40px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 24px;
+  color: white;
+  background-color: #e4ac00;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.container .btn::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+.container .btn:hover {
+  background-color: #e4ac00;
+  background-color: rgba(228, 172, 0, 0.8);
 }
 
 .content-formatted {
@@ -43,18 +55,6 @@ body {
 }
 .content-formatted:after {
   clear: both;
-}
-.content-formatted h1,
-.content-formatted h2,
-.content-formatted h3,
-.content-formatted h4,
-.content-formatted h5,
-.content-formatted h6,
-.content-formatted p,
-.content-formatted img,
-.content-formatted pre,
-.content-formatted table {
-  margin: 0;
 }
 .content-formatted h1:first-child,
 .content-formatted h2:first-child,
@@ -91,6 +91,9 @@ body {
 .content-formatted h3 {
   font-size: 18px;
 }
+.content-formatted p {
+  margin-bottom: 0;
+}
 .content-formatted a {
   color: #e4ac00;
 }
@@ -124,10 +127,11 @@ body {
 }
 
 .main-menu {
-  font-family: "Bebas Neue";
+  display: inline-block;
+  vertical-align: middle;
 }
 .main-menu li {
-  margin-left: 13px;
+  margin-left: 20px;
 }
 .main-menu li:first-child {
   margin-left: 0;
@@ -150,12 +154,48 @@ body {
   display: none;
 }
 
+.lang-menu {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 20px;
+  line-height: 1.1;
+}
+.lang-menu li {
+  display: list-item;
+  text-align: right;
+  font-size: 12px;
+}
+.lang-menu li a {
+  position: relative;
+  display: block;
+  padding: 5px 40px 3px 13px;
+  color: #e4ac00;
+}
+.lang-menu li a:hover, .lang-menu li.active a, .lang-menu li.active a:hover {
+  color: white;
+  background-color: #e4ac00;
+}
+.lang-menu li a:after {
+  top: 4px;
+  right: 11px;
+}
+.lang-menu li.add-lang-btn {
+  margin-top: 5px;
+  margin-right: 10px;
+  text-align: right;
+}
+.lang-menu li .edy-menu-langadd {
+  margin-left: 5px;
+}
+
 .lang-menu-btn {
   position: relative;
   display: inline-block;
   vertical-align: top;
   width: 20px;
   height: 13px;
+  margin-top: 2px;
   font-size: 0;
   background: none;
   border: none;
@@ -192,41 +232,6 @@ body {
   -webkit-box-shadow: 0 0 1px black;
   box-shadow: 0 0 1px black;
   z-index: 1;
-}
-
-.lang-menu {
-  position: absolute;
-  top: 0;
-  right: 0;
-  display: inline-block;
-  line-height: 1.1;
-}
-.lang-menu li {
-  display: list-item;
-  text-align: right;
-  font-size: 12px;
-}
-.lang-menu li a {
-  position: relative;
-  display: block;
-  padding: 5px 40px 3px 13px;
-  color: #e4ac00;
-}
-.lang-menu li a:hover, .lang-menu li.active a, .lang-menu li.active a:hover {
-  color: white;
-  background-color: #e4ac00;
-}
-.lang-menu li a:after {
-  top: 4px;
-  right: 11px;
-}
-.lang-menu li.add-lang-btn {
-  margin-top: 5px;
-  margin-right: 10px;
-  text-align: right;
-}
-.lang-menu li .edy-menu-langadd {
-  margin-left: 5px;
 }
 
 .sq:after {
@@ -399,8 +404,21 @@ body {
 
 /* HEADER */
 .header {
+  position: relative;
   background-size: cover;
   min-height: 625px;
+}
+.header .bg-color {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.header-top,
+.header-bottom {
+  position: relative;
 }
 
 .header-top {
@@ -425,10 +443,23 @@ body {
 }
 
 .header-bottom .content-formatted {
+  display: table;
+  max-width: 805px;
+  height: 575px;
+  margin: 0 auto;
+  text-align: center;
   font-weight: 600;
   font-style: italic;
   font-size: 30px;
+  line-height: 1.5;
   color: white;
+}
+.header-bottom .content-formatted .wrap {
+  display: table-cell;
+  vertical-align: middle;
+}
+.header-bottom .content-formatted .btn {
+  margin-top: 43px;
 }
 
 .header-title {

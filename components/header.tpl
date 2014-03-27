@@ -45,7 +45,10 @@
 
   <div class="header-bottom">
     <section class="content-formatted">
-      {% content name="header_content" %}
+      <div class="wrap">
+        {% content name="header_content" %}
+        <button class="btn">View our menu</button>
+      </div>
     </section>
   </div>
 </header>
