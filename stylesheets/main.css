@@ -24,6 +24,7 @@ body {
 .container .wrap {
   max-width: 1000px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 .container .btn {
   margin: 0;
@@ -444,7 +445,7 @@ body {
 
 .header-bottom .content-formatted {
   display: table;
-  max-width: 805px;
+  max-width: 845px;
   height: 575px;
   margin: 0 auto;
   text-align: center;
@@ -479,6 +480,88 @@ body {
 /* TOPBAR */
 /* CONTENT */
 /* FRONT PAGE */
+.front-page .main-fearure,
+.front-page .summary {
+  display: table;
+  width: 100%;
+}
+.front-page .feature-left,
+.front-page .feature-right {
+  display: table-cell;
+  vertical-align: middle;
+}
+.front-page .main-feature .feature-left {
+  width: 465px;
+  padding: 50px 16px 50px 0;
+}
+.front-page .main-feature .feature-left img {
+  width: 48.1%;
+  height: auto;
+}
+.front-page .main-feature .feature-left img:first-child {
+  margin-right: 12px;
+}
+.front-page .main-feature .feature-right {
+  width: 460px;
+  padding: 0 0 0 43px;
+}
+.front-page .main-feature .feature-right h2 {
+  font-weight: 600;
+  font-style: italic;
+  font-size: 24px;
+}
+.front-page .main-feature .feature-right p {
+  margin-bottom: 24px;
+}
+.front-page .summary {
+  color: white;
+  background-color: #e4ac00;
+}
+.front-page .summary .wrap {
+  padding: 50px 20px;
+}
+.front-page .summary .blog,
+.front-page .summary .quotation {
+  display: inline-block;
+  vertical-align: top;
+}
+.front-page .summary .blog {
+  width: 500px;
+}
+.front-page .summary .blog .blog-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 600;
+  font-style: italic;
+  font-size: 20px;
+  color: white;
+  color: rgba(255, 255, 255, 0.5);
+}
+.front-page .summary .blog .post-title {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.front-page .summary .blog .post-title a {
+  text-decoration: none;
+  font-size: 24px;
+  color: white;
+  border-bottom: 1px solid white;
+}
+.front-page .summary .blog .post-title a:hover {
+  border: none;
+}
+.front-page .summary .blog .post-date {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  color: white;
+  color: rgba(255, 255, 255, 0.5);
+}
+.front-page .summary .quotation {
+  width: 500px;
+  font-size: 24px;
+}
+
 /* COMMON PAGE */
 /* BLOG & BLOG ARTICLE */
 /* GALLERY */
