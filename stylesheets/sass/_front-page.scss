@@ -4,8 +4,8 @@
   .summary {
     .wrap {
       display: table;
+      max-width: 1040px;
       width: 100%;
-      padding: 40px 0;
       @include box-sizing(border-box);
     }
   }
@@ -17,9 +17,12 @@
   }
 
   .main-feature {
+    .wrap {
+      padding: 40px 20px;
+    }
     .feature-left {
       width: 430px;
-      padding: 0 20px;
+      padding: 0 20px 0 0;
       // TODO: Might not be needed if image adding logic is going to be something else than common content area.
       img {
         max-width: 224px;
@@ -30,7 +33,7 @@
       }
     }
     .feature-right {
-      width: 400px;
+      width: 411px;
       padding: 70px 0;
     }
     .content-formatted {
@@ -60,47 +63,58 @@
     @include color($white);
     @include bg($secondary-color);
     .wrap {
-      padding: 50px 20px;
+      padding: 0;
     }
     .blog,
     .quotation {
-      display: inline-block;
-      vertical-align: top;
+      display: table-cell;
+      vertical-align: middle;
     }
     .blog {
-      width: 500px;
+      width: 458px;
+      padding: 43px 40px 60px 20px;
+      @include border(right,4px,solid,$white);
       .blog-title {
         margin-top: 0;
-        margin-bottom: 0;
+        margin-bottom: 3px;
         font-weight: 600;
         font-style: italic;
         font-size: 20px;
         @include color($white,.5);
       }
-      .post-title {
-        margin-top: 0;
-        margin-bottom: 0;
-        a {
-          text-decoration: none;
-          font-size: 24px;
-          @include color($white);
-          @include border(bottom,1px,solid,$white);
-          &:hover {
-            border: none;
+      .post {
+        margin-top: 10px;
+        .post-title {
+          margin: 0;
+          font-weight: 400;
+          line-height: 1;
+          a {
+            text-decoration: none;
+            font-size: 24px;
+            @include color($white);
+            @include border(bottom,1px,solid,$white);
+            &:hover {
+              border: none;
+            }
           }
         }
-      }
-      .post-date {
-        margin-top: 0;
-        margin-bottom: 0;
-        font-size: 16px;
-        @include color($white,.5);
+        .post-date {
+          display: block;
+          margin-top: 6px;
+          font-size: 16px;
+          @include color($white,.5);
+        }
       }
     }
 
     .quotation {
-      width: 500px;
+      width: 458px;
+      padding: 0 20px 0 40px;
       font-size: 24px;
     }
+  }
+
+  .map {
+    min-height: 273px;
   }
 }

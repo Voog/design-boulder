@@ -485,8 +485,8 @@ body {
 .front-page .main-feature .wrap,
 .front-page .summary .wrap {
   display: table;
+  max-width: 1040px;
   width: 100%;
-  padding: 40px 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -496,9 +496,12 @@ body {
   display: table-cell;
   vertical-align: middle;
 }
+.front-page .main-feature .wrap {
+  padding: 40px 20px;
+}
 .front-page .main-feature .feature-left {
   width: 430px;
-  padding: 0 20px;
+  padding: 0 20px 0 0;
 }
 .front-page .main-feature .feature-left img {
   max-width: 224px;
@@ -508,7 +511,7 @@ body {
   margin-right: 12px;
 }
 .front-page .main-feature .feature-right {
-  width: 400px;
+  width: 411px;
   padding: 70px 0;
 }
 .front-page .main-feature .content-formatted h2 {
@@ -535,48 +538,58 @@ body {
   background-color: #e4ac00;
 }
 .front-page .summary .wrap {
-  padding: 50px 20px;
+  padding: 0;
 }
 .front-page .summary .blog,
 .front-page .summary .quotation {
-  display: inline-block;
-  vertical-align: top;
+  display: table-cell;
+  vertical-align: middle;
 }
 .front-page .summary .blog {
-  width: 500px;
+  width: 458px;
+  padding: 43px 40px 60px 20px;
+  border-right: 4px solid white;
 }
 .front-page .summary .blog .blog-title {
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 3px;
   font-weight: 600;
   font-style: italic;
   font-size: 20px;
   color: white;
   color: rgba(255, 255, 255, 0.5);
 }
-.front-page .summary .blog .post-title {
-  margin-top: 0;
-  margin-bottom: 0;
+.front-page .summary .blog .post {
+  margin-top: 10px;
 }
-.front-page .summary .blog .post-title a {
+.front-page .summary .blog .post .post-title {
+  margin: 0;
+  font-weight: 400;
+  line-height: 1;
+}
+.front-page .summary .blog .post .post-title a {
   text-decoration: none;
   font-size: 24px;
   color: white;
   border-bottom: 1px solid white;
 }
-.front-page .summary .blog .post-title a:hover {
+.front-page .summary .blog .post .post-title a:hover {
   border: none;
 }
-.front-page .summary .blog .post-date {
-  margin-top: 0;
-  margin-bottom: 0;
+.front-page .summary .blog .post .post-date {
+  display: block;
+  margin-top: 6px;
   font-size: 16px;
   color: white;
   color: rgba(255, 255, 255, 0.5);
 }
 .front-page .summary .quotation {
-  width: 500px;
+  width: 458px;
+  padding: 0 20px 0 40px;
   font-size: 24px;
+}
+.front-page .map {
+  min-height: 273px;
 }
 
 /* COMMON PAGE */
