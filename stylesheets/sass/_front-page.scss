@@ -114,6 +114,15 @@
     }
   }
 
+  .contacts {
+    text-align: center;
+    font-size: 24px;
+    .wrap {
+      padding: 50px 20px;
+      line-height: 2.1;
+    }
+  }
+
   .map {
     min-height: 273px;
   }
