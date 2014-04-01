@@ -10,7 +10,7 @@
 
   <body class="front-page">
     <div class="container js-container">
-            {% include "header" %}
+      {% include "header" %}
     </div>
   </body>
 </html>
