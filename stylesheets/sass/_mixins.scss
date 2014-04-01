@@ -1,0 +1,208 @@
+// GENERAL
+@mixin calc($property, $expression) {
+  #{$property}: -webkit-calc(#{$expression});
+  #{$property}: calc(#{$expression});
+}
+
+// BOXES
+@mixin box-shadow($top, $left, $blur, $color, $opacity: 1, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow: inset $top $left $blur rgba($color, $opacity);
+    box-shadow: inset $top $left $blur rgba($color, $opacity);
+  } @else {
+    -webkit-box-shadow: $top $left $blur rgba($color, $opacity);
+    box-shadow: $top $left $blur rgba($color, $opacity);
+  }
+}
+
+// COLORS
+@mixin bg($color, $opacity: 1) {
+  @if $opacity == 1 {
+    background-color: rgba($color, $opacity);
+  } @else {
+    background-color: $color;
+    background-color: rgba($color, $opacity);
+  }
+}
+
+@mixin color($color, $opacity: 1) {
+  @if $opacity == 1 {
+    color: rgba($color, $opacity);
+  } @else {
+    color: $color;
+    color: rgba($color, $opacity);
+  }
+}
+
+// BORDERS
+@mixin border($side, $width, $style, $color, $opacity: 1) {
+  @if $side == 'all' {
+    @if $opacity == 1 {
+      border: $width $style rgba($color, $opacity);
+    } @else {
+      border: $width $style $color;
+      border: $width $style rgba($color, $opacity);
+    }
+  } @else {
+    @if $opacity == 1 {
+      border-#{$side}: $width $style rgba($color, $opacity);
+    } @else {
+      border-#{$side}: $width $style $color;
+      border-#{$side}: $width $style rgba($color, $opacity);
+    }
+  }
+}
+
+// PERSPECTIVE
+@mixin perspective($value: 1000) {
+  -webkit-perspective: $value;
+  -webkit-backface-visibility: hidden;
+}
+
+// STRETCH
+@mixin stretch {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+// Media query
+
+@mixin query($value: $tablet-1) {
+  @media screen and (max-width: $value) {
+    @content;
+  }
+}
+
+// CSS3 Flexible Box Model and property defaults
+
+// Custom shorthand notation for flexbox
+@mixin box($orient: inline-axis, $pack: start, $align: stretch) {
+  @include display-box;
+  @include box-orient($orient);
+  @include box-pack($pack);
+  @include box-align($align);
+}
+
+@mixin display-box {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+}
+
+@mixin box-orient($orient: inline-axis) {
+// horizontal|vertical|inline-axis|block-axis|inherit
+@include prefixer(box-orient, $orient, webkit moz spec);
+}
+
+@mixin box-pack($pack: start) {
+// start|end|center|justify
+@include prefixer(box-pack, $pack, webkit moz spec);
+}
+
+@mixin box-align($align: stretch) {
+// start|end|center|baseline|stretch
+@include prefixer(box-align, $align, webkit moz spec);
+}
+
+@mixin box-direction($direction: normal) {
+// normal|reverse|inherit
+@include prefixer(box-direction, $direction, webkit moz spec);
+}
+
+@mixin box-lines($lines: single) {
+// single|multiple
+@include prefixer(box-lines, $lines, webkit moz spec);
+}
+
+@mixin box-ordinal-group($int: 1) {
+  @include prefixer(box-ordinal-group, $int, webkit moz spec);
+}
+
+@mixin box-flex($value: 0.0) {
+  @include prefixer(box-flex, $value, webkit moz spec);
+}
+
+@mixin box-flex-group($int: 1) {
+  @include prefixer(box-flex-group, $int, webkit moz spec);
+}
+
+
+//************************************************************************//
+// New Flexbox 2012 Spec
+// http://dev.w3.org/csswg/css3-flexbox/
+//************************************************************************//
+@mixin display($value) {
+//  flex | inline-flex
+@if $value == "flex" {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: flex;
+}
+
+@elseif $value == "inline-flex" {
+  display: -webkit-inline-flex;
+  display: -moz-inline-flex;
+  display: inline-flex;
+}
+
+@else {
+  display: $value;
+}
+}
+
+@mixin flex($value) {
+  @include prefixer(flex, $value, webkit moz spec);
+}
+
+@mixin flex-direction($value: row) {
+//  row | row-reverse | column | column-reverse
+@include prefixer(flex-direction, $value, webkit moz spec);
+}
+
+@mixin flex-wrap($value: nowrap) {
+// nowrap | wrap | wrap-reverse
+@include prefixer(flex-wrap, $value, webkit moz spec);
+}
+@mixin flex-flow($value) {
+// flex-direction || flex-wrap
+@include prefixer(flex-flow, $value, webkit moz spec);
+}
+
+@mixin order($int: 0) {
+  @include prefixer(order, $int, webkit moz spec);
+}
+
+@mixin flex-grow($number: 0) {
+  @include prefixer(flex-grow, $number, webkit moz spec);
+}
+
+@mixin flex-shrink($number: 1) {
+  @include prefixer(flex-shrink, $number, webkit moz spec);
+}
+
+@mixin flex-basis($width: auto) {
+  @include prefixer(flex-basis, $width, webkit moz spec);
+}
+
+@mixin justify-content ($value: flex-start) {
+// flex-start | flex-end | center | space-between | space-around
+@include prefixer(justify-content, $value, webkit moz spec)
+}
+
+@mixin align-items($value: stretch) {
+// flex-start | flex-end | center | baseline | stretch
+@include prefixer(align-items, $value, webkit moz spec)
+}
+
+@mixin align-self($value: auto) {
+// auto | flex-start | flex-end | center | baseline | stretch
+@include prefixer(align-self, $value, webkit moz spec)
+}
+
+@mixin align-content($value: stretch) {
+// flex-start | flex-end | center | space-between | space-around | stretch
+@include prefixer(align-content, $value, webkit moz spec)
+}

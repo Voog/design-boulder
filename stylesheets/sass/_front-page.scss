@@ -1,0 +1,89 @@
+/* FRONT PAGE */
+.front-page {
+  .main-fearure,
+  .summary {
+    display: table;
+    width: 100%;
+  }
+
+  .feature-left,
+  .feature-right {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .main-feature {
+    .feature-left {
+      width: 465px;
+      padding: 50px 16px 50px 0;
+      // TODO: Might not be needed if image adding logic is going to be something else than common content area.
+      img {
+        width: 48.1%;
+        height: auto;
+        &:first-child {
+          margin-right: 12px;
+        }
+      }
+    }
+    .feature-right {
+      width: 460px;
+      padding: 0 0 0 43px;
+      h2 {
+        font-weight: 600;
+        font-style: italic;
+        font-size: 24px;
+      }
+      p {
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  .summary {
+    @include color($white);
+    @include bg($secondary-color);
+    .wrap {
+      padding: 50px 20px;
+    }
+    .blog,
+    .quotation {
+      display: inline-block;
+      vertical-align: top;
+    }
+    .blog {
+      width: 500px;
+      .blog-title {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-weight: 600;
+        font-style: italic;
+        font-size: 20px;
+        @include color($white,.5);
+      }
+      .post-title {
+        margin-top: 0;
+        margin-bottom: 0;
+        a {
+          text-decoration: none;
+          font-size: 24px;
+          @include color($white);
+          @include border(bottom,1px,solid,$white);
+          &:hover {
+            border: none;
+          }
+        }
+      }
+      .post-date {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 16px;
+        @include color($white,.5);
+      }
+    }
+
+    .quotation {
+      width: 500px;
+      font-size: 24px;
+    }
+  }
+}

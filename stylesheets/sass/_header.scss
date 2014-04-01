@@ -1,0 +1,65 @@
+/* HEADER */
+.header {
+  position: relative;
+  background-size: cover;
+  min-height: 625px;
+  .bg-color {
+    @include stretch;
+  }
+}
+.header-top,
+.header-bottom {
+  position: relative;
+}
+.header-top {
+  @include bg($white,.9);
+  .wrap {
+    display: table;
+    width: 100%;
+    height: 80px;
+    @include box-sizing(border-box);
+  }
+  .header-left,
+  .header-right {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .header-right {
+    text-align: right;
+  }
+}
+.header-bottom {
+  .content-formatted {
+    display: table;
+    max-width: 845px;
+    height: 575px;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 30px;
+    line-height: 1.5;
+    @include color($white);
+    .wrap {
+      display: table-cell;
+      vertical-align: middle;
+    }
+    .btn {
+      margin-top: 43px;
+    }
+  }
+}
+
+.header-title {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 340px;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 30px;
+  &,
+  a {
+    text-decoration: none;
+    @include color($primary-color);
+  }
+}

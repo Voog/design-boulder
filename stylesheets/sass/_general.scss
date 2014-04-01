@@ -1,0 +1,113 @@
+/* GENERAL */
+html,
+body {
+  height: auto !important; // TODO: Why does E3 have body and html height set to 100%?
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Adelle', 'Avenir Next', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.4;
+  @include color($primary-color);
+}
+
+.container {
+  margin: 0 auto;
+  a {
+    img {
+      border: none;
+    }
+  }
+  .wrap {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  .btn {
+    margin: 0;
+    padding: 15px 40px;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 24px;
+    @include color($white);
+    @include bg($secondary-color);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    &::-moz-focus-inner {
+      padding: 0;
+      border: 0;
+    }
+    &:hover {
+      @include bg($secondary-color,.8);
+    }
+  }
+}
+
+.content-formatted {
+  @include clearfix;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  img,
+  pre,
+  table {
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 600;
+  }
+  h1,
+  h2 {
+    text-align: center;
+  }
+  h1 {
+    font-style: italic;
+    font-size: 30px;
+    @include color($secondary-color);
+  }
+  h2 {
+    font-size: 20px;
+  }
+  h3 {
+    font-size: 18px;
+  }
+  p {
+    margin-bottom: 0;
+  }
+
+  a {
+    @include color($secondary-color);
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  img,
+  pre {
+
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  pre {
+    overflow: auto;
+    padding: 10px;
+    font-size: 14px;
+    @include bg($pre-bg);
+  }
+}
