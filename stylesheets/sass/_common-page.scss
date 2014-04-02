@@ -1,7 +1,7 @@
 /* COMMON PAGE */
 .common-page {
   .header {
-    @include border(bottom,1px,solid,$header-border-color);
+    @include border(bottom,1px,solid,$border-color);
   }
   .content {
     .content-formatted {

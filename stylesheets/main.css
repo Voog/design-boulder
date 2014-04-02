@@ -65,6 +65,7 @@ body {
 .content-formatted p:first-child,
 .content-formatted img:first-child,
 .content-formatted pre:first-child,
+.content-formatted code:first-child,
 .content-formatted table:first-child {
   margin-top: 0;
 }
@@ -74,10 +75,16 @@ body {
 .content-formatted h4,
 .content-formatted h5,
 .content-formatted h6 {
-  /* TODO: Remove the top margin reset */
-  margin-top: 0;
-  margin-bottom: 0;
   font-weight: 600;
+}
+.content-formatted h1,
+.content-formatted h2,
+.content-formatted h3,
+.content-formatted h4,
+.content-formatted h5,
+.content-formatted h6,
+.content-formatted p {
+  margin-bottom: 0;
 }
 .content-formatted h1,
 .content-formatted h2 {
@@ -90,14 +97,15 @@ body {
   text-decoration: underline;
 }
 .content-formatted h2 {
+  margin-top: 50px;
   font-size: 20px;
 }
 .content-formatted h3 {
+  margin-top: 30px;
   font-size: 18px;
 }
 .content-formatted p {
-  /* TODO: Remove the top margin reset */
-  margin-top: 0;
+  margin-top: 30px;
   margin-bottom: 0;
 }
 .content-formatted a {
@@ -105,6 +113,12 @@ body {
 }
 .content-formatted a:hover {
   text-decoration: none;
+}
+.content-formatted img,
+.content-formatted pre,
+.content-formatted code,
+.content-formatted table {
+  margin-top: 20px;
 }
 .content-formatted img {
   max-width: 100%;
@@ -609,6 +623,34 @@ body {
 /* BLOG & BLOG ARTICLE */
 /* GALLERY */
 /* TABLES */
+.content-formatted .table-container {
+  margin-top: 20px;
+}
+.content-formatted .overthrow {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.content-formatted .horizontal-scroll {
+  border-left: 1px dashed #e5e5e5;
+  border-right: 1px dashed #e5e5e5;
+}
+.content-formatted table {
+  width: 100%;
+  border: 1px solid #e5e5e5;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.content-formatted table tr:first-child td {
+  color: white;
+  background-color: #e4ac00;
+  border: 1px solid #e4ac00;
+}
+.content-formatted table tr td {
+  padding: 11px 17px;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+}
+
 /* FORMS */
 /* COMMENTS */
 /* FOOTER */

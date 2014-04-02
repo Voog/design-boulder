@@ -57,6 +57,7 @@ body {
   p,
   img,
   pre,
+  code,
   table {
     &:first-child {
       margin-top: 0;
@@ -69,11 +70,19 @@ body {
   h4,
   h5,
   h6 {
-    /* TODO: Remove the top margin reset */
-    margin-top: 0;
-    margin-bottom: 0;
     font-weight: 600;
   }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin-bottom: 0;
+  }
+
   h1,
   h2 {
     text-align: center;
@@ -85,14 +94,15 @@ body {
     text-decoration: underline;
   }
   h2 {
+    margin-top: 50px;
     font-size: 20px;
   }
   h3 {
+    margin-top: 30px;
     font-size: 18px;
   }
   p {
-    /* TODO: Remove the top margin reset */
-    margin-top: 0;
+    margin-top: 30px;
     margin-bottom: 0;
   }
 
@@ -102,9 +112,12 @@ body {
       text-decoration: none;
     }
   }
-  img,
-  pre {
 
+  img,
+  pre,
+  code,
+  table {
+    margin-top: 20px;
   }
   img {
     max-width: 100%;
