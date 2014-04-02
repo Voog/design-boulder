@@ -77,51 +77,51 @@
       margin-left: 5px;
     }
   }
-}
 
-.lang-menu-btn {
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
-  width: 20px;
-  height: 13px;
-  margin-top: 2px;
-  font-size: 0;
-  background: none;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  &:hover {
-    // TODO: Hover effect
+  .lang-menu-btn {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: 20px;
+    height: 13px;
+    margin-top: 2px;
+    font-size: 0;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    &:hover {
+      // TODO: Hover effect
+    }
+    &:after {
+      top: 0;
+      left: 0;
+    }
   }
-  &:after {
-    top: 0;
-    left: 0;
-  }
-}
-.lang-menu-btn:after,
-.lang-menu li a.lang-flag:after{
-  position: absolute;
-  display: block;
-  width: 20px;
-  height: 13px;
-  content: '';
-  background-image: url('../images/flag-sprite.png');
-  background-repeat: no-repeat;
-}
-
-.lang-menu-popover {
-  display: none;
-  &.expanded {
+  .lang-menu-btn:after,
+  .lang-menu li a.lang-flag:after{
     position: absolute;
-    top: 25px;
-    right: -12px;
     display: block;
-    padding: 6px 0;
-    min-width: 121px;
-    @include bg($white);
-    @include box-shadow(0, 0, 1px, rgba($black,.3));
-    z-index: 1;
+    width: 20px;
+    height: 13px;
+    content: '';
+    background-image: url('../images/flag-sprite.png');
+    background-repeat: no-repeat;
+  }
+
+  .lang-menu-popover {
+    display: none;
+    &.expanded {
+      position: absolute;
+      top: 25px;
+      right: -12px;
+      display: block;
+      padding: 6px 0;
+      min-width: 121px;
+      @include bg($white);
+      @include box-shadow(0, 0, 1px, rgba($black,.3));
+      z-index: 1;
+    }
   }
 }
 

@@ -191,8 +191,7 @@ body {
 .lang-menu li .edy-menu-langadd {
   margin-left: 5px;
 }
-
-.lang-menu-btn {
+.lang-menu .lang-menu-btn {
   position: relative;
   display: inline-block;
   vertical-align: top;
@@ -205,13 +204,12 @@ body {
   outline: none;
   cursor: pointer;
 }
-.lang-menu-btn:after {
+.lang-menu .lang-menu-btn:after {
   top: 0;
   left: 0;
 }
-
-.lang-menu-btn:after,
-.lang-menu li a.lang-flag:after {
+.lang-menu .lang-menu-btn:after,
+.lang-menu .lang-menu li a.lang-flag:after {
   position: absolute;
   display: block;
   width: 20px;
@@ -220,11 +218,10 @@ body {
   background-image: url("../images/flag-sprite.png");
   background-repeat: no-repeat;
 }
-
-.lang-menu-popover {
+.lang-menu .lang-menu-popover {
   display: none;
 }
-.lang-menu-popover.expanded {
+.lang-menu .lang-menu-popover.expanded {
   position: absolute;
   top: 25px;
   right: -12px;
@@ -418,17 +415,15 @@ body {
   left: 0;
   right: 0;
 }
-
-.header-top,
-.header-bottom {
+.header .header-top,
+.header .header-bottom {
   position: relative;
 }
-
-.header-top {
+.header .header-top {
   background-color: white;
   background-color: rgba(255, 255, 255, 0.9);
 }
-.header-top .wrap {
+.header .header-top .wrap {
   display: table;
   width: 100%;
   height: 80px;
@@ -436,16 +431,15 @@ body {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-.header-top .header-left,
-.header-top .header-right {
+.header .header-top .header-left,
+.header .header-top .header-right {
   display: table-cell;
   vertical-align: middle;
 }
-.header-top .header-right {
+.header .header-top .header-right {
   text-align: right;
 }
-
-.header-bottom .content-formatted {
+.header .header-bottom .content-formatted {
   display: table;
   max-width: 845px;
   height: 575px;
@@ -457,15 +451,14 @@ body {
   line-height: 1.5;
   color: white;
 }
-.header-bottom .content-formatted .wrap {
+.header .header-bottom .content-formatted .wrap {
   display: table-cell;
   vertical-align: middle;
 }
-.header-bottom .content-formatted .btn {
+.header .header-bottom .content-formatted .btn {
   margin-top: 43px;
 }
-
-.header-title {
+.header .header-title {
   display: inline-block;
   vertical-align: middle;
   max-width: 340px;
@@ -473,13 +466,12 @@ body {
   font-style: italic;
   font-size: 30px;
 }
-.header-title,
-.header-title a {
+.header .header-title,
+.header .header-title a {
   text-decoration: none;
   color: #444444;
 }
 
-/* TOPBAR */
 /* CONTENT */
 /* FRONT PAGE */
 .front-page .main-feature .wrap,
@@ -607,3 +599,26 @@ body {
 /* FORMS */
 /* COMMENTS */
 /* FOOTER */
+.footer {
+  padding: 30px 0;
+  font-size: 16px;
+  background-color: #444444;
+}
+.footer,
+.footer a {
+  color: white;
+  color: rgba(255, 255, 255, 0.5);
+}
+.footer .footer-left,
+.footer .footer-right {
+  display: inline-block;
+  vertical-align: middle;
+}
+.footer .footer-left {
+  max-width: 150px;
+}
+.footer .footer-right {
+  width: 100%;
+  max-width: 810px;
+  text-align: right;
+}
