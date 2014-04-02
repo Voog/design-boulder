@@ -21,7 +21,7 @@ body {
   border: none;
 }
 .container .wrap {
-  max-width: 1000px;
+  max-width: 1040px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -74,6 +74,7 @@ body {
 .content-formatted h4,
 .content-formatted h5,
 .content-formatted h6 {
+  /* TODO: Remove the top margin reset */
   margin-top: 0;
   margin-bottom: 0;
   font-weight: 600;
@@ -86,6 +87,7 @@ body {
   font-style: italic;
   font-size: 30px;
   color: #e4ac00;
+  text-decoration: underline;
 }
 .content-formatted h2 {
   font-size: 20px;
@@ -94,6 +96,7 @@ body {
   font-size: 18px;
 }
 .content-formatted p {
+  /* TODO: Remove the top margin reset */
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -120,8 +123,7 @@ body {
 }
 
 .menu {
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0;
   padding-left: 0;
   list-style: none;
 }
@@ -209,7 +211,7 @@ body {
   left: 0;
 }
 .lang-menu .lang-menu-btn:after,
-.lang-menu .lang-menu li a.lang-flag:after {
+.lang-menu li a.lang-flag:after {
   position: absolute;
   display: block;
   width: 20px;
@@ -406,7 +408,6 @@ body {
 .header {
   position: relative;
   background-size: cover;
-  min-height: 625px;
 }
 .header .bg-color {
   position: absolute;
@@ -418,10 +419,6 @@ body {
 .header .header-top,
 .header .header-bottom {
   position: relative;
-}
-.header .header-top {
-  background-color: white;
-  background-color: rgba(255, 255, 255, 0.9);
 }
 .header .header-top .wrap {
   display: table;
@@ -474,6 +471,13 @@ body {
 
 /* CONTENT */
 /* FRONT PAGE */
+.front-page .header {
+  min-height: 625px;
+}
+.front-page .header .header-top {
+  background-color: white;
+  background-color: rgba(255, 255, 255, 0.9);
+}
 .front-page .main-feature .wrap,
 .front-page .summary .wrap {
   display: table;
@@ -593,6 +597,12 @@ body {
 }
 
 /* COMMON PAGE */
+.common-page .content .content-formatted {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 70px 20px;
+}
+
 /* BLOG & BLOG ARTICLE */
 /* GALLERY */
 /* TABLES */
@@ -619,6 +629,7 @@ body {
 }
 .footer .footer-right {
   width: 100%;
-  max-width: 810px;
+  max-width: 760px;
+  margin-left: 150px;
   text-align: right;
 }

@@ -1,5 +1,5 @@
-<header class="header" style="background-image: url('/photos/header-bg.jpg');">
-  <div class="bg-color" style="background-color: #333; background-color: rgba(51, 51, 51, 0.5);"></div>
+<header class="header" {% if site.root_item.selected? %}style="background-image: url('/photos/header-bg.jpg');"{% endif %}>
+  {% if site.root_item.selected? %}<div class="bg-color" style="background-color: #333; background-color: rgba(51, 51, 51, 0.5);"></div>{% endif %}
   <div class="header-top">
     <div class="wrap">
       <section class="header-left">
@@ -43,12 +43,14 @@
     </div>
   </div>
 
-  <div class="header-bottom">
-    <section class="content-formatted">
-      <div class="wrap">
-        {% content name="header_content" %}
-        <button class="btn">View our menu</button>
-      </div>
-    </section>
-  </div>
+  {% if site.root_item.selected? %}
+    <div class="header-bottom">
+      <section class="content-formatted">
+        <div class="wrap">
+          {% content name="header_content" %}
+          <button class="btn">View our menu</button>
+        </div>
+      </section>
+    </div>
+  {% endif %}
 </header>

@@ -2,7 +2,6 @@
 .header {
   position: relative;
   background-size: cover;
-  min-height: 625px;
   .bg-color {
     @include stretch;
   }
@@ -11,7 +10,6 @@
     position: relative;
   }
   .header-top {
-    @include bg($white,.9);
     .wrap {
       display: table;
       width: 100%;

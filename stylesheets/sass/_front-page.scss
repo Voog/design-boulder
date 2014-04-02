@@ -1,5 +1,11 @@
 /* FRONT PAGE */
 .front-page {
+  .header {
+    min-height: 625px;
+    .header-top {
+      @include bg($white,.9);
+    }
+  }
   .main-feature,
   .summary {
     .wrap {

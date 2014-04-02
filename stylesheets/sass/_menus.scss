@@ -4,8 +4,7 @@
 }
 
 .menu {
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0;
   padding-left: 0;
   list-style: none;
   li {
@@ -99,7 +98,7 @@
     }
   }
   .lang-menu-btn:after,
-  .lang-menu li a.lang-flag:after{
+  li a.lang-flag:after{
     position: absolute;
     display: block;
     width: 20px;
