@@ -1,12 +1,10 @@
 // VARIABLES
-// General text colors
+// General colors
 $primary-color: #444;
 $secondary-color: #e4ac00;
+$secondary-color-hover: #d5a101;
+$third-color: #fafafa;
 
-// General background colors
-$input-bg: #f2f2f2;
-
-// General colors
 $black: #000;
 $white: #fff;
 
@@ -16,13 +14,14 @@ $blue: #308cb4;
 
 // Specific colors
 $border-color: #e5e5e5;
-$post-date-color: #f00;
-$pre-bg: #fafafa;
+$post-date-color: #ff0000;
+$input-border: #f2f2f2;
 
 // Media queries
 $tablet-1: 940px;
 $tablet-2: 840px;
 $tablet-3: 760px;
+
 $mobile-1: 550px;
 $mobile-2: 480px;
 $mobile-3: 420px;

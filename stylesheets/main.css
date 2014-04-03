@@ -76,6 +76,7 @@ body {
 .content-formatted h5,
 .content-formatted h6 {
   font-weight: 600;
+  word-wrap: break-word;
 }
 .content-formatted h1,
 .content-formatted h2,
@@ -91,16 +92,18 @@ body {
   text-align: center;
 }
 .content-formatted h1 {
+  margin-top: 50px;
   font-style: italic;
   font-size: 30px;
   color: #e4ac00;
-  text-decoration: underline;
 }
 .content-formatted h2 {
-  margin-top: 50px;
   font-size: 20px;
 }
-.content-formatted h3 {
+.content-formatted h3,
+.content-formatted h4,
+.content-formatted h5,
+.content-formatted h6 {
   margin-top: 30px;
   font-size: 18px;
 }
@@ -124,7 +127,9 @@ body {
   max-width: 100%;
   height: auto;
 }
-.content-formatted pre {
+.content-formatted pre,
+.content-formatted code {
+  display: block;
   overflow: auto;
   padding: 10px;
   font-size: 14px;
@@ -652,6 +657,268 @@ body {
 }
 
 /* FORMS */
+.content-formatted form {
+  max-width: 100%;
+  @-webkit-keyframes feedback-loading {
+    0% {
+      background: transparent;
+    }
+
+    50% {
+      background: white;
+    }
+
+    100% {
+      background: transparent;
+    }
+}
+
+  @-moz-keyframes feedback-loading {
+    0% {
+      background: transparent;
+    }
+
+    50% {
+      background: white;
+    }
+
+    100% {
+      background: transparent;
+    }
+}
+
+  @-o-keyframes feedback-loading {
+    0% {
+      background: transparent;
+    }
+
+    50% {
+      background: white;
+    }
+
+    100% {
+      background: transparent;
+    }
+}
+
+  @keyframes feedback-loading {
+    0% {
+      background: transparent;
+    }
+
+    50% {
+      background: white;
+    }
+
+    100% {
+      background: transparent;
+    }
+}
+
+}
+.content-formatted form,
+.content-formatted form .form_field {
+  margin-top: 20px;
+}
+.content-formatted form .form_field {
+  margin-top: 20px;
+}
+.content-formatted form .form_field label {
+  display: none;
+}
+.content-formatted form .form_field_textfield,
+.content-formatted form .form_field_textarea,
+.content-formatted form .form_field_select,
+.content-formatted form .form_field_file,
+.content-formatted form .form_submit input {
+  margin: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-border-radius: 0;
+}
+.content-formatted form .form_field_textfield,
+.content-formatted form .form_field_textarea,
+.content-formatted form .form_field_select {
+  max-width: 100%;
+}
+.content-formatted form .form_field_textfield,
+.content-formatted form .form_field_textarea,
+.content-formatted form .form_field_select,
+.content-formatted form .form_submit input {
+  font-family: inherit;
+  font-size: inherit;
+}
+.content-formatted form .form_field_textfield,
+.content-formatted form .form_field_textarea,
+.content-formatted form .form_field_select {
+  width: 50%;
+  padding: 12px;
+  background-color: #fafafa;
+  border: 1px solid #f2f2f2;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+}
+@media screen and (max-width: 480px) {
+  .content-formatted form .form_field_textfield,
+  .content-formatted form .form_field_textarea,
+  .content-formatted form .form_field_select {
+    width: 100%;
+  }
+}
+.content-formatted form .form_field_textarea {
+  min-height: 98px;
+}
+.content-formatted form .form_field_select {
+  background-position: right 15px top 22px;
+  background-repeat: no-repeat;
+}
+.content-formatted form .form_field_checkbox,
+.content-formatted form .form_field_radio {
+  position: relative;
+  top: -2px;
+}
+.no-svg .content-formatted form .form_field_select {
+  background-image: url("../images/arrow-down.png");
+}
+.svg .content-formatted form .form_field_select {
+  background-image: url("../assets/arrow-down.svg");
+}
+.content-formatted form .form_field_file {
+  line-height: 1;
+  outline: none;
+}
+.content-formatted form .form_field_size_medium {
+  width: 75%;
+}
+@media screen and (max-width: 480px) {
+  .content-formatted form .form_field_size_medium {
+    width: 100%;
+  }
+}
+.content-formatted form .form_field_size_large {
+  width: 100%;
+}
+.content-formatted form .form_submit {
+  float: right;
+}
+@media screen and (max-width: 480px) {
+  .content-formatted form .form_submit {
+    float: none;
+  }
+}
+.content-formatted form .form_submit input {
+  margin: 18px 0 0;
+  padding: 14px 20px;
+  font-weight: 700;
+  font-size: 18px;
+  color: white;
+  line-height: 1;
+  background-color: #e4ac00;
+  cursor: pointer;
+  border: none;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+.content-formatted form .form_submit input:hover {
+  background-color: #d5a101;
+}
+@media screen and (max-width: 480px) {
+  .content-formatted form .form_submit input {
+    width: 100%;
+  }
+}
+.content-formatted form .form_field_error {
+  color: #cc0000;
+}
+.content-formatted form .form_field_with_errors .form_field_textfield,
+.content-formatted form .form_field_with_errors .form_field_textarea {
+  -webkit-box-shadow: 4px 4px 0 #cc0000;
+  box-shadow: 4px 4px 0 #cc0000;
+}
+.content-formatted form .feedback-loading,
+.content-formatted form .feedback-error,
+.content-formatted form .feedback-success {
+  display: inline-block;
+  vertical-align: top;
+  margin: 18px 0 0;
+  color: white;
+  line-height: 1;
+  -webkit-box-shadow: 4px 4px 0 black;
+  box-shadow: 4px 4px 0 black;
+}
+.content-formatted form .feedback-error,
+.content-formatted form .feedback-success {
+  padding: 3px 12px 0;
+  font-size: 14px;
+}
+.content-formatted form .feedback-loading {
+  width: 60px;
+  text-align: center;
+  font-size: 30px;
+  background-color: #e4ac00;
+  background-color: rgba(228, 172, 0, 0.5);
+}
+.content-formatted form .feedback-loading span {
+  display: inline-block;
+  vertical-align: middle;
+  width: 7.5px;
+  height: 7.5px;
+  margin: 0 3px 5px 0;
+  background: transparent;
+  border-radius: 50%;
+  -webkit-animation: feedback-loading 0.8s linear infinite;
+  -moz-animation: feedback-loading 0.8s linear infinite;
+  animation: feedback-loading 0.8s linear infinite;
+}
+.content-formatted form .feedback-loading span:nth-child(2) {
+  -webkit-animation-delay: 0.2s;
+  -moz-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+.content-formatted form .feedback-loading span:nth-child(3) {
+  -webkit-animation-delay: 0.4s;
+  -moz-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+.content-formatted form .feedback-loading span:last-child {
+  margin-right: 0;
+}
+.content-formatted form .feedback-error {
+  background-color: #cc0000;
+}
+.content-formatted form .feedback-success {
+  background-color: #60a740;
+}
+.content-formatted form .close-btn {
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  margin: 2px 0 5px 9px;
+  padding: 0;
+  border: 1px solid white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 100%;
+  cursor: pointer;
+}
+.content-formatted form .close-btn:hover {
+  opacity: .8;
+}
+.content-formatted form .close-btn:focus {
+  outline: none;
+}
+.no-svg .content-formatted form .close-btn {
+  background: url("../images/ico-close.png") center center no-repeat;
+}
+.svg .content-formatted form .close-btn {
+  background: url("../assets/ico-close.svg") center center no-repeat;
+}
+.content-formatted form .form_error {
+  display: none;
+}
+
 /* COMMENTS */
 /* FOOTER */
 .footer {
