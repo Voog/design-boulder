@@ -11,6 +11,11 @@
       label {
         display: none;
       }
+      input {
+        &.placeholder {
+          @include color($border-color);
+        }
+      }
     }
 
     .form_field_textfield,

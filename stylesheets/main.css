@@ -726,6 +726,9 @@ body {
 .content-formatted form .form_field label {
   display: none;
 }
+.content-formatted form .form_field input.placeholder {
+  color: #e5e5e5;
+}
 .content-formatted form .form_field_textfield,
 .content-formatted form .form_field_textarea,
 .content-formatted form .form_field_select,
