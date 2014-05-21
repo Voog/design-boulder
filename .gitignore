@@ -1,9 +1,22 @@
 
-sftp-config.json
+.DS_Store
+
+.construction
+
+.demo
+
+.develop
+
+.live
+
+.template
+
+.test
+
+.voog
+
+.sass-cache
 
 *.html
 
-site.json
-.edicy
-
-manifest.json
+sftp-config.json

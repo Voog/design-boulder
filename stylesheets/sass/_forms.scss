@@ -1,225 +1,98 @@
 /* FORMS */
+// Styling rules for the site's form-fields area. These rules affect the entire site's form-fields that are in the editable content area.
 .content-formatted {
   form {
     max-width: 100%;
-    &,
-    .form_field {
-      margin-top: 20px;
-    }
-    .form_field {
-      margin-top: 20px;
-      label {
-        display: none;
-      }
-      input {
-        &.placeholder {
-          @include color($border-color);
-        }
-      }
-    }
+    margin-top: 25px;
+  }
 
-    .form_field_textfield,
-    .form_field_textarea,
-    .form_field_select,
-    .form_field_file,
-    .form_submit input {
-      margin: 0;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      -webkit-border-radius: 0;
-    }
-    .form_field_textfield,
-    .form_field_textarea,
-    .form_field_select {
-      max-width: 100%;
-    }
-    .form_field_textfield,
-    .form_field_textarea,
-    .form_field_select,
-    .form_submit input {
-      font-family: inherit;
-      font-size: inherit;
-    }
-    .form_field_textfield,
-    .form_field_textarea,
-    .form_field_select {
-      width: 50%;
-      padding: 12px;
-      @include bg($third-color);
-      @include border(all,1px,solid,$input-border);
-      @include box-sizing(border-box);
-      outline: none;
-      @include query($mobile-2) {
-        width: 100%;
-      }
-    }
-    .form_field_textarea {
-      min-height: 98px;
-    }
-    .form_field_select {
-      background-position: right 15px top 22px;
-      background-repeat: no-repeat;
-    }
-    .form_field_checkbox,
-    .form_field_radio {
-      position: relative;
-      top: -2px;
-    }
+  .form_field,
+  .edy-fe-label {
+    font-size: 14px;
+  }
 
-    .no-svg & {
-      .form_field_select {
-        background-image: url('../images/arrow-down.png');
-      }
-    }
-    .svg & {
-      .form_field_select {
-        background-image: url('../assets/arrow-down.svg');
-      }
-    }
+  .form_field {
+    margin-top: 20px;
+  }
 
-    .form_field_file {
-      line-height: 1;
-      outline: none;
+  .form_field_required {
+    :after {
+      content: ' *';
     }
+  }
 
-    .form_field_size_medium {
-      width: 75%;
-      @include query($mobile-2) {
-        width: 100%;
-      }
-    }
-    .form_field_size_large {
+  .form_field label,
+  .edy-fe-label {
+    display: block;
+    font-weight: 700;
+    font-family: inherit;
+    line-height: 1.3;
+  }
+
+  .form_field_textfield,
+  .form_field_textarea,
+  .form_field_select,
+  .form_field_file,
+  .form_submit input {
+    font-family: inherit;
+    font-size: 14px;
+  }
+  .form_field_textfield,
+  .form_field_textarea,
+  .form_field_select,
+  .form_field_file {
+    max-width: 100%;
+  }
+  .form_field_textfield,
+  .form_field_textarea {
+    width: 280px;
+    margin: 0;
+    padding: 7px;
+    @include border(all, 1px, solid, $grey-1);
+    border-radius: 3px;
+    @include box-sizing(border-box);
+
+    @include query($mobile-2) {
       width: 100%;
     }
+  }
+  .form_field_textarea {
+    min-height: 98px;
+  }
+  .form_field_select {
+  }
 
-    .form_submit {
-      float: right;
-      @include query($mobile-2) {
-        float: none;
-      }
-      input {
-        margin: 18px 0 0;
-        padding: 14px 20px;
-        font-weight: 700;
-        font-size: 18px;
-        @include color($white);
-        line-height: 1;
-        @include bg($secondary-color);
-        cursor: pointer;
-        border: none;
-        -webkit-appearance: none;
-        -webkit-border-radius: 0;
-        border-radius: 0;
-        &:hover {
-          @include bg($secondary-color-hover);
-        }
-        @include query($mobile-2) {
-          width: 100%;
-        }
-      }
-    }
+  .form_field_size_medium {
+    width: 420px;
 
-    .form_field_error {
-      @include color($red);
+    @include query($mobile-2) {
+      width: 100%;
     }
-    .form_field_with_errors {
-      .form_field_textfield,
-      .form_field_textarea {
-        @include box-shadow(4px, 4px, 0, rgba($red,1));
-      }
-    }
+  }
+  .form_field_size_large {
+    width: 580px;
+  }
 
-    .feedback-loading,
-    .feedback-error,
-    .feedback-success {
-      display: inline-block;
-      vertical-align: top;
-      margin: 18px 0 0;
-      @include color($white);
-      line-height: 1;
-      @include box-shadow(4px, 4px, 0, rgba($black,.1));
-    }
-    .feedback-error,
-    .feedback-success {
-      padding: 3px 12px 0;
-      font-size: 14px;
-    }
-    .feedback-loading {
-      width: 60px;
-      text-align: center;
-      font-size: 30px;
-      @include bg($secondary-color,.5);
-    }
-    .feedback-loading {
-      span {
-        display: inline-block;
-        vertical-align: middle;
-        width:  7.5px;
-        height: 7.5px;
-        margin: 0 3px 5px 0;
-        background: transparent;
-        border-radius: 50%;
-        @include animation(feedback-loading .8s linear infinite);
-      }
-    }
-    .feedback-loading {
-      span:nth-child(2) {
-        @include animation-delay(.2s);
-      }
-    }
-    .feedback-loading {
-      span:nth-child(3) {
-        @include animation-delay(.4s);
-      }
-    }
-    .feedback-loading {
-      span:last-child {
-        margin-right: 0;
-      }
-    }
-    @include keyframes(feedback-loading) {
-      0% {
-        background: transparent;
-      }
-      50% {
-        background: $white;
-      }
-      100% {
-        background: transparent;
-      }
-    }
-    .feedback-error {
-      @include bg($red);
-    }
-    .feedback-success {
-      @include bg($green);
-    }
+  .form_submit {
+    margin-top: 10px;
 
-    .close-btn {
-      vertical-align: middle;
-      width: 20px;
-      height: 20px;
-      margin: 2px 0 5px 9px;
-      padding: 0;
-      @include border(all,1px,solid,$white,.3);
-      border-radius: 100%;
-      cursor: pointer;
-      &:hover {
-        opacity: .8;
-      }
-      &:focus {
-        outline: none;
-      }
-      .no-svg & {
-        background: url("../images/ico-close.png") center center no-repeat;
-      }
-      .svg & {
-        background: url("../assets/ico-close.svg") center center no-repeat;
-      }
+    input {
     }
+  }
 
-    .form_error {
-      display: none;
+  .form_error,
+  .form_field_error {
+    @include color($red);
+  }
+
+  .form_field_with_errors {
+    .form_field_textfield,
+    .form_field_textarea {
+      @include border(all, 1px, solid, $red);
     }
+  }
+
+  .form_notice {
+    @include color($green);
   }
 }

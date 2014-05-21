@@ -1,5 +1,9 @@
-@import '../mixins/bourbon/bourbon';
-@import '../mixins/_mixins';
+// IE8 FALLBACKS
+// Stylesheet to declare fallbacks for the CSS features that are not supported by the Internet Explorer 8 browser.
+// Use the same selectorss pattern as in the othes style partials.
+// Remove the "ie8.scss" file in the "sass" folder and remove the "ie8.css" from the "/stylesheets" directory if not used. Also delete the stylesheet link from the "html-head" component.
+@import 'bourbon/bourbon';
+@import '_mixins';
 
 // MENUS
 
@@ -13,7 +17,7 @@
 
 // CONTENT
 
-// FRONT PAGE
+/* FRONT PAGE */
 
 // COMMON PAGE
 

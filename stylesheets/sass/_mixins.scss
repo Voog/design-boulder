@@ -1,3 +1,6 @@
+// CUSTOM MIXINS
+// Comment out the "_mixins.scss" partial in the "main.scss" file if not used.
+
 // GENERAL
 @mixin calc($property, $expression) {
   #{$property}: -webkit-calc(#{$expression});
@@ -5,14 +8,15 @@
 }
 
 // BOXES
-@mixin box-shadow($top, $left, $blur, $color, $opacity: 1, $inset: false) {
-  @if $inset {
-    -webkit-box-shadow: inset $top $left $blur rgba($color, $opacity);
-    box-shadow: inset $top $left $blur rgba($color, $opacity);
-  } @else {
-    -webkit-box-shadow: $top $left $blur rgba($color, $opacity);
-    box-shadow: $top $left $blur rgba($color, $opacity);
-  }
+@mixin box-shadow($top, $left, $blur, $color, $inset: "") {
+  -webkit-box-shadow: $top $left $blur $color #{$inset};
+     -moz-box-shadow: $top $left $blur $color #{$inset};
+          box-shadow: $top $left $blur $color #{$inset};
+}
+@mixin no-box-shadow($value: none) {
+  -webkit-box-shadow: $value;
+     -moz-box-shadow: $value;
+          box-shadow: $value;
 }
 
 // COLORS
@@ -59,17 +63,14 @@
   -webkit-backface-visibility: hidden;
 }
 
-// STRETCH
-@mixin stretch {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+// WEBKIT INPUT BUTTON STYLE RESET
+@mixin inputiosreset {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+          border-radius: 0;
 }
 
-// Media query
-
+// MEDIA QUERY
 @mixin query($value: $tablet-1) {
   @media screen and (max-width: $value) {
     @content;

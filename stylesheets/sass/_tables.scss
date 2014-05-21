@@ -1,34 +1,35 @@
 /* TABLES */
+// Styling rules for the site's editable content area tables.
+// NB! Works only if editable content-area - {% content %} -  is wrapped into the element that has the "content-formatted" class.
+
 .content-formatted {
+  // Container around editable content-area table.
   .table-container {
     margin-top: 20px;
   }
+
+  // Overthrow plugin to support horizontal scrolling on older devices that have touch-screens. For example Android 2.3 devices.
   .overthrow {
     overflow: auto;
     -webkit-overflow-scrolling: touch;
   }
+
+  // Adds dashed border to indicate that the table is too wide and can be scrolled horizontally.
   .horizontal-scroll {
-    @include border(left,1px,dashed,$border-color);
-    @include border(right,1px,dashed,$border-color);
+    @include border(left,1px,dashed,$third-color);
+    @include border(right,1px,dashed,$third-color);
   }
+
   table {
     width: 100%;
-    @include border(all,1px,solid,$border-color);
+    margin-top: 20px;
+    font-size: 16px;
     border-collapse: collapse;
-    border-spacing: 0;
-    tr {
-      &:first-child {
-        td {
-          @include color($white);
-          @include bg($secondary-color);
-          @include border(all,1px,solid,$secondary-color);
-        }
-      }
-      td {
-        padding: 11px 17px;
-        @include border(top,1px,solid,$border-color);
-        @include border(bottom,1px,solid,$border-color);
-      }
+
+    td {
+      padding: 10px;
+      @include border(top,1px,solid,$third-color);
+      @include border(bottom,1px,solid,$third-color);
     }
   }
 }

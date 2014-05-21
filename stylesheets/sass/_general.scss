@@ -1,53 +1,100 @@
 /* GENERAL */
-html,
+// Styling rules for the basic parts of the page. These rules affect the entire site.
 body {
-  height: auto !important; // TODO: Why does E3 have body and html height set to 100%?
-}
-body {
+  position: relative;
   margin: 0;
   padding: 0;
-  font-family: 'Adelle', 'Avenir Next', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: normal;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
   font-size: 18px;
-  line-height: 1.4;
+  line-height: 1.3;
   @include color($primary-color);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+ // Layout specific body classes
+ .front-page {
+
+ }
+
+ .common-page {
+
+ }
+
+ .blog-page,
+ .post-page {
+
+ }
+
+ .blog-page {
+
+ }
+
+ .post-page {
+
+ }
+
+// Pseudo classes for declaring commonly used styling rules for different elements.
+%clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
+%inline-block {
+  display: inline-block;
+}
+
+// Styling rules for the independent elements that can be located everywhere in the DOM and always have the same styling rules.
+.bgpicker-btn {
+  position: absolute;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.background-color {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -2;
+}
+
+// Styling rules for the main container that affects the entire site's other elements.
 .container {
+  max-width: 960px;
   margin: 0 auto;
+  padding: 40px 20px;
+  @include bg($white);
+
+  @include query($tablet-2) {
+    padding: 20px
+  }
+
   a {
+    text-decoration: none;
+
     img {
       border: none;
     }
   }
-  .wrap {
-    max-width: 1040px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-  .btn {
-    margin: 0;
-    padding: 15px 40px;
-    font-family: inherit;
-    font-weight: 700;
-    font-size: 24px;
-    @include color($white);
-    @include bg($secondary-color);
-    border: none;
-    outline: none;
-    cursor: pointer;
-    &::-moz-focus-inner {
-      padding: 0;
-      border: 0;
-    }
-    &:hover {
-      @include bg($secondary-color,.8);
-    }
-  }
 }
 
+// Styling rules for the site's editable content areas.
+// NB! Each editable content-area - {% content %} - should be wrapped in the element that has the "content-formatted" class.
+// NB! Contact forms, image galleries and tables styling rules are located in the separate partials: "_forms.scss", "_gallery.scss" and "_tables.scss".
 .content-formatted {
-  @include clearfix;
+  @extend %clearfix;
+  word-wrap: break-word;
+
+  // Resets the top margin for all first elements in the editable content-area (to prevent unwanted white-space at the beginning of a content-area).
   h1,
   h2,
   h3,
@@ -55,6 +102,7 @@ body {
   h5,
   h6,
   p,
+  ul,
   img,
   pre,
   code,
@@ -64,75 +112,113 @@ body {
     }
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-weight: 600;
-    word-wrap: break-word;
-  }
-
+  // Resets the bottom margin for all first elements in the editable content-area (to prevent unwanted white-space at the end of a content-area).
   h1,
   h2,
   h3,
   h4,
   h5,
   h6,
-  p {
+  p,
+  ul {
     margin-bottom: 0;
   }
 
+  // Styling rules for the editable content area headings.
   h1,
-  h2 {
-    text-align: center;
-  }
-  h1 {
-    margin-top: 50px;
-    font-style: italic;
-    font-size: 30px;
-    @include color($secondary-color);
-
-  }
-  h2 {
-    font-size: 20px;
-  }
+  h2,
   h3,
   h4,
   h5,
   h6 {
-    margin-top: 30px;
-    font-size: 18px;
-  }
-  p {
-    margin-top: 30px;
-    margin-bottom: 0;
+    @include color($secondary-color);
+    word-wrap: break-word;
   }
 
-  a {
-    @include color($secondary-color);
-    &:hover {
-      text-decoration: none;
+  h1 {
+    margin-top: 40px;
+    font-size: 50px;
+    line-height: 1;
+  }
+
+  h2 {
+    margin-top: 15px;
+    font-size: 30px;
+  }
+
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 20px;
+    font-size: 20px;
+  }
+
+  // Styling rules for the editable content area paragraphs, lists and links.
+  p {
+    margin-top: 20px;
+  }
+
+  ul {
+    li {
     }
   }
 
-  img,
-  pre,
-  code,
-  table {
-    margin-top: 20px;
+  ol {
+    li {
+    }
   }
-  img {
+
+  a {
+    @include color($blue-1);
+    &:hover {
+      @include color($blue-1, 0.8);
+    }
+  }
+
+  // Styling rules for the editable content area images, embedded videos, preformatted texts, code examples etc.
+  img,
+  iframe {
     max-width: 100%;
+  }
+
+  img {
     height: auto;
   }
+
   pre,
   code {
-    display: block;
+    margin-top: 25px;
+  }
+
+  pre {
+    margin-top: 10px;
+    margin-bottom: 0;
     overflow: auto;
-    padding: 10px;
-    font-size: 14px;
-    @include bg($third-color);
+    white-space: nowrap;
+
+    &,
+    code {
+      padding: 10px;
+      font-size: 14px;
+      @include bg($grey-3);
+    }
+
+    code {
+      display: block;
+      margin-top: 0;
+      padding: 0;
+    }
+  }
+
+  // Minimal height of the editable content area (to avoid content area visual "jumping" when content-area is focused).
+  .edy-texteditor-view {
+    min-height: 32px;
+  }
+
+  // Margin between the editable content areast in editmode.
+  .edy-partial-view {
+    margin-top: 25px;
   }
 }
+

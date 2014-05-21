@@ -1,26 +1,34 @@
 // VARIABLES
-// General colors
-$primary-color: #444;
-$secondary-color: #e4ac00;
-$secondary-color-hover: #d5a101;
-$third-color: #fafafa;
+// Custom variables to use in every .scss files.
+// Comment out the "_variables.scss" partial in the "main.scss" file if not used.
 
+// General colors
+$primary-color: #727272;
+$secondary-color: #1b2124;;
+$third-color: #303132;
+
+// Specific colors
 $black: #000;
 $white: #fff;
 
-$red: #c00;
+$red: #cc0000;
 $green: #60a740;
-$blue: #308cb4;
+$blue-1: #0066bb;
+$blue-2: #c7e5ff;
 
-// Specific colors
-$border-color: #e5e5e5;
-$input-border: #f2f2f2;
+$grey-1: #787878;
+$grey-2: #838586;
+$grey-3: #fafafa;
 
 // Media queries
-$tablet-1: 940px;
-$tablet-2: 840px;
-$tablet-3: 760px;
+$tablet-1: 900px;
+$tablet-2: 752px;
+$tablet-3: 506px;
 
-$mobile-1: 550px;
-$mobile-2: 480px;
-$mobile-3: 420px;
+$mobile-1: 480px;
+$mobile-2: 420px;
+
+// Reusable values
+// Define the reusable variables here.
+// For example the width of several different elements, that allways have to be with the same height:
+// $box-width: 400px;
