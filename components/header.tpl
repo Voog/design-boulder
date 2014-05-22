@@ -1,7 +1,10 @@
 
 <header class="header">
-  <div class="background-image js-bgpicker-header-image"{% if site.root_item.selected? %}{% if page.data.header_image %} style="background-image: url('{{ page.data.header_image}}');"{% endif %}{% endif %}></div>
-  <div class="background-color js-bgpicker-header-color"{% if page.data.header_color %} style="background-color: {{ page.data.header_color }};{% if page.data.header_image %} opacity: 0.5;{% endif %}"{% endif %}></div>
+  {% if site.root_item.selected? %}
+    <div class="background-image js-bgpicker-header-image"{% if page.data.header_image %} style="background-image: url('{{ page.data.header_image}}');"{% endif %}></div>
+    <div class="background-color js-bgpicker-header-color"{% if page.data.header_color %} style="background-color: {{ page.data.header_color }};{% if page.data.header_image %} opacity: 0.5;{% endif %}"{% endif %}></div>
+  {% endif %}
+
   <div class="header-top">
     <div class="wrap">
       <section class="header-left">
@@ -63,8 +66,3 @@
     </div>
   {% endif %}
 </header>
-
-<script>
-  console.log('image: {{ page.data.header_image}}');
-  console.log('color: {{ page.data.header_color}}');
-</script>

@@ -2,13 +2,9 @@
 // Styling rules for the site's header. These rules affect the entire site.
 .header {
   position: relative;
-  min-height: 623px;
 
-  .wrap {
-    @include flexbox;
-    @include align-content(center);
-    @include justify-content(center);
-    padding: 19px 20px;
+  .front-page & {
+    min-height: 623px;
   }
 
   .background-image {
@@ -23,6 +19,13 @@
 .header-top {
   @include bg($white, 0.9);
   @include border(bottom, 1px, solid, $third-color);
+
+  .wrap {
+    @include flexbox;
+    @include align-content(center);
+    @include justify-content(center);
+    padding: 19px 20px;
+  }
 }
 
 .header-left {

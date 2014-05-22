@@ -117,7 +117,8 @@ body {
   max-width: 600px;
   margin: 0 auto;
 
-  .front-page & {
+  .front-page &,
+  .header-top & {
     max-width: 1000px;
   }
 }
