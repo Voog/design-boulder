@@ -181,7 +181,7 @@ body {
   padding: 0;
 }
 .content-formatted .edy-texteditor-view {
-  min-height: 32px;
+  min-height: 25px;
 }
 .content-formatted .edy-partial-view {
   margin-top: 25px;
@@ -771,6 +771,12 @@ body {
   border-bottom: 1px solid #e5e5e5;
 }
 .header-top .wrap {
+  padding: 19px 20px;
+}
+.no-flexbox .header-top .wrap {
+  display: table;
+}
+.flexbox .header-top .wrap {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-flex;
@@ -785,7 +791,12 @@ body {
   -webkit-justify-content: center;
   -moz-justify-content: center;
   justify-content: center;
-  padding: 19px 20px;
+}
+
+.no-flexbox .header-left, .no-flexbox
+.header-right {
+  display: table-cell;
+  vertical-align: top;
 }
 
 .header-left {

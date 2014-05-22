@@ -21,10 +21,24 @@
   @include border(bottom, 1px, solid, $third-color);
 
   .wrap {
-    @include flexbox;
-    @include align-content(center);
-    @include justify-content(center);
+    .no-flexbox & {
+      display: table;
+    }
+
+    .flexbox & {
+      @include flexbox;
+      @include align-content(center);
+      @include justify-content(center);
+    }
     padding: 19px 20px;
+  }
+}
+
+.header-left,
+.header-right {
+  .no-flexbox & {
+    display: table-cell;
+    vertical-align: top;
   }
 }
 
