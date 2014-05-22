@@ -1,14 +1,11 @@
 /* MENUS */
-// Styling rules for the site's menus. These rules affect the entire site.
-
-// Menu button. Only visible on smaller screens.
 .menu-btn {
   display: none;
 
   @include query($tablet-2) {
     position: absolute;
     top: 8px;
-    right: 0;
+    right: 20px;
     display: inline-block;
     margin: 0;
     padding: 0;
@@ -16,7 +13,8 @@
     border: none;
     cursor: pointer;
 
-    &.open {
+    &.open,
+    &:hover {
       .menu-stripe {
         @include bg($secondary-color, 0.47);
       }
@@ -30,253 +28,375 @@
       padding: 0;
       border: 0;
     }
+  }
 
-    .menu-stripe {
-      display: block;
-      width: 23px;
-      height: 4px;
-      margin: 4px 0;
-      @include bg($secondary-color, 0.67);
-      border-radius: 5px;
+  @include query($mobile-1) {
+    right: 20px;
+  }
 
-      &:first-child,
-      &:last-child {
-        margin: 0;
-      }
+  .menu-stripe {
+    display: block;
+    width: 23px;
+    height: 4px;
+    margin: 4px 0;
+    @include bg($secondary-color, 0.67);
+    border-radius: 5px;
+
+    &:first-child,
+    &:last-child {
+      margin: 0;
     }
   }
 
   @include query($mobile-1) {
-    top: 7px;
     right: 0;
   }
 }
 
-// Wrapper for the CMS adminmode on-page buttons. For example "hidden menu items" or "add-page" buttons.
-.edit-btn {
-  @extend %inline-block;
-  vertical-align: middle;
-  line-height: 0.8;
-}
-
-// General rules for the menus. These rules affect all menus on the site.
 .menu {
-  margin: 0;
-  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
   list-style: none;
 
-  li {
-    @extend %inline-block;
+  .menu-item {
+    display: inline-block;
+    vertical-align: middle;
   }
 }
 
-// Styling rules for the site's main menu. Usually the first level menu but can have the sub menu in it aswell.
 .menu-main {
-  padding: 6px 0;
-
-  .menu {
-    li {
-      margin-right: 20px;
-      line-height: 1;
-
-      &.edit-btn {
-        margin-right: 0;
-      }
-    }
-
-    a {
-      display: block;
-      @include color($blue-1);
-
-      &.untranslated {
-        @include color($red, 0.5);
-      }
-
-      &:hover {
-        @include color($primary-color);
-      }
-
-      &.active {
-        font-weight: 700;
-        @include color($primary-color, 0.8);
-      }
-    }
-  }
-
-  .menu-lang {
-    display: none;
-  }
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 8px;
 
   @include query($tablet-2) {
     display: none;
 
     &.expanded {
       position: absolute;
-      top: 50px;
-      right: 0;
-      z-index: 1;
+      top: 62px;
+      right: 20px;
+      z-index: 10;
       display: block;
       min-width: 350px;
       margin-bottom: 60px;
-      padding: 0;
       text-align: left;
       @include bg($white);
-      @include box-shadow(0, 0, 5px, rgba($black, 0.3));
+      @include box-shadow(0, 5px, 25px, rgba($black, 0.3));
+    }
 
-      .menu {
-        li {
-          display: block;
-          margin-right: 0;
-          @include border(top, 1px, solid, $primary-color, 0.2);
-
-          &:first-child {
-            border-top: none;
-          }
-
-          a {
-            display: block;
-            padding: 11px 20px;
-            font-size: 20px;
-
-            &:hover {
-              @include bg($blue-2, 0.5);
-            }
-
-            &.active {
-              @include bg($blue-2);
-            }
-          }
-        }
-      }
-
-      // Styling rules for the language menu in the site's main menu. Only visible on smaller screens.
-      .menu-lang {
-        display: block;
-        margin-top: 0;
+    @include query($mobile-1) {
+      &.expanded {
+        top: 45px;
+        left: -15px;
+        right: -15px;
+        min-width: 0;
+        margin-bottom: 40px;
         @include border(top, 1px, solid, $primary-color, 0.2);
-
-        li {
-          a {
-            position: relative;
-            padding: 14px 20px 14px 50px;
-            font-size: 12px;
-            @include color($secondary-color);
-
-            &,
-            &.active {
-              &:hover {
-                @include bg($grey-2, 0.1);
-              }
-            }
-
-            &.active {
-              @include color($grey-2);
-              background: none;
-            }
-
-            &.lang-flag:before,
-            &.lang-flag:after {
-              position: absolute;
-              top: 14px;
-              left: 20px;
-              display: block;
-              width: 20px;
-              height: 13px;
-              content: '';
-            }
-
-            &.lang-flag:before {
-              @include bg($black);
-            }
-
-            &.lang-flag:after {
-              opacity: 0.95;
-              background-size: 200px;
-              background-repeat: no-repeat;
-
-              .no-svg & {
-                background-image: url('../images/ico-flags.png');
-              }
-
-              .svg & {
-                background-image: url('../assets/ico-flags.svg');
-              }
-            }
-
-            &.edy-menu-langadd {
-              padding-left: 20px;
-            }
-          }
-
-        }
+        @include no-box-shadow;
       }
     }
   }
-
-  @include query($mobile-1) {
-    &.expanded {
-      min-width: 100%;
-      left: 0;
-      margin: 0 -20px 60px;
-      @include border(top, 1px, solid, $primary-color, 0.2);
-      @include border(bottom, 1px, solid, $primary-color, 0.2);
-      @include no-box-shadow;
-    }
-  }
-}
-
-// Styling rules for the site's sub menu.
-.menu-sub {
-  margin-top: 30px;
 
   .menu {
-    text-align: center;
+    line-height: 1.3;
 
-    li {
-      margin-left: 15px;
-      font-size: 14px;
+    .menu-item {
+      margin-left: 20px;
 
       &:first-child {
         margin-left: 0;
       }
 
-      a {
-        @include color($blue-1);
+      @include query($tablet-2) {
+        display: block;
+        margin: 0;
+        font-size: 20px;
+        @include border(bottom, 1px, solid, $primary-color, 0.2);
+      }
 
-        &.active {
-          font-weight: 700;
-          @include color($primary-color);
+      a {
+        font-weight: 600;
+        font-size: 18px;
+        @include color($primary-color);
+
+        &.untranslated {
+          @include color($red, 0.5);
+        }
+
+        &.active,
+        &.active:hover {
+          @include border(bottom, solid, 4px, $secondary-color);
+
+          @include query($tablet-2) {
+            @include color($grey-1);
+            @include bg($blue-2);
+          }
         }
 
         &:hover {
-          @include color($blue-1, 0.8);
+          @include border(bottom, solid, 4px, $secondary-color, 0.8);
+
+          @include query($tablet-2) {
+            @include color($grey-1);
+            @include bg($blue-2, 0.5);
+          }
+        }
+
+        @include query($tablet-2) {
+          display: block;
+          padding: 8px 25px 5px;
+          &.active,
+          &.active:hover {
+
+          }
+        }
+      }
+    }
+
+    .edit-btn {
+      display: inline-block;
+      margin-left: 20px;
+
+      @include query($tablet-1) {
+        display: block;
+
+        .edy-menu-menuadd {
+          display: inline-block;
+          margin: 6px 25px 8px 25px;
+          padding: 0;
+
+          &:hover {
+            background: none;
+          }
+        }
+      }
+    }
+  }
+
+  .menu-lang {
+    display: none;
+
+    @include query($tablet-2) {
+      display: block;
+      padding-left: 0;
+
+      .menu-item {
+        text-align: left;
+
+        &:first-child {
+          border-top: none;
+        }
+
+        a {
+          padding: 11px 30px 9px 53px;
+          font-weight: 400;
+          font-size: 14px;
+
+          &:before,
+          &:after {
+            top: 7px;
+            left: 25px;
+          }
+
+          &.active,
+          &.active:hover {
+            font-weight: 600;
+            @include color($grey-1, 0.67);
+            background: none;
+          }
+
+          &:hover {
+            @include color($grey-1, 0.4);
+            @include bg($grey-2, 0.5);
+          }
+        }
+
+        &.edit-btn {
+          display: block;
+          text-align: left;
+
+          .edy-menu-langadd {
+            display: inline-block;
+            padding: 0;
+            margin: 11px 25px 11px 25px;
+          }
         }
       }
     }
   }
 }
 
-// Styling rules for the site's language menu.
-.menu-lang {
-  @extend %inline-block;
-
-  .menu {
-    vertical-align: middle;
-  }
-
-  .header-right & {
-    .edit-btn {
-      margin-left: 20px;
-    }
-  }
-
+.menu-sub {
+  margin: 0 30px;
+  padding: 7px 0;
+  @include border(bottom,1px,solid,$primary-color, 0.2);
 
   @include query($tablet-1) {
-    margin-top: 5px;
+    margin: 0 20px;
+  }
+
+  .menu {
+    text-align: center;
+
+    .menu-item {
+      margin-right: 12px;
+
+      &.edit-btn {
+        display: inline-block;
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      a {
+        @include color($third-color);
+
+        &.untranslated {
+          @include color($red, 0.5);
+        }
+
+        &.active,
+        &:hover {
+          @include color($secondary-color);
+        }
+      }
+    }
+  }
+}
+
+.menu-lang-btn {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 20px;
+  height: 13px;
+  margin-top: 7px;
+  margin-left: 17px;
+  font-size: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:before,
+  &:after {
+    top: 0;
+    left: 0;
+  }
+}
+
+.menu-lang-btn,
+.menu-lang li a.lang-flag {
+  &:before,
+  &:after {
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 13px;
+    content: '';
+  }
+}
+
+.menu-lang-btn,
+.menu-lang li a.lang-flag {
+  &:before {
+    @include bg($black);
+  }
+
+  &:after {
+    opacity: 0.95;
+    background-size: 200px;
+    background-repeat: no-repeat;
+
+    .no-svg & {
+      background-image: url('../images/ico-flags.png');
+    }
+
+    .svg & {
+      background-image: url('../assets/ico-flags.svg');
+    }
+  }
+}
+
+.menu-lang-popover {
+  display: none;
+
+  &.expanded {
+    position: absolute;
+    top: 26px;
+    right: -12px;
+    display: block;
+    margin-bottom: 40px;
+    padding: 6px 0;
+    min-width: 121px;
+    background: #fff;
+    @include box-shadow(0, 5px, 25px, rgba($black, 0.3));
+    z-index: 1;
+  }
+}
+
+.menu-lang {
+  position: relative;
+  display: inline-block;
+  line-height: 1;
+
+  &.edit-btn {
+    display: inline-block;
+    margin: 7px 20px;
+    padding: 0;
+
   }
 
   @include query($tablet-2) {
-    display: block;
+    display: none;
+  }
+
+  .menu-item {
+    display: list-item;
+    text-align: right;
+    font-size: 12px;
+
+    a {
+      position: relative;
+      display: block;
+      padding: 6px 40px 3px 13px;
+      @include color($secondary-color, 0.67);
+
+      &.active,
+      &.active:hover {
+        @include bg($grey-2);
+      }
+
+      &:hover {
+        @include bg($grey-2, 0.5);
+      }
+
+      &:before,
+      &:after {
+        top: 4px;
+        right: 12px;
+      }
+    }
+  }
+
+  .edy-menu-langadd {
+    display: inline-block;
+    padding: 10px 15px 5px;
+
+    &:hover {
+      background: none;
+    }
   }
 }
 
@@ -333,25 +453,35 @@ $flags:
   .lang-flag-#{$flag}:after { background-position: $pos; }
 }
 
-// Styling rules for the site's blog article tags menu. These rules affects both - the blog article listing view and the single blog article view.
 .menu-tags {
-  margin-bottom: 20px;
+  .tags-left,
+  .tags-right {
+    display: inline-block;
+    vertical-align: middle;
+  }
 
-  .menu {
-    li {
-      margin-right: 15px;
+  .tags-left {
+    width: 110px;
+    margin-right: 24px;
+    text-align: right;
 
-      a {
-        @include color($blue-1);
+    @include query($tablet-1) {
+      width: 113px;
+      margin-right: 0;
+      text-align: left;
+    }
 
-        &:hover {
-          @include color($blue-1, 0.8);
-        }
+    .tags-title {
+      display: inline-block;
+      font-size: 14px;
+      @include color($secondary-color);
+    }
+  }
 
-        &.active {
-          font-weight: 700;
-        }
-      }
+  .tags-right {
+    .menu {
+      margin-top: 2px;
     }
   }
 }
+

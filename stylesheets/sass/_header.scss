@@ -1,80 +1,48 @@
 /* HEADER */
 // Styling rules for the site's header. These rules affect the entire site.
 .header {
-  .no-flexbox &,
-  .flexbox & {
-    @include query($tablet-2) {
-      display: block;
-    }
-  }
+  @include bg($white, 0.9);
+  @include border(bottom, 1px, solid, $third-color);
 
-  .no-flexbox & {
-    display: table;
-    vertical-align: top;
-    width: 100%;
-  }
-
-  .flexbox & {
+  .wrap {
     @include flexbox;
-    @include align-items(flex-start);
+    @include align-content(center);
+    @include justify-content(center);
+  }
+}
+
+.header-top {
+  .wrap {
+    padding: 19px 20px;
+  }
+}
+
+.header-left {
+  width: 300px;
+  position: relative;
+}
+
+.header-title {
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 30px;
+
+  a {
+    @include color($primary-color);
   }
 
-  .header-left,
-  .header-right {
-    .no-flexbox & {
-      display: table-cell;
-    }
-
-    .flexbox & {
-      @include query($tablet-2) {
-        @include flex(none);
-      }
-    }
+  a:hover {
+    @include color($primary-color, 0.8);
   }
+}
 
-  .header-left {
-    @include query($tablet-2) {
-      position: relative;
-    }
+.header-right {
+  width: 700px;
+  text-align: right;
+}
 
-    .flexbox & {
-      @include flex(1 610px);
-    }
+.header-bottom {
 
-    .header-title {
-      display: none;
-
-      @include query($tablet-2) {
-        display: block;
-        margin-right: 40px;
-      }
-
-      &,
-      & a {
-        font-size: 28px;
-        font-weight: 700;
-        @include color($primary-color);
-
-        &:hover {
-          @include color($primary-color, 0.8);
-        }
-      }
-    }
-  }
-
-  .header-right {
-    min-width: 350px;
-    text-align: right;
-
-    @include query($tablet-2) {
-      .no-flexbox &,
-      .flexbox & {
-        display: none;
-      }
-    }
-  }
-
-  .flexbox & {
-    @include flex(1 350px);
-  }
 }

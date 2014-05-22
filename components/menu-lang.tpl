@@ -1,20 +1,6 @@
-{% comment %}<!-- Use this code if you want a select type language menu -->{% endcomment %}
-<select class="menu">
-  {% for language in site.languages %}
-    <option value="{{ language.url }}" {% if language.selected? %}selected="selected"{% endif %}>{{ language.title }}</option>
-  {% endfor %}
-</select>
-{% if editmode %}<div class="edit-btn">{% languageadd %}</div>{% endif %}
-
-
-{% comment %}
-<!-- Use this code if you want a list type language menu -->
-<!--
 <ul class="menu">
   {% for language in site.languages %}
-    <li><a class="ico-lang {{ language.code }}{% if language.selected? %} active{% endif %}" href="{{ language.url }}">{{ language.title }}</a></li>
+    <li class="menu-item"><a class="menu-link lang-flag lang-flag-{{ language.code }}{% if language.selected? %} active{% endif %}" href="{{ language.url }}">{{ language.title }}</a></li>
   {% endfor %}
   {% if editmode %}<li class="edit-btn">{% languageadd %}</li>{% endif %}
 </ul>
--->
-{% endcomment %}

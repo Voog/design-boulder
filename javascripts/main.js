@@ -1,13 +1,4 @@
 ;(function($) {
-  // SWITCHES THE SITE LANGUAGE TO THE SELECTED VALUE FROM THE LANGUAGE MENU
-  var handleLanguageSwitch = function() {
-    $('.menu-lang').find('.menu').change(function() {
-      console.log('changed');
-      window.location = $(this).find(':selected').val();
-    });
-  };
-
-  // SHOWS/HIDES THE POPOVER MAIN MENU (VISIBLE ON SMALLES SCREENS)
   var toggleMainMenu = function() {
     $('.js-menu-btn').click(function() {
       $(this).toggleClass('open');
@@ -15,14 +6,21 @@
     });
   };
 
-  // HIDES THE POPOVER MAIN MENU IF CICKED ANYWHERE ELSE THAN THE MENU ITSELF (VISIBLE ON SMALLES SCREENS)
+  var toggleLangMenu = function() {
+    $('.js-menu-lang-btn').click(function(event) {
+      event.stopPropagation();
+      $('.js-menu-lang-popover').toggleClass('expanded');
+    });
+  };
+
   var handlePopoverMenuHide = function() {
     $('html').click(function() {
-      if ($('.js-lang-menu-popover').hasClass('expanded')) {
-        $('.js-lang-menu-popover').removeClass('expanded');
+      if ($('.js-menu-lang-popover').hasClass('expanded')) {
+        $('.js-menu-lang-popover').removeClass('expanded');
       }
     });
   };
+
 
   // REDUCES OPACITY OF THE GALLERY IMAGES THAT ARE NOT UNDER THE CURSOR
   var handleGalleryHover = function() {
@@ -97,8 +95,8 @@
 
     var init = function() {
       // ADD SITE WIDE FUNCTIONS HERE
-      handleLanguageSwitch();
       toggleMainMenu();
+      toggleLangMenu();
       handlePopoverMenuHide();
       handleGalleryHover();
       handleWindowResize();

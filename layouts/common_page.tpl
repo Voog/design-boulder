@@ -17,14 +17,15 @@
 
   <div class="container">
     {% include "header" %}
-    {% include "menu-level-2" %}
 
+    {% comment %}
     <main class="content" role="main">
       <header class="content-header content-formatted">{% content name="slogan" %}</header>
       <section class="content-body content-formatted">{% content %}</section>
     </main>
 
     {% include "footer" %}
+    {% endcomment %}
 
   </div>
 

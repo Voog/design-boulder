@@ -17,10 +17,13 @@
 <!-- MODERNIZR - HTML5 SUPPORT FOR OLDER BROWSERS, SVG SUPPORT DETECTION ETC -->
 <script src="{{ javascripts_path }}/modernizr.js?21"></script>
 
+<!-- TYPEKIT WEB FONTS -->
+<script type="text/javascript" src="//use.typekit.net/vno7cqi.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
 <!-- STYLESHEETS -->
 {% stylesheet_link "main.css?21" %}
 <!--[if lt IE 9]>{% stylesheet_link "ie8.css?21" %}<![endif]-->
-<!--[if lt IE 10]>{% stylesheet_link "ie9.css?21" %}<![endif]-->
 <link rel="stylesheet" href="/assets/admin/tools/0.1.1/edicy-tools.css">
 
 <!-- SITE TITLE -->
