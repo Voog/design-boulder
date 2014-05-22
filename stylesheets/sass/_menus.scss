@@ -116,7 +116,8 @@
         @include border(bottom, 1px, solid, $primary-color, 0.2);
       }
 
-      a {
+      .menu-link {
+        text-decoration: none;
         font-weight: 600;
         font-size: 18px;
         @include color($primary-color);
@@ -189,7 +190,7 @@
           border-top: none;
         }
 
-        a {
+        .menu-link {
           padding: 11px 30px 9px 53px;
           font-weight: 400;
           font-size: 14px;
@@ -252,7 +253,7 @@
         margin-right: 0;
       }
 
-      a {
+      .menu-link {
         @include color($third-color);
 
         &.untranslated {
@@ -367,7 +368,7 @@
     text-align: right;
     font-size: 12px;
 
-    a {
+    .menu-link {
       position: relative;
       display: block;
       padding: 6px 40px 3px 13px;
