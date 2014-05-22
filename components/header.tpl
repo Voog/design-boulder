@@ -1,5 +1,7 @@
-<header class="header" {% if site.root_item.selected? %}style="background-image: url('/photos/header-bg.jpg');"{% endif %}>
-  {% if site.root_item.selected? %}<div class="bg-color" style="background-color: #333; background-color: rgba(51, 51, 51, 0.5);"></div>{% endif %}
+
+<header class="header">
+  <div class="background-image js-bgpicker-header-image"{% if site.root_item.selected? %}{% if page.data.header_image %} style="background-image: url('{{ page.data.header_image}}');"{% endif %}{% endif %}></div>
+  <div class="background-color js-bgpicker-header-color"{% if page.data.header_color %} style="background-color: {{ page.data.header_color }};{% if page.data.header_image %} opacity: 0.5;{% endif %}"{% endif %}></div>
   <div class="header-top">
     <div class="wrap">
       <section class="header-left">
@@ -48,16 +50,21 @@
       </section>
     </div>
   </div>
-  {% comment %}
+
   {% if site.root_item.selected? %}
     <div class="header-bottom">
-      <section class="content-formatted">
+      {% if site.root_item.selected? %}{% if editmode %}<button class="bgpicker-btn js-bgpicker-body-settings" data-bg-image="{{ page.data.header_image }}" data-bg-color="{{ page.data.header_color }}"></button>{% endif %}{% endif %}
+      <div class="header-bottom-inner">
         <div class="wrap">
-          {% content name="header_content" %}
-          <button class="btn">View our menu</button>
+            <section class="header-body content-formatted">{% content name="header_content" %}</section>
+            <button class="btn content-formatted">View our menu</button>
         </div>
-      </section>
+      </div>
     </div>
   {% endif %}
-  {% endcomment %}
 </header>
+
+<script>
+  console.log('image: {{ page.data.header_image}}');
+  console.log('color: {{ page.data.header_color}}');
+</script>

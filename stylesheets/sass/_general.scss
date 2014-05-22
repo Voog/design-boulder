@@ -37,6 +37,13 @@ body {
   clear: both;
 }
 
+%stretch {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
 %inline-block {
   display: inline-block;
 }
@@ -53,13 +60,46 @@ body {
   }
 }
 
+.background-image,
 .background-color {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  position: absolute;
+  @extend %stretch;
+}
+
+.background-image {
   z-index: -2;
+  background-position: center;
+  background-size: cover;
+}
+
+.background-color {
+  z-index: -1;
+}
+
+.btn {
+  margin: 0;
+  padding: 15px 40px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 24px;
+  @include color($white);
+  @include bg($secondary-color);
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    @include bg($secondary-color,.8);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+  }
+
 }
 
 // Styling rules for the main container that affects the entire site's other elements.

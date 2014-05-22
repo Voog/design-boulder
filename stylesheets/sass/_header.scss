@@ -1,20 +1,28 @@
 /* HEADER */
 // Styling rules for the site's header. These rules affect the entire site.
 .header {
-  @include bg($white, 0.9);
-  @include border(bottom, 1px, solid, $third-color);
+  position: relative;
+  min-height: 623px;
 
   .wrap {
     @include flexbox;
     @include align-content(center);
     @include justify-content(center);
+    padding: 19px 20px;
+  }
+
+  .background-image {
+    background-image: url('../images/header-bg.jpg');
+  }
+
+  .background-color {
+    @include bg($grey-1, 0.5);
   }
 }
 
 .header-top {
-  .wrap {
-    padding: 19px 20px;
-  }
+  @include bg($white, 0.9);
+  @include border(bottom, 1px, solid, $third-color);
 }
 
 .header-left {
@@ -43,6 +51,28 @@
   text-align: right;
 }
 
-.header-bottom {
+.header-bottom-inner {
+  display: table;
+  width: 845px;
+  margin: 0 auto;
+  text-align: center;
 
+  .wrap {
+    display: table-cell;
+    vertical-align: middle;
+    height: 504px;
+  }
+
+  .header-body {
+    font-weight: 600;
+    font-style: italic;
+    font-size: 30px;
+    line-height: 1.5;
+    @include color($white);
+  }
+
+  .btn {
+    display: inline-block;
+    margin: 43px auto 0;
+  }
 }
