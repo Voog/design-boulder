@@ -130,7 +130,7 @@
           @include border(bottom, solid, 4px, $secondary-color);
 
           @include query($tablet-2) {
-            @include color($grey-1);
+            @include color($third-color);
             @include bg($blue-2);
           }
         }
@@ -139,7 +139,7 @@
           @include border(bottom, solid, 4px, $secondary-color, 0.8);
 
           @include query($tablet-2) {
-            @include color($grey-1);
+            @include color($third-color);
             @include bg($blue-2, 0.5);
           }
         }

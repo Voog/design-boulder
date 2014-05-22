@@ -48,7 +48,7 @@
     width: 280px;
     margin: 0;
     padding: 7px;
-    @include border(all, 1px, solid, $grey-1);
+    @include border(all, 1px, solid, $third-color);
     border-radius: 3px;
     @include box-sizing(border-box);
 
