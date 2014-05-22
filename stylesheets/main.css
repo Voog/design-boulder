@@ -150,6 +150,33 @@ body {
   margin-top: 0;
   padding: 0;
 }
+.content-formatted .table-container {
+  margin-top: 20px;
+}
+.content-formatted .overthrow {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.content-formatted .horizontal-scroll {
+  border-left: 1px dashed #e5e5e5;
+  border-right: 1px dashed #e5e5e5;
+}
+.content-formatted table {
+  width: 100%;
+  border: 1px solid #fafafa;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.content-formatted table tr:first-child td {
+  color: white;
+  background-color: #e4ac00;
+  border: 1px solid #e4ac00;
+}
+.content-formatted table tr td {
+  padding: 11px 17px;
+  border-top: 1px solid #fafafa;
+  border-bottom: 1px solid #fafafa;
+}
 .content-formatted .edy-texteditor-view {
   min-height: 25px;
 }
@@ -361,8 +388,8 @@ body {
   .menu-main .menu-lang .menu-item .menu-link:hover {
     color: #333333;
     color: rgba(51, 51, 51, 0.4);
-    background-color: #838586;
-    background-color: rgba(131, 133, 134, 0.5);
+    background-color: #e5e5e5;
+    background-color: rgba(229, 229, 229, 0.5);
   }
   .menu-main .menu-lang .menu-item.edit-btn {
     display: block;
@@ -509,11 +536,11 @@ body {
   color: rgba(228, 172, 0, 0.67);
 }
 .menu-lang .menu-item .menu-link.active, .menu-lang .menu-item .menu-link.active:hover {
-  background-color: #838586;
+  background-color: #e5e5e5;
 }
 .menu-lang .menu-item .menu-link:hover {
-  background-color: #838586;
-  background-color: rgba(131, 133, 134, 0.5);
+  background-color: #e5e5e5;
+  background-color: rgba(229, 229, 229, 0.5);
 }
 .menu-lang .menu-item .menu-link:before, .menu-lang .menu-item .menu-link:after {
   top: 4px;
