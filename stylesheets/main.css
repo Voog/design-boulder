@@ -490,21 +490,21 @@ body {
 }
 
 .menu-lang-btn:before,
-.menu-lang .menu-item.lang-flag:before {
+.menu-lang .menu-item .lang-flag:before {
   background-color: black;
 }
 .menu-lang-btn:after,
-.menu-lang .menu-item.lang-flag:after {
+.menu-lang .menu-item .lang-flag:after {
   opacity: 0.95;
   background-size: 200px;
   background-repeat: no-repeat;
 }
 .no-svg .menu-lang-btn:after, .no-svg
-.menu-lang .menu-item.lang-flag:after {
+.menu-lang .menu-item .lang-flag:after {
   background-image: url("../images/ico-flags.png");
 }
 .svg .menu-lang-btn:after, .svg
-.menu-lang .menu-item.lang-flag:after {
+.menu-lang .menu-item .lang-flag:after {
   background-image: url("../assets/ico-flags.svg");
 }
 

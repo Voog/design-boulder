@@ -305,7 +305,7 @@
 }
 
 .menu-lang-btn,
-.menu-lang .menu-item.lang-flag {
+.menu-lang .menu-item .lang-flag {
   &:before {
     @include bg($black);
   }
