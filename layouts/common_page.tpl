@@ -15,15 +15,13 @@
   <div class="container">
     {% include "header" %}
 
-    <main class="content" role="main">
+    <main class="content js-content" role="main">
       <section class="wrap">
         <section class="content-body content-formatted">{% content %}</section>
       </section>
     </main>
 
-    {% comment %}
     {% include "footer" %}
-    {% endcomment %}
   </div>
 
   {% include "javascripts" %}

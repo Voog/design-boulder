@@ -1,5 +1,9 @@
 /* GENERAL */
 // Styling rules for the basic parts of the page. These rules affect the entire site.
+html, body {
+  height: 100% !important;
+}
+
 body {
   position: relative;
   margin: 0;
@@ -13,6 +17,7 @@ body {
   background-attachment: fixed;
   background-size: cover;
 }
+
  // Layout specific body classes
  .front-page {
  }
@@ -104,7 +109,16 @@ body {
 
 // Styling rules for the main container that affects the entire site's other elements.
 .container {
+  position:relative;
+  min-height:100%;
+
+  .editmode & {
+    @include calc(min-height, "100% - 40px");
+  }
+
   a {
+    text-decoration: none;
+
     img {
       border: none;
     }
@@ -116,7 +130,8 @@ body {
   margin: 0 auto;
 
   .front-page &,
-  .header-top & {
+  .header-top &,
+  .footer & {
     max-width: 1000px;
   }
 }

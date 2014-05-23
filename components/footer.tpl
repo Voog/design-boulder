@@ -1,4 +1,6 @@
-<footer class="footer">
-  <section class="content-formatted">{% xcontent name="footer" %}</section>
-  <div class="voog-reference">{% loginblock %}{{ "footer_login_link" | lc }}{% endloginblock %}</div>
+<footer class="footer js-footer">
+  <div class="wrap">
+    <div class="footer-left content-formatted">{% xcontent name="footer_title" %}</div>
+    <div class="footer-right content-formatted">{% xcontent name="footer" %}</div>
+  </div>
 </footer>

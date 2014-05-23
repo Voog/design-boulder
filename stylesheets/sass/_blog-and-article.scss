@@ -3,12 +3,14 @@
 .post {
   .post-header {
     .post-title {
+      display: inline;
       margin-top: 0;
       margin-bottom: 0;
       line-height: 1.1;
+      @include border(bottom, 2px, solid, $secondary-color);
 
       &, a {
-        font-size: 50px;
+        font-size: 30px;
         @include color($secondary-color);
       }
 

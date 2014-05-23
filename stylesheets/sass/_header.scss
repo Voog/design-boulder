@@ -17,8 +17,12 @@
 }
 
 .header-top {
-  @include bg($white, 0.9);
+  @include bg($white);
   @include border(bottom, 1px, solid, $third-color);
+
+  .front-page & {
+    @include bg($white, 0.9);
+  }
 
   .wrap {
     .no-flexbox & {

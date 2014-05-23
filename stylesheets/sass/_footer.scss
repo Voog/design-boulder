@@ -1,21 +1,36 @@
 /* FOOTER */
 // Styling rules for the site's footer. These rules affect the entire site.
 .footer {
-  margin-top: 50px;
+  position:absolute;
+  left:0;
+  right: 0;
+  bottom:0;
+  min-height: 80px;
+  @include color($white, 0.5);
+  @include bg($primary-color);
 
-  @include query($tablet-2) {
-    margin-top: 35px;
-  }
+  .wrap {
+    padding: 29px 20px 26px;
 
-  .content-formatted {
-    font-size: 14px;
-    line-height: 1.5;
+    .no-flexbox & {
+      display: table;
+    }
 
-    .edy-texteditor-view {
-      min-height: 18px;
+    .flexbox & {
+      @include flexbox;
+      @include align-content(center);
+      @include justify-content(center);
     }
   }
 
+  .footer-left {
+    width: 300px;
+  }
+
+  .footer-right {
+    width: 700px;
+    text-align: right;
+  }
 
   .voog-reference {
     margin-top: 30px;

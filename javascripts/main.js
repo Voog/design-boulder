@@ -21,8 +21,20 @@
     });
   };
 
+  // Sets the position of the footer to the bottom of the page
+  var handleFooterPositioning = function() {
+    footerHeight = $('.js-footer').height();
+    $('.js-content').css({'padding-bottom' : footerHeight});
+    console.log('initiated');
+  };
 
-  // REDUCES OPACITY OF THE GALLERY IMAGES THAT ARE NOT UNDER THE CURSOR
+  var handleFooterContentEdit = function() {
+    $('.js-footer').find('.text_partial').keydown(function() {
+      handleFooterPositioning();
+    });
+  };
+
+  // Reduces opacity of the gallery images that are not under the cursor
   var handleGalleryHover = function() {
     $('.edys-gallery-item').mouseover(function() {
       $(this).siblings('.edys-gallery-item').find('.edys-gallery-image').addClass('inactive');
@@ -33,7 +45,7 @@
     });
   };
 
-  // SCROLLS TO THE COMMENT-FORM IF COMMENT SUBMIT FAILED (TO SHOW THE ERROR MESSAGES TO THE USER)
+  // scrolls to the comment-form if comment submit failed (to show the error messages to the user)
   var focusCommentsWithErrors = function() {
     $(document).ready(function() {
       if ($('.comment-form').hasClass('form_with_errors') === true) {
@@ -47,7 +59,7 @@
     $('.content-formatted table').wrap('<div class="table-container overthrow"></div>');
   };
 
-  // TODO: Add comment
+  // Check the presence of the scrollbar
   var checkScrollBar = function() {
     jQuery.fn.hasScrollBar = function(direction) {
       if (direction == 'vertical') {
@@ -59,7 +71,7 @@
     }
   };
 
-  // ADDS HORIZONTAL SCROLL TO TABLES THAT DON'T FIT INTO THE CONTENT AREA
+  // Adds horizontal scroll to tables that don't fit into the content area
   var handleTableHorizontalScrolling = function() {
     $.each($('.table-container'), function() {
       if ($(this).hasScrollBar('horizontal') === true) {
@@ -70,10 +82,11 @@
     });
   };
 
-  // INITIATES THE TABLE HORISONTAL SCROLL FUNCTION WHEN WINDOW IS RESIZED
+  // Initiates the table horisontal scroll function when window is resized
   var handleWindowResize = function() {
     $(window).resize(function() {
       handleTableHorizontalScrolling();
+      handleFooterPositioning();
     });
   };
 
@@ -98,6 +111,8 @@
       toggleMainMenu();
       toggleLangMenu();
       handlePopoverMenuHide();
+      handleFooterPositioning();
+      handleFooterContentEdit();
       handleGalleryHover();
       handleWindowResize();
       wrapTables();
@@ -107,7 +122,7 @@
       }
     };
 
-    // ENABLES THE USAGE OF THE INITIATIONS OUTSIDE THIS FILE
+    // Enables the usage of the initiations outside this file
     window.site = $.extend(window.site || {}, {
       initBlogPage: initBlogPage,
       initArticlePage: initArticlePage,

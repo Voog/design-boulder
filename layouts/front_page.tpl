@@ -13,7 +13,7 @@
       {% include "header" %}
 
       {% comment %}
-      <main class="content" role="main">
+      <main class="content js-content" role="main">
         <div class="main-feature">
           <div class="wrap">
             <section class="feature-left content-formatted">

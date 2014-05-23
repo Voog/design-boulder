@@ -17,7 +17,7 @@
     {% include "header" %}
     {% include "menu-level-2" %}
 
-    <main class="content" role="main">
+    <main class="content js-content" role="main">
       {% include "post-box" with "article" %}
 
       <section id="comments" class="comments content-formatted">
