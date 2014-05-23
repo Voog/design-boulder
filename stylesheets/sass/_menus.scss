@@ -148,10 +148,6 @@
         @include query($tablet-2) {
           display: block;
           padding: 8px 25px 5px;
-          &.active,
-          &.active:hover {
-
-          }
         }
       }
     }
