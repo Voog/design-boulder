@@ -35,6 +35,103 @@ body {
   display: inline-block;
 }
 
+.loading-status {
+  text-align: center;
+}
+
+.loader {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  margin: 100px auto;
+}
+
+.loader-cube-1,
+.loader-cube-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #e4ac00;
+  -webkit-animation: cubemove 1.8s infinite ease-in-out;
+  -moz-animation: cubemove 1.8s infinite ease-in-out;
+  animation: cubemove 1.8s infinite ease-in-out;
+}
+
+.loader-cube-2 {
+  -webkit-animation-delay: -0.9s;
+  -moz-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+@-webkit-keyframes cubemove {
+  25% {
+    -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5);
+  }
+
+  50% {
+    -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg);
+  }
+
+  75% {
+    -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+  }
+
+  100% {
+    -webkit-transform: rotate(-360deg);
+  }
+}
+@-moz-keyframes cubemove {
+  25% {
+    -moz-transform: translateX(42px) rotate(-90deg) scale(0.5);
+  }
+
+  50% {
+    -moz-transform: translateX(42px) translateY(42px) rotate(-180deg);
+  }
+
+  75% {
+    -moz-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+  }
+
+  100% {
+    -moz-transform: rotate(-360deg);
+  }
+}
+@keyframes cubemove {
+  25% {
+    -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5);
+    -moz-transform: translateX(42px) rotate(-90deg) scale(0.5);
+    -ms-transform: translateX(42px) rotate(-90deg) scale(0.5);
+    -o-transform: translateX(42px) rotate(-90deg) scale(0.5);
+    transform: translateX(42px) rotate(-90deg) scale(0.5);
+  }
+
+  50% {
+    -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg);
+    -moz-transform: translateX(42px) translateY(42px) rotate(-180deg);
+    -ms-transform: translateX(42px) translateY(42px) rotate(-180deg);
+    -o-transform: translateX(42px) translateY(42px) rotate(-180deg);
+    transform: translateX(42px) translateY(42px) rotate(-180deg);
+  }
+
+  75% {
+    -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+    -moz-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+    -ms-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+    -o-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+    transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+  }
+
+  100% {
+    -webkit-transform: rotate(-360deg);
+    -moz-transform: rotate(-360deg);
+    -ms-transform: rotate(-360deg);
+    -o-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
+}
 .bgpicker-btn {
   position: absolute;
   background: none;
@@ -942,24 +1039,32 @@ body {
 }
 
 /* BLOG & BLOG ARTICLE */
-.post .post-header .post-title {
-  display: inline;
+.post {
+  text-align: center;
+}
+.post .post-title {
   margin-top: 0;
   margin-bottom: 0;
-  line-height: 1.1;
-  border-bottom: 2px solid #e4ac00;
 }
-.post .post-header .post-title, .post .post-header .post-title a {
+.post .post-title, .post .post-title a {
+  font-weight: 400;
+  font-style: italic;
   font-size: 30px;
   color: #e4ac00;
 }
-.post .post-header .post-title a:hover {
-  color: #e4ac00;
-  color: rgba(228, 172, 0, 0.8);
+.post .post-title a {
+  border-bottom: 2px solid #e4ac00;
 }
-.post .post-header .post-date {
-  font-size: 14px;
-  color: #e4ac00;
+.post .post-title a:hover {
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+}
+.post .post-date {
+  display: block;
+  margin-top: 5px;
+  font-size: 18px;
+  color: #e5e5e5;
 }
 .post .post-content {
   margin-top: 20px;
@@ -979,11 +1084,15 @@ body {
   color: rgba(0, 102, 187, 0.8);
 }
 
+.blog-page .post-add-btn {
+  text-align: center;
+  margin-bottom: 50px;
+}
 .blog-page .post {
   margin-bottom: 50px;
   padding-bottom: 50px;
-  border-bottom: 1px solid #444444;
-  border-bottom: 1px solid rgba(68, 68, 68, 0.3);
+  border-bottom: 1px solid black;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 /* FOOTER */

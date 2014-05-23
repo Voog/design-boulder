@@ -86,7 +86,7 @@
     &, code {
       padding: 10px;
       font-size: 14px;
-      @include bg($grey-3);
+      @include bg($grey-2);
     }
 
     code {
@@ -118,7 +118,7 @@
 
   table {
     width: 100%;
-    @include border(all,1px,solid,$grey-3);
+    @include border(all,1px,solid,$grey-2);
     border-collapse: collapse;
     border-spacing: 0;
 
@@ -133,8 +133,8 @@
 
       td {
         padding: 11px 17px;
-        @include border(top, 1px, solid, $grey-3);
-        @include border(bottom, 1px, solid, $grey-3);
+        @include border(top, 1px, solid, $grey-2);
+        @include border(bottom, 1px, solid, $grey-2);
       }
     }
   }

@@ -154,6 +154,12 @@
     },
     {
       "content_type": "application/javascript",
+      "file": "javascripts/articlePages.js",
+      "kind": "javascripts",
+      "filename": "articlePages.js"
+    },
+    {
+      "content_type": "application/javascript",
       "file": "javascripts/autogrow.js",
       "kind": "javascripts",
       "filename": "autogrow.js"
