@@ -37,7 +37,7 @@
       this.$el.trigger('articles.loading');
       var tag_txt = (this.options.tags) ? 'tagged=' + this.options.tags.join(',') +'&' : '',
       page_id_txt = (this.options.pageId) ? 'page_id=' + this.options.pageId : '',
-      url = '/admin/api/articles.json?' + tag_txt + 'page='+ page + '&per_page=' + this.options.perPage + '&' + page_id_txt;
+      url = '/admin/api/articles.json?' + tag_txt + 'page='+ page + '&per_page=' + this.options.perPage + '&' + page_id_txt + '&include_details=true' + '&lang=' + this.options.lang;
       $.ajax({
         url: url,
         dataType: 'json',
@@ -62,7 +62,7 @@
         this.$el.html('');
         $.each(articles, $.proxy(function(idx, article) {
           this.$el.append(template($(this.options.template).html(), {
-            "url": article.url,
+            "url": article.public_url,
             "title": article.title,
             "excerpt": article.excerpt,
             "date": this.options.dateFormat(new Date(article.created_at)),

@@ -59,7 +59,7 @@
     $('.content-formatted table').wrap('<div class="table-container overthrow"></div>');
   };
 
-  // Check the presence of the scrollbar
+  // Checks the presence of the table scrollbar.
   var checkScrollBar = function() {
     jQuery.fn.hasScrollBar = function(direction) {
       if (direction == 'vertical') {
@@ -92,11 +92,11 @@
 
     // Initiations
     var initBlogPage = function() {
-      // ADD BLOG LISTING VIEW SPECIFIC FUNCTIONS HERE
+      // ADD BLOG LISTING layout specific FUNCTIONS HERE
     };
 
     var initArticlePage = function() {
-      // ADD SINGLE POST VIEW SPECIFIC FUNCTIONS HERE
+      // ADD SINGLE POST layout specific FUNCTIONS HERE
       focusCommentsWithErrors();
     };
 

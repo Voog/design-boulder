@@ -12,7 +12,6 @@
     <div class="container js-container">
       {% include "header" %}
 
-      {% comment %}
       <main class="content js-content" role="main">
         <div class="main-feature">
           <div class="wrap">
@@ -25,6 +24,7 @@
           </div>
         </div>
 
+        {% comment %}
         <div class="summary">
           <div class="wrap">
             <section class="blog">
@@ -57,9 +57,9 @@
           </section>
         </div>
       </main>
+      {% endcomment %}
 
       {% include "footer" %}
-      {% endcomment %}
     </div>
 
     {% include "javascripts" %}
