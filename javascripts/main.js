@@ -25,7 +25,6 @@
   var handleFooterPositioning = function() {
     footerHeight = $('.js-footer').height();
     $('.js-content').css({'padding-bottom' : footerHeight});
-    console.log('initiated');
   };
 
   var handleFooterContentEdit = function() {

@@ -157,7 +157,7 @@ body {
   min-height:100%;
 
   .editmode & {
-    @include calc(min-height, "100% - 40px");
+    @include calc(min-height, '100% - 40px');
   }
 
   a {
