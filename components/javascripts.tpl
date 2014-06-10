@@ -1,6 +1,5 @@
 <script src="{{ javascripts_path }}/jquery.js?2"></script>
 <script src="{{ javascripts_path }}/main.js?2"></script>
-<script src="{{ javascripts_path }}/retina.js?2"></script>
 <script src="{{ javascripts_path }}/overthrow.js?2"></script>
 
 {% if site.search.enabled %}
