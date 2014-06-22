@@ -6,14 +6,14 @@
   "author": "",
   "layouts": [
     {
-      "content_type": "page",
+      "content_type": "blog",
       "component": false,
       "file": "layouts/blog___news.tpl",
       "layout_name": "page_default",
       "title": "Blog & News"
     },
     {
-      "content_type": "page",
+      "content_type": "blog_article",
       "component": false,
       "file": "layouts/blog_article.tpl",
       "layout_name": "page_default",
@@ -147,16 +147,40 @@
       "filename": "ico-flags.svg"
     },
     {
+      "content_type": "image/jpeg",
+      "file": "images/feature-image-1.jpg",
+      "kind": "images",
+      "filename": "feature-image-1.jpg"
+    },
+    {
+      "content_type": "image/jpeg",
+      "file": "images/feature-image-2.jpg",
+      "kind": "images",
+      "filename": "feature-image-2.jpg"
+    },
+    {
+      "content_type": "image/jpeg",
+      "file": "images/header-bg.jpg",
+      "kind": "images",
+      "filename": "header-bg.jpg"
+    },
+    {
       "content_type": "image/png",
       "file": "images/ico-flags.png",
       "kind": "images",
       "filename": "ico-flags.png"
     },
     {
+      "content_type": "image/jpeg",
+      "file": "images/post-dummy.jpg",
+      "kind": "images",
+      "filename": "post-dummy.jpg"
+    },
+    {
       "content_type": "application/javascript",
-      "file": "javascripts/articlePages.js",
+      "file": "javascripts/article-pages.js",
       "kind": "javascripts",
-      "filename": "articlePages.js"
+      "filename": "article-pages.js"
     },
     {
       "content_type": "application/javascript",
@@ -187,12 +211,6 @@
       "file": "javascripts/overthrow.js",
       "kind": "javascripts",
       "filename": "overthrow.js"
-    },
-    {
-      "content_type": "application/javascript",
-      "file": "javascripts/retina.js",
-      "kind": "javascripts",
-      "filename": "retina.js"
     },
     {
       "content_type": "text/css",
