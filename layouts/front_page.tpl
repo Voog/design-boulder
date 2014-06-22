@@ -42,6 +42,7 @@
             </section>
           </div>
         </div>
+        {% endcomment %}
 
         <div class="contacts">
           <section class="wrap content-formatted">
@@ -57,7 +58,7 @@
           </section>
         </div>
       </main>
-      {% endcomment %}
+
 
       {% include "footer" %}
     </div>

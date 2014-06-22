@@ -16,7 +16,7 @@
     {% include "header" %}
 
     <main class="content js-content" role="main">
-      <div class="blog wrap">
+      <div class="wrap">
         {% include "tags-blog" %}
 
         {% if editmode %}<div class="post-add-btn">{% addbutton %}</div>{% endif %}
@@ -43,7 +43,7 @@
   {% include "bg-picker" %}
 
   <script>var langCode = "{{ page.language_code }}";</script>
-  <script src="{{ javascripts_path }}/articlePages.js?1"></script>
+  <script src="{{ javascripts_path }}/article-pages.js?1"></script>
   <script type="text/html" id="article-template">
     <article class="post">
       <header class="post-header">
