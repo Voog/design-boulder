@@ -15,15 +15,15 @@
 <link rel="apple-touch-icon" href="{{ images_path }}/{{ page.data.touchicon }}"> <!-- TODO: Add image location data tag -->
 
 <!-- MODERNIZR - HTML5 SUPPORT FOR OLDER BROWSERS, SVG SUPPORT DETECTION ETC -->
-<script src="{{ javascripts_path }}/modernizr.js?21"></script>
+<script src="{{ javascripts_path }}/modernizr.js?1"></script>
 
 <!-- TYPEKIT WEB FONTS -->
 <script type="text/javascript" src="//use.typekit.net/vno7cqi.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
 <!-- STYLESHEETS -->
-{% stylesheet_link "main.css?21" %}
-<!--[if lt IE 9]>{% stylesheet_link "ie8.css?21" %}<![endif]-->
+{% stylesheet_link "main.css?1" %}
+<!--[if lt IE 9]>{% stylesheet_link "ie8.css?1" %}<![endif]-->
 <link rel="stylesheet" href="/assets/admin/tools/0.1.2/edicy-tools.css">
 
 <!-- SITE TITLE -->

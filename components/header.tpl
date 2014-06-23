@@ -1,8 +1,8 @@
-
 <header class="header">
+  <div>{{ page.data.header_image }}</div>
   {% if site.root_item.selected? %}
-    <div class="background-image js-bgpicker-header-image"{% if page.data.header_image %} style="background-image: url('{{ page.data.header_image}}');"{% endif %}></div>
-    <div class="background-color js-bgpicker-header-color"{% if page.data.header_color %} style="background-color: {{ page.data.header_color }};{% if page.data.header_image %} opacity: 0.5;{% endif %}"{% endif %}></div>
+      {% if header_image != '' or editmode %}<div class="background-image stretch js-bgpicker-header-image"{{ header_image_style }}></div>{% endif %}
+      {% if header_color != '' or editmode %}<div class="background-color stretch js-bgpicker-header-color"{{ header_color_style }}></div>{% endif %}
   {% endif %}
 
   <div class="header-top">
@@ -56,7 +56,7 @@
 
   {% if site.root_item.selected? %}
     <div class="header-bottom">
-      {% if site.root_item.selected? %}{% if editmode %}<button class="bgpicker-btn js-bgpicker-body-settings" data-bg-image="{{ page.data.header_image }}" data-bg-color="{{ page.data.header_color }}"></button>{% endif %}{% endif %}
+      {% if editmode %}<button class="bgpicker-btn js-bgpicker-header-settings" data-bg-image="{{ header_image }}" data-bg-color="{{ header_color }}"></button>{% endif %}
       <div class="header-bottom-inner">
         <div class="wrap">
             <section class="header-body content-formatted">{% content name="header_content" %}</section>

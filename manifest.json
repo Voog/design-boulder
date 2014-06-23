@@ -137,6 +137,13 @@
       "file": "components/topbar.tpl",
       "layout_name": "topbar",
       "title": "topbar"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/bg-picker-variables.tpl",
+      "layout_name": "",
+      "title": "Bg-picker-variables"
     }
   ],
   "assets": [
