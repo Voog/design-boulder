@@ -207,7 +207,7 @@
   .form_field_with_errors {
     .form_field_textfield,
     .form_field_textarea {
-      @include box-shadow(4px, 4px, 0, rgba($red, 1));
+      @include color($red);
     }
   }
 
@@ -217,87 +217,19 @@
     @include color($red);
   }
 
-  .feedback-loading,
-  .feedback-error,
   .form_error,
-  .feedback-success,
   .form_notice, {
-    display: inline-block;
-    vertical-align: top;
-    margin: 18px 0 0;
-    @include color($white);
-    line-height: 1;
-    @include box-shadow(4px, 4px, 0, rgba($black, 0.1));
+    margin: 18px 0;
+    font-weight: 600;
+    font-size: 24px;
   }
 
-  .feedback-error,
-  .form_error,
-  .feedback-success,
-  .form_notice {
-    padding: 8px 12px;
-    font-size: 14px;
-  }
-
-  .feedback-loading {
-    width: 60px;
-    text-align: center;
-    font-size: 30px;
-    @include bg($secondary-color, 0.5);
-  }
-
-  .feedback-loading {
-    span {
-      display: inline-block;
-      vertical-align: middle;
-      width:  7.5px;
-      height: 7.5px;
-      margin: 0 3px 5px 0;
-      background: transparent;
-      border-radius: 50%;
-      @include animation(feedback-loading 0.8s linear infinite);
-    }
-  }
-
-  .feedback-loading {
-    span:nth-child(2) {
-      @include animation-delay(.2s);
-    }
-  }
-
-  .feedback-loading {
-    span:nth-child(3) {
-      @include animation-delay(.4s);
-    }
-  }
-
-  .feedback-loading {
-    span:last-child {
-      margin-right: 0;
-    }
-  }
-
-  @include keyframes(feedback-loading) {
-    0% {
-      background: transparent;
-    }
-
-    50% {
-      background: $white;
-    }
-
-    100% {
-      background: transparent;
-    }
-  }
-
-  .feedback-error,
   .form_error {
-    @include bg($red);
+    @include color($red);
   }
 
-  .feedback-success,
   .form_notice {
-    @include bg($green);
+    @include color($green);
   }
 
   .close-btn {
