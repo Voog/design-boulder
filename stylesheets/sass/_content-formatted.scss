@@ -21,6 +21,10 @@
 
   h1, h2 {
     text-align: center;
+
+    .main-feature & {
+      text-align: left;
+    }
   }
 
   h1 {
@@ -28,21 +32,48 @@
     font-style: italic;
     font-size: 30px;
     @include color($secondary-color);
+
+    .contacts & {
+      font-size: 32px
+    }
   }
 
   h2 {
     margin-top: 18px;
     font-size: 20px;
+
+    .main-feature & {
+      font-style: italic;
+      font-size: 24px;
+
+      &, &:first-child {
+        margin-top: 23px;
+      }
+    }
+
+    .contacts & {
+      font-size: 28px;
+    }
   }
 
   h3, h4, h5, h6 {
     margin-top: 30px;
     font-size: 18px;
+
+    .contacts & {
+      font-weight: 400;
+      font-size: 24px;
+    }
   }
 
   // Styling rules for the editable content area paragraphs, lists and links.
   p {
     margin-top: 30px;
+
+    .contacts & {
+      margin-top: 20px;
+      font-size: 20px;
+    }
   }
 
   ul {
@@ -72,6 +103,13 @@
 
   img {
     height: auto;
+
+    .main-feature & {
+      max-width: 224px;
+      height: auto;
+      margin-top: 0;
+      margin-right: 12px;
+    }
   }
 
   img, iframe, pre {

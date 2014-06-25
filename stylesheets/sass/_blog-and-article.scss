@@ -1,66 +1,28 @@
 /* BLOG & BLOG ARTICLE */
-// Styling rules for both - the blog listing view and the blog single article view
-.post {
-  text-align: center;
+// Style rules for the blog listing view only
+.front-page {
+  .blog {
+    width: 500px;
+  }
+
+  .blog-title {
+    margin: 0;
+    font-style: italic;
+    font-size: 20px;
+    @include color($white, 0.5);
+  }
 
   .post-title {
-    margin-top: 0;
-    margin-bottom: 0;
+    font-weight: 400;
+    font-size: 24;
+    @include border(bottom, 1px, solid, $white);
 
-
-    &, a {
-      font-weight: 400;
-      font-style: italic;
-      font-size: 30px;
-      @include color($secondary-color);
-    }
-
-    a {
-      @include border(bottom, 2px, solid, $secondary-color);
-
-      &:hover {
-        @include opacity(0.5);
-      }
-    }
-  }
-
-  .post-date {
-    display: block;
-    margin-top: 5px;
-    font-size: 18px;
-    @include color($third-color);
-  }
-
-  .post-content {
-    margin-top: 20px;
-
-    .post-excerpt {
-    }
-
-    .post-body {
-      margin-top: 20px;
-    }
-  }
-
-  .post-footer {
-    .post-author {
-      font-size: 12px;
-    }
-  }
-
-  .post-comments-count {
-    a {
-      font-size: 14px;
-      @include color($blue-1);
-
-      &:hover {
-        @include color($blue-1, 0.8);
-      }
+    &, & a {
+      @include color($white);
     }
   }
 }
 
-// Style rules for the blog listing view only
 .blog-page {
   .post-add-btn {
     text-align: center;
@@ -70,7 +32,46 @@
   .post {
     margin-bottom: 50px;
     padding-bottom: 50px;
+    text-align: center;
     @include border(bottom, 1px, solid, $black, 0.1);
+
+    .post-title {
+      margin-top: 0;
+      margin-bottom: 0;
+
+      &, a {
+        font-weight: 400;
+        font-style: italic;
+        font-size: 30px;
+        @include color($secondary-color);
+      }
+
+      a {
+        @include border(bottom, 2px, solid, $secondary-color);
+
+        &:hover {
+          @include opacity(0.5);
+        }
+      }
+    }
+
+    .post-date {
+      display: block;
+      margin-top: 5px;
+      font-size: 18px;
+      @include color($third-color);
+    }
+
+    .post-content {
+      margin-top: 20px;
+
+      .post-excerpt {
+      }
+
+      .post-body {
+        margin-top: 20px;
+      }
+    }
   }
 }
 

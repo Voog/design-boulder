@@ -4,125 +4,13 @@
   padding-bottom: 80px;
   @include bg($white);
 
-  .wrap {
-    padding: 70px 20px 50px;
-  }
-
   @include query($tablet-2) {
     margin-top: 20px;
   }
 }
 
-.content-title,
-.content-header {
-  &.content-formatted {
-    line-height: 1;
-    @include color($secondary-color);
-
-    h1 {
-      font-size: 100px;
-    }
-
-    h2 {
-      font-size: 50px;
-    }
-
-    h3 {
-      font-size: 30px;
-    }
-  }
-}
-
-.content-title {
-  &.content-formatted {
-    font-weight: 700;
-    font-size: 100px;
-
-    @include query($mobile-1) {
-      h1 {
-        font-size: 50px;
-      }
-
-      h2 {
-        font-size: 30px;
-      }
-
-      h3 {
-        font-size: 20px;
-      }
-    }
-  }
-}
-
-.content-header {
-  &.content-formatted {
-    font-weight: 400;
-    font-size: 50px;
-
-    .edy-texteditor-view {
-      min-height: 18px;
-    }
-  }
-}
-
-.content-body {
-  .front-page & {
-    margin-top: 90px;
-
-    @include query($tablet-2) {
-      margin-top: 35px;
-    }
-
-    p {
-      margin-top: 10px;
-      font-size: 25px;
-      line-height: 1.5;
-
-      @include query($tablet-2) {
-        font-size: 18px;
-      }
-    }
-  }
-
-  .common-page  & {
-  }
-}
 
 .main-feature {
-  h1, h2 {
-    text-align: left;
-  }
-
-  h2 {
-    font-style: italic;
-    font-size: 24px;
-
-    &, &:first-child {
-      margin-top: 23px;
-    }
-  }
-
-  img {
-    max-width: 224px;
-    height: auto;
-    margin-top: 0;
-    margin-right: 12px;
-  }
-
-  .wrap {
-    padding: 48px 20px;
-
-    .no-flexbox & {
-      display: table;
-    }
-
-    .flexbox & {
-      @include flexbox;
-      @include align-content(center);
-      @include justify-content(center);
-    }
-  }
-
   .feature-left {
     width: 500px;
   }
@@ -130,5 +18,21 @@
   .feature-right {
     width: 469px;
     margin-left: 31px;
+  }
+}
+
+.summary {
+  @include bg($secondary-color);
+
+  .blog,
+  .quotation {
+    .no-flexbox & {
+      display: table-cell;
+      vertical-align: top;
+    }
+  }
+
+  .quotation {
+    width: 500px;
   }
 }

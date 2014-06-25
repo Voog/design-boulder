@@ -178,4 +178,37 @@ body {
   .footer & {
     max-width: 1000px;
   }
+
+  .content & {
+    padding: 70px 20px 50px;
+  }
+
+  .main-feature & {
+    padding: 48px 20px;
+
+    .no-flexbox & {
+      display: table;
+    }
+
+    .flexbox & {
+      @include flexbox;
+      @include align-content(center);
+      @include justify-content(center);
+    }
+  }
+
+  .summary & {
+    .flexbox & {
+      @include flexbox;
+    }
+
+    .no-flexbox & {
+      display: table;
+    }
+  }
+
+  .contacts & {
+    padding: 0;
+  }
 }
+
