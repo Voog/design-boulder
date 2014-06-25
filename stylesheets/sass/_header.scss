@@ -12,7 +12,7 @@
   }
 
   .background-color {
-    @include bg($grey-1, 0.5);
+    @include bg($grey-1, 0.2);
   }
 }
 

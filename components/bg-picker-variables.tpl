@@ -35,7 +35,7 @@
       {% if page.data.header_image == '' %}
         {% assign header_color_style = header_color_style | append: '; opacity: 1' %}
       {% else %}
-        {% assign header_color_style = header_color_style | append: '; opacity: 0.25' %}
+        {% assign header_color_style = header_color_style | append: '; opacity: 0.20' %}
       {% endif %}
     {% endif %}
     {% assign header_color_style = header_color_style | append: ';"' %}

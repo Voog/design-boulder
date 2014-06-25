@@ -16,20 +16,20 @@
         var img = (data.image && data.image !== '') ? 'url("' + data.image + '")' : 'none',
             col = (data.color && data.color !== '') ? data.color : 'none';
 
-        $('.js-bgpicker-cover-image').css({'background-image' : img});
-        $('.js-bgpicker-cover-color').css({'background' : col});
+        $('.js-bgpicker-header-image').css({'background-image' : img});
+        $('.js-bgpicker-header-color').css({'background' : col});
 
         if (data.image === null || data.image === '') {
-          $('.js-bgpicker-cover-color').css({'opacity': 1});
+          $('.js-bgpicker-header-color').css({'opacity': 1});
         } else {
-          $('.js-bgpicker-cover-color').css({'opacity': 0.5});
+          $('.js-bgpicker-header-color').css({'opacity': 0.5});
         }
       },
 
       commit: function(data) {
         pageData.set({
-          'cover_image': data.image || '',
-          'cover_color': data.color || ''
+          'header_image': data.image || '',
+          'header_color': data.color || ''
         });
       }
     });
