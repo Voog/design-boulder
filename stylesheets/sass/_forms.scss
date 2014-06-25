@@ -3,96 +3,327 @@
 .content-formatted {
   form {
     max-width: 100%;
-    margin-top: 25px;
-  }
-
-  .form_field,
-  .edy-fe-label {
-    font-size: 14px;
+    margin-top: 20px;
   }
 
   .form_field {
     margin-top: 20px;
-  }
 
-  .form_field_required {
-    :after {
-      content: ' *';
+    &:first-child {
+      margin-top: 0;
     }
   }
 
-  .form_field label,
+  .form_field,
   .edy-fe-label {
-    display: block;
-    font-weight: 700;
-    font-family: inherit;
-    line-height: 1.3;
+    font-size: 16px;
+    @include color($primary-color);
+  }
+
+  .form_field {
+    label {
+      position: relative;
+      display: inline;
+      padding-left: 2px;
+      font-weight: 400;
+      line-height: 1.3;
+      cursor: pointer;
+
+      &:after {
+        content: '\a';
+        white-space: pre;
+      }
+
+      &:before {
+        display: block;
+      }
+    }
+
+    .edy-fe-label,
+    .form_field_label {
+      padding-left: 0;
+      font-weight: 600;
+    }
   }
 
   .form_field_textfield,
   .form_field_textarea,
   .form_field_select,
-  .form_field_file,
   .form_submit input {
     font-family: inherit;
     font-size: 14px;
+    @include inputiosreset;
   }
+
   .form_field_textfield,
   .form_field_textarea,
   .form_field_select,
   .form_field_file {
     max-width: 100%;
   }
+
   .form_field_textfield,
-  .form_field_textarea {
-    width: 280px;
-    margin: 0;
-    padding: 7px;
+  .form_field_textarea,
+  .form_field_select,
+  .form_submit input, {
+    @include bg($grey-2);
     @include border(all, 1px, solid, $third-color);
-    border-radius: 3px;
+  }
+
+  .form_field_textfield,
+  .form_field_textarea,
+  .form_field_select {
+    width: 200px;
+    margin: 0;
+    padding: 16px;
     @include box-sizing(border-box);
+
+    &:focus {
+      outline: none;
+    }
 
     @include query($mobile-2) {
       width: 100%;
     }
   }
-  .form_field_textarea {
-    min-height: 98px;
-  }
+
   .form_field_select {
+    text-indent: 0.01px;
+    text-overflow: '';
+    background-position: 96% 21px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+
+    .no-svg & {
+      background-image: url('../images/ico-arrow-down.png');
+    }
+
+    .svg & {
+      background-image: url('../images/ico-arrow-down.png');
+    }
+  }
+
+  .form_field_checkbox,
+  .form_field_radio {
+    visibility: hidden;
+    margin-bottom: 8px;
+
+    + .form_control_indicator {
+      position: absolute;
+      top: 3px;
+      left: 0;
+      display: block;
+      width: 15px;
+      height: 15px;
+      @include bg($third-color);
+    }
+  }
+
+  .form_field_checkbox {
+    &:checked {
+      + .form_control_indicator:before {
+        position: absolute;
+        top: -3px;
+        left: 3px;
+        display: block;
+        width: 14px;
+        height: 14px;
+        content: '';
+        background-size: cover;
+
+        .no-svg & {
+          background-image: url('../images/ico-tick.png');
+        }
+
+        .svg & {
+          background-image: url('../assets/ico-tick.svg');
+        }
+      }
+    }
+  }
+
+  .form_field_radio {
+    + .form_control_indicator {
+      &, &:before {
+        border-radius: 100%;
+      }
+    }
+
+    &:checked {
+      + .form_control_indicator:before {
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        display: block;
+        width: 9px;
+        height: 9px;
+        content: '';
+        @include bg($primary-color);
+      }
+    }
   }
 
   .form_field_size_medium {
-    width: 420px;
+    width: 400px;
 
     @include query($mobile-2) {
       width: 100%;
     }
   }
+
   .form_field_size_large {
-    width: 580px;
+    width: 600px;
   }
 
   .form_submit {
-    margin-top: 10px;
-
     input {
+      display: block;
+      margin: 18px 0 0;
+      padding: 14px 24px;
+      font-size: 18px;
+      @include color($white);
+      line-height: 1;
+      @include bg($secondary-color);
+      border: none;
+      cursor: pointer;
+      @include inputiosreset;
+
+      &:hover {
+        @include bg($secondary-color, 0.8);
+      }
+
+      @include query($mobile-2) {
+        width: 100%;
+      }
     }
   }
 
-  .form_error,
-  .form_field_error {
-    @include color($red);
+  .form_field_required {
+    .form_field_label:after {
+      content: ' * \a';
+    }
   }
 
   .form_field_with_errors {
     .form_field_textfield,
     .form_field_textarea {
-      @include border(all, 1px, solid, $red);
+      @include box-shadow(4px, 4px, 0, rgba($red, 1));
     }
   }
 
+  .form_field_error {
+    margin-top: 5px;
+    margin-left: 1px;
+    @include color($red);
+  }
+
+  .feedback-loading,
+  .feedback-error,
+  .form_error,
+  .feedback-success,
+  .form_notice, {
+    display: inline-block;
+    vertical-align: top;
+    margin: 18px 0 0;
+    @include color($white);
+    line-height: 1;
+    @include box-shadow(4px, 4px, 0, rgba($black, 0.1));
+  }
+
+  .feedback-error,
+  .form_error,
+  .feedback-success,
   .form_notice {
-    @include color($green);
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .feedback-loading {
+    width: 60px;
+    text-align: center;
+    font-size: 30px;
+    @include bg($secondary-color, 0.5);
+  }
+
+  .feedback-loading {
+    span {
+      display: inline-block;
+      vertical-align: middle;
+      width:  7.5px;
+      height: 7.5px;
+      margin: 0 3px 5px 0;
+      background: transparent;
+      border-radius: 50%;
+      @include animation(feedback-loading 0.8s linear infinite);
+    }
+  }
+
+  .feedback-loading {
+    span:nth-child(2) {
+      @include animation-delay(.2s);
+    }
+  }
+
+  .feedback-loading {
+    span:nth-child(3) {
+      @include animation-delay(.4s);
+    }
+  }
+
+  .feedback-loading {
+    span:last-child {
+      margin-right: 0;
+    }
+  }
+
+  @include keyframes(feedback-loading) {
+    0% {
+      background: transparent;
+    }
+
+    50% {
+      background: $white;
+    }
+
+    100% {
+      background: transparent;
+    }
+  }
+
+  .feedback-error,
+  .form_error {
+    @include bg($red);
+  }
+
+  .feedback-success,
+  .form_notice {
+    @include bg($green);
+  }
+
+  .close-btn {
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    margin: 2px 0 5px 9px;
+    padding: 0;
+    @include border(all, 1px, solid, $white, 0.3);
+    border-radius: 100%;
+    cursor: pointer;
+
+    &:hover {
+      opacity: .8;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    .no-svg & {
+      background: url("../images/ico-close.png") center center no-repeat;
+    }
+
+    .svg & {
+      background: url("../assets/ico-close.svg") center center no-repeat;
+    }
   }
 }
