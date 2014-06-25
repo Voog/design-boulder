@@ -45,10 +45,6 @@
     .main-feature & {
       font-style: italic;
       font-size: 24px;
-
-      &, &:first-child {
-        margin-top: 23px;
-      }
     }
 
     .contacts & {
@@ -70,9 +66,23 @@
   p {
     margin-top: 30px;
 
+    .main-feature & {
+      margin-top: 20px;
+    }
+
     .contacts & {
       margin-top: 20px;
       font-size: 20px;
+    }
+
+    .quotation & {
+      margin-top: 7px;
+      font-size: 24px;
+      @include color($white);
+
+      &:first-child {
+        margin-top: 0;
+      }
     }
   }
 
@@ -114,6 +124,12 @@
 
   img, iframe, pre {
     margin-top: 25px;
+  }
+
+  iframe {
+    .map & {
+      margin-top: 0;
+    }
   }
 
   pre {

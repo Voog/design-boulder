@@ -198,6 +198,8 @@ body {
   }
 
   .summary & {
+    padding: 0 20px;
+
     .flexbox & {
       @include flexbox;
     }
@@ -208,7 +210,7 @@ body {
   }
 
   .contacts & {
-    padding: 0;
+    padding: 55px 0;
   }
 }
 

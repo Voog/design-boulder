@@ -30,7 +30,6 @@
           </div>
         </div>
 
-        {% comment %}
         <div class="summary">
           <div class="wrap">
             <section class="blog">
@@ -43,12 +42,13 @@
               {% endfor %}
             </section>
 
-            <section class="quotation content-formatted">
-              {% content name="quotation_content" %}
+            <section class="quotation">
+              <div class="content-formatted">
+                {% content name="quotation_content" %}
+              </div>
             </section>
           </div>
         </div>
-        {% endcomment %}
 
         <div class="contacts">
           <section class="wrap content-formatted">

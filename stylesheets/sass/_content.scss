@@ -16,6 +16,7 @@
   }
 
   .feature-right {
+    @include align-self(center);
     width: 469px;
     margin-left: 31px;
   }
@@ -33,6 +34,10 @@
   }
 
   .quotation {
-    width: 500px;
+    @include align-self(center);
+    width: 470px;
+    padding: 43px 20px 43px 47px;
+    font-size: 24px;
+    @include color($white);
   }
 }

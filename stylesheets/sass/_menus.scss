@@ -481,3 +481,60 @@ $flags:
   }
 }
 
+
+.menu-pagination {
+  text-align: center;
+  @include border(all, 1px, solid, $third-color);
+
+  .wrap {
+    padding: 0;
+  }
+
+  .menu {
+    @extend %clearfix;
+  }
+
+  li {
+    &, a {
+      @extend %inline-block;
+    }
+
+    a {
+      padding: 11px 5px;
+    }
+
+    &.pagination-previous,
+    &.pagination-next {
+      a {
+        padding: 11px 19px;
+      }
+    }
+
+    &.pagination-previous {
+      float: left;
+      @include border(right, 1px, solid, $third-color);
+    }
+
+    &.pagination-next {
+      float: right;
+      @include border(left, 1px, solid, $third-color);
+    }
+
+    &:first-child {
+    }
+
+    a {
+      @include color($primary-color);
+
+      &.active,
+      &:hover {
+        @include color($secondary-color);
+      }
+
+      &.active,
+      &.active:hover {
+        font-weight: 700
+      }
+    }
+  }
+}

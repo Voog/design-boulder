@@ -2,38 +2,56 @@
 // Style rules for the blog listing view only
 .front-page {
   .blog {
-    width: 500px;
+    width: 503px;
+    padding: 43px 0;
+    @include border(right, 5px, solid, $white);
   }
 
   .blog-title {
     margin: 0;
+    font-weight: 400;
     font-style: italic;
     font-size: 20px;
     @include color($white, 0.5);
   }
 
+  .post {
+    margin-top: 10px;
+  }
+
   .post-title {
+    display: inline;
     font-weight: 400;
-    font-size: 24;
+    font-size: 24px;
     @include border(bottom, 1px, solid, $white);
+
+    &:hover {
+      border: none;
+    }
 
     &, & a {
       @include color($white);
     }
   }
+
+  .post-date {
+    display: block;
+    font-size: 16px;
+    @include color($white, 0.5);
+  }
 }
 
-.blog-page {
-  .post-add-btn {
-    text-align: center;
-    margin-bottom: 50px;
-  }
-
+.blog-page,
+.post-page {
   .post {
-    margin-bottom: 50px;
-    padding-bottom: 50px;
+    padding: 50px 0;
     text-align: center;
-    @include border(bottom, 1px, solid, $black, 0.1);
+    @include border(top, 1px, solid, $black, 0.1);
+
+    &:first-child {
+      padding-top: 0;
+      border: none;
+    }
 
     .post-title {
       margin-top: 0;
@@ -75,8 +93,13 @@
   }
 }
 
+.blog-page {
+  .post-add-btn {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+}
+
 // Style rules for the blog single article view only
 .post-page {
-  .post {
-  }
 }
