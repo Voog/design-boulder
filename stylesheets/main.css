@@ -1119,9 +1119,13 @@ body {
 }
 
 /* BLOG & BLOG ARTICLE */
+.post-title {
+  word-wrap: break-word;
+}
+
 .front-page .blog {
-  width: 503px;
-  padding: 43px 0;
+  width: 463px;
+  padding: 43px 40px 43px 0;
   border-right: 5px solid white;
 }
 .front-page .blog-title {

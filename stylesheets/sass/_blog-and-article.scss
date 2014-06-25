@@ -1,9 +1,14 @@
 /* BLOG & BLOG ARTICLE */
-// Style rules for the blog listing view only
+
+.post-title {
+  word-wrap: break-word;
+}
+
+// Style rules for the front page blog listing only.
 .front-page {
   .blog {
-    width: 503px;
-    padding: 43px 0;
+    width: 463px;
+    padding: 43px 40px 43px 0;
     @include border(right, 5px, solid, $white);
   }
 
@@ -41,6 +46,7 @@
   }
 }
 
+// Style rules for the blog listing & single article view.
 .blog-page,
 .post-page {
   .post {
@@ -93,6 +99,7 @@
   }
 }
 
+// Style rules for the blog listing view only
 .blog-page {
   .post-add-btn {
     text-align: center;
