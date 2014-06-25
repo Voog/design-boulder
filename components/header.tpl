@@ -1,5 +1,4 @@
 <header class="header">
-  <div>{{ page.data.header_image }}</div>
   {% if site.root_item.selected? %}
       {% if header_image != '' or editmode %}<div class="background-image stretch js-bgpicker-header-image"{{ header_image_style }}></div>{% endif %}
       {% if header_color != '' or editmode %}<div class="background-color stretch js-bgpicker-header-color"{{ header_color_style }}></div>{% endif %}
