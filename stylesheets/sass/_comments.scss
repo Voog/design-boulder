@@ -2,11 +2,75 @@
 // Styling rules for the blog article single article comments area.
 // Comment form is styled using the form fields styles located in the "_forms.scss" partial.
 .comments {
+  @include border(top, 1px, solid, $third-color);
+
+  .comment {
+    padding: 30px 0;
+    @include border(bottom, 1px, solid, $third-color);
+
+    &:first-child {
+      @include border(top, 1px, solid, $third-color);
+    }
+  }
+
+  .comments-title {
+    text-align: left;
+    font-style: italic;
+    font-size: 24px;
+  }
+
+  .comment-messages {
+    margin-top: 25px;
+  }
+
+  .comment-author {
+    margin-top: 15px;
+    @include color($secondary-color);
+  }
+
+  .comment-date {
+    line-height: 1;
+    @include color($primary-color, 0.5);
+  }
+}
+
+.comment-form {
   margin-top: 50px;
 
-  .comment-title,
-  .comment,
-  .comment-form {
-    margin-top: 25px;
+  .placeholder {
+    @include color($grey-1);
+  }
+}
+
+.comment_form_textfield_wrap {
+  display: inline-block;
+  max-width: 290px;
+  margin-top: 0;
+
+  &:first-child {
+    margin-right: 16px;
+  }
+
+  .form_field_textfield {
+    width: 290px;
+  }
+
+  @include query($tablet-3) {
+    display: block;
+    max-width: none;
+
+    &:first-child {
+      margin-right: 0;
+    }
+
+    .form_field_textfield {
+      width: 100%;
+    }
+  }
+}
+
+.comment_form_textarea_wrap {
+  .form_field_textarea {
+    width: 600px;
   }
 }

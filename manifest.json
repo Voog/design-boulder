@@ -251,6 +251,12 @@
       "filename": "overthrow.js"
     },
     {
+      "content_type": "application/javascript",
+      "file": "javascripts/placeholder.js",
+      "kind": "javascripts",
+      "filename": "placeholder.js"
+    },
+    {
       "content_type": "text/css",
       "file": "stylesheets/ie8.css",
       "kind": "stylesheets",

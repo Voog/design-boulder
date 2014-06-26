@@ -17,35 +17,34 @@
     <main class="content js-content" role="main">
       <div class="wrap">
         {% include "post-box" with "article" %}
+      </div>
 
-        <section id="comments" class="comments content-formatted">
+      <div class="comments content-formatted">
+        <div class="wrap">
           {% if article.comments_count > 0 %}
-          <h2 class="comments-title"><span class="edy-site-blog-comments-count">{{ article.comments_count }}</span> {{ "comments_for_count" | lc }}</h2>
+            <h2 class="comments-title"><span class="edy-site-blog-comments-count">{{ article.comments_count }} {{ "comments_for_count" | lc }}</span></h2>
 
-          <div class="comment-messages">
-            {% for comment in article.comments reversed %}
-            <div class="comment edy-site-blog-comment">
-              <span class="comment-body">{{ comment.body_html }}</span>
-              <span class="comment-info">
-                <span class="comment-author">{{ comment.author }}, </span>
-                <span class="comment-date">{{ comment.created_at | format_date: "long" }}</span>
-              </span>
-              {% removebutton %}
+            <div class="comment-messages">
+              {% for comment in article.comments %}
+                <div class="comment edy-site-blog-comment">
+                  <div class="comment-body">{{ comment.body_html }}</div>
+                  <div class="comment-author">{{ comment.author }}</div>
+                  <div class="comment-date">{{ comment.created_at | format_date: "long" }}{% removebutton %}</div>
+                </div>
+              {% endfor %}
             </div>
-            {% endfor %}
-          </div>
           {% endif %}
 
           {% include "comment-form" %}
-        </section>
+        </div>
       </div>
     </main>
 
     {% include "footer" %}
-
   </div>
 
   {% include "javascripts" %}
-  {% include "bg-picker" %}
+  <script src="{{ javascripts_path }}/placeholder.js?1"></script>
+  <script>$('.js-placeholder').placeholder();</script>
 </body>
 </html>

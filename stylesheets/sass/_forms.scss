@@ -62,11 +62,9 @@
     @include bg($grey-2);
     @include border(all, 1px, solid, $third-color);
     @include inputiosreset;
-  }
 
-  .comment-form {
-    .form_field_textfield {
-      width: 290px;
+    &:focus {
+      outline: none;
     }
   }
 
@@ -77,10 +75,6 @@
     margin: 0;
     padding: 16px;
     @include box-sizing(border-box);
-
-    &:focus {
-      outline: none;
-    }
 
     @include query($mobile-2) {
       width: 100%;
@@ -176,8 +170,10 @@
   }
 
   .form_submit {
+    @extend %clearfix;
     input {
       display: block;
+      float: right;
       margin: 18px 0 0;
       padding: 14px 24px;
       font-size: 18px;
@@ -207,7 +203,13 @@
   .form_field_with_errors {
     .form_field_textfield,
     .form_field_textarea {
-      @include color($red);
+      @include placeholder {
+        @include color($red);
+      }
+
+      .placeholder {
+        @include color($red);
+      }
     }
   }
 

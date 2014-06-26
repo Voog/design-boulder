@@ -17,7 +17,7 @@ body {
   background-size: cover;
 }
 
-.content-formatted:after, .menu-pagination .menu:after {
+.content-formatted:after, .menu-pagination .menu:after, .content-formatted .form_submit:after {
   content: "";
   display: table;
   clear: both;
@@ -242,6 +242,9 @@ body {
 }
 .menu-tags .wrap {
   padding-bottom: 0;
+}
+.comments .wrap {
+  padding: 33px 20px;
 }
 
 .content-formatted {
@@ -1235,10 +1238,6 @@ body {
   padding: 50px 0;
 }
 
-.post-page .post {
-  padding: 50px 0 30px;
-}
-
 /* FORMS */
 .content-formatted form {
   max-width: 100%;
@@ -1293,8 +1292,11 @@ body {
   -webkit-border-radius: 0;
   border-radius: 0;
 }
-.content-formatted .comment-form .form_field_textfield {
-  width: 290px;
+.content-formatted .form_field_textfield:focus,
+.content-formatted .form_field_textarea:focus,
+.content-formatted .form_field_select:focus,
+.content-formatted .form_submit input:focus {
+  outline: none;
 }
 .content-formatted .form_field_textfield,
 .content-formatted .form_field_textarea,
@@ -1305,11 +1307,6 @@ body {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-}
-.content-formatted .form_field_textfield:focus,
-.content-formatted .form_field_textarea:focus,
-.content-formatted .form_field_select:focus {
-  outline: none;
 }
 @media screen and (max-width: 420px) {
   .content-formatted .form_field_textfield,
@@ -1388,6 +1385,7 @@ body {
 }
 .content-formatted .form_submit input {
   display: block;
+  float: right;
   margin: 18px 0 0;
   padding: 14px 24px;
   font-size: 18px;
@@ -1412,8 +1410,24 @@ body {
 .content-formatted .form_field_required .form_field_label:after {
   content: ' * \a';
 }
-.content-formatted .form_field_with_errors .form_field_textfield,
-.content-formatted .form_field_with_errors .form_field_textarea {
+.content-formatted .form_field_with_errors .form_field_textfield::-webkit-input-placeholder,
+.content-formatted .form_field_with_errors .form_field_textarea::-webkit-input-placeholder {
+  color: #cc0000;
+}
+.content-formatted .form_field_with_errors .form_field_textfield::-moz-placeholder,
+.content-formatted .form_field_with_errors .form_field_textarea::-moz-placeholder {
+  color: #cc0000;
+}
+.content-formatted .form_field_with_errors .form_field_textfield:-moz-placeholder,
+.content-formatted .form_field_with_errors .form_field_textarea:-moz-placeholder {
+  color: #cc0000;
+}
+.content-formatted .form_field_with_errors .form_field_textfield:-ms-input-placeholder,
+.content-formatted .form_field_with_errors .form_field_textarea:-ms-input-placeholder {
+  color: #cc0000;
+}
+.content-formatted .form_field_with_errors .form_field_textfield .placeholder,
+.content-formatted .form_field_with_errors .form_field_textarea .placeholder {
   color: #cc0000;
 }
 .content-formatted .form_field_error {
@@ -1432,6 +1446,70 @@ body {
 }
 .content-formatted .form_notice {
   color: #60a740;
+}
+
+/* COMMENTS */
+.comments {
+  border-top: 1px solid #e5e5e5;
+}
+.comments .comment {
+  padding: 30px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+.comments .comment:first-child {
+  border-top: 1px solid #e5e5e5;
+}
+.comments .comments-title {
+  text-align: left;
+  font-style: italic;
+  font-size: 24px;
+}
+.comments .comment-messages {
+  margin-top: 25px;
+}
+.comments .comment-author {
+  margin-top: 15px;
+  color: #e4ac00;
+}
+.comments .comment-date {
+  line-height: 1;
+  color: #444444;
+  color: rgba(68, 68, 68, 0.5);
+}
+
+.comment-form {
+  margin-top: 50px;
+}
+.comment-form .placeholder {
+  color: #333333;
+}
+
+.comment_form_textfield_wrap {
+  display: inline-block;
+  max-width: 290px;
+  margin-top: 0;
+}
+.comment_form_textfield_wrap:first-child {
+  margin-right: 16px;
+}
+.comment_form_textfield_wrap .form_field_textfield {
+  width: 290px;
+}
+@media screen and (max-width: 640px) {
+  .comment_form_textfield_wrap {
+    display: block;
+    max-width: none;
+  }
+  .comment_form_textfield_wrap:first-child {
+    margin-right: 0;
+  }
+  .comment_form_textfield_wrap .form_field_textfield {
+    width: 100%;
+  }
+}
+
+.comment_form_textarea_wrap .form_field_textarea {
+  width: 600px;
 }
 
 /* FOOTER */
