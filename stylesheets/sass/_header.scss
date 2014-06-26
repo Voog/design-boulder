@@ -25,16 +25,26 @@
   }
 
   .wrap {
-    .no-flexbox & {
-      display: table;
-    }
+    max-width: 1000px;
+    padding: 19px 20px;
 
     .flexbox & {
       @include flexbox;
       @include align-content(center);
       @include justify-content(center);
     }
-    padding: 19px 20px;
+
+    .no-flexbox & {
+      display: table;
+    }
+
+    @include query($tablet-2) {
+      .no-flexbox &,
+      .flexbox & {
+        display: block;
+        width: auto;
+      }
+    }
   }
 }
 
@@ -43,6 +53,14 @@
   .no-flexbox & {
     display: table-cell;
     vertical-align: top;
+  }
+
+  @include query($tablet-2) {
+    .no-flexbox &,
+    .flexbox & {
+      display: block;
+      width: auto;
+    }
   }
 }
 
@@ -65,6 +83,11 @@
   a:hover {
     @include color($primary-color, 0.8);
   }
+
+  @include query($tablet-2) {
+    display: block;
+    margin-right: 40px;
+  }
 }
 
 .header-right {
@@ -74,13 +97,15 @@
 
 .header-bottom-inner {
   display: table;
-  width: 845px;
+  width: 100%;
+  max-width: 845px;
   margin: 0 auto;
   text-align: center;
 
   .wrap {
     display: table-cell;
     vertical-align: middle;
+    padding: 0 20px;
     height: 542px;
   }
 

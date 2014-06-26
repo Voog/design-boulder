@@ -20,6 +20,9 @@ body {
 
  // Layout specific body classes
  .front-page {
+  .wrap {
+    max-width: 1000px;
+  }
  }
 
  .common-page {
@@ -172,51 +175,5 @@ body {
 .wrap {
   max-width: 600px;
   margin: 0 auto;
-
-  .front-page &,
-  .header-top &,
-  .footer & {
-    max-width: 1000px;
-  }
-
-  .content & {
-    padding: 50px 20px;
-  }
-
-  .main-feature & {
-    .flexbox & {
-      @include flexbox;
-      @include align-content(center);
-      @include justify-content(center);
-    }
-
-    .no-flexbox & {
-      display: table;
-    }
-  }
-
-  .summary & {
-    padding: 0 20px;
-
-    .flexbox & {
-      @include flexbox;
-    }
-
-    .no-flexbox & {
-      display: table;
-    }
-  }
-
-  .contacts & {
-    padding: 55px 0;
-  }
-
-  .menu-tags & {
-    padding-bottom: 0;
-  }
-
-  .comments & {
-    padding: 33px 20px;
-  }
 }
 

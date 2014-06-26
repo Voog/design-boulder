@@ -4,6 +4,10 @@
   padding-bottom: 80px;
   @include bg($white);
 
+  .wrap {
+    padding: 50px 20px;
+  }
+
   @include query($tablet-2) {
     margin-top: 20px;
   }
@@ -11,6 +15,18 @@
 
 
 .main-feature {
+  .wrap {
+    .flexbox & {
+      @include flexbox;
+      @include align-content(center);
+      @include justify-content(center);
+    }
+
+    .no-flexbox & {
+      display: table;
+    }
+  }
+
   .feature-left {
     width: 500px;
   }
@@ -24,6 +40,18 @@
 
 .summary {
   @include bg($secondary-color);
+
+  .wrap {
+    padding: 0 20px;
+
+    .flexbox & {
+      @include flexbox;
+    }
+
+    .no-flexbox & {
+      display: table;
+    }
+  }
 
   .blog,
   .quotation {
@@ -39,5 +67,11 @@
     padding: 43px 20px 43px 47px;
     font-size: 24px;
     @include color($white);
+  }
+}
+
+.contacts {
+  .wrap {
+    padding: 55px 0;
   }
 }
