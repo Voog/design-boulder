@@ -208,16 +208,16 @@
             @include bg($third-color, 0.5);
           }
         }
+      }
 
-        &.edit-btn {
-          display: block;
-          text-align: left;
+      .edit-btn {
+        display: block;
+        text-align: left;
 
-          .edy-menu-langadd {
-            display: inline-block;
-            padding: 0;
-            margin: 11px 25px 11px 25px;
-          }
+        .edy-menu-langadd {
+          display: inline-block;
+          padding: 0;
+          margin: 11px 25px 11px 25px;
         }
       }
     }
@@ -225,7 +225,6 @@
 }
 
 .menu-sub {
-  margin: 0 30px;
   padding: 7px 0;
   @include border(bottom,1px,solid,$primary-color, 0.2);
 
@@ -239,17 +238,12 @@
     .menu-item {
       margin-right: 12px;
 
-      &.edit-btn {
-        display: inline-block;
-        margin-left: 0;
-      }
-
       &:last-child {
         margin-right: 0;
       }
 
       .menu-link {
-        @include color($third-color);
+        @include color($primary-color);
 
         &.untranslated {
           @include color($red, 0.5);
@@ -260,6 +254,11 @@
           @include color($secondary-color);
         }
       }
+    }
+
+    .edit-btn {
+      display: inline-block;
+      margin-left: 0;
     }
   }
 }
@@ -347,13 +346,6 @@
   display: inline-block;
   line-height: 1;
 
-  &.edit-btn {
-    display: inline-block;
-    margin: 7px 20px;
-    padding: 0;
-
-  }
-
   @include query($tablet-2) {
     display: none;
   }
@@ -384,6 +376,12 @@
         right: 12px;
       }
     }
+  }
+
+  .edit-btn {
+    display: inline-block;
+    margin: 7px 20px;
+    padding: 0;
   }
 
   .edy-menu-langadd {
@@ -449,39 +447,59 @@ $flags:
   .lang-flag-#{$flag}:after { background-position: $pos; }
 }
 
+// Styling rules for the site's blog article tags menu. These rules affects both - the blog article listing view and the single blog article view.
+.tags {
+  .editmode & {
+    margin-top: 20px;
+  }
+}
+.tags-title {
+  display: inline-block;
+  margin-right: 5px;
+  font-size: 14px;
+  @include color($primary-color);
+}
+
+.tags-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+  margin: 10px 5px 10px 0;
+  background-position: center;
+
+  .no-svg & {
+    background-image: url('../images/ico-tags.png');
+  }
+
+  svg {
+    fill: $grey-1;
+  }
+}
+
+.tags {
+  margin-top: 20px;
+}
+
 .menu-tags {
-  .tags-left,
-  .tags-right {
+  .menu {
     display: inline-block;
     vertical-align: middle;
-  }
+    line-height: 1.3;
 
-  .tags-left {
-    width: 110px;
-    margin-right: 24px;
-    text-align: right;
-
-    @include query($tablet-1) {
-      width: 113px;
-      margin-right: 0;
-      text-align: left;
-    }
-
-    .tags-title {
-      display: inline-block;
+    .menu-link {
       font-size: 14px;
-      @include color($secondary-color);
-    }
-  }
+      @include color($primary-color);
 
-  .tags-right {
-    .menu {
-      margin-top: 2px;
+      &.active,
+      &:hover {
+        @include border(bottom, 3px, solid, $secondary-color);
+      }
     }
   }
 }
 
-
+// Styling rules for the blog listing view pagination.
 .menu-pagination {
   text-align: center;
   @include border(all, 1px, solid, $third-color);

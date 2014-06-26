@@ -180,20 +180,18 @@ body {
   }
 
   .content & {
-    padding: 70px 20px 50px;
+    padding: 50px 20px;
   }
 
   .main-feature & {
-    padding: 48px 20px;
-
-    .no-flexbox & {
-      display: table;
-    }
-
     .flexbox & {
       @include flexbox;
       @include align-content(center);
       @include justify-content(center);
+    }
+
+    .no-flexbox & {
+      display: table;
     }
   }
 
@@ -211,6 +209,10 @@ body {
 
   .contacts & {
     padding: 55px 0;
+  }
+
+  .menu-tags & {
+    padding-bottom: 0;
   }
 }
 

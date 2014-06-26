@@ -14,11 +14,10 @@
 <body class="blog-page">
   <div class="container">
     {% include "header" %}
+    {% include "tags-blog" %}
 
     <main class="content js-content" role="main">
       <div class="wrap">
-        {% include "tags-blog" %}
-
         {% if editmode %}<div class="post-add-btn">{% addbutton %}</div>{% endif %}
 
         <section class="blog-articles">

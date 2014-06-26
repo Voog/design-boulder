@@ -50,52 +50,51 @@
 .blog-page,
 .post-page {
   .post {
-    padding: 50px 0;
-    text-align: center;
     @include border(top, 1px, solid, $black, 0.1);
 
     &:first-child {
       padding-top: 0;
       border: none;
     }
+  }
 
-    .post-title {
-      margin-top: 0;
-      margin-bottom: 0;
+  .post-title {
+    margin: 0;
+    text-align: center;
 
-      &, a {
-        font-weight: 400;
-        font-style: italic;
-        font-size: 30px;
-        @include color($secondary-color);
-      }
-
-      a {
-        @include border(bottom, 2px, solid, $secondary-color);
-
-        &:hover {
-          @include opacity(0.5);
-        }
-      }
+    &, a {
+      font-weight: 400;
+      font-style: italic;
+      font-size: 30px;
+      @include color($secondary-color);
     }
 
-    .post-date {
-      display: block;
-      margin-top: 5px;
-      font-size: 18px;
-      @include color($third-color);
-    }
+    a {
+      @include border(bottom, 2px, solid, $secondary-color);
 
-    .post-content {
-      margin-top: 20px;
-
-      .post-excerpt {
-      }
-
-      .post-body {
-        margin-top: 20px;
+      &:hover {
+        @include opacity(0.5);
       }
     }
+  }
+
+  .post-date {
+    display: block;
+    margin-top: 5px;
+    text-align: center;
+    font-size: 18px;
+    @include color($third-color);
+  }
+
+  .post-content {
+    margin-top: 20px;
+  }
+
+  .post-excerpt {
+  }
+
+  .post-body {
+    margin-top: 20px;
   }
 }
 
@@ -105,8 +104,15 @@
     text-align: center;
     margin-bottom: 50px;
   }
+
+  .post {
+    padding: 50px 0;
+  }
 }
 
 // Style rules for the blog single article view only
 .post-page {
+  .post {
+    padding: 50px 0 30px;
+  }
 }

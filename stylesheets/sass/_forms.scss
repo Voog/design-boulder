@@ -49,15 +49,6 @@
   .form_field_textfield,
   .form_field_textarea,
   .form_field_select,
-  .form_submit input {
-    font-family: inherit;
-    font-size: 14px;
-    @include inputiosreset;
-  }
-
-  .form_field_textfield,
-  .form_field_textarea,
-  .form_field_select,
   .form_field_file {
     max-width: 100%;
   }
@@ -65,9 +56,18 @@
   .form_field_textfield,
   .form_field_textarea,
   .form_field_select,
-  .form_submit input, {
+  .form_submit input {
+    font-family: inherit;
+    font-size: 14px;
     @include bg($grey-2);
     @include border(all, 1px, solid, $third-color);
+    @include inputiosreset;
+  }
+
+  .comment-form {
+    .form_field_textfield {
+      width: 290px;
+    }
   }
 
   .form_field_textfield,
@@ -230,32 +230,5 @@
 
   .form_notice {
     @include color($green);
-  }
-
-  .close-btn {
-    vertical-align: middle;
-    width: 20px;
-    height: 20px;
-    margin: 2px 0 5px 9px;
-    padding: 0;
-    @include border(all, 1px, solid, $white, 0.3);
-    border-radius: 100%;
-    cursor: pointer;
-
-    &:hover {
-      opacity: .8;
-    }
-
-    &:focus {
-      outline: none;
-    }
-
-    .no-svg & {
-      background: url("../images/ico-close.png") center center no-repeat;
-    }
-
-    .svg & {
-      background: url("../assets/ico-close.svg") center center no-repeat;
-    }
   }
 }
