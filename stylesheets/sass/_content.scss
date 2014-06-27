@@ -5,14 +5,9 @@
   @include bg($white);
 
   .wrap {
-    padding: 50px 20px;
-  }
-
-  @include query($tablet-2) {
-    margin-top: 20px;
+    padding: 20px;
   }
 }
-
 
 .main-feature {
   .wrap {
@@ -35,6 +30,26 @@
     @include align-self(center);
     width: 469px;
     margin-left: 31px;
+  }
+
+  @include query($tablet-2) {
+    .wrap {
+      .flexbox &,
+      .no-flexbox & {
+        display: block;
+      }
+    }
+
+    .feature-left,
+    .feature-right {
+      width: auto;
+      text-align: center;
+    }
+
+    .feature-right {
+      margin-top: 20px;
+      margin-left: 0;
+    }
   }
 }
 
@@ -68,10 +83,32 @@
     font-size: 24px;
     @include color($white);
   }
+
+  @include query($tablet-2) {
+    .wrap {
+      padding: 0;
+
+      .flexbox &,
+      .no-flexbox & {
+        display: block;
+      }
+    }
+
+    .quotation {
+      width: auto;
+      padding: 20px;
+    }
+  }
 }
 
 .contacts {
   .wrap {
-    padding: 55px 0;
+    padding: 55px 20px;
+  }
+
+  @include query($tablet-2) {
+    .wrap {
+      padding: 30px 20px;
+    }
   }
 }

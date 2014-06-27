@@ -52,4 +52,19 @@
       }
     }
   }
+
+  @include query($tablet-2) {
+    .wrap {
+      .flexbox &,
+      .no-flexbox & {
+        display: block;
+      }
+    }
+
+    .footer-left,
+    .footer-right {
+      width: auto;
+      text-align: center;
+    }
+  }
 }

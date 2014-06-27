@@ -38,7 +38,7 @@
       "component": true,
       "file": "components/bg-picker-variables.tpl",
       "layout_name": "",
-      "title": "Bg-picker-variables"
+      "title": "bg-picker-variables"
     },
     {
       "content_type": "component",
@@ -143,7 +143,7 @@
       "component": true,
       "file": "components/tags-variables.tpl",
       "layout_name": "",
-      "title": "Tags-variables"
+      "title": "tags-variables"
     },
     {
       "content_type": "component",

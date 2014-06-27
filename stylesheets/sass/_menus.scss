@@ -130,8 +130,8 @@
           @include border(bottom, solid, 4px, $secondary-color);
 
           @include query($tablet-2) {
-            @include color($third-color);
-            @include bg($blue-2);
+            font-weight: 700;
+            @include bg($secondary-color);
           }
         }
 
@@ -139,14 +139,19 @@
           @include border(bottom, solid, 4px, $secondary-color, 0.8);
 
           @include query($tablet-2) {
-            @include color($third-color);
-            @include bg($blue-2, 0.5);
+            @include bg($secondary-color, 0.5);
           }
         }
 
         @include query($tablet-2) {
           display: block;
           padding: 8px 25px 5px;
+
+          &.active,
+          &.active:hover,
+          &:hover {
+            border: none;
+          }
         }
       }
     }
@@ -227,10 +232,6 @@
 .menu-sub {
   padding: 7px 0;
   @include border(bottom,1px,solid,$primary-color, 0.2);
-
-  @include query($tablet-1) {
-    margin: 0 20px;
-  }
 
   .menu {
     text-align: center;

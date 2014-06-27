@@ -44,6 +44,15 @@
     font-size: 16px;
     @include color($white, 0.5);
   }
+
+  @include query($tablet-2) {
+    .blog {
+      width: auto;
+      padding: 20px;
+      border-right: none;
+      @include border(bottom, 5px, solid, $white);
+    }
+  }
 }
 
 // Style rules for the blog listing & single article view.

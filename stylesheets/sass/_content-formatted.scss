@@ -52,6 +52,13 @@
     }
   }
 
+  &.feature-left,
+  &.feature-right {
+    h2 {
+      text-align: center;
+    }
+  }
+
   h3, h4, h5, h6 {
     margin-top: 30px;
     font-size: 18px;
@@ -115,10 +122,25 @@
     height: auto;
 
     .main-feature & {
+      display: inline-block;
       max-width: 224px;
       height: auto;
       margin-top: 0;
       margin-right: 12px;
+
+      &:nth-child(2n+2) {
+        margin-right: 0;
+      }
+
+      @include query($mobile-1) {
+        max-width: 100%;
+        margin-top: 20px;
+        margin-right: 0;
+
+        &:first-child {
+          margin-top: 0;
+        }
+      }
     }
   }
 
@@ -162,6 +184,11 @@
   .overthrow {
     overflow: auto;
     -webkit-overflow-scrolling: touch;
+
+    .contacts & {
+      overflow: auto;
+      -webkit-overflow-scrolling: none;
+    }
   }
 
   // Adds dashed border to indicate that the table is too wide and can be scrolled horizontally.
@@ -172,6 +199,7 @@
 
   table {
     width: 100%;
+    margin: 0 auto;
     @include border(all,1px,solid,$grey-2);
     border-collapse: collapse;
     border-spacing: 0;
@@ -189,6 +217,27 @@
         padding: 11px 17px;
         @include border(top, 1px, solid, $grey-2);
         @include border(bottom, 1px, solid, $grey-2);
+      }
+    }
+
+    .contacts & {
+      width: auto;
+      border: none;
+
+      tr {
+        td {
+          padding: 0 15px;
+          @include color($primary-color);
+          background: none;
+          border-top: none;
+          @include border(left, 2px, solid, $grey-3);
+          border-right: none;
+          border-bottom: none;
+
+          &:first-child {
+            border-left: none;
+          }
+        }
       }
     }
   }
