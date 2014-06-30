@@ -24,7 +24,7 @@
 <!-- STYLESHEETS -->
 {% stylesheet_link "main.css?1" %}
 <!--[if lt IE 9]>{% stylesheet_link "ie8.css?1" %}<![endif]-->
-<link rel="stylesheet" href="/assets/admin/tools/0.1.2/edicy-tools.css">
+<link rel="stylesheet" href="/assets/admin/tools/0.1.3/edicy-tools.css">
 
 <!-- SITE TITLE -->
 <title>{% if article %}{{ article.title }} — {{ page.site_title }}{% else %}{% if site.root_item.selected? %}{{ page.site_title }}{% else %}{{ page.title }} — {{ page.site_title }}{% endif %}{% endif %}</title>
