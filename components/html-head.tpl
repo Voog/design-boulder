@@ -26,12 +26,37 @@
 <!--[if lt IE 9]>{% stylesheet_link "ie8.css?1" %}<![endif]-->
 <link rel="stylesheet" href="/assets/admin/tools/0.1.3/edicy-tools.css">
 
-<!-- SITE TITLE -->
-<title>{% if article %}{{ article.title }} — {{ page.site_title }}{% else %}{% if site.root_item.selected? %}{{ page.site_title }}{% else %}{{ page.title }} — {{ page.site_title }}{% endif %}{% endif %}</title>
+{% comment %}<!-- SITE TITLE -->{% endcomment %}
+{% capture page_title %}{% if article %}{{ article.title }} — {{ page.site_title }}{% else %}{% if site.root_item.selected? %}{{ page.site_title }}{% else %}{{ page.title }} — {{ page.site_title }}{% endif %}{% endif %}{% endcapture %}
+<title>{{ page_title }}</title>
 
-<!-- FACEBOOK OPENGRAPH -->
-<!-- Page specific opengraph tags are located in each page template -->
-{% if site.data.fb_admin %}<meta property="fb:admins" content="{{ site.data.fb_admin }}">;{% comment %}<!-- TODO: Add functionality -->{% endcomment %}{% endif %}
-<!-- http://graph.facebook.com/"username" - Replace "username" with site admin's username to get admin's ID) -->
-<meta property="og:type" content="website">
+{% comment %}<!-- FACEBOOK OPENGRAPH -->{% endcomment %}
 <!-- https://developers.facebook.com/tools/debug - Debug after each modification -->
+{% comment %}<!-- TODO: Add admin and image editing support after the CMS is going to support it -->{% endcomment %}
+{% if site.data.fb_admin %}<meta property="fb:admins" content="{{ site.data.fb_admin }}">{% endif %}
+<meta property="og:type" content="{% if article %}article{% else %}website{% endif %}">
+<meta property="og:url" content="{{ site.url }}{% if article %}{{ article.url | remove_first:'/' }}{% else %}{{ page.url | remove_first:'/' }}{% endif %}">
+<meta property="og:title" content="{{ page_title | escape }}">
+<meta property="og:site_name" content="{{ page.site_title | escape }}">
+
+{% if article %}
+  {% if article.data.fb_image %}
+    <meta property="og:image" content="{{ article.data.fb_image }}">
+  {% elsif page.data.fb_image %}
+    <meta property="og:image" content="{{ page.data.fb_image }}">
+  {% elsif site.data.fb_image %}
+    <meta property="og:image" content="{{ site.data.fb_image }}">
+  {% endif %}
+  <meta property="og:description" content="{{ article.excerpt | strip_html | truncate: 200 }}">
+  <meta name="description" content="{{ article.excerpt | strip_html | truncate: 200 }}">
+{% else %}
+  {% if page.data.fb_image %}
+    <meta property="og:image" content="{{ page.data.fb_image }}">
+  {% elsif site.data.fb_image %}
+    <meta property="og:image" content="{{ site.data.fb_image }}">
+  {% endif %}
+  {% unless page.description == nil or page.description == "" %}
+    <meta property="og:description" content="{{ page.description }}">
+    <meta name="description" content="{{ page.description }}">
+  {% endunless %}
+{% endif %}
