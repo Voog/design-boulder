@@ -325,6 +325,12 @@ body {
   margin-top: 0;
   padding: 0;
 }
+.content-formatted .edy-positionable-container-left {
+  float: left;
+}
+.content-formatted .edy-positionable-container-right {
+  float: right;
+}
 .content-formatted .table-container {
   margin-top: 20px;
 }
@@ -1125,6 +1131,9 @@ body {
   padding: 20px;
 }
 
+.main-feature .wrap {
+  padding: 48px 20px;
+}
 .flexbox .main-feature .wrap {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1144,8 +1153,13 @@ body {
 .no-flexbox .main-feature .wrap {
   display: table;
 }
+.main-feature .feature-left .edy-positionable-container-left,
+.main-feature .feature-right .edy-positionable-container-left {
+  margin-right: 16px;
+}
 .main-feature .feature-left {
-  width: 500px;
+  width: 464px;
+  margin-right: 36px;
 }
 .main-feature .feature-right {
   -webkit-align-self: center;

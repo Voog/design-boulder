@@ -172,6 +172,14 @@
     }
   }
 
+  .edy-positionable-container-left {
+    float: left;
+  }
+
+  .edy-positionable-container-right {
+    float: right;
+  }
+
   // Styling rules for the site's editable content area tables.
   // NB! Works only if editable content-area - {% content %} -  is wrapped into the element that has the "content-formatted" class.
 

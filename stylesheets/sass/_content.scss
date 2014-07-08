@@ -11,6 +11,8 @@
 
 .main-feature {
   .wrap {
+    padding: 48px 20px;
+
     .flexbox & {
       @include flexbox;
       @include align-content(center);
@@ -22,8 +24,16 @@
     }
   }
 
+  .feature-left,
+  .feature-right {
+    .edy-positionable-container-left {
+      margin-right: 16px;
+    }
+  }
+
   .feature-left {
-    width: 500px;
+    width: 464px;
+    margin-right: 36px;
   }
 
   .feature-right {
