@@ -44,7 +44,7 @@
         </div>
 
         <div class="contacts">
-          <section class="wrap content-formatted custom-content-formatted js-custom-content-formatted">
+          <section class="wrap content-formatted js-custom-content-formatted">
             {% content name="contacts_content" %}
           </section>
         </div>

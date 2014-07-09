@@ -380,6 +380,23 @@ body {
 .contacts .content-formatted table tr td:first-child {
   border-left: none;
 }
+@media screen and (max-width: 660px) {
+  .contacts .content-formatted table {
+    display: inline-block;
+  }
+  .contacts .content-formatted table tbody, .contacts .content-formatted table tr {
+    display: block;
+  }
+  .contacts .content-formatted table tr td {
+    display: block;
+    text-align: center;
+    border-top: 2px solid #cccccc;
+    border-left: none;
+  }
+  .contacts .content-formatted table tr td:first-child {
+    border-top: none;
+  }
+}
 .content-formatted .edy-content-element {
   margin-top: 20px;
 }
@@ -1241,6 +1258,7 @@ body {
 @media screen and (max-width: 752px) {
   .contacts .wrap {
     padding: 30px 20px;
+    text-align: center;
   }
 }
 

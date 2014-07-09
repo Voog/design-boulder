@@ -119,6 +119,7 @@
   @include query($tablet-2) {
     .wrap {
       padding: 30px 20px;
+      text-align: center;
     }
   }
 }

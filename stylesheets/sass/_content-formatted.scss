@@ -248,10 +248,31 @@
           }
         }
       }
+
+      @include query($tablet-3) {
+        & {
+          display: inline-block;
+
+          tbody, tr {
+            display: block;
+          }
+        }
+
+        tr {
+          td {
+            display: block;
+            text-align: center;
+            @include border(top, 2px, solid, $grey-3);
+            border-left: none;
+
+            &:first-child {
+              border-top: none;
+            }
+          }
+        }
+      }
     }
   }
-
-
 
   // Space between editable content areas in editmode.
   .edy-content-element {
