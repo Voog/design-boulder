@@ -1610,7 +1610,7 @@ body {
 .comment_form_textfield_wrap .form_field_textfield {
   width: 290px;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 660px) {
   .comment_form_textfield_wrap {
     display: block;
     max-width: none;
