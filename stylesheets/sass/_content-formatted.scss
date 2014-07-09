@@ -114,37 +114,11 @@
   }
 
   // Styling rules for the editable content area images, embedded videos, preformatted texts, code examples etc.
-  img, iframe {
+  iframe {
     max-width: 100%;
   }
 
-  img {
-    height: auto;
-
-    .main-feature & {
-      display: inline-block;
-      max-width: 224px;
-      height: auto;
-      margin-top: 0;
-      margin-right: 12px;
-
-      &:nth-child(2n+2) {
-        margin-right: 0;
-      }
-
-      @include query($mobile-1) {
-        max-width: 100%;
-        margin-top: 20px;
-        margin-right: 0;
-
-        &:first-child {
-          margin-top: 0;
-        }
-      }
-    }
-  }
-
-  img, iframe, pre {
+  iframe, pre {
     margin-top: 25px;
   }
 

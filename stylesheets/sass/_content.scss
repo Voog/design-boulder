@@ -42,6 +42,36 @@
     margin-left: 31px;
   }
 
+  @include query($tablet-1) {
+    .flexbox &,
+    .no-flexbox & {
+      .wrap {
+        display: block;
+        text-align: center;
+      }
+    }
+
+    .feature-left,
+    .feature-right {
+      display: inline-block;
+      width: auto;
+      margin: 0 auto;
+    }
+
+    .feature-left {
+      &.content-formatted {
+        .edy-positionable-container-left {
+          // TODO: Remove if there's going to be a better solution.
+          margin-right: 16px !important;
+        }
+      }
+    }
+
+    .feature-right {
+      margin-top: 48px;
+    }
+  }
+
   @include query($tablet-3) {
     .wrap {
       .flexbox &,
@@ -54,6 +84,15 @@
     .feature-right {
       width: auto;
       text-align: center;
+    }
+
+    .feature-left {
+      &.content-formatted {
+        .edy-positionable-container-left,
+        .edy-positionable-container-right {
+          float: none;
+        }
+      }
     }
 
     .feature-right {
