@@ -2,7 +2,7 @@
 .menu-btn {
   display: none;
 
-  @include query($tablet-2) {
+  @include query($tablet-3) {
     position: absolute;
     top: 11px;
     right: 0;
@@ -70,7 +70,7 @@
   vertical-align: middle;
   margin-top: 8px;
 
-  @include query($tablet-2) {
+  @include query($tablet-3) {
     display: none;
 
     &.expanded {
@@ -109,7 +109,7 @@
         margin-left: 0;
       }
 
-      @include query($tablet-2) {
+      @include query($tablet-3) {
         display: block;
         margin: 0;
         font-size: 20px;
@@ -129,7 +129,7 @@
         &.active:hover {
           @include border(bottom, solid, 4px, $secondary-color);
 
-          @include query($tablet-2) {
+          @include query($tablet-3) {
             font-weight: 700;
             @include bg($secondary-color);
           }
@@ -138,12 +138,12 @@
         &:hover {
           @include border(bottom, solid, 4px, $secondary-color, 0.8);
 
-          @include query($tablet-2) {
+          @include query($tablet-3) {
             @include bg($secondary-color, 0.5);
           }
         }
 
-        @include query($tablet-2) {
+        @include query($tablet-3) {
           display: block;
           padding: 8px 25px 5px;
 
@@ -160,7 +160,7 @@
       display: inline-block;
       margin-left: 20px;
 
-      @include query($tablet-1) {
+      @include query($tablet-2) {
         display: block;
 
         .edy-menu-menuadd {
@@ -179,7 +179,7 @@
   .menu-lang {
     display: none;
 
-    @include query($tablet-2) {
+    @include query($tablet-3) {
       display: block;
       padding-left: 0;
 
@@ -347,7 +347,7 @@
   display: inline-block;
   line-height: 1;
 
-  @include query($tablet-2) {
+  @include query($tablet-3) {
     display: none;
   }
 

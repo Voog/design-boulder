@@ -53,7 +53,7 @@
     }
   }
 
-  @include query($tablet-2) {
+  @include query($tablet-3) {
     .wrap {
       .flexbox &,
       .no-flexbox & {

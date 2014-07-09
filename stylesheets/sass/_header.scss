@@ -38,7 +38,7 @@
       display: table;
     }
 
-    @include query($tablet-2) {
+    @include query($tablet-3) {
       .no-flexbox &,
       .flexbox & {
         display: block;
@@ -55,7 +55,7 @@
     vertical-align: top;
   }
 
-  @include query($tablet-2) {
+  @include query($tablet-3) {
     .no-flexbox &,
     .flexbox & {
       display: block;
@@ -84,7 +84,7 @@
     @include color($primary-color, 0.8);
   }
 
-  @include query($tablet-2) {
+  @include query($tablet-3) {
     display: block;
     margin-right: 40px;
   }

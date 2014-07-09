@@ -42,7 +42,7 @@
     margin-left: 31px;
   }
 
-  @include query($tablet-2) {
+  @include query($tablet-3) {
     .wrap {
       .flexbox &,
       .no-flexbox & {
@@ -94,7 +94,7 @@
     @include color($white);
   }
 
-  @include query($tablet-2) {
+  @include query($tablet-3) {
     .wrap {
       padding: 0;
 
@@ -116,7 +116,7 @@
     padding: 55px 20px;
   }
 
-  @include query($tablet-2) {
+  @include query($tablet-3) {
     .wrap {
       padding: 30px 20px;
       text-align: center;
