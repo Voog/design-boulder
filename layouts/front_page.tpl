@@ -50,10 +50,8 @@
         </div>
 
         <div class="map">
-          <!-- {% content name="map_content" %}  -->
-          <!-- TODO: Replace content area -->
           <section class="content-formatted">
-            <iframe src="http://maps.google.com/maps?f=q&amp;hl=en&amp;q=boulder@40.0149856,-105.27054559999999&amp;ie=UTF8&amp;ll=40.0149856,-105.27054559999999&amp;z=12&amp;iwloc=A&amp;output=embed" width="650" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" style="line-height: 1.4em; display: block; width: 100%; height: 300px;"></iframe>
+            {% content name="map_content" %}
           </section>
         </div>
       </main>

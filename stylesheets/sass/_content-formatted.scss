@@ -151,6 +151,7 @@
   iframe {
     .map & {
       margin-top: 0;
+      max-height: 300px;
     }
   }
 
@@ -251,10 +252,6 @@
   }
 
 
-  // Minimal height of the editable content area (to avoid content area visual "jumping" when content-area is focused).
-  .edy-texteditor-view {
-    min-height: 25px;
-  }
 
   // Space between editable content areas in editmode.
   .edy-content-element {
@@ -262,6 +259,21 @@
 
     &:first-child {
       margin-top: 0;
+    }
+  }
+
+  // Minimal height of the editable content area (to avoid content area visual "jumping" when content-area is focused).
+  .edy-texteditor-view {
+    min-height: 25px;
+  }
+
+  .embed-container {
+    .editmode & {
+      margin-top: 20px;
+    }
+
+    .map & {
+      max-height: 273px;
     }
   }
 }
