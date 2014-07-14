@@ -297,16 +297,6 @@ body {
           border-left: none; }
           .contacts .content-formatted table tr td:first-child {
             border-top: none; } }
-  .content-formatted .edy-content-element {
-    margin-top: 20px; }
-    .content-formatted .edy-content-element:first-child {
-      margin-top: 0; }
-  .content-formatted .edy-texteditor-view {
-    min-height: 25px; }
-  .editmode .content-formatted .embed-container {
-    margin-top: 20px; }
-  .map .content-formatted .embed-container {
-    max-height: 273px; }
 
 /* MENUS */
 .menu-btn {

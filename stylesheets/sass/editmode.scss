@@ -1,3 +1,26 @@
 // EDITMODE STYLESHEET
 // Stylesheet for styling elements that are only used in editmode
 
+/* Space between editable content areas */
+.edy-content-element {
+  margin-top: 20px;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+// Minimal height of the editable content area (to avoid content area visual "jumping" when content-area is focused).
+.edy-texteditor-view {
+  min-height: 25px;
+}
+
+.embed-container {
+  .editmode & {
+    margin-top: 20px;
+  }
+
+  .map & {
+    max-height: 273px;
+  }
+}

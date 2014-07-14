@@ -24,6 +24,7 @@
 <!-- STYLESHEETS -->
 {% stylesheet_link "main.min.css" %}
 <link rel="stylesheet" href="/assets/admin/tools/0.1.3/edicy-tools.css">
+{% if editmode %}{% stylesheet_link "editmode.min.css" %}{% endif %}
 
 {% comment %}<!-- SITE TITLE -->{% endcomment %}
 {% capture page_title %}{% if article %}{{ article.title }} — {{ page.site_title }}{% else %}{% if site.root_item.selected? %}{{ page.site_title }}{% else %}{{ page.title }} — {{ page.site_title }}{% endif %}{% endif %}{% endcapture %}

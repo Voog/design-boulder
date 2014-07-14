@@ -1,0 +1,13 @@
+/* Space between editable content areas */
+.edy-content-element {
+  margin-top: 20px; }
+  .edy-content-element:first-child {
+    margin-top: 0; }
+
+.edy-texteditor-view {
+  min-height: 25px; }
+
+.editmode .embed-container {
+  margin-top: 20px; }
+.map .embed-container {
+  max-height: 273px; }

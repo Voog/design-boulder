@@ -249,6 +249,12 @@
       "file": "stylesheets/main.min.css",
       "kind": "stylesheets",
       "filename": "main.min.css"
+    },
+    {
+      "content_type": "text/css",
+      "kind": "stylesheets",
+      "file": "stylesheets/editmode.min.css",
+      "filename": "editmode.min.css"
     }
   ]
 }
