@@ -147,12 +147,22 @@
     }
   }
 
+  .edy-positionable-container-left,
+  .edy-positionable-container-right {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
   .edy-positionable-container-left {
-    float: left;
+    margin-right: 15px;
   }
 
   .edy-positionable-container-right {
-    float: right;
+    margin-left: 15px;
+  }
+
+  .edy-image-container-title {
+    padding: 2px;
   }
 
   // Styling rules for the site's editable content area tables.

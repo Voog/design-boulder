@@ -18,7 +18,7 @@ body {
 .front-page .wrap {
   max-width: 1000px; }
 
-.content-formatted:after, .menu-pagination .menu:after, .content-formatted .form_submit:after {
+.content-formatted:after, .menu-pagination .menu:after, .header-top .wrap:after, .content-formatted .form_submit:after {
   content: "";
   display: table;
   clear: both; }
@@ -237,10 +237,16 @@ body {
       display: block;
       margin-top: 0;
       padding: 0; }
-  .content-formatted .edy-positionable-container-left {
-    float: left; }
+  .content-formatted .edy-positionable-container-left,
   .content-formatted .edy-positionable-container-right {
-    float: right; }
+    margin-top: 8px;
+    margin-bottom: 8px; }
+  .content-formatted .edy-positionable-container-left {
+    margin-right: 15px; }
+  .content-formatted .edy-positionable-container-right {
+    margin-left: 15px; }
+  .content-formatted .edy-image-container-title {
+    padding: 2px; }
   .content-formatted .table-container {
     margin-top: 20px; }
   .content-formatted .overthrow {
@@ -353,7 +359,7 @@ body {
 .menu-main {
   display: inline-block;
   vertical-align: middle;
-  margin-top: 8px; }
+  margin-top: 9px; }
   @media screen and (max-width: 752px) {
     .menu-main {
       display: none; }
@@ -788,47 +794,17 @@ body {
     background-color: rgba(255, 255, 255, 0.9); }
   .header-top .wrap {
     max-width: 1000px;
-    padding: 19px 20px; }
-    .flexbox .header-top .wrap {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -moz-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-align-content: center;
-      -moz-align-content: center;
-      -ms-flex-line-pack: center;
-      align-content: center;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      -webkit-justify-content: center;
-      -moz-justify-content: center;
-      justify-content: center; }
-    .no-flexbox .header-top .wrap {
-      display: table; }
-    @media screen and (max-width: 752px) {
-      .no-flexbox .header-top .wrap, .flexbox .header-top .wrap {
-        display: block;
-        width: auto; } }
-
-.no-flexbox .header-left, .no-flexbox
-.header-right {
-  display: table-cell;
-  vertical-align: top; }
-@media screen and (max-width: 752px) {
-  .no-flexbox .header-left, .flexbox .header-left, .no-flexbox
-  .header-right, .flexbox
-  .header-right {
-    display: block;
-    width: auto; } }
+    padding: 20px 20px 18px; }
 
 .header-left {
-  width: 300px;
-  position: relative; }
+  position: relative;
+  float: left;
+  margin-right: 20px; }
 
 .header-title {
   display: inline-block;
   vertical-align: middle;
+  word-break: break-word;
   min-width: 140px;
   font-weight: 700;
   font-style: italic;
@@ -844,7 +820,7 @@ body {
       margin-right: 40px; } }
 
 .header-right {
-  width: 700px;
+  float: right;
   text-align: right; }
 
 .header-bottom-inner {
