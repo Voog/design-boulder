@@ -313,7 +313,7 @@ body {
 /* MENUS */
 .menu-btn {
   display: none; }
-  @media screen and (max-width: 752px) {
+  @media screen and (max-width: 420px) {
     .menu-btn {
       position: absolute;
       top: 11px;
@@ -362,7 +362,7 @@ body {
   display: inline-block;
   vertical-align: middle;
   margin-top: 9px; }
-  @media screen and (max-width: 752px) {
+  @media screen and (max-width: 420px) {
     .menu-main {
       display: none; }
       .menu-main.expanded {
@@ -378,7 +378,7 @@ body {
         -webkit-box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3) ;
         -moz-box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3) ;
         box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3) ; } }
-  @media screen and (max-width: 752px) and (max-width: 480px) {
+  @media screen and (max-width: 420px) and (max-width: 480px) {
     .menu-main.expanded {
       top: 72px;
       left: -15px;
@@ -397,7 +397,7 @@ body {
       margin-left: 20px; }
       .menu-main .menu .menu-item:first-child {
         margin-left: 0; }
-      @media screen and (max-width: 752px) {
+      @media screen and (max-width: 420px) {
         .menu-main .menu .menu-item {
           display: block;
           margin: 0;
@@ -413,18 +413,18 @@ body {
           color: rgba(204, 0, 0, 0.5); }
         .menu-main .menu .menu-item .menu-link.active, .menu-main .menu .menu-item .menu-link.active:hover {
           border-bottom: solid 4px #e4ac00; }
-          @media screen and (max-width: 752px) {
+          @media screen and (max-width: 420px) {
             .menu-main .menu .menu-item .menu-link.active, .menu-main .menu .menu-item .menu-link.active:hover {
               font-weight: 700;
               background-color: #e4ac00; } }
         .menu-main .menu .menu-item .menu-link:hover {
           border-bottom: solid 4px #e4ac00;
           border-bottom: solid 4px rgba(228, 172, 0, 0.8); }
-          @media screen and (max-width: 752px) {
+          @media screen and (max-width: 420px) {
             .menu-main .menu .menu-item .menu-link:hover {
               background-color: #e4ac00;
               background-color: rgba(228, 172, 0, 0.5); } }
-        @media screen and (max-width: 752px) {
+        @media screen and (max-width: 420px) {
           .menu-main .menu .menu-item .menu-link {
             display: block;
             padding: 8px 25px 5px; }
@@ -444,7 +444,7 @@ body {
               background: none; } }
   .menu-main .menu-lang {
     display: none; }
-    @media screen and (max-width: 752px) {
+    @media screen and (max-width: 420px) {
       .menu-main .menu-lang {
         display: block;
         padding-left: 0; }
@@ -562,7 +562,7 @@ body {
   position: relative;
   display: inline-block;
   line-height: 1; }
-  @media screen and (max-width: 752px) {
+  @media screen and (max-width: 420px) {
     .menu-lang {
       display: none; } }
   .menu-lang .menu-item {
@@ -811,7 +811,7 @@ body {
   .header-title a:hover {
     color: #444444;
     color: rgba(68, 68, 68, 0.8); }
-  @media screen and (max-width: 752px) {
+  @media screen and (max-width: 420px) {
     .header-title {
       display: block;
       margin-right: 40px; } }
@@ -889,7 +889,7 @@ body {
     margin-right: 16px !important; }
   .main-feature .feature-right {
     margin-top: 48px; } }
-@media screen and (max-width: 752px) {
+@media screen and (max-width: 420px) {
   .flexbox .main-feature .wrap, .no-flexbox .main-feature .wrap {
     display: block; }
   .main-feature .feature-left,
@@ -928,7 +928,7 @@ body {
     padding: 43px 20px 43px 47px;
     font-size: 24px;
     color: white; }
-  @media screen and (max-width: 752px) {
+  @media screen and (max-width: 420px) {
     .summary .wrap {
       padding: 0; }
       .flexbox .summary .wrap, .no-flexbox .summary .wrap {
@@ -939,7 +939,7 @@ body {
 
 .contacts .wrap {
   padding: 55px 20px; }
-@media screen and (max-width: 752px) {
+@media screen and (max-width: 420px) {
   .contacts .wrap {
     padding: 30px 20px;
     text-align: center; } }
@@ -975,7 +975,7 @@ body {
   font-size: 16px;
   color: white;
   color: rgba(255, 255, 255, 0.5); }
-@media screen and (max-width: 752px) {
+@media screen and (max-width: 420px) {
   .front-page .blog {
     width: auto;
     padding: 20px;

@@ -59,7 +59,7 @@
     width: 290px;
   }
 
-  @include query($tablet-4) {
+  @include query($mobile-5) {
     display: block;
     max-width: none;
 

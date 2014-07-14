@@ -52,7 +52,7 @@
     @include color($primary-color, 0.8);
   }
 
-  @include query($tablet-3) {
+  @include query($mobile-4) {
     display: block;
     margin-right: 40px;
   }

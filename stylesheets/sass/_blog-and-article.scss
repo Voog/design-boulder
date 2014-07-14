@@ -45,7 +45,7 @@
     @include color($white, 0.5);
   }
 
-  @include query($tablet-3) {
+  @include query($mobile-4) {
     .blog {
       width: auto;
       padding: 20px;

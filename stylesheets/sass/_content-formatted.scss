@@ -228,7 +228,7 @@
         }
       }
 
-      @include query($tablet-4) {
+      @include query($mobile-5) {
         & {
           display: inline-block;
 

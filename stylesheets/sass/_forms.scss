@@ -76,7 +76,7 @@
     padding: 16px;
     @include box-sizing(border-box);
 
-    @include query($mobile-2) {
+    @include query($mobile-4) {
       width: 100%;
     }
   }
@@ -160,7 +160,7 @@
   .form_field_size_medium {
     width: 400px;
 
-    @include query($mobile-2) {
+    @include query($mobile-4) {
       width: 100%;
     }
   }
@@ -188,7 +188,7 @@
         @include bg($secondary-color, 0.8);
       }
 
-      @include query($mobile-2) {
+      @include query($mobile-4) {
         width: 100%;
       }
     }

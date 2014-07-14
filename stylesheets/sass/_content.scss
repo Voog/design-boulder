@@ -72,7 +72,7 @@
     }
   }
 
-  @include query($tablet-3) {
+  @include query($mobile-4) {
     .wrap {
       .flexbox &,
       .no-flexbox & {
@@ -133,7 +133,7 @@
     @include color($white);
   }
 
-  @include query($tablet-3) {
+  @include query($mobile-4) {
     .wrap {
       padding: 0;
 
@@ -155,7 +155,7 @@
     padding: 55px 20px;
   }
 
-  @include query($tablet-3) {
+  @include query($mobile-4) {
     .wrap {
       padding: 30px 20px;
       text-align: center;

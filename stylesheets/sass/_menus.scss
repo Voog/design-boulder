@@ -2,7 +2,7 @@
 .menu-btn {
   display: none;
 
-  @include query($tablet-3) {
+  @include query($mobile-4) {
     position: absolute;
     top: 11px;
     right: 0;
@@ -30,7 +30,7 @@
     }
   }
 
-  @include query($mobile-1) {
+  @include query($mobile-3) {
     right: 20px;
   }
 
@@ -48,7 +48,7 @@
     }
   }
 
-  @include query($mobile-1) {
+  @include query($mobile-3) {
     right: 0;
   }
 }
@@ -70,7 +70,7 @@
   vertical-align: middle;
   margin-top: 9px;
 
-  @include query($tablet-3) {
+  @include query($mobile-4) {
     display: none;
 
     &.expanded {
@@ -86,7 +86,7 @@
       @include box-shadow(0, 5px, 25px, rgba($black, 0.3));
     }
 
-    @include query($mobile-1) {
+    @include query($mobile-3) {
       &.expanded {
         top: 72px;
         left: -15px;
@@ -109,7 +109,7 @@
         margin-left: 0;
       }
 
-      @include query($tablet-3) {
+      @include query($mobile-4) {
         display: block;
         margin: 0;
         font-size: 20px;
@@ -129,7 +129,7 @@
         &.active:hover {
           @include border(bottom, solid, 4px, $secondary-color);
 
-          @include query($tablet-3) {
+          @include query($mobile-4) {
             font-weight: 700;
             @include bg($secondary-color);
           }
@@ -138,12 +138,12 @@
         &:hover {
           @include border(bottom, solid, 4px, $secondary-color, 0.8);
 
-          @include query($tablet-3) {
+          @include query($mobile-4) {
             @include bg($secondary-color, 0.5);
           }
         }
 
-        @include query($tablet-3) {
+        @include query($mobile-4) {
           display: block;
           padding: 8px 25px 5px;
 
@@ -179,7 +179,7 @@
   .menu-lang {
     display: none;
 
-    @include query($tablet-3) {
+    @include query($mobile-4) {
       display: block;
       padding-left: 0;
 
@@ -347,7 +347,7 @@
   display: inline-block;
   line-height: 1;
 
-  @include query($tablet-3) {
+  @include query($mobile-4) {
     display: none;
   }
 
