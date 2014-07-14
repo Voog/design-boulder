@@ -219,7 +219,6 @@
 
       tr {
         td {
-          padding: 0 15px;
           background: none;
 
           &:first-child {
@@ -255,6 +254,7 @@
     .contacts & {
       tr {
         td {
+          padding: 0 15px;
           @include color($primary-color);
           border-top: none;
           @include border(left, 2px, solid, $grey-3);
@@ -267,6 +267,7 @@
     .footer & {
       tr {
         td {
+          padding: 0 12px;
           @include color($white, 0.5);
           border: none;
         }

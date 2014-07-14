@@ -283,7 +283,6 @@ body {
       width: auto;
       border: none; }
       .contacts .content-formatted table tr td, .footer .content-formatted table tr td {
-        padding: 0 15px;
         background: none; }
         .contacts .content-formatted table tr td:first-child, .footer .content-formatted table tr td:first-child {
           border-left: none; }
@@ -300,12 +299,14 @@ body {
           .contacts .content-formatted table tr td:first-child, .footer .content-formatted table tr td:first-child {
             border-top: none; } }
     .contacts .content-formatted table tr td {
+      padding: 0 15px;
       color: #444444;
       border-top: none;
       border-left: 2px solid #cccccc;
       border-right: none;
       border-bottom: none; }
     .footer .content-formatted table tr td {
+      padding: 0 12px;
       color: white;
       color: rgba(255, 255, 255, 0.5);
       border: none; }
@@ -1258,7 +1259,7 @@ body {
   background-color: #444444; }
   .footer .wrap {
     max-width: 1000px;
-    padding: 29px 20px 26px; }
+    padding: 28px 20px 27px; }
   .footer .footer-left,
   .footer .footer-right {
     min-width: 150px; }
@@ -1279,3 +1280,10 @@ body {
         color: rgba(228, 172, 0, 0.75);
         border: 1px solid black;
         border: 1px solid rgba(0, 0, 0, 0.75); }
+  @media screen and (max-width: 816px) {
+    .footer .footer-left,
+    .footer .footer-right {
+      float: none;
+      text-align: center; }
+    .footer .footer-right {
+      margin-top: 10px; } }

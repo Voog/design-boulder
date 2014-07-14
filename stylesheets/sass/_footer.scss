@@ -12,7 +12,7 @@
   .wrap {
     @extend %clearfix;
     max-width: 1000px;
-    padding: 29px 20px 26px;
+    padding: 28px 20px 27px;
   }
 
   .footer-left,
@@ -45,6 +45,18 @@
         @include color($secondary-color, 0.75);
         @include border(all, 1px, solid, $black, 0.75);
       }
+    }
+  }
+
+  @include query($tablet-3) {
+    .footer-left,
+    .footer-right {
+      float: none;
+      text-align: center;
+    }
+
+    .footer-right {
+      margin-top: 10px;
     }
   }
 }
