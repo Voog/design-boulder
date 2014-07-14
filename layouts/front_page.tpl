@@ -15,7 +15,7 @@
         <div class="main-feature">
           <div class="wrap">
             <section class="feature-left content-formatted">
-              {% contentblock name="feature_content_left" %}{% endcontentblock %}
+              {% content name="feature_content_left" %}
             </section>
             <section class="feature-right content-formatted">
               {% content name="feature_content_right" %}
