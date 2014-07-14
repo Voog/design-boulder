@@ -18,26 +18,6 @@ body {
   background-size: cover;
 }
 
- // Layout specific body classes
- .front-page {
-  .wrap {
-    max-width: 1000px;
-  }
- }
-
- .common-page {
- }
-
- .blog-page,
- .post-page {
- }
-
- .blog-page {
- }
-
- .post-page {
- }
-
 // Pseudo classes for declaring commonly used styling rules for different elements.
 %clearfix:after {
   content: "";
@@ -54,6 +34,17 @@ body {
 
 %inline-block {
   display: inline-block;
+}
+
+%header-footer-left {
+  position: relative;
+  float: left;
+  margin-right: 20px;
+}
+
+%header-footer-right {
+  float: right;
+  text-align: right;
 }
 
 // Styling rules for the independent elements that can be located everywhere in the DOM and always have the same styling rules.
@@ -175,5 +166,9 @@ body {
 .wrap {
   max-width: 600px;
   margin: 0 auto;
+
+  .front-page & {
+    max-width: 1000px;
+  }
 }
 

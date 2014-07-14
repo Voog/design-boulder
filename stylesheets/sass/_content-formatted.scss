@@ -125,7 +125,6 @@
   iframe {
     .map & {
       margin-top: 0;
-      max-height: 300px;
     }
   }
 
@@ -213,19 +212,15 @@
       }
     }
 
-    .contacts & {
+    .contacts &,
+    .footer & {
       width: auto;
       border: none;
 
       tr {
         td {
           padding: 0 15px;
-          @include color($primary-color);
           background: none;
-          border-top: none;
-          @include border(left, 2px, solid, $grey-3);
-          border-right: none;
-          border-bottom: none;
 
           &:first-child {
             border-left: none;
@@ -253,6 +248,27 @@
               border-top: none;
             }
           }
+        }
+      }
+    }
+
+    .contacts & {
+      tr {
+        td {
+          @include color($primary-color);
+          border-top: none;
+          @include border(left, 2px, solid, $grey-3);
+          border-right: none;
+          border-bottom: none;
+        }
+      }
+    }
+
+    .footer & {
+      tr {
+        td {
+          @include color($white, 0.5);
+          border: none;
         }
       }
     }

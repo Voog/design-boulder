@@ -10,27 +10,22 @@
   @include bg($primary-color);
 
   .wrap {
+    @extend %clearfix;
     max-width: 1000px;
     padding: 29px 20px 26px;
+  }
 
-    .no-flexbox & {
-      display: table;
-    }
-
-    .flexbox & {
-      @include flexbox;
-      @include align-content(center);
-      @include justify-content(center);
-    }
+  .footer-left,
+  .footer-right {
+    min-width: 150px;
   }
 
   .footer-left {
-    width: 300px;
+    @extend %header-footer-left;
   }
 
   .footer-right {
-    width: 700px;
-    text-align: right;
+    @extend %header-footer-right;
   }
 
   .voog-reference {
@@ -50,21 +45,6 @@
         @include color($secondary-color, 0.75);
         @include border(all, 1px, solid, $black, 0.75);
       }
-    }
-  }
-
-  @include query($tablet-3) {
-    .wrap {
-      .flexbox &,
-      .no-flexbox & {
-        display: block;
-      }
-    }
-
-    .footer-left,
-    .footer-right {
-      width: auto;
-      text-align: center;
     }
   }
 }
