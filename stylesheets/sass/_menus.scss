@@ -2,7 +2,7 @@
 .menu-btn {
   display: none;
 
-  @include query($mobile-4) {
+  @include query($tablet-2) {
     position: absolute;
     top: 11px;
     right: 0;
@@ -30,10 +30,6 @@
     }
   }
 
-  @include query($mobile-3) {
-    right: 20px;
-  }
-
   .menu-stripe {
     display: block;
     width: 23px;
@@ -47,10 +43,6 @@
       margin: 0;
     }
   }
-
-  @include query($mobile-3) {
-    right: 0;
-  }
 }
 
 .menu {
@@ -59,7 +51,8 @@
   padding-left: 0;
   list-style: none;
 
-  .menu-item {
+  .menu-item,
+  .edit-btn {
     display: inline-block;
     vertical-align: middle;
   }
@@ -70,20 +63,102 @@
   vertical-align: middle;
   margin-top: 9px;
 
-  @include query($mobile-4) {
+  .menu {
+    line-height: 1.3;
+
+    .menu-item,
+    .edit-btn {
+      margin-left: 20px;
+    }
+
+    .menu-item {
+      &:first-child {
+        margin-left: 0;
+      }
+
+      .menu-link {
+        font-weight: 600;
+        font-size: 18px;
+        @include color($primary-color);
+
+        &.untranslated {
+          @include color($red, 0.5);
+        }
+
+        &.active,
+        &.active:hover {
+          @include border(bottom, solid, 4px, $secondary-color);
+        }
+
+        &:hover {
+          @include border(bottom, solid, 4px, $secondary-color, 0.8);
+        }
+      }
+    }
+
+    .edit-btn {
+      position: relative;
+      top: -2px;
+      margin-right: 5px;
+    }
+  }
+
+  .menu-lang {
+    display: none;
+  }
+
+  @include query($tablet-2) {
     display: none;
 
     &.expanded {
       position: absolute;
-      top: 62px;
+      top: 60px;
       right: 20px;
       z-index: 10;
       display: block;
+      margin-top: 0;
       min-width: 350px;
       margin-bottom: 60px;
       text-align: left;
       @include bg($white);
       @include box-shadow(0, 5px, 25px, rgba($black, 0.3));
+
+      .menu-lang {
+        display: block;
+        padding-left: 0;
+
+        .menu-item {
+          text-align: left;
+
+          &:first-child {
+            border-top: none;
+          }
+
+          .menu-link {
+            padding: 11px 30px 9px 53px;
+            font-weight: 400;
+            font-size: 14px;
+
+            &:before,
+            &:after {
+              top: 7px;
+              left: 25px;
+            }
+
+            &.active,
+            &.active:hover {
+              font-weight: 600;
+              @include color($grey-1, 0.67);
+              background: none;
+            }
+
+            &:hover {
+              @include color($grey-1, 0.4);
+              @include bg($third-color, 0.5);
+            }
+          }
+        }
+      }
     }
 
     @include query($mobile-3) {
@@ -99,134 +174,6 @@
     }
   }
 
-  .menu {
-    line-height: 1.3;
-
-    .menu-item {
-      margin-left: 20px;
-
-      &:first-child {
-        margin-left: 0;
-      }
-
-      @include query($mobile-4) {
-        display: block;
-        margin: 0;
-        font-size: 20px;
-        @include border(bottom, 1px, solid, $primary-color, 0.2);
-      }
-
-      .menu-link {
-        font-weight: 600;
-        font-size: 18px;
-        @include color($primary-color);
-
-        &.untranslated {
-          @include color($red, 0.5);
-        }
-
-        &.active,
-        &.active:hover {
-          @include border(bottom, solid, 4px, $secondary-color);
-
-          @include query($mobile-4) {
-            font-weight: 700;
-            @include bg($secondary-color);
-          }
-        }
-
-        &:hover {
-          @include border(bottom, solid, 4px, $secondary-color, 0.8);
-
-          @include query($mobile-4) {
-            @include bg($secondary-color, 0.5);
-          }
-        }
-
-        @include query($mobile-4) {
-          display: block;
-          padding: 8px 25px 5px;
-
-          &.active,
-          &.active:hover,
-          &:hover {
-            border: none;
-          }
-        }
-      }
-    }
-
-    .edit-btn {
-      display: inline-block;
-      margin-left: 20px;
-
-      @include query($tablet-2) {
-        display: block;
-
-        .edy-menu-menuadd {
-          display: inline-block;
-          margin: 6px 25px 8px 25px;
-          padding: 0;
-
-          &:hover {
-            background: none;
-          }
-        }
-      }
-    }
-  }
-
-  .menu-lang {
-    display: none;
-
-    @include query($mobile-4) {
-      display: block;
-      padding-left: 0;
-
-      .menu-item {
-        text-align: left;
-
-        &:first-child {
-          border-top: none;
-        }
-
-        .menu-link {
-          padding: 11px 30px 9px 53px;
-          font-weight: 400;
-          font-size: 14px;
-
-          &:before,
-          &:after {
-            top: 7px;
-            left: 25px;
-          }
-
-          &.active,
-          &.active:hover {
-            font-weight: 600;
-            @include color($grey-1, 0.67);
-            background: none;
-          }
-
-          &:hover {
-            @include color($grey-1, 0.4);
-            @include bg($third-color, 0.5);
-          }
-        }
-      }
-
-      .edit-btn {
-        display: block;
-        text-align: left;
-
-        .edy-menu-langadd {
-          display: inline-block;
-          padding: 0;
-          margin: 11px 25px 11px 25px;
-        }
-      }
-    }
-  }
 }
 
 .menu-sub {
@@ -255,11 +202,6 @@
           @include color($secondary-color);
         }
       }
-    }
-
-    .edit-btn {
-      display: inline-block;
-      margin-left: 0;
     }
   }
 }
@@ -347,7 +289,7 @@
   display: inline-block;
   line-height: 1;
 
-  @include query($mobile-4) {
+  @include query($tablet-2) {
     display: none;
   }
 
@@ -359,8 +301,8 @@
     .menu-link {
       position: relative;
       display: block;
-      padding: 6px 40px 3px 13px;
-      @include color($secondary-color, 0.67);
+      padding: 5px 40px 3px 13px;
+      @include color($primary-color);
 
       &.active,
       &.active:hover {
@@ -377,21 +319,11 @@
         right: 12px;
       }
     }
+
   }
 
   .edit-btn {
-    display: inline-block;
-    margin: 7px 20px;
-    padding: 0;
-  }
-
-  .edy-menu-langadd {
-    display: inline-block;
-    padding: 10px 15px 5px;
-
-    &:hover {
-      background: none;
-    }
+    margin-right: 20px;
   }
 }
 

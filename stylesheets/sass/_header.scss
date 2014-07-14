@@ -35,6 +35,21 @@
   @extend %header-footer-left;
 }
 
+.header-right {
+  @extend %header-footer-right;
+}
+
+@include query($tablet-2) {
+  .header-left,
+  .header-right {
+    float: none;
+  }
+
+  .header-left {
+    margin-right: 0;
+  }
+}
+
 .header-title {
   display: inline-block;
   vertical-align: middle;
@@ -56,10 +71,6 @@
     display: block;
     margin-right: 40px;
   }
-}
-
-.header-right {
-  @extend %header-footer-right;
 }
 
 .header-bottom-inner {
