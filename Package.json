@@ -1,6 +1,6 @@
 {
-  "name": "voog-design-paris",
-  "description": "The Paris design template for Voog",
+  "name": "voog-design-boulder",
+  "description": "The Boulder design template for Voog",
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-contrib-concat": "^0.4.0",
