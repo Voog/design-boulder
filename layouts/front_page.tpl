@@ -23,7 +23,7 @@
           </div>
         </div>
 
-        <div class="summary">
+        <div class="summary dark-background">
           <div class="wrap">
             <section class="blog">
               <h1 class="blog-title">{{ "latest_news" | lc }}</h1>

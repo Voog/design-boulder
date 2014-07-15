@@ -453,10 +453,6 @@ $flags:
 }
 
 .menu-tags {
-  .wrap {
-    padding-bottom: 0;
-  }
-
   .menu {
     display: inline-block;
     vertical-align: middle;
@@ -478,10 +474,6 @@ $flags:
 .menu-pagination {
   text-align: center;
   @include border(all, 1px, solid, $third-color);
-
-  .wrap {
-    padding: 0;
-  }
 
   .menu {
     @extend %clearfix;

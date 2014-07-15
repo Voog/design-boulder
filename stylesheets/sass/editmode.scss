@@ -1,8 +1,15 @@
 // EDITMODE STYLESHEET
 // Stylesheet for styling elements that are only used in editmode
+@import 'bourbon/bourbon';
+@import '_mixins';
+@import '_variables';
 
 // Draggable area for content
 .edy-empty-bordered {
+  .quotation & {
+    padding: 26.6% 40px;
+  }
+
   .map & {
     padding: 125px 40px;
   }
@@ -21,10 +28,21 @@
 .edy-texteditor-view {
   min-height: 25px;
 
+  .dark-background & {
+    &.placeholder {
+      @include color($white, 0.5);
+    }
+  }
+
+  .quotation & {
+    min-height: 33px;
+  }
+
   .map & {
     min-height: 272px;
   }
 }
+
 
 // Embedded content wrapper
 .embed-container {

@@ -1,15 +1,31 @@
+.quotation .edy-empty-bordered {
+  padding: 26.6% 40px;
+}
 .map .edy-empty-bordered {
-  padding: 125px 40px; }
+  padding: 125px 40px;
+}
 
 .edy-ca {
-  margin-top: 20px; }
-  .edy-ca:first-child {
-    margin-top: 0; }
+  margin-top: 20px;
+}
+.edy-ca:first-child {
+  margin-top: 0;
+}
 
 .edy-texteditor-view {
-  min-height: 25px; }
-  .map .edy-texteditor-view {
-    min-height: 272px; }
+  min-height: 25px;
+}
+.dark-background .edy-texteditor-view.placeholder {
+  color: white;
+  color: rgba(255, 255, 255, 0.5);
+}
+.quotation .edy-texteditor-view {
+  min-height: 33px;
+}
+.map .edy-texteditor-view {
+  min-height: 272px;
+}
 
 .editmode .embed-container {
-  margin-top: 20px; }
+  margin-top: 20px;
+}

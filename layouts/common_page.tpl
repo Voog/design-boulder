@@ -5,7 +5,7 @@
   {{ site.stats_header }}
 </head>
 
-<body class="common-page">
+<body class="common-page content-page">
   <div class="container">
     {% include "header" %}
     {% include "menu-level-2" %}

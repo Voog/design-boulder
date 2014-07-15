@@ -6,7 +6,7 @@
   {{ site.stats_header }}
 </head>
 
-<body class="blog-page">
+<body class="blog-page content-page">
   <div class="container">
     {% include "header" %}
     {% include "tags-blog" %}

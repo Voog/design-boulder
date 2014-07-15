@@ -3,54 +3,24 @@
 .content {
   padding-bottom: 80px;
   @include bg($white);
-
-  .wrap {
-    padding: 20px;
-  }
 }
 
 .main-feature {
-  .wrap {
-    padding: 48px 20px;
-
-    .flexbox & {
-      @include flexbox;
-      @include align-content(center);
-      @include justify-content(center);
-    }
-
-    .no-flexbox & {
-      display: table;
-    }
-  }
-
   .feature-left,
   .feature-right {
-    .edy-positionable-container-left {
-      margin-right: 16px;
-    }
+    @include align-self(center);
+    padding: 20px;
   }
 
   .feature-left {
-    width: 464px;
-    margin-right: 36px;
+    background-color: gold;
   }
 
   .feature-right {
-    @include align-self(center);
-    width: 469px;
-    margin-left: 31px;
+    background-color: grey;
   }
 
   @include query($tablet-1) {
-    .flexbox &,
-    .no-flexbox & {
-      .wrap {
-        display: block;
-        text-align: center;
-      }
-    }
-
     .feature-left,
     .feature-right {
       display: inline-block;
@@ -73,13 +43,6 @@
   }
 
   @include query($mobile-4) {
-    .wrap {
-      .flexbox &,
-      .no-flexbox & {
-        display: block;
-      }
-    }
-
     .feature-left,
     .feature-right {
       width: auto;
@@ -105,11 +68,22 @@
 .summary {
   @include bg($secondary-color);
 
-  .wrap {
-    padding: 0 20px;
+  .blog {
+    width: 498px;
+    padding: 43px 40px 43px 20px;
+    @include border(right, 5px, solid, $white);
+  }
+
+  .quotation {
+    width: 502px;
+    padding: 43px 20px 43px 40px;
+    font-size: 24px;
+    @include color($white);
 
     .flexbox & {
       @include flexbox;
+      @include align-content(center);
+      @include justify-content(center);
     }
 
     .no-flexbox & {
@@ -117,48 +91,10 @@
     }
   }
 
-  .blog,
-  .quotation {
-    .no-flexbox & {
-      display: table-cell;
-      vertical-align: top;
-    }
-  }
-
-  .quotation {
-    @include align-self(center);
-    width: 470px;
-    padding: 43px 20px 43px 47px;
-    font-size: 24px;
-    @include color($white);
-  }
-
   @include query($mobile-4) {
-    .wrap {
-      padding: 0;
-
-      .flexbox &,
-      .no-flexbox & {
-        display: block;
-      }
-    }
-
     .quotation {
       width: auto;
       padding: 20px;
-    }
-  }
-}
-
-.contacts {
-  .wrap {
-    padding: 55px 20px;
-  }
-
-  @include query($mobile-4) {
-    .wrap {
-      padding: 30px 20px;
-      text-align: center;
     }
   }
 }

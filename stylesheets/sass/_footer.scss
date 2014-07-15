@@ -9,12 +9,6 @@
   @include color($white, 0.5);
   @include bg($primary-color);
 
-  .wrap {
-    @extend %clearfix;
-    max-width: 1000px;
-    padding: 28px 20px 27px;
-  }
-
   .footer-left,
   .footer-right {
     min-width: 150px;

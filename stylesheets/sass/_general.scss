@@ -164,11 +164,89 @@ body {
 }
 
 .wrap {
-  max-width: 600px;
   margin: 0 auto;
 
   .front-page & {
     max-width: 1000px;
+  }
+
+  .header-top & {
+    @extend %clearfix;
+    max-width: 1000px;
+    padding: 19px 20px 17px;
+  }
+
+  .header-bottom-inner & {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0 20px;
+    height: 542px;
+  }
+
+  .menu-tags & {
+    padding-bottom: 0;
+  }
+
+  .menu-pagination & {
+    padding: 0;
+  }
+
+  .content & {
+    padding: 20px;
+
+    .content-page & {
+      max-width: 600px;
+    }
+  }
+
+  .main-feature & {
+    padding: 48px 20px;
+
+    .flexbox & {
+      @include flexbox;
+      @include align-content(center);
+      @include justify-content(center);
+    }
+
+    .no-flexbox & {
+      display: table;
+    }
+  }
+
+  .summary & {
+    padding: 0 20px;
+
+    .flexbox & {
+      @include flexbox;
+    }
+
+    .no-flexbox & {
+      display: table;
+    }
+  }
+
+  .contacts & {
+    padding: 55px 20px;
+  }
+
+  .comments & {
+    padding: 33px 20px;
+  }
+
+  .footer & {
+    @extend %clearfix;
+    max-width: 1000px;
+    padding: 28px 20px 27px;
+  }
+
+  @include query($tablet-1) {
+    .flexbox &,
+    .no-flexbox & {
+      .main-feature {
+        display: block;
+        text-align: center;
+      }
+    }
   }
 }
 

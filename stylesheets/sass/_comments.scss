@@ -4,10 +4,6 @@
 .comments {
   @include border(top, 1px, solid, $third-color);
 
-  .wrap {
-    padding: 33px 20px;
-  }
-
   .comment {
     padding: 30px 0;
     @include border(bottom, 1px, solid, $third-color);

@@ -5,7 +5,7 @@
   {{ site.stats_header }}
 </head>
 
-<body class="post-page">
+<body class="post-page content-page">
 
   <div class="container">
     {% include "header" %}
