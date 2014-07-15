@@ -7,7 +7,7 @@
   bottom:0;
   min-height: 80px;
   @include color($white, 0.5);
-  @include bg($primary-color);
+  @include bg($primary-color, 0.73);
 
   .footer-left,
   .footer-right {

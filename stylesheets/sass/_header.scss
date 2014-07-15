@@ -54,7 +54,7 @@
   font-size: 30px;
 
   a {
-    @include color($primary-color);
+    @include color($primary-color, 0.73);
   }
 
   a:hover {

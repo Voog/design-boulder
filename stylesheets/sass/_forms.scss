@@ -17,7 +17,7 @@
   .form_field,
   .edy-fe-label {
     font-size: 16px;
-    @include color($primary-color);
+    @include color($primary-color, 0.73);
   }
 
   .form_field {

@@ -12,7 +12,7 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 1.4;
-  @include color($primary-color);
+  @include color($primary-color, 0.73);
   background-position: center;
   background-attachment: fixed;
   background-size: cover;

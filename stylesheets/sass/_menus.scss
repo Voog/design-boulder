@@ -79,7 +79,7 @@
       .menu-link {
         font-weight: 600;
         font-size: 18px;
-        @include color($primary-color);
+        @include color($primary-color, 0.73);
 
         &.untranslated {
           @include color($red, 0.5);
@@ -229,7 +229,7 @@
       }
 
       .menu-link {
-        @include color($primary-color);
+        @include color($primary-color, 0.73);
 
         &.untranslated {
           @include color($red, 0.5);
@@ -336,7 +336,7 @@
       position: relative;
       display: block;
       padding: 5px 40px 4px 13px;
-      @include color($primary-color);
+      @include color($primary-color, 0.73);
 
       &.active,
       &.active:hover {
@@ -428,7 +428,7 @@ $flags:
   display: inline-block;
   margin-right: 5px;
   font-size: 14px;
-  @include color($primary-color);
+  @include color($primary-color, 0.73);
 }
 
 .tags-icon {
@@ -460,7 +460,7 @@ $flags:
 
     .menu-link {
       font-size: 14px;
-      @include color($primary-color);
+      @include color($primary-color, 0.73);
 
       &.active,
       &:hover {
@@ -509,7 +509,7 @@ $flags:
     }
 
     a {
-      @include color($primary-color);
+      @include color($primary-color, 0.73);
 
       &.active,
       &:hover {

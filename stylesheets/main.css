@@ -11,7 +11,8 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 1.4;
-  color: #444444;
+  color: black;
+  color: rgba(0, 0, 0, 0.73);
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
@@ -475,7 +476,8 @@ body {
 }
 .contacts .content-formatted table tr td {
   padding: 0 15px;
-  color: #444444;
+  color: black;
+  color: rgba(0, 0, 0, 0.73);
   border-top: none;
   border-left: 2px solid #cccccc;
   border-right: none;
@@ -559,7 +561,8 @@ body {
 .menu-main .menu .menu-item .menu-link {
   font-weight: 600;
   font-size: 18px;
-  color: #444444;
+  color: black;
+  color: rgba(0, 0, 0, 0.73);
 }
 .menu-main .menu .menu-item .menu-link.untranslated {
   color: #cc0000;
@@ -606,8 +609,8 @@ body {
   }
   .menu-main.expanded .menu .menu-item {
     margin-left: 0;
-    border-bottom: 1px solid #444444;
-    border-bottom: 1px solid rgba(68, 68, 68, 0.1);
+    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
   .menu-main.expanded .menu .menu-item:first-child .menu-link {
     font-weight: 700;
@@ -661,16 +664,16 @@ body {
     right: 0;
     min-width: 0;
     margin-bottom: 40px;
-    border-top: 1px solid #444444;
-    border-top: 1px solid rgba(68, 68, 68, 0.2);
+    border-top: 1px solid black;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
     box-shadow: none;
   }
 }
 
 .menu-sub {
   padding: 7px 0;
-  border-bottom: 1px solid #444444;
-  border-bottom: 1px solid rgba(68, 68, 68, 0.2);
+  border-bottom: 1px solid black;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 .menu-sub .menu {
   text-align: center;
@@ -682,7 +685,8 @@ body {
   margin-right: 0;
 }
 .menu-sub .menu .menu-item .menu-link {
-  color: #444444;
+  color: black;
+  color: rgba(0, 0, 0, 0.73);
 }
 .menu-sub .menu .menu-item .menu-link.untranslated {
   color: #cc0000;
@@ -775,7 +779,8 @@ body {
   position: relative;
   display: block;
   padding: 5px 40px 4px 13px;
-  color: #444444;
+  color: black;
+  color: rgba(0, 0, 0, 0.73);
 }
 .menu-lang .menu-item .menu-link.active, .menu-lang .menu-item .menu-link.active:hover {
   opacity: 0.5;
@@ -977,7 +982,8 @@ body {
   display: inline-block;
   margin-right: 5px;
   font-size: 14px;
-  color: #444444;
+  color: black;
+  color: rgba(0, 0, 0, 0.73);
 }
 
 .tags-icon {
@@ -1006,7 +1012,8 @@ body {
 }
 .menu-tags .menu .menu-link {
   font-size: 14px;
-  color: #444444;
+  color: black;
+  color: rgba(0, 0, 0, 0.73);
 }
 .menu-tags .menu .menu-link.active, .menu-tags .menu .menu-link:hover {
   border-bottom: 3px solid #e4ac00;
@@ -1031,7 +1038,8 @@ body {
   border-left: 1px solid #e5e5e5;
 }
 .menu-pagination li a {
-  color: #444444;
+  color: black;
+  color: rgba(0, 0, 0, 0.73);
 }
 .menu-pagination li a.active, .menu-pagination li a:hover {
   color: #e4ac00;
@@ -1084,11 +1092,12 @@ body {
   font-size: 30px;
 }
 .header-title a {
-  color: #444444;
+  color: black;
+  color: rgba(0, 0, 0, 0.73);
 }
 .header-title a:hover {
-  color: #444444;
-  color: rgba(68, 68, 68, 0.8);
+  color: black;
+  color: rgba(0, 0, 0, 0.8);
 }
 @media screen and (max-width: 420px) {
   .header-title {
@@ -1314,7 +1323,8 @@ body {
 .content-formatted .form_field,
 .content-formatted .edy-fe-label {
   font-size: 16px;
-  color: #444444;
+  color: black;
+  color: rgba(0, 0, 0, 0.73);
 }
 .content-formatted .form_field label {
   position: relative;
@@ -1432,7 +1442,7 @@ body {
   width: 9px;
   height: 9px;
   content: '';
-  background-color: #444444;
+  background-color: black;
 }
 .content-formatted .form_field_size_medium {
   width: 400px;
@@ -1535,8 +1545,8 @@ body {
 }
 .comments .comment-date {
   line-height: 1;
-  color: #444444;
-  color: rgba(68, 68, 68, 0.5);
+  color: black;
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .comment-form {
@@ -1583,7 +1593,8 @@ body {
   min-height: 80px;
   color: white;
   color: rgba(255, 255, 255, 0.5);
-  background-color: #444444;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.73);
 }
 .footer .footer-left,
 .footer .footer-right {
