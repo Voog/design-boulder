@@ -123,6 +123,44 @@
       @include bg($white);
       @include box-shadow(0, 5px, 25px, rgba($black, 0.3));
 
+      .menu {
+        .menu-item,
+        .menu-link {
+          display: block;
+        }
+
+        .menu-item {
+          margin-left: 0;
+          @include border(bottom, 1px, solid, $primary-color, 0.1);
+
+          &:first-child {
+            .menu-link {
+              font-weight: 700;
+            }
+          }
+        }
+
+        .menu-link {
+          padding: 10px 15px 6px;
+
+          &.active,
+          &.active:hover,
+          &:hover {
+            border: none;
+          }
+
+          &.active,
+          &.active:hover {
+            @include color($secondary-color);
+          }
+
+          &:hover {
+            @include color($grey-1, 0.4);
+            border-bottom: none;
+          }
+        }
+      }
+
       .menu-lang {
         display: block;
         padding-left: 0;
@@ -135,14 +173,14 @@
           }
 
           .menu-link {
-            padding: 11px 30px 9px 53px;
+            padding: 11px 15px 10px 44px;
             font-weight: 400;
             font-size: 14px;
 
             &:before,
             &:after {
-              top: 7px;
-              left: 25px;
+              top: 13px;
+              left: 15px;
             }
 
             &.active,
@@ -151,11 +189,6 @@
               @include color($grey-1, 0.67);
               background: none;
             }
-
-            &:hover {
-              @include color($grey-1, 0.4);
-              @include bg($third-color, 0.5);
-            }
           }
         }
       }
@@ -163,9 +196,9 @@
 
     @include query($mobile-3) {
       &.expanded {
-        top: 72px;
-        left: -15px;
-        right: -15px;
+        top: 80px;
+        left: 0;
+        right: 0;
         min-width: 0;
         margin-bottom: 40px;
         @include border(top, 1px, solid, $primary-color, 0.2);
@@ -212,7 +245,7 @@
   vertical-align: top;
   width: 20px;
   height: 13px;
-  margin-top: 7px;
+  margin-top: 9px;
   margin-left: 17px;
   font-size: 0;
   background: none;
@@ -289,10 +322,6 @@
   display: inline-block;
   line-height: 1;
 
-  @include query($tablet-2) {
-    display: none;
-  }
-
   .menu-item {
     display: list-item;
     text-align: right;
@@ -301,16 +330,17 @@
     .menu-link {
       position: relative;
       display: block;
-      padding: 5px 40px 3px 13px;
+      padding: 5px 40px 4px 13px;
       @include color($primary-color);
 
       &.active,
       &.active:hover {
-        @include bg($third-color);
+        @include opacity(0.5);
+        @include filter(grayscale(100%));
       }
 
       &:hover {
-        @include bg($third-color, 0.5);
+        @include filter(grayscale(50%));
       }
 
       &:before,
@@ -319,11 +349,14 @@
         right: 12px;
       }
     }
-
   }
 
   .edit-btn {
-    margin-right: 20px;
+    margin: 5px 20px
+  }
+
+  @include query($tablet-2) {
+    display: none;
   }
 }
 

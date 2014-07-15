@@ -400,6 +400,25 @@ body {
         -webkit-box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3) ;
         -moz-box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3) ;
         box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3) ; }
+        .menu-main.expanded .menu .menu-item,
+        .menu-main.expanded .menu .menu-link {
+          display: block; }
+        .menu-main.expanded .menu .menu-item {
+          margin-left: 0;
+          border-bottom: 1px solid #444444;
+          border-bottom: 1px solid rgba(68, 68, 68, 0.1); }
+          .menu-main.expanded .menu .menu-item:first-child .menu-link {
+            font-weight: 700; }
+        .menu-main.expanded .menu .menu-link {
+          padding: 10px 15px 6px; }
+          .menu-main.expanded .menu .menu-link.active, .menu-main.expanded .menu .menu-link.active:hover, .menu-main.expanded .menu .menu-link:hover {
+            border: none; }
+          .menu-main.expanded .menu .menu-link.active, .menu-main.expanded .menu .menu-link.active:hover {
+            color: #e4ac00; }
+          .menu-main.expanded .menu .menu-link:hover {
+            color: #333333;
+            color: rgba(51, 51, 51, 0.4);
+            border-bottom: none; }
         .menu-main.expanded .menu-lang {
           display: block;
           padding-left: 0; }
@@ -408,27 +427,22 @@ body {
             .menu-main.expanded .menu-lang .menu-item:first-child {
               border-top: none; }
             .menu-main.expanded .menu-lang .menu-item .menu-link {
-              padding: 11px 30px 9px 53px;
+              padding: 11px 15px 10px 44px;
               font-weight: 400;
               font-size: 14px; }
               .menu-main.expanded .menu-lang .menu-item .menu-link:before, .menu-main.expanded .menu-lang .menu-item .menu-link:after {
-                top: 7px;
-                left: 25px; }
+                top: 13px;
+                left: 15px; }
               .menu-main.expanded .menu-lang .menu-item .menu-link.active, .menu-main.expanded .menu-lang .menu-item .menu-link.active:hover {
                 font-weight: 600;
                 color: #333333;
                 color: rgba(51, 51, 51, 0.67);
-                background: none; }
-              .menu-main.expanded .menu-lang .menu-item .menu-link:hover {
-                color: #333333;
-                color: rgba(51, 51, 51, 0.4);
-                background-color: #e5e5e5;
-                background-color: rgba(229, 229, 229, 0.5); } }
+                background: none; } }
   @media screen and (max-width: 900px) and (max-width: 480px) {
     .menu-main.expanded {
-      top: 72px;
-      left: -15px;
-      right: -15px;
+      top: 80px;
+      left: 0;
+      right: 0;
       min-width: 0;
       margin-bottom: 40px;
       border-top: 1px solid #444444;
@@ -461,7 +475,7 @@ body {
   vertical-align: top;
   width: 20px;
   height: 13px;
-  margin-top: 7px;
+  margin-top: 9px;
   margin-left: 17px;
   font-size: 0;
   background: none;
@@ -519,9 +533,6 @@ body {
   position: relative;
   display: inline-block;
   line-height: 1; }
-  @media screen and (max-width: 900px) {
-    .menu-lang {
-      display: none; } }
   .menu-lang .menu-item {
     display: list-item;
     text-align: right;
@@ -529,18 +540,25 @@ body {
     .menu-lang .menu-item .menu-link {
       position: relative;
       display: block;
-      padding: 5px 40px 3px 13px;
+      padding: 5px 40px 4px 13px;
       color: #444444; }
       .menu-lang .menu-item .menu-link.active, .menu-lang .menu-item .menu-link.active:hover {
-        background-color: #e5e5e5; }
+        opacity: 0.5;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+        filter: alpha(opacity=50);
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%); }
       .menu-lang .menu-item .menu-link:hover {
-        background-color: #e5e5e5;
-        background-color: rgba(229, 229, 229, 0.5); }
+        -webkit-filter: grayscale(50%);
+        filter: grayscale(50%); }
       .menu-lang .menu-item .menu-link:before, .menu-lang .menu-item .menu-link:after {
         top: 4px;
         right: 12px; }
   .menu-lang .edit-btn {
-    margin-right: 20px; }
+    margin: 5px 20px; }
+  @media screen and (max-width: 900px) {
+    .menu-lang {
+      display: none; } }
 
 .lang-flag-sq:after {
   background-position: 0 0; }
@@ -745,7 +763,7 @@ body {
     background-color: rgba(255, 255, 255, 0.9); }
   .header-top .wrap {
     max-width: 1000px;
-    padding: 20px 20px 18px; }
+    padding: 19px 20px 18px; }
 
 @media screen and (max-width: 900px) {
   .header-left,
