@@ -289,6 +289,15 @@ body {
 .content-formatted {
   word-wrap: break-word;
 }
+.content-formatted.header-body {
+  font-weight: 600;
+  font-style: italic;
+  font-size: 30px;
+  line-height: 1.5;
+}
+.dark-background .content-formatted.header-body {
+  color: white;
+}
 .quotation .content-formatted {
   width: 100%;
   -webkit-align-self: center;
@@ -1094,13 +1103,6 @@ body {
   max-width: 845px;
   margin: 0 auto;
   text-align: center;
-}
-.header-bottom-inner .header-body {
-  font-weight: 600;
-  font-style: italic;
-  font-size: 30px;
-  line-height: 1.5;
-  color: white;
 }
 .header-bottom-inner .btn {
   display: inline-block;

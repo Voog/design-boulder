@@ -1,10 +1,3 @@
-.quotation .edy-empty-bordered {
-  padding: 26.6% 40px;
-}
-.map .edy-empty-bordered {
-  padding: 125px 40px;
-}
-
 .edy-ca {
   margin-top: 20px;
 }
@@ -12,12 +5,26 @@
   margin-top: 0;
 }
 
-.edy-texteditor-view {
-  min-height: 25px;
+.dark-background .edy-empty-bordered {
+  color: white;
+  color: rgba(255, 255, 255, 0.33);
+  border: 1px dashed white;
+  border: 1px dashed rgba(255, 255, 255, 0.33);
 }
-.dark-background .edy-texteditor-view.placeholder {
+.quotation .edy-empty-bordered {
+  padding: 26.6% 40px;
+}
+.map .edy-empty-bordered {
+  padding: 125px 40px;
+}
+
+.dark-background .placeholder {
   color: white;
   color: rgba(255, 255, 255, 0.5);
+}
+
+.edy-texteditor-view {
+  min-height: 25px;
 }
 .quotation .edy-texteditor-view {
   min-height: 33px;

@@ -74,14 +74,6 @@
   margin: 0 auto;
   text-align: center;
 
-  .header-body {
-    font-weight: 600;
-    font-style: italic;
-    font-size: 30px;
-    line-height: 1.5;
-    @include color($white);
-  }
-
   .btn {
     display: inline-block;
     margin: 43px auto 0;

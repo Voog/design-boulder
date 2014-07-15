@@ -9,7 +9,7 @@
 
   <body class="front-page">
     <div class="container js-container">
-      {% include "header" %}
+      {% include "header" with "content" %}
 
       <main class="content js-content" role="main">
         <div class="main-feature">

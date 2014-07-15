@@ -4,17 +4,6 @@
 @import '_mixins';
 @import '_variables';
 
-// Draggable area for content
-.edy-empty-bordered {
-  .quotation & {
-    padding: 26.6% 40px;
-  }
-
-  .map & {
-    padding: 125px 40px;
-  }
-}
-
 // Editable content area
 .edy-ca {
   margin-top: 20px;
@@ -24,15 +13,33 @@
   }
 }
 
+// Draggable area for content
+.edy-empty-bordered {
+  .dark-background & {
+    @include color($white, 0.33);
+    @include border(all, 1px, dashed, $white, 0.33);
+  }
+
+  .quotation & {
+    padding: 26.6% 40px;
+  }
+
+  .map & {
+    padding: 125px 40px;
+  }
+}
+
+// Editable content area placeholders.
+.placeholder {
+  .dark-background & {
+    @include color($white, 0.5);
+  }
+}
+
+
 // Text editor
 .edy-texteditor-view {
   min-height: 25px;
-
-  .dark-background & {
-    &.placeholder {
-      @include color($white, 0.5);
-    }
-  }
 
   .quotation & {
     min-height: 33px;

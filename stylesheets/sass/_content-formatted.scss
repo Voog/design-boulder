@@ -5,6 +5,17 @@
   @extend %clearfix;
   word-wrap: break-word;
 
+  &.header-body {
+    font-weight: 600;
+    font-style: italic;
+    font-size: 30px;
+    line-height: 1.5;
+
+    .dark-background & {
+      @include color($white);
+    }
+  }
+
   .quotation & {
     width: 100%;
     @include align-self(center);

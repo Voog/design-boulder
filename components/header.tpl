@@ -1,7 +1,9 @@
 <header class="header">
-  {% if site.root_item.selected? %}
+  {% if header == 'content' %}
+    {% if cover_image != '' or editmode %}
       {% if header_image != '' or editmode %}<div class="background-image stretch js-bgpicker-header-image"{{ header_image_style }}></div>{% endif %}
       {% if header_color != '' or editmode %}<div class="background-color stretch js-bgpicker-header-color"{{ header_color_style }}></div>{% endif %}
+    {% endif %}
   {% endif %}
 
   <div class="header-top">
@@ -53,8 +55,8 @@
     </div>
   </div>
 
-  {% if site.root_item.selected? %}
-    <div class="header-bottom">
+  {% if header == 'content' %}
+    <div class="header-bottom js-header-bottom dark-background">
       {% if editmode %}<button class="bgpicker-btn js-bgpicker-header-settings" data-bg-image="{{ header_image }}" data-bg-color="{{ header_color }}"></button>{% endif %}
       <div class="header-bottom-inner">
         <div class="wrap">
