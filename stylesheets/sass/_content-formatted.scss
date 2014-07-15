@@ -5,14 +5,17 @@
   @extend %clearfix;
   word-wrap: break-word;
 
-  &.header-body {
+  .header-bottom-inner & {
     font-weight: 600;
     font-style: italic;
-    font-size: 30px;
     line-height: 1.5;
 
     .dark-background & {
       @include color($white);
+    }
+
+    &.header-body {
+      font-size: 30px;
     }
   }
 

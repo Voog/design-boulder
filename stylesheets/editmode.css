@@ -23,12 +23,15 @@
   color: rgba(255, 255, 255, 0.5);
 }
 
-.edy-texteditor-view {
+.content-formatted .edy-texteditor-view {
   min-height: 25px;
 }
-.quotation .edy-texteditor-view {
+.header-bottom-inner .content-formatted .edy-texteditor-view {
+  min-height: 45px;
+}
+.quotation .content-formatted .edy-texteditor-view {
   min-height: 33px;
 }
-.map .edy-texteditor-view {
+.map .content-formatted .edy-texteditor-view {
   min-height: 272px;
 }

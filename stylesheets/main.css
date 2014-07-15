@@ -220,7 +220,7 @@ body {
 .header-bottom-inner .wrap {
   display: table-cell;
   vertical-align: middle;
-  padding: 0 20px;
+  padding: 60px 20px;
   height: 542px;
 }
 .menu-tags .wrap {
@@ -290,14 +290,16 @@ body {
 .content-formatted {
   word-wrap: break-word;
 }
-.content-formatted.header-body {
+.header-bottom-inner .content-formatted {
   font-weight: 600;
   font-style: italic;
-  font-size: 30px;
   line-height: 1.5;
 }
-.dark-background .content-formatted.header-body {
+.dark-background .header-bottom-inner .content-formatted {
   color: white;
+}
+.header-bottom-inner .content-formatted.header-body {
+  font-size: 30px;
 }
 .quotation .content-formatted {
   width: 100%;
@@ -1108,14 +1110,16 @@ body {
 
 .header-bottom-inner {
   display: table;
+  border-collapse: collapse;
   width: 100%;
-  max-width: 845px;
+  max-width: 1040px;
+  height: 544px;
   margin: 0 auto;
   text-align: center;
 }
 .header-bottom-inner .btn {
   display: inline-block;
-  margin: 43px auto 0;
+  margin: 43px auto 11px;
 }
 
 /* CONTENT */
