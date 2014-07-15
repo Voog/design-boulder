@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html class="{% if editmode %}editmode{% else %}public{% endif %}" lang="{{ page.language_code }}">
 <head prefix="og: http://ogp.me/ns#">
@@ -14,12 +15,16 @@
       <main class="content js-content" role="main">
         <div class="main-feature">
           <div class="wrap">
-            <section class="feature-left content-formatted">
-              {% content name="feature_content_left" %}
-            </section>
-            <section class="feature-right content-formatted">
-              {% content name="feature_content_right" %}
-            </section>
+            <div class="feature-left">
+              <div class="feature-inner content-formatted">
+                {% content name="feature_content_left" %}
+              </div>
+            </div>
+            <div class="feature-right">
+              <div class="feature-inner content-formatted">
+                {% content name="feature_content_right" %}
+              </div>
+            </div>
           </div>
         </div>
 

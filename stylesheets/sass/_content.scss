@@ -8,8 +8,12 @@
 .main-feature {
   .feature-left,
   .feature-right {
-    @include align-self(center);
+    width: 500px;
     padding: 20px;
+
+    .flexbox & {
+      @include flexbox;
+    }
   }
 
   .feature-left {
@@ -20,25 +24,10 @@
     background-color: grey;
   }
 
-  @include query($tablet-1) {
-    .feature-left,
-    .feature-right {
-      display: inline-block;
-      width: auto;
-      margin: 0 auto;
-    }
-
-    .feature-left {
-      &.content-formatted {
-        .edy-positionable-container-left {
-          // TODO: Remove if there's going to be a better solution.
-          margin-right: 16px !important;
-        }
-      }
-    }
-
-    .feature-right {
-      margin-top: 48px;
+  .feature-inner {
+    .flexbox & {
+      @include flex(1);
+      @include align-self(center);
     }
   }
 
