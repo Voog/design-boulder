@@ -236,7 +236,7 @@ body {
   max-width: 600px;
 }
 .main-feature .wrap {
-  padding: 48px 20px;
+  padding: 0 20px;
 }
 .flexbox .main-feature .wrap {
   display: -webkit-box;
@@ -1122,7 +1122,8 @@ body {
 .main-feature .feature-left,
 .main-feature .feature-right {
   width: 500px;
-  padding: 20px;
+  min-height: 188px;
+  padding: 48px 20px;
 }
 .flexbox .main-feature .feature-left, .flexbox
 .main-feature .feature-right {
@@ -1131,12 +1132,6 @@ body {
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
-}
-.main-feature .feature-left {
-  background-color: gold;
-}
-.main-feature .feature-right {
-  background-color: grey;
 }
 .flexbox .main-feature .feature-inner {
   -webkit-box-flex: 1;

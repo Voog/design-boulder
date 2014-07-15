@@ -9,19 +9,12 @@
   .feature-left,
   .feature-right {
     width: 500px;
-    padding: 20px;
+    min-height: 188px;
+    padding: 48px 20px;
 
     .flexbox & {
       @include flexbox;
     }
-  }
-
-  .feature-left {
-    background-color: gold;
-  }
-
-  .feature-right {
-    background-color: grey;
   }
 
   .feature-inner {
