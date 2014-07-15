@@ -11,6 +11,9 @@
   border: 1px dashed white;
   border: 1px dashed rgba(255, 255, 255, 0.33);
 }
+.header-bottom .edy-empty-bordered {
+  padding: 200px 40px;
+}
 .quotation .edy-empty-bordered {
   padding: 26.6% 40px;
 }
