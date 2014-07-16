@@ -306,6 +306,12 @@
     },
     {
       "content_type": "image/jpeg",
+      "file": "images/header-bg copy.jpg",
+      "kind": "images",
+      "filename": "header-bg copy.jpg"
+    },
+    {
+      "content_type": "image/jpeg",
       "file": "images/header-bg.jpg",
       "kind": "images",
       "filename": "header-bg.jpg"
@@ -357,6 +363,18 @@
       "file": "javascripts/modernizr.min.js",
       "kind": "javascripts",
       "filename": "modernizr.min.js"
+    },
+    {
+      "content_type": "application/javascript",
+      "file": "javascripts/placeholder.js",
+      "kind": "javascripts",
+      "filename": "placeholder.js"
+    },
+    {
+      "content_type": "application/javascript",
+      "file": "javascripts/placeholder.min.js",
+      "kind": "javascripts",
+      "filename": "placeholder.min.js"
     },
     {
       "content_type": "text/css",
