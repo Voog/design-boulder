@@ -155,6 +155,126 @@
   ],
   "assets": [
     {
+      "content_type": "application/vnd.ms-fontobject",
+      "file": "assets/arvo-bold-italic.eot",
+      "kind": "assets",
+      "filename": "arvo-bold-italic.eot"
+    },
+    {
+      "content_type": "application/x-font-opentype",
+      "file": "assets/arvo-bold-italic.otf",
+      "kind": "assets",
+      "filename": "arvo-bold-italic.otf"
+    },
+    {
+      "content_type": "image/svg+xml",
+      "file": "assets/arvo-bold-italic.svg",
+      "kind": "assets",
+      "filename": "arvo-bold-italic.svg"
+    },
+    {
+      "content_type": "application/x-font-truetype",
+      "file": "assets/arvo-bold-italic.ttf",
+      "kind": "assets",
+      "filename": "arvo-bold-italic.ttf"
+    },
+    {
+      "content_type": "application/font-woff",
+      "file": "assets/arvo-bold-italic.woff",
+      "kind": "assets",
+      "filename": "arvo-bold-italic.woff"
+    },
+    {
+      "content_type": "application/vnd.ms-fontobject",
+      "file": "assets/arvo-bold.eot",
+      "kind": "assets",
+      "filename": "arvo-bold.eot"
+    },
+    {
+      "content_type": "application/x-font-opentype",
+      "file": "assets/arvo-bold.otf",
+      "kind": "assets",
+      "filename": "arvo-bold.otf"
+    },
+    {
+      "content_type": "image/svg+xml",
+      "file": "assets/arvo-bold.svg",
+      "kind": "assets",
+      "filename": "arvo-bold.svg"
+    },
+    {
+      "content_type": "application/x-font-truetype",
+      "file": "assets/arvo-bold.ttf",
+      "kind": "assets",
+      "filename": "arvo-bold.ttf"
+    },
+    {
+      "content_type": "application/font-woff",
+      "file": "assets/arvo-bold.woff",
+      "kind": "assets",
+      "filename": "arvo-bold.woff"
+    },
+    {
+      "content_type": "application/vnd.ms-fontobject",
+      "file": "assets/arvo-italic.eot",
+      "kind": "assets",
+      "filename": "arvo-italic.eot"
+    },
+    {
+      "content_type": "application/x-font-opentype",
+      "file": "assets/arvo-italic.otf",
+      "kind": "assets",
+      "filename": "arvo-italic.otf"
+    },
+    {
+      "content_type": "image/svg+xml",
+      "file": "assets/arvo-italic.svg",
+      "kind": "assets",
+      "filename": "arvo-italic.svg"
+    },
+    {
+      "content_type": "application/x-font-truetype",
+      "file": "assets/arvo-italic.ttf",
+      "kind": "assets",
+      "filename": "arvo-italic.ttf"
+    },
+    {
+      "content_type": "application/font-woff",
+      "file": "assets/arvo-italic.woff",
+      "kind": "assets",
+      "filename": "arvo-italic.woff"
+    },
+    {
+      "content_type": "application/vnd.ms-fontobject",
+      "file": "assets/arvo-regular.eot",
+      "kind": "assets",
+      "filename": "arvo-regular.eot"
+    },
+    {
+      "content_type": "application/x-font-opentype",
+      "file": "assets/arvo-regular.otf",
+      "kind": "assets",
+      "filename": "arvo-regular.otf"
+    },
+    {
+      "content_type": "image/svg+xml",
+      "file": "assets/arvo-regular.svg",
+      "kind": "assets",
+      "filename": "arvo-regular.svg"
+    },
+    {
+      "content_type": "application/x-font-truetype",
+      "file": "assets/arvo-regular.ttf",
+      "kind": "assets",
+      "filename": "arvo-regular.ttf"
+    },
+    {
+      "content_type": "application/font-woff",
+      "file": "assets/arvo-regular.woff",
+      "kind": "assets",
+      "filename": "arvo-regular.woff"
+    },
+    {
       "content_type": "image/svg+xml",
       "file": "assets/ico-arrow-down.svg",
       "kind": "assets",

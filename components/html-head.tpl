@@ -17,10 +17,6 @@
 <!-- MODERNIZR - HTML5 SUPPORT FOR OLDER BROWSERS, SVG SUPPORT DETECTION ETC -->
 <script src="{{ javascripts_path }}/modernizr.min.js"></script>
 
-<!-- TYPEKIT WEB FONTS -->
-<script type="text/javascript" src="//use.typekit.net/vno7cqi.js"></script>
-<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
 <!-- STYLESHEETS -->
 {% stylesheet_link "main.min.css" %}
 <link rel="stylesheet" href="/assets/admin/tools/0.1.3/edicy-tools.css">

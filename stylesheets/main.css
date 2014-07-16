@@ -1,3 +1,32 @@
+/* FONTS */
+@font-face {
+  font-family: "Arvo";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../assets/arvo-regular.eot");
+  src: url("../assets/arvo-regular.eot?#iefix") format("embedded-opentype"), url("../assets/arvo-regular.woff") format("woff"), url("../assets/arvo-regular.ttf") format("truetype"), url("../assets/arvo-regular.svg#Arvo") format("svg");
+}
+@font-face {
+  font-family: "Arvo";
+  font-weight: 400;
+  font-style: italic;
+  src: url("../assets/arvo-italic.eot");
+  src: url("../assets/arvo-italic.eot?#iefix") format("embedded-opentype"), url("../assets/arvo-italic.woff") format("woff"), url("../assets/arvo-italic.ttf") format("truetype"), url("../assets/arvo-italic.svg#Arvo") format("svg");
+}
+@font-face {
+  font-family: "Arvo";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../assets/arvo-bold.eot");
+  src: url("../assets/arvo-bold.eot?#iefix") format("embedded-opentype"), url("../assets/arvo-bold.woff") format("woff"), url("../assets/arvo-bold.ttf") format("truetype"), url("../assets/arvo-bold.svg#Arvo") format("svg");
+}
+@font-face {
+  font-family: "Arvo";
+  font-weight: 700;
+  font-style: italic;
+  src: url("../assets/arvo-bold-italic.eot");
+  src: url("../assets/arvo-bold-italic.eot?#iefix") format("embedded-opentype"), url("../assets/arvo-bold-italic.woff") format("woff"), url("../assets/arvo-bold-italic.ttf") format("truetype"), url("../assets/arvo-bold-italic.svg#Arvo") format("svg");
+}
 /* GENERAL */
 html, body {
   height: 100% !important;
@@ -7,7 +36,7 @@ body {
   position: relative;
   margin: 0;
   padding: 0;
-  font-family: 'Adelle', 'Avenir Next', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-family: 'Arvo', 'Avenir Next', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.4;
