@@ -3,7 +3,7 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
     concat: {
-      dist: {
+      build: {
         src: [
         'javascripts/src/jquery.js',
         'javascripts/src/*.js'
@@ -28,7 +28,7 @@ module.exports = function(grunt) {
     },
 
     sass: {
-      dist: {
+      build: {
         options: {
           style: 'expanded'
         },
@@ -56,7 +56,7 @@ module.exports = function(grunt) {
     },
 
     autoprefixer: {
-      dist: {
+      build: {
         files: [{
           expand: true,
           cwd: 'stylesheets/',
@@ -67,18 +67,27 @@ module.exports = function(grunt) {
     },
 
     imagemin: {
-      dynamic: {
+      images: {
         files: [{
           expand: true,
           cwd: 'images/src',
-          src: ['*.{png,jpg,gif}'],
+          src: ['*.{png,jpg,gif}',],
           dest: 'images/'
+        }]
+      },
+
+      photos: {
+        files: [{
+          expand: true,
+          cwd: 'photos/src',
+          src: ['*.{png,jpg,gif}',],
+          dest: 'photos/'
         }]
       }
     },
 
     svgmin: {
-      dist: {
+      build: {
         files: [{
           expand: true,
           cwd: 'assets/src',
@@ -114,6 +123,14 @@ module.exports = function(grunt) {
       images: {
         files: ['images/src/*.{png,jpg,gif}'],
         tasks: ['newer:imagemin'],
+        options: {
+          spawn: false
+        }
+      },
+
+      photos: {
+        files: ['photos/src/*.{png,jpg,gif}'],
+        tasks: ['newer:photomin'],
         options: {
           spawn: false
         }
