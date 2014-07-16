@@ -5,7 +5,9 @@
   {{ site.stats_header }}
 </head>
 
-<body class="common-page content-page">
+<body class="common-page content-page{% if site.search.enabled %} search-enabled{% endif %}{% if editmode or site.has_many_languages? %} multilingual{% endif %}">
+
+
   <div class="container">
     {% include "header" %}
     {% include "menu-level-2" %}

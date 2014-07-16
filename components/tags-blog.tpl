@@ -1,10 +1,9 @@
 {% if site.has_language_tags? %}
-  {% include "tags-variables" %}
   <nav class="menu-sub">
     <div class="wrap">
       <ul class="menu">
         <li class="menu-item">
-          <a class="menu-link js-tags-all" href="/{{ page.path }}">{{ tags_all }}</a>,
+          <a class="menu-link js-tags-all" href="/{{ page.path }}">{{ 'all_posts' | lc }}</a>
         </li>
         {% for tag in site.language_tags %}
           {% assign activestr = " " %}
@@ -14,7 +13,7 @@
             {% endif %}
           {% endfor %}
           <li class="menu-item">
-            <a class="menu-link{{ activestr }}" href="/{{ page.path }}/tagged/{{ tag.path }}">{{ tag.name }}</a>{% unless forloop.last %},{% endunless %}
+            <a class="menu-link{{ activestr }}" href="/{{ page.path }}/tagged/{{ tag.path }}">{{ tag.name }}</a>
           </li>
         {% endfor %}
       </ul>

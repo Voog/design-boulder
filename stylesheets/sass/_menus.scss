@@ -78,7 +78,6 @@
 
       .menu-link {
         padding-bottom: 3px;
-        font-size: 18px;
         @include color($primary-color, 0.73);
 
         &.untranslated {
@@ -215,11 +214,20 @@
 }
 
 .menu-sub {
-  padding: 7px 0;
-  @include border(bottom,1px,solid,$primary-color, 0.2);
-
   .menu {
-    text-align: center;
+    text-align: right;
+
+    .search-enabled & {
+      background: yellow;
+    }
+
+    .multilingual & {
+      margin-right: 42px;
+    }
+
+    .search-enabled.multilingual & {
+      background: blue;
+    }
 
     .menu-item {
       margin-right: 12px;
@@ -229,15 +237,19 @@
       }
 
       .menu-link {
+        font-size: 16px;
         @include color($primary-color, 0.73);
 
         &.untranslated {
           @include color($red, 0.5);
         }
 
-        &.active,
-        &:hover {
-          @include color($secondary-color);
+        &.active {
+          font-weight: 700;
+        }
+
+        &:not(.active):hover {
+          @include opacity(0.8);
         }
       }
     }
@@ -427,51 +439,6 @@ $flags:
 .tags {
   .editmode & {
     margin-top: 20px;
-  }
-}
-.tags-title {
-  display: inline-block;
-  margin-right: 5px;
-  font-size: 14px;
-  @include color($primary-color, 0.73);
-}
-
-.tags-icon {
-  display: inline-block;
-  vertical-align: middle;
-  width: 16px;
-  height: 16px;
-  margin: 10px 5px 10px 0;
-  background-position: center;
-
-  .no-svg & {
-    background-image: url('../images/ico-tags.png');
-  }
-
-  svg {
-    fill: $grey-1;
-  }
-}
-
-.tags {
-  margin-top: 20px;
-}
-
-.menu-tags {
-  .menu {
-    display: inline-block;
-    vertical-align: middle;
-    line-height: 1.3;
-
-    .menu-link {
-      font-size: 14px;
-      @include color($primary-color, 0.73);
-
-      &.active,
-      &:hover {
-        @include border(bottom, 3px, solid, $secondary-color);
-      }
-    }
   }
 }
 

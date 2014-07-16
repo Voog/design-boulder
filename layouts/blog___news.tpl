@@ -6,7 +6,7 @@
   {{ site.stats_header }}
 </head>
 
-<body class="blog-page content-page">
+<body class="blog-page content-page{% if site.search.enabled %} search-enabled{% endif %}{% if editmode or site.has_many_languages? %} multilingual{% endif %}">
   <div class="container">
     {% include "header" %}
     {% include "tags-blog" %}

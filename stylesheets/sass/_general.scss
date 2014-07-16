@@ -166,13 +166,21 @@ body {
 .wrap {
   margin: 0 auto;
 
-  .front-page & {
+  .front-page &,
+  .header-top &,
+  .menu-sub & {
     max-width: 1000px;
+  }
+
+  .tags &,
+  .content & {
+    .content-page & {
+      max-width: 600px;
+    }
   }
 
   .header-top & {
     @extend %clearfix;
-    max-width: 1000px;
     padding: 19px 20px 18px;
   }
 
@@ -183,8 +191,8 @@ body {
     height: 542px;
   }
 
-  .menu-tags & {
-    padding-bottom: 0;
+  .menu-sub & {
+    padding: 12px 20px;
   }
 
   .menu-pagination & {
@@ -193,10 +201,6 @@ body {
 
   .content & {
     padding: 20px;
-
-    .content-page & {
-      max-width: 600px;
-    }
   }
 
   .main-feature & {

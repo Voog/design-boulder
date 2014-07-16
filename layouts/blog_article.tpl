@@ -5,10 +5,11 @@
   {{ site.stats_header }}
 </head>
 
-<body class="post-page content-page">
+<body class="post-page content-page{% if site.search.enabled %} search-enabled{% endif %}{% if editmode or site.has_many_languages? %} multilingual{% endif %}">
 
   <div class="container">
     {% include "header" %}
+    {% include "tags-post" %}
 
     <main class="content js-content" role="main">
       <div class="wrap">

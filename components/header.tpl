@@ -8,7 +8,7 @@
 
   <div class="header-top">
     <div class="wrap">
-      <section class="header-left">
+      <div class="header-left">
         <div class="header-title">{% unless editmode %}<a href="{{ site.root_item.url }}">{% endunless %}{% editable site.header %}{% unless editmode %}</a>{% endunless %}</div>
 
         <button class="menu-btn js-menu-btn">
@@ -16,9 +16,9 @@
           <span class="menu-stripe"></span>
           <span class="menu-stripe"></span>
         </button>
-      </section>
+      </div>
 
-      <section class="header-right">
+      <div class="header-right">
         <nav class="menu-main js-menu-main">
           {% include "menu-level-1" %}
           {% if editmode or site.has_many_languages? %}
@@ -29,7 +29,7 @@
         </nav>
 
         {% if site.search.enabled %}
-          <section class="search">
+          <div class="search">
             <form id="search" class="edys-search" method="get" action="#">
               <div class="search-left">
                 <input id="onpage_search" class="edys-search-input" type="text" placeholder="Search" name="">
@@ -39,7 +39,7 @@
               </div>
             </form>
             <div id="customsearch"></div>
-          </section>
+          </div>
         {% endif %}
 
         {% if editmode or site.has_many_languages? %}
@@ -51,7 +51,7 @@
           </nav>
         {% endif %}
 
-      </section>
+      </div>
     </div>
   </div>
 
