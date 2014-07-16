@@ -121,16 +121,11 @@ module.exports = function(grunt) {
       },
 
       images: {
-        files: ['images/src/*.{png,jpg,gif}'],
+        files: [
+          'images/src/*.{png,jpg,gif}',
+          'photos/src/*.{png,jpg,gif}'
+        ],
         tasks: ['newer:imagemin'],
-        options: {
-          spawn: false
-        }
-      },
-
-      photos: {
-        files: ['photos/src/*.{png,jpg,gif}'],
-        tasks: ['newer:photomin'],
         options: {
           spawn: false
         }
