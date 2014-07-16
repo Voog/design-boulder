@@ -1231,20 +1231,13 @@ body {
 }
 .blog-page .post-title,
 .post-page .post-title {
-  margin: 0;
+  margin: 0 -50px;
   text-align: center;
 }
 .blog-page .post-title, .blog-page .post-title a,
 .post-page .post-title,
 .post-page .post-title a {
-  font-weight: 400;
-  font-style: italic;
-  font-size: 30px;
-  color: #e4ac00;
-}
-.blog-page .post-title a,
-.post-page .post-title a {
-  border-bottom: 2px solid #e4ac00;
+  font-size: 36px;
 }
 .blog-page .post-title a:hover,
 .post-page .post-title a:hover {
