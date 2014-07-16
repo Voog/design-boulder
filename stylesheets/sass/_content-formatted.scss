@@ -155,7 +155,7 @@
     &, code {
       padding: 10px;
       font-size: 14px;
-      @include bg($grey-2);
+      @include bg($primary-color, 0.02);
     }
 
     code {
@@ -204,14 +204,14 @@
 
   // Adds dashed border to indicate that the table is too wide and can be scrolled horizontally.
   .horizontal-scroll {
-    @include border(left, 1px, dashed, $third-color);
-    @include border(right, 1px, dashed, $third-color);
+    @include border(left, 1px, dashed, $primary-color, 0.1);
+    @include border(right, 1px, dashed, $primary-color, 0.1);
   }
 
   table {
     width: 100%;
     margin: 0 auto;
-    @include border(all,1px,solid,$grey-2);
+    @include border(all,1px,solid,$primary-color, 0.02);
     border-collapse: collapse;
     border-spacing: 0;
 
@@ -226,8 +226,8 @@
 
       td {
         padding: 11px 17px;
-        @include border(top, 1px, solid, $grey-2);
-        @include border(bottom, 1px, solid, $grey-2);
+        @include border(top, 1px, solid, $primary-color, 0.02);
+        @include border(bottom, 1px, solid, $primary-color, 0.02);
       }
     }
 
@@ -259,7 +259,7 @@
           td {
             display: block;
             text-align: center;
-            @include border(top, 2px, solid, $grey-3);
+            @include border(top, 2px, solid, $primary-color, 0.2);
             border-left: none;
 
             &:first-child {
@@ -276,7 +276,7 @@
           padding: 0 15px;
           @include color($primary-color, 0.73);
           border-top: none;
-          @include border(left, 2px, solid, $grey-3);
+          @include border(left, 2px, solid, $primary-color, 0.2);
           border-right: none;
           border-bottom: none;
         }

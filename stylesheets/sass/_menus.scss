@@ -123,7 +123,7 @@
       margin-bottom: 60px;
       text-align: left;
       @include bg($white);
-      box-shadow: 0 5px 25px rgba($black, 0.3);
+      box-shadow: 0 5px 25px rgba($primarys-color, 0.3);
 
       .menu {
         .menu-item,
@@ -158,7 +158,7 @@
           }
 
           &:hover {
-            @include color($grey-1, 0.4);
+            @include color($primary-color, 0.8);
             border-bottom: none;
             box-shadow: none;
           }
@@ -190,7 +190,7 @@
             &.active,
             &.active:hover {
               font-weight: 600;
-              @include color($grey-1, 0.67);
+              @include color($primary-color, 0.8);
               background: none;
             }
           }
@@ -299,7 +299,7 @@
 .menu-lang-btn,
 .menu-lang .menu-item .lang-flag {
   &:before {
-    @include bg($black);
+    @include bg($primarys-color);
   }
 
   &:after {
@@ -329,7 +329,7 @@
     padding: 6px 0;
     min-width: 121px;
     background: #fff;
-    box-shadow: 0 5px 25px rgba($black, 0.3);
+    box-shadow: 0 5px 25px rgba($primarys-color, 0.3);
     z-index: 1;
   }
 }
@@ -445,7 +445,7 @@ $flags:
 // Styling rules for the blog listing view pagination.
 .menu-pagination {
   text-align: center;
-  @include border(all, 1px, solid, $third-color);
+  @include border(all, 1px, solid, $primary-color, 0.1);
 
   .menu {
     @extend %clearfix;
@@ -469,12 +469,12 @@ $flags:
 
     &.pagination-previous {
       float: left;
-      @include border(right, 1px, solid, $third-color);
+      @include border(right, 1px, solid, $primary-color, 0.1);
     }
 
     &.pagination-next {
       float: right;
-      @include border(left, 1px, solid, $third-color);
+      @include border(left, 1px, solid, $primary-color, 0.1);
     }
 
     &:first-child {

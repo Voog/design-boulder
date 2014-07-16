@@ -59,8 +59,8 @@
   .form_submit input {
     font-family: inherit;
     font-size: 14px;
-    @include bg($grey-2);
-    @include border(all, 1px, solid, $third-color);
+    @include bg($primary-color, 0.02);
+    @include border(all, 1px, solid, $primary-color, 0.1);
     @include inputiosreset;
 
     &:focus {
@@ -109,7 +109,7 @@
       display: block;
       width: 15px;
       height: 15px;
-      @include bg($third-color);
+      @include bg($primary-color, 0.1);
     }
   }
 

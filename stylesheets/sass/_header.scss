@@ -12,13 +12,13 @@
   }
 
   .background-color {
-    @include bg($grey-1, 0.2);
+    @include bg($primary-color, 0.8);
   }
 }
 
 .header-top {
   @include bg($white);
-  @include border(bottom, 1px, solid, $third-color);
+  @include border(bottom, 1px, solid, $primary-color, 0.1);
 
   .front-page & {
     @include bg($white, 0.9);

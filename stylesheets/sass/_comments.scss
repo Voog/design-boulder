@@ -2,14 +2,14 @@
 // Styling rules for the blog article single article comments area.
 // Comment form is styled using the form fields styles located in the "_forms.scss" partial.
 .comments {
-  @include border(top, 1px, solid, $third-color);
+  @include border(top, 1px, solid, $primary-color, 0.1);
 
   .comment {
     padding: 30px 0;
-    @include border(bottom, 1px, solid, $third-color);
+    @include border(bottom, 1px, solid, $primary-color, 0.1);
 
     &:first-child {
-      @include border(top, 1px, solid, $third-color);
+      @include border(top, 1px, solid, $primary-color, 0.1);
     }
   }
 
@@ -38,7 +38,7 @@
   margin-top: 50px;
 
   .placeholder {
-    @include color($grey-1);
+    @include color($primary-color, 0.8);
   }
 }
 

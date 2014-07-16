@@ -52,7 +52,7 @@
 .blog-page,
 .post-page {
   .post {
-    @include border(top, 1px, solid, $black, 0.1);
+    @include border(top, 1px, solid, $primarys-color, 0.1);
 
     &:first-child {
       padding-top: 0;
@@ -80,7 +80,7 @@
     margin-top: 5px;
     text-align: center;
     font-size: 18px;
-    @include color($third-color);
+    @include color($primary-color, 0.1);
   }
 
   .post-content {
