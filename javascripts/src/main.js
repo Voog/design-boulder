@@ -57,8 +57,10 @@
 
   // TODO: Remove if Edicy is going to wrap table with the container
   var wrapTables = function() {
-    $.each($('.content-formatted:not(".js-custom-content-formatted")'), function() {
-      $(this).find('table').wrap('<div class="table-container overthrow"></div>');
+    $.each($('.content-formatted:not(".js-custom-content-formatted") table'), function() {
+      if ($(this).parent('.js-table-container')) {
+        $(this).wrap('<div class="table-container js-table-container overthrow"></div>');
+      }
     });
   };
 
