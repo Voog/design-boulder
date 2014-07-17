@@ -28,8 +28,8 @@
           $('.js-bgpicker-header-image').css({'background-image' : img});
         }
         // Sets the background darkness class to content area parent element.
-        if (opacity >= 0.2) {
-          $('.js-header-bottom').addClass(lightness <= 0.2 ? 'dark-background' : 'light-background');
+        if (opacity >= 0.1) {
+          $('.js-header-bottom').addClass(lightness <= 0.1 ? 'dark-background' : 'light-background');
         } else {
           $('.js-header-bottom').addClass('light-background');
         }

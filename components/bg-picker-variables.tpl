@@ -1,6 +1,6 @@
 {% capture dont_render %}
   <!-- Sets cover color lightness class -->
-  {% if page.data.cover_lightness == nil or page.data.cover_lightness <= 0.5 %}
+  {% if page.data.cover_lightness == nil or page.data.cover_lightness <= 0.1 %}
     {% assign cover_color_class = 'dark-background' %}
   {% else %}
     {% assign cover_color_class = 'light-background' %}

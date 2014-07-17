@@ -57,11 +57,11 @@
 
   // TODO: Remove if Edicy is going to wrap table with the container
   var wrapTables = function() {
-    $.each($('.content-formatted:not(".js-custom-content-formatted") table'), function() {
-      if ($(this).parent('.js-table-container')) {
-        $(this).wrap('<div class="table-container js-table-container overthrow"></div>');
-      }
-    });
+    if (editmode === false) {
+      $.each($('.content-formatted:not(".js-custom-content-formatted")'), function() {
+          $(this).wrap('<div class="table-container overthrow"></div>');
+      });
+    }
   };
 
   // Checks the presence of the table scrollbar.
@@ -95,44 +95,44 @@
     });
   };
 
-    // Initiations
-    var initBlogPage = function() {
-      // ADD BLOG LISTING layout specific FUNCTIONS HERE
-    };
+  // Initiations
+  var initBlogPage = function() {
+    // ADD BLOG LISTING layout specific FUNCTIONS HERE
+  };
 
-    var initArticlePage = function() {
-      // ADD SINGLE POST layout specific FUNCTIONS HERE
-      focusCommentsWithErrors();
-    };
+  var initArticlePage = function() {
+    // ADD SINGLE POST layout specific FUNCTIONS HERE
+    focusCommentsWithErrors();
+  };
 
-    var initCommonPage = function() {
-      // ADD COMMON PAGE SPECIFIC FUNCTIONS HERE
-      handleFormFieldClick();
-      focusCommentsWithErrors();
-    };
+  var initCommonPage = function() {
+    // ADD COMMON PAGE SPECIFIC FUNCTIONS HERE
+    handleFormFieldClick();
+    focusCommentsWithErrors();
+  };
 
-    var init = function() {
-      // ADD SITE WIDE FUNCTIONS HERE
-      toggleMainMenu();
-      toggleLangMenu();
-      handlePopoverMenuHide();
-      handleFooterPositioning();
-      handleFooterContentEdit();
-      handleGalleryHover();
-      handleWindowResize();
-      wrapTables();
-      if ($('.table-container').length > 0) {
-        checkScrollBar();
-        handleTableHorizontalScrolling();
-      }
-    };
+  var init = function() {
+    // ADD SITE WIDE FUNCTIONS HERE
+    toggleMainMenu();
+    toggleLangMenu();
+    handlePopoverMenuHide();
+    handleFooterPositioning();
+    handleFooterContentEdit();
+    handleGalleryHover();
+    handleWindowResize();
+    wrapTables();
+    if ($('.table-container').length > 0) {
+      checkScrollBar();
+      handleTableHorizontalScrolling();
+    }
+  };
 
-    // Enables the usage of the initiations outside this file
-    window.site = $.extend(window.site || {}, {
-      initBlogPage: initBlogPage,
-      initArticlePage: initArticlePage,
-      initCommonPage: initCommonPage
-    });
+  // Enables the usage of the initiations outside this file
+  window.site = $.extend(window.site || {}, {
+    initBlogPage: initBlogPage,
+    initArticlePage: initArticlePage,
+    initCommonPage: initCommonPage
+  });
 
-    init();
-  })(jQuery);
+  init();
+})(jQuery);

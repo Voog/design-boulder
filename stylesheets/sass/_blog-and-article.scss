@@ -19,6 +19,7 @@
 
   .post-title {
     display: inline;
+    margin: 0;
     font-weight: 400;
     font-size: 24px;
     @include border(bottom, 1px, solid, $white);
