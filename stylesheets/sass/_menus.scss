@@ -434,13 +434,6 @@ $flags:
   .lang-flag-#{$flag}:after { background-position: $pos; }
 }
 
-// Styling rules for the site's blog article tags menu. These rules affects both - the blog article listing view and the single blog article view.
-.tags {
-  .editmode & {
-    margin-top: 50px;
-  }
-}
-
 // Styling rules for the blog listing view pagination.
 .menu-pagination {
   text-align: center;

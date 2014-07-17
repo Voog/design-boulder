@@ -1,5 +1,5 @@
 {% if editmode %}
-  <div class="tags">
+  <div class="menu-sub">
     <div class="wrap">
       <div class="tags-editor">{% editable article.tags %}</div>
     </div>

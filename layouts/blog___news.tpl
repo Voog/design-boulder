@@ -41,8 +41,10 @@
   <script type="text/html" id="article-template">
     <article class="post">
       <header class="post-header">
-        <h2 class="post-title"><a href="[[url]]">[[title]]</a></h2>
-        <time class="post-date" datetime="[[dateAttr]]">[[date]]</time>
+        <div class="post-header-top">
+          <h2 class="post-title"><a href="[[url]]">[[title]]</a></h2>
+          <time class="post-date" datetime="[[dateAttr]]">[[date]]</time>
+        </div>
       </header>
 
       <div class="post-content">
