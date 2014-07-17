@@ -237,13 +237,9 @@
 
   // TODO: Remove if Edicy is going to wrap table with the container
   var wrapTables = function() {
-    if (editmode === false) {
-      $.each($('.content-formatted'), function() {
-        if (!$(this).hasClass('js-custom-content-formatted')) {
-          $(this).find('table').wrap('<div class="table-container overthrow"></div>');
-        }
-      });
-    }
+    $.each($('.content-formatted:not(".js-custom-content-formatted")'), function() {
+      $(this).find('table').wrap('<div class="table-container overthrow"></div>');
+    });
   };
 
   // Checks the presence of the table scrollbar.

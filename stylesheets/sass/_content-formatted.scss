@@ -33,12 +33,12 @@
     }
   }
 
-  h2, h3, h4, h5, h6, p, ul, ol, pre, code, table, form,
-  .table-container,
-  .edy-positionable-container-left,
-  .edy-positionable-container-right {
-    margin: 0 50px;
-  }
+  // h2, h3, h4, h5, h6, p, ul, ol, pre, code, table, form,
+  // .table-container,
+  // .edy-positionable-container-left,
+  // .edy-positionable-container-right {
+  //   margin: 0 50px;
+  // }
 
   // Styling rules for the editable content area headings.
   h1, h2, h3, h4, h5, h6 {
@@ -65,12 +65,11 @@
   }
 
   h2 {
-    margin-top: 18px;
-    font-size: 20px;
+    margin-top: 50px;
+    font-size: 24px;
 
     .main-feature & {
       font-style: italic;
-      font-size: 24px;
     }
 
     .contacts & {
@@ -87,6 +86,7 @@
 
   h3, h4, h5, h6 {
     margin-top: 30px;
+    font-style: italic;
     font-size: 18px;
 
     .contacts & {
@@ -97,14 +97,9 @@
 
   // Styling rules for the editable content area paragraphs, lists and links.
   p {
-    margin-top: 30px;
-
-    .main-feature & {
-      margin-top: 20px;
-    }
+    margin-top: 20px;
 
     .contacts & {
-      margin-top: 20px;
       font-size: 20px;
     }
 
@@ -150,7 +145,7 @@
 
   iframe {
     .map & {
-      margin-top: 0;
+      // margin-top: 0;
     }
   }
 

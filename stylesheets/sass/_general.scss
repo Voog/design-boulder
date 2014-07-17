@@ -11,7 +11,7 @@ body {
   font-family: 'Arvo', 'Avenir Next', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   font-weight: 400;
   font-size: 18px;
-  line-height: 1.4;
+  line-height: 1.7;
   @include color($primary-color, 0.73);
   background-position: center;
   background-attachment: fixed;
@@ -172,19 +172,14 @@ body {
     max-width: 1000px;
   }
 
-  .tags & {
+  .tags &,
+  .content-page .content & {
     max-width: 600px;
   }
 
-  .content & {
-    .content-page & {
-      max-width: 700px;
-    }
-  }
 
   .header-top & {
     @extend %clearfix;
-    padding: 19px 20px 18px;
   }
 
   .header-bottom-inner & {
@@ -198,10 +193,14 @@ body {
     padding: 12px 20px;
   }
 
-  .menu-pagination & {
-    padding: 0;
+  .post-header-top & {
+    .content-page & {
+      padding: 32px 20px 0;
+      max-width: 700px;
+    }
   }
 
+  .header-top &,
   .content & {
     padding: 20px;
   }
@@ -236,6 +235,10 @@ body {
 
   .comments & {
     padding: 33px 20px;
+  }
+
+  .menu-pagination & {
+    padding: 0;
   }
 
   .footer & {
