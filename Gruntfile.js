@@ -94,7 +94,7 @@ module.exports = function(grunt) {
       },
 
       uglify: {
-        files: ['javascripts/application.js', 'javascripts/application.min.js'],
+        files: 'javascripts/*.js',
         tasks: 'uglify',
         options: {
           spawn: false
@@ -103,7 +103,7 @@ module.exports = function(grunt) {
 
       css: {
         files: ['stylesheets/sass/*.scss'],
-        tasks: ['sass', 'cssmin'],
+        tasks: ['sass', 'newer:cssmin'],
         options: {
           spawn: false
         }
