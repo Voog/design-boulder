@@ -55,17 +55,6 @@ module.exports = function(grunt) {
       }
     },
 
-    autoprefixer: {
-      build: {
-        files: [{
-          expand: true,
-          cwd: 'stylesheets/',
-          src: ['*.css', '!*.min.css'],
-          dest: 'stylesheets/',
-        }]
-      }
-    },
-
     imagemin: {
       images: {
         files: [{
@@ -114,7 +103,7 @@ module.exports = function(grunt) {
 
       css: {
         files: ['stylesheets/sass/*.scss'],
-        tasks: ['sass', 'autoprefixer', 'cssmin'],
+        tasks: ['sass', 'cssmin'],
         options: {
           spawn: false
         }
@@ -146,14 +135,13 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
-  grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-svgmin');
   grunt.loadNpmTasks('grunt-newer');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-devtools');
 
-  grunt.registerTask('default', ['concat', 'uglify', 'sass', 'autoprefixer', 'cssmin', 'imagemin', 'svgmin']);
+  grunt.registerTask('default', ['concat', 'uglify', 'sass', 'cssmin', 'imagemin', 'svgmin']);
 
   grunt.registerTask('dev', ['watch']);
 
