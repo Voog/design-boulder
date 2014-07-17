@@ -216,8 +216,11 @@ body {
 .front-page .wrap, .header-top .wrap, .menu-sub .wrap {
   max-width: 1000px;
 }
-.content-page .tags .wrap, .content-page .content .wrap {
+.tags .wrap {
   max-width: 600px;
+}
+.content-page .content .wrap {
+  max-width: 700px;
 }
 .header-top .wrap {
   padding: 19px 20px 18px;
@@ -305,6 +308,12 @@ body {
 }
 .content-formatted h1:first-child, .content-formatted h2:first-child, .content-formatted h3:first-child, .content-formatted h4:first-child, .content-formatted h5:first-child, .content-formatted h6:first-child, .content-formatted p:first-child, .content-formatted ul:first-child, .content-formatted ol:first-child, .content-formatted pre:first-child, .content-formatted code:first-child, .content-formatted img:first-child, .content-formatted table:first-child, .content-formatted form:first-child {
   margin-top: 0;
+}
+.content-formatted h2, .content-formatted h3, .content-formatted h4, .content-formatted h5, .content-formatted h6, .content-formatted p, .content-formatted ul, .content-formatted ol, .content-formatted pre, .content-formatted code, .content-formatted table, .content-formatted form,
+.content-formatted .table-container,
+.content-formatted .edy-positionable-container-left,
+.content-formatted .edy-positionable-container-right {
+  margin: 0 50px;
 }
 .content-formatted h1, .content-formatted h2, .content-formatted h3, .content-formatted h4, .content-formatted h5, .content-formatted h6 {
   font-weight: 600;
@@ -1243,19 +1252,27 @@ body {
 }
 .blog-page .post-title,
 .post-page .post-title {
-  margin: 0 -50px;
   text-align: center;
+  line-height: 1.3;
+  border-bottom: solid 1px black;
+  border-bottom: solid 1px rgba(0, 0, 0, 0.23);
+  -webkit-box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.23) !important;
+          box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.23) !important;
 }
 .blog-page .post-title, .blog-page .post-title a,
 .post-page .post-title,
 .post-page .post-title a {
   font-size: 36px;
 }
+.blog-page .post-title a,
+.post-page .post-title a {
+  color: black;
+  color: rgba(0, 0, 0, 0.73);
+}
 .blog-page .post-title a:hover,
 .post-page .post-title a:hover {
-  opacity: 0.5;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-  filter: alpha(opacity=50);
+  color: black;
+  color: rgba(0, 0, 0, 0.5);
 }
 .blog-page .post-date,
 .post-page .post-date {

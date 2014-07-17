@@ -33,11 +33,11 @@
       @include color($secondary-color, 0.75);
       line-height: 1;
       @include bg($white);
-      @include border(all, 1px, solid, $primarys-color, 0.1);
+      @include border(all, 1px, solid, $primary-color, 0.1);
 
       &:hover {
         @include color($secondary-color, 0.75);
-        @include border(all, 1px, solid, $primarys-color, 0.75);
+        @include border(all, 1px, solid, $primary-color, 0.75);
       }
     }
   }

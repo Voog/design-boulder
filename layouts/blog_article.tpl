@@ -12,9 +12,7 @@
     {% include "tags-post" %}
 
     <main class="content js-content" role="main">
-      <div class="wrap">
-        {% include "post-box" with "article" %}
-      </div>
+      {% include "post-box" with "article" %}
 
       <div class="comments content-formatted">
         <div class="wrap">

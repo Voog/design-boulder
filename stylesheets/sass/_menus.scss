@@ -123,7 +123,7 @@
       margin-bottom: 60px;
       text-align: left;
       @include bg($white);
-      box-shadow: 0 5px 25px rgba($primarys-color, 0.3);
+      box-shadow: 0 5px 25px rgba($primary-color, 0.3);
 
       .menu {
         .menu-item,
@@ -299,7 +299,7 @@
 .menu-lang-btn,
 .menu-lang .menu-item .lang-flag {
   &:before {
-    @include bg($primarys-color);
+    @include bg($primary-color);
   }
 
   &:after {
@@ -329,7 +329,7 @@
     padding: 6px 0;
     min-width: 121px;
     background: #fff;
-    box-shadow: 0 5px 25px rgba($primarys-color, 0.3);
+    box-shadow: 0 5px 25px rgba($primary-color, 0.3);
     z-index: 1;
   }
 }
