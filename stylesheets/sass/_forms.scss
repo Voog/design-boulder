@@ -58,7 +58,9 @@
   .form_field_select,
   .form_submit input {
     font-family: inherit;
-    font-size: 14px;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
     @include bg($primary-color, 0.02);
     @include border(all, 1px, solid, $primary-color, 0.1);
     @include inputiosreset;
@@ -73,7 +75,7 @@
   .form_field_select {
     width: 200px;
     margin: 0;
-    padding: 16px;
+    padding: 10px;
     @include box-sizing(border-box);
 
     @include query($mobile-4) {
@@ -171,10 +173,12 @@
 
   .form_submit {
     @extend %clearfix;
+    margin-top: 20px;
+
     input {
       display: block;
       float: right;
-      margin: 18px 0 0;
+      margin: 0;
       padding: 14px 24px;
       font-size: 18px;
       @include color($white);

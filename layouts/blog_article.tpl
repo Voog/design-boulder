@@ -17,7 +17,7 @@
       <div class="comments content-formatted">
         <div class="wrap">
           {% if article.comments_count > 0 %}
-            <h2 class="comments-title"><span class="edy-site-blog-comments-count">{{ article.comments_count }} {{ "comments_for_count" | lc }}</span></h2>
+            <h2 class="comments-title">{{ 'post_has_replies' | lcc : article.comments_count }}</h2>
 
             <div class="comment-messages">
               {% for comment in article.comments %}
