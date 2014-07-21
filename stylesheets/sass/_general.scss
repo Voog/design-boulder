@@ -166,95 +166,12 @@ body {
 .wrap {
   margin: 0 auto;
 
-  .front-page &,
-  .header-top &,
-  .menu-sub & {
-    max-width: 1000px;
+  .front-page & {
+    @extend %wide-wrap;
   }
+}
 
-  .tags &,
-  .content-page .content & {
-    max-width: 600px;
-  }
-
-
-  .header-top & {
-    @extend %clearfix;
-  }
-
-  .header-bottom-inner & {
-    display: table-cell;
-    vertical-align: middle;
-    padding: 60px 20px;
-    height: 542px;
-  }
-
-  .menu-sub & {
-    padding: 12px 20px;
-  }
-
-  .post-header-top & {
-    .content-page & {
-      padding: 32px 20px 0;
-      max-width: 700px;
-    }
-  }
-
-  .header-top &,
-  .content & {
-    padding: 20px;
-  }
-
-  .main-feature & {
-    padding: 0 20px;
-
-    .flexbox & {
-      @include flexbox;
-    }
-
-    .no-flexbox & {
-      display: table;
-    }
-  }
-
-  .summary & {
-    padding: 0 20px;
-
-    .flexbox & {
-      @include flexbox;
-    }
-
-    .no-flexbox & {
-      display: table;
-    }
-  }
-
-  .contacts & {
-    padding: 55px 20px;
-  }
-
-  .comments & {
-    padding: 26px 20px 20px;
-  }
-
-  .menu-pagination & {
-    padding: 0;
-  }
-
-  .footer & {
-    @extend %clearfix;
-    max-width: 1000px;
-    padding: 28px 20px 27px;
-  }
-
-  @include query($tablet-1) {
-    .flexbox &,
-    .no-flexbox & {
-      .main-feature {
-        display: block;
-        text-align: center;
-      }
-    }
-  }
+%wide-wrap {
+  max-width: 1000px;
 }
 

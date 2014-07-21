@@ -23,6 +23,12 @@
   .front-page & {
     @include bg($white, 0.9);
   }
+
+  .wrap {
+    @extend %clearfix;
+    @extend %wide-wrap;
+    padding: 20px;
+  }
 }
 
 .header-left {
@@ -60,11 +66,6 @@
       @include color($primary-color, 0.5);
     }
   }
-
-  @include query($mobile-4) {
-    display: block;
-    margin-right: 40px;
-  }
 }
 
 .header-bottom-inner {
@@ -75,6 +76,13 @@
   height: 544px;
   margin: 0 auto;
   text-align: center;
+
+  .wrap {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 60px 20px;
+    height: 542px;
+  }
 
   .btn {
     display: inline-block;

@@ -77,10 +77,6 @@
     margin: 0;
     padding: 10px;
     @include box-sizing(border-box);
-
-    @include query($mobile-4) {
-      width: 100%;
-    }
   }
 
   .form_field_select {
@@ -161,10 +157,6 @@
 
   .form_field_size_medium {
     width: 400px;
-
-    @include query($mobile-4) {
-      width: 100%;
-    }
   }
 
   .form_field_size_large {
@@ -190,10 +182,6 @@
 
       &:hover {
         @include bg($secondary-color, 0.8);
-      }
-
-      @include query($mobile-4) {
-        width: 100%;
       }
     }
   }

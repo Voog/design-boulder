@@ -3,9 +3,29 @@
 .content {
   padding-bottom: 80px;
   @include bg($white);
+
+  .wrap {
+    padding: 20px;
+
+    .content-page & {
+      max-width: 600px;
+    }
+  }
 }
 
 .main-feature {
+  .wrap {
+    padding: 0 20px;
+
+    .flexbox & {
+      @include flexbox;
+    }
+
+    .no-flexbox & {
+      display: table;
+    }
+  }
+
   .feature-left,
   .feature-right {
     width: 500px;
@@ -15,6 +35,10 @@
     .flexbox & {
       @include flexbox;
     }
+
+    .no-flexbox & {
+      display: table;
+    }
   }
 
   .feature-inner {
@@ -22,33 +46,59 @@
       @include flex(1);
       @include align-self(center);
     }
+
+    .no-flexbox & {
+      display: table-cell;
+      vertical-align: middle;
+    }
   }
 
-  @include query($mobile-4) {
-    .feature-left,
-    .feature-right {
-      width: auto;
-      text-align: center;
-    }
-
-    .feature-left {
-      &.content-formatted {
-        .edy-positionable-container-left,
-        .edy-positionable-container-right {
-          float: none;
-        }
+  @include query($tablet-2) {
+    .flexbox &,
+    .no-flexbox & {
+      .wrap,
+      .feature-left,
+      .feature-right {
+        display: block;
+        min-height: 0;
       }
-    }
 
-    .feature-right {
-      margin-top: 20px;
-      margin-left: 0;
+      .wrap {
+        text-align: center;
+      }
+
+      .feature-left,
+      .feature-right {
+        width: auto;
+        padding: 40px 20px;
+        text-align: center;
+      }
+
+      .feature-left {
+        padding: 30px 20px 15px;
+      }
+
+      .feature-right {
+        padding: 15px 20px 30px;
+      }
     }
   }
 }
 
 .summary {
   @include bg($secondary-color);
+
+  .wrap {
+    padding: 0 20px;
+
+    .flexbox & {
+      @include flexbox;
+    }
+
+    .no-flexbox & {
+      display: table;
+    }
+  }
 
   .blog {
     width: 498px;
@@ -73,10 +123,42 @@
     }
   }
 
-  @include query($mobile-4) {
-    .quotation {
-      width: auto;
-      padding: 20px;
+  @include query($tablet-2) {
+    .flexbox &,
+    .no-flexbox & {
+      .wrap,
+      .quotation {
+        display: block;
+      }
+
+      .blog,
+      .quotation {
+        width: auto;
+      }
+
+      .blog {
+        padding: 30px 0 15px;
+        border-right: none;
+        @include border(bottom, 5px, solid, $white);
+      }
+
+      .quotation {
+        padding: 15px 0 30px;
+      }
+    }
+  }
+}
+
+.contacts {
+  text-align: center;
+
+  .wrap {
+    padding: 55px 20px;
+  }
+
+  @include query($tablet-2) {
+    .wrap {
+      padding: 30px 20px;
     }
   }
 }

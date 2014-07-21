@@ -134,12 +134,6 @@
     margin-top: 25px;
   }
 
-  iframe {
-    .map & {
-      // margin-top: 0;
-    }
-  }
-
   pre {
     margin-bottom: 0;
     overflow: auto;
@@ -244,7 +238,7 @@
         }
       }
 
-      @include query($mobile-5) {
+      @include query($tablet-4) {
         & {
           display: inline-block;
 
@@ -287,6 +281,28 @@
           padding: 0 12px;
           @include color($white, 0.5);
           border: none;
+        }
+      }
+    }
+  }
+
+  @include query($tablet-2) {
+    .feature-left &,
+    .feature-right & {
+      h2 {
+        text-align: center;
+      }
+    }
+  }
+
+  @include query($tablet-4) {
+    table {
+      .contacts & {
+        tr {
+          td {
+            border-left: none;
+            @include border(bottom, 2px, solid, $primary-color, 0.2);
+          }
         }
       }
     }

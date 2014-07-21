@@ -9,6 +9,12 @@
   @include color($white, 0.5);
   @include bg($primary-color, 0.73);
 
+  .wrap {
+    @extend %clearfix;
+    @extend %wide-wrap;
+    padding: 28px 20px 27px;
+  }
+
   .footer-left,
   .footer-right {
     min-width: 150px;
