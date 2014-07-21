@@ -643,7 +643,7 @@ body {
   }
   .menu-main.expanded .menu .menu-link:hover {
     color: black;
-    color: rgba(0, 0, 0, 0.8);
+    color: rgba(0, 0, 0, 0.3);
     border-bottom: none;
     box-shadow: none;
   }
@@ -702,7 +702,7 @@ body {
   display: inline-block;
   vertical-align: top;
   width: 20px;
-  height: 13px;
+  height: 14px;
   font-size: 0;
   background: none;
   border: none;
@@ -710,6 +710,8 @@ body {
 }
 .menu-lang-btn:hover {
   opacity: 0.8;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
 }
 .menu-lang-btn:focus {
   outline: none;
@@ -810,28 +812,30 @@ body {
   .menu-lang {
     display: none;
   }
-  .menu-main .menu-lang {
+  .menu-main.expanded .menu-lang {
     top: 0;
     display: block;
     margin-left: 0;
     padding-left: 0;
   }
-  .menu-main .menu-lang .menu-item {
+  .menu-main.expanded .menu-lang .menu-item {
     text-align: left;
   }
-  .menu-main .menu-lang .menu-item:first-child {
+  .menu-main.expanded .menu-lang .menu-item:first-child {
     border-top: none;
   }
-  .menu-main .menu-lang .menu-item .menu-link {
+  .menu-main.expanded .menu-lang .menu-item .menu-link {
     padding: 14px 15px 13px 44px;
     font-weight: 400;
     font-size: 14px;
+    color: black;
+    color: rgba(0, 0, 0, 0.73);
   }
-  .menu-main .menu-lang .menu-item .menu-link:before, .menu-main .menu-lang .menu-item .menu-link:after {
+  .menu-main.expanded .menu-lang .menu-item .menu-link:before, .menu-main.expanded .menu-lang .menu-item .menu-link:after {
     top: 14px;
     left: 15px;
   }
-  .menu-main .menu-lang .menu-item .menu-link.active, .menu-main .menu-lang .menu-item .menu-link.active:hover {
+  .menu-main.expanded .menu-lang .menu-item .menu-link.active, .menu-main.expanded .menu-lang .menu-item .menu-link.active:hover {
     font-weight: 600;
     color: black;
     color: rgba(0, 0, 0, 0.8);
