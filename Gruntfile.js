@@ -27,23 +27,8 @@ module.exports = function(grunt) {
       }
     },
 
-    sass: {
-      build: {
-        options: {
-          style: 'expanded'
-        },
-        files: [{
-          expand: true,
-          cwd: 'stylesheets/sass',
-          src: ['*.scss'],
-          dest: 'stylesheets',
-          ext: '.css'
-        }]
-      }
-    },
-
     cssmin: {
-      minify: {
+      build: {
         expand: true,
         cwd: 'stylesheets/',
         src: ['*.css', '!*.min.css'],
@@ -94,8 +79,8 @@ module.exports = function(grunt) {
       },
 
       uglify: {
-        files: 'javascripts/*.js',
-        tasks: 'uglify',
+        files: ['javascripts/*.js', '!javascripts/*.min.js'],
+        tasks: 'newer:uglify',
         options: {
           spawn: false
         }
@@ -103,45 +88,23 @@ module.exports = function(grunt) {
 
       css: {
         files: ['stylesheets/sass/*.scss'],
-        tasks: ['sass', 'cssmin'],
-        options: {
-          spawn: false
-        }
-      },
-
-      images: {
-        files: [
-          'images/src/*.{png,jpg,gif}',
-          'photos/src/*.{png,jpg,gif}'
-        ],
-        tasks: ['newer:imagemin'],
-        options: {
-          spawn: false
-        }
-      },
-
-      svg: {
-        files: ['assets/src/*.svg'],
-        tasks: ['newer:svgmin'],
+        tasks: ['cssmin'],
         options: {
           spawn: false
         }
       }
     },
-
   });
 
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-svgmin');
   grunt.loadNpmTasks('grunt-newer');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-devtools');
 
-  grunt.registerTask('default', ['concat', 'uglify', 'sass', 'cssmin', 'imagemin', 'svgmin']);
+  grunt.registerTask('default', ['concat', 'uglify', 'cssmin', 'imagemin', 'svgmin']);
 
   grunt.registerTask('dev', ['watch']);
 
