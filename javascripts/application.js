@@ -10490,7 +10490,7 @@ return jQuery;
     // Hides opened popups and modals if clicked on any other element.
     $('html').click(function() {
       if ($('.js-popover').hasClass('expanded')) {
-        $('.js-popover').removeClass('expanded');
+        // $('.js-popover').removeClass('expanded');
       }
 
       if ($('.js-search-close-btn').hasClass('open') && $('.voog-search-modal').length === 0) {
@@ -10618,6 +10618,10 @@ return jQuery;
   };
 
   // Initiations
+  var initBlogPage = function() {
+    // ADD BLOG LISTING layout specific FUNCTIONS HERE
+  };
+
   var initArticlePage = function() {
     // ADD SINGLE POST layout specific FUNCTIONS HERE
     focusCommentsWithErrors();
@@ -10645,6 +10649,7 @@ return jQuery;
 
   // Enables the usage of the initiations outside this file
   window.site = $.extend(window.site || {}, {
+    initBlogPage: initBlogPage,
     initArticlePage: initArticlePage,
     initCommonPage: initCommonPage
   });

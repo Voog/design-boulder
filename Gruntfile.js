@@ -27,6 +27,21 @@ module.exports = function(grunt) {
       }
     },
 
+    sass: {
+      build: {
+        options: {
+          style: 'expanded'
+        },
+        files: [{
+          expand: true,
+          cwd: 'stylesheets/sass',
+          src: ['*.scss'],
+          dest: 'stylesheets',
+          ext: '.css'
+        }]
+      }
+    },
+
     cssmin: {
       build: {
         expand: true,
@@ -80,7 +95,7 @@ module.exports = function(grunt) {
 
       uglify: {
         files: ['javascripts/*.js', '!javascripts/*.min.js'],
-        tasks: 'newer:uglify',
+        tasks: 'uglify',
         options: {
           spawn: false
         }
@@ -88,7 +103,7 @@ module.exports = function(grunt) {
 
       css: {
         files: ['stylesheets/sass/*.scss'],
-        tasks: ['newer:cssmin'],
+        tasks: ['sass', 'cssmin'],
         options: {
           spawn: false
         }
@@ -98,13 +113,13 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-svgmin');
-  grunt.loadNpmTasks('grunt-newer');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
-  grunt.registerTask('default', ['concat', 'uglify', 'cssmin', 'imagemin', 'svgmin']);
+  grunt.registerTask('default', ['concat', 'uglify', 'sass', 'cssmin', 'imagemin', 'svgmin']);
 
   grunt.registerTask('dev', ['watch']);
 
