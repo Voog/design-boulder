@@ -308,7 +308,7 @@ body {
 }
 
 .content-formatted {
-  word-wrap: break-word;
+  word-break: break-word;
 }
 .header-bottom-inner .content-formatted {
   font-weight: 600;
@@ -1206,8 +1206,8 @@ body {
 }
 
 /* BLOG & BLOG ARTICLE */
-.post-title {
-  word-wrap: break-word;
+.post-title, .post-title a {
+  word-break: break-word;
 }
 
 .front-page .blog-title {

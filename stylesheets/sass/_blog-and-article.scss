@@ -1,6 +1,8 @@
 /* BLOG & BLOG ARTICLE */
 .post-title {
-  word-wrap: break-word;
+  &, & a {
+    word-break: break-word;
+  }
 }
 
 // Style rules for the front page blog listing only.
