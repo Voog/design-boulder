@@ -10618,10 +10618,6 @@ return jQuery;
   };
 
   // Initiations
-  var initBlogPage = function() {
-    // ADD BLOG LISTING layout specific FUNCTIONS HERE
-  };
-
   var initArticlePage = function() {
     // ADD SINGLE POST layout specific FUNCTIONS HERE
     focusCommentsWithErrors();
@@ -10649,7 +10645,6 @@ return jQuery;
 
   // Enables the usage of the initiations outside this file
   window.site = $.extend(window.site || {}, {
-    initBlogPage: initBlogPage,
     initArticlePage: initArticlePage,
     initCommonPage: initCommonPage
   });

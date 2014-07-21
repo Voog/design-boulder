@@ -88,7 +88,7 @@ module.exports = function(grunt) {
 
       css: {
         files: ['stylesheets/sass/*.scss'],
-        tasks: ['cssmin'],
+        tasks: ['newer:cssmin'],
         options: {
           spawn: false
         }

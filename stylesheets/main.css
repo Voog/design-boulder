@@ -1091,7 +1091,7 @@ body {
 }
 .header-title a:hover {
   color: black;
-  color: rgba(0, 0, 0, 0.8);
+  color: rgba(0, 0, 0, 0.5);
 }
 @media screen and (max-width: 420px) {
   .header-title {

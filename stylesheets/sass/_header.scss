@@ -55,10 +55,10 @@
 
   a {
     @include color($primary-color, 0.73);
-  }
 
-  a:hover {
-    @include color($primary-color, 0.8);
+    &:hover {
+      @include color($primary-color, 0.5);
+    }
   }
 
   @include query($mobile-4) {
