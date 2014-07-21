@@ -307,9 +307,6 @@ body {
   }
 }
 
-.content-formatted {
-  word-break: break-word;
-}
 .header-bottom-inner .content-formatted {
   font-weight: 600;
   font-style: italic;
@@ -566,6 +563,10 @@ body {
   display: inline-block;
   vertical-align: middle;
 }
+.menu .untranslated {
+  color: black;
+  color: rgba(0, 0, 0, 0.33);
+}
 
 .menu-main {
   display: inline-block;
@@ -583,10 +584,6 @@ body {
   padding-bottom: 3px;
   color: black;
   color: rgba(0, 0, 0, 0.73);
-}
-.menu-main .menu .menu-item .menu-link.untranslated {
-  color: #cc0000;
-  color: rgba(204, 0, 0, 0.5);
 }
 .menu-main .menu .menu-item .menu-link.active, .menu-main .menu .menu-item .menu-link.active:hover
 .menu-main .menu .menu-item .menu-link:hover {
@@ -684,10 +681,6 @@ body {
   font-size: 16px;
   color: black;
   color: rgba(0, 0, 0, 0.73);
-}
-.menu-sub .menu .menu-item .menu-link.untranslated {
-  color: #cc0000;
-  color: rgba(204, 0, 0, 0.5);
 }
 .menu-sub .menu .menu-item .menu-link.active {
   font-weight: 700;
