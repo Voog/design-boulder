@@ -13,9 +13,9 @@
     {% include "menu-level-2" %}
 
     <main class="content js-content" role="main">
-      <section class="wrap">
+      <div class="wrap">
         <section class="content-body content-formatted">{% content %}</section>
-      </section>
+      </div>
     </main>
 
     {% include "footer" %}
