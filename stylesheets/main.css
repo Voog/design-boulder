@@ -248,7 +248,6 @@ body {
   word-break: break-word;
 }
 .header-bottom-inner .content-formatted {
-  font-weight: 600;
   font-style: italic;
   line-height: 1.5;
 }
@@ -457,6 +456,9 @@ body {
   }
 }
 @media screen and (max-width: 707px) {
+  .contacts .content-formatted table, .contacts .content-formatted table tr td {
+    display: block;
+  }
   .contacts .content-formatted table tr td {
     border-left: none;
     border-bottom: 2px solid black;

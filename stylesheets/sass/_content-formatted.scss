@@ -6,7 +6,6 @@
   word-break: break-word;
 
   .header-bottom-inner & {
-    font-weight: 600;
     font-style: italic;
     line-height: 1.5;
 
@@ -298,6 +297,10 @@
   @include query($tablet-4) {
     table {
       .contacts & {
+        &, & tr td {
+          display: block;
+        }
+
         tr {
           td {
             border-left: none;
