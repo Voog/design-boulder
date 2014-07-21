@@ -57,7 +57,7 @@
     vertical-align: middle;
   }
 
-  .untranslated {
+  &.untranslated {
     @include color($primary-color, 0.33);
   }
 }

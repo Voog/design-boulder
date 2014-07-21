@@ -3,6 +3,7 @@
 // NB! Contact forms, image galleries and tables styling rules are located in the separate partials: "_forms.scss", "_gallery.scss" and "_tables.scss".
 .content-formatted {
   @extend %clearfix;
+  word-break: break-word;
 
   .header-bottom-inner & {
     font-weight: 600;
@@ -210,6 +211,7 @@
     @include border(all,1px,solid,$primary-color, 0.02);
     border-collapse: collapse;
     border-spacing: 0;
+    word-break: auto;
 
     tr {
       &:first-child {

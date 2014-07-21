@@ -1,28 +1,6 @@
 ;(function($) {
   var editmode = $('html').hasClass('editmode');
 
-  // var toggleMainMenu = function() {
-  //   $('.js-menu-btn').click(function() {
-  //     $(this).toggleClass('open');
-  //     $('.js-menu-main').toggleClass('expanded');
-  //   });
-  // };
-
-  // var toggleLangMenu = function() {
-  //   $('.js-menu-lang-btn').click(function(event) {
-  //     event.stopPropagation();
-  //     $('.js-menu-lang-popover').toggleClass('expanded');
-  //   });
-  // };
-
-  // var handlePopoverMenuHide = function() {
-  //   $('html').click(function() {
-  //     if ($('.js-menu-lang-popover').hasClass('expanded')) {
-  //       $('.js-menu-lang-popover').removeClass('expanded');
-  //     }
-  //   });
-  // };
-
   // Handles mouse clicks on different buttons and sections of the web page.
   var handleElementsClick = function() {
     // Hides opened popups and modals if clicked on any other element.

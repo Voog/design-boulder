@@ -307,6 +307,9 @@ body {
   }
 }
 
+.content-formatted {
+  word-break: break-word;
+}
 .header-bottom-inner .content-formatted {
   font-weight: 600;
   font-style: italic;
@@ -453,6 +456,7 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.02);
   border-collapse: collapse;
   border-spacing: 0;
+  word-break: auto;
 }
 .content-formatted table tr:first-child td {
   color: white;
@@ -563,7 +567,7 @@ body {
   display: inline-block;
   vertical-align: middle;
 }
-.menu .untranslated {
+.menu.untranslated {
   color: black;
   color: rgba(0, 0, 0, 0.33);
 }
