@@ -602,9 +602,6 @@ body {
   top: -1px;
   margin-right: 5px;
 }
-.menu-main .menu-lang {
-  display: none;
-}
 @media screen and (max-width: 900px) {
   .menu-main {
     display: none;
@@ -614,6 +611,7 @@ body {
     top: 60px;
     right: 20px;
     z-index: 10;
+    display: block;
     margin-top: 0;
     min-width: 350px;
     margin-bottom: 60px;
@@ -634,7 +632,7 @@ body {
     font-weight: 700;
   }
   .menu-main.expanded .menu .menu-link {
-    padding: 10px 15px 6px;
+    padding: 6px 15px 5px;
   }
   .menu-main.expanded .menu .menu-link.active, .menu-main.expanded .menu .menu-link.active:hover, .menu-main.expanded .menu .menu-link:hover {
     border: none;
@@ -649,35 +647,10 @@ body {
     border-bottom: none;
     box-shadow: none;
   }
-  .menu-main.expanded .menu-lang {
-    display: block;
-    padding-left: 0;
-  }
-  .menu-main.expanded .menu-lang .menu-item {
-    text-align: left;
-  }
-  .menu-main.expanded .menu-lang .menu-item:first-child {
-    border-top: none;
-  }
-  .menu-main.expanded .menu-lang .menu-item .menu-link {
-    padding: 11px 15px 10px 44px;
-    font-weight: 400;
-    font-size: 14px;
-  }
-  .menu-main.expanded .menu-lang .menu-item .menu-link:before, .menu-main.expanded .menu-lang .menu-item .menu-link:after {
-    top: 13px;
-    left: 15px;
-  }
-  .menu-main.expanded .menu-lang .menu-item .menu-link.active, .menu-main.expanded .menu-lang .menu-item .menu-link.active:hover {
-    font-weight: 600;
-    color: black;
-    color: rgba(0, 0, 0, 0.8);
-    background: none;
-  }
 }
 @media screen and (max-width: 900px) and (max-width: 480px) {
   .menu-main.expanded {
-    top: 80px;
+    top: 79px;
     left: 0;
     right: 0;
     min-width: 0;
@@ -798,6 +771,9 @@ body {
   display: inline-block;
   line-height: 1;
 }
+.menu-main .menu-lang {
+  display: none;
+}
 .menu-lang .menu-item {
   display: list-item;
   text-align: right;
@@ -833,6 +809,33 @@ body {
 @media screen and (max-width: 900px) {
   .menu-lang {
     display: none;
+  }
+  .menu-main .menu-lang {
+    top: 0;
+    display: block;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .menu-main .menu-lang .menu-item {
+    text-align: left;
+  }
+  .menu-main .menu-lang .menu-item:first-child {
+    border-top: none;
+  }
+  .menu-main .menu-lang .menu-item .menu-link {
+    padding: 14px 15px 13px 44px;
+    font-weight: 400;
+    font-size: 14px;
+  }
+  .menu-main .menu-lang .menu-item .menu-link:before, .menu-main .menu-lang .menu-item .menu-link:after {
+    top: 14px;
+    left: 15px;
+  }
+  .menu-main .menu-lang .menu-item .menu-link.active, .menu-main .menu-lang .menu-item .menu-link.active:hover {
+    font-weight: 600;
+    color: black;
+    color: rgba(0, 0, 0, 0.8);
+    background: none;
   }
 }
 

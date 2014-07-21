@@ -64,7 +64,6 @@
   margin-top: 3px;
 
   .menu {
-
     .menu-item,
     .edit-btn {
       margin-left: 17px;
@@ -104,10 +103,6 @@
     }
   }
 
-  .menu-lang {
-    display: none;
-  }
-
   @include query($tablet-2) {
     display: none;
 
@@ -116,7 +111,7 @@
       top: 60px;
       right: 20px;
       z-index: 10;
-      // display: block;
+      display: block;
       margin-top: 0;
       min-width: 350px;
       margin-bottom: 60px;
@@ -142,7 +137,7 @@
         }
 
         .menu-link {
-          padding: 10px 15px 6px;
+          padding: 6px 15px 5px;
 
           &.active,
           &.active:hover,
@@ -163,43 +158,11 @@
           }
         }
       }
-
-      .menu-lang {
-        display: block;
-        padding-left: 0;
-
-        .menu-item {
-          text-align: left;
-
-          &:first-child {
-            border-top: none;
-          }
-
-          .menu-link {
-            padding: 11px 15px 10px 44px;
-            font-weight: 400;
-            font-size: 14px;
-
-            &:before,
-            &:after {
-              top: 13px;
-              left: 15px;
-            }
-
-            &.active,
-            &.active:hover {
-              font-weight: 600;
-              @include color($primary-color, 0.8);
-              background: none;
-            }
-          }
-        }
-      }
     }
 
     @include query($mobile-3) {
       &.expanded {
-        top: 80px;
+        top: 79px;
         left: 0;
         right: 0;
         min-width: 0;
@@ -338,6 +301,10 @@
   display: inline-block;
   line-height: 1;
 
+  .menu-main & {
+    display: none;
+  }
+
   .menu-item {
     display: list-item;
     text-align: right;
@@ -378,6 +345,40 @@
 
   @include query($tablet-2) {
     display: none;
+
+    .menu-main & {
+      top: 0;
+      display: block;
+      margin-left: 0;
+      padding-left: 0;
+
+      .menu-item {
+        text-align: left;
+
+        &:first-child {
+          border-top: none;
+        }
+
+        .menu-link {
+          padding: 14px 15px 13px 44px;
+          font-weight: 400;
+          font-size: 14px;
+
+          &:before,
+          &:after {
+            top: 14px;
+            left: 15px;
+          }
+
+          &.active,
+          &.active:hover {
+            font-weight: 600;
+            @include color($primary-color, 0.8);
+            background: none;
+          }
+        }
+      }
+    }
   }
 }
 
