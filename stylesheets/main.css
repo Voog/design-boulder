@@ -522,6 +522,14 @@ body {
   color: black;
   color: rgba(0, 0, 0, 0.33);
 }
+@media screen and (max-width: 900px) {
+  .menu .edit-btn {
+    display: block;
+    padding: 5px 15px 6px;
+    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}
 
 .menu-main {
   display: inline-block;
@@ -583,6 +591,9 @@ body {
   }
   .menu-main.expanded .menu .menu-item:first-child .menu-link {
     font-weight: 700;
+  }
+  .menu-main.expanded .menu .edit-btn {
+    margin: 0;
   }
   .menu-main.expanded .menu .menu-link {
     padding: 6px 15px 5px;
@@ -763,6 +774,7 @@ body {
 @media screen and (max-width: 900px) {
   .menu-lang {
     display: none;
+    line-height: inherit;
   }
   .menu-main.expanded .menu-lang {
     top: 0;
@@ -777,7 +789,7 @@ body {
     border-top: none;
   }
   .menu-main.expanded .menu-lang .menu-item .menu-link {
-    padding: 14px 15px 13px 44px;
+    padding: 10px 15px 9px 44px;
     font-weight: 400;
     font-size: 14px;
     color: black;
