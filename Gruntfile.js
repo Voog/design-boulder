@@ -36,21 +36,6 @@ module.exports = function(grunt) {
       }
     },
 
-    // sass: {
-    //   build: {
-    //     options: {
-    //       style: 'expanded'
-    //     },
-    //     files: [{
-    //       expand: true,
-    //       cwd: 'stylesheets/sass',
-    //       src: ['*.scss'],
-    //       dest: 'stylesheets',
-    //       ext: '.css'
-    //     }]
-    //   }
-    // },
-
     cssmin: {
       build: {
         expand: true,
@@ -112,7 +97,6 @@ module.exports = function(grunt) {
 
       css: {
         files: 'stylesheets/sass/*.scss',
-        // tasks: ['sass', 'cssmin'],
         tasks: 'newer:cssmin',
         options: {
           spawn: false
@@ -121,7 +105,6 @@ module.exports = function(grunt) {
     },
   });
 
-  // grunt.registerTask('default', ['concat', 'uglify', 'sass', 'cssmin', 'imagemin', 'svgmin']);
   grunt.registerTask('default', ['concat', 'uglify', 'cssmin', 'imagemin', 'svgmin']);
 
   grunt.registerTask('dev', ['watch']);
