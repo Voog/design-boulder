@@ -1,5 +1,5 @@
 /* GENERAL */
-// Styling rules for the basic parts of the page. These rules affect the entire site.
+// Basic parts of the page. These rules affect the entire site.
 html, body {
   height: 100% !important;
 }
@@ -8,7 +8,7 @@ body {
   position: relative;
   margin: 0;
   padding: 0;
-  font-family: 'Arvo', 'Avenir Next', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-family: 'Arvo', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.7;
@@ -18,7 +18,7 @@ body {
   background-size: cover;
 }
 
-// Pseudo classes for declaring commonly used styling rules for different elements.
+// Pseudo classes for commonly used styling rules for different elements.
 %clearfix:after {
   content: "";
   display: table;
@@ -30,6 +30,25 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
+}
+
+%button {
+  margin: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  &, &::-moz-focus-inner {
+    padding: 0;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &::-moz-focus-inner {
+    border: none;
+  }
 }
 
 %inline-block {
@@ -47,7 +66,8 @@ body {
   text-align: right;
 }
 
-// Styling rules for the independent elements that can be located everywhere in the DOM and always have the same styling rules.
+// Independent elements that can be located everywhere in the DOM and always
+// have the same styling rules.
 .loading-status {
   text-align: center;
 }
@@ -76,19 +96,52 @@ body {
 
 @include keyframes(cubemove) {
   25% {
-    @include transform(translateX(42px) rotate(-90deg) scale(0.5));
+    @include transform(
+      translateX(42px) rotate(-90deg) scale(0.5)
+    );
   }
 
   50% {
-    @include transform(translateX(42px) translateY(42px) rotate(-180deg));
+    @include transform(
+      translateX(42px) translateY(42px) rotate(-180deg)
+    );
   }
 
   75% {
-    @include transform(translateX(0px) translateY(42px) rotate(-270deg) scale(0.5));
+    @include transform(
+      translateX(0px) translateY(42px) rotate(-270deg) scale(0.5)
+    );
   }
 
   100% {
-    @include transform(rotate(-360deg));
+    @include transform(
+      rotate(-360deg)
+    );
+  }
+}
+
+.btn {
+  margin: 0;
+  padding: 15px 40px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 24px;
+  @include color($white);
+  @include bg($secondary-color);
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    @include bg($secondary-color,.8);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &::-moz-focus-inner {
+    padding: 0;
+    border: 0;
   }
 }
 
@@ -119,33 +172,7 @@ body {
   z-index: -1;
 }
 
-.btn {
-  margin: 0;
-  padding: 15px 40px;
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 24px;
-  @include color($white);
-  @include bg($secondary-color);
-  border: none;
-  cursor: pointer;
-
-  &:hover {
-    @include bg($secondary-color,.8);
-  }
-
-  &:focus {
-    outline: none;
-  }
-
-  &::-moz-focus-inner {
-    padding: 0;
-    border: 0;
-  }
-
-}
-
-// Styling rules for the main container that affects the entire site's other elements.
+// Main container that affects the entire site's other elements.
 .container {
   position:relative;
   min-height:100%;
