@@ -73,6 +73,13 @@
     });
   };
 
+  // Closes the soft keyboards on mobile devices on search submit.
+  var handleSearchSumbit = function() {
+    $('.js-search-submit').on('click', function() {
+      $('.js-search-input').parent().blur();
+    });
+  };
+
   // Reduces opacity of the gallery images that are not under the cursor
   var handleGalleryHover = function() {
     $('.edys-gallery-item').mouseover(function() {
@@ -154,6 +161,7 @@
     handleElementsClick();
     handleFooterPositioning();
     handleFooterContentEdit();
+    handleSearchSumbit();
     handleGalleryHover();
     handleWindowResize();
     wrapTables();

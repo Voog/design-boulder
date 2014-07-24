@@ -304,12 +304,6 @@
       "filename": "header-bg copy.jpg"
     },
     {
-      "content_type": "image/jpeg",
-      "file": "images/header-bg.jpg",
-      "kind": "images",
-      "filename": "header-bg.jpg"
-    },
-    {
       "content_type": "image/png",
       "file": "images/ico-arrow-down.png",
       "kind": "images",
@@ -320,6 +314,12 @@
       "file": "images/ico-flags.png",
       "kind": "images",
       "filename": "ico-flags.png"
+    },
+    {
+      "content_type": "image/png",
+      "file": "images/ico-search.png",
+      "kind": "images",
+      "filename": "ico-search.png"
     },
     {
       "content_type": "image/png",

@@ -7,6 +7,10 @@
     min-height: 623px;
   }
 
+  .search-open & {
+    position: static;
+  }
+
   .background-image {
     background-image: url('../images/header-bg.jpg');
   }

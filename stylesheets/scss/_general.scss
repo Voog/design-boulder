@@ -16,6 +16,12 @@ body {
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
+
+  &.search-open {
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+  }
 }
 
 // Pseudo classes for commonly used styling rules for different elements.
@@ -66,8 +72,7 @@ body {
   text-align: right;
 }
 
-// Independent elements that can be located everywhere in the DOM and always
-// have the same styling rules.
+// Independent elements that can be located everywhere in the DOM and always have the same styling rules.
 .loading-status {
   text-align: center;
 }
@@ -179,6 +184,10 @@ body {
 
   .editmode & {
     @include calc(min-height, '100% - 40px');
+  }
+
+  .search-open & {
+    position: static;
   }
 
   a {

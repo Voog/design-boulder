@@ -3,6 +3,8 @@
   "description": "The Boulder design template for Voog",
   "devDependencies": {
     "grunt": "^0.4.5",
+    "grunt-bowercopy": "^1.1.0",
+    "grunt-modernizr": "^0.5.2",
     "grunt-contrib-concat": "^0.4.0",
     "grunt-contrib-uglify": "^0.5.0",
     "grunt-contrib-sass": "^0.7.3",
