@@ -2,8 +2,6 @@
 <html class="{% if editmode %}editmode{% else %}public{% endif %}" lang="{{ page.language_code }}">
 <head prefix="og: http://ogp.me/ns#">
   {% include "html-head" %}
-  {{ blog.rss_link }}
-  {{ site.stats_header }}
 </head>
 
 <body class="blog-page content-page{% if site.search.enabled %} search-enabled{% endif %}{% if editmode or site.has_many_languages? %} multilingual{% endif %}">
