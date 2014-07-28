@@ -38,7 +38,7 @@
   </div>
 
   {% include "javascripts" %}
-  <script src="{{ javascripts_path }}/placeholder.js?1"></script>
+  <script src="{{ javascripts_path }}/placeholder.js"></script>
   <script>$('.js-placeholder').placeholder();</script>
 </body>
 </html>
