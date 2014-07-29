@@ -82,6 +82,20 @@
       outline: 1px solid rgba($primary-color, 0.5);
     }
   }
+
+  .edy-texteditor-active table td,
+  .edy-texteditor-active table th {
+    .dark-background & {
+      outline: 1px dotted rgba($white, 0.5);
+    }
+  }
+
+  .edy-texteditor-active table td.wysiwyg-tmp-selected-cell,
+  .edy-texteditor-active table th.wysiwyg-tmp-selected-cell {
+    .dark-background & {
+      outline: 1px solid rgba($white, 0.8);
+    }
+  }
 }
 
 // Image drop area
