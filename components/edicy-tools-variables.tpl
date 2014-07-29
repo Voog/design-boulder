@@ -2,11 +2,11 @@
   {% comment %}Sets cover color lightness class.{% endcomment %}
   {% assign header_opacity = page.data.header_opacity %}
 
-  {% if header_opacity != nil and header_opacity != '' and header_opacity >= 0.5 %}
-    {% if page.data.header_lightness == nil or page.data.header_lightness <= 0.5 %}
-      {% assign header_color_class = ' dark-background' %}
-    {% else %}
+  {% if header_opacity != nil and header_opacity != '' and header_opacity >= 0.1 %}
+    {% if page.data.header_lightness == nil or page.data.header_lightness >= 0.2 %}
       {% assign header_color_class = ' light-background' %}
+    {% else %}
+      {% assign header_color_class = ' dark-background' %}
     {% endif %}
   {% else %}
     {% assign header_color_class = ' light-background' %}

@@ -25,8 +25,8 @@
         // removes the current lightness class.
         $('.js-header-bottom').removeClass('light-background dark-background');
         // Checks the opacity of the header background color and sets the lightness class depending on it's value.
-        if (opacity >= 0.5) {
-          $('.js-header-bottom').addClass(lightness <= 0.5 ? 'dark-background' : 'light-background');
+        if (opacity >= 0.1) {
+          $('.js-header-bottom').addClass(lightness >= 0.2 ? 'light-background' : 'dark-background');
         } else {
           $('.js-header-bottom').addClass('light-background');
         }

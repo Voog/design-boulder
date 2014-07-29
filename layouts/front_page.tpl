@@ -7,6 +7,7 @@
 </head>
 
   <body class="front-page">
+    <div>{{ header_opacity }}</div>
     <div class="container js-container">
       {% include "header" with "content" %}
 
