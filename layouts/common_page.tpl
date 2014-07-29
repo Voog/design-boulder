@@ -19,6 +19,5 @@
   </div>
 
   {% include "javascripts" %}
-  {% include "bg-picker" %}
 </body>
 </html>

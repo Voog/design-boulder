@@ -32,7 +32,6 @@
   </div>
 
   {% include "javascripts" %}
-  {% include "bg-picker" %}
 
   <script>var langCode = "{{ page.language_code }}";</script>
   <script src="{{ javascripts_path }}/article-pages.js?1"></script>
