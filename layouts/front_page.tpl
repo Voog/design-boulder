@@ -3,7 +3,7 @@
 <head prefix="og: http://ogp.me/ns#">
   {% include "html-head" %}
   <link rel="stylesheet" href="/assets/admin/tools/0.1.3/edicy-tools.css">
-  {% include "bg-picker-variables" %}
+  {% include "edicy-tools-variables" %}
 </head>
 
   <body class="front-page">
@@ -86,6 +86,6 @@
     </div>
 
     {% include "javascripts" %}
-    {% include "bg-picker" %}
+    {% include "edicy-tools" %}
   </body>
 </html>

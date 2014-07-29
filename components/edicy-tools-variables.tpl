@@ -1,12 +1,18 @@
 {% capture dont_render %}
   {% comment %}Sets cover color lightness class.{% endcomment %}
-  {% if page.data.header_lightness == nil or page.data.header_lightness <= 0.1 %}
-    {% assign cover_color_class = 'dark-background' %}
+  {% assign header_opacity = page.data.header_opacity %}
+
+  {% if header_opacity != nil and header_opacity != '' and header_opacity >= 0.5 %}
+    {% if page.data.header_lightness == nil or page.data.header_lightness <= 0.5 %}
+      {% assign header_color_class = ' dark-background' %}
+    {% else %}
+      {% assign header_color_class = ' light-background' %}
+    {% endif %}
   {% else %}
-    {% assign cover_color_class = 'light-background' %}
+    {% assign header_color_class = ' light-background' %}
   {% endif %}
 
-  {% comment %}Sets the "front page" cover image and color values.{% endcomment %}
+  {% comment %}Sets the "front page" header image and color values.{% endcomment %}
   {% if page.data.header_image == nil %}
     {% assign header_image = images_path | append: '/header-bg.jpg' %}
   {% else %}
@@ -19,7 +25,7 @@
     {% assign header_color = page.data.header_color %}
   {% endif %}
 
-  {% comment %}Builds style tag for the background image.{% endcomment %}
+  {% comment %}Builds style tag for the header background image.{% endcomment %}
   {% assign header_image_style = ' style="background-image: ' %}
   {% if header_image == '' %}
     {% assign header_image_style = header_image_style | append: 'none' %}
@@ -28,7 +34,7 @@
   {% endif %}
   {% assign header_image_style = header_image_style | append: ';"' %}
 
-  {% comment %}Builds style tag for the background color.{% endcomment %}
+  {% comment %}Builds style tag for the header background color.{% endcomment %}
   {% assign header_color_style = ' style="background-color: ' %}
   {% if header_color == '' %}
     {% assign header_color_style = header_color_style | append: 'transparent' %}

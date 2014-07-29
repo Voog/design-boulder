@@ -45,6 +45,7 @@
         pageData.set({
           'header_image': data.image || '',
           'header_color': data.color || '',
+          'header_opacity': data.colorData.a || '',
           'header_colorData' : data.colorData || '',
           'header_lightness' : data.colorData && data.colorData != '' && data.colorData.lightness ? data.colorData.lightness : 0
         });
