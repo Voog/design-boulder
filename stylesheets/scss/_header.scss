@@ -16,7 +16,7 @@
   }
 
   .background-color {
-    @include bg($primary-color, 0.8);
+    @include bg($primary-color, 0.16);
   }
 }
 
@@ -76,7 +76,7 @@
   display: table;
   border-collapse: collapse;
   width: 100%;
-  max-width: 1040px;
+  max-width: 1000px;
   height: 544px;
   margin: 0 auto;
   text-align: center;

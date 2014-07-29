@@ -27,10 +27,15 @@
   }
 
   .feature-left,
+  .feature-right,
+  .feature-center {
+    padding: 48px 20px;
+  }
+
+  .feature-left,
   .feature-right {
     width: 500px;
     min-height: 188px;
-    padding: 48px 20px;
 
     .flexbox & {
       @include flexbox;
@@ -50,6 +55,44 @@
     .no-flexbox & {
       display: table-cell;
       vertical-align: middle;
+    }
+  }
+
+  .feature-image-container {
+    float: left;
+
+    &:nth-child(n + 3) {
+      margin-top: 12px;
+    }
+
+    &:nth-child(2n+2) {
+      margin-left: 12px;
+    }
+  }
+
+  .feature-image {
+    width: 224px;
+    height: 224px;
+    background-size: cover;
+
+    .editmode & {
+      outline: 1px dashed rgba($third-color, 0.33);
+    }
+
+    .flexbox & {
+      @include display(flex);
+    }
+
+    .no-flexbox & {
+      display: table;
+    }
+
+    &.active {
+      outline: none;
+    }
+
+    &.over {
+      @include bg($primary-color, 0.3);
     }
   }
 

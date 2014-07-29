@@ -196,16 +196,8 @@
   .menu {
     text-align: right;
 
-    .search-enabled & {
-      background: yellow;
-    }
-
     .multilingual & {
       margin-right: 42px;
-    }
-
-    .search-enabled.multilingual & {
-      background: blue;
     }
 
     .menu-item {

@@ -25,7 +25,7 @@
   }
 
   .main-feature & {
-    padding: 78px 40px;
+    padding: 101px 40px;
   }
 
   .quotation & {
@@ -60,6 +60,31 @@
 
     .map & {
       min-height: 272px;
+    }
+  }
+}
+
+// Image drop area
+.edy-img-drop-area {
+  font-family: 'Avenir Next', 'AvenirX', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+
+  .edy-img-drop-area-placeholder {
+    @include color($primary-color, 0.53);
+
+    .editmode & {
+      margin: 0;
+      padding: 10px;
+      font-size: 18px;
+    }
+
+    .flexbox & {
+      @include align-self(center);
+    }
+
+    .no-flexbox & {
+      display: table-cell;
+      vertical-align: middle;
     }
   }
 }

@@ -15,7 +15,7 @@
   padding: 200px 40px;
 }
 .main-feature .edy-empty-bordered {
-  padding: 78px 40px;
+  padding: 101px 40px;
 }
 .quotation .edy-empty-bordered {
   padding: 26.6% 40px;
@@ -40,4 +40,28 @@
 }
 .map .content-formatted .edy-texteditor-view {
   min-height: 272px;
+}
+
+.edy-img-drop-area {
+  font-family: 'Avenir Next', 'AvenirX', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+}
+.edy-img-drop-area .edy-img-drop-area-placeholder {
+  color: black;
+  color: rgba(0, 0, 0, 0.53);
+}
+.editmode .edy-img-drop-area .edy-img-drop-area-placeholder {
+  margin: 0;
+  padding: 10px;
+  font-size: 18px;
+}
+.flexbox .edy-img-drop-area .edy-img-drop-area-placeholder {
+  -webkit-align-self: center;
+  -moz-align-self: center;
+  align-self: center;
+  -ms-flex-item-align: center;
+}
+.no-flexbox .edy-img-drop-area .edy-img-drop-area-placeholder {
+  display: table-cell;
+  vertical-align: middle;
 }

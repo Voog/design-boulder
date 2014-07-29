@@ -4,9 +4,7 @@
   {% include "html-head" %}
 </head>
 
-<body class="common-page content-page{% if site.search.enabled %} search-enabled{% endif %}{% if editmode or site.has_many_languages? %} multilingual{% endif %}">
-
-
+<body class="common-page content-page{% if editmode or site.has_many_languages? %} multilingual{% endif %}">
   <div class="container">
     {% include "header" %}
     {% include "menu-level-2" %}

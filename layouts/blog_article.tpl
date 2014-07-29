@@ -4,8 +4,7 @@
   {% include "html-head" %}
 </head>
 
-<body class="post-page content-page{% if site.search.enabled %} search-enabled{% endif %}{% if editmode or site.has_many_languages? %} multilingual{% endif %}">
-
+<body class="post-page content-page{% if editmode or site.has_many_languages? %} multilingual{% endif %}">
   <div class="container">
     {% include "header" %}
     {% include "tags-post" %}
