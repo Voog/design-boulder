@@ -58,7 +58,7 @@
   </div>
 
   {% if header == 'content' %}
-    <div class="header-bottom js-header-bottom dark-background">
+    <div class="header-bottom js-header-bottom{{ header_color_class }}">
       {% if editmode %}<button class="bgpicker-btn js-bgpicker-header-settings" data-bg-image="{{ header_image }}" data-bg-color="{{ header_color }}"></button>{% endif %}
       <div class="header-bottom-inner">
         <div class="wrap">
