@@ -1039,13 +1039,6 @@ body.search-open {
 .search-open .header {
   position: static;
 }
-.header .background-image {
-  background-image: url("../images/header-bg.jpg");
-}
-.header .background-color {
-  background-color: black;
-  background-color: rgba(0, 0, 0, 0.16);
-}
 
 .header-top {
   background-color: white;

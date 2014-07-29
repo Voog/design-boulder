@@ -347,6 +347,18 @@
     },
     {
       "content_type": "application/javascript",
+      "file": "javascripts/edicy-tools-custom.js",
+      "kind": "javascripts",
+      "filename": "edicy-tools-custom.js"
+    },
+    {
+      "content_type": "application/javascript",
+      "file": "javascripts/edicy-tools-custom.min.js",
+      "kind": "javascripts",
+      "filename": "edicy-tools-custom.min.js"
+    },
+    {
+      "content_type": "application/javascript",
       "file": "javascripts/modernizr.js",
       "kind": "javascripts",
       "filename": "modernizr.js"

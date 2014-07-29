@@ -19,20 +19,20 @@
                 <div class="feature-inner js-feature-inner content-formatted">
                   <div class="feature-image-container js-feature-image-container">
                     {% if editmode %}
-                      <div class="feature-image js-feature-image-1" data-image="{{ page.data.feature_image_1.url }}" data-dimensions="{{ page.data.feature_image_1.width }},{{ page.data.feature_image_1.height }}" data-position="{{ page.data.feature_image_1.top }},{{ page.data.feature_image_1.left }}"></div>
+                      <div class="feature-image js-feature-image-1" data-image="{{ feature_image_1_url }}" data-dimensions="{{ page.data.feature_image_1.width }},{{ page.data.feature_image_1.height }}" data-position="{{ page.data.feature_image_1.top }},{{ page.data.feature_image_1.left }}"></div>
                     {% else %}
                       {% if has_feature_image_1 == true %}
-                        <div class="feature-image" style="background-image: url('{{ page.data.feature_image_1.url }}'); top: {{ page.data.feature_image_1.top }}px; left: {{ page.data.feature_image_1.left }}px;"></div>
+                        <div class="feature-image" style="background-image: url('{{ feature_image_1_url }}'); top: {{ page.data.feature_image_1.top }}px; left: {{ page.data.feature_image_1.left }}px;"></div>
                       {% endif %}
                     {% endif %}
                   </div>
 
                   <div class="feature-image-container js-feature-image-container">
                     {% if editmode %}
-                      <div class="feature-image js-feature-image-2" data-image="{{ page.data.feature_image_2.url }}" data-dimensions="{{ page.data.feature_image_2.width }},{{ page.data.feature_image_2.height }}" data-position="{{ page.data.feature_image_2.top }},{{ page.data.feature_image_2.left }}"></div>
+                      <div class="feature-image js-feature-image-2" data-image="{{ feature_image_2_url }}" data-dimensions="{{ page.data.feature_image_2.width }},{{ page.data.feature_image_2.height }}" data-position="{{ page.data.feature_image_2.top }},{{ page.data.feature_image_2.left }}"></div>
                     {% else %}
                       {% if has_feature_image_2 == true %}
-                        <div class="feature-image" style="background-image: url('{{ page.data.feature_image_2.url }}'); top: {{ page.data.feature_image_2.top }}px; left: {{ page.data.feature_image_2.left }}px;"></div>
+                        <div class="feature-image" style="background-image: url('{{ feature_image_2_url }}'); top: {{ page.data.feature_image_2.top }}px; left: {{ page.data.feature_image_2.left }}px;"></div>
                       {% endif %}
                     {% endif %}
                   </div>

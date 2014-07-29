@@ -10,14 +10,6 @@
   .search-open & {
     position: static;
   }
-
-  .background-image {
-    background-image: url('../images/header-bg.jpg');
-  }
-
-  .background-color {
-    @include bg($primary-color, 0.16);
-  }
 }
 
 .header-top {
