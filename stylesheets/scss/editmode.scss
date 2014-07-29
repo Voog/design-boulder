@@ -47,6 +47,16 @@
 
 // Text editor
 .content-formatted {
+  .edy-content-element-hover {
+    .dark-background & {
+      @include border(all, 1px, solid, $white, 0.5);
+    }
+
+    .light-background & {
+      @include border(all, 1px, solid, $primary-color, 0.3);
+    }
+  }
+
   .edy-texteditor-view {
     min-height: 25px;
 
@@ -60,6 +70,16 @@
 
     .map & {
       min-height: 272px;
+    }
+  }
+
+  .edy-texteditor-active {
+    .dark-background & {
+      outline: 1px solid rgba($white, 0.8);
+    }
+
+    .light-background & {
+      outline: 1px solid rgba($primary-color, 0.5);
     }
   }
 }

@@ -29,6 +29,14 @@
   color: rgba(255, 255, 255, 0.5);
 }
 
+.dark-background .content-formatted .edy-content-element-hover {
+  border: 1px solid white;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.light-background .content-formatted .edy-content-element-hover {
+  border: 1px solid black;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
 .content-formatted .edy-texteditor-view {
   min-height: 25px;
 }
@@ -40,6 +48,12 @@
 }
 .map .content-formatted .edy-texteditor-view {
   min-height: 272px;
+}
+.dark-background .content-formatted .edy-texteditor-active {
+  outline: 1px solid rgba(255, 255, 255, 0.8);
+}
+.light-background .content-formatted .edy-texteditor-active {
+  outline: 1px solid rgba(0, 0, 0, 0.5);
 }
 
 .edy-img-drop-area {
