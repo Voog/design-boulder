@@ -53,7 +53,7 @@
   <script>
     $('.blog-articles').articlePages({
         nr_articles: {{ articles.size }},
-        // TODO: Needs language based values
+        // TODO: Needs language based values.
         older: "Next",
         newer: "Previous"
     });

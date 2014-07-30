@@ -10423,7 +10423,7 @@ return jQuery;
       if (!this.$pageLinks) {
         var $list = $('<div class="wrap"><ul class="menu"></ul></div>');
 
-        $list.find('.menu').append($('<li class="pagination-previous"><a href="#">'+ this.options.newer +'</a></li>').click($.proxy(function(event) {
+        $list.find('.menu').append($('<li class="menu-item pagination-previous"><a class="menu-link" href="#">'+ this.options.newer +'</a></li>').click($.proxy(function(event) {
           event.preventDefault();
           this.prev();
         }, this)));
@@ -10431,14 +10431,14 @@ return jQuery;
         if (this.options.nr_articles) {
           var pages = Math.ceil(this.options.nr_articles / this.options.perPage);
           for (var i=1; i <= pages; i++) {
-            $list.find('.menu').append($('<li><a class="pagination-nr" href="#" data-page="'+i+'">'+i+'</a></li>').click($.proxy(function(event) {
+            $list.find('.menu').append($('<li class="menu-item"><a class="menu-link pagination-nr" href="#" data-page="'+i+'">'+i+'</a></li>').click($.proxy(function(event) {
               event.preventDefault();
               this.showPage(parseInt($(event.target).data('page'), 10));
             }, this)));
           }
         }
 
-        $list.find('.menu').append($('<li class="pagination-next"><a href="#">'+ this.options.older +'</a></li>').click($.proxy(function(event) {
+        $list.find('.menu').append($('<li class="menu-item pagination-next"><a class="menu-link" href="#">'+ this.options.older +'</a></li>').click($.proxy(function(event) {
           event.preventDefault();
           this.next();
         }, this)));
