@@ -34,7 +34,6 @@
   {% include "javascripts" %}
 
   <script>var langCode = "{{ page.language_code }}";</script>
-  <script src="{{ javascripts_path }}/article-pages.js?1"></script>
   <script type="text/html" id="article-template">
     <article class="post">
       <header class="post-header">
@@ -54,8 +53,8 @@
     $('.blog-articles').articlePages({
         nr_articles: {{ articles.size }},
         // TODO: Needs language based values.
-        older: "Next",
-        newer: "Previous"
+        older: 'Next',
+        newer: 'Previous'
     });
 
     $('.blog-articles').on({

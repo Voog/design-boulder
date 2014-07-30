@@ -472,7 +472,7 @@ $flags:
   text-align: center;
   @include border(all, 1px, solid, $primary-color, 0.1);
 
-  .content {
+  .content & {
     .wrap {
       padding: 0;
     }

@@ -990,7 +990,7 @@ body.search-open {
   border: 1px solid black;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
-.menu-pagination .content .wrap {
+.content .menu-pagination .wrap {
   padding: 0;
 }
 .menu-pagination .menu-item.pagination-previous .menu-link, .menu-pagination .menu-item.pagination-next .menu-link {
