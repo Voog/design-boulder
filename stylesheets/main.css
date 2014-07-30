@@ -1116,11 +1116,6 @@ body.search-open {
   display: table;
 }
 .main-feature .feature-left,
-.main-feature .feature-right,
-.main-feature .feature-center {
-  padding: 48px 20px;
-}
-.main-feature .feature-left,
 .main-feature .feature-right {
   width: 500px;
   min-height: 188px;
@@ -1137,7 +1132,8 @@ body.search-open {
 .main-feature .feature-right {
   display: table;
 }
-.flexbox .main-feature .feature-inner {
+.flexbox .main-feature .feature-left .feature-inner, .flexbox
+.main-feature .feature-right .feature-inner {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
   -moz-box-flex: 1;
@@ -1149,9 +1145,25 @@ body.search-open {
   -ms-flex-item-align: center;
   align-self: center;
 }
-.no-flexbox .main-feature .feature-inner {
+.no-flexbox .main-feature .feature-left .feature-inner, .no-flexbox
+.main-feature .feature-right .feature-inner {
   display: table-cell;
   vertical-align: middle;
+}
+.main-feature .feature-right.hidden {
+  display: none;
+}
+.main-feature .feature-center {
+  width: 100%;
+}
+.main-feature .feature-center .feature-inner {
+  padding: 48px 0;
+}
+.main-feature .feature-inner {
+  padding: 48px 20px;
+}
+.main-feature .feature-inner:empty {
+  display: none;
 }
 .main-feature .feature-image-container {
   float: left;

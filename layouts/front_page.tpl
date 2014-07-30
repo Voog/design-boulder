@@ -15,7 +15,12 @@
           <div class="wrap">
 
             {% if editmode or has_feature_images == true %}
-              <div class="feature-left">
+
+              {% comment %}Set variables to detect if "feature_content_right" area has content{% endcomment %}
+              {% capture feature_content_right_html %}{% unless editmode %}{% content name="feature_content_right" %}{% endunless %}{% endcapture %}
+              {% capture feature_content_right_size %}{{ feature_content_right_html | size | minus : 1 }}{% endcapture %}
+
+              <div class="{% if editmode %}feature-left{% else %}{% unless feature_content_right_size contains '-' %}feature-left{% else %}feature-center{% endunless %}{% endif %}">
                 <div class="feature-inner js-feature-inner content-formatted">
                   <div class="feature-image-container js-feature-image-container">
                     {% if editmode %}
@@ -39,11 +44,8 @@
                 </div>
               </div>
             {% endif %}
-
-            <div class="{% if editmode or has_feature_images == true %}feature-right{% else %}feature-center{% endif %}">
-              <div class="feature-inner content-formatted">
-                {% content name="feature_content_right" %}
-              </div>
+            <div class="{% if editmode or has_feature_images == true %}feature-right{% else %}feature-center{% endif %}{% unless editmode %}{% if feature_content_right_size contains '-' %} hidden{% endif %}{% endunless %}">
+              <div class="feature-inner content-formatted">{% content name="feature_content_right" %}</div>
             </div>
           </div>
         </div>
@@ -61,17 +63,13 @@
             </section>
 
             <section class="quotation">
-              <div class="content-formatted">
-                {% content name="quotation_content" %}
-              </div>
+              <div class="content-formatted">{% content name="quotation_content" %}</div>
             </section>
           </div>
         </div>
 
         <div class="contacts">
-          <section class="wrap content-formatted js-custom-content-formatted">
-            {% content name="contacts_content" %}
-          </section>
+          <div class="wrap content-formatted js-custom-content-formatted">{% content name="contacts_content" %}</div>
         </div>
 
         <div class="map">

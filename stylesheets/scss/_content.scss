@@ -27,12 +27,6 @@
   }
 
   .feature-left,
-  .feature-right,
-  .feature-center {
-    padding: 48px 20px;
-  }
-
-  .feature-left,
   .feature-right {
     width: 500px;
     min-height: 188px;
@@ -44,17 +38,39 @@
     .no-flexbox & {
       display: table;
     }
+
+    .feature-inner  {
+      .flexbox & {
+        @include flex(1);
+        @include align-self(center);
+      }
+
+      .no-flexbox & {
+        display: table-cell;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  .feature-right {
+    &.hidden {
+      display: none;
+    }
+  }
+
+  .feature-center {
+    width: 100%;
+
+    .feature-inner {
+      padding: 48px 0;
+    }
   }
 
   .feature-inner {
-    .flexbox & {
-      @include flex(1);
-      @include align-self(center);
-    }
+    padding: 48px 20px;
 
-    .no-flexbox & {
-      display: table-cell;
-      vertical-align: middle;
+    &:empty {
+      display: none;
     }
   }
 
