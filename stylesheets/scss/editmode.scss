@@ -16,8 +16,8 @@
 // Draggable area for content
 .edy-empty-bordered {
   .dark-background & {
-    @include color($white, 0.33);
-    @include border(all, 1px, dashed, $white, 0.33);
+    @include color($white, 0.5);
+    @include border(all, 1px, dashed, $white, 0.5);
   }
 
   .header-bottom & {
@@ -44,25 +44,36 @@
   }
 }
 
+%editor-border {
+  .dark-background & {
+    @include border(all, 1px, solid, $white, 0.5);
+  }
+
+  .light-background & {
+    @include border(all, 1px, solid, $primary-color, 0.3);
+  }
+}
 
 // Text editor
 .content-formatted {
   .edy-content-element-hover {
-    .dark-background & {
-      @include border(all, 1px, solid, $white, 0.5);
-    }
+    @extend %editor-border;
+  }
 
-    .light-background & {
-      @include border(all, 1px, solid, $primary-color, 0.3);
+  &.header-body-top {
+    .edy-texteditor-view {
+      min-height: 51px;
+    }
+  }
+
+  &.header-body-bottom {
+    .wysihtml5-editor {
+      min-height: 30px;
     }
   }
 
   .edy-texteditor-view {
     min-height: 25px;
-
-    .header-bottom-inner & {
-      min-height: 45px;
-    }
 
     .quotation & {
       min-height: 33px;

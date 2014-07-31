@@ -43,6 +43,19 @@
   {% endif %}
   {% assign header_color_style = header_color_style | append: ';"' %}
 
+  {% comment %}Sets the default values for the header button{% endcomment %}
+  {% if page.data.header_btn == nil %}
+    {% for item in site.menuitems_with_hidden %}
+      {% if forloop.index == 1 %}
+        {% assign header_btn = item.url %}
+        {% assign header_btn = '<a href="' | append: item.url | append: '">View our menu</a>' %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+  {% else %}
+    {% assign header_btn = page.data.header_btn %}
+  {% endif %}
+
   {% comment %}Sets the feature images default values.{% endcomment %}
   {% if page.data.feature_image_1.url == nil %}
     {% assign feature_image_1_url = images_path | append: '/feature-image-1.jpg' %}

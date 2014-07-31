@@ -5,30 +5,52 @@
   @extend %clearfix;
   word-break: break-word;
 
-  .header-bottom-inner & {
-    font-style: italic;
-    line-height: 1.5;
-
-    .dark-background & {
-      @include color($white);
-    }
-
-    &.header-body {
-      font-size: 30px;
-    }
-  }
-
   .quotation & {
     width: 100%;
     @include align-self(center);
   }
 
+  .header-bottom-inner & {
+    margin-top: 40px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  &.header-body-top {
+    font-size: 30px;
+    font-style: italic;
+  }
+
+  &.header-body-bottom {
+    min-width: 200px;
+    a {
+      display: block;
+      padding: 20px 45px;
+      text-decoration: none;
+      @include color($white);
+      @include bg($secondary-color);
+
+      &:hover {
+        @include bg($secondary-color, 0.8);
+      }
+    }
+  }
+
   // Resets the bottom margin for all elements and top margin for all first elements in the editable content-area (to prevent unwanted white-space at the beginning of a content-area).
-  h1, h2, h3, h4, h5, h6, p, ul, ol, pre, code, img, table, form {
+  h1, h2, h3, h4, h5, h6, p, ul, ol, pre, code, img, iframe, table, form {
     margin-bottom: 0;
 
     &:first-child {
       margin-top: 0;
+    }
+  }
+
+  // Styling rules for the editable content area headings and paragraphs.
+  &, h1, h2, h3, h4, h5, h6, p, ul, ol, pre, code, table {
+    .dark-background & {
+      @include color($white);
     }
   }
 

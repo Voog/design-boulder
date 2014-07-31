@@ -7,9 +7,9 @@
 
 .dark-background .edy-empty-bordered {
   color: white;
-  color: rgba(255, 255, 255, 0.33);
+  color: rgba(255, 255, 255, 0.5);
   border: 1px dashed white;
-  border: 1px dashed rgba(255, 255, 255, 0.33);
+  border: 1px dashed rgba(255, 255, 255, 0.5);
 }
 .header-bottom .edy-empty-bordered {
   padding: 200px 40px;
@@ -29,19 +29,23 @@
   color: rgba(255, 255, 255, 0.5);
 }
 
-.dark-background .content-formatted .edy-content-element-hover {
+.dark-background .content-formatted .edy-content-element-hover, .content-formatted .dark-background .edy-content-element-hover {
   border: 1px solid white;
   border: 1px solid rgba(255, 255, 255, 0.5);
 }
-.light-background .content-formatted .edy-content-element-hover {
+.light-background .content-formatted .edy-content-element-hover, .content-formatted .light-background .edy-content-element-hover {
   border: 1px solid black;
   border: 1px solid rgba(0, 0, 0, 0.3);
 }
+
+.content-formatted.header-body-top .edy-texteditor-view {
+  min-height: 51px;
+}
+.content-formatted.header-body-bottom .wysihtml5-editor {
+  min-height: 30px;
+}
 .content-formatted .edy-texteditor-view {
   min-height: 25px;
-}
-.header-bottom-inner .content-formatted .edy-texteditor-view {
-  min-height: 45px;
 }
 .quotation .content-formatted .edy-texteditor-view {
   min-height: 33px;

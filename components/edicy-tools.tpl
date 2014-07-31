@@ -93,13 +93,25 @@
     });
 
     var featureImage2 = new Edicy.ImgDropArea($('.js-feature-image-2'), {
-      positionable: true,
+        positionable: true,
 
       change: function(data) {
         pageData.set({
           'feature_image_2': data
         });
       }
+    });
+
+
+
+    // Header button data logic
+    var headerBtn = new Edicy.TextEditorView({el: $('.js-header-body-bottom-inner')});
+    headerBtn.on('change', function() {
+      headerBtnContent = $('.js-header-body-bottom-inner').html();
+      console.log(headerBtnContent);
+      pageData.set({
+        'header_btn': headerBtnContent
+      });
     });
   </script>
 {% endeditorjsblock %}

@@ -60,10 +60,25 @@
   {% if header == 'content' %}
     <div class="header-bottom js-header-bottom{{ header_color_class }}">
       {% if editmode %}<button class="bgpicker-btn js-bgpicker-header-settings" data-bg-image="{{ header_image }}" data-bg-color="{{ header_color }}"></button>{% endif %}
+
       <div class="header-bottom-inner">
         <div class="wrap">
-            <section class="header-body content-formatted">{% content name="header_content" %}</section>
-            <button class="btn content-formatted">View our menu</button>
+            {% comment %}Set variables to detect if "header-body-top" area has content{% endcomment %}
+            {% capture header_body_top_html %}{% unless editmode %}{% content name="header_content_top" %}{% endunless %}{% endcapture %}
+            {% capture header_body_top_size %}{{ header_body_top_html | size | minus : 1 }}{% endcapture %}
+            {% if editmode %}
+              <div class="header-body-top content-formatted">{% content name="header_content_top" %}</div>
+            {% else %}
+              {% unless header_body_top_size contains '-' %}
+                <div class="header-body-top content-formatted">{% content name="header_content_top" %}</div>
+              {% endunless %}
+            {% endif %}
+
+            {% if editmode or header_btn != '' %}
+              <div class="header-body-bottom content-formatted custom-content-formatted">
+                <div class="header-body-bottom-inner js-header-body-bottom-inner">{{ header_btn }}</div>
+              </div>
+            {% endif %}
         </div>
       </div>
     </div>

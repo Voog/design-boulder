@@ -103,62 +103,31 @@ body {
   25% {
     @include transform(
       translateX(42px) rotate(-90deg) scale(0.5)
-    );
+      );
   }
 
   50% {
     @include transform(
       translateX(42px) translateY(42px) rotate(-180deg)
-    );
+      );
   }
 
   75% {
     @include transform(
       translateX(0px) translateY(42px) rotate(-270deg) scale(0.5)
-    );
+      );
   }
 
   100% {
     @include transform(
       rotate(-360deg)
-    );
-  }
-}
-
-.btn {
-  margin: 0;
-  padding: 15px 40px;
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 24px;
-  @include color($white);
-  @include bg($secondary-color);
-  border: none;
-  cursor: pointer;
-
-  &:hover {
-    @include bg($secondary-color,.8);
-  }
-
-  &:focus {
-    outline: none;
-  }
-
-  &::-moz-focus-inner {
-    padding: 0;
-    border: 0;
+      );
   }
 }
 
 .bgpicker-btn {
+  @extend %button;
   position: absolute;
-  background: none;
-  border: none;
-  cursor: pointer;
-
-  &:focus {
-    outline: none;
-  }
 }
 
 .background-image,
