@@ -1675,7 +1675,7 @@ body.search-open {
 .content-formatted .form_field_select {
   width: 200px;
   margin: 0;
-  padding: 10px;
+  padding: 5px 10px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -1683,7 +1683,7 @@ body.search-open {
 .content-formatted .form_field_select {
   text-indent: 0.01px;
   text-overflow: '';
-  background-position: 96% 21px;
+  background-position: top 16px right 10px;
   background-repeat: no-repeat;
   cursor: pointer;
 }
@@ -1865,6 +1865,7 @@ body.search-open {
 }
 .comment_form_textfield_wrap .form_field_textfield {
   width: 290px;
+  padding: 10px;
 }
 @media screen and (max-width: 660px) {
   .comment_form_textfield_wrap {

@@ -67,6 +67,7 @@
 
   .form_field_textfield {
     width: 290px;
+    padding: 10px;
   }
 
   @include query($tablet-5) {
