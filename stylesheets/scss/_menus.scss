@@ -122,16 +122,10 @@
       .menu-item {
         margin-left: 0;
         @include border(bottom, 1px, solid, $primary-color, 0.1);
-
-        &:first-child {
-          .menu-link {
-            font-weight: 700;
-          }
-        }
       }
 
       .menu-link {
-        padding: 6px 15px 5px;
+        padding: 5px 15px 4px;
 
         &.active,
         &.active:hover,
@@ -350,20 +344,22 @@
     }
 
     .menu-link {
-      padding: 10px 15px 9px 44px;
       font-weight: 400;
       font-size: 14px;
       @include color($primary-color, 0.73);
 
+      .menu-main.expanded & {
+        padding: 8px 15px 8px 44px;
+      }
+
       &:before,
       &:after {
-        top: 14px;
+        top: 13px;
         left: 15px;
       }
 
       &.active,
       &.active:hover {
-        font-weight: 600;
         @include color($primary-color, 0.8);
         background: none;
       }

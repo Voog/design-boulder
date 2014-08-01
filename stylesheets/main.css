@@ -593,11 +593,8 @@ body.search-open {
     border-bottom: 1px solid black;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
-  .menu-main.expanded .menu-item:first-child .menu-link {
-    font-weight: 700;
-  }
   .menu-main.expanded .menu-link {
-    padding: 6px 15px 5px;
+    padding: 5px 15px 4px;
   }
   .menu-main.expanded .menu-link.active, .menu-main.expanded .menu-link.active:hover, .menu-main.expanded .menu-link:hover {
     border: none;
@@ -786,18 +783,19 @@ body.search-open {
     border-top: none;
   }
   .menu-lang .menu-link {
-    padding: 10px 15px 9px 44px;
     font-weight: 400;
     font-size: 14px;
     color: black;
     color: rgba(0, 0, 0, 0.73);
   }
+  .menu-main.expanded .menu-lang .menu-link {
+    padding: 8px 15px 8px 44px;
+  }
   .menu-lang .menu-link:before, .menu-lang .menu-link:after {
-    top: 14px;
+    top: 13px;
     left: 15px;
   }
   .menu-lang .menu-link.active, .menu-lang .menu-link.active:hover {
-    font-weight: 600;
     color: black;
     color: rgba(0, 0, 0, 0.8);
     background: none;
@@ -1485,7 +1483,6 @@ body.search-open {
   outline: none;
 }
 
-.search-submit,
 .search-btn {
   display: inline-block;
   vertical-align: top;
@@ -1497,12 +1494,11 @@ body.search-open {
   border: none;
   cursor: pointer;
 }
-.search-submit:hover,
 .search-btn:hover {
   opacity: 0.6;
 }
-.no-svg .search-submit, .no-svg
-.search-btn {
+.no-svg .search-btn {
+  background-size: 36px;
   background-image: url("../images/ico-search.png");
 }
 

@@ -63,7 +63,6 @@
   }
 }
 
-.search-submit,
 .search-btn {
   display: inline-block;
   vertical-align: top;
@@ -80,6 +79,7 @@
   }
 
   .no-svg & {
+    background-size: 36px;
     background-image: url("../images/ico-search.png");
   }
 }
