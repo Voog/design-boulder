@@ -73,6 +73,8 @@
   font-weight: 500;
 }
 .edy-img-drop-area .edy-img-drop-area-placeholder {
+  display: table-cell;
+  vertical-align: middle;
   color: black;
   color: rgba(0, 0, 0, 0.53);
 }
@@ -80,14 +82,4 @@
   margin: 0;
   padding: 10px;
   font-size: 18px;
-}
-.flexbox .edy-img-drop-area .edy-img-drop-area-placeholder {
-  -webkit-align-self: center;
-  -moz-align-self: center;
-  align-self: center;
-  -ms-flex-item-align: center;
-}
-.no-flexbox .edy-img-drop-area .edy-img-drop-area-placeholder {
-  display: table-cell;
-  vertical-align: middle;
 }

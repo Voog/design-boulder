@@ -115,21 +115,14 @@
   font-weight: 500;
 
   .edy-img-drop-area-placeholder {
+    display: table-cell;
+    vertical-align: middle;
     @include color($primary-color, 0.53);
 
     .editmode & {
       margin: 0;
       padding: 10px;
       font-size: 18px;
-    }
-
-    .flexbox & {
-      @include align-self(center);
-    }
-
-    .no-flexbox & {
-      display: table-cell;
-      vertical-align: middle;
     }
   }
 }

@@ -13,133 +13,67 @@
   }
 }
 
-.main-feature {
+.main-feature,
+.summary {
   .wrap {
+    @extend %clearfix;
     padding: 0 20px;
-
-    .flexbox & {
-      @include flexbox;
-    }
-
-    .no-flexbox & {
-      display: table;
-    }
   }
+}
 
+.main-feature {
   .feature-left,
   .feature-right {
-    width: 500px;
-    min-height: 188px;
+    float: left;
+    width: 100%;
+  }
 
-    .flexbox & {
-      @include flexbox;
-    }
-
-    .no-flexbox & {
-      display: table;
-    }
-
-    .feature-inner  {
-      .flexbox & {
-        @include flex(1);
-        @include align-self(center);
-      }
-
-      .no-flexbox & {
-        display: table-cell;
-        vertical-align: middle;
-      }
-    }
+  .feature-left {
+    max-width: 468px;
+    padding: 48px 20px;
   }
 
   .feature-right {
-    &.hidden {
-      display: none;
-    }
-  }
-
-  .feature-center {
-    width: 100%;
-
-    .feature-inner {
-      padding: 48px 0;
-    }
-  }
-
-  .feature-inner {
-    padding: 48px 20px;
-
-    &:empty {
-      display: none;
-    }
+    max-width: 442px;
+    padding: 48px 0 48px 50px;
   }
 
   .feature-image-container {
+    position: relative;
+    overflow: hidden;
     float: left;
+    width: 100%;
+    max-width: 224px;
 
     &:nth-child(n + 3) {
-      margin-top: 12px;
+      margin-top: 20px;
     }
 
     &:nth-child(2n+2) {
-      margin-left: 12px;
+      margin-left: 20px;
+    }
+
+    &:after {
+      display: block;
+      padding-top: 100%;
+      content: '';
     }
   }
 
   .feature-image {
-    width: 224px;
-    height: 224px;
+    @extend %stretch;
+    position: absolute;
     background-size: cover;
 
     .editmode & {
-      outline: 1px dashed rgba($third-color, 0.33);
-    }
-
-    .flexbox & {
-      @include display(flex);
-    }
-
-    .no-flexbox & {
       display: table;
+      width: 224px;
+      height: 224px;
+      outline: 1px dashed rgba($third-color, 0.33);
     }
 
     &.active {
       outline: none;
-    }
-
-    &.over {
-      @include bg($primary-color, 0.3);
-    }
-  }
-
-  @include query($tablet-2) {
-    .flexbox &,
-    .no-flexbox & {
-      .wrap,
-      .feature-left,
-      .feature-right {
-        display: block;
-        min-height: 0;
-      }
-
-      .wrap {
-        text-align: center;
-      }
-
-      .feature-left,
-      .feature-right {
-        width: auto;
-        padding: 40px 20px;
-        text-align: center;
-      }
-
-      .feature-left {
-        padding: 30px 20px 15px;
-      }
-
-      .feature-right {
-        padding: 15px 20px 30px;
-      }
     }
   }
 }
@@ -147,66 +81,88 @@
 .summary {
   @include bg($secondary-color);
 
-  .wrap {
+  .blog,
+  .quotation {
+    float: left;
     padding: 0 20px;
-
-    .flexbox & {
-      @include flexbox;
-    }
-
-    .no-flexbox & {
-      display: table;
-    }
   }
 
   .blog {
-    width: 498px;
-    padding: 43px 40px 43px 20px;
-    @include border(right, 5px, solid, $white);
+    max-width: 468px;
+    padding: 48px 20px;
   }
 
   .quotation {
-    width: 502px;
-    padding: 43px 20px 43px 40px;
-    font-size: 24px;
-    @include color($white);
-
-    .flexbox & {
-      @include flexbox;
-      @include align-content(center);
-      @include justify-content(center);
-    }
-
-    .no-flexbox & {
-      display: table;
-    }
-  }
-
-  @include query($tablet-2) {
-    .flexbox &,
-    .no-flexbox & {
-      .wrap,
-      .quotation {
-        display: block;
-      }
-
-      .blog,
-      .quotation {
-        width: auto;
-      }
-
-      .blog {
-        padding: 30px 0 15px;
-        border-right: none;
-        @include border(bottom, 5px, solid, $white);
-      }
-
-      .quotation {
-        padding: 15px 0 30px;
-      }
-    }
+    max-width: 442px;
+    padding: 48px 0 48px 50px;
   }
 }
+
+
+
+// .summary {
+//   @include bg($secondary-color);
+
+//   .wrap {
+//     padding: 0 20px;
+
+//     .flexbox & {
+//       @include flexbox;
+//     }
+
+//     .no-flexbox & {
+//       display: table;
+//     }
+//   }
+
+//   .blog {
+//     width: 498px;
+//     padding: 43px 40px 43px 20px;
+//     @include border(right, 5px, solid, $white);
+//   }
+
+//   .quotation {
+//     width: 502px;
+//     padding: 43px 20px 43px 40px;
+//     font-size: 24px;
+//     @include color($white);
+
+//     .flexbox & {
+//       @include flexbox;
+//       @include align-content(center);
+//       @include justify-content(center);
+//     }
+
+//     .no-flexbox & {
+//       display: table;
+//     }
+//   }
+
+//   @include query($tablet-2) {
+//     .flexbox &,
+//     .no-flexbox & {
+//       .wrap,
+//       .quotation {
+//         display: block;
+//       }
+
+//       .blog,
+//       .quotation {
+//         width: auto;
+//       }
+
+//       .blog {
+//         padding: 30px 0 15px;
+//         border-right: none;
+//         @include border(bottom, 5px, solid, $white);
+//       }
+
+//       .quotation {
+//         padding: 15px 0 30px;
+//       }
+//     }
+//   }
+// }
 
 .contacts {
   text-align: center;
