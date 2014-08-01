@@ -311,6 +311,12 @@
     },
     {
       "content_type": "image/png",
+      "file": "images/ico-flags-small.png",
+      "kind": "images",
+      "filename": "ico-flags-small.png"
+    },
+    {
+      "content_type": "image/png",
       "file": "images/ico-flags.png",
       "kind": "images",
       "filename": "ico-flags.png"
@@ -392,6 +398,18 @@
       "file": "stylesheets/editmode.min.css",
       "kind": "stylesheets",
       "filename": "editmode.min.css"
+    },
+    {
+      "content_type": "text/css",
+      "file": "stylesheets/ie8.css",
+      "kind": "stylesheets",
+      "filename": "ie8.css"
+    },
+    {
+      "content_type": "text/css",
+      "file": "stylesheets/ie8.min.css",
+      "kind": "stylesheets",
+      "filename": "ie8.min.css"
     },
     {
       "content_type": "text/css",

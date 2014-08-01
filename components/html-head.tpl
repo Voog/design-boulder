@@ -20,6 +20,7 @@
 <!-- STYLESHEETS -->
 {% stylesheet_link "main.min.css" %}
 {% if editmode %}{% stylesheet_link "editmode.min.css" %}{% endif %}
+<!--[if lt IE 9]>{% stylesheet_link "ie8.min.css" %}<![endif]-->
 
 {% comment %}<!-- SITE TITLE -->{% endcomment %}
 {% capture page_title %}{% if article %}{{ article.title }} — {{ page.site_title }}{% else %}{% if site.root_item.selected? %}{{ page.site_title }}{% else %}{{ page.title }} — {{ page.site_title }}{% endif %}{% endif %}{% endcapture %}
