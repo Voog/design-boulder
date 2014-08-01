@@ -257,15 +257,17 @@ body.search-open {
   margin-top: 0;
 }
 .content-formatted.header-body-top {
-  font-size: 30px;
+  line-height: 1.5;
   font-style: italic;
+  font-size: 30px;
 }
 .content-formatted.header-body-bottom {
   min-width: 200px;
+  font-size: 24px;
 }
 .content-formatted.header-body-bottom a {
   display: inline-block;
-  padding: 20px 45px;
+  padding: 10px 40px;
   text-decoration: none;
   color: white;
   background-color: #e4ac00;
@@ -1059,8 +1061,7 @@ body.search-open {
   display: table;
   border-collapse: collapse;
   width: 100%;
-  max-width: 780px;
-  height: 544px;
+  max-width: 900px;
   margin: 0 auto;
   text-align: center;
 }
@@ -1068,7 +1069,7 @@ body.search-open {
   display: table-cell;
   vertical-align: middle;
   padding: 60px 20px;
-  height: 542px;
+  height: 422px;
 }
 .header-bottom-inner .btn {
   display: inline-block;
