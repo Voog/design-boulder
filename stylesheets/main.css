@@ -1435,11 +1435,11 @@ body.search-open {
   line-height: 1;
   background-color: white;
 }
-@media screen and (max-width: 816px) {
+@media screen and (max-width: 900px) {
   .search {
     position: absolute;
-    top: 30px;
-    right: 60px;
+    right: 53px;
+    top: 24px;
   }
 }
 @media screen and (max-width: 640px) {
@@ -1604,21 +1604,20 @@ body.search-open {
 .voog-search-modal {
   position: absolute;
   top: 50px;
-  left: -200px;
-  right: -58px;
+  left: -217px;
+  right: -41px;
   z-index: 999;
 }
 @media screen and (max-width: 1040px) {
   .voog-search-modal {
-    left: -220px;
-    right: -38px;
+    left: -225px;
+    right: -33px;
   }
 }
 @media screen and (max-width: 640px) {
   .voog-search-modal {
     top: 120px;
     left: 0;
-    right: 0;
     bottom: 0;
     background-color: white;
   }

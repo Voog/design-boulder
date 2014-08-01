@@ -15,10 +15,14 @@
   line-height: 1;
   @include bg($white);
 
-  @include query($tablet-3) {
+  @include query($tablet-2) {
     position: absolute;
-    top: 30px;
-    right: 60px;
+    right: 53px;
+    top: 24px;
+  }
+
+  @include query($tablet-3) {
+
   }
 
   @include query($mobile-1) {
@@ -189,19 +193,18 @@
 .voog-search-modal {
   position: absolute;
   top: 50px;
-  left: -200px;
-  right: -58px;
+  left: -217px;
+  right: -41px;
   z-index: 999;
 
   @include query($tablet-1) {
-    left: -220px;
-    right: -38px;
+    left: -225px;
+    right: -33px;
   }
 
   @include query($mobile-1) {
     top: 120px;
     left: 0;
-    right: 0;
     bottom: 0;
     @include bg($white);
   }
