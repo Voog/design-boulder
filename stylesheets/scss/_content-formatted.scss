@@ -25,8 +25,9 @@
 
   &.header-body-bottom {
     min-width: 200px;
+
     a {
-      display: block;
+      display: inline-block;
       padding: 20px 45px;
       text-decoration: none;
       @include color($white);
