@@ -44,6 +44,14 @@
 
   .feature-right {
     @extend %front-page-content-right;
+
+    &.hidden {
+      display: none;
+    }
+  }
+
+  .feature-center {
+    padding: 48px 20px;
   }
 
   .feature-image-container {

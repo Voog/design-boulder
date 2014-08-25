@@ -1114,6 +1114,12 @@ body.search-open {
   float: left;
   width: 100%;
 }
+.main-feature .feature-right.hidden {
+  display: none;
+}
+.main-feature .feature-center {
+  padding: 48px 20px;
+}
 .main-feature .feature-image-container {
   position: relative;
   float: left;
