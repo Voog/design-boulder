@@ -1116,7 +1116,6 @@ body.search-open {
 }
 .main-feature .feature-image-container {
   position: relative;
-  overflow: hidden;
   float: left;
   width: 100%;
   max-width: 224px;
@@ -1131,6 +1130,9 @@ body.search-open {
   display: block;
   padding-top: 100%;
   content: '';
+}
+.public .main-feature .feature-image-container {
+  overflow: hidden;
 }
 .main-feature .feature-image {
   position: absolute;

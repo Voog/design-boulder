@@ -48,7 +48,6 @@
 
   .feature-image-container {
     position: relative;
-    overflow: hidden;
     float: left;
     width: 100%;
     max-width: 224px;
@@ -65,6 +64,10 @@
       display: block;
       padding-top: 100%;
       content: '';
+    }
+
+    .public & {
+      overflow: hidden;
     }
   }
 
