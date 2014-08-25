@@ -155,7 +155,7 @@
     }
   }
 
-  @include query($mobile-3) {
+  @include query($mobile-4) {
     &.expanded {
       top: 79px;
       left: 0;

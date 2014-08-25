@@ -109,6 +109,26 @@
       text-align: center;
     }
   }
+
+  @include query($mobile-2) {
+    .feature-left,
+    .feature-right {
+      padding: 20px 0;
+    }
+
+    .feature-image-container {
+      max-width: 100%;
+
+      &:nth-child(n + 3),
+      &:nth-child(2n+2) {
+        margin-top: 20px;
+      }
+
+      &:nth-child(2n+2) {
+        margin-left: 0;
+      }
+    }
+  }
 }
 
 .summary {
@@ -140,10 +160,17 @@
       text-align: center;
     }
   }
+
+  @include query($mobile-2) {
+    .blog,
+    .quotation {
+      padding: 20px 0;
+    }
+  }
 }
 
 
-
+/* TODO: Remove if not needed. */
 // .summary {
 //   @include bg($secondary-color);
 

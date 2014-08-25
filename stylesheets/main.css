@@ -1162,6 +1162,21 @@ body.search-open {
     text-align: center;
   }
 }
+@media screen and (max-width: 507px) {
+  .main-feature .feature-left,
+  .main-feature .feature-right {
+    padding: 20px 0;
+  }
+  .main-feature .feature-image-container {
+    max-width: 100%;
+  }
+  .main-feature .feature-image-container:nth-child(n + 3), .main-feature .feature-image-container:nth-child(2n+2) {
+    margin-top: 20px;
+  }
+  .main-feature .feature-image-container:nth-child(2n+2) {
+    margin-left: 0;
+  }
+}
 
 .summary {
   background-color: #e4ac00;
@@ -1182,7 +1197,14 @@ body.search-open {
     text-align: center;
   }
 }
+@media screen and (max-width: 507px) {
+  .summary .blog,
+  .summary .quotation {
+    padding: 20px 0;
+  }
+}
 
+/* TODO: Remove if not needed. */
 .contacts {
   text-align: center;
 }
