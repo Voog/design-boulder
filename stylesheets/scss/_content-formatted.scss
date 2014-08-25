@@ -311,14 +311,15 @@
     }
   }
 
-  @include query($tablet-2) {
-    .feature-left &,
-    .feature-right & {
-      h2 {
-        text-align: center;
-      }
-    }
-  }
+  /* TODO: Remove if not needed. */
+  // @include query($tablet-2) {
+  //   .feature-left &,
+  //   .feature-right & {
+  //     h2 {
+  //       text-align: center;
+  //     }
+  //   }
+  // }
 
   @include query($tablet-4) {
     table {

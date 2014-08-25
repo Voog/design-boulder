@@ -243,6 +243,7 @@ body.search-open {
 
 .content-formatted {
   word-break: break-word;
+  /* TODO: Remove if not needed. */
 }
 .quotation .content-formatted {
   width: 100%;
@@ -466,11 +467,6 @@ body.search-open {
   color: white;
   color: rgba(255, 255, 255, 0.5);
   border: none;
-}
-@media screen and (max-width: 900px) {
-  .feature-left .content-formatted h2, .feature-right .content-formatted h2 {
-    text-align: center;
-  }
 }
 @media screen and (max-width: 707px) {
   .contacts .content-formatted table, .contacts .content-formatted table tr td {
