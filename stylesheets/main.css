@@ -525,11 +525,6 @@ body.search-open {
   vertical-align: middle;
 }
 
-.menu-link.untranslated {
-  color: black;
-  color: rgba(0, 0, 0, 0.33);
-}
-
 @media screen and (max-width: 900px) {
   .edit-btn {
     display: block;
@@ -537,6 +532,12 @@ body.search-open {
     border-bottom: 1px solid black;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
+}
+
+.menu-main .menu-link.untranslated,
+.menu-sub .menu-link.untranslated {
+  color: black;
+  color: rgba(0, 0, 0, 0.33);
 }
 
 .menu-main {

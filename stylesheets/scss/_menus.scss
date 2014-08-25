@@ -45,17 +45,20 @@
   vertical-align: middle;
 }
 
-.menu-link {
-  &.untranslated {
-    @include color($primary-color, 0.33);
-  }
-}
-
 .edit-btn {
   @include query($tablet-2) {
     display: block;
     padding: 5px 15px 6px;
     @include border(bottom, 1px, solid, $primary-color, 0.1);
+  }
+}
+
+.menu-main,
+.menu-sub {
+  .menu-link {
+    &.untranslated {
+      @include color($primary-color, 0.33);
+    }
   }
 }
 
