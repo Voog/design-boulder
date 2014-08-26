@@ -10,7 +10,9 @@
     <div class="wrap">
       <div class="header-left">
         <div class="header-title">{% unless editmode %}<a href="{{ site.root_item.url }}">{% endunless %}{% editable site.header %}{% unless editmode %}</a>{% endunless %}</div>
+      </div>
 
+      <div class="header-right">
         {% if site.search.enabled %}
           <button class="search-btn search-close-btn js-search-close-btn">
             <svg width="20px" height="20px" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -30,9 +32,7 @@
           <span class="menu-stripe"></span>
           <span class="menu-stripe"></span>
         </button>
-      </div>
 
-      <div class="header-right">
         <nav class="menu-main js-menu-main js-popover">
           {% include "menu-level-1" %}
           {% if editmode or site.has_many_languages? %}

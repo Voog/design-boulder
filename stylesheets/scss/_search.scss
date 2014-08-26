@@ -46,6 +46,12 @@
     @include border(all, 1px, solid, $primary-color, 0.3);
   }
 
+  .search-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
   @include query($mobile-1) {
     position: absolute;
     top: 80px;
@@ -68,18 +74,35 @@
 }
 
 .search-btn {
+  position: relative;
+  top: 4px;
+  right: -5px;
+  @extend %button;
   display: inline-block;
-  vertical-align: top;
+  vertical-align: middle;
   width: 30px;
   height: $search-height-1;
-  padding: 0;
   background-position: center;
   background-repeat: no-repeat;
-  border: none;
-  cursor: pointer;
 
   &:hover {
     opacity: 0.6;
+  }
+
+  svg {
+    vertical-align: middle;
+
+    .search-open-btn &,
+    .search-close-btn & {
+      width: 20px;
+      height: 20px;
+    }
+
+    .search-submit & {
+      width: 16px;
+      height: 16px;
+    }
+    fill: rgba($secondary-color, 0.67);
   }
 
   .no-svg & {
@@ -125,28 +148,6 @@
   }
 }
 
-.search-btn {
-  @extend %button;
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 1px 0 0 1px;
-
-  svg {
-    .search-open-btn &,
-    .search-close-btn & {
-      width: 20px;
-      height: 20px;
-    }
-
-    .search-submit & {
-      width: 16px;
-      height: 16px;
-    }
-    fill: rgba($secondary-color, 0.67);
-  }
-}
-
 .search-submit {
   @include opacity(0.33);
 
@@ -159,19 +160,12 @@
 .search-open-btn,
 .search-close-btn {
   display: none;
-
-  @include query($mobile-1) {
-    position: absolute;
-    top: 5px;
-    right: 0;
-    z-index: 40;
-    margin-right: 30px;
-  }
 }
 
 .search-open-btn {
   @include query($mobile-1) {
-    display: block;
+    display: inline-block;
+    vertical-align: middle;
 
     &.open {
       display: none;
@@ -204,6 +198,7 @@
   @include query($mobile-1) {
     top: 120px;
     left: 0;
+    right: 0;
     bottom: 0;
     @include bg($white);
   }
