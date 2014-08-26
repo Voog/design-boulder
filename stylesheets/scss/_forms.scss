@@ -225,4 +225,13 @@
   .form_notice {
     @include color($green);
   }
+
+  @include query($mobile-4) {
+    .form_field_textfield,
+    .form_field_textarea,
+    .form_field_select,
+    .form_submit input {
+      width: 100%;
+    }
+  }
 }

@@ -242,7 +242,13 @@ body.search-open {
 }
 
 .content-formatted {
+  -ms-word-break: break-all;
+  word-break: break-all;
   word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
   /* TODO: Remove if not needed. */
 }
 .quotation .content-formatted {
@@ -1858,6 +1864,14 @@ body.search-open {
 .content-formatted .form_notice {
   color: #60a740;
 }
+@media screen and (max-width: 480px) {
+  .content-formatted .form_field_textfield,
+  .content-formatted .form_field_textarea,
+  .content-formatted .form_field_select,
+  .content-formatted .form_submit input {
+    width: 100%;
+  }
+}
 
 /* COMMENTS */
 .comments {
@@ -1907,6 +1921,12 @@ body.search-open {
 .comment_form_textarea_wrap {
   margin-top: 0;
 }
+@media screen and (max-width: 660px) {
+  .content-formatted .comment_form_textfield_wrap, .content-formatted
+  .comment_form_textarea_wrap {
+    padding-top: 20px;
+  }
+}
 
 .comment_form_textfield_wrap {
   float: left;
@@ -1922,10 +1942,12 @@ body.search-open {
 @media screen and (max-width: 660px) {
   .comment_form_textfield_wrap {
     display: block;
+    float: none;
     max-width: none;
   }
   .comment_form_textfield_wrap:first-child {
     margin-right: 0;
+    padding-top: 0;
   }
   .comment_form_textfield_wrap .form_field_textfield {
     width: 100%;

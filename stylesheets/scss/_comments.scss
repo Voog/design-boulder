@@ -55,6 +55,12 @@
   .content-formatted & {
     margin-top: 0;
   }
+
+  @include query($tablet-5) {
+    .content-formatted & {
+      padding-top: 20px;
+    }
+  }
 }
 
 .comment_form_textfield_wrap {
@@ -72,10 +78,12 @@
 
   @include query($tablet-5) {
     display: block;
+    float: none;
     max-width: none;
 
     &:first-child {
       margin-right: 0;
+      padding-top: 0;
     }
 
     .form_field_textfield {
