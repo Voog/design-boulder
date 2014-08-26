@@ -16,13 +16,9 @@
   @include bg($white);
 
   @include query($tablet-2) {
-    position: absolute;
-    right: 53px;
-    top: 24px;
   }
 
   @include query($tablet-3) {
-
   }
 
   @include query($mobile-1) {
@@ -185,14 +181,14 @@
 
 .voog-search-modal {
   position: absolute;
-  top: 50px;
+  top: 37px;
   left: -217px;
   right: -41px;
   z-index: 999;
 
   @include query($tablet-1) {
-    left: -225px;
-    right: -33px;
+    left: -223px;
+    right: -35px;
   }
 
   @include query($mobile-1) {

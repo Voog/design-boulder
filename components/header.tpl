@@ -27,12 +27,6 @@
           </button>
         {% endif %}
 
-        <button class="menu-btn js-menu-btn">
-          <span class="menu-stripe"></span>
-          <span class="menu-stripe"></span>
-          <span class="menu-stripe"></span>
-        </button>
-
         <nav class="menu-main js-menu-main js-popover">
           {% include "menu-level-1" %}
           {% if editmode or site.has_many_languages? %}
@@ -43,6 +37,12 @@
         </nav>
 
         {% include "search" %}
+
+        <button class="menu-btn js-menu-btn">
+          <span class="menu-stripe"></span>
+          <span class="menu-stripe"></span>
+          <span class="menu-stripe"></span>
+        </button>
 
         {% if editmode or site.has_many_languages? %}
           <nav class="menu-lang">

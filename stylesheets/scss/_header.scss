@@ -23,33 +23,40 @@
   .wrap {
     @extend %clearfix;
     @extend %wide-wrap;
-    @include display(flex);
     padding: 20px;
   }
 }
 
 .header-left {
-   @include flex(1);
-   // background: #ddd;
+  @extend %header-footer-left;
 }
 
 .header-right {
-  display: inline-block;
-   // background: #ccc;
+  @extend %header-footer-right;
 }
 
 @include query($tablet-2) {
+  .wrap {
+    @include display(flex);
+  }
+
   .header-left,
   .header-right {
     float: none;
   }
 
   .header-left {
-    margin-right: 0;
+    @include flex(1);
+    margin-right: 20px;
+  }
+
+  .header-right {
+    display: inline-block;
   }
 }
 
 .header-title {
+  @include hyphenate;
   position: relative;
   top: 1px;
   display: inline-block;
