@@ -504,7 +504,7 @@ body.search-open {
   .menu-btn {
     position: relative;
     top: 4px;
-    right: -5px;
+    right: -4px;
     display: inline-block;
     vertical-align: middle;
     width: 30px;
@@ -1497,6 +1497,7 @@ body.search-open {
   }
   .search-close-btn.open {
     display: inline-block;
+    vertical-align: middle;
   }
 }
 

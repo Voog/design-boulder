@@ -10616,11 +10616,28 @@ return jQuery;
     });
   };
 
+  var handleSearchPositionChange = function() {
+    var windowWidth = $(window).width(),
+        search = $('.js-search'),
+        menuBtn = $('.js-menu-btn');
+
+    if (windowWidth <= 640) {
+      if (search.next().is(menuBtn)) {
+        search.before(menuBtn);
+      }
+    } else {
+      if (search.prev().is(menuBtn)) {
+        search.after(menuBtn);
+      }
+    }
+  };
+
   // Initiates the table horisontal scroll function when window is resized
   var handleWindowResize = function() {
     $(window).resize(function() {
       handleTableHorizontalScrolling();
       handleFooterPositioning();
+      handleSearchPositionChange();
     });
   };
 
@@ -10647,6 +10664,7 @@ return jQuery;
     handleFooterContentEdit();
     handleSearchSumbit();
     handleGalleryHover();
+    handleSearchPositionChange();
     handleWindowResize();
     wrapTables();
     if ($('.table-container').length > 0) {
