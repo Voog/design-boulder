@@ -7,22 +7,28 @@
   &:first-child {
     margin-top: 0;
   }
+}
 
-  .edys-gallery {
-    @extend %clearfix;
-    .edys-gallery-item {
-      display: inline-block;
-      padding-bottom: 1px;
+.edys-gallery {
+  @extend %clearfix;
 
-      .edys-gallery-image {
-        display: block;
-        width: auto;
-        height: auto;
+  .header-body-top & {
+    display: inline-block;
+    margin: 0 auto;
+  }
+}
 
-        &.inactive {
-          opacity: 0.6;
-        }
-      }
-    }
+.edys-gallery-item {
+  display: inline-block;
+  padding-bottom: 1px;
+}
+
+.edys-gallery-image {
+  display: block;
+  width: auto;
+  height: auto;
+
+  &.inactive {
+    opacity: 0.6;
   }
 }
