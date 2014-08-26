@@ -21,6 +21,12 @@
   }
 }
 
+.main-feature {
+  .wrap {
+    @include display(flex);
+  }
+}
+
 %front-page-content-left {
   max-width: 468px;
   padding: 48px 20px;
@@ -31,104 +37,18 @@
  padding: 48px 0 48px 50px;
 }
 
-.main-feature {
-  .feature-left,
-  .feature-right {
-    float: left;
-    width: 100%;
-  }
+.feature-left,
+.feature-right {
+  @include flex(1);
+  padding: 48px 20px;
+}
 
-  .feature-left {
-    @extend %front-page-content-left;
-  }
+.feature-left {
 
-  .feature-right {
-    @extend %front-page-content-right;
+}
 
-    &.hidden {
-      display: none;
-    }
-  }
+.feature-right {
 
-  .feature-center {
-    padding: 48px 20px;
-  }
-
-  .feature-image-container {
-    position: relative;
-    float: left;
-    width: 100%;
-    max-width: 224px;
-
-    &:nth-child(n + 3) {
-      margin-top: 20px;
-    }
-
-    &:nth-child(2n+2) {
-      margin-left: 20px;
-    }
-
-    &:after {
-      display: block;
-      padding-top: 100%;
-      content: '';
-    }
-
-    .public & {
-      overflow: hidden;
-    }
-  }
-
-  .feature-image {
-    @extend %stretch;
-    position: absolute;
-    background-size: cover;
-
-    .editmode & {
-      display: table;
-      width: 224px;
-      height: 224px;
-      outline: 1px dashed rgba($third-color, 0.33);
-    }
-
-    &.active {
-      outline: none;
-    }
-  }
-
-  @include query($tablet-1) {
-    .feature-left,
-    .feature-right {
-      float: none;
-      width: auto;
-      max-width: none;
-      padding: 48px 0;
-    }
-
-    .feature-left {
-      text-align: center;
-    }
-  }
-
-  @include query($mobile-2) {
-    .feature-left,
-    .feature-right {
-      padding: 20px 0;
-    }
-
-    .feature-image-container {
-      max-width: 100%;
-
-      &:nth-child(n + 3),
-      &:nth-child(2n+2) {
-        margin-top: 20px;
-      }
-
-      &:nth-child(2n+2) {
-        margin-left: 0;
-      }
-    }
-  }
 }
 
 .summary {

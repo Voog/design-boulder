@@ -52,58 +52,6 @@
       }
     });
 
-    // Feature image save logic
-    /* TODO: Add functionality to add more or less than two images. */
-    /* TODO: Add functionality to delete default images if the CMS is going to support it. */
-    // var handleFeatureImage = function() {
-    //   var imageIndex = window.imageIndex,
-    //       featureImageIndex = 'js-feature-image-' + imageIndex,
-    //       featureImageData = 'feature_image_' + imageIndex;
-
-    //   var featureImage = new Edicy.ImgDropArea($('.' + featureImageIndex), {
-    //     positionable: true,
-
-    //     change: function(data) {
-    //       featureImageContainer = $('.' + featureImageIndex).parent();
-
-    //       var obj = {};
-    //       obj[featureImageData] = data;
-    //       pageData.set(obj);
-    //     }
-    //   });
-    // };
-
-    // var initFeatureImages = function() {
-    //   $.each( $('.js-feature-image-container'), function(index){
-    //     window.imageIndex = index + 1;
-    //     handleFeatureImage();
-    //   });
-    // };
-
-    // initFeatureImages();
-
-    var featureImage1 = new Edicy.ImgDropArea($('.js-feature-image-1'), {
-      positionable: true,
-
-      change: function(data) {
-        pageData.set({
-          'feature_image_1': data
-        });
-      }
-    });
-
-    var featureImage2 = new Edicy.ImgDropArea($('.js-feature-image-2'), {
-        positionable: true,
-
-      change: function(data) {
-        pageData.set({
-          'feature_image_2': data
-        });
-      }
-    });
-
-
-
     // Header button data logic
     var headerBtn = new Edicy.TextEditorView({el: $('.js-header-body-bottom-inner')});
     headerBtn.on('change', function() {

@@ -11,54 +11,14 @@
       {% include "header" with "content" %}
 
       <main class="content js-content" role="main">
-        {% comment %}Set variables to detect if "feature_content_right" area has content{% endcomment %}
-        {% capture feature_content_right_html %}{% unless editmode %}{% content name="feature_content_right" %}{% endunless %}{% endcapture %}
-        {% capture feature_content_right_size %}{{ feature_content_right_html | size | minus : 1 }}{% endcapture %}
-
         <div class="main-feature">
           <div class="wrap">
-            {% if editmode or has_feature_images == true %}
-              <div class="{% if editmode %}feature-left{% else %}{% unless feature_content_right_size contains '-' %}feature-left{% else %}feature-center{% endunless %}{% endif %}">
-                <div class="feature-inner js-feature-inner content-formatted">
-                  <div class="feature-image-container js-feature-image-container">
-                    {% if editmode %}
-                      <div class="feature-image js-feature-image-1" data-image="{{ feature_image_1_url }}" data-dimensions="{{ page.data.feature_image_1.width }},{{ page.data.feature_image_1.height }}" data-position="{{ page.data.feature_image_1.top }},{{ page.data.feature_image_1.left }}"></div>
-                    {% else %}
-                      {% if has_feature_image_1 == true %}
-                        <div class="feature-image" style="background-image: url('{{ feature_image_1_url }}'); top: {{ page.data.feature_image_1.top }}px; left: {{ page.data.feature_image_1.left }}px;"></div>
-                      {% endif %}
-                    {% endif %}
-                  </div>
-
-                  <div class="feature-image-container js-feature-image-container">
-                    {% if editmode %}
-                      <div class="feature-image js-feature-image-2" data-image="{{ feature_image_2_url }}" data-dimensions="{{ page.data.feature_image_2.width }},{{ page.data.feature_image_2.height }}" data-position="{{ page.data.feature_image_2.top }},{{ page.data.feature_image_2.left }}"></div>
-                    {% else %}
-                      {% if has_feature_image_2 == true %}
-                        <div class="feature-image" style="background-image: url('{{ feature_image_2_url }}'); top: {{ page.data.feature_image_2.top }}px; left: {{ page.data.feature_image_2.left }}px;"></div>
-                      {% endif %}
-                    {% endif %}
-                  </div>
-                </div>
-              </div>
-            {% endif %}
-
-            {% comment %}{% unless editmode %}{% if feature_content_right_size contains '-' %} hidden{% endif %}{% endunless %}{% endcomment %}
-            {% if editmode %}
-              <div class="{% if editmode or has_feature_images == true %}feature-right{% else %}feature-center{% endif %}">
-                <div class="feature-inner content-formatted">{% content name="feature_content_right" %}</div>
-              </div>
-            {% else %}
-              {% unless feature_content_right_size contains '-' %}
-                <div class="{% if editmode or has_feature_images == true %}feature-right{% else %}feature-center{% endif %}">
-                  <div class="feature-inner content-formatted">{% content name="feature_content_right" %}</div>
-                </div>
-              {% endunless %}
-            {% endif %}
+            <div class="feature-left">{% content name="feature_left_content" %}</div>
+            <div class="feature-right">{% content name="feature_right_content" %}</div>
           </div>
         </div>
 
-        <div class="summary dark-background">
+{% comment %}        <div class="summary dark-background">
           <div class="wrap">
             <section class="blog">
               <h1 class="blog-title">{{ "latest_news" | lc }}</h1>
@@ -74,7 +34,7 @@
               <div class="content-formatted">{% content name="quotation_content" %}</div>
             </section>
           </div>
-        </div>
+        </div>{% endcomment %}
 
         <div class="contacts">
           <div class="wrap content-formatted js-custom-content-formatted">{% content name="contacts_content" %}</div>

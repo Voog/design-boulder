@@ -61,7 +61,7 @@ body.search-open {
 }
 
 .background-image,
-.background-color, .main-feature .feature-image {
+.background-color {
   top: 0;
   left: 0;
   right: 0;
@@ -1102,86 +1102,35 @@ body.search-open {
   padding: 0 20px;
 }
 
-.main-feature .feature-left, .summary .blog {
+.main-feature .wrap {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.summary .blog {
   max-width: 468px;
   padding: 48px 20px;
 }
 
-.main-feature .feature-right, .summary .quotation {
+.summary .quotation {
   max-width: 442px;
   padding: 48px 0 48px 50px;
 }
 
-.main-feature .feature-left,
-.main-feature .feature-right {
-  float: left;
-  width: 100%;
-}
-.main-feature .feature-right.hidden {
-  display: none;
-}
-.main-feature .feature-center {
+.feature-left,
+.feature-right {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -moz-box-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   padding: 48px 20px;
-}
-.main-feature .feature-image-container {
-  position: relative;
-  float: left;
-  width: 100%;
-  max-width: 224px;
-}
-.main-feature .feature-image-container:nth-child(n + 3) {
-  margin-top: 20px;
-}
-.main-feature .feature-image-container:nth-child(2n+2) {
-  margin-left: 20px;
-}
-.main-feature .feature-image-container:after {
-  display: block;
-  padding-top: 100%;
-  content: '';
-}
-.public .main-feature .feature-image-container {
-  overflow: hidden;
-}
-.main-feature .feature-image {
-  position: absolute;
-  background-size: cover;
-}
-.editmode .main-feature .feature-image {
-  display: table;
-  width: 224px;
-  height: 224px;
-  outline: 1px dashed rgba(27, 33, 36, 0.33);
-}
-.main-feature .feature-image.active {
-  outline: none;
-}
-@media screen and (max-width: 1040px) {
-  .main-feature .feature-left,
-  .main-feature .feature-right {
-    float: none;
-    width: auto;
-    max-width: none;
-    padding: 48px 0;
-  }
-  .main-feature .feature-left {
-    text-align: center;
-  }
-}
-@media screen and (max-width: 507px) {
-  .main-feature .feature-left,
-  .main-feature .feature-right {
-    padding: 20px 0;
-  }
-  .main-feature .feature-image-container {
-    max-width: 100%;
-  }
-  .main-feature .feature-image-container:nth-child(n + 3), .main-feature .feature-image-container:nth-child(2n+2) {
-    margin-top: 20px;
-  }
-  .main-feature .feature-image-container:nth-child(2n+2) {
-    margin-left: 0;
-  }
 }
 
 .summary {
