@@ -2,7 +2,7 @@
 <html class="{% if editmode %}editmode{% else %}public{% endif %}" lang="{{ page.language_code }}">
 <head prefix="og: http://ogp.me/ns#">
   {% include "html-head" %}
-  {% if editmode %}<link rel="stylesheet" href="/assets/admin/tools/0.1.3/edicy-tools.css">{% endif %}
+  {% if editmode %}<link rel="stylesheet" href="http://static.voog.construction/libs/edicy-tools/latest/edicy-tools.css">{% endif %}
   {% include "edicy-tools-variables" %}
 </head>
 
@@ -18,7 +18,7 @@
           </div>
         </div>
 
-{% comment %}        <div class="summary dark-background">
+        <div class="summary dark-background">
           <div class="wrap">
             <section class="blog">
               <h1 class="blog-title">{{ "latest_news" | lc }}</h1>
@@ -34,7 +34,7 @@
               <div class="content-formatted">{% content name="quotation_content" %}</div>
             </section>
           </div>
-        </div>{% endcomment %}
+        </div>
 
         <div class="contacts">
           <div class="wrap content-formatted js-custom-content-formatted">{% content name="contacts_content" %}</div>
