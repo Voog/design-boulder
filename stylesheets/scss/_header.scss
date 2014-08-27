@@ -24,6 +24,10 @@
     @extend %clearfix;
     @extend %wide-wrap;
     padding: 20px;
+
+    @include query($tablet-2) {
+      @include display(flex);
+    }
   }
 }
 
@@ -36,10 +40,6 @@
 }
 
 @include query($tablet-2) {
-  .wrap {
-    @include display(flex);
-  }
-
   .header-left,
   .header-right {
     float: none;

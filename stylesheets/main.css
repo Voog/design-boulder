@@ -1033,9 +1033,8 @@ body.search-open {
 .header-top .wrap {
   padding: 20px;
 }
-
 @media screen and (max-width: 900px) {
-  .wrap {
+  .header-top .wrap {
     display: -webkit-box;
     display: -moz-box;
     display: box;
@@ -1044,7 +1043,9 @@ body.search-open {
     display: -ms-flexbox;
     display: flex;
   }
+}
 
+@media screen and (max-width: 900px) {
   .header-left,
   .header-right {
     float: none;
@@ -1129,10 +1130,6 @@ body.search-open {
 
 .main-feature .wrap,
 .summary .wrap {
-  padding: 0 20px;
-}
-
-.main-feature .wrap {
   display: -webkit-box;
   display: -moz-box;
   display: box;
@@ -1140,12 +1137,25 @@ body.search-open {
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
+  padding: 0 20px;
 }
 @media screen and (max-width: 801px) {
-  .main-feature .wrap {
+  .main-feature .wrap,
+  .summary .wrap {
     display: block;
   }
 }
+.main-feature .inner,
+.summary .inner {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -moz-box-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 48px 20px;
+}
+
 .main-feature .content-formatted h2 {
   text-align: left;
   font-weight: 400;
@@ -1251,54 +1261,16 @@ body.search-open {
   width: 100px;
 }
 
-.summary .blog {
-  max-width: 468px;
-  padding: 48px 20px;
-}
-
-.summary .quotation {
-  max-width: 442px;
-  padding: 48px 0 48px 50px;
-}
-
-.feature-left,
-.feature-right {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-  -moz-box-flex: 1;
-  -moz-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  padding: 48px 20px;
-}
-
 .summary {
   background-color: #e4ac00;
 }
-.summary .blog,
+.summary .blog {
+  border-right: 2px solid white;
+}
 .summary .quotation {
-  float: left;
-}
-@media screen and (max-width: 1040px) {
-  .summary .quotation,
-  .summary .blog {
-    float: none;
-    width: auto;
-    max-width: none;
-    padding: 48px 0;
-  }
-  .summary .feature-left {
-    text-align: center;
-  }
-}
-@media screen and (max-width: 507px) {
-  .summary .blog,
-  .summary .quotation {
-    padding: 20px 0;
-  }
+  border-left: 2px solid white;
 }
 
-/* TODO: Remove if not needed. */
 .contacts {
   text-align: center;
 }

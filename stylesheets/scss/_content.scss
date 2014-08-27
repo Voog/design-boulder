@@ -16,20 +16,23 @@
 .main-feature,
 .summary {
   .wrap {
+    @include display(flex);
+
     @extend %clearfix;
     padding: 0 20px;
-  }
-}
-
-.main-feature {
-  .wrap {
-    @include display(flex);
 
     @include query($tablet-3 - 15) {
       display: block;
     }
   }
 
+  .inner {
+    @include flex(1);
+    padding: 48px 20px;
+  }
+}
+
+.main-feature {
   .content-formatted {
     h2 {
       text-align: left;
@@ -143,122 +146,22 @@
  padding: 48px 0 48px 50px;
 }
 
-.feature-left,
-.feature-right {
-  @include flex(1);
-  padding: 48px 20px;
-}
-
-.feature-left {
-
-}
-
-.feature-right {
-
-}
-
 .summary {
   @include bg($secondary-color);
 
   .blog,
   .quotation {
-    float: left;
+
   }
 
   .blog {
-    @extend %front-page-content-left;
+    @include border(right, 2px, solid, $white);
   }
 
   .quotation {
-    @extend %front-page-content-right;
-  }
-
-  @include query($tablet-1) {
-    .quotation,
-    .blog {
-      float: none;
-      width: auto;
-      max-width: none;
-      padding: 48px 0;
-    }
-
-    .feature-left {
-      text-align: center;
-    }
-  }
-
-  @include query($mobile-2) {
-    .blog,
-    .quotation {
-      padding: 20px 0;
-    }
+    @include border(left, 2px, solid, $white);
   }
 }
-
-/* TODO: Remove if not needed. */
-// .summary {
-//   @include bg($secondary-color);
-
-//   .wrap {
-//     padding: 0 20px;
-
-//     .flexbox & {
-//       @include flexbox;
-//     }
-
-//     .no-flexbox & {
-//       display: table;
-//     }
-//   }
-
-//   .blog {
-//     width: 498px;
-//     padding: 43px 40px 43px 20px;
-//     @include border(right, 5px, solid, $white);
-//   }
-
-//   .quotation {
-//     width: 502px;
-//     padding: 43px 20px 43px 40px;
-//     font-size: 24px;
-//     @include color($white);
-
-//     .flexbox & {
-//       @include flexbox;
-//       @include align-content(center);
-//       @include justify-content(center);
-//     }
-
-//     .no-flexbox & {
-//       display: table;
-//     }
-//   }
-
-//   @include query($tablet-2) {
-//     .flexbox &,
-//     .no-flexbox & {
-//       .wrap,
-//       .quotation {
-//         display: block;
-//       }
-
-//       .blog,
-//       .quotation {
-//         width: auto;
-//       }
-
-//       .blog {
-//         padding: 30px 0 15px;
-//         border-right: none;
-//         @include border(bottom, 5px, solid, $white);
-//       }
-
-//       .quotation {
-//         padding: 15px 0 30px;
-//       }
-//     }
-//   }
-// }
 
 .contacts {
   text-align: center;
