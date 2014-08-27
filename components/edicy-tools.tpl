@@ -1,7 +1,5 @@
 {% editorjsblock %}
-  {% comment %}TODO: Replace with the original script if the CMS is going to support deleting the default pictures for the image drop areas.{% endcomment %}
-  {% comment %}<script src='http://static.voog.construction/libs/edicy-tools/latest/edicy-tools.js'></script>{% endcomment %}
-  <script src="{{ javascripts_path }}/edicy-tools-custom.min.js"></script>
+  <script src='{{ site.static_asset_host }}/libs/edicy-tools/latest/edicy-tools.js'></script>
   <script>
     // Front page header image and color data preview and save logic.
     var pageData = new Edicy.CustomData({

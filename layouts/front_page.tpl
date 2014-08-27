@@ -2,7 +2,7 @@
 <html class="{% if editmode %}editmode{% else %}public{% endif %}" lang="{{ page.language_code }}">
 <head prefix="og: http://ogp.me/ns#">
   {% include "html-head" %}
-  {% if editmode %}<link rel="stylesheet" href="http://static.voog.construction/libs/edicy-tools/latest/edicy-tools.css">{% endif %}
+  {% if editmode %}<link rel="stylesheet" href="{{ site.static_asset_host }}/libs/edicy-tools/latest/edicy-tools.css">{% endif %}
   {% include "edicy-tools-variables" %}
 </head>
 
@@ -13,8 +13,8 @@
       <main class="content js-content" role="main">
         <div class="main-feature">
           <div class="wrap">
-            <div class="feature-left">{% content name="feature_left_content" %}</div>
-            <div class="feature-right">{% content name="feature_right_content" %}</div>
+            <div class="feature-left content-formatted">{% content name="feature_left_content" %}</div>
+            <div class="feature-right content-formatted">{% content name="feature_right_content" %}</div>
           </div>
         </div>
 
