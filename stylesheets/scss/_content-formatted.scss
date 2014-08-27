@@ -5,6 +5,11 @@
   @extend %clearfix;
   @include hyphenate;
 
+  .main-feature &,
+  .quotation & {
+    line-height: 1.4;
+  }
+
   .quotation & {
     width: 100%;
     @include align-self(center);
@@ -80,19 +85,14 @@
     font-size: 24px;
 
     .main-feature & {
+      margin-top: 20px;
+      text-align: left;
       font-weight: 400;
       font-style: italic;
     }
 
     .contacts & {
       font-size: 28px;
-    }
-  }
-
-  &.feature-left,
-  &.feature-right {
-    h2 {
-      text-align: center;
     }
   }
 
@@ -111,6 +111,11 @@
   p {
     margin-top: 20px;
 
+    .main-feature & {
+      margin-top: 17px;
+
+    }
+
     .contacts & {
       font-size: 20px;
     }
@@ -121,7 +126,7 @@
       @include color($white);
 
       &:first-child {
-        margin-top: 0;
+        margin-top: 15px;
       }
     }
   }
@@ -143,6 +148,10 @@
 
     &:hover {
       text-decoration: none;
+    }
+
+    .main-feature & {
+      font-style: italic;
     }
   }
 
@@ -306,16 +315,6 @@
       }
     }
   }
-
-  /* TODO: Remove if not needed. */
-  // @include query($tablet-2) {
-  //   .feature-left &,
-  //   .feature-right & {
-  //     h2 {
-  //       text-align: center;
-  //     }
-  //   }
-  // }
 
   @include query($tablet-4) {
     table {

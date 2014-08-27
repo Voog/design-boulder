@@ -68,17 +68,17 @@ body.search-open {
   bottom: 0;
 }
 
-.bgpicker-btn, .menu-btn, .search-btn {
+.bgpicker-btn, .menu-btn, .menu-lang-btn, .search-btn {
   margin: 0;
   padding: 0;
   background: none;
   border: none;
   cursor: pointer;
 }
-.bgpicker-btn:focus, .menu-btn:focus, .search-btn:focus {
+.bgpicker-btn:focus, .menu-btn:focus, .menu-lang-btn:focus, .search-btn:focus {
   outline: none;
 }
-.bgpicker-btn::-moz-focus-inner, .menu-btn::-moz-focus-inner, .search-btn::-moz-focus-inner {
+.bgpicker-btn::-moz-focus-inner, .menu-btn::-moz-focus-inner, .menu-lang-btn::-moz-focus-inner, .search-btn::-moz-focus-inner {
   padding: 0;
   border: none;
 }
@@ -248,7 +248,9 @@ body.search-open {
   -moz-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
-  /* TODO: Remove if not needed. */
+}
+.main-feature .content-formatted, .quotation .content-formatted {
+  line-height: 1.4;
 }
 .quotation .content-formatted {
   width: 100%;
@@ -310,14 +312,13 @@ body.search-open {
   font-size: 24px;
 }
 .main-feature .content-formatted h2 {
+  margin-top: 20px;
+  text-align: left;
   font-weight: 400;
   font-style: italic;
 }
 .contacts .content-formatted h2 {
   font-size: 28px;
-}
-.content-formatted.feature-left h2, .content-formatted.feature-right h2 {
-  text-align: center;
 }
 .content-formatted h3, .content-formatted h4, .content-formatted h5, .content-formatted h6 {
   margin-top: 30px;
@@ -331,6 +332,9 @@ body.search-open {
 .content-formatted p {
   margin-top: 20px;
 }
+.main-feature .content-formatted p {
+  margin-top: 17px;
+}
 .contacts .content-formatted p {
   font-size: 20px;
 }
@@ -340,7 +344,7 @@ body.search-open {
   color: white;
 }
 .quotation .content-formatted p:first-child {
-  margin-top: 0;
+  margin-top: 15px;
 }
 .content-formatted a {
   text-decoration: underline;
@@ -348,6 +352,9 @@ body.search-open {
 }
 .content-formatted a:hover {
   text-decoration: none;
+}
+.main-feature .content-formatted a {
+  font-style: italic;
 }
 .content-formatted iframe {
   max-width: 100%;
@@ -542,9 +549,10 @@ body.search-open {
 }
 
 .menu-main {
+  position: relative;
+  top: 3px;
   display: inline-block;
   vertical-align: middle;
-  margin-top: 3px;
 }
 .menu-main .menu-item,
 .menu-main .edit-btn {
@@ -666,24 +674,18 @@ body.search-open {
   position: relative;
   display: inline-block;
   vertical-align: top;
-  width: 20px;
-  height: 14px;
+  width: 30px;
+  height: 25px;
   font-size: 0;
-  background: none;
-  border: none;
-  cursor: pointer;
 }
 .menu-lang-btn:before, .menu-lang-btn:after {
-  top: 0;
-  left: 0;
+  top: 6px;
+  left: 5px;
 }
 .menu-lang-btn:hover {
   opacity: 0.8;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
   filter: alpha(opacity=80);
-}
-.menu-lang-btn:focus {
-  outline: none;
 }
 
 .menu-lang-btn:before, .menu-lang-btn:after,
@@ -720,7 +722,7 @@ body.search-open {
 .menu-lang-popover.expanded {
   position: absolute;
   top: 26px;
-  right: -12px;
+  right: -6px;
   display: block;
   margin-bottom: 40px;
   padding: 6px 0;
@@ -732,7 +734,7 @@ body.search-open {
 
 .menu-lang {
   position: relative;
-  top: 6px;
+  top: 2px;
   margin-left: 17px;
   display: inline-block;
   line-height: 1;
@@ -1153,13 +1155,10 @@ body.search-open {
   -moz-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  padding: 48px 20px;
 }
 
-.main-feature .content-formatted h2 {
-  text-align: left;
-  font-weight: 400;
-  font-style: italic;
+.main-feature .inner {
+  padding: 48px 20px;
 }
 .main-feature .edy-gallery-area .edy-gallery-image,
 .main-feature .edys-gallery-item,
@@ -1264,6 +1263,9 @@ body.search-open {
 .summary {
   background-color: #e4ac00;
 }
+.summary .inner {
+  padding: 40px 20px;
+}
 .summary .blog {
   border-right: 2px solid white;
 }
@@ -1297,7 +1299,13 @@ body.search-open {
   color: rgba(255, 255, 255, 0.5);
 }
 .front-page .post {
-  margin-top: 10px;
+  margin-top: 13px;
+}
+.front-page .post:first-of-type {
+  margin-top: 5px;
+}
+.front-page .post:last-child {
+  margin-bottom: 7px;
 }
 .front-page .post-title {
   display: inline;
@@ -1314,8 +1322,8 @@ body.search-open {
 }
 .front-page .post-date {
   display: block;
-  line-height: 0.8;
-  font-size: 16px;
+  line-height: 1;
+  font-size: 14px;
   color: white;
   color: rgba(255, 255, 255, 0.5);
 }
@@ -1395,6 +1403,7 @@ body.search-open {
 /* GALLERY */
 .edys-gallery-area {
   margin-top: 20px;
+  margin-bottom: -20px;
 }
 .edys-gallery-area:first-child {
   margin-top: 0;

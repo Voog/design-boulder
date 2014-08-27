@@ -16,7 +16,15 @@
   }
 
   .post {
-    margin-top: 10px;
+    margin-top: 13px;
+
+    &:first-of-type {
+      margin-top: 5px;
+    }
+
+    &:last-child {
+      margin-bottom: 7px;
+    }
   }
 
   .post-title {
@@ -37,8 +45,8 @@
 
   .post-date {
     display: block;
-    line-height: 0.8;
-    font-size: 16px;
+    line-height: 1;
+    font-size: 14px;
     @include color($white, 0.5);
   }
 }

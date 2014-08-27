@@ -28,17 +28,13 @@
 
   .inner {
     @include flex(1);
-    padding: 48px 20px;
   }
 }
 
 .main-feature {
-  .content-formatted {
-    h2 {
-      text-align: left;
-      font-weight: 400;
-      font-style: italic;
-    }
+
+  .inner {
+    padding: 48px 20px;
   }
 
   .edy-gallery-area .edy-gallery-image,
@@ -149,9 +145,8 @@
 .summary {
   @include bg($secondary-color);
 
-  .blog,
-  .quotation {
-
+  .inner {
+    padding: 40px 20px;
   }
 
   .blog {
