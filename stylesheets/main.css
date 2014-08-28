@@ -1345,8 +1345,11 @@ a.edys-gallery-item {
   width: auto;
   height: auto;
 }
-.edys-gallery-image.inactive {
+.edys-gallery-image.focus {
   opacity: 0.6;
+}
+.edys-gallery-image.focus:hover {
+  opacity: 1;
 }
 
 /* SEARCH */

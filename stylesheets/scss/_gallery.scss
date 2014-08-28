@@ -28,7 +28,11 @@ a.edys-gallery-item {
   width: auto;
   height: auto;
 
-  &.inactive {
+  &.focus {
     opacity: 0.6;
+
+    &:hover {
+      opacity: 1;
+    }
   }
 }
