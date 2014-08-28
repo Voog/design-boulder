@@ -8,7 +8,7 @@
     padding: 20px;
 
     .content-page & {
-      max-width: 600px;
+      max-width: 700px;
     }
   }
 }
@@ -16,119 +16,67 @@
 .main-feature,
 .summary {
   .wrap {
-    @include display(flex);
-
     @extend %clearfix;
     padding: 0 20px;
-
-    @include query($tablet-3 - 15) {
-      display: block;
-    }
   }
 
   .inner {
-    @include flex(1);
+    float: left;
+    width: 50%;
+    @include box-sizing(border-box);
   }
 }
 
 .main-feature {
-
   .inner {
     padding: 48px 20px;
   }
 
-  .edy-gallery-area .edy-gallery-image,
-  .edys-gallery-item,
-  .edy-gallery-area .edy-gallery-thumb {
-    width: 100px;
-    height: 100px;
-  }
-
-  .edys-gallery-item,
-  .edy-gallery-area .edy-gallery-thumb {
-    margin-right: 4.3%;
-    margin-bottom: 4.3%;
-
-    @include query($tablet-1 + 3) {
-      margin-right: 3.3%;
-      margin-bottom: 3.3%;
-    }
-
-    @include query($tablet-1 - 32) {
-      margin-right: 3.2%;
-      margin-bottom: 3.2%;
-    }
-
-    @include query($tablet-1 - 35) {
+  .edys-gallery-area,
+  .edy-gallery-area {
+    .edys-gallery-item {
+      position: relative;
+      width: 22.6%;
+      height: auto;
       margin-right: 3.1%;
       margin-bottom: 3.1%;
-    }
 
-    @include query($tablet-1 - 38) {
-      margin-right: 3%;
-      margin-bottom: 3%;
-    }
+      &:before {
+        content: "";
+        display: block;
+        padding-top: 100%;
+      }
 
-    @include query($tablet-1 - 40) {
-      margin-right: 2.9%;
-      margin-bottom: 2.9%;
-    }
-
-    @include query($tablet-1 - 43) {
-      margin-right: 4.3%;
-      margin-bottom: 4.3%;
-    }
-
-    @include query($tablet-3 - 15) {
-      margin-right: 10px;
-      margin-bottom: 10px;
+      .edys-gallery-image {
+        position:  absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: auto;
+        height: auto;
+      }
     }
   }
 
-  .edys-gallery-item {
-    .public & {
+  .edys-gallery-area {
+    .edys-gallery-item {
       &:nth-child(4n+4) {
         margin-right: 0;
-
-        @include query($tablet-1 - 43) {
-          margin-right: 4.3%;
-        }
-
-        @include query($tablet-3 - 15) {
-          margin-right: 10px;
-          margin-bottom: 10px;
-        }
-      }
-
-      &:nth-child(3n+3) {
-        @include query($tablet-1 - 43) {
-          margin-right: 0;
-        }
-
-        @include query($tablet-3 - 15) {
-          margin-right: 10px;
-          margin-bottom: 10px;
-        }
       }
     }
   }
 
-  .edy-gallery-area .edy-gallery-thumb {
-    &:nth-child(4n+5) {
-      margin-right: 0;
-
-      @include query($tablet-1 - 43) {
-        margin-right: 4.3%;
+  .edy-gallery-area {
+    .edys-gallery-item {
+      &:nth-child(4n+5) {
+        margin-right: 0;
       }
     }
   }
 
-  .edys-gallery-image-landscape {
-    height: 100px;
-  }
-
-  .edys-gallery-image-portrait {
-    width: 100px;
+  .edys-gallery-image-square {
+    width: 100%;
   }
 }
 
