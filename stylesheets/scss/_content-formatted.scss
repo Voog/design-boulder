@@ -59,6 +59,10 @@
   &, h1, h2, h3, h4, h5, h6, p, ul, ol, pre, code, table {
     .dark-background & {
       @include color($white);
+
+      &.footer-left {
+        @include color($white, 0.5);
+      }
     }
   }
 

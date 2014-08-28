@@ -294,6 +294,10 @@ body.search-open {
 .dark-background .content-formatted, .dark-background .content-formatted h1, .dark-background .content-formatted h2, .dark-background .content-formatted h3, .dark-background .content-formatted h4, .dark-background .content-formatted h5, .dark-background .content-formatted h6, .dark-background .content-formatted p, .dark-background .content-formatted ul, .dark-background .content-formatted ol, .dark-background .content-formatted pre, .dark-background .content-formatted code, .dark-background .content-formatted table {
   color: white;
 }
+.dark-background .content-formatted.footer-left, .dark-background .content-formatted h1.footer-left, .dark-background .content-formatted h2.footer-left, .dark-background .content-formatted h3.footer-left, .dark-background .content-formatted h4.footer-left, .dark-background .content-formatted h5.footer-left, .dark-background .content-formatted h6.footer-left, .dark-background .content-formatted p.footer-left, .dark-background .content-formatted ul.footer-left, .dark-background .content-formatted ol.footer-left, .dark-background .content-formatted pre.footer-left, .dark-background .content-formatted code.footer-left, .dark-background .content-formatted table.footer-left {
+  color: white;
+  color: rgba(255, 255, 255, 0.5);
+}
 .content-formatted h1, .content-formatted h2, .content-formatted h3, .content-formatted h4, .content-formatted h5, .content-formatted h6 {
   font-weight: 600;
 }
