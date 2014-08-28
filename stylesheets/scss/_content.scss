@@ -55,6 +55,10 @@
         right: 0;
         width: auto;
         height: auto;
+
+        &.edys-gallery-image-square {
+          width: 100%;
+        }
       }
     }
   }
@@ -74,10 +78,6 @@
       }
     }
   }
-
-  .edys-gallery-image-square {
-    width: 100%;
-  }
 }
 
 %front-page-content-left {
@@ -94,15 +94,12 @@
   @include bg($secondary-color);
 
   .inner {
+    max-width: 496px;
     padding: 40px 20px;
   }
 
   .blog {
-    @include border(right, 2px, solid, $white);
-  }
-
-  .quotation {
-    @include border(left, 2px, solid, $white);
+    @include border(right, 4px, solid, $white);
   }
 }
 
