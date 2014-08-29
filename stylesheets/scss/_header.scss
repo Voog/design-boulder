@@ -6,8 +6,8 @@
   .front-page & {
     min-height: 623px;
 
-    @include query($mobile-1) {
-      min-height: 523px;
+    @include query($mobile-1 - 58) {
+      min-height: 423px;
     }
   }
 
@@ -101,9 +101,9 @@
     margin: 43px auto 11px;
   }
 
-  @include query($mobile-1) {
+  @include query($mobile-1 - 58) {
     .wrap {
-      height: 322px;
+      height: 222px;
     }
   }
 }

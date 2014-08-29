@@ -270,7 +270,7 @@ body.search-open {
   font-style: italic;
   font-size: 30px;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 582px) {
   .content-formatted.header-body-top {
     font-size: 24px;
   }
@@ -1038,9 +1038,9 @@ body.search-open {
 .front-page .header {
   min-height: 623px;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 582px) {
   .front-page .header {
-    min-height: 523px;
+    min-height: 423px;
   }
 }
 .search-open .header {
@@ -1137,9 +1137,9 @@ body.search-open {
   display: inline-block;
   margin: 43px auto 11px;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 582px) {
   .header-bottom-inner .wrap {
-    height: 322px;
+    height: 222px;
   }
 }
 
@@ -1280,6 +1280,7 @@ body.search-open {
   }
   .no-flexbox .summary .inner {
     display: block;
+    width: auto;
   }
   .summary .blog {
     border-right: none;
