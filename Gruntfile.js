@@ -114,7 +114,7 @@ module.exports = function(grunt) {
 
     // Minifies the image files.
     imagemin: {
-      images: {
+      build: {
         files: [{
           expand: true,
           cwd: 'images/src/',
@@ -141,7 +141,7 @@ module.exports = function(grunt) {
     watch: {
       concat: {
         files: 'javascripts/src/concat/*.js',
-        tasks: 'concat'
+        tasks: 'concat:build'
       },
 
       uglify: {
@@ -149,7 +149,7 @@ module.exports = function(grunt) {
         'javascripts/*.js',
         '!javascripts/*.min.js'
         ],
-        tasks: 'newer:uglify',
+        tasks: 'newer:uglify:build',
         options: {
           spawn: false
         }
@@ -157,7 +157,7 @@ module.exports = function(grunt) {
 
       css: {
         files: 'stylesheets/scss/*.scss',
-        tasks: ['sass', 'cssmin'],
+        tasks: ['sass:build', 'cssmin:build'],
         options: {
           spawn: false
         }
@@ -165,7 +165,7 @@ module.exports = function(grunt) {
 
       imagemin:  {
         files: 'images/src/*.{png,jpg,gif}',
-        tasks: 'newer:imagemin',
+        tasks: 'newer:imagemin:build',
         options: {
           spawn: false
         }
@@ -173,7 +173,7 @@ module.exports = function(grunt) {
 
       svgmin: {
         files: 'assets/src/*.svg',
-        tasks: 'newer:svgmin',
+        tasks: 'newer:svgmin:build',
         options: {
           spawn: false
         }
