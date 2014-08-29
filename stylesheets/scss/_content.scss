@@ -20,16 +20,19 @@
     padding: 0 20px;
   }
 
-  .inner {
-    float: left;
-    width: 50%;
-    @include box-sizing(border-box);
+  @include query($mobile-1 - 58) {
+    .wrap {
+      padding: 0;
+    }
   }
 }
 
 .main-feature {
   .inner {
     padding: 48px 20px;
+    float: left;
+    width: 50%;
+    @include box-sizing(border-box);
   }
 
   .edys-gallery-area,
@@ -64,6 +67,8 @@
   }
 
   .edys-gallery-area {
+    margin-bottom: -20px;
+
     .edys-gallery-item {
       &:nth-child(4n+4) {
         margin-right: 0;
@@ -76,6 +81,26 @@
       &:nth-child(4n+5) {
         margin-right: 0;
       }
+    }
+  }
+
+  @include query($mobile-1 - 58) {
+    .inner {
+      float: none;
+      width: auto;
+      padding: 30px 20px;
+    }
+
+    .feature-left {
+      padding-bottom: 10px;
+    }
+
+    .feature-right {
+      padding-top: 10px;
+    }
+
+    .edys-gallery-area {
+      margin-bottom: 0;
     }
   }
 }
@@ -93,13 +118,65 @@
 .summary {
   @include bg($secondary-color);
 
+  .wrap {
+    .flexbox & {
+      @include display(flex);
+    }
+
+    .no-flexbox & {
+      display: table;
+    }
+  }
+
   .inner {
-    max-width: 496px;
     padding: 40px 20px;
+
+    .flexbox & {
+      @include flex(1);
+    }
+
+    .no-flexbox & {
+      display: table-cell;
+      width: 50%;
+    }
   }
 
   .blog {
-    @include border(right, 4px, solid, $white);
+    @include border(right, 2px, solid, $white);
+
+    .no-flexbox & {
+      padding-right: 2px;
+    }
+  }
+
+  .quotation {
+    @include border(left, 2px, solid, $white);
+  }
+
+  @include query($mobile-1 - 58) {
+    .wrap {
+      .flexbox &,
+      .no-flexbox & {
+        display: block;
+      }
+    }
+
+    .inner {
+      padding: 30px 20px;
+
+      .no-flexbox & {
+        display: block;
+      }
+    }
+
+    .blog {
+      border-right: none;
+      @include border(bottom, 4px, solid, $white);
+    }
+
+    .quotation {
+      border-left: 0;
+    }
   }
 }
 

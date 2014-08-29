@@ -27,6 +27,10 @@
     line-height: 1.5;
     font-style: italic;
     font-size: 30px;
+
+    @include query($mobile-1) {
+      font-size: 24px;
+    }
   }
 
   &.header-body-bottom {
@@ -105,6 +109,12 @@
       text-align: left;
       font-weight: 400;
       font-style: italic;
+
+      @include query($mobile-1 - 58) {
+        &:first-child {
+          margin-top: 0;
+        }
+      }
     }
 
     .contacts & {

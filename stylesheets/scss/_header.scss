@@ -5,6 +5,10 @@
 
   .front-page & {
     min-height: 623px;
+
+    @include query($mobile-1) {
+      min-height: 523px;
+    }
   }
 
   .search-open & {
@@ -95,6 +99,12 @@
   .btn {
     display: inline-block;
     margin: 43px auto 11px;
+  }
+
+  @include query($mobile-1) {
+    .wrap {
+      height: 322px;
+    }
   }
 }
 
