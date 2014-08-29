@@ -278,29 +278,6 @@
           }
         }
       }
-
-      @include query($tablet-4) {
-        & {
-          display: inline-block;
-
-          tbody, tr {
-            display: block;
-          }
-        }
-
-        tr {
-          td {
-            display: block;
-            text-align: center;
-            @include border(top, 2px, solid, $primary-color, 0.2);
-            border-left: none;
-
-            &:first-child {
-              border-top: none;
-            }
-          }
-        }
-      }
     }
 
     .contacts & {
@@ -325,15 +302,24 @@
         }
       }
     }
-  }
 
-  @include query($tablet-4) {
-    table {
-      .contacts & {
-        &, & tr td {
+    @include query($tablet-4) {
+      .contacts &,
+      .footer & {
+        &, tbody, tr {
           display: block;
         }
 
+        tr {
+          td {
+            width: 100%;
+            float: left;
+            @include box-sizing(border-box);
+          }
+        }
+      }
+
+      .contacts & {
         tr {
           td {
             border-left: none;
