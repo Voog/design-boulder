@@ -3,7 +3,6 @@
 // NB! Contact forms, image galleries and tables styling rules are located in the separate partials: "_forms.scss", "_gallery.scss" and "_tables.scss".
 .content-formatted {
   @extend %clearfix;
-  @include hyphenate;
 
   .main-feature &,
   .quotation & {
@@ -76,6 +75,8 @@
   }
 
   h1, h2, h3, h4, h5, h6, p, ul, ol {
+    @include hyphenate;
+
     .content-page & {
       margin-left: 50px;
       margin-right: 50px;
@@ -246,7 +247,6 @@
     @include border(all,1px,solid,$primary-color, 0.02);
     border-collapse: collapse;
     border-spacing: 0;
-    word-break: auto;
 
     tr {
       &:first-child {
@@ -270,6 +270,8 @@
       border: none;
 
       tr {
+        @extend %clearfix;
+
         td {
           background: none;
 

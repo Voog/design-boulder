@@ -64,7 +64,6 @@
   }
 
   .post-header {
-    padding-top: 40px;
     text-align: center;
   }
 
@@ -126,7 +125,7 @@
 
 // Style rules for the blog single article view only
 .post-page {
-  .post {
-
+  .post-header {
+    padding-top: 40px;
   }
 }
