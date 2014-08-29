@@ -3,7 +3,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-modernizr');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-sass');
+  // grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-svgmin');
@@ -83,20 +83,20 @@ module.exports = function(grunt) {
     },
 
     // Compiles the stylesheet files.
-    sass: {
-      build: {
-        options: {
-          style: 'expanded'
-        },
-        files: [{
-          expand: true,
-          cwd: 'stylesheets/scss',
-          src: '*.scss',
-          dest: 'stylesheets',
-          ext: '.css'
-        }]
-      }
-    },
+    // sass: {
+    //   build: {
+    //     options: {
+    //       style: 'expanded'
+    //     },
+    //     files: [{
+    //       expand: true,
+    //       cwd: 'stylesheets/scss',
+    //       src: '*.scss',
+    //       dest: 'stylesheets',
+    //       ext: '.css'
+    //     }]
+    //   }
+    // },
 
     // Minifies the stylesheet files.
     cssmin: {
@@ -157,7 +157,8 @@ module.exports = function(grunt) {
 
       css: {
         files: 'stylesheets/scss/*.scss',
-        tasks: ['sass:build', 'cssmin:build'],
+        // tasks: ['sass:build', 'cssmin:build'],
+        tasks: ['newer:cssmin:build'],
         options: {
           spawn: false
         }
@@ -181,5 +182,6 @@ module.exports = function(grunt) {
     },
   });
 
-  grunt.registerTask('default', ['bowercopy', 'modernizr', 'concat', 'uglify', 'sass', 'cssmin', 'imagemin', 'svgmin']);
+  // grunt.registerTask('default', ['bowercopy', 'modernizr', 'concat', 'uglify', 'sass', 'cssmin', 'imagemin', 'svgmin']);
+  grunt.registerTask('default', ['bowercopy', 'modernizr', 'concat', 'uglify', 'cssmin', 'imagemin', 'svgmin']);
 };
