@@ -1060,7 +1060,7 @@ body.search-open {
   padding: 20px;
 }
 @media screen and (max-width: 900px) {
-  .header-top .wrap {
+  .flexbox .header-top .wrap {
     display: -webkit-box;
     display: -moz-box;
     display: box;
@@ -1069,12 +1069,24 @@ body.search-open {
     display: -ms-flexbox;
     display: flex;
   }
+  .no-flexbox .header-top .wrap {
+    display: table;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
 }
 
 @media screen and (max-width: 900px) {
   .header-left,
   .header-right {
     float: none;
+  }
+  .no-flexbox .header-left, .no-flexbox
+  .header-right {
+    display: table-cell;
+    vertical-align: top;
   }
 
   .header-left {

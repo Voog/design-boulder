@@ -30,7 +30,15 @@
     padding: 20px;
 
     @include query($tablet-2) {
-      @include display(flex);
+      .flexbox & {
+        @include display(flex);
+      }
+
+      .no-flexbox & {
+        display: table;
+        width: 100%;
+        @include box-sizing(border-box);
+      }
     }
   }
 }
@@ -47,6 +55,11 @@
   .header-left,
   .header-right {
     float: none;
+
+    .no-flexbox & {
+      display: table-cell;
+      vertical-align: top;
+    }
   }
 
   .header-left {
