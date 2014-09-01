@@ -9,6 +9,12 @@
   @include color($white, 0.5);
   @include bg($primary-color, 0.73);
 
+  &.dark-backrgound {
+    .content-formatted {
+      @include color($white, 0.5);
+    }
+  }
+
   .wrap {
     @extend %clearfix;
     @extend %wide-wrap;

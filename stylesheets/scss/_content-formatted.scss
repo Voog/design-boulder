@@ -67,10 +67,10 @@
   &, h1, h2, h3, h4, h5, h6, p, ul, ol, pre, code, table {
     .dark-background & {
       @include color($white);
+    }
 
-      &.footer-left {
-        @include color($white, 0.5);
-      }
+    .footer.dark-background & {
+      @include color($white, 0.5);
     }
   }
 
@@ -254,6 +254,10 @@
           @include color($white);
           @include bg($secondary-color);
           @include border(all, 1px,solid,$secondary-color);
+
+          .footer & {
+            @include color($white, 0.5);
+          }
         }
       }
 
@@ -302,8 +306,11 @@
       tr {
         td {
           padding: 0 12px;
-          @include color($white, 0.5);
           border: none;
+
+          &:last-child {
+            padding-right: 0;
+          }
         }
       }
     }

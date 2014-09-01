@@ -294,7 +294,7 @@ body.search-open {
 .dark-background .content-formatted, .dark-background .content-formatted h1, .dark-background .content-formatted h2, .dark-background .content-formatted h3, .dark-background .content-formatted h4, .dark-background .content-formatted h5, .dark-background .content-formatted h6, .dark-background .content-formatted p, .dark-background .content-formatted ul, .dark-background .content-formatted ol, .dark-background .content-formatted pre, .dark-background .content-formatted code, .dark-background .content-formatted table {
   color: white;
 }
-.dark-background .content-formatted.footer-left, .dark-background .content-formatted h1.footer-left, .dark-background .content-formatted h2.footer-left, .dark-background .content-formatted h3.footer-left, .dark-background .content-formatted h4.footer-left, .dark-background .content-formatted h5.footer-left, .dark-background .content-formatted h6.footer-left, .dark-background .content-formatted p.footer-left, .dark-background .content-formatted ul.footer-left, .dark-background .content-formatted ol.footer-left, .dark-background .content-formatted pre.footer-left, .dark-background .content-formatted code.footer-left, .dark-background .content-formatted table.footer-left {
+.footer.dark-background .content-formatted, .footer.dark-background .content-formatted h1, .footer.dark-background .content-formatted h2, .footer.dark-background .content-formatted h3, .footer.dark-background .content-formatted h4, .footer.dark-background .content-formatted h5, .footer.dark-background .content-formatted h6, .footer.dark-background .content-formatted p, .footer.dark-background .content-formatted ul, .footer.dark-background .content-formatted ol, .footer.dark-background .content-formatted pre, .footer.dark-background .content-formatted code, .footer.dark-background .content-formatted table {
   color: white;
   color: rgba(255, 255, 255, 0.5);
 }
@@ -444,6 +444,10 @@ body.search-open {
   background-color: #e4ac00;
   border: 1px solid #e4ac00;
 }
+.footer .content-formatted table tr:first-child td {
+  color: white;
+  color: rgba(255, 255, 255, 0.5);
+}
 .content-formatted table tr td {
   padding: 11px 17px;
   border-top: 1px solid black;
@@ -477,9 +481,10 @@ body.search-open {
 }
 .footer .content-formatted table tr td {
   padding: 0 12px;
-  color: white;
-  color: rgba(255, 255, 255, 0.5);
   border: none;
+}
+.footer .content-formatted table tr td:last-child {
+  padding-right: 0;
 }
 @media screen and (max-width: 707px) {
   .contacts .content-formatted table, .contacts .content-formatted table tbody, .contacts .content-formatted table tr, .footer .content-formatted table, .footer .content-formatted table tbody, .footer .content-formatted table tr {
@@ -2067,6 +2072,10 @@ a.edys-gallery-item {
   color: rgba(255, 255, 255, 0.5);
   background-color: black;
   background-color: rgba(0, 0, 0, 0.73);
+}
+.footer.dark-backrgound .content-formatted {
+  color: white;
+  color: rgba(255, 255, 255, 0.5);
 }
 .footer .wrap {
   padding: 28px 20px 27px;
