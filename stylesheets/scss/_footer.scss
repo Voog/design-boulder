@@ -32,6 +32,8 @@
 
   .footer-right {
     @extend %header-footer-right;
+    position: relative;
+    top: 4px;
   }
 
   .voog-reference {

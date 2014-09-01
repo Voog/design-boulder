@@ -54,6 +54,14 @@
     font-size: 20px;
   }
 
+  &.footer-left {
+    font-size: 20px;
+  }
+
+  &.footer-right {
+    font-size: 16px;
+  }
+
   // Resets the bottom margin for all elements and top margin for all first elements in the editable content-area (to prevent unwanted white-space at the beginning of a content-area).
   h1, h2, h3, h4, h5, h6, p, ul, ol, pre, code, img, iframe, table, form {
     margin-bottom: 0;
@@ -280,7 +288,12 @@
           background: none;
 
           &:first-child {
+            padding-left: 0;
             border-left: none;
+          }
+
+          &:last-child {
+            padding-right: 0;
           }
         }
       }
@@ -315,7 +328,7 @@
       }
     }
 
-    @include query($tablet-4) {
+    @include query($tablet-2 + 8) {
       .contacts &,
       .footer & {
         &, tbody, tr {
@@ -326,6 +339,7 @@
           td {
             width: 100%;
             float: left;
+            padding: 0;
             @include box-sizing(border-box);
           }
         }
