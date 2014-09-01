@@ -55,6 +55,7 @@
         // TODO: Needs language based values.
         older: 'Next',
         newer: 'Previous'
+        {% if tags %},tags: ['{{ tags.first.name }}']{% endif %}
     });
 
     $('.blog-articles').on({

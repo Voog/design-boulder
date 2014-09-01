@@ -10344,7 +10344,7 @@ return jQuery;
 
     fetch: function(page, f) {
       this.$el.trigger('articles.loading');
-      var tag_txt = (this.options.tags) ? 'tagged=' + this.options.tags.join(',') +'&' : '',
+      var tag_txt = (this.options.tags) ? 'tag[]=' + this.options.tags.join('&tag[]=') +'&' : '',
       page_id_txt = (this.options.pageId) ? 'page_id=' + this.options.pageId : '',
       url = '/admin/api/articles.json?' + tag_txt + 'page='+ page + '&per_page=' + this.options.perPage + '&' + page_id_txt + '&include_details=true' + '&lang=' + this.options.lang;
       $.ajax({
