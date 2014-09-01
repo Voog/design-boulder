@@ -88,7 +88,7 @@ body {
   left: 0;
   width: 10px;
   height: 10px;
-  @include bg($secondary-color);
+  @include bg($primary-color, 0.5);
   @include animation(cubemove 1.8s infinite ease-in-out);
 }
 

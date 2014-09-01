@@ -84,8 +84,10 @@
 
   h1, h2, h3, h4, h5, h6, p, ul, ol {
     @include hyphenate;
+  }
 
-    .content-page & {
+  h2, h3, h4, h5, h6, p, ul, ol {
+    .content-page .content & {
       margin-left: 50px;
       margin-right: 50px;
     }
@@ -161,6 +163,11 @@
     }
   }
 
+  ul,
+  ol {
+    padding-left: 30px;
+  }
+
   a {
     text-decoration: underline;
 
@@ -192,7 +199,7 @@
     &, code {
       padding: 10px;
       font-size: 14px;
-      @include bg($primary-color, 0.02);
+      @include bg($primary-color, 0.1);
     }
 
     code {
@@ -229,7 +236,7 @@
 
   // Container around editable content-area table.
   .table-container {
-    margin-top: 20px;
+    margin-top: 35px;
   }
 
   // Overthrow plugin to support horizontal scrolling on older devices that have touch-screens. For example Android 2.3 devices.
@@ -252,9 +259,13 @@
   table {
     width: 100%;
     margin: 0 auto;
-    @include border(all,1px,solid,$primary-color, 0.02);
+    @include border(all,1px,solid,$primary-color, 0.1);
     border-collapse: collapse;
     border-spacing: 0;
+
+    .editmode & {
+      margin-top: 35px;
+    }
 
     tr {
       &:first-child {
@@ -270,9 +281,9 @@
       }
 
       td {
-        padding: 11px 17px;
-        @include border(top, 1px, solid, $primary-color, 0.02);
-        @include border(bottom, 1px, solid, $primary-color, 0.02);
+        padding: 9px 13px;
+        @include border(top, 1px, solid, $primary-color, 0.1);
+        @include border(bottom, 1px, solid, $primary-color, 0.1);
       }
     }
 

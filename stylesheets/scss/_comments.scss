@@ -6,6 +6,7 @@
   @include border(top, 1px, solid, $primary-color, 0.1);
 
   .wrap {
+    max-width: 600px;
     padding: 26px 20px 20px;
   }
 
@@ -19,6 +20,7 @@
   }
 
   .comments-title {
+    margin: 0;
     text-align: left;
     font-weight: 400;
     font-style: italic;

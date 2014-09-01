@@ -116,7 +116,8 @@ body.search-open {
   left: 0;
   width: 10px;
   height: 10px;
-  background-color: #e4ac00;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.5);
   -webkit-animation: cubemove 1.8s infinite ease-in-out;
   -moz-animation: cubemove 1.8s infinite ease-in-out;
   animation: cubemove 1.8s infinite ease-in-out;
@@ -313,7 +314,7 @@ body.search-open {
   -ms-hyphens: auto;
   hyphens: auto;
 }
-.content-page .content-formatted h1, .content-page .content-formatted h2, .content-page .content-formatted h3, .content-page .content-formatted h4, .content-page .content-formatted h5, .content-page .content-formatted h6, .content-page .content-formatted p, .content-page .content-formatted ul, .content-page .content-formatted ol {
+.content-page .content .content-formatted h2, .content-page .content .content-formatted h3, .content-page .content .content-formatted h4, .content-page .content .content-formatted h5, .content-page .content .content-formatted h6, .content-page .content .content-formatted p, .content-page .content .content-formatted ul, .content-page .content .content-formatted ol {
   margin-left: 50px;
   margin-right: 50px;
 }
@@ -371,6 +372,10 @@ body.search-open {
 .quotation .content-formatted p:first-child {
   margin-top: 15px;
 }
+.content-formatted ul,
+.content-formatted ol {
+  padding-left: 30px;
+}
 .content-formatted a {
   text-decoration: underline;
   color: #e4ac00;
@@ -396,7 +401,7 @@ body.search-open {
   padding: 10px;
   font-size: 14px;
   background-color: black;
-  background-color: rgba(0, 0, 0, 0.02);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 .content-formatted pre code {
   display: block;
@@ -421,7 +426,7 @@ body.search-open {
   padding: 2px;
 }
 .content-formatted .table-container {
-  margin-top: 20px;
+  margin-top: 35px;
 }
 .content-formatted .overthrow {
   overflow: auto;
@@ -441,9 +446,12 @@ body.search-open {
   width: 100%;
   margin: 0 auto;
   border: 1px solid black;
-  border: 1px solid rgba(0, 0, 0, 0.02);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-collapse: collapse;
   border-spacing: 0;
+}
+.editmode .content-formatted table {
+  margin-top: 35px;
 }
 .content-formatted table tr:first-child td {
   color: white;
@@ -455,11 +463,11 @@ body.search-open {
   color: rgba(255, 255, 255, 0.5);
 }
 .content-formatted table tr td {
-  padding: 11px 17px;
+  padding: 9px 13px;
   border-top: 1px solid black;
-  border-top: 1px solid rgba(0, 0, 0, 0.02);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid black;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.02);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 .contacts .content-formatted table, .footer .content-formatted table {
   width: auto;
@@ -1442,6 +1450,10 @@ body.search-open {
 }
 
 /* GALLERY */
+.edys-gallery-area {
+  margin: 0 50px;
+}
+
 .header-body-top .edys-gallery {
   display: inline-block;
   margin: 0 auto;
@@ -1988,6 +2000,7 @@ a.edys-gallery-item {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 .comments .wrap {
+  max-width: 600px;
   padding: 26px 20px 20px;
 }
 .comments .comment {
@@ -2000,6 +2013,7 @@ a.edys-gallery-item {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 .comments .comments-title {
+  margin: 0;
   text-align: left;
   font-weight: 400;
   font-style: italic;
