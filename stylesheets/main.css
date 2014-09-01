@@ -461,8 +461,12 @@ body.search-open {
 .contacts .content-formatted table tr td:first-child, .footer .content-formatted table tr td:first-child {
   border-left: none;
 }
+.contacts .content-formatted table {
+  font-size: 24px;
+  line-height: 1;
+}
 .contacts .content-formatted table tr td {
-  padding: 0 15px;
+  padding: 0 25px;
   color: black;
   color: rgba(0, 0, 0, 0.73);
   border-top: none;
@@ -1292,7 +1296,7 @@ body.search-open {
 }
 
 .contacts .wrap {
-  padding: 55px 20px;
+  padding: 61px 20px 53px;
 }
 @media screen and (max-width: 900px) {
   .contacts .wrap {
