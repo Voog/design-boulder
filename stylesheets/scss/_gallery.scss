@@ -12,6 +12,55 @@
 
 a.edys-gallery-item {
   display: block;
+
+  .content & {
+    width: 95.7px;
+    height: 95.7px;
+
+    &:nth-child(7n+7) {
+      margin-right: 0;
+    }
+
+    @include query($tablet-4 + 32) {
+      &:nth-child(7n+7) {
+        margin-right: 5px;
+      }
+
+      &:nth-child(6n+6) {
+        margin-right: 0;
+      }
+    }
+
+    @include query($mobile-1 - 1) {
+      &:nth-child(6n+6) {
+        margin-right: 5px;
+      }
+
+      &:nth-child(5n+5) {
+        margin-right: 0;
+      }
+    }
+
+    @include query($mobile-2 + 31) {
+      &:nth-child(5n+5) {
+        margin-right: 5px;
+      }
+
+      &:nth-child(4n+4) {
+        margin-right: 0;
+      }
+    }
+
+    @include query($mobile-4 - 43) {
+      &:nth-child(4n+4) {
+        margin-right: 5px;
+      }
+
+      &:nth-child(3n+3) {
+        margin-right: 0;
+      }
+    }
+  }
 }
 
 .edys-gallery-image {

@@ -1458,6 +1458,45 @@ body.search-open {
 a.edys-gallery-item {
   display: block;
 }
+.content a.edys-gallery-item {
+  width: 95.7px;
+  height: 95.7px;
+}
+.content a.edys-gallery-item:nth-child(7n+7) {
+  margin-right: 0;
+}
+@media screen and (max-width: 739px) {
+  .content a.edys-gallery-item:nth-child(7n+7) {
+    margin-right: 5px;
+  }
+  .content a.edys-gallery-item:nth-child(6n+6) {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 639px) {
+  .content a.edys-gallery-item:nth-child(6n+6) {
+    margin-right: 5px;
+  }
+  .content a.edys-gallery-item:nth-child(5n+5) {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 538px) {
+  .content a.edys-gallery-item:nth-child(5n+5) {
+    margin-right: 5px;
+  }
+  .content a.edys-gallery-item:nth-child(4n+4) {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 437px) {
+  .content a.edys-gallery-item:nth-child(4n+4) {
+    margin-right: 5px;
+  }
+  .content a.edys-gallery-item:nth-child(3n+3) {
+    margin-right: 0;
+  }
+}
 
 .edys-gallery-image {
   display: block;
