@@ -6,7 +6,7 @@
     dateFormat: function(date) {
       return date.toLocaleString(langCode, dateOptions);
     },
-    dateFormatAttr: function(date) {
+    dateAttrFormat: function(date) {
       return date.getFullYear() + "-" + (date.getMonth()+1) + "-" + date.getDate();
     },
     older: "older &gt;",
@@ -66,7 +66,7 @@
             "title": article.title,
             "excerpt": article.excerpt,
             "date": this.options.dateFormat(new Date(article.created_at)),
-            "dateAttr": this.options.dateFormatAttr(new Date(article.created_at)),
+            "dateAttr": this.options.dateAttrFormat(new Date(article.created_at)),
             "author": article.author,
             "body": article.body
           }));
