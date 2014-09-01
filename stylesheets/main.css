@@ -1455,45 +1455,83 @@ body.search-open {
   margin: 0 auto;
 }
 
-a.edys-gallery-item {
-  display: block;
-}
-.content a.edys-gallery-item {
+.content .edys-gallery-area .edys-gallery-item, .content
+.edy-gallery-area .edys-gallery-item {
   width: 95.7px;
   height: 95.7px;
 }
-.content a.edys-gallery-item:nth-child(7n+7) {
+
+a.edys-gallery-item {
+  display: block;
+}
+
+.public .content-page .content .edys-gallery-item:nth-child(7n+7) {
   margin-right: 0;
 }
 @media screen and (max-width: 739px) {
-  .content a.edys-gallery-item:nth-child(7n+7) {
+  .public .content-page .content .edys-gallery-item:nth-child(7n+7) {
     margin-right: 5px;
   }
-  .content a.edys-gallery-item:nth-child(6n+6) {
+  .public .content-page .content .edys-gallery-item:nth-child(6n+6) {
     margin-right: 0;
   }
 }
 @media screen and (max-width: 639px) {
-  .content a.edys-gallery-item:nth-child(6n+6) {
+  .public .content-page .content .edys-gallery-item:nth-child(6n+6) {
     margin-right: 5px;
   }
-  .content a.edys-gallery-item:nth-child(5n+5) {
+  .public .content-page .content .edys-gallery-item:nth-child(5n+5) {
     margin-right: 0;
   }
 }
 @media screen and (max-width: 538px) {
-  .content a.edys-gallery-item:nth-child(5n+5) {
+  .public .content-page .content .edys-gallery-item:nth-child(5n+5) {
     margin-right: 5px;
   }
-  .content a.edys-gallery-item:nth-child(4n+4) {
+  .public .content-page .content .edys-gallery-item:nth-child(4n+4) {
     margin-right: 0;
   }
 }
 @media screen and (max-width: 437px) {
-  .content a.edys-gallery-item:nth-child(4n+4) {
+  .public .content-page .content .edys-gallery-item:nth-child(4n+4) {
     margin-right: 5px;
   }
-  .content a.edys-gallery-item:nth-child(3n+3) {
+  .public .content-page .content .edys-gallery-item:nth-child(3n+3) {
+    margin-right: 0;
+  }
+}
+.editmode .content-page .content .edys-gallery-item:nth-child(7n+8) {
+  margin-right: 0;
+}
+@media screen and (max-width: 739px) {
+  .editmode .content-page .content .edys-gallery-item:nth-child(7n+8) {
+    margin-right: 5px;
+  }
+  .editmode .content-page .content .edys-gallery-item:nth-child(6n+7) {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 639px) {
+  .editmode .content-page .content .edys-gallery-item:nth-child(6n+7) {
+    margin-right: 5px;
+  }
+  .editmode .content-page .content .edys-gallery-item:nth-child(5n+6) {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 538px) {
+  .editmode .content-page .content .edys-gallery-item:nth-child(5n+6) {
+    margin-right: 5px;
+  }
+  .editmode .content-page .content .edys-gallery-item:nth-child(4n+5) {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 437px) {
+  .editmode .content-page .content .edys-gallery-item:nth-child(4n+5) {
+    margin-right: 5px;
+  }
+  .editmode .content-page .content .edys-gallery-item:nth-child(3n+4) {
     margin-right: 0;
   }
 }
