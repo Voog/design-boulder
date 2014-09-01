@@ -55,11 +55,8 @@
 .blog-page,
 .post-page {
   .post {
-    @include border(top, 1px, solid, $primary-color, 0.1);
-
     &:first-child {
       padding-top: 0;
-      border: none;
     }
   }
 
@@ -119,7 +116,20 @@
   }
 
   .post {
-    padding: 50px 0;
+    padding-top: 50px;
+
+    &:last-child {
+      .post-content {
+        border-bottom: none;
+      }
+    }
+  }
+
+  .post-content {
+    max-width: 600px;
+    margin: 20px auto 0;
+    padding-bottom: 50px;
+    @include border(bottom, 1px, solid, $primary-color, 0.1);
   }
 }
 
@@ -129,3 +139,5 @@
     padding-top: 40px;
   }
 }
+
+

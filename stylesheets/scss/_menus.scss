@@ -207,6 +207,14 @@
       @include opacity(0.8);
     }
   }
+
+  @include query($tablet-2) {
+    .menu {
+      .multilingual & {
+        margin-right: 0;
+      }
+    }
+  }
 }
 
 .menu-lang-btn {
@@ -214,8 +222,6 @@
   position: relative;
   display: inline-block;
   vertical-align: top;
-  // width: 20px;
-  // height: 14px;
   width: 30px;
   height: 25px;
   font-size: 0;

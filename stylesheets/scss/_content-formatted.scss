@@ -87,7 +87,7 @@
   }
 
   h2, h3, h4, h5, h6, p, ul, ol {
-    .content-page .content & {
+    .content-page:not(.blog-page) .content & {
       margin-left: 50px;
       margin-right: 50px;
     }
