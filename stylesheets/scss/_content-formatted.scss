@@ -315,10 +315,6 @@
           display: block;
         }
 
-        table {
-          line-height: inherit;
-        }
-
         tr {
           td {
             width: 100%;
@@ -329,6 +325,7 @@
       }
 
       .contacts & {
+        line-height: inherit;
 
         tr {
           td {

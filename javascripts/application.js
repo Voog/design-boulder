@@ -10660,7 +10660,6 @@ return jQuery;
   var init = function() {
     // ADD SITE WIDE FUNCTIONS HERE
     handleElementsClick();
-    handleFooterPositioning();
     handleFooterContentEdit();
     handleSearchSumbit();
     handleGalleryHover();
@@ -10671,6 +10670,9 @@ return jQuery;
       checkScrollBar();
       handleTableHorizontalScrolling();
     }
+    $(document).ready(function() {
+      handleFooterPositioning();
+    });
   };
 
   // Enables the usage of the initiations outside this file

@@ -485,15 +485,15 @@ body.search-open {
   .contacts .content-formatted table, .contacts .content-formatted table tbody, .contacts .content-formatted table tr, .footer .content-formatted table, .footer .content-formatted table tbody, .footer .content-formatted table tr {
     display: block;
   }
-  .contacts .content-formatted table table, .footer .content-formatted table table {
-    line-height: inherit;
-  }
   .contacts .content-formatted table tr td, .footer .content-formatted table tr td {
     width: 100%;
     float: left;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+  }
+  .contacts .content-formatted table {
+    line-height: inherit;
   }
   .contacts .content-formatted table tr td {
     border-left: none;
