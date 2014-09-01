@@ -4,16 +4,6 @@
 .content-formatted {
   @extend %clearfix;
 
-  .main-feature &,
-  .quotation & {
-    line-height: 1.4;
-  }
-
-  .quotation & {
-    width: 100%;
-    @include align-self(center);
-  }
-
   .header-bottom-inner & {
     margin-top: 40px;
 
@@ -47,6 +37,16 @@
         @include bg($secondary-color, 0.8);
       }
     }
+  }
+
+  .main-feature &,
+  .quotation & {
+    line-height: 1.4;
+  }
+
+  .quotation & {
+    width: 100%;
+    @include align-self(center);
   }
 
   .contacts & {
@@ -315,6 +315,10 @@
           display: block;
         }
 
+        table {
+          line-height: inherit;
+        }
+
         tr {
           td {
             width: 100%;
@@ -325,6 +329,7 @@
       }
 
       .contacts & {
+
         tr {
           td {
             border-left: none;
