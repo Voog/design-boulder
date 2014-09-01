@@ -329,7 +329,7 @@ body.search-open {
   font-size: 24px;
 }
 .main-feature .content-formatted h2 {
-  margin-top: 20px;
+  margin-top: 22px;
   text-align: left;
   font-weight: 400;
   font-style: italic;
@@ -1248,7 +1248,7 @@ body.search-open {
   display: table;
 }
 .summary .inner {
-  padding: 40px 20px;
+  padding: 43px 20px;
 }
 .flexbox .summary .inner {
   -webkit-box-flex: 1;
