@@ -6,8 +6,11 @@
   @include border(top, 1px, solid, $primary-color, 0.1);
 
   .wrap {
-    max-width: 600px;
     padding: 26px 20px 20px;
+
+    .content-page & {
+      max-width: 600px;
+    }
   }
 
   .comment {
@@ -20,11 +23,15 @@
   }
 
   .comments-title {
-    margin: 0;
     text-align: left;
     font-weight: 400;
     font-style: italic;
     font-size: 24px;
+
+    .content-page .content & {
+      margin-left: 0;
+      margin-right: 0;
+    }
   }
 
   .comment-messages {

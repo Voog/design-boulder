@@ -236,7 +236,9 @@
 
   // Container around editable content-area table.
   .table-container {
-    margin-top: 35px;
+    .content & {
+      margin-top: 35px;
+    }
   }
 
   // Overthrow plugin to support horizontal scrolling on older devices that have touch-screens. For example Android 2.3 devices.
@@ -263,8 +265,10 @@
     border-collapse: collapse;
     border-spacing: 0;
 
-    .editmode & {
-      margin-top: 35px;
+    .content & {
+      .editmode & {
+        margin-top: 35px;
+      }
     }
 
     tr {

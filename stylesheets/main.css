@@ -425,7 +425,7 @@ body.search-open {
 .content-formatted .edy-image-container-title {
   padding: 2px;
 }
-.content-formatted .table-container {
+.content .content-formatted .table-container {
   margin-top: 35px;
 }
 .content-formatted .overthrow {
@@ -450,7 +450,7 @@ body.search-open {
   border-collapse: collapse;
   border-spacing: 0;
 }
-.editmode .content-formatted table {
+.editmode .content .content-formatted table {
   margin-top: 35px;
 }
 .content-formatted table tr:first-child td {
@@ -2000,8 +2000,10 @@ a.edys-gallery-item {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 .comments .wrap {
-  max-width: 600px;
   padding: 26px 20px 20px;
+}
+.content-page .comments .wrap {
+  max-width: 600px;
 }
 .comments .comment {
   padding: 30px 0;
@@ -2013,11 +2015,14 @@ a.edys-gallery-item {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 .comments .comments-title {
-  margin: 0;
   text-align: left;
   font-weight: 400;
   font-style: italic;
   font-size: 24px;
+}
+.content-page .content .comments .comments-title {
+  margin-left: 0;
+  margin-right: 0;
 }
 .comments .comment-messages {
   margin: 24px 0;
