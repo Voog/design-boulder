@@ -3,7 +3,6 @@
 .content-formatted {
   form {
     max-width: 100%;
-    margin-top: 20px;
   }
 
   .form_field {
@@ -18,6 +17,14 @@
   .edy-fe-label {
     font-size: 16px;
     @include color($primary-color, 0.73);
+
+    .dark-background & {
+      @include color($white);
+    }
+
+    .header-bottom & {
+      font-style: normal;
+    }
   }
 
   .form_field {
@@ -61,8 +68,6 @@
     font-size: inherit;
     line-height: inherit;
     color: inherit;
-    @include bg($primary-color, 0.02);
-    @include border(all, 1px, solid, $primary-color, 0.1);
     @include inputiosreset;
 
     &:focus {
@@ -76,7 +81,15 @@
     width: 200px;
     margin: 0;
     padding: 5px;
+    @include bg($primary-color, 0.02);
+    @include border(all, 1px, solid, $primary-color, 0.1);
     @include box-sizing(border-box);
+
+    .header-bottom & {
+      @include color($primary-color, 0.73);
+      @include bg($white);
+      @include border(all, 1px, solid, $primary-color, 0.5);
+    }
   }
 
   .form_field_select {
