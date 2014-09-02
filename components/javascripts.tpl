@@ -1,4 +1,4 @@
-<script src="{{ javascripts_path }}/application.min.js"></script>
+<script src="{{ javascripts_path }}/global.min.js"></script>
 <script src="{{ site.static_asset_host }}/libs/picturefill/1.0.0/picturefill.min.js"></script>
 
 {% if site.search.enabled %}

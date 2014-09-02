@@ -1,13 +1,13 @@
 module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-bowercopy');
   grunt.loadNpmTasks('grunt-modernizr');
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-svgmin');
-  grunt.loadNpmTasks('grunt-newer');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   grunt.initConfig({
@@ -24,8 +24,9 @@ module.exports = function(grunt) {
           destPrefix: 'javascripts/src/'
         },
         files: {
-          'concat/jquery.js': 'jquery/dist/jquery.js',
-          'concat/overthrow.js': 'overthrow/src/overthrow-polyfill.js',
+          'concat/global/jquery.js': 'jquery/dist/jquery.js',
+          'concat/global/overthrow.js': 'overthrow/src/overthrow-polyfill.js',
+          'concat/blog___news/moment-with-locales.js': 'moment/min/moment-with-locales.js',
           'modernizr.js': 'modernizr/modernizr.js'
         }
       },
@@ -55,15 +56,40 @@ module.exports = function(grunt) {
       }
     },
 
+    // Copys the independent javascript source files to the javascripts folder.
+    copy: {
+      javascripts: {
+        files: [
+          {
+            expand: true,
+            cwd: 'javascripts/src',
+            src: [
+              '*.js',
+              '!modernizr.js'
+            ],
+            dest: 'javascripts/'
+          }
+        ]
+      }
+    },
+
     // Concatenates javascripts into one file.
     concat: {
-      build: {
+      build_global: {
         src: [
-        'javascripts/src/concat/jquery.js',
-        'javascripts/src/concat/*.js'
+          'javascripts/src/concat/global/jquery.js',
+          'javascripts/src/concat/global/*.js'
         ],
-        dest: 'javascripts/application.js'
-      }
+        dest: 'javascripts/global.js'
+      },
+
+      build_blog___news: {
+        src: [
+          'javascripts/src/concat/blog___news/moment-with-locales.js',
+          'javascripts/src/concat/blog___news/*.js'
+        ],
+        dest: 'javascripts/blog___news.js'
+      },
     },
 
     // Minifies the javascript files.
@@ -140,8 +166,11 @@ module.exports = function(grunt) {
     // Watches the project for changes and recompiles the output files.
     watch: {
       concat: {
-        files: 'javascripts/src/concat/*.js',
-        tasks: 'concat:build'
+        files: [
+          'javascripts/src/concat/global/*.js',
+          'javascripts/src/concat/blog___news/*.js',
+        ],
+        tasks: 'concat'
       },
 
       uglify: {
@@ -149,7 +178,7 @@ module.exports = function(grunt) {
         'javascripts/*.js',
         '!javascripts/*.min.js'
         ],
-        tasks: 'newer:uglify:build',
+        tasks: 'uglify',
         options: {
           spawn: false
         }
@@ -161,25 +190,9 @@ module.exports = function(grunt) {
         options: {
           spawn: false
         }
-      },
-
-      imagemin:  {
-        files: 'images/src/*.{png,jpg,gif}',
-        tasks: 'newer:imagemin:build',
-        options: {
-          spawn: false
-        }
-      },
-
-      svgmin: {
-        files: 'assets/src/*.svg',
-        tasks: 'newer:svgmin:build',
-        options: {
-          spawn: false
-        }
       }
     },
   });
 
-  grunt.registerTask('default', ['bowercopy', 'modernizr', 'concat', 'uglify', 'sass', 'cssmin', 'imagemin', 'svgmin']);
+  grunt.registerTask('default', ['bowercopy', 'modernizr', 'copy', 'concat', 'uglify', 'sass', 'cssmin', 'imagemin', 'svgmin']);
 };

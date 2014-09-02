@@ -1,10 +1,9 @@
 (function($) {
-  var dateOptions = {year: "numeric", month: "long", day: "numeric"};
   var defaults = {
     template: "#article-template",
     perPage: 3,
     dateFormat: function(date) {
-      return date.toLocaleString(langCode, dateOptions);
+      return moment().locale(langCode).format('LL');
     },
     dateAttrFormat: function(date) {
       return date.getFullYear() + "-" + (date.getMonth()+1) + "-" + date.getDate();

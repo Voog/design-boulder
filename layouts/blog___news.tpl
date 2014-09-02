@@ -6,6 +6,7 @@
 
 <body class="blog-page content-page{% if editmode or site.has_many_languages? %} multilingual{% endif %}">
   <div class="container">
+    <div>{{ page.language_code }}</div>
     {% include "header" %}
     {% include "tags-blog" %}
 
@@ -32,8 +33,9 @@
   </div>
 
   {% include "javascripts" %}
+  <script>var langCode ='{% if page.language_code == 'zh'%}zh-cn{% else %}{{ page.language_code }}{% endif %}';</script>
+  <script src="{{ javascripts_path }}/blog___news.js"></script>
 
-  <script>var langCode = "{{ page.language_code }}";</script>
   <script type="text/html" id="article-template">
     <article class="post">
       <header class="post-header">
