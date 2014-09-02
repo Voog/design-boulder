@@ -6,7 +6,6 @@
 
 <body class="blog-page content-page{% if editmode or site.has_many_languages? %} multilingual{% endif %}">
   <div class="container">
-    <div>{{ page.language_code }}</div>
     {% include "header" %}
     {% include "tags-blog" %}
 
