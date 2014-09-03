@@ -476,6 +476,8 @@ $flags:
 
 // Styling rules for the blog listing view pagination.
 .menu-pagination {
+  max-width: 600px;
+  margin: 0 auto 43px;
   text-align: center;
   @include border(all, 1px, solid, $primary-color, 0.1);
 
@@ -493,7 +495,7 @@ $flags:
     &.pagination-previous,
     &.pagination-next {
       .menu-link {
-        padding: 11px 19px;
+        padding: 10px 19px 8px;
       }
     }
 
@@ -513,17 +515,12 @@ $flags:
     }
 
     .menu-link {
-      padding: 11px 5px;
+      padding: 10px 2.5px 8px;
       @include color($primary-color, 0.73);
 
       &.active,
       &:hover {
         @include color($secondary-color);
-      }
-
-      &.active,
-      &.active:hover {
-        font-weight: 700
       }
     }
   }

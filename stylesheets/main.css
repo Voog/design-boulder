@@ -1036,6 +1036,8 @@ body.search-open {
 }
 
 .menu-pagination {
+  max-width: 600px;
+  margin: 0 auto 43px;
   text-align: center;
   border: 1px solid black;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -1044,7 +1046,7 @@ body.search-open {
   padding: 0;
 }
 .menu-pagination .menu-item.pagination-previous .menu-link, .menu-pagination .menu-item.pagination-next .menu-link {
-  padding: 11px 19px;
+  padding: 10px 19px 8px;
 }
 .menu-pagination .menu-item.pagination-previous {
   float: left;
@@ -1057,15 +1059,12 @@ body.search-open {
   border-left: 1px solid rgba(0, 0, 0, 0.1);
 }
 .menu-pagination .menu-item .menu-link {
-  padding: 11px 5px;
+  padding: 10px 2.5px 8px;
   color: black;
   color: rgba(0, 0, 0, 0.73);
 }
 .menu-pagination .menu-item .menu-link.active, .menu-pagination .menu-item .menu-link:hover {
   color: #e4ac00;
-}
-.menu-pagination .menu-item .menu-link.active, .menu-pagination .menu-item .menu-link.active:hover {
-  font-weight: 700;
 }
 
 /* HEADER */
