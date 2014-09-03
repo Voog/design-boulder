@@ -9087,7 +9087,7 @@
     template: "#article-template",
     perPage: 3,
     dateFormat: function(date) {
-      return moment().locale(langCode).format('LL');
+      return moment(date.getFullYear() + "-" + (date.getMonth()+1) + "-" + date.getDate(), 'YYYY-MM-DD').locale(langCode).format('LL');
     },
     dateAttrFormat: function(date) {
       return date.getFullYear() + "-" + (date.getMonth()+1) + "-" + date.getDate();
