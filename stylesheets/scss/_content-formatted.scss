@@ -271,6 +271,12 @@
       }
     }
 
+    .contacts & {
+      .editmode & {
+        margin-top: 0;
+      }
+    }
+
     tr {
       &:first-child {
         td {

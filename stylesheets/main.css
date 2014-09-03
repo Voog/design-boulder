@@ -453,6 +453,9 @@ body.search-open {
 .editmode .content .content-formatted table {
   margin-top: 35px;
 }
+.editmode .contacts .content-formatted table {
+  margin-top: 0;
+}
 .content-formatted table tr:first-child td {
   color: white;
   background-color: #e4ac00;
