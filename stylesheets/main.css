@@ -2158,6 +2158,10 @@ body.search-open {
   color: rgba(0, 0, 0, 0.37);
 }
 
+.comment-form form {
+  margin-left: 0;
+  margin-right: 0;
+}
 .comment-form .placeholder {
   color: black;
   color: rgba(0, 0, 0, 0.8);

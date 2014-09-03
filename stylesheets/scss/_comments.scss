@@ -54,6 +54,11 @@
 .comment-form {
   @extend %clearfix;
 
+  form {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
   .placeholder {
     @include color($primary-color, 0.8);
   }
