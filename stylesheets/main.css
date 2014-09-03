@@ -1467,83 +1467,80 @@ body.search-open {
   margin: 0 auto;
 }
 
-.content .edys-gallery-area .edys-gallery-item, .content
+.content-page .content .edys-gallery-area .edys-gallery-item, .content-page .content
 .edy-gallery-area .edys-gallery-item {
   width: 95.7px;
   height: 95.7px;
 }
 
-a.edys-gallery-item {
-  display: block;
+.content-page .content .edys-gallery-area .edys-gallery-item:nth-child(7n+7) {
+  margin-right: 0;
+}
+@media screen and (max-width: 739px) {
+  .content-page .content .edys-gallery-area .edys-gallery-item:nth-child(7n+7) {
+    margin-right: 5px;
+  }
+  .content-page .content .edys-gallery-area .edys-gallery-item:nth-child(6n+6) {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 639px) {
+  .content-page .content .edys-gallery-area .edys-gallery-item:nth-child(6n+6) {
+    margin-right: 5px;
+  }
+  .content-page .content .edys-gallery-area .edys-gallery-item:nth-child(5n+5) {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 538px) {
+  .content-page .content .edys-gallery-area .edys-gallery-item:nth-child(5n+5) {
+    margin-right: 5px;
+  }
+  .content-page .content .edys-gallery-area .edys-gallery-item:nth-child(4n+4) {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 437px) {
+  .content-page .content .edys-gallery-area .edys-gallery-item:nth-child(4n+4) {
+    margin-right: 5px;
+  }
+  .content-page .content .edys-gallery-area .edys-gallery-item:nth-child(3n+3) {
+    margin-right: 0;
+  }
 }
 
-.public .content-page .content .edys-gallery-item:nth-child(7n+7) {
+.content-page .content .edy-gallery-area .edys-gallery-item:nth-child(7n+8) {
   margin-right: 0;
 }
 @media screen and (max-width: 739px) {
-  .public .content-page .content .edys-gallery-item:nth-child(7n+7) {
+  .content-page .content .edy-gallery-area .edys-gallery-item:nth-child(7n+8) {
     margin-right: 5px;
   }
-  .public .content-page .content .edys-gallery-item:nth-child(6n+6) {
+  .content-page .content .edy-gallery-area .edys-gallery-item:nth-child(6n+7) {
     margin-right: 0;
   }
 }
 @media screen and (max-width: 639px) {
-  .public .content-page .content .edys-gallery-item:nth-child(6n+6) {
+  .content-page .content .edy-gallery-area .edys-gallery-item:nth-child(6n+7) {
     margin-right: 5px;
   }
-  .public .content-page .content .edys-gallery-item:nth-child(5n+5) {
+  .content-page .content .edy-gallery-area .edys-gallery-item:nth-child(5n+6) {
     margin-right: 0;
   }
 }
 @media screen and (max-width: 538px) {
-  .public .content-page .content .edys-gallery-item:nth-child(5n+5) {
+  .content-page .content .edy-gallery-area .edys-gallery-item:nth-child(5n+6) {
     margin-right: 5px;
   }
-  .public .content-page .content .edys-gallery-item:nth-child(4n+4) {
+  .content-page .content .edy-gallery-area .edys-gallery-item:nth-child(4n+5) {
     margin-right: 0;
   }
 }
 @media screen and (max-width: 437px) {
-  .public .content-page .content .edys-gallery-item:nth-child(4n+4) {
+  .content-page .content .edy-gallery-area .edys-gallery-item:nth-child(4n+5) {
     margin-right: 5px;
   }
-  .public .content-page .content .edys-gallery-item:nth-child(3n+3) {
-    margin-right: 0;
-  }
-}
-.editmode .content-page .content .edys-gallery-item:nth-child(7n+8) {
-  margin-right: 0;
-}
-@media screen and (max-width: 739px) {
-  .editmode .content-page .content .edys-gallery-item:nth-child(7n+8) {
-    margin-right: 5px;
-  }
-  .editmode .content-page .content .edys-gallery-item:nth-child(6n+7) {
-    margin-right: 0;
-  }
-}
-@media screen and (max-width: 639px) {
-  .editmode .content-page .content .edys-gallery-item:nth-child(6n+7) {
-    margin-right: 5px;
-  }
-  .editmode .content-page .content .edys-gallery-item:nth-child(5n+6) {
-    margin-right: 0;
-  }
-}
-@media screen and (max-width: 538px) {
-  .editmode .content-page .content .edys-gallery-item:nth-child(5n+6) {
-    margin-right: 5px;
-  }
-  .editmode .content-page .content .edys-gallery-item:nth-child(4n+5) {
-    margin-right: 0;
-  }
-}
-@media screen and (max-width: 437px) {
-  .editmode .content-page .content .edys-gallery-item:nth-child(4n+5) {
-    margin-right: 5px;
-  }
-  .editmode .content-page .content .edys-gallery-item:nth-child(3n+4) {
+  .content-page .content .edy-gallery-area .edys-gallery-item:nth-child(3n+4) {
     margin-right: 0;
   }
 }

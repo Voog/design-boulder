@@ -14,20 +14,18 @@
 .edy-gallery-area {
   .edys-gallery-item {
     .content & {
-      width: 95.7px;
-      height: 95.7px;
+      .content-page & {
+        width: 95.7px;
+        height: 95.7px;
+      }
     }
   }
 }
 
-a.edys-gallery-item {
-  display: block;
-}
-
-.edys-gallery-item {
-  .content & {
-    .content-page & {
-      .public & {
+.edys-gallery-area {
+  .edys-gallery-item {
+    .content & {
+      .content-page & {
         &:nth-child(7n+7) {
           margin-right: 0;
         }
@@ -72,8 +70,14 @@ a.edys-gallery-item {
           }
         }
       }
+    }
+  }
+}
 
-      .editmode & {
+.edy-gallery-area {
+  .edys-gallery-item {
+    .content & {
+      .content-page & {
         &:nth-child(7n+8) {
           margin-right: 0;
         }
