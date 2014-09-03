@@ -711,6 +711,9 @@ body.search-open {
   filter: alpha(opacity=80);
 }
 @media screen and (max-width: 900px) {
+  .menu-sub .menu {
+    text-align: center;
+  }
   .multilingual .menu-sub .menu {
     margin-right: 0;
   }

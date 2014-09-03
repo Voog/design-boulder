@@ -210,6 +210,8 @@
 
   @include query($tablet-2) {
     .menu {
+      text-align: center;
+
       .multilingual & {
         margin-right: 0;
       }
