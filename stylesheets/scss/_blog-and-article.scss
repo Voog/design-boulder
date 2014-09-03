@@ -1,7 +1,7 @@
 /* BLOG & BLOG ARTICLE */
 .post-title {
   &, & a {
-    word-break: break-word;
+    @include hyphenate;
   }
 }
 

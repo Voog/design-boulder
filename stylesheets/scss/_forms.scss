@@ -242,6 +242,14 @@
     @include color($green);
   }
 
+  @include query($tablet-3 - 76) {
+    form,
+    .form {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
   @include query($mobile-4) {
     .form_field_textfield,
     .form_field_textarea,
