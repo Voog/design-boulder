@@ -9,7 +9,7 @@
     {% include "header" %}
     {% include "tags-post" %}
 
-    <main class="content js-content" role="main">
+    <main class="content" role="main">
       {% include "post-box" with "article" %}
 
       <div class="comments content-formatted">

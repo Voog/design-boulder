@@ -106,6 +106,14 @@
   .post-body {
     margin-top: 47px;
   }
+
+  @include query($mobile-1) {
+    .post-title {
+      &, a {
+        font-size: 32px;
+      }
+    }
+  }
 }
 
 // Style rules for the blog listing view only

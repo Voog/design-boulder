@@ -10,7 +10,7 @@
     <div class="container js-container">
       {% include "header" with "content" %}
 
-      <main class="content js-content" role="main">
+      <main class="content" role="main">
         <div class="main-feature">
           <div class="wrap">
             <div class="feature-left inner content-formatted">{% content name="feature_left_content" %}</div>
@@ -46,7 +46,6 @@
           </section>
         </div>
       </main>
-
 
       {% include "footer" %}
     </div>

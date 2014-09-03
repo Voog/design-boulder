@@ -10373,7 +10373,7 @@ return jQuery;
   // Sets the position of the footer to the bottom of the page
   var handleFooterPositioning = function() {
     footerHeight = $('.js-footer').height();
-    $('.js-content').css({'padding-bottom' : footerHeight});
+    $('.js-footer-positioner').css({'height' : footerHeight});
   };
 
   var handleFooterContentEdit = function() {

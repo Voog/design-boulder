@@ -507,7 +507,7 @@ body.search-open {
 .footer .content-formatted table tr td:last-child {
   padding-right: 0;
 }
-@media screen and (max-width: 908px) {
+@media screen and (max-width: 640px) {
   .contacts .content-formatted table, .contacts .content-formatted table tbody, .contacts .content-formatted table tr, .footer .content-formatted table, .footer .content-formatted table tbody, .footer .content-formatted table tr {
     display: block;
   }
@@ -1191,7 +1191,6 @@ body.search-open {
 
 /* CONTENT */
 .content {
-  padding-bottom: 80px;
   background-color: white;
 }
 .content .wrap {
@@ -1440,6 +1439,13 @@ body.search-open {
 .blog-page .post-body,
 .post-page .post-body {
   margin-top: 47px;
+}
+@media screen and (max-width: 640px) {
+  .blog-page .post-title, .blog-page .post-title a,
+  .post-page .post-title,
+  .post-page .post-title a {
+    font-size: 32px;
+  }
 }
 
 .blog-page .post-add-btn {
@@ -2180,6 +2186,10 @@ body.search-open {
 }
 
 /* FOOTER */
+.footer-positioner {
+  height: 89px;
+}
+
 .footer {
   position: absolute;
   left: 0;
@@ -2226,7 +2236,12 @@ body.search-open {
   border: 1px solid black;
   border: 1px solid rgba(0, 0, 0, 0.75);
 }
-@media screen and (max-width: 816px) {
+@media screen and (max-width: 749px) {
+  .footer .footer-right {
+    float: left;
+  }
+}
+@media screen and (max-width: 640px) {
   .footer .footer-left,
   .footer .footer-right {
     float: none;

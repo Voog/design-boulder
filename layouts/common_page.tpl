@@ -9,7 +9,7 @@
     {% include "header" %}
     {% include "menu-level-2" %}
 
-    <main class="content js-content" role="main">
+    <main class="content" role="main">
       <div class="wrap">
         <section class="content-body content-formatted">{% content %}</section>
       </div>

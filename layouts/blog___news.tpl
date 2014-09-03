@@ -9,7 +9,7 @@
     {% include "header" %}
     {% include "tags-blog" %}
 
-    <main class="content js-content" role="main">
+    <main class="content" role="main">
       <div class="wrap">
         {% if editmode %}<div class="post-add-btn">{% addbutton %}</div>{% endif %}
 

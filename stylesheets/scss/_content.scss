@@ -1,7 +1,6 @@
 /* CONTENT */
 // Styling rules for the site's main content area. These rules affect the entire site.
 .content {
-  padding-bottom: 80px;
   @include bg($white);
 
   .wrap {

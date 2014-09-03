@@ -1,5 +1,9 @@
 /* FOOTER */
 // Styling rules for the site's footer. These rules affect the entire site.
+.footer-positioner {
+  height: 89px;
+}
+
 .footer {
   position:absolute;
   left:0;
@@ -56,7 +60,13 @@
     }
   }
 
-  @include query($tablet-3) {
+  @include query($tablet-3 - 67) {
+    .footer-right {
+      float: left;
+    }
+  }
+
+  @include query($mobile-1) {
     .footer-left,
     .footer-right {
       float: none;

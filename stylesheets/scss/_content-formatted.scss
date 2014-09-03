@@ -349,7 +349,7 @@
       }
     }
 
-    @include query($tablet-2 + 8) {
+    @include query($mobile-1) {
       .contacts &,
       .footer & {
         &, tbody, tr {
