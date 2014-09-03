@@ -1850,8 +1850,11 @@ a.edys-gallery-item {
 }
 
 /* FORMS */
-.content-formatted form {
+.content-formatted form,
+.content-formatted .form {
   max-width: 100%;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 .content-formatted .form_field {
   margin-top: 20px;
