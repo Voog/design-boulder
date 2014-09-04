@@ -2215,7 +2215,7 @@ body.search-open {
 
 /* FOOTER */
 .footer-positioner {
-  height: 89px;
+  height: 80px;
 }
 
 .footer {
@@ -2234,7 +2234,7 @@ body.search-open {
   color: rgba(255, 255, 255, 0.5);
 }
 .footer .wrap {
-  padding: 28px 20px 27px;
+  padding: 24px 20px 22px;
 }
 .footer .footer-left,
 .footer .footer-right {

@@ -1,7 +1,7 @@
 /* FOOTER */
 // Styling rules for the site's footer. These rules affect the entire site.
 .footer-positioner {
-  height: 89px;
+  height: 80px;
 }
 
 .footer {
@@ -22,7 +22,7 @@
   .wrap {
     @extend %clearfix;
     @extend %wide-wrap;
-    padding: 28px 20px 27px;
+    padding: 24px 20px 22px;
   }
 
   .footer-left,
