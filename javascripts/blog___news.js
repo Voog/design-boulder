@@ -9119,7 +9119,7 @@
     fetch: function(page, f) {
       this.$el.trigger('articles.loading');
       var tag_txt = (this.options.tags) ? 'tag[]=' + this.options.tags.join('&tag[]=') +'&' : '',
-      page_id_txt = (this.options.pageId) ? 'page_id=' + this.options.pageId : '',
+      page_id_txt = (this.options.page_id) ? 'page_id=' + this.options.page_id : '',
       url = '/admin/api/articles.json?' + tag_txt + 'page='+ page + '&per_page=' + this.options.perPage + '&' + page_id_txt + '&include_details=true' + '&lang=' + this.options.lang;
       $.ajax({
         url: url,
@@ -9157,6 +9157,17 @@
         if(this.$pageLinks) {
           this.$pageLinks.find('.pagination-nr.active').removeClass('active');
           this.$pageLinks.find('.pagination-nr[data-page="'+this.currentPage+'"]').addClass('active');
+
+          var paginationNr = $('.js-pagination-nr');
+          if (paginationNr.first().hasClass('active')) {
+            $('.js-pagination-next').removeClass('disabled');
+            $('.js-pagination-previous').addClass('disabled');
+          } else if (paginationNr.last().hasClass('active')) {
+            $('.js-pagination-previous').removeClass('disabled');
+            $('.js-pagination-next').addClass('disabled');
+          } else {
+            $('.js-pagination-previous, .js-pagination-next').removeClass('disabled');
+          }
         }
       }
     },
@@ -9197,7 +9208,7 @@
       if (!this.$pageLinks) {
         var $list = $('<div class="wrap"><ul class="menu"></ul></div>');
 
-        $list.find('.menu').append($('<li class="menu-item pagination-previous"><a class="menu-link" href="#">'+ this.options.newer +'</a></li>').click($.proxy(function(event) {
+        $list.find('.menu').append($('<li class="menu-item pagination-previous js-pagination-previous"><a class="menu-link" href="#">'+ this.options.newer +'</a></li>').click($.proxy(function(event) {
           event.preventDefault();
           this.prev();
         }, this)));
@@ -9205,14 +9216,14 @@
         if (this.options.nr_articles) {
           var pages = Math.ceil(this.options.nr_articles / this.options.perPage);
           for (var i=1; i <= pages; i++) {
-            $list.find('.menu').append($('<li class="menu-item"><a class="menu-link pagination-nr" href="#" data-page="'+i+'">'+i+'</a></li>').click($.proxy(function(event) {
+            $list.find('.menu').append($('<li class="menu-item"><a class="menu-link pagination-nr js-pagination-nr" href="#" data-page="'+i+'">'+i+'</a></li>').click($.proxy(function(event) {
               event.preventDefault();
               this.showPage(parseInt($(event.target).data('page'), 10));
             }, this)));
           }
         }
 
-        $list.find('.menu').append($('<li class="menu-item pagination-next"><a class="menu-link" href="#">'+ this.options.older +'</a></li>').click($.proxy(function(event) {
+        $list.find('.menu').append($('<li class="menu-item pagination-next js-pagination-next"><a class="menu-link" href="#">'+ this.options.older +'</a></li>').click($.proxy(function(event) {
           event.preventDefault();
           this.next();
         }, this)));

@@ -53,9 +53,9 @@
   <script>
     $('.blog-articles').articlePages({
         nr_articles: {{ articles.size }},
-        // TODO: Needs language based values.
-        older: 'Next',
-        newer: 'Previous'{% if tags %},
+        older: '{{ 'next' | lc }}',
+        newer: '{{ 'previous' | lc }}',
+        page_id: {{ page.id }}{% if tags %},
         tags: ['{{ tags.first.name }}']{% endif %}
     });
 

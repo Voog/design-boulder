@@ -495,6 +495,7 @@ $flags:
     &.pagination-previous,
     &.pagination-next {
       .menu-link {
+        min-width: 77px;
         padding: 10px 19px 8px;
       }
     }
@@ -507,6 +508,17 @@ $flags:
     &.pagination-next {
       float: right;
       @include border(left, 1px, solid, $primary-color, 0.1);
+    }
+
+    &.disabled {
+      @include opacity(0.5);
+
+      .menu-link {
+        &:hover {
+          @include color($primary-color, 0.73);
+          cursor: default;
+        }
+      }
     }
 
     &,

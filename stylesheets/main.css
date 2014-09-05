@@ -1046,6 +1046,7 @@ body.search-open {
   padding: 0;
 }
 .menu-pagination .menu-item.pagination-previous .menu-link, .menu-pagination .menu-item.pagination-next .menu-link {
+  min-width: 77px;
   padding: 10px 19px 8px;
 }
 .menu-pagination .menu-item.pagination-previous {
@@ -1057,6 +1058,16 @@ body.search-open {
   float: right;
   border-left: 1px solid black;
   border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+.menu-pagination .menu-item.disabled {
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+}
+.menu-pagination .menu-item.disabled .menu-link:hover {
+  color: black;
+  color: rgba(0, 0, 0, 0.73);
+  cursor: default;
 }
 .menu-pagination .menu-item .menu-link {
   padding: 10px 2.5px 8px;
