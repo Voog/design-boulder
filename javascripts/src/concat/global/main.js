@@ -132,6 +132,7 @@
     });
   };
 
+  // Switches the search input and menu button location in DOM for mobile view.
   var handleSearchPositionChange = function() {
     var windowWidth = $(window).width(),
         search = $('.js-search'),
