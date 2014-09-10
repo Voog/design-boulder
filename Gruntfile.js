@@ -1,15 +1,4 @@
 module.exports = function(grunt) {
-  grunt.loadNpmTasks('grunt-bowercopy');
-  grunt.loadNpmTasks('grunt-modernizr');
-  grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-sass');
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
-  grunt.loadNpmTasks('grunt-contrib-imagemin');
-  grunt.loadNpmTasks('grunt-svgmin');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
@@ -195,4 +184,15 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('default', ['bowercopy', 'modernizr', 'copy', 'concat', 'uglify', 'sass', 'cssmin', 'imagemin', 'svgmin']);
+
+  grunt.loadNpmTasks('grunt-bowercopy');
+  grunt.loadNpmTasks('grunt-modernizr');
+  grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-imagemin');
+  grunt.loadNpmTasks('grunt-svgmin');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 };
