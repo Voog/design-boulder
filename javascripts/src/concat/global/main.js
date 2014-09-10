@@ -93,7 +93,6 @@
 
   // scrolls to the comment-form if comment submit failed (to show the error messages to the user)
   var focusFormWithErrors = function() {
-    console.log('thisis');
     $(document).ready(function() {
       if ($('.comment-form').hasClass('form_with_errors')) {
         $('html, body').scrollTop($('.comment-form').offset().top);
@@ -203,7 +202,8 @@
   window.site = $.extend(window.site || {}, {
     initBlogPage: initBlogPage,
     initArticlePage: initArticlePage,
-    initCommonPage: initCommonPage
+    initCommonPage: initCommonPage,
+    initFrontPage: initFrontPage
   });
 
   init();

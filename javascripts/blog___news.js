@@ -9193,7 +9193,7 @@
       this.$el.trigger('articles.loading');
       var tag_txt = (this.options.tags) ? 'tag[]=' + this.options.tags.join('&tag[]=') +'&' : '',
       page_id_txt = (this.options.page_id) ? 'page_id=' + this.options.page_id : '',
-      url = '/admin/api/articles.json?' + tag_txt + 'page='+ page + '&per_page=' + this.options.perPage + '&' + page_id_txt + '&include_details=true' + '&lang=' + this.options.lang;
+      url = '/admin/api/articles.json?' + tag_txt + 'page='+ page + '&per_page=' + this.options.perPage + '&' + page_id_txt + '&include_details=true';
       $.ajax({
         url: url,
         dataType: 'json',
