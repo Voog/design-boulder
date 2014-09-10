@@ -51,6 +51,7 @@
     </div>
 
     {% include "javascripts" %}
+    <script>site.initFrontPage();</script>
     {% include "edicy-tools" %}
   </body>
 </html>

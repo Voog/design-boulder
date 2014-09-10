@@ -37,6 +37,7 @@
   </div>
 
   {% include "javascripts" %}
+  <script>site.initArticlePage();</script>
   <script src="{{ javascripts_path }}/placeholder.js"></script>
   <script>$('.js-placeholder').placeholder();</script>
 </body>

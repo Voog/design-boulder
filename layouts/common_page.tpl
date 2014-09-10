@@ -19,5 +19,6 @@
   </div>
 
   {% include "javascripts" %}
+    <script type="text/javascript">site.initCommonPage();</script>
 </body>
 </html>

@@ -415,10 +415,12 @@ body.search-open {
   margin-bottom: 8px;
 }
 .content-formatted .edy-positionable-container-left {
-  margin-right: 15px;
+  margin-left: 50px;
+  margin-right: 3%;
 }
 .content-formatted .edy-positionable-container-right {
-  margin-left: 15px;
+  margin-left: 3%;
+  margin-right: 50px;
 }
 .content-formatted .edy-image-container-title {
   padding: 2px;

@@ -3,22 +3,29 @@
   <script>
     // Front page header image and color data preview and save logic.
     var pageData = new Edicy.CustomData({
-        type: 'page',
-        id: '{{ page.id }}'
+      type: 'page',
+      id: '{{ page.id }}'
     });
 
     var bgPickerHeader = new Edicy.BgPicker($('.js-bgpicker-header-settings'), {
-        picture: true,
-        color: true,
-        showAlpha: true,
+      picture: true,
+      color: true,
+      showAlpha: true,
 
       preview: function(data) {
         var img = (data.image && data.image !== '') ? 'url(' + data.image + ')' : 'none',
             oldImg = $('.js-bgpicker-header-image').css('background-image'),
             col = (data.color && data.color !== '') ? data.color : 'transparent',
-            opacity = (data.colorData && data.colorData !== '') ? data.colorData.a : '',
+            opacity = (data.colorData && data.colorData !== '') ? data.colorData.a : 'none',
             colorData = (data.colorData && data.colorData !== '') ? data.colorData : '',
             lightness = colorData && colorData !== '' && colorData.lightness ? colorData.lightness : 0;
+
+            console.log('img: ' + img);
+            console.log('oldImg: ' + oldImg);
+            console.log('col: ' + col);
+            console.log('opacity: ' +  opacity);
+            console.log(colorData);
+            console.log('lightness: ' + lightness);
 
         // removes the current lightness class.
         $('.js-header-bottom').removeClass('light-background dark-background');
