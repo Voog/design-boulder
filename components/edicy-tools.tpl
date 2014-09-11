@@ -17,14 +17,14 @@
             oldImg = $('.js-bgpicker-header-image').css('background-image'),
             col = (data.color && data.color !== '') ? data.color : 'transparent',
             opacity = (data.colorData && data.colorData !== '') ? data.colorData.a : 'none',
-            colorData = (data.colorData && data.colorData !== '') ? data.colorData : '',
+            colorData = (data.colorData && data.colorData !== '') ? data.colorData : 'none',
             lightness = colorData && colorData !== '' && colorData.lightness ? colorData.lightness : 0;
 
             console.log('img: ' + img);
             console.log('oldImg: ' + oldImg);
             console.log('col: ' + col);
             console.log('opacity: ' +  opacity);
-            console.log(colorData);
+            console.log('colorData: ' + colorData);
             console.log('lightness: ' + lightness);
 
         // removes the current lightness class.
@@ -50,7 +50,6 @@
         pageData.set({
           'header_image': data.image || '',
           'header_color': data.color || '',
-          'header_opacity': data.colorData.a || '',
           'header_colorData' : data.colorData || '',
           'header_lightness' : data.colorData && data.colorData != '' && data.colorData.lightness ? data.colorData.lightness : 0
         });
