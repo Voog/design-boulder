@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html class="{% if editmode %}editmode{% else %}public{% endif %}" lang="{{ page.language_code }}">
 <head prefix="og: http://ogp.me/ns#">
+  {% include "edicy-tools-variables" %}
   {% include "html-head" %}
   {% if editmode %}<link rel="stylesheet" href="{{ site.static_asset_host }}/libs/edicy-tools/latest/edicy-tools.css">{% endif %}
-  {% include "edicy-tools-variables" %}
 </head>
 
   <body class="front-page">
