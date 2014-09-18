@@ -44,10 +44,11 @@
   {% elsif site.data.fb_image %}
     <meta property="og:image" content="{{ site.data.fb_image }}">
   {% endif %}
+
   <meta property="og:description" content="{{ article.excerpt | strip_html | truncatewords: 200, '...' }}">
   <meta name="description" content="{{ article.excerpt | strip_html | truncatewords: 200, '...' }}">
 {% else %}
-  {% comment %}Facebook OG image dor content pages.{% endcomment %}
+  {% comment %}Facebook OG image for content pages.{% endcomment %}
   {% if page.data.fb_image %}
     <meta property="og:image" content="{{ page.data.fb_image }}">
   {% elsif site.data.fb_image %}
@@ -64,8 +65,8 @@
   {% else %}
     {% unless blog or editmode %}
       {% capture content %}{% content %}{% endcapture %}
-      <meta property="og:description" content="{{ content | strip_html | truncatewords: 200, '...' }}">
-      <meta name="description" content="{{ content | strip_html | truncatewords: 200, '...'  }}">
+      <meta property="og:description" content="{{ content | strip_html | escape | strip_newlines | truncatewords: 200, '...' }}">
+      <meta name="description" content="{{ content | strip_html | escape | truncatewords: 200, '...' }}">
     {% endunless %}
   {% endunless %}
 {% endif %}
