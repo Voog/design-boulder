@@ -250,7 +250,7 @@
     }
   }
 
-  @include query($mobile-4) {
+  @include query($mobile-3) {
     .form_field_textfield,
     .form_field_textarea,
     .form_field_select,

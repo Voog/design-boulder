@@ -60,7 +60,7 @@
           }
         }
 
-        @include query($mobile-4 - 43) {
+        @include query($mobile-3 - 43) {
           &:nth-child(4n+4) {
             margin-right: 5px;
           }
@@ -112,7 +112,7 @@
           }
         }
 
-        @include query($mobile-4 - 43) {
+        @include query($mobile-3 - 43) {
           &:nth-child(4n+5) {
             margin-right: 5px;
           }
