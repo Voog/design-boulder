@@ -489,11 +489,15 @@ $flags:
 
   .menu {
     @extend %clearfix;
+    position: relative;
   }
 
   .menu-item {
     &.pagination-previous,
     &.pagination-next {
+      position: absolute;
+      top: 0;
+
       .menu-link {
         min-width: 77px;
         padding: 10px 19px 8px;
@@ -501,12 +505,12 @@ $flags:
     }
 
     &.pagination-previous {
-      float: left;
+      left: 0;
       @include border(right, 1px, solid, $primary-color, 0.1);
     }
 
     &.pagination-next {
-      float: right;
+      right: 0;
       @include border(left, 1px, solid, $primary-color, 0.1);
     }
 

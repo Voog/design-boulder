@@ -9228,10 +9228,18 @@
           }));
         }, this));
         if(this.$pageLinks) {
-          this.$pageLinks.find('.pagination-nr.active').removeClass('active');
-          this.$pageLinks.find('.pagination-nr[data-page="'+this.currentPage+'"]').addClass('active');
+          this.$pageLinks.find('.js-pagination-item.visible').removeClass('visible').addClass('hidden');
+          this.$pageLinks.find('.js-pagination-item.active').removeClass('active').addClass('hidden');
+          this.$pageLinks.find('.js-pagination-link[data-page="'+this.currentPage+'"]').parent().addClass('active').removeClass('hidden');
 
-          var paginationNr = $('.js-pagination-nr');
+          for (var before = Math.max(this.currentPage - 3, 0); before < this.currentPage; before ++) {
+            this.$pageLinks.find('.js-pagination-link[data-page="'+before+'"]').parent().addClass('visible').removeClass('hidden');
+          }
+          for (var after = this.currentPage + 1; after < this.currentPage + 4; after ++) {
+            this.$pageLinks.find('.js-pagination-link[data-page="'+after+'"]').parent().addClass('visible').removeClass('hidden');
+          }
+
+          var paginationNr = $('.js-pagination-link');
           if (paginationNr.first().hasClass('active')) {
             $('.js-pagination-next').removeClass('disabled');
             $('.js-pagination-previous').addClass('disabled');
@@ -9288,7 +9296,7 @@
         if (this.options.nr_articles) {
           var pages = Math.ceil(this.options.nr_articles / this.options.perPage);
           for (var i=1; i <= pages; i++) {
-            $list.find('.menu').append($('<li class="menu-item"><a class="menu-link pagination-nr js-pagination-nr" href="#" data-page="'+i+'">'+i+'</a></li>').click($.proxy(function(event) {
+            $list.find('.menu').append($('<li class="menu-item js-pagination-item hidden"><a class="menu-link js-pagination-link" href="#" data-page="'+i+'">'+i+'</a></li>').click($.proxy(function(event) {
               event.preventDefault();
               this.showPage(parseInt($(event.target).data('page'), 10));
             }, this)));

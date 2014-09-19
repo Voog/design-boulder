@@ -101,6 +101,9 @@ body.search-open {
 .loading-status {
   text-align: center;
 }
+.loading-status.hidden {
+  display: none;
+}
 
 .loader {
   position: relative;
@@ -1036,17 +1039,24 @@ body.search-open {
 .content .menu-pagination .wrap {
   padding: 0;
 }
+.menu-pagination .menu {
+  position: relative;
+}
+.menu-pagination .menu-item.pagination-previous, .menu-pagination .menu-item.pagination-next {
+  position: absolute;
+  top: 0;
+}
 .menu-pagination .menu-item.pagination-previous .menu-link, .menu-pagination .menu-item.pagination-next .menu-link {
   min-width: 77px;
   padding: 10px 19px 8px;
 }
 .menu-pagination .menu-item.pagination-previous {
-  float: left;
+  left: 0;
   border-right: 1px solid #000000;
   border-right: 1px solid rgba(0, 0, 0, 0.1);
 }
 .menu-pagination .menu-item.pagination-next {
-  float: right;
+  right: 0;
   border-left: 1px solid #000000;
   border-left: 1px solid rgba(0, 0, 0, 0.1);
 }
