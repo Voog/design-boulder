@@ -47,12 +47,10 @@
   <script>
     $('.js-blog-articles').on({
       'articles.loading': function() {
-        setTimeout(function() {
-          $('.js-loading-status').html('<div class="loader"><div class="loader-cube-1"></div><div class="loader-cube-2"></div></div>');
-        }, 1500);
+        $('.js-loading-status').html('<div class="loader"><div class="loader-cube-1"></div><div class="loader-cube-2"></div></div>');
       },
       'articles.loaded': function() {
-        $('.js-loading-status').html();
+        $('.js-loading-status').html('');
       }
     });
 
