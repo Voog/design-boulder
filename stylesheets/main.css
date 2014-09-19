@@ -425,6 +425,12 @@ body.search-open {
 .content-formatted .edy-image-container-title {
   padding: 2px;
 }
+.content-formatted .table-container {
+  border-left: 1px solid #000000;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  border-right: 1px solid #000000;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
 .content .content-formatted .table-container {
   margin-top: 35px;
 }
@@ -436,17 +442,9 @@ body.search-open {
   overflow: auto;
   -webkit-overflow-scrolling: none;
 }
-.content-formatted .horizontal-scroll {
-  border-left: 1px dashed #000000;
-  border-left: 1px dashed rgba(0, 0, 0, 0.1);
-  border-right: 1px dashed #000000;
-  border-right: 1px dashed rgba(0, 0, 0, 0.1);
-}
 .content-formatted table {
   width: 100%;
   margin: 0 auto;
-  border: 1px solid #000000;
-  border: 1px solid rgba(0, 0, 0, 0.1);
   border-collapse: collapse;
   border-spacing: 0;
 }

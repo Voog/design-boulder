@@ -244,6 +244,9 @@
 
   // Container around editable content-area table.
   .table-container {
+    @include border(left, 1px, solid, $primary-color, 0.1);
+    @include border(right, 1px, solid, $primary-color, 0.1);
+
     .content & {
       margin-top: 35px;
     }
@@ -260,16 +263,9 @@
     }
   }
 
-  // Adds dashed border to indicate that the table is too wide and can be scrolled horizontally.
-  .horizontal-scroll {
-    @include border(left, 1px, dashed, $primary-color, 0.1);
-    @include border(right, 1px, dashed, $primary-color, 0.1);
-  }
-
   table {
     width: 100%;
     margin: 0 auto;
-    @include border(all,1px,solid,$primary-color, 0.1);
     border-collapse: collapse;
     border-spacing: 0;
 

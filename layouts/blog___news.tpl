@@ -13,17 +13,11 @@
       <div class="wrap">
         {% if editmode %}<div class="post-add-btn">{% addbutton %}</div>{% endif %}
 
-        <section class="blog-articles">
-          <span class="loading-status js-loading-status">
-            <div class="loader">
-              <div class="loader-cube-1"></div>
-              <div class="loader-cube-2"></div>
-            </div>
-          </span>
-        </section>
+        <section class="blog-articles js-blog-articles"></section>
+        <div class="loading-status js-loading-status"></div>
 
         {% if articles.size > 3 %}
-          <nav class="menu-pagination"></nav>
+          <div class="js-menu-pagination-wrap"></div>
         {% endif %}
       </div>
     </main>
@@ -51,7 +45,18 @@
   </script>
 
   <script>
-    $('.blog-articles').articlePages({
+    $('.js-blog-articles').on({
+      'articles.loading': function() {
+        setTimeout(function() {
+          $('.js-loading-status').html('<div class="loader"><div class="loader-cube-1"></div><div class="loader-cube-2"></div></div>');
+        }, 1500);
+      },
+      'articles.loaded': function() {
+        $('.js-loading-status').remove()
+      }
+    });
+
+    $('.js-blog-articles').articlePages({
         nr_articles: {{ articles.size }},
         older: '{{ 'next' | lc }}',
         newer: '{{ 'previous' | lc }}',
@@ -59,14 +64,9 @@
         tags: ['{{ tags.first.name }}']{% endif %}
     });
 
-    $('.blog-articles').on({
-      'articles.loading': function() { $('js-loading-status').html('<div class="wrap"><div class="loader"><div class="loader-cube-1"></div><div class="loader-cube-2"></div></div></div>'); },
-      'articles.loaded': function() { $('js-loading-status').html(''); }
-    });
-
-    $('.menu-pagination').append($('.blog-articles').articlePages('getPageLinks'));
-
     $(document).ready(function() {
+      $('.js-menu-pagination-wrap').append($('.js-blog-articles').articlePages('getPageLinks'));
+
       currentUrl = window.location.href;
       blogUrl = '{{ site.url }}{{ page.path }}';
       if (currentUrl === blogUrl) {

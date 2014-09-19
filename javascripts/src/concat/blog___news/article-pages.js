@@ -120,9 +120,8 @@
     },
 
     getPageLinks: function() {
-
       if (!this.$pageLinks) {
-        var $list = $('<div class="wrap"><ul class="menu"></ul></div>');
+        var $list = $('<nav class="menu-pagination"><div class="wrap"><ul class="menu"></ul></div></nav>');
 
         $list.find('.menu').append($('<li class="menu-item pagination-previous js-pagination-previous"><a class="menu-link" href="#">'+ this.options.newer +'</a></li>').click($.proxy(function(event) {
           event.preventDefault();
