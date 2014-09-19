@@ -9239,7 +9239,7 @@
             this.$pageLinks.find('.js-pagination-link[data-page="'+after+'"]').parent().addClass('visible').removeClass('hidden');
           }
 
-          var paginationNr = $('.js-pagination-link');
+          var paginationNr = $('.js-pagination-item');
           if (paginationNr.first().hasClass('active')) {
             $('.js-pagination-next').removeClass('disabled');
             $('.js-pagination-previous').addClass('disabled');
