@@ -45,7 +45,7 @@ module.exports = function(grunt) {
       }
     },
 
-    // Copys the independent javascript source files to the javascripts folder.
+    // Copys the standalone (not concatenated) javascript source files to the javascripts folder.
     copy: {
       javascripts: {
         files: [
@@ -62,7 +62,7 @@ module.exports = function(grunt) {
       }
     },
 
-    // Concatenates javascripts into one file.
+    // Concatenates the javascript source files to the javascripts folder.
     concat: {
       build_global: {
         src: [
@@ -184,8 +184,6 @@ module.exports = function(grunt) {
     },
   });
 
-  grunt.registerTask('default', ['bowercopy', 'modernizr', 'copy', 'concat', 'uglify', 'sass', 'cssmin', 'imagemin', 'svgmin']);
-
   grunt.loadNpmTasks('grunt-bowercopy');
   grunt.loadNpmTasks('grunt-modernizr');
   grunt.loadNpmTasks('grunt-contrib-copy');
@@ -196,4 +194,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-svgmin');
   grunt.loadNpmTasks('grunt-contrib-watch');
+
+  grunt.registerTask('default', ['bowercopy', 'modernizr', 'copy', 'concat', 'uglify', 'sass', 'cssmin', 'imagemin', 'svgmin']);
 };
