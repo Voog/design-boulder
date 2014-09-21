@@ -160,7 +160,7 @@ module.exports = function(grunt) {
           'javascripts/src/concat/global/*.js',
           'javascripts/src/concat/blog___news/*.js',
         ],
-        tasks: 'concat'
+        tasks: 'newer:concat'
       },
 
       uglify: {
@@ -168,7 +168,7 @@ module.exports = function(grunt) {
         'javascripts/*.js',
         '!javascripts/*.min.js'
         ],
-        tasks: 'uglify',
+        tasks: 'newer:uglify',
         options: {
           spawn: false
         }
@@ -194,6 +194,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-svgmin');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-newer');
 
   grunt.registerTask('default', ['bowercopy', 'modernizr', 'copy', 'concat', 'uglify', 'sass', 'cssmin', 'imagemin', 'svgmin']);
 };
