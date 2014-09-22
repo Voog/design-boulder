@@ -569,6 +569,11 @@ body.search-open {
     background-color: rgba(228, 172, 0, 0.47);
   }
 }
+@media screen and (max-width: 640px) {
+  .menu-btn {
+    margin-left: 0;
+  }
+}
 
 .menu {
   margin-top: 0;
@@ -1255,12 +1260,17 @@ body.search-open {
 }
 
 .main-feature .inner {
-  padding: 48px 20px;
   float: left;
   width: 50%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+.main-feature .inner-left {
+  padding: 48px 20px;
+}
+.main-feature .inner-right {
+  padding: 48px 0 48px 50px;
 }
 .main-feature .edys-gallery-area .edys-gallery-item,
 .main-feature .edy-gallery-area .edys-gallery-item {
@@ -1331,9 +1341,6 @@ body.search-open {
 .no-flexbox .summary .wrap {
   display: table;
 }
-.summary .inner {
-  padding: 43px 20px;
-}
 .flexbox .summary .inner {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -1346,7 +1353,14 @@ body.search-open {
   display: table-cell;
   width: 50%;
 }
+.summary .inner-left {
+  padding: 43px 50px 43px 20px;
+}
+.summary .inner-right {
+  padding: 43px 0 43px 50px;
+}
 .summary .blog {
+  max-width: 428px;
   border-right: 2px solid white;
 }
 .no-flexbox .summary .blog {
@@ -1367,6 +1381,7 @@ body.search-open {
     width: auto;
   }
   .summary .blog {
+    max-width: none;
     border-right: none;
     border-bottom: 4px solid white;
   }

@@ -33,6 +33,10 @@
       }
     }
   }
+
+  @include query($mobile-1) {
+    margin-left: 0;
+  }
 }
 
 .menu {

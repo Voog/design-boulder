@@ -13,14 +13,14 @@
       <main class="content" role="main">
         <div class="main-feature">
           <div class="wrap">
-            <div class="feature-left inner content-formatted">{% content name="feature_left_content" %}</div>
-            <div class="feature-right inner content-formatted">{% content name="feature_right_content" %}</div>
+            <div class="feature-left inner inner-left content-formatted">{% content name="feature_left_content" %}</div>
+            <div class="feature-right inner inner-right content-formatted">{% content name="feature_right_content" %}</div>
           </div>
         </div>
 
         <div class="summary dark-background">
           <div class="wrap">
-            <section class="blog inner">
+            <section class="blog inner inner-left">
               <h1 class="blog-title">{{ "latest_news" | lc }}</h1>
               {% for article in site.latest_articles limit:3 %}
                 <article class="post">
@@ -30,7 +30,7 @@
               {% endfor %}
             </section>
 
-            <section class="quotation inner">
+            <section class="quotation inner inner-right">
               <div class="content-formatted">{% content name="quotation_content" %}</div>
             </section>
           </div>
