@@ -599,7 +599,7 @@ body.search-open {
 
 .menu-main {
   position: relative;
-  top: 4px;
+  top: 3px;
   display: inline-block;
   vertical-align: middle;
 }
@@ -791,7 +791,6 @@ body.search-open {
 
 .menu-lang {
   position: relative;
-  top: 1px;
   margin-left: 17px;
   display: inline-block;
   line-height: 1;
@@ -1635,7 +1634,7 @@ body.search-open {
   margin-left: 15px;
   height: 30px;
   line-height: 1;
-  background-color: white;
+  background-color: #f2f2f2;
 }
 @media screen and (max-width: 640px) {
   .search {
@@ -1652,12 +1651,6 @@ body.search-open {
   position: relative;
   z-index: 20;
   background-color: white;
-  border: 1px solid #000000;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-}
-.search-form.active {
-  border: 1px solid #000000;
-  border: 1px solid rgba(0, 0, 0, 0.3);
 }
 .search-form .search-btn {
   position: absolute;
@@ -1722,13 +1715,12 @@ body.search-open {
   font-family: inherit;
   font-size: 18px;
   line-height: 1;
-  background-color: white;
+  background-color: #f2f2f2;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   border: none;
   -webkit-appearance: textfield;
-  /* Reset HTML5 Search Input in Webkit */
   /* Reset HTML5 Search Input in Webkit */
 }
 .search-input::-webkit-search-decoration, .search-input::-webkit-search-cancel-button, .search-input::-webkit-search-results-button, .search-input::-webkit-search-results-decoration, .search-input::-ms-clear {
@@ -1737,19 +1729,12 @@ body.search-open {
 .search-input::-webkit-search-cancel-button, .search-input::-webkit-search-decoration, .search-input::-webkit-search-results-button, .search-input::-webkit-search-results-decoration {
   -webkit-appearance: none;
 }
-.search-input input[type=search]::-webkit-search-cancel-button,
-.search-input input[type=search]::-webkit-search-decoration,
-.search-input input[type=search]::-webkit-search-results-button,
-.search-input input[type=search]::-webkit-search-results-decoration {
-  -webkit-appearance: none;
-}
-.search-input input[type=search] {
-  -webkit-appearance: textfield;
-  -webkit-box-sizing: content-box;
-}
 .search-input::-webkit-input-placeholder {
   padding: 2px 0 4px 0;
   line-height: 1;
+}
+.search-input:focus {
+  background-color: #ececec;
 }
 @media screen and (max-width: 640px) {
   .search-input {
