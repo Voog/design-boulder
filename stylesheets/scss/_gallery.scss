@@ -130,14 +130,14 @@
   display: block;
   width: auto;
   height: auto;
+  @include transition(opacity 0.3s ease-in);
 
-  &.focus {
+  &.inactive {
     opacity: 0.8;
     @include transition(opacity 0.3s ease-in);
 
     &:hover {
       opacity: 1;
-      @include transition(opacity 0.3s ease-in);
     }
   }
 }

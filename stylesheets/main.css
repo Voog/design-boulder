@@ -1621,18 +1621,18 @@ body.search-open {
   display: block;
   width: auto;
   height: auto;
+  -webkit-transition: opacity 0.3s ease-in;
+  -moz-transition: opacity 0.3s ease-in;
+  transition: opacity 0.3s ease-in;
 }
-.edys-gallery-image.focus {
+.edys-gallery-image.inactive {
   opacity: 0.8;
   -webkit-transition: opacity 0.3s ease-in;
   -moz-transition: opacity 0.3s ease-in;
   transition: opacity 0.3s ease-in;
 }
-.edys-gallery-image.focus:hover {
+.edys-gallery-image.inactive:hover {
   opacity: 1;
-  -webkit-transition: opacity 0.3s ease-in;
-  -moz-transition: opacity 0.3s ease-in;
-  transition: opacity 0.3s ease-in;
 }
 
 /* SEARCH */

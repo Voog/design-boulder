@@ -97,14 +97,14 @@
     });
   };
 
-  // Reduces opacity of the gallery images that are not under the cursor
+  // Reduces opacity of the gallery images that are not under the cursor.
   var handleGalleryHover = function() {
     $('.edys-gallery').mouseover(function() {
-      $(this).find('.edys-gallery-item .edys-gallery-image').addClass('focus');
+      $(this).find('.edys-gallery-image').addClass('inactive');
     });
 
     $('.edys-gallery').mouseout(function() {
-      $(this).find('.edys-gallery-item .edys-gallery-image').removeClass('focus');
+      $(this).find('.edys-gallery-image').removeClass('inactive');
     });
   };
 
