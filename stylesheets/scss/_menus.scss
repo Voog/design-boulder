@@ -484,12 +484,13 @@ $flags:
   .content & {
     .wrap {
       padding: 0;
+      position: relative;
     }
   }
 
   .menu {
     @extend %clearfix;
-    position: relative;
+    margin: 0 115px;
   }
 
   .menu-item {

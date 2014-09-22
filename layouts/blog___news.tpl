@@ -47,10 +47,12 @@
   <script>
     $('.js-blog-articles').on({
       'articles.loading': function() {
+        $('.js-blog-articles').hide();
         $('.js-loading-status').html('<div class="loader"><div class="loader-cube-1"></div><div class="loader-cube-2"></div></div>');
       },
       'articles.loaded': function() {
         $('.js-loading-status').html('');
+        $('.js-blog-articles').show();
       }
     });
 

@@ -9286,9 +9286,9 @@
 
     getPageLinks: function() {
       if (!this.$pageLinks) {
-        var $list = $('<nav class="menu-pagination"><div class="wrap"><ul class="menu"></ul></div></nav>');
+        var $list = $('<nav class="menu-pagination js-menu-pagination"><div class="wrap"><ul class="menu js-menu"></ul></div></nav>');
 
-        $list.find('.menu').append($('<li class="menu-item pagination-previous js-pagination-previous"><a class="menu-link" href="#">'+ this.options.newer +'</a></li>').click($.proxy(function(event) {
+        $list.find('.wrap').prepend($('<div class="menu-item pagination-previous js-pagination-previous"><a class="menu-link" href="#">'+ this.options.newer +'</a></div>').click($.proxy(function(event) {
           event.preventDefault();
           this.prev();
         }, this)));
@@ -9303,7 +9303,7 @@
           }
         }
 
-        $list.find('.menu').append($('<li class="menu-item pagination-next js-pagination-next"><a class="menu-link" href="#">'+ this.options.older +'</a></li>').click($.proxy(function(event) {
+        $list.find('.wrap').append($('<div class="menu-item pagination-next js-pagination-next"><a class="menu-link" href="#">'+ this.options.older +'</a></div>').click($.proxy(function(event) {
           event.preventDefault();
           this.next();
         }, this)));

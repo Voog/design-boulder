@@ -1038,9 +1038,10 @@ body.search-open {
 }
 .content .menu-pagination .wrap {
   padding: 0;
+  position: relative;
 }
 .menu-pagination .menu {
-  position: relative;
+  margin: 0 115px;
 }
 .menu-pagination .menu-item.pagination-previous, .menu-pagination .menu-item.pagination-next {
   position: absolute;
