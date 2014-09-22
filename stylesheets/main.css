@@ -1631,10 +1631,15 @@ body.search-open {
   top: 3px;
   display: inline-block;
   vertical-align: middle;
-  margin-left: 15px;
+  margin-left: 18px;
   height: 30px;
   line-height: 1;
   background-color: #f2f2f2;
+}
+@media screen and (max-width: 900px) {
+  .search {
+    top: 4px;
+  }
 }
 @media screen and (max-width: 640px) {
   .search {
@@ -1711,7 +1716,7 @@ body.search-open {
   width: 140px;
   height: 30px;
   margin: 0;
-  padding: 0 30px 0 7px;
+  padding-left: 9px;
   font-family: inherit;
   font-size: 18px;
   line-height: 1;
@@ -1732,9 +1737,6 @@ body.search-open {
 .search-input::-webkit-input-placeholder {
   padding: 2px 0 4px 0;
   line-height: 1;
-}
-.search-input:focus {
-  background-color: #ececec;
 }
 @media screen and (max-width: 640px) {
   .search-input {
