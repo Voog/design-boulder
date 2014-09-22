@@ -259,8 +259,14 @@ body.search-open {
   display: inline-block;
   padding: 10px 40px;
   text-decoration: none;
-  color: white;
   background-color: #e4ac00;
+}
+.dark-background .content-formatted.header-body-bottom a {
+  color: white;
+}
+.light-background .content-formatted.header-body-bottom a {
+  color: #000000;
+  color: rgba(0, 0, 0, 0.73);
 }
 .content-formatted.header-body-bottom a:hover {
   background-color: #E4AC00;
