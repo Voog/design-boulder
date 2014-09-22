@@ -74,7 +74,7 @@
   };
 
   // Closes the soft keyboards on mobile devices on search submit.
-  var handleSearchSumbit = function() {
+  var handleSearchSubmit = function() {
     $('.js-search-submit').on('click', function() {
       $('.js-search-input').parent().blur();
     });
@@ -184,7 +184,7 @@
     // ADD SITE WIDE FUNCTIONS HERE
     handleElementsClick();
     handleFooterContentEdit();
-    handleSearchSumbit();
+    handleSearchSubmit();
     handleGalleryHover();
     handleSearchPositionChange();
     handleWindowResize();
