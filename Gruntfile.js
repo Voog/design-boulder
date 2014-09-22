@@ -168,7 +168,7 @@ module.exports = function(grunt) {
         'javascripts/*.js',
         '!javascripts/*.min.js'
         ],
-        tasks: 'newer:uglify',
+        tasks: 'uglify',
         options: {
           spawn: false
         }
