@@ -36,6 +36,7 @@
   @include bg($white);
 
   .search-btn {
+    display: none;
     position: absolute;
     top: 0;
     right: 0;
@@ -80,6 +81,7 @@
 
   svg {
     vertical-align: middle;
+    fill: rgba($primary-color, 0.73);
 
     .search-open-btn &,
     .search-close-btn & {
@@ -91,11 +93,14 @@
       width: 16px;
       height: 16px;
     }
-    fill: rgba($secondary-color, 0.67);
   }
 
   .no-svg & {
     background-image: url("../images/ico-search.png");
+  }
+
+  .not-empty & {
+    display: block;
   }
 }
 
@@ -105,9 +110,11 @@
   height: $search-height-1;
   margin: 0;
   padding-left: 9px;
+  padding-right: 30px;
   font-family: inherit;
   font-size: 18px;
   line-height: 1;
+  @include color($primary-color, 0.73);
   @include bg($grey);
   @include box-sizing(border-box);
   border: none;
@@ -145,8 +152,6 @@
 }
 
 .search-submit {
-  @include opacity(0.33);
-
   @include query($mobile-1) {
     width: 45px;
     height: $search-height-2;

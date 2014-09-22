@@ -1668,6 +1668,7 @@ body.search-open {
   background-color: white;
 }
 .search-form .search-btn {
+  display: none;
   position: absolute;
   top: 0;
   right: 0;
@@ -1707,7 +1708,7 @@ body.search-open {
 }
 .search-btn svg {
   vertical-align: middle;
-  fill: rgba(228, 172, 0, 0.67);
+  fill: rgba(0, 0, 0, 0.73);
 }
 .search-open-btn .search-btn svg, .search-close-btn .search-btn svg {
   width: 20px;
@@ -1720,6 +1721,9 @@ body.search-open {
 .no-svg .search-btn {
   background-image: url("../images/ico-search.png");
 }
+.not-empty .search-btn {
+  display: block;
+}
 
 .search-input {
   vertical-align: middle;
@@ -1727,9 +1731,12 @@ body.search-open {
   height: 30px;
   margin: 0;
   padding-left: 9px;
+  padding-right: 30px;
   font-family: inherit;
   font-size: 18px;
   line-height: 1;
+  color: #000000;
+  color: rgba(0, 0, 0, 0.73);
   background-color: #e5e5e5;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -1759,11 +1766,6 @@ body.search-open {
   }
 }
 
-.search-submit {
-  opacity: 0.33;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=33)";
-  filter: alpha(opacity=33);
-}
 @media screen and (max-width: 640px) {
   .search-submit {
     width: 45px;

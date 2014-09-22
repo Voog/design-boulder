@@ -73,6 +73,23 @@
     });
   };
 
+  // Switches the search input and menu button location in DOM for mobile view.
+  var handleSearchPositionChange = function() {
+    var windowWidth = $(window).width(),
+        search = $('.js-search'),
+        menuBtn = $('.js-menu-btn');
+
+    if (windowWidth <= 640) {
+      if (search.next().is(menuBtn)) {
+        search.before(menuBtn);
+      }
+    } else {
+      if (search.prev().is(menuBtn)) {
+        search.after(menuBtn);
+      }
+    }
+  };
+
   // Closes the soft keyboards on mobile devices on search submit.
   var handleSearchSubmit = function() {
     $('.js-search-submit').on('click', function() {
@@ -134,23 +151,6 @@
     });
   };
 
-  // Switches the search input and menu button location in DOM for mobile view.
-  var handleSearchPositionChange = function() {
-    var windowWidth = $(window).width(),
-        search = $('.js-search'),
-        menuBtn = $('.js-menu-btn');
-
-    if (windowWidth <= 640) {
-      if (search.next().is(menuBtn)) {
-        search.before(menuBtn);
-      }
-    } else {
-      if (search.prev().is(menuBtn)) {
-        search.after(menuBtn);
-      }
-    }
-  };
-
   // Initiates the table horisontal scroll function when window is resized
   var handleWindowResize = function() {
     $(window).resize(function() {
@@ -184,9 +184,9 @@
     // ADD SITE WIDE FUNCTIONS HERE
     handleElementsClick();
     handleFooterContentEdit();
+    handleSearchPositionChange();
     handleSearchSubmit();
     handleGalleryHover();
-    handleSearchPositionChange();
     handleWindowResize();
     wrapTables();
     if ($('.table-container').length > 0) {
