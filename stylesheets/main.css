@@ -593,7 +593,7 @@ body.search-open {
 
 .menu-main {
   position: relative;
-  top: 3px;
+  top: 4px;
   display: inline-block;
   vertical-align: middle;
 }
@@ -785,7 +785,7 @@ body.search-open {
 
 .menu-lang {
   position: relative;
-  top: 2px;
+  top: 1px;
   margin-left: 17px;
   display: inline-block;
   line-height: 1;
