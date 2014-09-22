@@ -132,10 +132,12 @@
   height: auto;
 
   &.focus {
-    opacity: 0.6;
+    opacity: 0.8;
+    @include transition(opacity 0.3s ease-in);
 
     &:hover {
       opacity: 1;
+      @include transition(opacity 0.3s ease-in);
     }
   }
 }

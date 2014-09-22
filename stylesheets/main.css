@@ -1607,10 +1607,16 @@ body.search-open {
   height: auto;
 }
 .edys-gallery-image.focus {
-  opacity: 0.6;
+  opacity: 0.8;
+  -webkit-transition: opacity 0.3s ease-in;
+  -moz-transition: opacity 0.3s ease-in;
+  transition: opacity 0.3s ease-in;
 }
 .edys-gallery-image.focus:hover {
   opacity: 1;
+  -webkit-transition: opacity 0.3s ease-in;
+  -moz-transition: opacity 0.3s ease-in;
+  transition: opacity 0.3s ease-in;
 }
 
 /* SEARCH */
