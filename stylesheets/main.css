@@ -1644,7 +1644,7 @@ body.search-open {
   margin-left: 18px;
   height: 30px;
   line-height: 1;
-  background-color: #f2f2f2;
+  background-color: #e5e5e5;
 }
 @media screen and (max-width: 900px) {
   .search {
@@ -1730,7 +1730,7 @@ body.search-open {
   font-family: inherit;
   font-size: 18px;
   line-height: 1;
-  background-color: #f2f2f2;
+  background-color: #e5e5e5;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
