@@ -151,6 +151,10 @@
 
   .inner-right {
     padding: 43px 20px 43px 50px;
+
+    &:first-child {
+      padding: 43px 20px;
+    }
   }
 
   .blog {
@@ -164,6 +168,10 @@
 
   .quotation {
     @include border(left, 2px, solid, $white);
+
+    &:first-child {
+      border-left: none;
+    }
   }
 
   @include query($mobile-1 - 58) {

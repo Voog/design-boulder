@@ -21,15 +21,17 @@
 
         <div class="summary dark-background">
           <div class="wrap">
-            <section class="blog inner inner-left">
-              <h1 class="blog-title">{{ "latest_news" | lc }}</h1>
-              {% for article in site.latest_articles limit:3 %}
-                <article class="post">
-                  <h2 class="post-title"><a href="{{ article.url }}">{{ article.title }}</a></h2>
-                  <time class="post-date" datetime="{{ article.created_at | date : "%Y-%m-%d" }}">{{ article.created_at | date : "%B %d, %Y" }}</time>
-                </article>
-              {% endfor %}
-            </section>
+            {% if site.latest_articles.size > 0 %}
+              <section class="blog inner inner-left">
+                <h1 class="blog-title">{{ "latest_news" | lc }}</h1>
+                {% for article in site.latest_articles limit: 3 %}
+                  <article class="post">
+                    <h2 class="post-title"><a href="{{ article.url }}">{{ article.title }}</a></h2>
+                    <time class="post-date" datetime="{{ article.created_at | date : "%Y-%m-%d" }}">{{ article.created_at | date : "%B %d, %Y" }}</time>
+                  </article>
+                {% endfor %}
+              </section>
+            {% endif %}
 
             <section class="quotation inner inner-right">
               <div class="content-formatted">{% content name="quotation_content" %}</div>

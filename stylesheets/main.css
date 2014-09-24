@@ -1350,6 +1350,9 @@ body.search-open {
 .summary .inner-right {
   padding: 43px 20px 43px 50px;
 }
+.summary .inner-right:first-child {
+  padding: 43px 20px;
+}
 .summary .blog {
   max-width: 428px;
   border-right: 2px solid white;
@@ -1359,6 +1362,9 @@ body.search-open {
 }
 .summary .quotation {
   border-left: 2px solid white;
+}
+.summary .quotation:first-child {
+  border-left: none;
 }
 @media screen and (max-width: 582px) {
   .flexbox .summary .wrap, .no-flexbox .summary .wrap {

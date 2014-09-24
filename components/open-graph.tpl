@@ -25,20 +25,11 @@
   {% endif %}
 {% endif %}
 
-{% if article and article.description != nil and article.description != "" %}
-  <meta property="og:description" content="{{ article.description }}">
-  <meta name="description" content="{{ article.description }}">
-
-  <script>console.log('1');</script>
-{% elsif blog and page.description == nil or page.description == "" %}
-  {% assign excerpt_description = articles.first.excerpt | strip_html | escape | strip_newlines | truncatewords: 200, '...'%}
+{% if blog and (page.description == nil or page.description == "") %}
+  {% assign excerpt_description = articles.first.excerpt | strip_html | escape | strip_newlines | truncatewords: 200, '...' %}
   <meta property="og:description" content="{{ excerpt_description }}">
   <meta name="description" content="{{ excerpt_description }}">
-
-  <script>console.log('2');</script>
-{% elsif page.description != nil and page.description != "" %}
-  <meta property="og:description" content="{{ page.description }}">
-  <meta name="description" content="{{ page.description }}">
-
-  <script>console.log('3');</script>
+{% else %}
+    <meta property="og:description" content="{% if article %}{{ article.description }}{% else %}{{ page.description }}{% endif %}">
+    <meta name="description" content="{% if article %}{{ article.description }}{% else %}{{ page.description }}{% endif %}">
 {% endif %}

@@ -20,6 +20,9 @@
 .quotation .edy-empty-bordered {
   padding: 26.6% 40px;
 }
+.quotation .edy-empty-bordered:first-child {
+  padding: 40px;
+}
 .map .edy-empty-bordered {
   padding: 125px 40px;
 }

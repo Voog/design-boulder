@@ -20,13 +20,6 @@
             colorData = (data.colorData && data.colorData !== '') ? data.colorData : 'none',
             lightness = colorData && colorData !== '' && colorData.lightness ? colorData.lightness : 0;
 
-            console.log('img: ' + img);
-            console.log('oldImg: ' + oldImg);
-            console.log('col: ' + col);
-            console.log('opacity: ' +  opacity);
-            console.log('colorData: ' + colorData);
-            console.log('lightness: ' + lightness);
-
         // removes the current lightness class.
         $('.js-header-bottom').removeClass('light-background dark-background');
         // Checks the opacity of the header background color and sets the lightness class depending on it's value.
@@ -60,7 +53,6 @@
     var headerBtn = new Edicy.TextEditorView({el: $('.js-header-body-bottom-inner')});
     headerBtn.on('change', function() {
       headerBtnContent = $('.js-header-body-bottom-inner').html();
-      console.log(headerBtnContent);
       pageData.set({
         'header_btn': headerBtnContent
       });

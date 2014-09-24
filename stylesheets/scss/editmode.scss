@@ -30,6 +30,10 @@
 
   .quotation & {
     padding: 26.6% 40px;
+
+    &:first-child {
+      padding: 40px;
+    }
   }
 
   .map & {
