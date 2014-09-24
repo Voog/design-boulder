@@ -703,7 +703,7 @@ body.search-open {
 }
 
 .menu-sub .wrap {
-  padding: 12px 20px;
+  padding: 16px 20px 6px;
 }
 .menu-sub .menu {
   text-align: right;
@@ -1065,6 +1065,7 @@ body.search-open {
 }
 .menu-pagination .menu {
   margin: 0 115px;
+  min-height: 48px;
 }
 .menu-pagination .menu-item.pagination-previous, .menu-pagination .menu-item.pagination-next {
   position: absolute;

@@ -181,7 +181,7 @@
 .menu-sub {
   .wrap {
     @extend %wide-wrap;
-    padding: 12px 20px;
+    padding: 16px 20px 6px;
   }
 
   .menu {
@@ -502,6 +502,7 @@ $flags:
   .menu {
     @extend %clearfix;
     margin: 0 115px;
+    min-height: 48px;
   }
 
   .menu-item {
