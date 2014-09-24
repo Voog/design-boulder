@@ -25,19 +25,20 @@
   {% endif %}
 {% endif %}
 
-{% comment %}Open Graph description{% endcomment %}
-{% if article %}
-  {% assign excerpt_text = article.excerpt | strip_html | escape | strip_newlines | remove: " " | size %}
-  {% assign excerpt_description = article.excerpt | strip_html | escape | strip_newlines | truncatewords: 200, '...'%}
-{% elsif blog %}
-  {% assign excerpt_text = articles.first.excerpt | strip_html | escape | strip_newlines | remove: " " | size %}
-  {% assign excerpt_description = articles.first.excerpt | strip_html | escape | strip_newlines | truncatewords: 200, '...'%}
-{% endif %}
+{% if article and article.description != nil and article.description != "" %}
+  <meta property="og:description" content="{{ article.description }}">
+  <meta name="description" content="{{ article.description }}">
 
-{% if blog and excerpt_text > 0 %}
+  <script>console.log('1');</script>
+{% elsif blog and page.description == nil or page.description == "" %}
+  {% assign excerpt_description = articles.first.excerpt | strip_html | escape | strip_newlines | truncatewords: 200, '...'%}
   <meta property="og:description" content="{{ excerpt_description }}">
   <meta name="description" content="{{ excerpt_description }}">
+
+  <script>console.log('2');</script>
 {% elsif page.description != nil and page.description != "" %}
   <meta property="og:description" content="{{ page.description }}">
   <meta name="description" content="{{ page.description }}">
+
+  <script>console.log('3');</script>
 {% endif %}
