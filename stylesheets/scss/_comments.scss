@@ -35,6 +35,7 @@
   }
 
   .comment-messages {
+    @extend %hyphenate;
     margin: 24px 0;
   }
 

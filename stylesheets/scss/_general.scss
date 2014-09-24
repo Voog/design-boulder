@@ -31,6 +31,16 @@ body {
   clear: both;
 }
 
+%hyphenate {
+  // Non standard for webkit
+  word-break: break-word;
+
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
 %stretch {
   top: 0;
   left: 0;

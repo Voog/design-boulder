@@ -73,12 +73,11 @@
 }
 
 .header-title {
-  @include hyphenate;
+  @extend %hyphenate;
   position: relative;
   top: 1px;
   display: inline-block;
   vertical-align: middle;
-  word-break: break-word;
   min-width: 140px;
   min-height: 40px;
   line-height: 1.3;

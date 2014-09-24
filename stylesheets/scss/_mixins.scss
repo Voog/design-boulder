@@ -54,16 +54,6 @@
   }
 }
 
-@mixin hyphenate {
-      // Non standard for webkit
-      word-break: break-word;
-
-  -webkit-hyphens: auto;
-     -moz-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto;
-}
-
 // PERSPECTIVE
 @mixin perspective($value: 1000) {
   -webkit-perspective: $value;
