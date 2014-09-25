@@ -8,7 +8,7 @@
       {% assign header_color_class = ' dark-background' %}
     {% endif %}
   {% else %}
-    {% assign header_color_class = ' light-background' %}
+    {% assign header_color_class = ' dark-background' %}
   {% endif %}
 
   {% comment %}Sets the "front page" header image and color values.{% endcomment %}
