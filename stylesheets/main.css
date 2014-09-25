@@ -1800,6 +1800,10 @@ body.search-open {
 .search-close-btn {
   display: none;
 }
+.search-open-btn svg,
+.search-close-btn svg {
+  fill: #e4ac00;
+}
 
 @media screen and (max-width: 640px) {
   .search-open-btn {

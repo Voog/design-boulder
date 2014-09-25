@@ -161,6 +161,10 @@
 .search-open-btn,
 .search-close-btn {
   display: none;
+
+  svg {
+    fill: rgba($secondary-color, 1);
+  }
 }
 
 .search-open-btn {
