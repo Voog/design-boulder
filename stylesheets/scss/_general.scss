@@ -80,19 +80,16 @@ body {
 }
 
 // Independent elements that can be located everywhere in the DOM and always have the same styling rules.
-.loading-status {
-  text-align: center;
-
-  &.hidden {
-    display: none;
-  }
-}
-
 .loader {
+  display: none;
   position: relative;
   width: 32px;
   height: 32px;
   margin: 100px auto;
+
+  &.visible {
+    display: block;
+  }
 }
 
 .loader-cube-1,

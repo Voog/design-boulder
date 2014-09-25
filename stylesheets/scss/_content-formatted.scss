@@ -231,6 +231,21 @@
     margin: 20px 40px;
   }
 
+  .edy-texteditor-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  .edy-positionable-container-left,
+  .edy-positionable-container-right {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
   .edy-positionable-container-left {
     margin-left: $content-margin;
     margin-right: 3%;

@@ -106,18 +106,15 @@ body.search-open {
   text-align: right;
 }
 
-.loading-status {
-  text-align: center;
-}
-.loading-status.hidden {
-  display: none;
-}
-
 .loader {
+  display: none;
   position: relative;
   width: 32px;
   height: 32px;
   margin: 100px auto;
+}
+.loader.visible {
+  display: block;
 }
 
 .loader-cube-1,
@@ -419,6 +416,18 @@ body.search-open {
 }
 .content-formatted blockquote {
   margin: 20px 40px;
+}
+.content-formatted .edy-texteditor-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.content-formatted .edy-texteditor-container:first-child {
+  margin-top: 0;
+}
+.content-formatted .edy-positionable-container-left,
+.content-formatted .edy-positionable-container-right {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 .content-formatted .edy-positionable-container-left {
   margin-left: 50px;

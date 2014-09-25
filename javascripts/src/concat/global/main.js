@@ -61,18 +61,6 @@
     });
   };
 
-  // Sets the position of the footer to the bottom of the page
-  var handleFooterPositioning = function() {
-    footerHeight = $('.js-footer').height();
-    $('.js-footer-positioner').css({'height' : footerHeight});
-  };
-
-  var handleFooterContentEdit = function() {
-    $('.js-footer').find('.text_partial').keydown(function() {
-      handleFooterPositioning();
-    });
-  };
-
   // Switches the search input and menu button location in DOM for mobile view.
   var handleSearchPositionChange = function() {
     var windowWidth = $(window).width(),
@@ -126,6 +114,18 @@
           $(this).wrap('<div class="table-container overthrow"></div>');
       });
     }
+  };
+
+  // Sets the position of the footer to the bottom of the page
+  var handleFooterPositioning = function() {
+    footerHeight = $('.js-footer').height();
+    $('.js-footer-positioner').css({'height' : footerHeight});
+  };
+
+  var handleFooterContentEdit = function() {
+    $('.js-footer').find('.text_partial').keydown(function() {
+      handleFooterPositioning();
+    });
   };
 
   // Checks the presence of the table scrollbar.

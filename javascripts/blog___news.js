@@ -9181,7 +9181,6 @@
     this.$el = $el;
     this.currentPage = 1;
     this.options = $.extend(defaults, options);
-    this.init();
   };
 
   ArticlePages.prototype = {
@@ -9215,6 +9214,7 @@
 
     render: function(articles) {
       if (articles) {
+        $('.js-loader').removeClass('visible');
         this.$el.html('');
         $.each(articles, $.proxy(function(idx, article) {
           this.$el.append(template($(this.options.template).html(), {
@@ -9288,7 +9288,7 @@
       if (!this.$pageLinks) {
         var $list = $('<nav class="menu-pagination js-menu-pagination"><div class="wrap"><ul class="menu js-menu"></ul></div></nav>');
 
-        $list.find('.wrap').prepend($('<div class="menu-item pagination-previous js-pagination-btn js-pagination-previous"><a class="menu-link" href="#">'+ this.options.newer +'</a></div>').click($.proxy(function(event) {
+        $list.find('.wrap').prepend($('<div class="menu-item pagination-previous js-pagination-btn js-pagination-previous disabled"><a class="menu-link" href="#">'+ this.options.newer +'</a></div>').click($.proxy(function(event) {
           event.preventDefault();
           this.prev();
         }, this)));
@@ -9311,6 +9311,17 @@
         this.$pageLinks = $list;
       }
 
+      this.$pageLinks.find('.js-pagination-item.visible').removeClass('visible').addClass('hidden');
+      this.$pageLinks.find('.js-pagination-item.active').removeClass('active').addClass('hidden');
+      this.$pageLinks.find('.js-pagination-link[data-page="'+this.currentPage+'"]').parent().addClass('active').removeClass('hidden');
+
+      for (var before = Math.max(this.currentPage - 3, 0); before < this.currentPage; before ++) {
+        this.$pageLinks.find('.js-pagination-link[data-page="'+before+'"]').parent().addClass('visible').removeClass('hidden');
+      }
+      for (var after = this.currentPage + 1; after < this.currentPage + 4; after ++) {
+        this.$pageLinks.find('.js-pagination-link[data-page="'+after+'"]').parent().addClass('visible').removeClass('hidden');
+      }
+
       return this.$pageLinks;
     }
   };
@@ -9319,21 +9330,21 @@
     if (options && typeof options == "string") {
       switch (options) {
         case "getObject":
-          return $(this).data('article-pages');
+        return $(this).data('article-pages');
         break;
         case "next":
-          $(this).data('article-pages').next();
+        $(this).data('article-pages').next();
         break;
         case "prev":
-          $(this).data('article-pages').prev();
+        $(this).data('article-pages').prev();
         break;
         case "showPage":
-          if (param) {
-            $(this).data('article-pages').showPage(param);
-          }
+        if (param) {
+          $(this).data('article-pages').showPage(param);
+        }
         break;
         case "getPageLinks":
-          return $(this).data('article-pages').getPageLinks();
+        return $(this).data('article-pages').getPageLinks();
         break;
       }
     } else {

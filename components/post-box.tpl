@@ -1,5 +1,5 @@
 <article class="post">
-  <div class="wrap">
+  {% if post-box == "article" %}<div class="wrap">{% endif %}
     <header class="post-header">
       {% if post-box == "article" %}
         <h1 class="post-title">{% editable article.title %}</h1>
@@ -17,5 +17,5 @@
         <div class="post-body content-formatted">{% editable article.body %}</div>
       {% endif %}
     </div>
-  </div>
+  {% if post-box == "article" %}</div>{% endif %}
 </article>

@@ -13,8 +13,16 @@
       <div class="wrap">
         {% if editmode %}<div class="post-add-btn">{% addbutton %}</div>{% endif %}
 
-        <section class="blog-articles js-blog-articles"></section>
-        <div class="loading-status js-loading-status"></div>
+        <section class="blog-articles js-blog-articles">
+          {% for article in articles limit: 3 %}
+            {% include "post-box" %}
+          {% endfor %}
+        </section>
+
+        <div class="loader js-loader">
+          <div class="loader-cube-1"></div>
+          <div class="loader-cube-2"></div>
+        </div>
 
         {% if articles.size > 3 %}
           <div class="js-menu-pagination-wrap"></div>
@@ -48,10 +56,9 @@
     $('.js-blog-articles').on({
       'articles.loading': function() {
         $('.js-blog-articles').hide();
-        $('.js-loading-status').html('<div class="loader"><div class="loader-cube-1"></div><div class="loader-cube-2"></div></div>');
+        $('.js-loader').addClass('visible');
       },
       'articles.loaded': function() {
-        $('.js-loading-status').html('');
         $('.js-blog-articles').show();
       }
     });
