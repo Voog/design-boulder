@@ -1064,6 +1064,11 @@ body.search-open {
   background-position: -20px -56px;
 }
 
+.menu-pagination-wrap {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 .menu-pagination {
   max-width: 600px;
   margin: 0 auto 43px;
@@ -1077,7 +1082,6 @@ body.search-open {
 }
 .menu-pagination .menu {
   margin: 0 115px;
-  min-height: 48px;
 }
 .menu-pagination .menu-item.pagination-previous, .menu-pagination .menu-item.pagination-next {
   position: absolute;

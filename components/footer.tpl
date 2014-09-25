@@ -2,7 +2,7 @@
 
 <footer class="footer js-footer">
   {% if blog and articles.size > 3 %}
-    <div class="js-menu-pagination-wrap"></div>
+    <div class="menu-pagination-wrap js-menu-pagination-wrap"></div>
   {% endif %}
 
   <div class="footer-inner dark-background">
