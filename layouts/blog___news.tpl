@@ -14,9 +14,9 @@
         {% if editmode %}<div class="post-add-btn">{% addbutton %}</div>{% endif %}
 
         <section class="blog-articles js-blog-articles">
-{% comment %}          {% for article in articles limit: 3 %}
+          {% for article in articles limit: 3 %}
             {% include "post-box" %}
-          {% endfor %}{% endcomment %}
+          {% endfor %}
         </section>
 
         <div class="loader js-loader">
