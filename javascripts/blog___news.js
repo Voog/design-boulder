@@ -9214,7 +9214,6 @@
 
     render: function(articles) {
       if (articles) {
-        $('.js-loader').removeClass('visible');
         this.$el.html('');
         $.each(articles, $.proxy(function(idx, article) {
           this.$el.append(template($(this.options.template).html(), {
@@ -9235,7 +9234,7 @@
           for (var before = Math.max(this.currentPage - 3, 0); before < this.currentPage; before ++) {
             this.$pageLinks.find('.js-pagination-link[data-page="'+before+'"]').parent().addClass('visible').removeClass('hidden');
           }
-          for (var after = this.currentPage + 1; after < this.currentPage + 4; after ++) {
+          for (var after = this.currentPage + 1; after < this.currentPage + 5; after ++) {
             this.$pageLinks.find('.js-pagination-link[data-page="'+after+'"]').parent().addClass('visible').removeClass('hidden');
           }
 

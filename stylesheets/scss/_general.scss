@@ -81,26 +81,30 @@ body {
 
 // Independent elements that can be located everywhere in the DOM and always have the same styling rules.
 .loader {
-  display: none;
-  position: relative;
-  width: 32px;
-  height: 32px;
-  margin: 100px auto;
-
-  &.visible {
-    display: block;
-  }
+  @extend %stretch;
+  position: absolute;
 }
 
-.loader-cube-1,
-.loader-cube-2 {
+.loader-cube {
   position: absolute;
-  top: 0;
-  left: 0;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  opacity: 1;
   width: 10px;
   height: 10px;
+  margin-top: -52px;
+  margin-left: -26px;
   @include bg($primary-color, 0.5);
   @include animation(cubemove 1.8s infinite ease-in-out);
+
+  .loader:not(.hidden) & {
+    @include transition(opacity 0.5s ease-in 1.5s);
+  }
+
+  .hidden & {
+    opacity: 0;
+  }
 }
 
 .loader-cube-2 {

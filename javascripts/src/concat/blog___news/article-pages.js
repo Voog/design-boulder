@@ -57,7 +57,6 @@
 
     render: function(articles) {
       if (articles) {
-        $('.js-loader').removeClass('visible');
         this.$el.html('');
         $.each(articles, $.proxy(function(idx, article) {
           this.$el.append(template($(this.options.template).html(), {

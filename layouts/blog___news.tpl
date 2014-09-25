@@ -5,6 +5,11 @@
 </head>
 
 <body class="blog-page content-page{% if editmode or site.has_many_languages? %} multilingual{% endif %}">
+  <div class="loader js-loader hidden">
+    <div class="loader-cube loader-cube-1"></div>
+    <div class="loader-cube loader-cube-2"></div>
+  </div>
+
   <div class="container">
     {% include "header" %}
     {% include "tags-blog" %}
@@ -18,11 +23,6 @@
             {% include "post-box" %}
           {% endfor %}
         </section>
-
-        <div class="loader js-loader">
-          <div class="loader-cube-1"></div>
-          <div class="loader-cube-2"></div>
-        </div>
       </div>
     </main>
 
@@ -52,10 +52,11 @@
     $('.js-blog-articles').on({
       'articles.loading': function() {
         $('.js-blog-articles').hide();
-        $('.js-loader').addClass('visible');
+        $('.js-loader').removeClass('hidden');
       },
       'articles.loaded': function() {
         $('.js-blog-articles').show();
+        $('.js-loader').addClass('hidden');
       }
     });
 

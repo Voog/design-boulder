@@ -68,7 +68,7 @@ body.search-open {
   hyphens: auto;
 }
 
-.background-image,
+.loader, .background-image,
 .background-color {
   top: 0;
   left: 0;
@@ -107,28 +107,32 @@ body.search-open {
 }
 
 .loader {
-  display: none;
-  position: relative;
-  width: 32px;
-  height: 32px;
-  margin: 100px auto;
-}
-.loader.visible {
-  display: block;
+  position: absolute;
 }
 
-.loader-cube-1,
-.loader-cube-2 {
+.loader-cube {
   position: absolute;
-  top: 0;
-  left: 0;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  opacity: 1;
   width: 10px;
   height: 10px;
+  margin-top: -52px;
+  margin-left: -26px;
   background-color: #000000;
   background-color: rgba(0, 0, 0, 0.5);
   -webkit-animation: cubemove 1.8s infinite ease-in-out;
   -moz-animation: cubemove 1.8s infinite ease-in-out;
   animation: cubemove 1.8s infinite ease-in-out;
+}
+.loader:not(.hidden) .loader-cube {
+  -webkit-transition: opacity 0.5s ease-in 1.5s;
+  -moz-transition: opacity 0.5s ease-in 1.5s;
+  transition: opacity 0.5s ease-in 1.5s;
+}
+.hidden .loader-cube {
+  opacity: 0;
 }
 
 .loader-cube-2 {
