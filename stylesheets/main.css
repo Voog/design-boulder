@@ -2296,10 +2296,10 @@ body.search-open {
   left: 0;
   right: 0;
   bottom: 0;
-  min-height: 80px;
 }
 
 .footer-inner {
+  min-height: 80px;
   color: #FFFFFF;
   color: rgba(255, 255, 255, 0.5);
   background-color: #000000;

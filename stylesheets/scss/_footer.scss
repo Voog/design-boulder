@@ -9,10 +9,10 @@
   left:0;
   right: 0;
   bottom:0;
-  min-height: 80px;
 }
 
 .footer-inner {
+  min-height: 80px;
   @include color($white, 0.5);
   @include bg($primary-color, 0.73);
 
