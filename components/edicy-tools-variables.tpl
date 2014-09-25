@@ -19,7 +19,7 @@
   {% endif %}
 
   {% if page.data.header_color == nil %}
-    {% assign header_color = 'rgba(0,0,0,0.16)' %}
+    {% assign header_color = 'rgba(0,0,0,0.2)' %}
   {% else %}
     {% assign header_color = page.data.header_color %}
   {% endif %}
