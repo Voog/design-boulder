@@ -402,8 +402,11 @@ body.search-open {
 .content-formatted iframe {
   max-width: 100%;
 }
+.map .content-formatted iframe {
+  margin-top: 0;
+}
 .content-formatted iframe, .content-formatted pre {
-  margin-top: 15px;
+  margin-top: 20px;
 }
 .content-formatted pre {
   margin-bottom: 0;
@@ -423,13 +426,6 @@ body.search-open {
 }
 .content-formatted blockquote {
   margin: 20px 40px;
-}
-.content-formatted .edy-texteditor-container {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-.content-formatted .edy-texteditor-container:first-child {
-  margin-top: 0;
 }
 .content-formatted .edy-positionable-container-left,
 .content-formatted .edy-positionable-container-right {

@@ -208,10 +208,14 @@
   // Styling rules for the editable content area images, embedded videos, preformatted texts, code examples etc.
   iframe {
     max-width: 100%;
+
+    .map & {
+      margin-top: 0;
+    }
   }
 
   iframe, pre {
-    margin-top: 15px;
+    margin-top: 20px;
   }
 
   pre {
@@ -234,15 +238,6 @@
 
   blockquote {
     margin: 20px 40px;
-  }
-
-  .edy-texteditor-container {
-    margin-top: 20px;
-    margin-bottom: 20px;
-
-    &:first-child {
-      margin-top: 0;
-    }
   }
 
   .edy-positionable-container-left,
