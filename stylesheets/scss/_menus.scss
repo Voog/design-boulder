@@ -492,11 +492,9 @@ $flags:
   text-align: center;
   @include border(all, 1px, solid, $primary-color, 0.1);
 
-  .content & {
-    .wrap {
-      padding: 0;
-      position: relative;
-    }
+  .wrap {
+    padding: 0;
+    position: relative;
   }
 
   .menu {

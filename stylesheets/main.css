@@ -54,7 +54,7 @@ body.search-open {
 
 .content-formatted:after, .contacts .content-formatted table tr:after, .footer .content-formatted table tr:after, .menu-pagination .menu:after, .header-top .wrap:after, .main-feature .wrap:after,
 .summary .wrap:after, .edys-gallery:after, .search:after,
-.search-form:after, .content-formatted .form_submit:after, .comment-form:after, .footer .wrap:after {
+.search-form:after, .content-formatted .form_submit:after, .comment-form:after, .footer-inner .wrap:after {
   content: "";
   display: table;
   clear: both;
@@ -92,16 +92,16 @@ body.search-open {
 }
 
 .menu-pagination .menu-item,
-.menu-pagination .menu-item .menu-link, .footer .voog-reference a {
+.menu-pagination .menu-item .menu-link, .footer-inner .voog-reference a {
   display: inline-block;
 }
 
-.header-left, .footer .footer-left {
+.header-left, .footer-inner .footer-left {
   position: relative;
   float: left;
 }
 
-.header-right, .footer .footer-right {
+.header-right, .footer-inner .footer-right {
   float: right;
   text-align: right;
 }
@@ -236,7 +236,7 @@ body.search-open {
   margin: 0 auto;
 }
 
-.front-page .wrap, .menu-sub .wrap, .header-top .wrap, .footer .wrap {
+.front-page .wrap, .menu-sub .wrap, .header-top .wrap, .footer-inner .wrap {
   max-width: 1000px;
 }
 
@@ -1071,7 +1071,7 @@ body.search-open {
   border: 1px solid #000000;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
-.content .menu-pagination .wrap {
+.menu-pagination .wrap {
   padding: 0;
   position: relative;
 }
@@ -2297,31 +2297,34 @@ body.search-open {
   right: 0;
   bottom: 0;
   min-height: 80px;
+}
+
+.footer-inner {
   color: #FFFFFF;
   color: rgba(255, 255, 255, 0.5);
   background-color: #000000;
   background-color: rgba(0, 0, 0, 0.73);
 }
-.footer.dark-backrgound .content-formatted {
+.footer-inner.dark-backrgound .content-formatted {
   color: #FFFFFF;
   color: rgba(255, 255, 255, 0.5);
 }
-.footer .wrap {
+.footer-inner .wrap {
   padding: 24px 20px 22px;
 }
-.footer .footer-left,
-.footer .footer-right {
+.footer-inner .footer-left,
+.footer-inner .footer-right {
   min-width: 150px;
 }
-.footer .footer-right {
+.footer-inner .footer-right {
   position: relative;
   top: 4px;
 }
-.footer .voog-reference {
+.footer-inner .voog-reference {
   margin-top: 30px;
   text-align: center;
 }
-.footer .voog-reference a {
+.footer-inner .voog-reference a {
   padding: 7px 9px;
   font-size: 10px;
   color: #E4AC00;
@@ -2331,24 +2334,24 @@ body.search-open {
   border: 1px solid #000000;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
-.footer .voog-reference a:hover {
+.footer-inner .voog-reference a:hover {
   color: #E4AC00;
   color: rgba(228, 172, 0, 0.75);
   border: 1px solid #000000;
   border: 1px solid rgba(0, 0, 0, 0.75);
 }
 @media screen and (max-width: 749px) {
-  .footer .footer-right {
+  .footer-inner .footer-right {
     float: left;
   }
 }
 @media screen and (max-width: 640px) {
-  .footer .footer-left,
-  .footer .footer-right {
+  .footer-inner .footer-left,
+  .footer-inner .footer-right {
     float: none;
     text-align: center;
   }
-  .footer .footer-right {
+  .footer-inner .footer-right {
     margin-top: 5px;
   }
 }

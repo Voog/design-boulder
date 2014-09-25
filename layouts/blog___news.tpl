@@ -14,19 +14,15 @@
         {% if editmode %}<div class="post-add-btn">{% addbutton %}</div>{% endif %}
 
         <section class="blog-articles js-blog-articles">
-          {% for article in articles limit: 3 %}
+{% comment %}          {% for article in articles limit: 3 %}
             {% include "post-box" %}
-          {% endfor %}
+          {% endfor %}{% endcomment %}
         </section>
 
         <div class="loader js-loader">
           <div class="loader-cube-1"></div>
           <div class="loader-cube-2"></div>
         </div>
-
-        {% if articles.size > 3 %}
-          <div class="js-menu-pagination-wrap"></div>
-        {% endif %}
       </div>
     </main>
 
