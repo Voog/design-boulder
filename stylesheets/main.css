@@ -1485,7 +1485,7 @@ body.search-open {
 }
 .editmode .blog-page .post-title, .editmode
 .post-page .post-title {
-  display: block;
+  display: inline-block;
 }
 .blog-page .post-title, .blog-page .post-title a,
 .post-page .post-title,
