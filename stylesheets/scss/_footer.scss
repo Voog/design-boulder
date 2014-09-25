@@ -49,7 +49,7 @@
       padding: 7px 9px;
       font-size: 10px;
       @include color($secondary-color, 0.75);
-      line-height: 1;
+      line-height: 1em;
       @include bg($white);
       @include border(all, 1px, solid, $primary-color, 0.1);
 

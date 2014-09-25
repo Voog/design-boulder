@@ -39,7 +39,7 @@ body {
   font-family: 'Arvo', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   font-weight: 400;
   font-size: 18px;
-  line-height: 1.7;
+  line-height: 1.7em;
   color: #000000;
   color: rgba(0, 0, 0, 0.73);
   background-position: center;
@@ -247,7 +247,7 @@ body.search-open {
   margin-top: 0;
 }
 .content-formatted.header-body-top {
-  line-height: 1.5;
+  line-height: 1.5em;
   font-style: italic;
   font-size: 30px;
 }
@@ -278,7 +278,7 @@ body.search-open {
   background-color: rgba(228, 172, 0, 0.8);
 }
 .main-feature .content-formatted, .quotation .content-formatted {
-  line-height: 1.4;
+  line-height: 1.4em;
 }
 .quotation .content-formatted {
   width: 100%;
@@ -328,7 +328,7 @@ body.search-open {
 }
 .content-formatted h1 {
   margin-bottom: 50px;
-  line-height: 1.3;
+  line-height: 1.3em;
   font-size: 36px;
 }
 .contacts .content-formatted h1 {
@@ -391,6 +391,9 @@ body.search-open {
 }
 .main-feature .content-formatted a {
   font-style: italic;
+}
+.content-formatted span[style*="font-size"] {
+  line-height: 1.7em;
 }
 .content-formatted iframe {
   max-width: 100%;
@@ -512,7 +515,7 @@ body.search-open {
 }
 .contacts .content-formatted table {
   font-size: 24px;
-  line-height: 1;
+  line-height: 1em;
 }
 .contacts .content-formatted table tr td {
   padding: 0 25px;
@@ -726,7 +729,7 @@ body.search-open {
 }
 .menu-sub .menu-item {
   margin-right: 12px;
-  line-height: 1.3;
+  line-height: 1.3em;
 }
 .menu-sub .menu-item:last-child {
   margin-right: 0;
@@ -819,7 +822,7 @@ body.search-open {
   position: relative;
   margin-left: 17px;
   display: inline-block;
-  line-height: 1;
+  line-height: 1em;
 }
 .menu-main .menu-lang {
   display: none;
@@ -1209,7 +1212,7 @@ body.search-open {
   vertical-align: middle;
   min-width: 140px;
   min-height: 40px;
-  line-height: 1.3;
+  line-height: 1.3em;
   font-weight: 700;
   font-size: 30px;
 }
@@ -1455,7 +1458,7 @@ body.search-open {
 }
 .front-page .post-date {
   display: block;
-  line-height: 1;
+  line-height: 1em;
   font-size: 14px;
   color: #FFFFFF;
   color: rgba(255, 255, 255, 0.5);
@@ -1475,7 +1478,7 @@ body.search-open {
   min-width: 100px;
   margin: 0;
   padding-bottom: 2px;
-  line-height: 1.2;
+  line-height: 1.2em;
   border-bottom: solid 1px #000000;
   border-bottom: solid 1px rgba(0, 0, 0, 0.23);
   box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.23);
@@ -1504,7 +1507,7 @@ body.search-open {
   display: block;
   margin-top: 5px;
   text-align: center;
-  line-height: 1.3;
+  line-height: 1.3em;
   font-size: 18px;
   color: #000000;
   color: rgba(0, 0, 0, 0.1);
@@ -1658,7 +1661,7 @@ body.search-open {
   vertical-align: middle;
   margin-left: 18px;
   height: 30px;
-  line-height: 1;
+  line-height: 1em;
   background-color: #e5e5e5;
 }
 @media screen and (max-width: 900px) {
@@ -1749,7 +1752,7 @@ body.search-open {
   padding-right: 30px;
   font-family: inherit;
   font-size: 18px;
-  line-height: 1;
+  line-height: 1em;
   color: #000000;
   color: rgba(0, 0, 0, 0.73);
   background-color: #e5e5e5;
@@ -1768,7 +1771,7 @@ body.search-open {
 }
 .search-input::-webkit-input-placeholder {
   padding: 2px 0 4px 0;
-  line-height: 1;
+  line-height: 1em;
 }
 @media screen and (max-width: 640px) {
   .search-input {
@@ -1845,7 +1848,7 @@ body.search-open {
   padding: 20px;
   text-align: left;
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.5em;
   background-color: white;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
   overflow-x: hidden;
@@ -1977,7 +1980,7 @@ body.search-open {
   display: inline;
   padding-left: 2px;
   font-weight: 400;
-  line-height: 1.3;
+  line-height: 1.3em;
   cursor: pointer;
 }
 .content-formatted .form_field label:after {
@@ -2113,7 +2116,7 @@ body.search-open {
   padding: 14px 24px;
   font-size: 18px;
   color: white;
-  line-height: 1;
+  line-height: 1em;
   background-color: #e4ac00;
   border: none;
   cursor: pointer;
@@ -2323,7 +2326,7 @@ body.search-open {
   font-size: 10px;
   color: #E4AC00;
   color: rgba(228, 172, 0, 0.75);
-  line-height: 1;
+  line-height: 1em;
   background-color: white;
   border: 1px solid #000000;
   border: 1px solid rgba(0, 0, 0, 0.1);
