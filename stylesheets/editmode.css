@@ -18,10 +18,17 @@
   padding: 101px 40px;
 }
 .quotation .edy-empty-bordered {
-  padding: 26.6% 40px;
+  position: absolute;
+  top: 40px;
+  bottom: 40px;
+  left: 50px;
+  right: 20px;
 }
-.quotation .edy-empty-bordered:first-child {
-  padding: 40px;
+.quotation .edy-empty-bordered .edy-empty-header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3D(-50%, -50%, 0);
 }
 .map .edy-empty-bordered {
   padding: 125px 40px;

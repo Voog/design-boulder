@@ -167,6 +167,7 @@
   }
 
   .quotation {
+    position: relative;
     @include border(left, 2px, solid, $white);
 
     &:first-child {

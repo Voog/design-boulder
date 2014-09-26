@@ -1390,6 +1390,7 @@ body.search-open {
   padding-right: 2px;
 }
 .summary .quotation {
+  position: relative;
   border-left: 2px solid white;
 }
 .summary .quotation:first-child {
