@@ -78,6 +78,12 @@
   }
 
   &.header-body-bottom {
+    padding: 2px;
+
+    &:hover {
+      outline: 1px solid rgba($white, 0.5);
+    }
+
     .wysihtml5-editor {
       min-height: 30px;
     }

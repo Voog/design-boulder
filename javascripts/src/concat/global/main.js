@@ -88,7 +88,6 @@
   // Reduces opacity of the gallery images that are not under the cursor.
   var handleGalleryHover = function() {
     $('.edys-gallery').mouseover(function() {
-      console.log('it hapened');
       $(this).find('.edys-gallery-item').addClass('inactive');
     });
 

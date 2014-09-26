@@ -14,8 +14,8 @@
       <main class="content" role="main">
         <div class="main-feature">
           <div class="wrap">
-            <div class="feature-left inner inner-left content-formatted">{% content name="feature_left_content" %}</div>
-            <div class="feature-right inner inner-right content-formatted">{% content name="feature_right_content" %}</div>
+            <div class="feature-left inner inner-left content-formatted">{% content name="feature_left" %}</div>
+            <div class="feature-right inner inner-right content-formatted">{% content name="feature_right" %}</div>
           </div>
         </div>
 
@@ -34,18 +34,18 @@
             {% endif %}
 
             <section class="quotation inner inner-right">
-              <div class="content-formatted">{% content name="quotation_content" %}</div>
+              <div class="content-formatted">{% content name="quotation" %}</div>
             </section>
           </div>
         </div>
 
         <div class="contacts">
-          <div class="wrap content-formatted js-custom-content-formatted">{% content name="contacts_content" %}</div>
+          <div class="wrap content-formatted js-custom-content-formatted">{% content name="contacts" %}</div>
         </div>
 
         <div class="map">
           <section class="content-formatted">
-            {% content name="map_content" %}
+            {% content name="map" %}
           </section>
         </div>
       </main>

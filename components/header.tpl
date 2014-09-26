@@ -64,12 +64,12 @@
       <div class="header-bottom-inner">
         <div class="wrap">
             {% comment %}Set variables to detect if "header_content" area has content{% endcomment %}
-            {% capture header_body_top_html %}{% unless editmode %}{% content name="header_content" %}{% endunless %}{% endcapture %}
-            {% capture header_body_top_size %}{{ header_body_top_html | size | minus : 1 }}{% endcapture %}
+            {% capture header_content_html %}{% unless editmode %}{% content name="header_content" %}{% endunless %}{% endcapture %}
+            {% capture header_content_size %}{{ header_content_html | size | minus : 1 }}{% endcapture %}
             {% if editmode %}
               <div class="header-body-top content-formatted">{% content name="header_content" %}</div>
             {% else %}
-              {% unless header_body_top_size contains '-' %}
+              {% unless header_content_size contains '-' %}
                 <div class="header-body-top content-formatted">{% content name="header_content" %}</div>
               {% endunless %}
             {% endif %}

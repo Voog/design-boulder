@@ -27,10 +27,37 @@
 }
 
 .main-feature {
+  .wrap {
+    .flexbox & {
+      @include display(flex);
+    }
+
+    .no-flexbox & {
+      display: table;
+      width: 100%;
+      @include box-sizing(border-box);
+    }
+  }
+
   .inner {
-    float: left;
-    width: 50%;
     @include box-sizing(border-box);
+
+    &:empty {
+      display: none;
+    }
+
+    .flexbox & {
+      @include flex(1);
+      min-width: 50%;
+    }
+
+    .no-flexbox & {
+      display: table-cell;
+
+      &:empty {
+        display: none;
+      }
+    }
   }
 
   .inner-left {
@@ -91,10 +118,18 @@
   }
 
   @include query($mobile-1 - 58) {
+    .wrap {
+      .flexbox &,
+      .no-flexbox & {
+        display: block;
+      }
+    }
+
     .inner {
-      float: none;
-      width: auto;
       padding: 30px 20px;
+      .no-flexbox & {
+        display: block;
+      }
     }
 
     .feature-left {
@@ -131,6 +166,8 @@
 
     .no-flexbox & {
       display: table;
+      width: 100%;
+      @include box-sizing(border-box);
     }
   }
 
@@ -160,10 +197,6 @@
   .blog {
     max-width: 428px;
     @include border(right, 2px, solid, $white);
-
-    .no-flexbox & {
-      padding-right: 2px;
-    }
   }
 
   .quotation {

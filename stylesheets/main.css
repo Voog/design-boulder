@@ -1279,12 +1279,44 @@ body.search-open {
   }
 }
 
-.main-feature .inner {
-  float: left;
-  width: 50%;
+.flexbox .main-feature .wrap {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.no-flexbox .main-feature .wrap {
+  display: table;
+  width: 100%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+.main-feature .inner {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.main-feature .inner:empty {
+  display: none;
+}
+.flexbox .main-feature .inner {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -moz-box-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-width: 50%;
+}
+.no-flexbox .main-feature .inner {
+  display: table-cell;
+}
+.no-flexbox .main-feature .inner:empty {
+  display: none;
 }
 .main-feature .inner-left {
   padding: 48px 20px;
@@ -1330,10 +1362,14 @@ body.search-open {
   margin-right: 0;
 }
 @media screen and (max-width: 582px) {
+  .flexbox .main-feature .wrap, .no-flexbox .main-feature .wrap {
+    display: block;
+  }
   .main-feature .inner {
-    float: none;
-    width: auto;
     padding: 30px 20px;
+  }
+  .no-flexbox .main-feature .inner {
+    display: block;
   }
   .main-feature .feature-left {
     padding-bottom: 10px;
@@ -1360,6 +1396,10 @@ body.search-open {
 }
 .no-flexbox .summary .wrap {
   display: table;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 .flexbox .summary .inner {
   -webkit-box-flex: 1;
@@ -1385,9 +1425,6 @@ body.search-open {
 .summary .blog {
   max-width: 428px;
   border-right: 2px solid white;
-}
-.no-flexbox .summary .blog {
-  padding-right: 2px;
 }
 .summary .quotation {
   position: relative;
@@ -1963,6 +2000,11 @@ body.search-open {
   max-width: 100%;
   margin-left: 50px;
   margin-right: 50px;
+}
+.main-feature .content-formatted form, .main-feature
+.content-formatted .form {
+  margin-left: 0;
+  margin-right: 0;
 }
 .content-formatted .form_field {
   margin-top: 20px;
