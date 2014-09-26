@@ -41,6 +41,10 @@
       left: 50%;
       transform: translate3D(-50%, -50%, 0);
     }
+
+    @include query($mobile-1 - 58) {
+      position: static;
+    }
   }
 
   .map & {

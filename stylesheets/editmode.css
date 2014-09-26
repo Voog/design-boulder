@@ -30,6 +30,11 @@
   left: 50%;
   transform: translate3D(-50%, -50%, 0);
 }
+@media screen and (max-width: 582px) {
+  .quotation .edy-empty-bordered {
+    position: static;
+  }
+}
 .map .edy-empty-bordered {
   padding: 125px 40px;
 }
