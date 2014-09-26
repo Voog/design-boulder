@@ -423,6 +423,9 @@ body.search-open {
 .content-formatted blockquote {
   margin: 20px 40px;
 }
+.content-formatted .edy-positionable-container-left-block {
+  margin-bottom: 20px;
+}
 .content-formatted .edy-positionable-container-left,
 .content-formatted .edy-positionable-container-right {
   margin-top: 0;

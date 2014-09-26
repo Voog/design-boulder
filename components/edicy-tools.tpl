@@ -48,14 +48,5 @@
         });
       }
     });
-
-    // Header button data logic
-    var headerBtn = new Edicy.TextEditorView({el: $('.js-header-body-bottom-inner')});
-    headerBtn.on('change', function() {
-      headerBtnContent = $('.js-header-body-bottom-inner').html();
-      pageData.set({
-        'header_btn': headerBtnContent
-      });
-    });
   </script>
 {% endeditorjsblock %}
