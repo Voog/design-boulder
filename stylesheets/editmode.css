@@ -57,9 +57,6 @@
 .content-formatted .edy-texteditor-view {
   min-height: 25px;
 }
-.quotation .content-formatted .edy-texteditor-view {
-  min-height: 33px;
-}
 .map .content-formatted .edy-texteditor-view {
   min-height: 272px;
 }
