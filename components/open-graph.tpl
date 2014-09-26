@@ -25,7 +25,7 @@
   {% endif %}
 {% endif %}
 
-{% if blog and (page.description == nil or page.description == "") %}
+{% if blog and article == nil and (page.description == nil or page.description == "") %}
   {% assign excerpt_description = articles.first.excerpt | strip_html | escape | strip_newlines | truncatewords: 200, '...' %}
   <meta property="og:description" content="{{ excerpt_description }}">
   <meta name="description" content="{{ excerpt_description }}">
