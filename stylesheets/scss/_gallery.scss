@@ -126,18 +126,19 @@
   }
 }
 
-.edys-gallery-image {
+.edys-gallery-item {
   display: block;
   width: auto;
   height: auto;
   @include transition(opacity 0.3s ease-in);
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
 
   &.inactive {
     opacity: 0.8;
-    @include transition(opacity 0.3s ease-in);
+  }
 
-    &:hover {
-      opacity: 1;
-    }
+  &:hover {
+    opacity: 1;
   }
 }

@@ -1640,21 +1640,20 @@ body.search-open {
   }
 }
 
-.edys-gallery-image {
+.edys-gallery-item {
   display: block;
   width: auto;
   height: auto;
   -webkit-transition: opacity 0.3s ease-in;
   -moz-transition: opacity 0.3s ease-in;
   transition: opacity 0.3s ease-in;
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
 }
-.edys-gallery-image.inactive {
+.edys-gallery-item.inactive {
   opacity: 0.8;
-  -webkit-transition: opacity 0.3s ease-in;
-  -moz-transition: opacity 0.3s ease-in;
-  transition: opacity 0.3s ease-in;
 }
-.edys-gallery-image.inactive:hover {
+.edys-gallery-item:hover {
   opacity: 1;
 }
 
