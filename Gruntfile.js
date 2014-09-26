@@ -15,7 +15,7 @@ module.exports = function(grunt) {
         files: {
           'concat/global/jquery.js': 'jquery/dist/jquery.js',
           'concat/global/overthrow.js': 'overthrow/src/overthrow-polyfill.js',
-          'concat/blog___news/moment-with-locales.js': 'moment/min/moment-with-locales.js',
+          'concat/blog-and-news/moment-with-locales.js': 'moment/min/moment-with-locales.js',
           'modernizr.js': 'modernizr/modernizr.js'
         }
       },
@@ -72,12 +72,12 @@ module.exports = function(grunt) {
         dest: 'javascripts/global.js'
       },
 
-      build_blog___news: {
+      build_blog_and_news: {
         src: [
-          'javascripts/src/concat/blog___news/moment-with-locales.js',
-          'javascripts/src/concat/blog___news/*.js'
+          'javascripts/src/concat/blog-and-news/moment-with-locales.js',
+          'javascripts/src/concat/blog-and-news/*.js'
         ],
-        dest: 'javascripts/blog___news.js'
+        dest: 'javascripts/blog-and-news.js'
       },
     },
 
@@ -158,7 +158,7 @@ module.exports = function(grunt) {
       concat: {
         files: [
           'javascripts/src/concat/global/*.js',
-          'javascripts/src/concat/blog___news/*.js',
+          'javascripts/src/concat/blog-and-news/*.js',
         ],
         tasks: 'newer:concat'
       },

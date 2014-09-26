@@ -31,7 +31,7 @@
 
   {% include "javascripts" %}
   <script>var langCode ='{% if page.language_code == 'zh'%}zh-cn{% else %}{{ page.language_code }}{% endif %}';</script>
-  <script src="{{ javascripts_path }}/blog___news.js"></script>
+  <script src="{{ javascripts_path }}/blog-and-news.js"></script>
 
   <script type="text/html" id="article-template">
     <article class="post">

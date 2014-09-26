@@ -348,15 +348,15 @@
     },
     {
       "content_type": "application/javascript",
-      "file": "javascripts/blog___news.js",
+      "file": "javascripts/blog-and-news.js",
       "kind": "javascripts",
-      "filename": "blog___news.js"
+      "filename": "blog-and-news.js"
     },
     {
       "content_type": "application/javascript",
-      "file": "javascripts/blog___news.min.js",
+      "file": "javascripts/blog-and-news.min.js",
       "kind": "javascripts",
-      "filename": "blog___news.min.js"
+      "filename": "blog-and-news.min.js"
     },
     {
       "content_type": "application/javascript",
