@@ -96,7 +96,7 @@
     },
 
     next: function() {
-      if (!this.options.nr_articles || this.currentPage < Math.ceil(this.options.nr_articles / this.options.perPage)) {
+      if (!this.options.articles_count || this.currentPage < Math.ceil(this.options.articles_count / this.options.perPage)) {
         this.fetch(this.currentPage + 1, $.proxy(function(articles) {
           if (articles) {
             this.currentPage += 1;
@@ -135,8 +135,8 @@
           this.prev();
         }, this)));
 
-        if (this.options.nr_articles) {
-          var pages = Math.ceil(this.options.nr_articles / this.options.perPage);
+        if (this.options.articles_count) {
+          var pages = Math.ceil(this.options.articles_count / this.options.perPage);
           for (var i=1; i <= pages; i++) {
             $list.find('.menu').append($('<li class="menu-item js-pagination-item hidden"><a class="menu-link js-pagination-link" href="#" data-page="'+i+'">'+i+'</a></li>').click($.proxy(function(event) {
               event.preventDefault();

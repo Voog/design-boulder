@@ -61,7 +61,7 @@
     });
 
     $('.js-blog-articles').articlePages({
-        nr_articles: {{ articles.size }},
+        articles_count: {{ articles.size }},
         older: '{{ 'next' | lc }}',
         newer: '{{ 'previous' | lc }}',
         page_id: {{ page.id }}{% if tags %},
