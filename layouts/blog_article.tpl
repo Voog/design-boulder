@@ -15,18 +15,18 @@
 
     <div class="comments content-formatted">
       <div class="wrap">
-        {% if article.comments_count > 0 %}
         <h2 class="comments-title">{{ 'post_has_replies' | lcc : article.comments_count }}</h2>
 
-        <div class="comment-messages">
-          {% for comment in article.comments %}
-          <div class="comment edy-site-blog-comment">
-            <div class="comment-body">{{ comment.body_html }}</div>
-            <div class="comment-author">{{ comment.author }}</div>
-            <div class="comment-date">{{ comment.created_at | format_date: "long" }}{% removebutton %}</div>
+        {% if article.comments_count > 0 %}
+          <div class="comment-messages">
+            {% for comment in article.comments %}
+            <div class="comment edy-site-blog-comment">
+              <div class="comment-body">{{ comment.body_html }}</div>
+              <div class="comment-author">{{ comment.author }}</div>
+              <div class="comment-date">{{ comment.created_at | format_date: "long" }}{% removebutton %}</div>
+            </div>
+            {% endfor %}
           </div>
-          {% endfor %}
-        </div>
         {% endif %}
 
         {% include "comment-form" %}
