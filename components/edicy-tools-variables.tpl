@@ -1,7 +1,7 @@
 {% capture dont_render %}
   {% comment %}Sets cover color lightness class.{% endcomment %}
   {% assign header_opacity = page.data.header_opacity %}
-  {% if header_opacity != nil and header_opacity != '' and header_opacity >= 0.1 %}
+  {% if header_opacity != nil and header_opacity != '' and header_opacity >= 0.16 %}
     {% if page.data.header_lightness == nil or page.data.header_lightness >= 0.2 %}
       {% assign header_color_class = ' light-background' %}
     {% else %}
