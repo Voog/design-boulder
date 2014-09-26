@@ -400,24 +400,6 @@ body.search-open {
 .content-formatted blockquote {
   margin: 20px 40px;
 }
-.content-formatted .btn {
-  display: inline-block;
-  padding: 10px 40px;
-  line-height: 1.3em;
-  font-style: normal;
-  font-size: 24px;
-  background-color: #e4ac00;
-}
-.content-formatted .btn:before {
-  content: '\A';
-}
-.content-formatted .btn:hover {
-  background-color: #E4AC00;
-  background-color: rgba(228, 172, 0, 0.8);
-}
-.content-formatted .btn a {
-  text-decoration: none;
-}
 .content-formatted .edy-positionable-container-left-block {
   margin-bottom: 20px;
 }
