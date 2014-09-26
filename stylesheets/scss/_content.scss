@@ -201,6 +201,7 @@
 
   .quotation {
     position: relative;
+    font-size: 24px;
     @include border(left, 2px, solid, $white);
 
     &:first-child {

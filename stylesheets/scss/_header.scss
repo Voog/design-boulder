@@ -101,6 +101,10 @@
   margin: 0 auto;
   text-align: center;
 
+  a {
+    @include color($white);
+  }
+
   .wrap {
     display: table-cell;
     vertical-align: middle;
@@ -108,29 +112,9 @@
     height: 422px;
   }
 
-  .btn {
-    display: inline-block;
-    margin: 43px auto 11px;
-  }
-
   @include query($mobile-1 - 58) {
     .wrap {
       height: 222px;
     }
-  }
-}
-
-.header-body-top,
-.header-body-bottom {
-  &:empty {
-    display: none;
-  }
-}
-
-.header-body-bottom {
-  margin-top: 40px;
-
-  &:first-child {
-    margin-top: 0;
   }
 }

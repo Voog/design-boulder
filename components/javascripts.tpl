@@ -15,4 +15,12 @@
   </script>
 {% endif %}
 
+{% comment %}Adds custom style under the text formatting drop-down menu.{% endcomment %}
+{% if editmode %}
+  <script type="text/javascript">
+    window.edy = window.edy || [];
+    edy.push(['texteditorStyles', {name: 'Button', classname: 'btn'}]);
+  </script>
+ {% endif %}
+
 {% unless editmode %}{{ site.analytics }}{% endunless %}

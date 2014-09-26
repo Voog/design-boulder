@@ -4,41 +4,13 @@
 .content-formatted {
   @extend %clearfix;
 
-  &.header-body-top {
+  &.header-body {
     line-height: 1.5em;
     font-style: italic;
     font-size: 30px;
 
     @include query($mobile-1 - 58) {
       font-size: 24px;
-    }
-  }
-
-  &.header-body-bottom {
-    min-width: 200px;
-    font-size: 24px;
-
-    a {
-      text-decoration: none;
-      @include bg($secondary-color);
-
-      .public & {
-        display: inline-block;
-        padding: 10px 40px;
-      }
-
-      .dark-background & {
-        @include color($white);
-      }
-
-      .light-background & {
-        @include color($primary-color, 0.73);
-      }
-
-      &:hover {
-        @include bg($secondary-color, 0.8);
-      }
-
     }
   }
 
@@ -183,7 +155,6 @@
 
   a {
     text-decoration: underline;
-
     @include color($secondary-color);
 
     &:hover {
@@ -233,6 +204,27 @@
 
   blockquote {
     margin: 20px 40px;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 10px 40px;
+    line-height: 1.3em;
+    font-style: normal;
+    font-size: 24px;
+    @include bg($secondary-color);
+
+    &:before {
+      content: '\A';
+    }
+
+    &:hover {
+      @include bg($secondary-color, 0.8);
+    }
+
+    a {
+      text-decoration: none;
+    }
   }
 
   .edy-positionable-container-left-block {

@@ -20,7 +20,7 @@
     @include border(all, 1px, dashed, $white, 0.5);
   }
 
-  .header-body-top & {
+  .header-body & {
     padding: 200px 40px;
   }
 
@@ -71,20 +71,9 @@
     @extend %editor-border;
   }
 
-  &.header-body-top {
+  &.header-body {
     .edy-texteditor-view {
       min-height: 51px;
-    }
-  }
-
-  &.header-body-bottom {
-    .edy-texteditor-view {
-      min-height: 30px;
-
-      a {
-        display: inline-block;
-        padding: 10px 40px;
-      }
     }
   }
 
@@ -125,7 +114,7 @@
 .edy-gallery-area {
   .edy-gallery-thumb {
 
-    .header-body-top & {
+    .header-body & {
       float: none;
     }
   }

@@ -244,38 +244,15 @@ body.search-open {
   max-width: 1000px;
 }
 
-.content-formatted.header-body-top {
+.content-formatted.header-body {
   line-height: 1.5em;
   font-style: italic;
   font-size: 30px;
 }
 @media screen and (max-width: 582px) {
-  .content-formatted.header-body-top {
+  .content-formatted.header-body {
     font-size: 24px;
   }
-}
-.content-formatted.header-body-bottom {
-  min-width: 200px;
-  font-size: 24px;
-}
-.content-formatted.header-body-bottom a {
-  text-decoration: none;
-  background-color: #e4ac00;
-}
-.public .content-formatted.header-body-bottom a {
-  display: inline-block;
-  padding: 10px 40px;
-}
-.dark-background .content-formatted.header-body-bottom a {
-  color: white;
-}
-.light-background .content-formatted.header-body-bottom a {
-  color: #000000;
-  color: rgba(0, 0, 0, 0.73);
-}
-.content-formatted.header-body-bottom a:hover {
-  background-color: #E4AC00;
-  background-color: rgba(228, 172, 0, 0.8);
 }
 .main-feature .content-formatted, .quotation .content-formatted {
   line-height: 1.4em;
@@ -422,6 +399,24 @@ body.search-open {
 }
 .content-formatted blockquote {
   margin: 20px 40px;
+}
+.content-formatted .btn {
+  display: inline-block;
+  padding: 10px 40px;
+  line-height: 1.3em;
+  font-style: normal;
+  font-size: 24px;
+  background-color: #e4ac00;
+}
+.content-formatted .btn:before {
+  content: '\A';
+}
+.content-formatted .btn:hover {
+  background-color: #E4AC00;
+  background-color: rgba(228, 172, 0, 0.8);
+}
+.content-formatted .btn a {
+  text-decoration: none;
 }
 .content-formatted .edy-positionable-container-left-block {
   margin-bottom: 20px;
@@ -1236,32 +1231,19 @@ body.search-open {
   margin: 0 auto;
   text-align: center;
 }
+.header-bottom-inner a {
+  color: white;
+}
 .header-bottom-inner .wrap {
   display: table-cell;
   vertical-align: middle;
   padding: 60px 20px;
   height: 422px;
 }
-.header-bottom-inner .btn {
-  display: inline-block;
-  margin: 43px auto 11px;
-}
 @media screen and (max-width: 582px) {
   .header-bottom-inner .wrap {
     height: 222px;
   }
-}
-
-.header-body-top:empty,
-.header-body-bottom:empty {
-  display: none;
-}
-
-.header-body-bottom {
-  margin-top: 40px;
-}
-.header-body-bottom:first-child {
-  margin-top: 0;
 }
 
 /* CONTENT */
@@ -1435,6 +1417,7 @@ body.search-open {
 }
 .summary .quotation {
   position: relative;
+  font-size: 24px;
   border-left: 2px solid white;
 }
 .summary .quotation:first-child {
@@ -1602,7 +1585,7 @@ body.search-open {
 }
 
 /* GALLERY */
-.header-body-top .edys-gallery {
+.header-body .edys-gallery {
   display: inline-block;
   margin: 0 auto;
 }
