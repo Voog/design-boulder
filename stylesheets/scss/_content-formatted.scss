@@ -4,14 +4,6 @@
 .content-formatted {
   @extend %clearfix;
 
-  .header-bottom-inner & {
-    margin-top: 40px;
-
-    &:first-child {
-      margin-top: 0;
-    }
-  }
-
   &.header-body-top {
     line-height: 1.5em;
     font-style: italic;
@@ -27,10 +19,13 @@
     font-size: 24px;
 
     a {
-      display: inline-block;
-      padding: 10px 40px;
       text-decoration: none;
       @include bg($secondary-color);
+
+      .public & {
+        display: inline-block;
+        padding: 10px 40px;
+      }
 
       .dark-background & {
         @include color($white);

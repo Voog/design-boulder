@@ -41,17 +41,4 @@
     {% assign header_color_style = header_color_style | append: header_color %}
   {% endif %}
   {% assign header_color_style = header_color_style | append: ';"' %}
-
-  {% comment %}Sets the default values for the header button{% endcomment %}
-  {% if page.data.header_btn == nil %}
-    {% for item in site.menuitems_with_hidden %}
-      {% if forloop.index == 1 %}
-        {% assign header_btn = item.url %}
-        {% assign header_btn = '<a href="' | append: item.url | append: '">View our menu</a>' %}
-        {% break %}
-      {% endif %}
-    {% endfor %}
-  {% else %}
-    {% assign header_btn = page.data.header_btn %}
-  {% endif %}
 {% endcapture %}

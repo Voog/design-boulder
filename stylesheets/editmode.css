@@ -11,7 +11,7 @@
   border: 1px dashed #FFFFFF;
   border: 1px dashed rgba(255, 255, 255, 0.5);
 }
-.header-bottom .edy-empty-bordered {
+.header-body-top .edy-empty-bordered {
   padding: 200px 40px;
 }
 .main-feature .edy-empty-bordered {
@@ -51,14 +51,12 @@
 .content-formatted.header-body-top .edy-texteditor-view {
   min-height: 51px;
 }
-.content-formatted.header-body-bottom {
-  padding: 2px;
-}
-.content-formatted.header-body-bottom:hover {
-  outline: 1px solid rgba(255, 255, 255, 0.5);
-}
-.content-formatted.header-body-bottom .wysihtml5-editor {
+.content-formatted.header-body-bottom .edy-texteditor-view {
   min-height: 30px;
+}
+.content-formatted.header-body-bottom .edy-texteditor-view a {
+  display: inline-block;
+  padding: 10px 40px;
 }
 .content-formatted .edy-texteditor-view {
   min-height: 25px;

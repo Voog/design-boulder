@@ -64,21 +64,17 @@
       <div class="header-bottom-inner">
         <div class="wrap">
             {% comment %}Set variables to detect if "header" area has content{% endcomment %}
-            {% capture header_html %}{% unless editmode %}{% content name="header" %}{% endunless %}{% endcapture %}
-            {% capture header_size %}{{ header_html | size | minus : 1 }}{% endcapture %}
+            {% capture header_top_html %}{% unless editmode %}{% content name="header_top" %}{% endunless %}{% endcapture %}
+            {% capture header_top_size %}{{ header_top_html | size | minus : 1 }}{% endcapture %}
             {% if editmode %}
-              <div class="header-body-top content-formatted">{% content name="header" %}</div>
+              <div class="header-body-top content-formatted">{% content name="header_top" %}</div>
             {% else %}
-              {% unless header_size contains '-' %}
-                <div class="header-body-top content-formatted">{% content name="header" %}</div>
+              {% unless header_top_size contains '-' %}
+                <div class="header-body-top content-formatted">{% content name="header_top" %}</div>
               {% endunless %}
             {% endif %}
 
-            {% if editmode or header_btn != '' %}
-              <div class="header-body-bottom content-formatted custom-content-formatted">
-                <div class="header-body-bottom-inner js-header-body-bottom-inner">{{ header_btn }}</div>
-              </div>
-            {% endif %}
+            <div class="header-body-bottom content-formatted custom-content-formatted">{% content name="header_bottom" %}</div>
         </div>
       </div>
     </div>

@@ -20,7 +20,7 @@
     @include border(all, 1px, dashed, $white, 0.5);
   }
 
-  .header-bottom & {
+  .header-body-top & {
     padding: 200px 40px;
   }
 
@@ -78,14 +78,13 @@
   }
 
   &.header-body-bottom {
-    padding: 2px;
-
-    &:hover {
-      outline: 1px solid rgba($white, 0.5);
-    }
-
-    .wysihtml5-editor {
+    .edy-texteditor-view {
       min-height: 30px;
+
+      a {
+        display: inline-block;
+        padding: 10px 40px;
+      }
     }
   }
 

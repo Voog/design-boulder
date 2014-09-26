@@ -120,6 +120,17 @@
   }
 }
 
+.header-body-top,
 .header-body-bottom {
-  display: inline-block;
+  &:empty {
+    display: none;
+  }
+}
+
+.header-body-bottom {
+  margin-top: 40px;
+
+  &:first-child {
+    margin-top: 0;
+  }
 }
