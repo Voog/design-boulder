@@ -65,11 +65,6 @@
         <div class="wrap">
           <div class="header-body content-formatted">{% content name="header" %}</div>
         </div>
-
-          {% content name="header_top" %}
-          {% content name="header_bottom" %}
-          {% content name="header_top_content" %}
-          {% content name="header_bottom_content" %}
       </div>
     </div>
   {% endif %}
