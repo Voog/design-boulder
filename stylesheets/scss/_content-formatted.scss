@@ -52,7 +52,7 @@
       @include color($white);
     }
 
-    .footer.dark-background & {
+    .footer-inner.dark-background & {
       @include color($white, 0.5);
     }
   }
@@ -159,6 +159,10 @@
 
     .main-feature & {
       font-style: italic;
+    }
+
+    .footer & {
+      @include color($white, 0.5);
     }
   }
 

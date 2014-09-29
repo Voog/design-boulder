@@ -283,7 +283,7 @@ body.search-open {
 .dark-background .content-formatted, .dark-background .content-formatted h1, .dark-background .content-formatted h2, .dark-background .content-formatted h3, .dark-background .content-formatted h4, .dark-background .content-formatted h5, .dark-background .content-formatted h6, .dark-background .content-formatted p, .dark-background .content-formatted ul, .dark-background .content-formatted ol, .dark-background .content-formatted pre, .dark-background .content-formatted code, .dark-background .content-formatted table {
   color: white;
 }
-.footer.dark-background .content-formatted, .footer.dark-background .content-formatted h1, .footer.dark-background .content-formatted h2, .footer.dark-background .content-formatted h3, .footer.dark-background .content-formatted h4, .footer.dark-background .content-formatted h5, .footer.dark-background .content-formatted h6, .footer.dark-background .content-formatted p, .footer.dark-background .content-formatted ul, .footer.dark-background .content-formatted ol, .footer.dark-background .content-formatted pre, .footer.dark-background .content-formatted code, .footer.dark-background .content-formatted table {
+.footer-inner.dark-background .content-formatted, .footer-inner.dark-background .content-formatted h1, .footer-inner.dark-background .content-formatted h2, .footer-inner.dark-background .content-formatted h3, .footer-inner.dark-background .content-formatted h4, .footer-inner.dark-background .content-formatted h5, .footer-inner.dark-background .content-formatted h6, .footer-inner.dark-background .content-formatted p, .footer-inner.dark-background .content-formatted ul, .footer-inner.dark-background .content-formatted ol, .footer-inner.dark-background .content-formatted pre, .footer-inner.dark-background .content-formatted code, .footer-inner.dark-background .content-formatted table {
   color: #FFFFFF;
   color: rgba(255, 255, 255, 0.5);
 }
@@ -365,6 +365,10 @@ body.search-open {
 }
 .main-feature .content-formatted a {
   font-style: italic;
+}
+.footer .content-formatted a {
+  color: #FFFFFF;
+  color: rgba(255, 255, 255, 0.5);
 }
 .content-formatted span[style*="font-size"] {
   line-height: 1.7em;
@@ -2347,6 +2351,8 @@ body.search-open {
   min-width: 150px;
 }
 .footer-inner .footer-left {
+  position: relative;
+  top: 2px;
   margin-right: 20px;
 }
 .footer-inner .footer-right {

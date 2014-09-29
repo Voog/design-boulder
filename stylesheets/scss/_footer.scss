@@ -35,6 +35,8 @@
 
   .footer-left {
     @extend %header-footer-left;
+    position: relative;
+    top: 2px;
     margin-right: 20px;
   }
 
