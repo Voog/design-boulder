@@ -48,6 +48,7 @@
 
     .flexbox & {
       @include flex(1);
+      @include align-self(center);
       min-width: 50%;
     }
 

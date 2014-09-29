@@ -321,9 +321,6 @@ body.search-open {
   font-weight: 400;
   font-style: italic;
 }
-.main-feature .content-formatted h2:first-child {
-  margin-top: 22px;
-}
 @media screen and (max-width: 582px) {
   .main-feature .content-formatted h2:first-child {
     margin-top: 0;
@@ -1284,6 +1281,10 @@ body.search-open {
   -moz-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  -webkit-align-self: center;
+  -moz-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
   min-width: 50%;
 }
 .no-flexbox .main-feature .inner {

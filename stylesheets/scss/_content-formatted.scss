@@ -102,10 +102,6 @@
       font-weight: 400;
       font-style: italic;
 
-      &:first-child {
-        margin-top: 22px;
-      }
-
       @include query($mobile-1 - 58) {
         &:first-child {
           margin-top: 0;
