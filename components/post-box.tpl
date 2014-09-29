@@ -1,5 +1,5 @@
 <article class="post">
-  {% if post-box == "article" %}<div class="wrap">{% endif %}
+  {% if post-box == "article" %}<div class="wrap{% if editmode or with_submenu == true %} with-submenu{% endif %}">{% endif %}
     <header class="post-header">
       {% if post-box == "article" %}
         <h1 class="post-title">{% editable article.title %}</h1>

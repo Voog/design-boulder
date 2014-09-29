@@ -15,7 +15,7 @@
     {% include "tags-blog" %}
 
     <main class="content" role="main">
-      <div class="wrap">
+      <div class="wrap{% if editmode or with_submenu == true %} with-submenu{% endif %}">
         {% if editmode %}<div class="post-add-btn">{% addbutton %}</div>{% endif %}
 
         <section class="blog-articles js-blog-articles">

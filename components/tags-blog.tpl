@@ -1,4 +1,5 @@
 {% if site.has_language_tags? %}
+  {% assign with_submenu = true %}
   <nav class="menu-sub">
     <div class="wrap">
       <ul class="menu">

@@ -6,6 +6,7 @@
   </div>
 {% else %}
   {% unless article.tags == empty %}
+    {% assign with_submenu = true %}
     <nav class="menu-sub">
       <div class="wrap">
         <ul class="menu">

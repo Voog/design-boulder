@@ -4,7 +4,11 @@
   @include bg($white);
 
   .wrap {
-    padding: 20px;
+    padding: 60px 20px 20px;
+
+    &.with-submenu {
+      padding: 20px;
+    }
 
     .content-page & {
       max-width: 600px;

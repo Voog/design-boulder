@@ -1,5 +1,6 @@
 {% for item in site.visible_menuitems %}
   {% if item.selected? and item.children? or editmode %}
+    {% assign with_submenu = true %}
     <nav class="menu-sub">
       <div class="wrap">
         <ul class="menu">

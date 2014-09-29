@@ -1239,6 +1239,9 @@ body.search-open {
   background-color: white;
 }
 .content .wrap {
+  padding: 60px 20px 20px;
+}
+.content .wrap.with-submenu {
   padding: 20px;
 }
 .content-page .content .wrap {
@@ -1509,9 +1512,6 @@ body.search-open {
   }
 }
 
-.blog-page .blog-articles {
-  margin-top: 40px;
-}
 .blog-page .post-add-btn {
   text-align: center;
   margin-bottom: 50px;
@@ -1529,9 +1529,6 @@ body.search-open {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.post-page .post-header {
-  margin-top: 40px;
-}
 .post-page .post-body {
   margin-top: 47px;
 }

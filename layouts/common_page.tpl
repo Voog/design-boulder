@@ -10,7 +10,7 @@
     {% include "menu-level-2" %}
 
     <main class="content" role="main">
-      <div class="wrap">
+      <div class="wrap{% if editmode or with_sumbenu == true %} with-submenu{% endif %}">
         <section class="content-body content-formatted">{% content %}</section>
       </div>
     </main>
