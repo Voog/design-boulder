@@ -396,15 +396,6 @@ body.search-open {
 .content-formatted blockquote {
   margin: 20px 40px;
 }
-.content-formatted .inline-box {
-  display: inline-block;
-  padding: 0 25px;
-  border-left: 2px solid #000000;
-  border-left: 2px solid rgba(0, 0, 0, 0.2);
-}
-.content-formatted .inline-box:first-child {
-  border-left: none;
-}
 .content-formatted .contacts::first-line {
   color: red !important;
 }

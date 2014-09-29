@@ -203,16 +203,6 @@
     margin: 20px 40px;
   }
 
-  .inline-box {
-    display: inline-block;
-    padding: 0 25px;
-    @include border(left, 2px, solid, $primary-color, 0.2);
-
-    &:first-child {
-      border-left: none;
-    }
-  }
-
   .contacts::first-line {
     color: red !important;
   }

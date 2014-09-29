@@ -16,11 +16,4 @@
   </script>
 {% endif %}
 
-{% if editmode %}
-<script type="text/javascript">
-  window.edy = window.edy || [];
-  edy.push(['texteditorStyles', {name: 'Inline box', classname: 'inline-box'}]);
-</script>
-{% endif %}
-
 {% unless editmode %}{{ site.analytics }}{% endunless %}
