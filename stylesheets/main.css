@@ -1408,7 +1408,7 @@ body.search-open {
 }
 
 .contacts .wrap {
-  padding: 61px 20px 53px;
+  padding: 55px 20px;
 }
 @media screen and (max-width: 900px) {
   .contacts .wrap {
