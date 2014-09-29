@@ -12,10 +12,16 @@
       {% include "header" with "content" %}
 
       <main class="content" role="main">
+        {% comment %}Set variables to detect if "feature content areas" have content{% endcomment %}
+        {% capture feature_left_html %}{% unless editmode %}{% content name="feature_left" %}{% endunless %}{% endcapture %}
+        {% capture feature_left_size %}{{ feature_left_html | size | minus : 1 }}{% endcapture %}
+        {% capture feature_right_html %}{% unless editmode %}{% content name="feature_right" %}{% endunless %}{% endcapture %}
+        {% capture feature_right_size %}{{ feature_right_html | size | minus : 1 }}{% endcapture %}
+
         <div class="main-feature">
           <div class="wrap">
-            <div class="feature-left inner inner-left content-formatted">{% content name="feature_left" %}</div>
-            <div class="feature-right inner inner-right content-formatted">{% content name="feature_right" %}</div>
+            <div class="feature-left inner inner-left content-formatted{% if editmode %} narrow-feature{% else %}{% unless feature_right_size contains '-' %} narrow-feature{% endunless %}{% endif %}">{% content name="feature_left" %}</div>
+            <div class="feature-right inner inner-right content-formatted{% if editmode %} narrow-feature{% else %}{% unless feature_left_size contains '-' %} narrow-feature{% endunless %}{% endif %}">{% content name="feature_right" %}</div>
           </div>
         </div>
 

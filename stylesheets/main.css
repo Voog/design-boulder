@@ -1299,43 +1299,6 @@ body.search-open {
 .main-feature .inner-right {
   padding: 48px 20px 48px 50px;
 }
-.main-feature .edys-gallery-area .edys-gallery-item,
-.main-feature .edy-gallery-area .edys-gallery-item {
-  position: relative;
-  width: 22.6%;
-  height: auto;
-  margin-right: 3.1%;
-  margin-bottom: 3.1%;
-}
-.main-feature .edys-gallery-area .edys-gallery-item:before,
-.main-feature .edy-gallery-area .edys-gallery-item:before {
-  content: "";
-  display: block;
-  padding-top: 100%;
-}
-.main-feature .edys-gallery-area .edys-gallery-item .edys-gallery-image,
-.main-feature .edy-gallery-area .edys-gallery-item .edys-gallery-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: auto;
-  height: auto;
-}
-.main-feature .edys-gallery-area .edys-gallery-item .edys-gallery-image.edys-gallery-image-square,
-.main-feature .edy-gallery-area .edys-gallery-item .edys-gallery-image.edys-gallery-image-square {
-  width: 100%;
-}
-.main-feature .edys-gallery-area {
-  margin-bottom: -14px;
-}
-.main-feature .edys-gallery-area .edys-gallery-item:nth-child(4n+4) {
-  margin-right: 0;
-}
-.main-feature .edy-gallery-area .edys-gallery-item:nth-child(4n+5) {
-  margin-right: 0;
-}
 @media screen and (max-width: 582px) {
   .flexbox .main-feature .wrap, .no-flexbox .main-feature .wrap {
     display: block;
@@ -1351,9 +1314,6 @@ body.search-open {
   }
   .main-feature .feature-right {
     padding-top: 10px;
-  }
-  .main-feature .edys-gallery-area {
-    margin-bottom: 0;
   }
 }
 
@@ -1669,6 +1629,49 @@ body.search-open {
 }
 .edys-gallery-item:hover {
   opacity: 1;
+}
+
+.narrow-feature .edys-gallery-area .edys-gallery-item,
+.narrow-feature .edy-gallery-area .edys-gallery-item {
+  position: relative;
+  width: 22.6%;
+  height: auto;
+  margin-right: 3.1%;
+  margin-bottom: 3.1%;
+}
+.narrow-feature .edys-gallery-area .edys-gallery-item:before,
+.narrow-feature .edy-gallery-area .edys-gallery-item:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+.narrow-feature .edys-gallery-area .edys-gallery-item .edys-gallery-image,
+.narrow-feature .edy-gallery-area .edys-gallery-item .edys-gallery-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: auto;
+  height: auto;
+}
+.narrow-feature .edys-gallery-area .edys-gallery-item .edys-gallery-image.edys-gallery-image-square,
+.narrow-feature .edy-gallery-area .edys-gallery-item .edys-gallery-image.edys-gallery-image-square {
+  width: 100%;
+}
+.narrow-feature .edys-gallery-area {
+  margin-bottom: -14px;
+}
+.narrow-feature .edys-gallery-area .edys-gallery-item:nth-child(4n+4) {
+  margin-right: 0;
+}
+.narrow-feature .edy-gallery-area .edys-gallery-item:nth-child(4n+5) {
+  margin-right: 0;
+}
+@media screen and (max-width: 582px) {
+  .narrow-feature .edys-gallery-area {
+    margin-bottom: 0;
+  }
 }
 
 /* SEARCH */
