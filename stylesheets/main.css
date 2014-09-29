@@ -453,8 +453,8 @@ body.search-open {
 .editmode .content .content-formatted table {
   margin-bottom: 35px;
 }
-.contacts .content-formatted table {
-  margin-bottom: 20px;
+.contacts .content-formatted table, .editmode .contacts .content-formatted table {
+  margin-bottom: 0;
 }
 .content-formatted table tr:first-child td {
   color: white;

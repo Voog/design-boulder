@@ -271,8 +271,9 @@
       }
     }
 
-    .contacts & {
-      margin-bottom: 20px;
+    .contacts &,
+    .editmode .contacts & {
+      margin-bottom: 0;
     }
 
     tr {
