@@ -286,16 +286,6 @@ body.search-open {
   color: #FFFFFF;
   color: rgba(255, 255, 255, 0.5);
 }
-.content-page:not(.blog-page) .content .content-formatted h2, .content-page:not(.blog-page) .content .content-formatted h3, .content-page:not(.blog-page) .content .content-formatted h4, .content-page:not(.blog-page) .content .content-formatted h5, .content-page:not(.blog-page) .content .content-formatted h6, .content-page:not(.blog-page) .content .content-formatted p, .content-page:not(.blog-page) .content .content-formatted ul, .content-page:not(.blog-page) .content .content-formatted ol {
-  margin-left: 50px;
-  margin-right: 50px;
-}
-@media screen and (max-width: 740px) {
-  .content-page:not(.blog-page) .content .content-formatted h2, .content-page:not(.blog-page) .content .content-formatted h3, .content-page:not(.blog-page) .content .content-formatted h4, .content-page:not(.blog-page) .content .content-formatted h5, .content-page:not(.blog-page) .content .content-formatted h6, .content-page:not(.blog-page) .content .content-formatted p, .content-page:not(.blog-page) .content .content-formatted ul, .content-page:not(.blog-page) .content .content-formatted ol {
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
 .content-formatted h1, .content-formatted h2, .content-formatted h3, .content-formatted h4, .content-formatted h5, .content-formatted h6 {
   font-weight: 600;
 }
@@ -409,22 +399,10 @@ body.search-open {
   margin-bottom: 0;
 }
 .content-formatted .edy-positionable-container-left {
-  margin-left: 50px;
   margin-right: 3%;
-}
-@media screen and (max-width: 740px) {
-  .content-formatted .edy-positionable-container-left {
-    margin-left: 0;
-  }
 }
 .content-formatted .edy-positionable-container-right {
   margin-left: 3%;
-  margin-right: 50px;
-}
-@media screen and (max-width: 740px) {
-  .content-formatted .edy-positionable-container-right {
-    margin-right: 0;
-  }
 }
 .content-formatted .edy-image-container-title {
   padding: 2px;
@@ -1253,7 +1231,7 @@ body.search-open {
   padding: 20px;
 }
 .content-page .content .wrap {
-  max-width: 700px;
+  max-width: 600px;
 }
 
 .main-feature .wrap,
@@ -1995,8 +1973,6 @@ body.search-open {
 .content-formatted form,
 .content-formatted .form {
   max-width: 100%;
-  margin-left: 50px;
-  margin-right: 50px;
 }
 .main-feature .content-formatted form, .main-feature
 .content-formatted .form {

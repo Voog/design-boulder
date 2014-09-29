@@ -61,18 +61,6 @@
     @extend %hyphenate;
   }
 
-  h2, h3, h4, h5, h6, p, ul, ol {
-    .content-page:not(.blog-page) .content & {
-      margin-left: $content-margin;
-      margin-right: $content-margin;
-
-      @include query($tablet-3 - 76) {
-        margin-left: 0;
-        margin-right: 0;
-      }
-    }
-  }
-
   // Styling rules for the editable content area headings.
   h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
@@ -217,21 +205,11 @@
   }
 
   .edy-positionable-container-left {
-    margin-left: $content-margin;
     margin-right: 3%;
-
-    @include query($tablet-3 - 76) {
-      margin-left: 0;
-    }
   }
 
   .edy-positionable-container-right {
     margin-left: 3%;
-    margin-right: $content-margin;
-
-    @include query($tablet-3 - 76) {
-      margin-right: 0;
-    }
   }
 
   .edy-image-container-title {
