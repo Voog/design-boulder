@@ -118,7 +118,8 @@
   @include bg($grey);
   @include box-sizing(border-box);
   border: none;
-  -webkit-appearance: textfield;
+  border-radius: 0;
+  -webkit-appearance: none;
 
   // Removes the "clear input" buttons
   &::-webkit-search-decoration,
