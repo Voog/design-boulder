@@ -49,6 +49,7 @@
 
 .header-right {
   @extend %header-footer-right;
+  text-align: right;
 }
 
 @include query($tablet-2) {
