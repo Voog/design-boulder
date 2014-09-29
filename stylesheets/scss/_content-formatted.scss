@@ -194,6 +194,20 @@
     margin: 20px 40px;
   }
 
+  .inline-box {
+    display: inline-block;
+    padding: 0 25px;
+    @include border(left, 2px, solid, $primary-color, 0.2);
+
+    &:first-child {
+      border-left: none;
+    }
+  }
+
+  .contacts::first-line {
+    color: red !important;
+  }
+
   .edy-positionable-container-left-block {
     margin-bottom: 20px;
   }
@@ -259,20 +273,24 @@
     }
 
     tr {
-      &:first-child {
-        td {
-          @include color($white);
-          @include bg($secondary-color);
-          @include border(all, 1px,solid,$secondary-color);
+      th,
+      td {
+        padding: 9px 13px;
+      }
 
-          .footer & {
-            @include color($white, 0.5);
-          }
+      th {
+        text-align: left;
+        font-weight: 400;
+        @include color($white);
+        @include bg($secondary-color);
+        @include border(all, 1px,solid,$secondary-color);
+
+        .footer & {
+          @include color($white, 0.5);
         }
       }
 
       td {
-        padding: 9px 13px;
         @include border(top, 1px, solid, $primary-color, 0.1);
         @include border(bottom, 1px, solid, $primary-color, 0.1);
       }

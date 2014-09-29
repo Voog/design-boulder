@@ -390,6 +390,18 @@ body.search-open {
 .content-formatted blockquote {
   margin: 20px 40px;
 }
+.content-formatted .inline-box {
+  display: inline-block;
+  padding: 0 25px;
+  border-left: 2px solid #000000;
+  border-left: 2px solid rgba(0, 0, 0, 0.2);
+}
+.content-formatted .inline-box:first-child {
+  border-left: none;
+}
+.content-formatted .contacts::first-line {
+  color: red !important;
+}
 .content-formatted .edy-positionable-container-left-block {
   margin-bottom: 20px;
 }
@@ -437,17 +449,22 @@ body.search-open {
 .contacts .content-formatted table, .editmode .contacts .content-formatted table {
   margin-bottom: 0;
 }
-.content-formatted table tr:first-child td {
+.content-formatted table tr th,
+.content-formatted table tr td {
+  padding: 9px 13px;
+}
+.content-formatted table tr th {
+  text-align: left;
+  font-weight: 400;
   color: white;
   background-color: #e4ac00;
   border: 1px solid #e4ac00;
 }
-.footer .content-formatted table tr:first-child td {
+.footer .content-formatted table tr th {
   color: #FFFFFF;
   color: rgba(255, 255, 255, 0.5);
 }
 .content-formatted table tr td {
-  padding: 9px 13px;
   border-top: 1px solid #000000;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid #000000;
