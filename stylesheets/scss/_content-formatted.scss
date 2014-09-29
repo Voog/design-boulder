@@ -337,6 +337,14 @@
           border-bottom: none;
         }
       }
+
+      @include query($tablet-1 - 40) {
+        font-size: 20px;
+      }
+
+      @include query($tablet-2) {
+        font-size: 16px;
+      }
     }
 
     .footer & {
@@ -352,7 +360,7 @@
       }
     }
 
-    @include query($mobile-1) {
+    @include query($mobile-1 + 42) {
       .contacts &,
       .footer & {
         &, tbody, tr {

@@ -503,6 +503,16 @@ body.search-open {
   border-right: none;
   border-bottom: none;
 }
+@media screen and (max-width: 1000px) {
+  .contacts .content-formatted table {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .contacts .content-formatted table {
+    font-size: 16px;
+  }
+}
 .footer .content-formatted table tr td {
   padding: 0 12px;
   border: none;
@@ -510,7 +520,7 @@ body.search-open {
 .footer .content-formatted table tr td:last-child {
   padding-right: 0;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 682px) {
   .contacts .content-formatted table, .contacts .content-formatted table tbody, .contacts .content-formatted table tr, .footer .content-formatted table, .footer .content-formatted table tbody, .footer .content-formatted table tr {
     display: block;
   }
