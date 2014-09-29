@@ -25,6 +25,7 @@
   {% endif %}
 {% endif %}
 
+{% comment %}Open Graph description{% endcomment %}
 {% if blog and article == nil and (page.description == nil or page.description == "") %}
   {% assign excerpt_description = articles.first.excerpt | strip_html | escape | strip_newlines | truncatewords: 200, '...' %}
   <meta property="og:description" content="{{ excerpt_description }}">
