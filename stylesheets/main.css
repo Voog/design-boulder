@@ -103,7 +103,6 @@ body.search-open {
 
 .header-right, .footer-inner .footer-right {
   float: right;
-  text-align: right;
 }
 
 .loader {
@@ -2348,7 +2347,7 @@ body.search-open {
 }
 .footer-inner .footer-left,
 .footer-inner .footer-right {
-  min-width: 150px;
+  min-width: 188px;
 }
 .footer-inner .footer-left {
   position: relative;
