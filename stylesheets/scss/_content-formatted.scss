@@ -203,6 +203,27 @@
     margin: 20px 40px;
   }
 
+  .custom-btn {
+    display: inline-block;
+    padding: 10px 40px;
+    line-height: 1.3em;
+    font-style: normal;
+    font-size: 24px;
+    @include bg($secondary-color);
+
+    &:before {
+      content: '\A';
+    }
+
+    &:hover {
+      @include bg($secondary-color, 0.8);
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+
   .contacts::first-line {
     color: red !important;
   }
