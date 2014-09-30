@@ -821,7 +821,7 @@ body.search-open {
   display: block;
   margin-bottom: 40px;
   padding: 6px 0;
-  min-width: 121px;
+  min-width: 123px;
   background: #fff;
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
   z-index: 20;
