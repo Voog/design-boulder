@@ -207,13 +207,10 @@
     display: inline-block;
     padding: 10px 40px;
     line-height: 1.3em;
+    text-decoration: none;
     font-style: normal;
     font-size: 24px;
     @include bg($secondary-color);
-
-    &:before {
-      content: '\A';
-    }
 
     &:hover {
       @include bg($secondary-color, 0.8);
