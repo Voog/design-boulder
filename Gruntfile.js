@@ -1,4 +1,6 @@
 module.exports = function(grunt) {
+  "use strict";
+
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
@@ -114,6 +116,19 @@ module.exports = function(grunt) {
       }
     },
 
+    exec: {
+      kitmanifest: {
+        cmd: function(file) {
+          return 'kit manifest';
+        }
+      },
+      kit: {
+        cmd: function(file) {
+          return 'kit push ' + file;
+        }
+      }
+    },
+
     // Minifies the stylesheet files.
     cssmin: {
       build: {
@@ -155,28 +170,21 @@ module.exports = function(grunt) {
 
     // Watches the project for changes and recompiles the output files.
     watch: {
-      concat: {
+      js: {
         files: [
           'javascripts/src/concat/global/*.js',
           'javascripts/src/concat/blog-and-news/*.js',
         ],
-        tasks: 'newer:concat'
-      },
-
-      uglify: {
-        files: [
-        'javascripts/*.js',
-        '!javascripts/*.min.js'
-        ],
-        tasks: 'uglify',
-        options: {
-          spawn: false
-        }
+        tasks: ['newer:concat', 'newer:uglify']
       },
 
       css: {
         files: 'stylesheets/scss/*.scss',
-        tasks: ['sass:build', 'cssmin:build'],
+        tasks: ['sass:build', 'newer:cssmin:build']
+      },
+
+      voog: {
+        files: ['javascripts/*.js', 'stylesheets/*.css', 'layouts/*.tpl', 'components/*.tpl'],
         options: {
           spawn: false
         }
@@ -195,6 +203,18 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-svgmin');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-newer');
+  grunt.loadNpmTasks('grunt-exec');
 
   grunt.registerTask('default', ['bowercopy', 'modernizr', 'copy', 'concat', 'uglify', 'sass', 'cssmin', 'imagemin', 'svgmin']);
+
+  grunt.event.on('watch', function(action, filepath, target) {
+    if (target == 'voog') {
+      if (action == "added" || action == "deleted") {
+        grunt.task.run(['exec:kitmanifest']);
+      }
+      if (action != "deleted") {
+        grunt.task.run(['exec:kit:' + filepath]);
+      }
+    }
+  });
 };
