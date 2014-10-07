@@ -10,7 +10,7 @@
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 <link rel="shortcut icon" href="/favicon.ico" type="image/ico">
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-{% comment %}<!-- TODO: Add functionality after the CMS is going to support it -->{% endcomment %}
+{% comment %}TODO: Add functionality after the CMS is going to support it{% endcomment %}
 {% if site.data.touch_icon %}<link rel="apple-touch-icon" href="{{ site.data.touch_icon }}">{% endif %}
 
 {% comment %}MODERNIZR - HTML5 SUPPORT FOR OLDER BROWSERS, SVG SUPPORT DETECTION ETC{% endcomment %}
@@ -25,6 +25,7 @@
 {% capture page_title %}{% if article %}{{ article.title }} — {{ page.site_title }}{% else %}{% if site.root_item.selected? %}{{ page.site_title }}{% else %}{{ page.title }} — {{ page.site_title }}{% endif %}{% endif %}{% endcapture %}
 <title>{{ page_title }}</title>
 
+{% comment %}FACEBOOK OPEN GRAPH META TAGS{% endcomment%}
 {% include "open-graph" %}
 
 {% comment %}MISCELLANEOUS{% endcomment %}
