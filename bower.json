@@ -6,7 +6,7 @@
   },
   "dependencies": {
     "jquery": "~1.x",
-    "overthrow": "~0.7.0",
-    "moment": "~2.8.2"
+    "moment": "~2.8.2",
+    "overthrow": "~0.7.0"
   }
 }
