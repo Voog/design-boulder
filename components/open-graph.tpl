@@ -31,6 +31,6 @@
   <meta property="og:description" content="{{ excerpt_description }}">
   <meta name="description" content="{{ excerpt_description }}">
 {% else %}
-    <meta property="og:description" content="{% if article %}{{ article.description }}{% else %}{{ page.description }}{% endif %}">
-    <meta name="description" content="{% if article %}{{ article.description }}{% else %}{{ page.description }}{% endif %}">
+  <meta property="og:description" content="{% if article %}{{ article.description }}{% else %}{{ page.description }}{% endif %}">
+  <meta name="description" content="{% if article %}{{ article.description }}{% else %}{{ page.description }}{% endif %}">
 {% endif %}
