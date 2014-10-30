@@ -318,12 +318,6 @@
     },
     {
       "content_type": "image/png",
-      "file": "images/ico-flags-small.png",
-      "kind": "images",
-      "filename": "ico-flags-small.png"
-    },
-    {
-      "content_type": "image/png",
       "file": "images/ico-flags.png",
       "kind": "images",
       "filename": "ico-flags.png"
@@ -348,27 +342,27 @@
     },
     {
       "content_type": "application/javascript",
-      "file": "javascripts/blog-and-news.js",
+      "file": "javascripts/blog-and-news-application.js",
       "kind": "javascripts",
-      "filename": "blog-and-news.js"
+      "filename": "blog-and-news-application.js"
     },
     {
       "content_type": "application/javascript",
-      "file": "javascripts/blog-and-news.min.js",
+      "file": "javascripts/blog-and-news-application.min.js",
       "kind": "javascripts",
-      "filename": "blog-and-news.min.js"
+      "filename": "blog-and-news-application.min.js"
     },
     {
       "content_type": "application/javascript",
-      "file": "javascripts/global.js",
+      "file": "javascripts/global-application.js",
       "kind": "javascripts",
-      "filename": "global.js"
+      "filename": "global-application.js"
     },
     {
       "content_type": "application/javascript",
-      "file": "javascripts/global.min.js",
+      "file": "javascripts/global-application.min.js",
       "kind": "javascripts",
-      "filename": "global.min.js"
+      "filename": "global-application.min.js"
     },
     {
       "content_type": "application/javascript",

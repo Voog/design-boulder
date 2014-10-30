@@ -169,17 +169,14 @@
 
   var initArticlePage = function() {
     // ADD SINGLE POST layout specific FUNCTIONS HERE
-    focusFormWithErrors();
   };
 
   var initCommonPage = function() {
     // ADD COMMON PAGE SPECIFIC FUNCTIONS HER
-    focusFormWithErrors();
   };
 
   var initFrontPage = function() {
     // ADD COMMON PAGE SPECIFIC FUNCTIONS HER
-    focusFormWithErrors();
   };
 
   var init = function() {
@@ -189,12 +186,15 @@
     handleSearchPositionChange();
     handleSearchSubmit();
     handleGalleryHover();
+    focusFormWithErrors();
     handleWindowResize();
     wrapTables();
+
     if ($('.table-container').length > 0) {
       checkScrollBar();
       handleTableHorizontalScrolling();
     }
+
     $(document).ready(function() {
       handleFooterPositioning();
     });

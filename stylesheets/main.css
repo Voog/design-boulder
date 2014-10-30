@@ -127,6 +127,11 @@ body.search-open {
 .loader {
   position: absolute;
 }
+.loader:not(.hidden) .loader-cube {
+  -webkit-transition: opacity 0.5s ease-in 1.5s;
+  -moz-transition: opacity 0.5s ease-in 1.5s;
+  transition: opacity 0.5s ease-in 1.5s;
+}
 
 .loader-cube {
   position: absolute;
@@ -143,11 +148,6 @@ body.search-open {
   -webkit-animation: cubemove 1.8s infinite ease-in-out;
   -moz-animation: cubemove 1.8s infinite ease-in-out;
   animation: cubemove 1.8s infinite ease-in-out;
-}
-.loader:not(.hidden) .loader-cube {
-  -webkit-transition: opacity 0.5s ease-in 1.5s;
-  -moz-transition: opacity 0.5s ease-in 1.5s;
-  transition: opacity 0.5s ease-in 1.5s;
 }
 .hidden .loader-cube {
   opacity: 0;

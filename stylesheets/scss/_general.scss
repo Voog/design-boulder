@@ -103,6 +103,12 @@ body {
 .loader {
   @extend %stretch;
   position: absolute;
+
+  &:not(.hidden) {
+    .loader-cube {
+      @include transition(opacity 0.5s ease-in 1.5s);
+    }
+  }
 }
 
 .loader-cube {
@@ -117,10 +123,6 @@ body {
   margin-left: -26px;
   @include bg($primary-color, 0.5);
   @include animation(cubemove 1.8s infinite ease-in-out);
-
-  .loader:not(.hidden) & {
-    @include transition(opacity 0.5s ease-in 1.5s);
-  }
 
   .hidden & {
     opacity: 0;

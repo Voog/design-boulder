@@ -1,5 +1,5 @@
 
-<script src="{{ javascripts_path }}/global.min.js"></script>
+<script src="{{ javascripts_path }}/global-application.min.js"></script>
 <script src="{{ site.static_asset_host }}/libs/picturefill/latest/picturefill.min.js"></script>
 
 {% if site.search.enabled %}

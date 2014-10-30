@@ -1,10 +1,10 @@
 // EDITMODE STYLESHEET
-// Stylesheet for styling elements that are only used in editmode
-@import 'bourbon/bourbon';
+// Stylesheet for styling elements that are only used in editmode.
+@import '../../bower_components/bourbon/dist/bourbon';
 @import '_mixins';
 @import '_variables';
 
-// Editable content area
+// Editable content area.
 .edy-ca {
   margin-top: 20px;
 
@@ -13,7 +13,7 @@
   }
 }
 
-// Draggable area for content
+// Draggable placeholder for content area blocks.
 .edy-empty-bordered {
   .dark-background & {
     @include color($white, 0.5);
