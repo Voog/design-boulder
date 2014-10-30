@@ -234,18 +234,42 @@
   position: relative;
   display: inline-block;
   vertical-align: top;
-  width: 30px;
-  height: 25px;
-  font-size: 0;
+  font-family: inherit;
+  font-size: 14px;
+  @include color($primary-color, .73);
+
+  .flags-disabled & {
+    top: 6px;
+  }
 
   &:before,
   &:after {
     top: 6px;
     left: 5px;
+
+    .flags-disabled & {
+      display: none;
+    }
   }
 
   &:hover {
     @include opacity(0.8);
+  }
+
+  .flags-enabled & {
+    width: 30px;
+    height: 25px;
+
+    .lang-title {
+      display: none;
+    }
+  }
+
+  .ico-popover-toggle {
+    position: relative;
+    top: -2px;
+    display: inline-block;
+    font-size: 7.2px;
   }
 }
 
@@ -284,14 +308,22 @@
   &.expanded {
     position: absolute;
     top: 26px;
-    right: -6px;
+    right: -9px;
     display: block;
     margin-bottom: 40px;
     padding: 6px 0;
-    min-width: 123px;
+    min-width: 131px;
     background: #fff;
     box-shadow: 0 5px 25px rgba($primary-color, 0.3);
     z-index: 20;
+
+    .editmode & {
+      padding-bottom: 0;
+    }
+
+    .flags-disabled & {
+      min-width: 123px;
+    }
   }
 }
 
@@ -308,19 +340,19 @@
   .menu-item {
     display: list-item;
     text-align: right;
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .menu-link {
     position: relative;
     display: block;
-    padding: 5px 40px 4px 13px;
+    padding: 5px 40px 5px 13px;
     line-height: 1em;
     @include color($primary-color, 0.73);
 
     &:before,
     &:after {
-      top: 3px;
+      top: 5px;
       right: 13px;
     }
 
@@ -337,6 +369,24 @@
 
     &:hover {
       @include filter(grayscale(50%));
+    }
+  }
+
+  &.flags-disabled  {
+    .menu-link {
+      padding-right: 10px;
+
+      &:before,
+      &:after {
+        display: none;
+      }
+
+      @include query($tablet-2) {
+
+        .menu-main.expanded & {
+          padding: 13px 15px 12px;
+        }
+      }
     }
   }
 
@@ -369,7 +419,7 @@
       @include color($primary-color, 0.73);
 
       .menu-main.expanded & {
-        padding: 12px 15px 13px 44px;
+        padding: 13px 15px 12px 44px;
       }
 
       &:before,
@@ -388,6 +438,12 @@
     .edit-btn {
       padding: 6px 15px 9px;
     }
+  }
+}
+
+.lang-flag {
+  &:after {
+    background-position: -189px -60px;
   }
 }
 
@@ -485,6 +541,47 @@ $flags:
 
 @each $flag, $pos in $flags {
   .lang-flag-#{$flag}:after { background-position: $pos; }
+}
+
+
+.lang-options {
+  @include bg($primary-color, 0.09);
+
+  .menu {
+    .menu-item {
+      margin-top: 8px;
+      padding: 5px 10px;
+      font-size: 13px;
+
+      @include query($tablet-2) {
+        margin-top: 0;
+        padding: 8px 12px;
+      }
+    }
+  }
+}
+
+.option-btn {
+  @extend %button;
+  font-family: inherit;
+  font-size: inherit;
+  @include color($blue-1);
+
+  &:hover {
+    @include color($blue-1, 0.8);
+  }
+
+  .flags-disabled & {
+    .disable-text {
+      display: none;
+    }
+  }
+
+  .flags-enabled & {
+    .enable-text {
+      display: none;
+    }
+  }
 }
 
 // Styling rules for the blog listing view pagination.

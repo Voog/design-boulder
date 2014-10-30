@@ -76,17 +76,17 @@ body.search-open {
   bottom: 0;
 }
 
-.bgpicker-btn, .menu-btn, .menu-lang-btn, .search-btn {
+.bgpicker-btn, .menu-btn, .menu-lang-btn, .option-btn, .search-btn {
   margin: 0;
   padding: 0;
   background: none;
   border: none;
   cursor: pointer;
 }
-.bgpicker-btn:focus, .menu-btn:focus, .menu-lang-btn:focus, .search-btn:focus {
+.bgpicker-btn:focus, .menu-btn:focus, .menu-lang-btn:focus, .option-btn:focus, .search-btn:focus {
   outline: none;
 }
-.bgpicker-btn::-moz-focus-inner, .menu-btn::-moz-focus-inner, .menu-lang-btn::-moz-focus-inner, .search-btn::-moz-focus-inner {
+.bgpicker-btn::-moz-focus-inner, .menu-btn::-moz-focus-inner, .menu-lang-btn::-moz-focus-inner, .option-btn::-moz-focus-inner, .search-btn::-moz-focus-inner {
   padding: 0;
   border: none;
 }
@@ -770,18 +770,38 @@ body.search-open {
   position: relative;
   display: inline-block;
   vertical-align: top;
-  width: 30px;
-  height: 25px;
-  font-size: 0;
+  font-family: inherit;
+  font-size: 14px;
+  color: #000000;
+  color: rgba(0, 0, 0, 0.73);
+}
+.flags-disabled .menu-lang-btn {
+  top: 6px;
 }
 .menu-lang-btn:before, .menu-lang-btn:after {
   top: 6px;
   left: 5px;
 }
+.flags-disabled .menu-lang-btn:before, .flags-disabled .menu-lang-btn:after {
+  display: none;
+}
 .menu-lang-btn:hover {
   opacity: 0.8;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
   filter: alpha(opacity=80);
+}
+.flags-enabled .menu-lang-btn {
+  width: 30px;
+  height: 25px;
+}
+.flags-enabled .menu-lang-btn .lang-title {
+  display: none;
+}
+.menu-lang-btn .ico-popover-toggle {
+  position: relative;
+  top: -2px;
+  display: inline-block;
+  font-size: 7.2px;
 }
 
 .menu-lang-btn:before, .menu-lang-btn:after,
@@ -817,14 +837,20 @@ body.search-open {
 .menu-lang-popover.expanded {
   position: absolute;
   top: 26px;
-  right: -6px;
+  right: -9px;
   display: block;
   margin-bottom: 40px;
   padding: 6px 0;
-  min-width: 123px;
+  min-width: 131px;
   background: #fff;
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
   z-index: 20;
+}
+.editmode .menu-lang-popover.expanded {
+  padding-bottom: 0;
+}
+.flags-disabled .menu-lang-popover.expanded {
+  min-width: 123px;
 }
 
 .menu-lang {
@@ -839,18 +865,18 @@ body.search-open {
 .menu-lang .menu-item {
   display: list-item;
   text-align: right;
-  font-size: 12px;
+  font-size: 14px;
 }
 .menu-lang .menu-link {
   position: relative;
   display: block;
-  padding: 5px 40px 4px 13px;
+  padding: 5px 40px 5px 13px;
   line-height: 1em;
   color: #000000;
   color: rgba(0, 0, 0, 0.73);
 }
 .menu-lang .menu-link:before, .menu-lang .menu-link:after {
-  top: 3px;
+  top: 5px;
   right: 13px;
 }
 .menu-lang .menu-link.active, .menu-lang .menu-link.active:hover, .menu-lang .menu-link:hover {
@@ -865,6 +891,17 @@ body.search-open {
 .menu-lang .menu-link:hover {
   -webkit-filter: grayscale(50%);
   filter: grayscale(50%);
+}
+.menu-lang.flags-disabled .menu-link {
+  padding-right: 10px;
+}
+.menu-lang.flags-disabled .menu-link:before, .menu-lang.flags-disabled .menu-link:after {
+  display: none;
+}
+@media screen and (max-width: 900px) {
+  .menu-main.expanded .menu-lang.flags-disabled .menu-link {
+    padding: 13px 15px 12px;
+  }
 }
 .menu-lang .edit-btn {
   margin: 5px 20px;
@@ -893,7 +930,7 @@ body.search-open {
     color: rgba(0, 0, 0, 0.73);
   }
   .menu-main.expanded .menu-lang .menu-link {
-    padding: 12px 15px 13px 44px;
+    padding: 13px 15px 12px 44px;
   }
   .menu-lang .menu-link:before, .menu-lang .menu-link:after {
     top: 12px;
@@ -907,6 +944,10 @@ body.search-open {
   .menu-lang .edit-btn {
     padding: 6px 15px 9px;
   }
+}
+
+.lang-flag:after {
+  background-position: -189px -60px;
 }
 
 .lang-flag-sq:after {
@@ -1075,6 +1116,38 @@ body.search-open {
 
 .lang-flag-en:after {
   background-position: -21px -60px;
+}
+
+.lang-options {
+  background-color: #000000;
+  background-color: rgba(0, 0, 0, 0.09);
+}
+.lang-options .menu .menu-item {
+  margin-top: 8px;
+  padding: 5px 10px;
+  font-size: 13px;
+}
+@media screen and (max-width: 900px) {
+  .lang-options .menu .menu-item {
+    margin-top: 0;
+    padding: 8px 12px;
+  }
+}
+
+.option-btn {
+  font-family: inherit;
+  font-size: inherit;
+  color: #0066bb;
+}
+.option-btn:hover {
+  color: #0066BB;
+  color: rgba(0, 102, 187, 0.8);
+}
+.flags-disabled .option-btn .disable-text {
+  display: none;
+}
+.flags-enabled .option-btn .enable-text {
+  display: none;
 }
 
 .menu-pagination-wrap {

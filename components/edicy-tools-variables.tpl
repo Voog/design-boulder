@@ -1,4 +1,11 @@
 {% capture dont_render %}
+  {% comment %}Assign language menu flags state{% endcomment %}
+  {% if site.data.flags_state == nil %}
+    {% assign flags_state = true %}
+  {% else %}
+    {% assign flags_state = site.data.flags_state %}
+  {% endif %}
+
   {% comment %}Sets cover color lightness class.{% endcomment %}
   {% assign header_opacity = page.data.header_opacity %}
   {% if header_opacity != nil and header_opacity != '' and header_opacity >= 0.16 %}

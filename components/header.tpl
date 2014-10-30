@@ -30,7 +30,7 @@
         <nav class="menu-main js-menu-main js-popover">
           {% include "menu-level-1" %}
           {% if editmode or site.has_many_languages? %}
-          <div class="menu-lang">
+          <div class="menu-lang js-menu-lang {% if flags_state %}flags-enabled{% else %}flags-disabled{% endif %}">
             {% include "menu-lang" %}
           </div>
           {% endif %}
@@ -45,8 +45,15 @@
         </button>
 
         {% if editmode or site.has_many_languages? %}
-          <nav class="menu-lang">
-            <button class="menu-lang-btn js-menu-lang-btn lang-flag {% for language in site.languages %}{% if language.selected? %}lang-flag-{{ language.code }}{% endif %}{% endfor %}">Choose language</button>
+          <nav class="menu-lang js-menu-lang {% if flags_state %}flags-enabled{% else %}flags-disabled{% endif %}">
+            <button class="menu-lang-btn js-menu-lang-btn lang-flag lang-flag-{{ page.language_code }}">
+              {% if editmode or flags_state == false %}
+                <span class="lang-title">
+                  {% for language in site.languages %}{% if language.selected? %}{{ language.title }}{% endif %}{% endfor %}
+                  <span class="ico-popover-toggle">▼</span>
+                </span>
+              {% endif %}
+            </button>
             <div class="menu-lang-popover js-menu-lang-popover js-popover">
               {% include "menu-lang" %}
             </div>
