@@ -18,26 +18,7 @@
   padding: 101px 40px;
 }
 .quotation .edy-empty-bordered {
-  position: absolute;
-  top: 40px;
-  bottom: 40px;
-  left: 50px;
-  right: 20px;
-}
-.quotation .edy-empty-bordered .edy-empty-header {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate3D(-50%, -50%, 0);
-  -moz-transform: translate3D(-50%, -50%, 0);
-  -ms-transform: translate3D(-50%, -50%, 0);
-  -o-transform: translate3D(-50%, -50%, 0);
-  transform: translate3D(-50%, -50%, 0);
-}
-@media screen and (max-width: 582px) {
-  .quotation .edy-empty-bordered {
-    position: static;
-  }
+  padding: 92px 40px;
 }
 .map .edy-empty-bordered {
   padding: 125px 40px;
