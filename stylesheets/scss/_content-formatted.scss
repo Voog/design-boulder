@@ -3,6 +3,7 @@
 // NB! Contact forms, image galleries and tables styling rules are located in the separate partials: "_forms.scss", "_gallery.scss" and "_tables.scss".
 .content-formatted {
   @extend %clearfix;
+  @include hyphenate(true);
 
   &.header-body {
     line-height: 1.5em;
@@ -37,9 +38,21 @@
     font-size: 16px;
   }
 
-
-  // Resets the bottom margin for all elements and top margin for all first elements in the editable content-area (to prevent unwanted white-space at the beginning of a content-area).
-  h1, h2, h3, h4, h5, h6, p, ul, ol, pre, code, img, iframe, table, form {
+  // Resets the top margin for the first element and bottom margin for the last element in the content area (to prevent unwanted white-space at the beginning and the end of a content-area).
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ul,
+  ol,
+  pre,
+  code,
+  .edy-positionable-container-left-block,
+  .edy-positionable-container-right-block,
+  .edy-positionable-container-center-block {
     &:first-child {
       margin-top: 0;
     }
@@ -50,7 +63,18 @@
   }
 
   // Styling rules for the editable content area headings and paragraphs.
-  &, h1, h2, h3, h4, h5, h6, p, ul, ol, pre, code, table {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ul,
+  ol,
+  pre,
+  code,
+  table {
     .dark-background & {
       @include color($white);
     }
@@ -60,21 +84,20 @@
     }
   }
 
-  h1, h2, h3, h4, h5, h6, p, ul, ol {
-    @extend %hyphenate;
-  }
-
-  iframe, pre, .edy-positionable-container-left-block {
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-
   // Styling rules for the editable content area headings.
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-weight: 600;
   }
 
-  h3, h4, h5, h6 {
+  h3,
+  h4,
+  h5,
+  h6 {
     margin-top: 20px;
     margin-bottom: 20px;
   }
@@ -117,7 +140,10 @@
     }
   }
 
-  h3, h4, h5, h6 {
+  h3,
+  h4,
+  h5,
+  h6 {
     font-style: italic;
     font-size: 18px;
 
@@ -176,6 +202,58 @@
     line-height: 1.7em;
   }
 
+  // Disables hyphenation for the elements that shouldn't hyphenate.
+  pre,
+  code,
+  iframe,
+  table,
+  form {
+    @include hyphenate(false);
+  }
+
+    // Top and bottom margin for the elements that doesn't have the default margin.
+  pre,
+  .edy-positionable-container-left-block,
+  .edy-positionable-container-right-block,
+  .edy-positionable-container-center-block,
+  .embed-container,
+  .table-container,
+  .editmode & table {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  // Code blocks and preformatted content.
+  pre,
+  code {
+    font-size: 14px;
+    @include bg($primary-color, 0.1);
+  }
+
+  pre {
+    overflow: auto;
+    padding: 10px;
+
+    code {
+      display: inline;
+      padding: 0;
+      white-space: pre;
+      line-height: inherit;
+      background-color: transparent;
+      @include word-wrap(normal);
+    }
+  }
+
+  code {
+    display: inline-block;
+    padding: 5px;
+    @include word-wrap(break-word);
+  }
+
+  blockquote {
+    margin: 20px 40px;
+  }
+
   // Styling rules for the editable content area images, embedded videos, preformatted texts, code examples etc.
   iframe {
     max-width: 100%;
@@ -183,24 +261,6 @@
     .map & {
       margin-top: 0;
     }
-  }
-
-  pre {
-    overflow: auto;
-    padding: 10px;
-    font-size: 14px;
-    @include bg($primary-color, 0.1);
-
-    code {
-      display: block;
-      white-space: nowrap;
-      margin-top: 0;
-      padding: 0;
-    }
-  }
-
-  blockquote {
-    margin: 20px 40px;
   }
 
   .custom-btn {
@@ -223,12 +283,6 @@
 
   .contacts::first-line {
     color: red !important;
-  }
-
-  .edy-positionable-container-left,
-  .edy-positionable-container-right {
-    margin-top: 0;
-    margin-bottom: 0;
   }
 
   .edy-positionable-container-left {
@@ -262,7 +316,6 @@
     -webkit-overflow-scrolling: touch;
 
     .contacts & {
-      overflow: auto;
       -webkit-overflow-scrolling: none;
     }
   }
