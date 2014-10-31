@@ -1062,10 +1062,6 @@ body.search-open {
   background-position: -42px 0;
 }
 
-.lang-flag-pt:after {
-  background-position: -63px 0;
-}
-
 .lang-flag-bg:after {
   background-position: -84px 0;
 }
@@ -1091,7 +1087,7 @@ body.search-open {
 }
 
 .lang-flag-fi:after {
-  background-position: 0px -15px;
+  background-position: 0 -15px;
 }
 
 .lang-flag-fr:after {
@@ -1131,7 +1127,7 @@ body.search-open {
 }
 
 .lang-flag-he:after {
-  background-position: 0px -30px;
+  background-position: 0 -30px;
 }
 
 .lang-flag-it:after {
@@ -1171,7 +1167,7 @@ body.search-open {
 }
 
 .lang-flag-fil:after {
-  background-position: 0px -45px;
+  background-position: 0 -45px;
 }
 
 .lang-flag-pl:after {
@@ -1211,11 +1207,23 @@ body.search-open {
 }
 
 .lang-flag-uk:after {
-  background-position: 0px -60px;
+  background-position: 0 -60px;
 }
 
 .lang-flag-en:after {
   background-position: -21px -60px;
+}
+
+.lang-flag-en-gb:after {
+  background-position: -63px -60px;
+}
+
+.lang-flag-pt:after {
+  background-position: -84px -60px;
+}
+
+.lang-flag-sr:after {
+  background-position: -126px;
 }
 
 .lang-options {
