@@ -232,6 +232,7 @@
 .menu-lang-btn {
   @extend %button;
   position: relative;
+  ttop: 2px;
   display: inline-block;
   vertical-align: top;
   font-family: inherit;
@@ -239,7 +240,7 @@
   @include color($primary-color, .73);
 
   .flags-disabled & {
-    top: 6px;
+    top: 4px;
   }
 
   &:before,
@@ -329,7 +330,6 @@
 
 .menu-lang {
   position: relative;
-  top: 2px;
   margin-left: 17px;
   display: inline-block;
   vertical-align: middle;
