@@ -28,12 +28,13 @@
   src: url("../assets/arvo-bold-italic.eot?#iefix") format("embedded-opentype"), url("../assets/arvo-bold-italic.woff") format("woff"), url("../assets/arvo-bold-italic.ttf") format("truetype"), url("../assets/arvo-bold-italic.svg#Arvo") format("svg");
 }
 /* GENERAL */
-html, body {
-  height: 100% !important;
+html.editmode, html.public {
+  height: 100%;
 }
 
 body {
   position: relative;
+  min-height: 100%;
   margin: 0;
   padding: 0;
   font-family: 'Arvo', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
@@ -46,13 +47,16 @@ body {
   background-attachment: fixed;
   background-size: cover;
 }
+.public body, .editmode body {
+  height: auto;
+}
 body.search-open {
   position: fixed;
   overflow: hidden;
   width: 100%;
 }
 
-.content-formatted:after, .contacts .content-formatted table tr:after, .footer .content-formatted table tr:after, .menu-pagination .menu:after, .header-top .wrap:after, .main-feature .wrap:after,
+.container:after, .content-formatted:after, .contacts .content-formatted table tr:after, .footer .content-formatted table tr:after, .menu-pagination .menu:after, .header-top .wrap:after, .main-feature .wrap:after,
 .summary .wrap:after, .edys-gallery:after, .search:after,
 .search-form:after, .content-formatted .form_submit:after, .comment-form:after, .footer-inner .wrap:after {
   content: "";
@@ -237,7 +241,6 @@ body.search-open {
 }
 
 .container {
-  position: relative;
   min-height: 100%;
 }
 .editmode .container {
@@ -1349,10 +1352,10 @@ body.search-open {
   background-color: white;
 }
 .content .wrap {
-  padding: 60px 20px 20px;
+  padding: 60px 20px;
 }
 .content .wrap.with-submenu {
-  padding: 20px;
+  padding-top: 20px;
 }
 .content-page .content .wrap {
   max-width: 600px;
@@ -2438,6 +2441,9 @@ body.search-open {
   left: 0;
   right: 0;
   bottom: 0;
+}
+.editmode .footer {
+  bottom: 40px;
 }
 
 .footer-inner {

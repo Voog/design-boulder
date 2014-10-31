@@ -4,10 +4,10 @@
   @include bg($white);
 
   .wrap {
-    padding: 60px 20px 20px;
+    padding: 60px 20px;
 
     &.with-submenu {
-      padding: 20px;
+      padding-top: 20px;
     }
 
     .content-page & {

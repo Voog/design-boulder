@@ -1,11 +1,15 @@
 /* GENERAL */
 // Basic parts of the page. These rules affect the entire site.
-html, body {
-  height: 100% !important;
+html {
+  &.editmode,
+  &.public {
+    height: 100%;
+  }
 }
 
 body {
   position: relative;
+  min-height: 100%;
   margin: 0;
   padding: 0;
   font-family: 'Arvo', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
@@ -16,6 +20,11 @@ body {
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
+
+  .public &,
+  .editmode & {
+    height: auto;
+  }
 
   &.search-open {
     position: fixed;
@@ -182,8 +191,8 @@ body {
 
 // Main container that affects the entire site's other elements.
 .container {
-  position:relative;
-  min-height:100%;
+  @extend %clearfix;
+  min-height: 100%;
 
   .editmode & {
     @include calc(min-height, '100% - 40px');
