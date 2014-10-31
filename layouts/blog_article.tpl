@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html class="{% if editmode %}editmode{% else %}public{% endif %}" lang="{{ page.language_code }}">
 <head prefix="og: http://ogp.me/ns#">
+  {% include "edicy-tools-variables" %}
   {% include "html-head" %}
 </head>
 
@@ -37,6 +38,7 @@
   </div>
 
   {% include "javascripts" %}
+  {% include "edicy-tools" %}
   <script>site.initArticlePage();</script>
   <script src="{{ javascripts_path }}/placeholder.js"></script>
   <script>$('.js-placeholder').placeholder();</script>

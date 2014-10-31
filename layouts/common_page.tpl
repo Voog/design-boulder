@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html class="{% if editmode %}editmode{% else %}public{% endif %}" lang="{{ page.language_code }}">
 <head prefix="og: http://ogp.me/ns#">
+  {% include "edicy-tools-variables" %}
   {% include "html-head" %}
 </head>
 
@@ -19,6 +20,7 @@
   </div>
 
   {% include "javascripts" %}
-    <script type="text/javascript">site.initCommonPage();</script>
+  {% include "edicy-tools" %}
+  <script type="text/javascript">site.initCommonPage();</script>
 </body>
 </html>

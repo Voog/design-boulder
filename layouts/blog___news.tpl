@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html class="{% if editmode %}editmode{% else %}public{% endif %}" lang="{{ page.language_code }}">
 <head prefix="og: http://ogp.me/ns#">
+  {% include "edicy-tools-variables" %}
   {% include "html-head" %}
 </head>
 
@@ -30,6 +31,7 @@
   </div>
 
   {% include "javascripts" %}
+  {% include "edicy-tools" %}
   <script>var langCode ='{% if page.language_code == 'zh'%}zh-cn{% else %}{{ page.language_code }}{% endif %}';</script>
   <script src="{{ javascripts_path }}/blog-and-news-application.js"></script>
 

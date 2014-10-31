@@ -60,7 +60,7 @@
     </div>
 
     {% include "javascripts" %}
-    <script>site.initFrontPage();</script>
     {% include "edicy-tools" %}
+    <script>site.initFrontPage();</script>
   </body>
 </html>

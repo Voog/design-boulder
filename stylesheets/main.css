@@ -129,12 +129,16 @@ body.search-open {
 }
 
 .loader {
-  position: absolute;
+  position: fixed;
+  z-index: 10;
 }
 .loader:not(.hidden) .loader-cube {
   -webkit-transition: opacity 0.5s ease-in 1.5s;
   -moz-transition: opacity 0.5s ease-in 1.5s;
   transition: opacity 0.5s ease-in 1.5s;
+}
+.loader.hidden {
+  top: auto;
 }
 
 .loader-cube {
