@@ -293,8 +293,15 @@
     margin-left: 3%;
   }
 
-  .edy-image-container-title {
-    padding: 2px;
+  // Content area image title
+  .edy-image-container-with-title {
+    &:after {
+      display: block;
+      padding: 4px;
+      font-size: 13px;
+      line-height: 1.4em;
+      content: attr(data-title);
+    }
   }
 
   // Styling rules for the site's editable content area tables.

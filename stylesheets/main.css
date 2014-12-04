@@ -544,8 +544,12 @@ body.search-open {
 .content-formatted .edy-positionable-container-right {
   margin-left: 3%;
 }
-.content-formatted .edy-image-container-title {
-  padding: 2px;
+.content-formatted .edy-image-container-with-title:after {
+  display: block;
+  padding: 4px;
+  font-size: 13px;
+  line-height: 1.4em;
+  content: attr(data-title);
 }
 .content-formatted .table-container {
   border-left: 1px solid #000000;
