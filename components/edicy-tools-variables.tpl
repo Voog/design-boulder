@@ -1,3 +1,4 @@
+{% comment %} TODO: Optimize the logic.{% endcomment %}
 {% capture dont_render %}
   {% comment %}Assign language menu flags state{% endcomment %}
   {% if site.data.flags_state == nil %}
@@ -6,46 +7,82 @@
     {% assign flags_state = site.data.flags_state %}
   {% endif %}
 
-  {% comment %}Sets cover color lightness class.{% endcomment %}
-  {% assign header_opacity = page.data.header_opacity %}
-  {% if header_opacity != nil and header_opacity != '' and header_opacity >= 0.16 %}
-    {% if page.data.header_lightness == nil or page.data.header_lightness >= 0.2 %}
-      {% assign header_color_class = ' light-background' %}
+  {% comment %}Assign variables based on page type.{% endcomment %}
+  {% assign fallback_header_image = page.data.header_image %}
+  {% assign fallback_header_color = page.data.header_color %}
+  {% assign fallback_header_colorData = page.data.header_colorData %}
+
+  {% assign header_bg = page.data.header_bg %}
+  {% assign header_bg_image = header_bg.image %}
+  {% assign header_bg_image_sizes = header_bg.imageSizes %}
+  {% assign header_bg_color = header_bg.color %}
+  {% assign header_bg_color_data = header_bg.colorData %}
+  {% assign header_bg_combined_lightness = header_bg.combinedLightness %}
+
+  {% comment %}Sets the body background type.{% endcomment %}
+  {% if header_bg %}
+    {% if header_bg_combined_lightness %}
+      {% if header_bg_combined_lightness > 0.5 %}
+        {% assign header_bg_type = 'light-background' %}
+      {% else %}
+        {% assign header_bg_type = 'dark-background' %}
+      {% endif %}
     {% else %}
-      {% assign header_color_class = ' dark-background' %}
+      {% if header_bg_color_data.a >= 0.5 %}
+        {% if header_bg_color_data.lightness >= 0.5 %}
+          {% assign header_bg_type = 'light-background' %}
+        {% else %}
+          {% assign header_bg_type = 'dark-background' %}
+        {% endif %}
+      {% else %}
+        {% assign header_bg_type = 'light-background' %}
+      {% endif %}
     {% endif %}
   {% else %}
-    {% assign header_color_class = ' dark-background' %}
+    {% if fallback_header_colorData != nil and header_bg_color_data == nil %}
+      {% if fallback_header_colorData.a >= 0.5 %}
+        {% if fallback_header_colorData.lightness >= 0.5 %}
+          {% assign header_bg_type = 'light-background' %}
+        {% else %}
+          {% assign header_bg_type = 'dark-background' %}
+        {% endif %}
+      {% else %}
+        {% assign header_bg_type = 'light-background' %}
+      {% endif %}
+    {% else %}
+      {% assign header_bg_type = 'dark-background' %}
+    {% endif %}
   {% endif %}
 
-  {% comment %}Sets the "front page" header image and color values.{% endcomment %}
-  {% if page.data.header_image == nil %}
-    {% assign header_image = images_path | append: '/header-bg.jpg' %}
+  {% if fallback_header_image != nil and header_bg.image == nil %}
+    {% assign header_bg_image = fallback_header_image %}
   {% else %}
-    {% assign header_image = page.data.header_image %}
+    {% if header_bg_image == nil %}
+      {% assign header_bg_image = images_path | append: '/header-bg_block.jpg' %}
+    {% endif %}
   {% endif %}
 
-  {% if page.data.header_color == nil %}
-    {% assign header_color = 'rgba(0,0,0,0.2)' %}
+  {% if fallback_header_image != nil and header_bg.image == nil %}
+    {% assign header_bg_image_sizes_str = '[{"url": "' | append: fallback_header_image | append: '", "width": 0, "height": 0}]' %}
   {% else %}
-    {% assign header_color = page.data.header_color %}
+    {% if header_bg_image_sizes == nil %}
+      {% assign header_bg_image_sizes_str = '[{"url": "' | append: images_path | append: '/header-bg.jpg", "width": 2000, "height": 1333}, {"url": "' | append: images_path | append: '/header-bg_large.jpg", "width":1280, "height":853}, {"url": "' | append: images_path | append: '/header-bg_block.jpg", "width":500, "height":333}]' %}
+    {% else %}
+      {% assign header_bg_image_sizes_str = header_bg_image_sizes | json %}
+    {% endif %}
   {% endif %}
 
-  {% comment %}Builds style tag for the header background image.{% endcomment %}
-  {% assign header_image_style = ' style="background-image: ' %}
-  {% if header_image == '' %}
-    {% assign header_image_style = header_image_style | append: 'none' %}
+  {% if fallback_header_color != nil and header_bg.color == nil %}
+    {% assign header_bg_color = fallback_header_color %}
   {% else %}
-    {% assign header_image_style = header_image_style | append: "url('" | append: header_image | append: "')" %}
+    {% if header_bg_color == nil %}
+      {% assign header_bg_color = 'rgba(0,0,0,0.2)' %}
+    {% endif %}
   {% endif %}
-  {% assign header_image_style = header_image_style | append: ';"' %}
 
-  {% comment %}Builds style tag for the header background color.{% endcomment %}
-  {% assign header_color_style = ' style="background-color: ' %}
-  {% if header_color == '' %}
-    {% assign header_color_style = header_color_style | append: 'transparent' %}
+  {% if header_bg_color_data == nil %}
+    {% assign header_bg_color_data_str = '{"r": 0, "g": 0, "b": 0, "a": 0.2, "lightness": 0}' %}
   {% else %}
-    {% assign header_color_style = header_color_style | append: header_color %}
+    {% assign header_bg_color_data_str = header_bg_color_data | json %}
   {% endif %}
-  {% assign header_color_style = header_color_style | append: ';"' %}
 {% endcapture %}

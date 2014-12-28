@@ -5,6 +5,10 @@
   @extend %clearfix;
   @include hyphenate(true);
 
+  .dark-background & {
+    @include color($white);
+  }
+
   &.header-body {
     line-height: 1.5em;
     font-style: italic;
@@ -174,10 +178,11 @@
   }
 
   ul,
-  ol {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding-left: 30px;
+  ol,
+  dl {
+    .header-bottom-inner & {
+      text-align: left;
+    }
   }
 
   a {

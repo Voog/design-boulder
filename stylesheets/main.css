@@ -276,6 +276,9 @@ body.search-open {
   -ms-hyphens: auto;
   hyphens: auto;
 }
+.dark-background .content-formatted {
+  color: white;
+}
 .content-formatted.header-body {
   line-height: 1.5em;
   font-style: italic;
@@ -442,11 +445,10 @@ body.search-open {
 .quotation .content-formatted p:first-child {
   margin-top: 15px;
 }
-.content-formatted ul,
-.content-formatted ol {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  padding-left: 30px;
+.header-bottom-inner .content-formatted ul, .header-bottom-inner
+.content-formatted ol, .header-bottom-inner
+.content-formatted dl {
+  text-align: left;
 }
 .content-formatted a {
   text-decoration: underline;
@@ -1445,6 +1447,9 @@ body.search-open {
 }
 .header-bottom-inner a {
   color: white;
+}
+.light-background .header-bottom-inner a {
+  color: rgba(0, 0, 0, 0.73);
 }
 .header-bottom-inner .wrap {
   display: table-cell;

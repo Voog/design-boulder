@@ -1,8 +1,8 @@
-<header class="header">
+<header class="header js-header">
   {% if header == 'content' %}
     {% if cover_image != '' or editmode %}
-      {% if header_image != '' or editmode %}<div class="background-image stretch js-bgpicker-header-image"{{ header_image_style }}></div>{% endif %}
-      {% if header_color != '' or editmode %}<div class="background-color stretch js-bgpicker-header-color"{{ header_color_style }}></div>{% endif %}
+      {% if header_image != '' or editmode %}<div class="background-image stretch js-bgpicker-header-image"></div>{% endif %}
+      {% if header_color != '' or editmode %}<div class="background-color stretch js-bgpicker-header-color"></div>{% endif %}
     {% endif %}
   {% endif %}
 
@@ -65,8 +65,8 @@
   </div>
 
   {% if header == 'content' %}
-    <div class="header-bottom js-header-bottom{{ header_color_class }}">
-      {% if editmode %}<button class="bgpicker-btn js-bgpicker-header-settings" data-bg-image="{{ header_image }}" data-bg-color="{{ header_color }}"></button>{% endif %}
+    <div class="header-bottom js-background-type {{ header_bg_type }}">
+      {% if editmode %}<button class="bgpicker-btn js-bgpicker-header-settings" data-bg-image="{{ header_bg_image }}" data-bg-image-sizes="{{ header_bg_image_sizes_str | escape }}" data-bg-color="{{ header_bg_color }}" data-bg-color-data="{{ header_bg_image_color_data_str | escape }}"></button>{% endif %}
 
       <div class="header-bottom-inner">
         <div class="wrap">

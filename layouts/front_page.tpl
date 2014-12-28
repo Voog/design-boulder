@@ -4,6 +4,7 @@
   {% assign front_page = true %}
   {% include "edicy-tools-variables" %}
   {% include "html-head" %}
+  {% include "edicy-tools-styles" %}
   {% if editmode %}<link rel="stylesheet" href="{{ site.static_asset_host }}/libs/edicy-tools/latest/edicy-tools.css">{% endif %}
 </head>
 

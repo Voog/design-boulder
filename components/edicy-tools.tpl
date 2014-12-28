@@ -1,54 +1,6 @@
 {% editorjsblock %}
   <script src='{{ site.static_asset_host }}/libs/edicy-tools/latest/edicy-tools.js'></script>
   <script>
-    // Front page header image and color data preview and save logic.
-    var pageData = new Edicy.CustomData({
-      type: 'page',
-      id: '{{ page.id }}'
-    });
-
-    var bgPickerHeader = new Edicy.BgPicker($('.js-bgpicker-header-settings'), {
-      picture: true,
-      color: true,
-      showAlpha: true,
-
-      preview: function(data) {
-        var img = (data.image && data.image !== '') ? 'url(' + data.image + ')' : 'none',
-            oldImg = $('.js-bgpicker-header-image').css('background-image'),
-            col = (data.color && data.color !== '') ? data.color : 'transparent',
-            opacity = (data.colorData && data.colorData !== '') ? data.colorData.a : 'none',
-            colorData = (data.colorData && data.colorData !== '') ? data.colorData : 'none',
-            lightness = colorData && colorData !== '' && colorData.lightness ? colorData.lightness : 0;
-
-        // removes the current lightness class.
-        $('.js-header-bottom').removeClass('light-background dark-background');
-        // Checks the opacity of the header background color and sets the lightness class depending on it's value.
-        if (opacity >= 0.16) {
-          $('.js-header-bottom').addClass(lightness >= 0.2 ? 'light-background' : 'dark-background');
-        } else {
-          $('.js-header-bottom').addClass('light-background');
-        }
-
-        // Updades the header image only if it has been changed.
-        if (oldImg !== img) {
-          $('.js-bgpicker-header-image').css({'background-image' : img});
-        }
-
-        // Updates the header background color.
-        $('.js-bgpicker-header-color').css({'background-color' : col});
-
-      },
-
-      commit: function(data) {
-        pageData.set({
-          'header_image': data.image || '',
-          'header_color': data.color || '',
-          'header_colorData' : data.colorData || '',
-          'header_lightness' : data.colorData && data.colorData != '' && data.colorData.lightness ? data.colorData.lightness : 0
-        });
-      }
-    });
-
     var siteData = new Edicy.CustomData({
       type: 'site'
     });
@@ -65,7 +17,99 @@
       siteData.set("flags_state", flagsState);
 
       $(this).toggleClass('js-flag-disable-btn');
-      $('.js-menu-lang').toggleClass('flags-enabled flags-disabled');
+      $('.js-menu-lang-wrap').toggleClass('flags-enabled flags-disabled');
     });
+
+    // HEADER BANNER BACKGROUND PICKER.
+    var pageData = new Edicy.CustomData({
+      type: 'page',
+      id: '{{ page.id }}'
+    });
+
+    // HEADER BACKGROUND IMAGE AND COLOR PREVIEW LOGIC FUNCTION.
+    var headerBgPreview = function(data, header) {
+      // Returns the suitable version of the image depending on the viewport width.
+      var getImageByWidth = function(sizes, targetWidth) {
+        var prevImage;
+
+        for (var i = 0, max = sizes.length; i < max; i++) {
+          if (sizes[i].width < targetWidth) {
+            return prevImage || sizes[i];
+          }
+          prevImage = sizes[i];
+        }
+        // Makes sure that smallest is returned if all images bigger than targetWidth.
+        return sizes[sizes.length - 1];
+      };
+
+      // Defines the variables used in preview logic.
+      var suitableImage = data.imageSizes ? getImageByWidth(data.imageSizes, $(window).width()) : 'none',
+          headerBgImage = (data.image && data.image !== '') ? 'url(' + suitableImage.url + ')' : 'none',
+          headerBgColor = (data.color && data.color !== '') ? data.color : 'rgba(255,255,255,0)',
+          headerBgColorOpacity = (data.colorData && data.colorData !== '') ? data.colorData.a : 'none',
+          headerBgColorLightness = (data.colorData && data.colorData !== '' && data.colorData.lightness) ? data.colorData.lightness : 'none',
+          colorExtractImage = $('<img>'),
+          colorExtractCanvas = $('<canvas>'),
+          colorExtractUrl = (data.image && data.image !== '') ? data.image : null;
+
+          // Updates the header background lightness class.
+          if (colorExtractUrl) {
+            colorExtractImage.attr('src', colorExtractUrl.replace(/.*\/photos/g,'/photos'));
+            colorExtractImage.load(function() {
+              ColorExtract.extract(colorExtractImage[0], colorExtractCanvas[0], function(data) {
+                headerBgImageColor = data.bgColor;
+                headerBgCombinedLightness = site.getCombinedLightness(headerBgImageColor, headerBgColor);
+                console.log(headerBgCombinedLightness);
+
+                // Checks the opacity of the header background color and sets the lightness class depending on it's value.
+                if (headerBgCombinedLightness >= 0.5) {
+                  $('.js-background-type').addClass('light-background').removeClass('dark-background');
+                } else {
+                  $('.js-background-type').addClass('dark-background').removeClass('light-background');
+                }
+              });
+            });
+          } else {
+            headerBgCombinedLightness = null;
+            console.log(headerBgColorLightness);
+            // Checks the opacity of the header background color and sets the lightness class depending on it's value.
+            if (headerBgColorOpacity >= 0.5) {
+              $('.js-background-type').addClass(headerBgColorLightness >= 0.5 ? 'light-background' : 'dark-background').removeClass(headerBgColorLightness >= 0.5 ? 'dark-background' : 'light-background');
+            } else {
+              $('.js-background-type').addClass('light-background').removeClass('dark-background');
+            };
+          };
+
+      // Updates the header background image and background color.
+      $(header).find('.js-bgpicker-header-image').css({'background-image' : headerBgImage});
+      $(header).find('.js-bgpicker-header-color').css({'background-color' : headerBgColor});
+    };
+
+    // HEADER BACKGROUND IMAGE AND COLOR SAVE LOGIC FUNCTION.
+    var headerBgCommit = function(data, dataName) {
+      var commitData = $.extend(true, {}, data);
+      commitData.image = data.image || '';
+      commitData.imageSizes = data.imageSizes || '';
+      commitData.color = data.color || 'transparent';
+      commitData.combinedLightness = headerBgCombinedLightness;
+      pageData.set(dataName, commitData);
+    }
+
+    // Front page left content area background picker.
+    var headerBg = new Edicy.BgPicker($('.js-bgpicker-header-settings'), {
+        picture: true,
+        target_width: 600,
+        color: true,
+        showAlpha: true,
+
+      preview: function(data) {
+        headerBgPreview(data, '.js-header');
+      },
+
+      commit: function(data) {
+        headerBgCommit(data, 'header_bg');
+      }
+    });
+
   </script>
 {% endeditorjsblock %}

@@ -104,6 +104,10 @@
 
   a {
     @include color($white);
+
+    .light-background & {
+      color: rgba($primary-color,0.73);
+    }
   }
 
   .wrap {
