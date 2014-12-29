@@ -85,4 +85,27 @@
   {% else %}
     {% assign header_bg_color_data_str = header_bg_color_data | json %}
   {% endif %}
+
+  {% comment %}PRIMARY COLOR VARIABLES{% endcomment %}
+  {% if site.data.primary_colorData.a >= 0.5 %}
+    {% if site.data.primary_colorData.lightness >= 0.5 %}
+      {% assign summary_background_type = 'light-background' %}
+    {% else %}
+      {% assign summary_background_type = 'dark-background' %}
+    {% endif %}
+  {% else %}
+    {% assign summary_background_type = 'dark-background' %}
+  {% endif %}
+
+  {% if site.data.primary_color != nil %}
+    {% assign site_primary_color = site.data.primary_color %}
+  {% else %}
+    {% assign site_primary_color = 'rgba(228,172,0,1)' %}
+  {% endif %}
+
+  {% if site.data.primary_colorData != nil %}
+    {% assign site_primary_color_data_str = '{"r": 228, "g": 172, "b": 0, "a": 1, "lightness": 0.67}' %}
+  {% else %}
+    {% assign site_primary_color_data_str = site.data.primary_colorData | json %}
+  {% endif %}
 {% endcapture %}

@@ -29,7 +29,7 @@
     &.open,
     &:hover {
       .menu-stripe {
-        @include bg($secondary-color, 0.47);
+        opacity: 0.47;
       }
     }
   }

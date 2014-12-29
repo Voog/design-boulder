@@ -3,6 +3,7 @@
 <head prefix="og: http://ogp.me/ns#">
   {% include "edicy-tools-variables" %}
   {% include "html-head" %}
+  {% include "edicy-tools-styles" %}
 </head>
 
 <body class="common-page content-page{% if editmode or site.has_many_languages? %} multilingual{% endif %}">

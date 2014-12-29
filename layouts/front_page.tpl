@@ -26,7 +26,8 @@
           </div>
         </div>
 
-        <div class="summary dark-background">
+        <div class="summary js-summary {{ summary_background_type }}" style="background-color: {{ site_primary_color }};">
+          {% if editmode %}<button class="bgpicker-btn js-bgpicker-site-primary-color-settings" data-bg-color="{{ site_primary_color }}" data-bg-color-data="{{ site_primary_color_data_str | escape }}"></button>{% endif %}
           <div class="wrap">
             {% if site.latest_articles.size > 0 %}
               <section class="blog inner inner-left">

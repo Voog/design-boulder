@@ -38,7 +38,7 @@
 
         {% include "search" %}
 
-        <button class="menu-btn js-menu-btn">
+        <button class="menu-btn js-menu-btn js-btn">
           <span class="menu-stripe"></span>
           <span class="menu-stripe"></span>
           <span class="menu-stripe"></span>

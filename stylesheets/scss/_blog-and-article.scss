@@ -15,6 +15,21 @@
     @include color($white, 0.5);
   }
 
+  .light-background {
+    .blog-title,
+    .post-date {
+      @include color($primary-color, 0.5);
+    }
+
+    .post-title {
+      @include border(bottom, 1px, solid, $primary-color, 0.73);
+
+      &, & a {
+        @include color($primary-color, 0.73);
+      }
+    }
+  }
+
   .post {
     margin-top: 13px;
 

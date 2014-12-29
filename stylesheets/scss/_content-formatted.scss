@@ -9,20 +9,20 @@
     @include color($white);
   }
 
-  &.header-body {
-    line-height: 1.5em;
-    font-style: italic;
-    font-size: 30px;
-
-    @include query($mobile-1 - 58) {
-      font-size: 24px;
-    }
-  }
-
   .main-feature &,
   .quotation & {
     line-height: 1.4em;
   }
+
+  // .summary & {
+  //   .light-background & {
+  //     @include color($primary-color, 0.73);
+  //   }
+
+  //   .dark-background & {
+  //     @include color($primary-color, 0.73);
+  //   }
+  // }
 
   .quotation & {
     width: 100%;
@@ -34,6 +34,16 @@
     font-size: 20px;
   }
 
+  &.header-body {
+    line-height: 1.5em;
+    font-style: italic;
+    font-size: 30px;
+
+    @include query($mobile-1 - 58) {
+      font-size: 24px;
+    }
+  }
+
   &.footer-left {
     font-size: 20px;
   }
@@ -41,6 +51,8 @@
   &.footer-right {
     font-size: 16px;
   }
+
+
 
   // Resets the top margin for the first element and bottom margin for the last element in the content area (to prevent unwanted white-space at the beginning and the end of a content-area).
   h1,
