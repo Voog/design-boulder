@@ -11062,6 +11062,10 @@ MMCQ = (function() {
   var handleElementsClick = function() {
     // Hides opened popups and modals if clicked on any other element.
     $('html').click(function() {
+      if ($('.js-btn').hasClass('open')) {
+        $('.js-btn').removeClass('open');
+      }
+
       if ($('.js-popover').hasClass('expanded')) {
         $('.js-popover').removeClass('expanded');
       }
