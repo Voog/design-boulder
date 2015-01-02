@@ -1797,8 +1797,6 @@ body.search-open {
 .content-formatted .edys-gallery-area .edys-gallery-item,
 .content-formatted .edy-gallery-area .edys-gallery-item {
   display: block;
-  width: auto;
-  height: auto;
   -webkit-transition: opacity 0.3s ease-in;
   -moz-transition: opacity 0.3s ease-in;
   transition: opacity 0.3s ease-in;
