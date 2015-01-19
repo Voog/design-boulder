@@ -80,17 +80,17 @@ body.search-open {
   bottom: 0;
 }
 
-.bgpicker-btn, .menu-btn, .menu-lang-btn, .option-btn, .search-btn {
+.vg-bg-picker-btn, .menu-btn, .menu-lang-btn, .option-btn, .search-btn {
   margin: 0;
   padding: 0;
   background: none;
   border: none;
   cursor: pointer;
 }
-.bgpicker-btn:focus, .menu-btn:focus, .menu-lang-btn:focus, .option-btn:focus, .search-btn:focus {
+.vg-bg-picker-btn:focus, .menu-btn:focus, .menu-lang-btn:focus, .option-btn:focus, .search-btn:focus {
   outline: none;
 }
-.bgpicker-btn::-moz-focus-inner, .menu-btn::-moz-focus-inner, .menu-lang-btn::-moz-focus-inner, .option-btn::-moz-focus-inner, .search-btn::-moz-focus-inner {
+.vg-bg-picker-btn::-moz-focus-inner, .menu-btn::-moz-focus-inner, .menu-lang-btn::-moz-focus-inner, .option-btn::-moz-focus-inner, .search-btn::-moz-focus-inner {
   padding: 0;
   border: none;
 }
@@ -225,7 +225,7 @@ body.search-open {
     transform: rotate(-360deg);
   }
 }
-.bgpicker-btn {
+.vg-bg-picker-btn {
   position: absolute;
 }
 

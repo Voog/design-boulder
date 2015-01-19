@@ -11,6 +11,7 @@
   {% assign fallback_header_image = page.data.header_image %}
   {% assign fallback_header_color = page.data.header_color %}
   {% assign fallback_header_colorData = page.data.header_colorData %}
+  {% assign fallback_header_lightness = page.data.header_lightness %}
 
   {% assign header_bg = page.data.header_bg %}
   {% assign header_bg_image = header_bg.image %}
@@ -41,7 +42,7 @@
   {% else %}
     {% if fallback_header_colorData != nil and header_bg_color_data == nil %}
       {% if fallback_header_colorData.a >= 0.5 %}
-        {% if fallback_header_colorData.lightness >= 0.5 %}
+        {% if fallback_header_lightness >= 0.5 %}
           {% assign header_bg_type = 'light-background' %}
         {% else %}
           {% assign header_bg_type = 'dark-background' %}
