@@ -11250,7 +11250,7 @@ MMCQ = (function() {
     commitData.color = data.color || 'rgba(255,255,255,0)';
     commitData.combinedLightness = headerBgCombinedLightness;
     pageData.set(dataName, commitData);
-  }
+  };
 
   var colorSum = function(bgColor, fgColor) {
     if (bgColor && fgColor) {
@@ -11287,6 +11287,85 @@ MMCQ = (function() {
     var combinedColor = getCombinedColor(bgColor, fgColor);
     var color = Math.round(((+combinedColor[0]) * 0.2126 + (+combinedColor[1]) * 0.7152 + (+combinedColor[2]) * 0.0722) / 2.55) / 100;
     return color;
+  };
+
+  var primaryColorPreview = function(data, container) {
+    console.log(data.colorData.a);
+    var colorDataAlpha = data.colorData.a > .25 ? data.colorData.a : .25,
+        colorDataAlphaHover = data.colorData.a > .25 ? data.colorData.a - .2 : .05,
+        minColor = 'rgba(' + data.colorData.r + ',' + data.colorData.g + ',' + data.colorData.b + ',' + colorDataAlpha + ');)';
+        minColorHover = 'rgba(' + data.colorData.r + ',' + data.colorData.g + ',' + data.colorData.b + ',' + colorDataAlphaHover + ');)';
+
+console.log(minColorHover);
+
+    $('head').append('
+      <style>
+        .summary {
+          background-color: ' + data.color + ';
+        }
+        .menu-btn .menu-stripe,
+        .content-formatted .form_submit input {
+          background-color: ' + minColor + ';
+        }
+
+        .menu-main .menu-link.active,
+        .menu-main .menu-link.active:hover {
+          border-bottom: solid 1px ' + minColor + ';
+          box-shadow: inset 0 -3px 0 ' + minColor + ';
+        }
+
+        .menu-main .menu-link:hover {
+          border-bottom: solid 1px ' + minColorHover + ';;
+          box-shadow: inset 0 -3px 0 ' + minColorHover + ';
+        }
+
+        @media screen and (max-width: 900px) {
+          .menu-main.expanded .menu-link.active,
+          .menu-main.expanded .menu-link.active:hover {
+            color: ' + minColor + ';
+          }
+        }
+
+        .content-formatted a,
+        .menu-pagination .menu-item.active .menu-link,
+        .menu-pagination .menu-item .menu-link:hover {
+          color: ' + minColor + ';
+        }
+
+        .search-open-btn svg,
+        .search-close-btn svg {
+          fill: ' + minColor + ';
+        }
+
+        .content-formatted .form_submit input {
+          background-color: ' + minColor + ';
+        }
+
+        .content-formatted .form_submit input:hover {
+          background-color: ' + minColorHover + ';
+        }
+      </style>
+    ');
+
+    if (data.colorData.a >= 0.5) {
+      $('.js-summary').addClass(data.colorData.lightness >= 0.5 ? 'light-background' : 'dark-background').removeClass(data.colorData.lightness >= 0.5 ? 'dark-background' : 'light-background');
+    } else {
+      $('.js-summary').addClass('light-background').removeClass('dark-background');
+    };
+  };
+
+  var primaryColorCommit = function(data, dataName) {
+    var primary = [];
+
+    var color = (data.color && data.color !== '') ? data.color : 'transparent',
+        colorData = (data.colorData && data.colorData !== '') ? data.colorData : null;
+
+    primary.push({
+      color: data.color,
+      color_data: data.colorData
+    });
+
+    siteData.set(dataName, data);
   };
 
   // scrolls to the comment-form if comment submit failed (to show the error messages to the user)
@@ -11438,7 +11517,9 @@ MMCQ = (function() {
     initFrontPage: initFrontPage,
     toggleFlags: toggleFlags,
     headerBgPreview: headerBgPreview,
-    headerBgCommit: headerBgCommit
+    headerBgCommit: headerBgCommit,
+    primaryColorPreview: primaryColorPreview,
+    primaryColorCommit: primaryColorCommit
   });
 
   init();
