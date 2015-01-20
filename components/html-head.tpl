@@ -31,3 +31,5 @@
 {% comment %}MISCELLANEOUS{% endcomment %}
 {% if blog %}{{ blog.rss_link }}{% endif %}
 {{ site.stats_header }}
+
+{% if editmode %}<style id="preview-style"></style>{% endif %}

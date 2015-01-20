@@ -79,7 +79,7 @@
       if (search.prev().is(menuBtn)) {
         search.after(menuBtn);
       }
-    }
+    };
   };
 
   // Closes the soft keyboards on mobile devices on search submit.
@@ -233,61 +233,54 @@
   };
 
   var primaryColorPreview = function(data, container) {
-    console.log(data.colorData.a);
-    var colorDataAlpha = data.colorData.a > .25 ? data.colorData.a : .25,
-        colorDataAlphaHover = data.colorData.a > .25 ? data.colorData.a - .2 : .05,
-        minColor = 'rgba(' + data.colorData.r + ',' + data.colorData.g + ',' + data.colorData.b + ',' + colorDataAlpha + ');)';
-        minColorHover = 'rgba(' + data.colorData.r + ',' + data.colorData.g + ',' + data.colorData.b + ',' + colorDataAlphaHover + ');)';
+    var dataColorRgb = 'rgb(' + data.colorData.r + ',' + data.colorData.g + ',' + data.colorData.b + ');',
+        dataColorHover = 'rgba(' + data.colorData.r + ',' + data.colorData.g + ',' + data.colorData.b + ',.8);)';
 
-console.log(minColorHover);
+    $('#preview-style').html('
+      .summary {
+        background-color: ' + data.color + ';
+      }
+      .menu-btn .menu-stripe,
+      .content-formatted .form_submit input {
+        background-color: ' + dataColorRgb + ';
+      }
 
-    $('head').append('
-      <style>
-        .summary {
-          background-color: ' + data.color + ';
-        }
-        .menu-btn .menu-stripe,
-        .content-formatted .form_submit input {
-          background-color: ' + minColor + ';
-        }
+      .menu-main .menu-link.active,
+      .menu-main .menu-link.active:hover {
+        border-bottom: solid 1px ' + dataColorRgb + ';
+        box-shadow: inset 0 -3px 0 ' + dataColorRgb + ';
+      }
 
-        .menu-main .menu-link.active,
-        .menu-main .menu-link.active:hover {
-          border-bottom: solid 1px ' + minColor + ';
-          box-shadow: inset 0 -3px 0 ' + minColor + ';
-        }
+      .menu-main .menu-link:hover {
+        border-bottom: solid 1px ' + dataColorHover + ';;
+        box-shadow: inset 0 -3px 0 ' + dataColorHover + ';
+      }
 
-        .menu-main .menu-link:hover {
-          border-bottom: solid 1px ' + minColorHover + ';;
-          box-shadow: inset 0 -3px 0 ' + minColorHover + ';
+      @media screen and (max-width: 900px) {
+        .menu-main.expanded .menu-link.active,
+        .menu-main.expanded .menu-link.active:hover {
+          color: ' + dataColorRgb + ';
         }
+      }
 
-        @media screen and (max-width: 900px) {
-          .menu-main.expanded .menu-link.active,
-          .menu-main.expanded .menu-link.active:hover {
-            color: ' + minColor + ';
-          }
-        }
+      .content-formatted a,
+      .menu-pagination .menu-item.active .menu-link,
+      .menu-pagination .menu-item .menu-link:hover {
+        color: ' + dataColorRgb + ';
+      }
 
-        .content-formatted a,
-        .menu-pagination .menu-item.active .menu-link,
-        .menu-pagination .menu-item .menu-link:hover {
-          color: ' + minColor + ';
-        }
+      .search-open-btn svg,
+      .search-close-btn svg {
+        fill: ' + dataColorRgb + ';
+      }
 
-        .search-open-btn svg,
-        .search-close-btn svg {
-          fill: ' + minColor + ';
-        }
+      .content-formatted .form_submit input {
+        background-color: ' + dataColorRgb + ';
+      }
 
-        .content-formatted .form_submit input {
-          background-color: ' + minColor + ';
-        }
-
-        .content-formatted .form_submit input:hover {
-          background-color: ' + minColorHover + ';
-        }
-      </style>
+      .content-formatted .form_submit input:hover {
+        background-color: ' + dataColorHover + ';
+      }
     ');
 
     if (data.colorData.a >= 0.5) {
