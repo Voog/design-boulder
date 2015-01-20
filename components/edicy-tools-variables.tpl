@@ -100,8 +100,10 @@
 
   {% if site.data.primary.color != nil %}
     {% assign site_primary_color = site.data.primary.color %}
+    {% assign site_primary_color_rgb = 'rgb(' | append: site.data.primary.colorData.r | append: ',' | append: site.data.primary.colorData.g | append: ',' | append: site.data.primary.colorData.b  | append: ');' %}
+    {% assign site_primary_color_rgb_hover = 'rgba(' | append: site.data.primary.colorData.r | append: ',' | append: site.data.primary.colorData.g | append: ',' | append: site.data.primary.colorData.b  | append: ',0.8);' %}
   {% else %}
-    {% assign site_primary_color = 'rgba(228,172,0,1)' %}
+    {% assign site_primary_color = 'rgb(228,172,0)' %}
   {% endif %}
 
   {% if site.data.primary.colorData != nil %}

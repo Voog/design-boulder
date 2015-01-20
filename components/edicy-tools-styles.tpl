@@ -58,47 +58,53 @@
 
   /* Custom primary color styles */
   {% if site.data.primary %}
-    .summary,
+    .summary {
+      background-color: {{ site_primary_color }};
+    }
+
     .menu-btn .menu-stripe,
     .content-formatted .form_submit input {
-      background-color: {{ site_primary_color }};
+      background-color: {{ site_primary_color_rgb }};
     }
 
     .menu-main .menu-link.active,
     .menu-main .menu-link.active:hover {
-      border-bottom: solid 1px {{ site_primary_color }};
-      box-shadow: inset 0 -3px 0 {{ site_primary_color }};
+      border-bottom: solid 1px {{ site_primary_color_rgb }};
+      box-shadow: inset 0 -3px 0 {{ site_primary_color_rgb }};
     }
 
     .menu-main .menu-link:hover {
-      border-bottom: solid 1px rgba({{ site.data.primary.colorData.r }}, {{ site.data.primary.colorData.g }}, {{ site.data.primary.colorData.b }}, {% if site.data.primary.colorData.a > 0.25 %}{{ site.data.primary.colorData.a | minus: 0.2 }}{% else %}0.05{% endif %});
-      box-shadow: inset 0 -3px 0 rgba({{ site.data.primary.colorData.r }}, {{ site.data.primary.colorData.g }}, {{ site.data.primary.colorData.b }}, {% if site.data.primary.colorData.a > 0.25 %}{{ site.data.primary.colorData.a | minus: 0.2 }}{% else %}0.05{% endif %});
+      border-bottom: solid 1px {{ site_primary_color_rgb_hover }});
+      box-shadow: inset 0 -3px 0 {{ site_primary_color_rgb_hover }});
     }
 
     @media screen and (max-width: 900px) {
       .menu-main.expanded .menu-link.active,
       .menu-main.expanded .menu-link.active:hover {
-        color: {{ site_primary_color }};
+        color: {{ site_primary_color_rgb }};
       }
     }
 
-    .content-formatted a,
+    .content-formatted a {
+      color: {{ site_primary_color }};
+    }
+
     .menu-pagination .menu-item.active .menu-link,
     .menu-pagination .menu-item .menu-link:hover {
-      color: {{ site_primary_color }};
+      color: {{ site_primary_color_rgb_hover }}
     }
 
     .search-open-btn svg,
     .search-close-btn svg {
-      fill: {{ site_primary_color }};
+      fill: {{ site_primary_color_rgb }};
     }
 
     .content-formatted .form_submit input {
-      background-color: {{ site_primary_color }};
+      background-color: {{ site_primary_color_rbg }};
     }
 
     .content-formatted .form_submit input:hover {
-      background-color: rgba({{ site.data.primary.colorData.r }}, {{ site.data.primary.colorData.g }}, {{ site.data.primary.colorData.b }}, {% if site.data.primary.colorData.a > 0.25 %}{{ site.data.primary.colorData.a | minus: 0.2 }}{% else %}0.05{% endif %});
+      background-color: {{ site_primary_color_rgb_hover }};
     }
   {% endif %}
 </style>
