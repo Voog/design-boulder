@@ -1,31 +1,27 @@
 /* FONTS */
 @font-face {
   font-family: "Arvo";
-  font-weight: 400;
   font-style: normal;
-  src: url("../assets/arvo-regular.eot");
-  src: url("../assets/arvo-regular.eot?#iefix") format("embedded-opentype"), url("../assets/arvo-regular.woff") format("woff"), url("../assets/arvo-regular.ttf") format("truetype"), url("../assets/arvo-regular.svg#Arvo") format("svg");
-}
-@font-face {
-  font-family: "Arvo";
   font-weight: 400;
-  font-style: italic;
-  src: url("../assets/arvo-italic.eot");
-  src: url("../assets/arvo-italic.eot?#iefix") format("embedded-opentype"), url("../assets/arvo-italic.woff") format("woff"), url("../assets/arvo-italic.ttf") format("truetype"), url("../assets/arvo-italic.svg#Arvo") format("svg");
+  src: url("../assets/arvo-regular.eot?#iefix") format("embedded-opentype"), url("../assets/arvo-regular.woff2") format("woff2"), url("../assets/arvo-regular.woff") format("woff"), url("../assets/arvo-regular.ttf") format("truetype"), url("../assets/arvo-regular.svg#Arvo") format("svg");
 }
 @font-face {
   font-family: "Arvo";
-  font-weight: 700;
+  font-style: italic;
+  font-weight: 400;
+  src: url("../assets/arvo-italic.eot?#iefix") format("embedded-opentype"), url("../assets/arvo-italic.woff2") format("woff2"), url("../assets/arvo-italic.woff") format("woff"), url("../assets/arvo-italic.ttf") format("truetype"), url("../assets/arvo-italic.svg#Arvo") format("svg");
+}
+@font-face {
+  font-family: "Arvo";
   font-style: normal;
-  src: url("../assets/arvo-bold.eot");
-  src: url("../assets/arvo-bold.eot?#iefix") format("embedded-opentype"), url("../assets/arvo-bold.woff") format("woff"), url("../assets/arvo-bold.ttf") format("truetype"), url("../assets/arvo-bold.svg#Arvo") format("svg");
+  font-weight: 700;
+  src: url("../assets/arvo-bold.eot?#iefix") format("embedded-opentype"), url("../assets/arvo-bold.woff2") format("woff2"), url("../assets/arvo-bold.woff") format("woff"), url("../assets/arvo-bold.ttf") format("truetype"), url("../assets/arvo-bold.svg#Arvo") format("svg");
 }
 @font-face {
   font-family: "Arvo";
-  font-weight: 700;
   font-style: italic;
-  src: url("../assets/arvo-bold-italic.eot");
-  src: url("../assets/arvo-bold-italic.eot?#iefix") format("embedded-opentype"), url("../assets/arvo-bold-italic.woff") format("woff"), url("../assets/arvo-bold-italic.ttf") format("truetype"), url("../assets/arvo-bold-italic.svg#Arvo") format("svg");
+  font-weight: 700;
+  src: url("../assets/arvo-bold-italic.eot?#iefix") format("embedded-opentype"), url("../assets/arvo-bold-italic.woff2") format("woff2"), url("../assets/arvo-bold-italic.woff") format("woff"), url("../assets/arvo-bold-italic.ttf") format("truetype"), url("../assets/arvo-bold-italic.svg#Arvo") format("svg");
 }
 /* GENERAL */
 html.editmode, html.public {
@@ -503,13 +499,15 @@ body.search-open {
   white-space: pre;
   line-height: inherit;
   background-color: transparent;
+  overflow-wrap: normal;
   word-wrap: normal;
+  word-break: normal;
 }
 .content-formatted code {
   display: inline-block;
   padding: 5px;
-  word-wrap: break-word;
   overflow-wrap: break-word;
+  word-wrap: break-word;
   word-break: break-all;
 }
 .content-formatted blockquote {
@@ -656,8 +654,6 @@ body.search-open {
     width: 100%;
     float: left;
     padding: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
   .contacts .content-formatted table {
@@ -1361,6 +1357,24 @@ body.search-open {
   border-bottom: 1px solid #000000;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
+.flexbox .header-top {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  -moz-justify-content: flex-end;
+  justify-content: flex-end;
+}
 .front-page .header-top {
   background-color: #FFFFFF;
   background-color: rgba(255, 255, 255, 0.9);
@@ -1381,8 +1395,6 @@ body.search-open {
   .no-flexbox .header-top .wrap {
     display: table;
     width: 100%;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
 }
@@ -1499,13 +1511,9 @@ body.search-open {
 .no-flexbox .main-feature .wrap {
   display: table;
   width: 100%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 .main-feature .inner {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 .main-feature .inner:empty {
@@ -1569,8 +1577,6 @@ body.search-open {
 .no-flexbox .summary .wrap {
   display: table;
   width: 100%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 .flexbox .summary .inner {
@@ -1956,8 +1962,6 @@ body.search-open {
   color: #000000;
   color: rgba(0, 0, 0, 0.73);
   background-color: #e5e5e5;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   border: none;
   border-radius: 0;
@@ -2068,8 +2072,6 @@ body.search-open {
 @media screen and (max-width: 640px) {
   .voog-search-modal-inner {
     display: block;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
     height: 100%;
     max-height: none;
@@ -2237,8 +2239,6 @@ body.search-open {
   background-color: rgba(0, 0, 0, 0.02);
   border: 1px solid #000000;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 .header-bottom .content-formatted .form_field_textfield, .header-bottom

@@ -20,6 +20,12 @@
   @include bg($white);
   @include border(bottom, 1px, solid, $primary-color, 0.1);
 
+  .flexbox & {
+    @include display(flex);
+    @include flex-wrap(wrap);
+    @include justify-content(flex-end);
+  }
+
   .front-page & {
     @include bg($white, 0.9);
   }
@@ -37,7 +43,7 @@
       .no-flexbox & {
         display: table;
         width: 100%;
-        @include box-sizing(border-box);
+        box-sizing: border-box;
       }
     }
   }

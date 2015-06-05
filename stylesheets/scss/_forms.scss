@@ -89,7 +89,7 @@
     padding: 5px;
     @include bg($primary-color, 0.02);
     @include border(all, 1px, solid, $primary-color, 0.1);
-    @include box-sizing(border-box);
+    box-sizing: border-box;
 
     .header-bottom & {
       @include color($primary-color, 0.73);

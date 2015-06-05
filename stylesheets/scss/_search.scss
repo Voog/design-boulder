@@ -116,7 +116,7 @@
   line-height: 1em;
   @include color($primary-color, 0.73);
   @include bg($grey);
-  @include box-sizing(border-box);
+  box-sizing: border-box;
   border: none;
   border-radius: 0;
   -webkit-appearance: none;
@@ -237,7 +237,7 @@
 
   @include query($mobile-1) {
     display: block;
-    @include box-sizing(border-box);
+    box-sizing: border-box;
     height: 100%;
     max-height: none;
     box-shadow: none;
