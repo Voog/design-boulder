@@ -58,53 +58,59 @@
 
   /* Custom primary color styles */
   {% if site.data.primary %}
-    .summary {
-      background-color: {{ site_primary_color }};
-    }
-
-    .menu-btn .menu-stripe,
-    .content-formatted .form_submit input {
-      background-color: {{ site_primary_color_rgb }};
-    }
-
-    .menu-main .menu-link.active,
-    .menu-main .menu-link.active:hover {
-      border-bottom: solid 1px {{ site_primary_color_rgb }};
-      box-shadow: inset 0 -3px 0 {{ site_primary_color_rgb }};
-    }
-
-    .menu-main .menu-link:hover {
-      border-bottom: solid 1px {{ site_primary_color_rgb_hover }});
-      box-shadow: inset 0 -3px 0 {{ site_primary_color_rgb_hover }});
-    }
-
-    @media screen and (max-width: 900px) {
-      .menu-main.expanded .menu-link.active,
-      .menu-main.expanded .menu-link.active:hover {
-        color: {{ site_primary_color_rgb }};
+    {% unless site.data.primary.colorData.lightness == 1 %}
+      .summary {
+        background-color: {{ site_primary_color }};
       }
-    }
 
-    .content-formatted a {
-      color: {{ site_primary_color }};
-    }
+      .menu-btn .menu-stripe,
+      .content-formatted .form_submit input {
+        background-color: {{ site_primary_color_rgb }};
+      }
 
-    .menu-pagination .menu-item.active .menu-link,
-    .menu-pagination .menu-item .menu-link:hover {
-      color: {{ site_primary_color_rgb_hover }}
-    }
+      .menu-main .menu-link.active,
+      .menu-main .menu-link.active:hover {
+        border-bottom: solid 1px {{ site_primary_color_rgb }};
+        box-shadow: inset 0 -3px 0 {{ site_primary_color_rgb }};
+      }
 
-    .search-open-btn svg,
-    .search-close-btn svg {
-      fill: {{ site_primary_color_rgb }};
-    }
+      .menu-main .menu-link:hover {
+        border-bottom: solid 1px {{ site_primary_color_rgb_hover }});
+        box-shadow: inset 0 -3px 0 {{ site_primary_color_rgb_hover }});
+      }
 
-    .content-formatted .form_submit input {
-      background-color: {{ site_primary_color_rbg }};
-    }
+      @media screen and (max-width: 900px) {
+        .menu-main.expanded .menu-link.active,
+        .menu-main.expanded .menu-link.active:hover {
+          color: {{ site_primary_color_rgb }};
+        }
+      }
 
-    .content-formatted .form_submit input:hover {
-      background-color: {{ site_primary_color_rgb_hover }};
-    }
+      .content-formatted a {
+        color: {{ site_primary_color }};
+      }
+
+      .menu-pagination .menu-item.active .menu-link,
+      .menu-pagination .menu-item .menu-link:hover {
+        color: {{ site_primary_color_rgb_hover }}
+      }
+
+      .search-open-btn svg,
+      .search-close-btn svg {
+        fill: {{ site_primary_color_rgb }};
+      }
+
+      .content-formatted .form_submit input {
+        background-color: {{ site_primary_color_rbg }};
+      }
+
+      .content-formatted .form_submit input:hover {
+        background-color: {{ site_primary_color_rgb_hover }};
+      }
+    {% else %}
+      .summary {
+        background-color: {{ site_primary_color }};
+      }
+    {% endunless %}
   {% endif %}
 </style>

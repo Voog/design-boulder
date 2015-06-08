@@ -11183,7 +11183,6 @@ MMCQ = (function() {
 
   // Switches the search input and menu button location in DOM for mobile view.
   var handleSearchPositionChange = function() {
-    console.log('fdsjankln');
     var windowWidth = $(window).width(),
         search = $('.js-search'),
         menuBtn = $('.js-menu-btn');
@@ -11353,55 +11352,68 @@ MMCQ = (function() {
     var dataColorRgb = 'rgb(' + data.colorData.r + ',' + data.colorData.g + ',' + data.colorData.b + ');',
         dataColorHover = 'rgba(' + data.colorData.r + ',' + data.colorData.g + ',' + data.colorData.b + ',.8);)';
 
-    $('#preview-style').html('
-      .summary {
-        background-color: ' + data.color + ';
-      }
-      .menu-btn .menu-stripe,
-      .content-formatted .form_submit input {
-        background-color: ' + dataColorRgb + ';
-      }
+console.log(data.colorData.lightness);
 
-      .menu-main .menu-link.active,
-      .menu-main .menu-link.active:hover {
-        border-bottom: solid 1px ' + dataColorRgb + ';
-        box-shadow: inset 0 -3px 0 ' + dataColorRgb + ';
-      }
+    if (data.colorData.lightness !== 1) {
+      // Dark colors.
+      $('#preview-style').html('
+        .summary {
+          background-color: ' + data.color + ';
+        }
+        .menu-btn .menu-stripe,
+        .content-formatted .form_submit input {
+          background-color: ' + dataColorRgb + ';
+        }
 
-      .menu-main .menu-link:hover {
-        border-bottom: solid 1px ' + dataColorHover + ';;
-        box-shadow: inset 0 -3px 0 ' + dataColorHover + ';
-      }
+        .menu-main .menu-link.active,
+        .menu-main .menu-link.active:hover {
+          border-bottom: solid 1px ' + dataColorRgb + ';
+          box-shadow: inset 0 -3px 0 ' + dataColorRgb + ';
+        }
 
-      @media screen and (max-width: 900px) {
-        .menu-main.expanded .menu-link.active,
-        .menu-main.expanded .menu-link.active:hover {
+        .menu-main .menu-link:hover {
+          border-bottom: solid 1px ' + dataColorHover + ';;
+          box-shadow: inset 0 -3px 0 ' + dataColorHover + ';
+        }
+
+        @media screen and (max-width: 900px) {
+          .menu-main.expanded .menu-link.active,
+          .menu-main.expanded .menu-link.active:hover {
+            color: ' + dataColorRgb + ';
+          }
+        }
+
+        .content-formatted a,
+        .menu-pagination .menu-item.active .menu-link,
+        .menu-pagination .menu-item .menu-link:hover {
           color: ' + dataColorRgb + ';
         }
-      }
 
-      .content-formatted a,
-      .menu-pagination .menu-item.active .menu-link,
-      .menu-pagination .menu-item .menu-link:hover {
-        color: ' + dataColorRgb + ';
-      }
+        .search-open-btn svg,
+        .search-close-btn svg {
+          fill: ' + dataColorRgb + ';
+        }
 
-      .search-open-btn svg,
-      .search-close-btn svg {
-        fill: ' + dataColorRgb + ';
-      }
+        .content-formatted .form_submit input {
+          background-color: ' + dataColorRgb + ';
+        }
 
-      .content-formatted .form_submit input {
-        background-color: ' + dataColorRgb + ';
-      }
+        .content-formatted .form_submit input:hover {
+          background-color: ' + dataColorHover + ';
+        }
+      ');
+    } else {
+      // Light colors.
+      console.log('sdafjknklj');
+      $('#preview-style').html('
+        .summary {
+          background-color: ' + data.color + ';
+        }
+      ');
+    };
 
-      .content-formatted .form_submit input:hover {
-        background-color: ' + dataColorHover + ';
-      }
-    ');
-
-    if (data.colorData.a >= 0.5) {
-      $('.js-summary').addClass(data.colorData.lightness >= 0.5 ? 'light-background' : 'dark-background').removeClass(data.colorData.lightness >= 0.5 ? 'dark-background' : 'light-background');
+    if (data.colorData.a >= .5) {
+      $('.js-summary').addClass(data.colorData.lightness >= .5 ? 'light-background' : 'dark-background').removeClass(data.colorData.lightness >= .5 ? 'dark-background' : 'light-background');
     } else {
       $('.js-summary').addClass('light-background').removeClass('dark-background');
     };
