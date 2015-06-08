@@ -130,9 +130,14 @@ module.exports = function(grunt) {
 
     // Watches the project for changes and recompiles the output files.
     watch: {
-      js: {
-        files: 'javascripts/src/concat/*.js',
-        tasks: ['concat:build', 'uglify:build', 'exec:kit:javascripts/*.js']
+      js_global: {
+        files: 'javascripts/src/concat/global/*.js',
+        tasks: ['concat:build_global', 'uglify:build', 'exec:kit:javascripts/*.js']
+      },
+
+      js_blog_and_news: {
+        files: 'javascripts/src/concat/blog-and-news/*.js',
+        tasks: ['concat:build_blog_and_news', 'uglify:build', 'exec:kit:javascripts/*.js']
       },
 
       css: {

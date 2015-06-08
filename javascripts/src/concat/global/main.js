@@ -1,6 +1,22 @@
 ;(function($) {
   var editmode = $('html').hasClass('editmode');
 
+  // Function to limit the rate at which a function can fire.
+  var debounce = function(func, wait, immediate) {
+    var timeout;
+    return function() {
+      var context = this, args = arguments;
+      var later = function() {
+        timeout = null;
+        if (!immediate) func.apply(context, args);
+      };
+      var callNow = immediate && !timeout;
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+      if (callNow) func.apply(context, args);
+    };
+  };
+
   // Handles mouse clicks on different buttons and sections of the web page.
   var handleElementsClick = function() {
     // Hides opened popups and modals if clicked on any other element.
@@ -67,6 +83,7 @@
 
   // Switches the search input and menu button location in DOM for mobile view.
   var handleSearchPositionChange = function() {
+    console.log('fdsjankln');
     var windowWidth = $(window).width(),
         search = $('.js-search'),
         menuBtn = $('.js-menu-btn');
@@ -400,11 +417,7 @@
 
   // Initiates the table horisontal scroll function when window is resized
   var handleWindowResize = function() {
-    $(window).resize(function() {
-      handleTableHorizontalScrolling();
-      handleFooterPositioning();
-      handleSearchPositionChange();
-    });
+    $(window).resize(debounce(handleSearchPositionChange, 1000));
   };
 
   // Initiations
