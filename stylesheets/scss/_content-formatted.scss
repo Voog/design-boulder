@@ -181,7 +181,6 @@
     .quotation & {
       margin-top: 7px;
       font-size: 24px;
-      @include color($white);
 
       &:first-child {
         margin-top: 15px;
