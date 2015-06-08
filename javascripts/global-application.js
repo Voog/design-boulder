@@ -11205,17 +11205,6 @@ MMCQ = (function() {
     });
   };
 
-  // Reduces opacity of the gallery images that are not under the cursor.
-  var handleGalleryHover = function() {
-    $('.edys-gallery').mouseover(function() {
-      $(this).find('.edys-gallery-item').addClass('inactive');
-    });
-
-    $('.edys-gallery').mouseout(function() {
-      $(this).find('.edys-gallery-item').removeClass('inactive');
-    });
-  };
-
   var toggleFlags = function() {
     $('.js-option-toggle-flags').on('click', function(event) {
       event.stopPropagation();
@@ -11467,29 +11456,6 @@ console.log(data.colorData.lightness);
     });
   };
 
-  // Checks the presence of the table scrollbar.
-  var checkScrollBar = function() {
-    jQuery.fn.hasScrollBar = function(direction) {
-      if (direction == 'vertical') {
-        return this.get(0).scrollHeight > this.innerHeight();
-      } else if (direction == 'horizontal') {
-        return this.get(0).scrollWidth > this.innerWidth();
-      }
-      return false;
-    }
-  };
-
-  // Adds horizontal scroll to tables that don't fit into the content area
-  var handleTableHorizontalScrolling = function() {
-    $.each($('.table-container'), function() {
-      if ($(this).hasScrollBar('horizontal') === true) {
-        $(this).addClass('horizontal-scroll');
-      } else {
-        $(this).removeClass('horizontal-scroll');
-      }
-    });
-  };
-
   var colorSum = function(bgColor, fgColor) {
     if (bgColor && fgColor) {
       if (typeof bgColor == 'string') {
@@ -11555,15 +11521,9 @@ console.log(data.colorData.lightness);
     handleFooterContentEdit();
     handleSearchPositionChange();
     handleSearchSubmit();
-    handleGalleryHover();
     focusFormWithErrors();
     handleWindowResize();
     wrapTables();
-
-    if ($('.table-container').length > 0) {
-      checkScrollBar();
-      handleTableHorizontalScrolling();
-    }
 
     $(document).ready(function() {
       handleFooterPositioning();
