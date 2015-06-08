@@ -17,7 +17,12 @@
 
     <div class="comments content-formatted">
       <div class="wrap">
-        <h2 class="comments-title">{{ 'post_has_replies' | lcc : article.comments_count }}</h2>
+        <h2 class="comments-title">
+        {% case article.comments_count %}
+          {% when 0 %}{{ "write_first_comment" | lc }}
+          {% else %}{{ 'post_has_replies' | lcc : article.comments_count }}
+        {% endcase %}
+        </h2>
 
         {% if article.comments_count > 0 %}
           <div class="comment-messages">
