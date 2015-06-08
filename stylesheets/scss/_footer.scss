@@ -30,6 +30,12 @@
     @extend %clearfix;
     @extend %wide-wrap;
     padding: 24px 20px 22px;
+
+    .flexbox & {
+      @include display(flex);
+      @include flex-wrap(wrap);
+      @include justify-content(flex-end);
+    }
   }
 
   .footer-left,
@@ -38,14 +44,25 @@
   }
 
   .footer-left {
-    @extend %header-footer-left;
     position: relative;
     top: 2px;
     margin-right: 20px;
+
+    .flexbox & {
+      max-width: 100%;
+      @include flex(1 0 auto);
+    }
+
+    .no-flexbox & {
+      float: left;
+
+      @include query($tablet-3) {
+        float: none;
+      }
+    }
   }
 
   .footer-right {
-    @extend %header-footer-right;
     position: relative;
     top: 4px;
   }

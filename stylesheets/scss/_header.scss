@@ -20,12 +20,6 @@
   @include bg($white);
   @include border(bottom, 1px, solid, $primary-color, 0.1);
 
-  .flexbox & {
-    @include display(flex);
-    @include flex-wrap(wrap);
-    @include justify-content(flex-end);
-  }
-
   .front-page & {
     @include bg($white, 0.9);
   }
@@ -35,47 +29,34 @@
     @extend %wide-wrap;
     padding: 20px;
 
-    @include query($tablet-2) {
-      .flexbox & {
-        @include display(flex);
-      }
-
-      .no-flexbox & {
-        display: table;
-        width: 100%;
-        box-sizing: border-box;
-      }
+    .flexbox & {
+      @include display(flex);
+      @include flex-wrap(wrap);
+      @include justify-content(flex-end);
     }
   }
 }
 
 .header-left {
-  @extend %header-footer-left;
+  .flexbox & {
+    max-width: 100%;
+    @include flex(1 0 auto);
+  }
+
+  .no-flexbox & {
+    float: left;
+
+    @include query($tablet-3) {
+      float: none;
+    }
+  }
 }
 
 .header-right {
-  @extend %header-footer-right;
   text-align: right;
-}
 
-@include query($tablet-2) {
-  .header-left,
-  .header-right {
-    float: none;
-
-    .no-flexbox & {
-      display: table-cell;
-      vertical-align: top;
-    }
-  }
-
-  .header-left {
-    @include flex(1);
-    margin-right: 20px;
-  }
-
-  .header-right {
-    display: inline-block;
+  .no-flexbox & {
+    float: right;
   }
 }
 
@@ -83,10 +64,8 @@
   @extend %hyphenate;
   position: relative;
   top: 1px;
-  display: inline-block;
-  vertical-align: middle;
-  min-width: 140px;
   min-height: 40px;
+  margin-right: 20px;
   line-height: 1.3em;
   font-weight: 700;
   font-size: 30px;
