@@ -3,25 +3,25 @@
   font-family: "Arvo";
   font-style: normal;
   font-weight: 400;
-  src: url("../assets/arvo-regular.eot?#iefix") format("embedded-opentype"), url("../assets/arvo-regular.woff2") format("woff2"), url("../assets/arvo-regular.woff") format("woff"), url("../assets/arvo-regular.ttf") format("truetype"), url("../assets/arvo-regular.svg#Arvo") format("svg");
+  src: url("../assets/arvo-regular.eot?#iefix") format("embedded-opentype"), url("../assets/arvo-regular.woff") format("woff"), url("../assets/arvo-regular.ttf") format("truetype"), url("../assets/arvo-regular.svg#Arvo") format("svg");
 }
 @font-face {
   font-family: "Arvo";
   font-style: italic;
   font-weight: 400;
-  src: url("../assets/arvo-italic.eot?#iefix") format("embedded-opentype"), url("../assets/arvo-italic.woff2") format("woff2"), url("../assets/arvo-italic.woff") format("woff"), url("../assets/arvo-italic.ttf") format("truetype"), url("../assets/arvo-italic.svg#Arvo") format("svg");
+  src: url("../assets/arvo-italic.eot?#iefix") format("embedded-opentype"), url("../assets/arvo-italic.woff") format("woff"), url("../assets/arvo-italic.ttf") format("truetype"), url("../assets/arvo-italic.svg#Arvo") format("svg");
 }
 @font-face {
   font-family: "Arvo";
   font-style: normal;
   font-weight: 700;
-  src: url("../assets/arvo-bold.eot?#iefix") format("embedded-opentype"), url("../assets/arvo-bold.woff2") format("woff2"), url("../assets/arvo-bold.woff") format("woff"), url("../assets/arvo-bold.ttf") format("truetype"), url("../assets/arvo-bold.svg#Arvo") format("svg");
+  src: url("../assets/arvo-bold.eot?#iefix") format("embedded-opentype"), url("../assets/arvo-bold.woff") format("woff"), url("../assets/arvo-bold.ttf") format("truetype"), url("../assets/arvo-bold.svg#Arvo") format("svg");
 }
 @font-face {
   font-family: "Arvo";
   font-style: italic;
   font-weight: 700;
-  src: url("../assets/arvo-bold-italic.eot?#iefix") format("embedded-opentype"), url("../assets/arvo-bold-italic.woff2") format("woff2"), url("../assets/arvo-bold-italic.woff") format("woff"), url("../assets/arvo-bold-italic.ttf") format("truetype"), url("../assets/arvo-bold-italic.svg#Arvo") format("svg");
+  src: url("../assets/arvo-bold-italic.eot?#iefix") format("embedded-opentype"), url("../assets/arvo-bold-italic.woff") format("woff"), url("../assets/arvo-bold-italic.ttf") format("truetype"), url("../assets/arvo-bold-italic.svg#Arvo") format("svg");
 }
 /* GENERAL */
 html.editmode, html.public {
@@ -53,7 +53,7 @@ body.search-open {
 }
 
 .container:after, .content-formatted:after, .contacts .content-formatted table tr:after, .footer .content-formatted table tr:after, .menu-pagination .menu:after, .header-top .wrap:after, .main-feature .wrap:after,
-.summary .wrap:after, .content-formatted .edys-gallery:after, .search:after,
+.summary .wrap:after, .search:after,
 .search-form:after, .content-formatted .form_submit:after, .comment-form:after, .footer-inner .wrap:after {
   content: "";
   display: table;
@@ -1750,28 +1750,14 @@ body.search-open {
 }
 
 /* GALLERY */
-.header-body .content-formatted .edys-gallery {
-  display: inline-block;
-  margin: 0 auto;
-}
 .content-formatted .edys-gallery-area,
 .content-formatted .edy-gallery-area {
   margin-left: -6px;
-}
-.content-formatted .edys-gallery-area .edys-gallery-item,
-.content-formatted .edys-gallery-area .edy-gallery-item,
-.content-formatted .edys-gallery-area .edy-gallery-sortable-placeholder,
-.content-formatted .edy-gallery-area .edys-gallery-item,
-.content-formatted .edy-gallery-area .edy-gallery-item,
-.content-formatted .edy-gallery-area .edy-gallery-sortable-placeholder {
-  width: 95px;
-  height: 95px;
-  overflow: hidden;
-  margin: 3px 0 3px 6px;
+  font-size: 0;
+  line-height: 1em;
 }
 .content-formatted .edys-gallery-area .edys-gallery-item,
 .content-formatted .edy-gallery-area .edys-gallery-item {
-  display: block;
   -webkit-transition: opacity 0.3s ease-in;
   -moz-transition: opacity 0.3s ease-in;
   transition: opacity 0.3s ease-in;
@@ -1780,11 +1766,21 @@ body.search-open {
 }
 .content-formatted .edys-gallery-area .edys-gallery-item.inactive,
 .content-formatted .edy-gallery-area .edys-gallery-item.inactive {
-  opacity: 0.8;
+  opacity: .6;
 }
 .content-formatted .edys-gallery-area .edys-gallery-item:hover,
 .content-formatted .edy-gallery-area .edys-gallery-item:hover {
   opacity: 1;
+}
+.content-formatted .edys-gallery-area .edys-gallery-item,
+.content-formatted .edys-gallery-area .edy-gallery-item,
+.content-formatted .edys-gallery-area .edy-gallery-sortable-placeholder,
+.content-formatted .edy-gallery-area .edys-gallery-item,
+.content-formatted .edy-gallery-area .edy-gallery-item,
+.content-formatted .edy-gallery-area .edy-gallery-sortable-placeholder {
+  display: inline-block;
+  float: none;
+  margin: 3px 0 3px 6px;
 }
 .content-formatted.narrow-feature .edys-gallery-area .edys-gallery-item,
 .content-formatted.narrow-feature .edy-gallery-area .edys-gallery-item {
