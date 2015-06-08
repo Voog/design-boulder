@@ -14,16 +14,6 @@
     line-height: 1.4em;
   }
 
-  // .summary & {
-  //   .light-background & {
-  //     @include color($primary-color, 0.73);
-  //   }
-
-  //   .dark-background & {
-  //     @include color($primary-color, 0.73);
-  //   }
-  // }
-
   .quotation & {
     width: 100%;
     @include align-self(center);
@@ -52,8 +42,6 @@
     font-size: 16px;
   }
 
-
-
   // Resets the top margin for the first element and bottom margin for the last element in the content area (to prevent unwanted white-space at the beginning and the end of a content-area).
   h1,
   h2,
@@ -66,9 +54,15 @@
   ol,
   pre,
   code,
+  .edy-positionable-container-center,
   .edy-positionable-container-left-block,
   .edy-positionable-container-right-block,
-  .edy-positionable-container-center-block {
+  .edy-texteditor-container-wrapper-center,
+  .edy-texteditor-container-wrapper-left-block,
+  .edy-texteditor-container-wrapper-right-block,
+  .embed-container,
+  .table-container,
+  .editmode & table {
     &:first-child {
       margin-top: 0;
     }
@@ -110,21 +104,13 @@
     font-weight: 600;
   }
 
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-
   h1, h2 {
     text-align: center;
   }
 
   h1 {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    // margin-top: 50px;
+    // margin-bottom: 50px;
     line-height: 1.3em;
     font-size: 36px;
 
@@ -134,8 +120,8 @@
   }
 
   h2 {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    // margin-top: 30px;
+    // margin-bottom: 30px;
     font-size: 24px;
 
     .main-feature & {
@@ -171,8 +157,8 @@
 
   // Styling rules for the editable content area paragraphs, lists and links.
   p {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    // margin-top: 20px;
+    // margin-bottom: 20px;
 
     .main-feature & {
       margin-bottom: 17px;
@@ -227,11 +213,14 @@
     @include hyphenate(false);
   }
 
-    // Top and bottom margin for the elements that doesn't have the default margin.
+  // Top and bottom margin for the elements that doesn't have the default margin.
   pre,
+  .edy-positionable-container-center,
   .edy-positionable-container-left-block,
   .edy-positionable-container-right-block,
-  .edy-positionable-container-center-block,
+  .edy-texteditor-container-wrapper-center,
+  .edy-texteditor-container-wrapper-left-block,
+  .edy-texteditor-container-wrapper-right-block,
   .embed-container,
   .table-container,
   .editmode & table {

@@ -307,9 +307,14 @@ body.search-open {
 .content-formatted ol:first-child,
 .content-formatted pre:first-child,
 .content-formatted code:first-child,
+.content-formatted .edy-positionable-container-center:first-child,
 .content-formatted .edy-positionable-container-left-block:first-child,
 .content-formatted .edy-positionable-container-right-block:first-child,
-.content-formatted .edy-positionable-container-center-block:first-child {
+.content-formatted .edy-texteditor-container-wrapper-center:first-child,
+.content-formatted .edy-texteditor-container-wrapper-left-block:first-child,
+.content-formatted .edy-texteditor-container-wrapper-right-block:first-child,
+.content-formatted .embed-container:first-child,
+.content-formatted .table-container:first-child, .editmode .content-formatted table:first-child {
   margin-top: 0;
 }
 .content-formatted h1:last-child,
@@ -323,9 +328,14 @@ body.search-open {
 .content-formatted ol:last-child,
 .content-formatted pre:last-child,
 .content-formatted code:last-child,
+.content-formatted .edy-positionable-container-center:last-child,
 .content-formatted .edy-positionable-container-left-block:last-child,
 .content-formatted .edy-positionable-container-right-block:last-child,
-.content-formatted .edy-positionable-container-center-block:last-child {
+.content-formatted .edy-texteditor-container-wrapper-center:last-child,
+.content-formatted .edy-texteditor-container-wrapper-left-block:last-child,
+.content-formatted .edy-texteditor-container-wrapper-right-block:last-child,
+.content-formatted .embed-container:last-child,
+.content-formatted .table-container:last-child, .editmode .content-formatted table:last-child {
   margin-bottom: 0;
 }
 .dark-background .content-formatted h1, .dark-background
@@ -365,19 +375,10 @@ body.search-open {
 .content-formatted h6 {
   font-weight: 600;
 }
-.content-formatted h3,
-.content-formatted h4,
-.content-formatted h5,
-.content-formatted h6 {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
 .content-formatted h1, .content-formatted h2 {
   text-align: center;
 }
 .content-formatted h1 {
-  margin-top: 50px;
-  margin-bottom: 50px;
   line-height: 1.3em;
   font-size: 36px;
 }
@@ -385,8 +386,6 @@ body.search-open {
   font-size: 32px;
 }
 .content-formatted h2 {
-  margin-top: 30px;
-  margin-bottom: 30px;
   font-size: 24px;
 }
 .main-feature .content-formatted h2 {
@@ -416,10 +415,6 @@ body.search-open {
 .content-formatted h6 {
   font-weight: 400;
   font-size: 24px;
-}
-.content-formatted p {
-  margin-top: 20px;
-  margin-bottom: 20px;
 }
 .main-feature .content-formatted p {
   margin-bottom: 17px;
@@ -465,9 +460,12 @@ body.search-open {
   hyphens: none;
 }
 .content-formatted pre,
+.content-formatted .edy-positionable-container-center,
 .content-formatted .edy-positionable-container-left-block,
 .content-formatted .edy-positionable-container-right-block,
-.content-formatted .edy-positionable-container-center-block,
+.content-formatted .edy-texteditor-container-wrapper-center,
+.content-formatted .edy-texteditor-container-wrapper-left-block,
+.content-formatted .edy-texteditor-container-wrapper-right-block,
 .content-formatted .embed-container,
 .content-formatted .table-container, .editmode .content-formatted table {
   margin-top: 10px;
