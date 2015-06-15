@@ -17,22 +17,31 @@
     };
   };
 
+  var bindSideClicks = function() {
+    $(document).on('mousedown', function(event) {
+      if (!$(event.target).closest('.js-prevent-sideclick, .edy-popover, .edy-bar-container').length) {
+        $('.js-popover').removeClass('expanded');
+        $('.js-search-close-btn').trigger('click');
+      };
+    });
+  };
+
   // Handles mouse clicks on different buttons and sections of the web page.
   var handleElementsClick = function() {
     // Hides opened popups and modals if clicked on any other element.
-    $('html').click(function() {
-      if ($('.js-btn').hasClass('open')) {
-        $('.js-btn').removeClass('open');
-      }
+    // $('html').click(function() {
+    //   if ($('.js-btn').hasClass('open')) {
+    //     $('.js-btn').removeClass('open');
+    //   }
 
-      if ($('.js-popover').hasClass('expanded')) {
-        $('.js-popover').removeClass('expanded');
-      }
+    //   if ($('.js-popover').hasClass('expanded')) {
+    //     $('.js-popover').removeClass('expanded');
+    //   }
 
-      if ($('.js-search-close-btn').hasClass('open') && $('.voog-search-modal').length === 0) {
-        $('.js-search-close-btn').trigger('click');
-      }
-    });
+    //   if ($('.js-search-close-btn').hasClass('open') && $('.voog-search-modal').length === 0) {
+    //     $('.js-search-close-btn').trigger('click');
+    //   }
+    // });
 
     // Toggles the popover main menu (visible on smalles screens).
     $('.js-menu-btn').click(function(event) {
@@ -380,6 +389,7 @@ console.log(data.colorData.lightness);
 
   var init = function() {
     // ADD SITE WIDE FUNCTIONS HERE
+    bindSideClicks();
     handleElementsClick();
     handleFooterContentEdit();
     handleSearchPositionChange();

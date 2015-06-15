@@ -16,7 +16,9 @@
   @include bg($grey);
 
   @include query($tablet-2) {
-    top: 4px;
+    position: absolute;
+    top: 25px;
+    right: 65px;
   }
 
   @include query($mobile-1) {
@@ -79,6 +81,12 @@
     opacity: 0.6;
   }
 
+  @include query($mobile-1) {
+    position: absolute;
+    top: 25px;
+    right: 50px;
+  }
+
   svg {
     vertical-align: middle;
     fill: rgba($primary-color, 0.73);
@@ -102,6 +110,7 @@
   .not-empty & {
     display: block;
   }
+
 }
 
 .search-input {

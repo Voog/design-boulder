@@ -11117,22 +11117,31 @@ MMCQ = (function() {
     };
   };
 
+  var bindSideClicks = function() {
+    $(document).on('mousedown', function(event) {
+      if (!$(event.target).closest('.js-prevent-sideclick, .edy-popover, .edy-bar-container').length) {
+        $('.js-popover').removeClass('expanded');
+        $('.js-search-close-btn').trigger('click');
+      };
+    });
+  };
+
   // Handles mouse clicks on different buttons and sections of the web page.
   var handleElementsClick = function() {
     // Hides opened popups and modals if clicked on any other element.
-    $('html').click(function() {
-      if ($('.js-btn').hasClass('open')) {
-        $('.js-btn').removeClass('open');
-      }
+    // $('html').click(function() {
+    //   if ($('.js-btn').hasClass('open')) {
+    //     $('.js-btn').removeClass('open');
+    //   }
 
-      if ($('.js-popover').hasClass('expanded')) {
-        $('.js-popover').removeClass('expanded');
-      }
+    //   if ($('.js-popover').hasClass('expanded')) {
+    //     $('.js-popover').removeClass('expanded');
+    //   }
 
-      if ($('.js-search-close-btn').hasClass('open') && $('.voog-search-modal').length === 0) {
-        $('.js-search-close-btn').trigger('click');
-      }
-    });
+    //   if ($('.js-search-close-btn').hasClass('open') && $('.voog-search-modal').length === 0) {
+    //     $('.js-search-close-btn').trigger('click');
+    //   }
+    // });
 
     // Toggles the popover main menu (visible on smalles screens).
     $('.js-menu-btn').click(function(event) {
@@ -11456,43 +11465,6 @@ console.log(data.colorData.lightness);
     });
   };
 
-  var colorSum = function(bgColor, fgColor) {
-    if (bgColor && fgColor) {
-      if (typeof bgColor == 'string') {
-        bgColor = bgColor.replace(/rgba?\(/,'').replace(/\)/,'').split(',');
-        $.each(bgColor, function(n, x) {bgColor[n] = +x;});
-      }
-      if (typeof fgColor == 'string') {
-        fgColor = fgColor.replace(/rgba?\(/,'').replace(/\)/,'').split(',');
-        $.each(fgColor, function(n, x) {fgColor[n] = +x;});
-      }
-      if (typeof bgColor == 'object' && bgColor.hasOwnProperty('length')) {
-        if (bgColor.length == 3) { bgColor.push(1.0); }
-      }
-      if (typeof fgColor == 'object' && fgColor.hasOwnProperty('length')) {
-        if (fgColor.length == 3) { fgColor.push(1.0); }
-      }
-      var result = [0, 0, 0, 0];
-      result[3] = 1 - (1 - fgColor[3]) * (1 - bgColor[3]);
-      if (result[3] === 0) { result[3] = 1e-6; }
-      result[0] = Math.min(fgColor[0] * fgColor[3] / result[3] + bgColor[0] * bgColor[3] * (1 - fgColor[3]) / result[3], 255);
-      result[1] = Math.min(fgColor[1] * fgColor[3] / result[3] + bgColor[1] * bgColor[3] * (1 - fgColor[3]) / result[3], 255);
-      result[2] = Math.min(fgColor[2] * fgColor[3] / result[3] + bgColor[2] * bgColor[3] * (1 - fgColor[3]) / result[3], 255);
-      return $.map(result, function(e) { return Math.floor(e); });
-    }
-  };
-
-  var getCombinedColor = function(bgColor, fgColor) {
-    var sum = colorSum(bgColor || [255,255,255,1], fgColor || [255,255,255,1]);
-    return sum;
-  };
-
-  var getCombinedLightness = function(bgColor, fgColor) {
-    var combinedColor = getCombinedColor(bgColor, fgColor);
-    var color = Math.round(((+combinedColor[0]) * 0.2126 + (+combinedColor[1]) * 0.7152 + (+combinedColor[2]) * 0.0722) / 2.55) / 100;
-    return color;
-  };
-
   // Initiates the table horisontal scroll function when window is resized
   var handleWindowResize = function() {
     $(window).resize(debounce(handleSearchPositionChange, 1000));
@@ -11517,6 +11489,7 @@ console.log(data.colorData.lightness);
 
   var init = function() {
     // ADD SITE WIDE FUNCTIONS HERE
+    bindSideClicks();
     handleElementsClick();
     handleFooterContentEdit();
     handleSearchPositionChange();

@@ -65,10 +65,18 @@
   position: relative;
   top: 1px;
   min-height: 40px;
-  margin-right: 20px;
+  margin-right: 40px;
   line-height: 1.3em;
   font-weight: 700;
   font-size: 30px;
+
+  .search-enabled & {
+    margin-right: 200px;
+
+    @include query($mobile-1) {
+      margin-right: 65px;
+    }
+  }
 
   a {
     @include color($primary-color, 0.73);
