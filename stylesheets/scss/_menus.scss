@@ -73,6 +73,7 @@
   }
 
   .menu-item {
+    @include hyphenate(true);
     &:first-child {
       margin-left: 0;
     }
