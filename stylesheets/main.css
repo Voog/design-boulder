@@ -1762,65 +1762,6 @@ body.search-open {
   margin-top: 47px;
 }
 
-/* GALLERY */
-.content-formatted .edys-gallery-area,
-.content-formatted .edy-gallery-area {
-  margin-left: -6px;
-  font-size: 0;
-  line-height: 1em;
-}
-.content-formatted .edys-gallery-area .edys-gallery-item,
-.content-formatted .edys-gallery-area .edy-gallery-item,
-.content-formatted .edys-gallery-area .edy-gallery-sortable-placeholder,
-.content-formatted .edy-gallery-area .edys-gallery-item,
-.content-formatted .edy-gallery-area .edy-gallery-item,
-.content-formatted .edy-gallery-area .edy-gallery-sortable-placeholder {
-  display: inline-block;
-  float: none;
-  margin: 3px 0 3px 6px;
-}
-.content-formatted.narrow-feature .edys-gallery-area .edys-gallery-item,
-.content-formatted.narrow-feature .edy-gallery-area .edys-gallery-item {
-  position: relative;
-  width: 22.6%;
-  height: auto;
-  margin: 0 3.1% 3.1% 0;
-}
-.content-formatted.narrow-feature .edys-gallery-area .edys-gallery-item:before,
-.content-formatted.narrow-feature .edy-gallery-area .edys-gallery-item:before {
-  content: '';
-  display: block;
-  padding-top: 100%;
-}
-.content-formatted.narrow-feature .edys-gallery-area .edys-gallery-item .edys-gallery-image,
-.content-formatted.narrow-feature .edy-gallery-area .edys-gallery-item .edys-gallery-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: auto;
-  height: auto;
-}
-.content-formatted.narrow-feature .edys-gallery-area .edys-gallery-item .edys-gallery-image.edys-gallery-image-square,
-.content-formatted.narrow-feature .edy-gallery-area .edys-gallery-item .edys-gallery-image.edys-gallery-image-square {
-  width: 100%;
-}
-.content-formatted.narrow-feature .edys-gallery-area {
-  margin-bottom: -14px;
-}
-.content-formatted.narrow-feature .edys-gallery-area .edys-gallery-item:nth-child(4n+4) {
-  margin-right: 0;
-}
-.content-formatted.narrow-feature .edy-gallery-area .edys-gallery-item:nth-child(4n+5) {
-  margin-right: 0;
-}
-@media screen and (max-width: 582px) {
-  .content-formatted.narrow-feature .edys-gallery-area {
-    margin-bottom: 0;
-  }
-}
-
 /* SEARCH */
 .search {
   position: relative;
