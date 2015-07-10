@@ -1921,7 +1921,7 @@ body.search-open {
 }
 .search-open-btn svg,
 .search-close-btn svg {
-  fill: #e4ac00;
+  fill: rgba(228, 172, 0, 0.67);
 }
 
 @media screen and (max-width: 640px) {
