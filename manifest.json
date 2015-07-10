@@ -168,12 +168,6 @@
       "filename": "arvo-bold-italic.eot"
     },
     {
-      "content_type": "application/x-font-opentype",
-      "file": "assets/arvo-bold-italic.otf",
-      "kind": "assets",
-      "filename": "arvo-bold-italic.otf"
-    },
-    {
       "content_type": "image/svg+xml",
       "file": "assets/arvo-bold-italic.svg",
       "kind": "assets",
@@ -192,16 +186,16 @@
       "filename": "arvo-bold-italic.woff"
     },
     {
+      "content_type": "text/unknown",
+      "file": "assets/arvo-bold-italic.woff2",
+      "kind": "assets",
+      "filename": "arvo-bold-italic.woff2"
+    },
+    {
       "content_type": "application/vnd.ms-fontobject",
       "file": "assets/arvo-bold.eot",
       "kind": "assets",
       "filename": "arvo-bold.eot"
-    },
-    {
-      "content_type": "application/x-font-opentype",
-      "file": "assets/arvo-bold.otf",
-      "kind": "assets",
-      "filename": "arvo-bold.otf"
     },
     {
       "content_type": "image/svg+xml",
@@ -222,16 +216,16 @@
       "filename": "arvo-bold.woff"
     },
     {
+      "content_type": "text/unknown",
+      "file": "assets/arvo-bold.woff2",
+      "kind": "assets",
+      "filename": "arvo-bold.woff2"
+    },
+    {
       "content_type": "application/vnd.ms-fontobject",
       "file": "assets/arvo-italic.eot",
       "kind": "assets",
       "filename": "arvo-italic.eot"
-    },
-    {
-      "content_type": "application/x-font-opentype",
-      "file": "assets/arvo-italic.otf",
-      "kind": "assets",
-      "filename": "arvo-italic.otf"
     },
     {
       "content_type": "image/svg+xml",
@@ -252,16 +246,16 @@
       "filename": "arvo-italic.woff"
     },
     {
+      "content_type": "text/unknown",
+      "file": "assets/arvo-italic.woff2",
+      "kind": "assets",
+      "filename": "arvo-italic.woff2"
+    },
+    {
       "content_type": "application/vnd.ms-fontobject",
       "file": "assets/arvo-regular.eot",
       "kind": "assets",
       "filename": "arvo-regular.eot"
-    },
-    {
-      "content_type": "application/x-font-opentype",
-      "file": "assets/arvo-regular.otf",
-      "kind": "assets",
-      "filename": "arvo-regular.otf"
     },
     {
       "content_type": "image/svg+xml",
@@ -280,6 +274,12 @@
       "file": "assets/arvo-regular.woff",
       "kind": "assets",
       "filename": "arvo-regular.woff"
+    },
+    {
+      "content_type": "text/unknown",
+      "file": "assets/arvo-regular.woff2",
+      "kind": "assets",
+      "filename": "arvo-regular.woff2"
     },
     {
       "content_type": "image/svg+xml",
