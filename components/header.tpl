@@ -30,7 +30,7 @@
         <nav class="menu-main js-menu-main js-popover js-prevent-sideclick">
           {% include "menu-level-1" %}
           {% if editmode or site.has_many_languages? %}
-          <div class="menu-lang js-menu-lang {% if flags_state %}flags-enabled{% else %}flags-disabled{% endif %}">
+          <div class="menu-lang js-menu-lang js-prevent-sideclick {% if flags_state %}flags-enabled{% else %}flags-disabled{% endif %}">
             {% include "menu-lang" %}
           </div>
           {% endif %}
@@ -45,7 +45,7 @@
         </button>
 
         {% if editmode or site.has_many_languages? %}
-          <nav class="menu-lang js-menu-lang {% if flags_state %}flags-enabled{% else %}flags-disabled{% endif %}">
+          <nav class="menu-lang js-menu-lang js-prevent-sideclick {% if flags_state %}flags-enabled{% else %}flags-disabled{% endif %}">
             <button class="menu-lang-btn js-menu-lang-btn lang-flag lang-flag-{{ page.language_code }}">
               {% if editmode or flags_state == false %}
                 <span class="lang-title">
