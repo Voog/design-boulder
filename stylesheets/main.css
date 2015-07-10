@@ -432,6 +432,7 @@ body.search-open {
 .content-formatted iframe, .header-bottom-inner
 .content-formatted table, .header-bottom-inner
 .content-formatted form, .header-bottom-inner
+.content-formatted .form, .header-bottom-inner
 .content-formatted ul, .header-bottom-inner
 .content-formatted ol, .header-bottom-inner
 .content-formatted dl {
