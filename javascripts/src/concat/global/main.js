@@ -249,61 +249,137 @@
   };
 
   var primaryColorPreview = function(data, container) {
-    var dataColorRgb = 'rgb(' + data.colorData.r + ',' + data.colorData.g + ',' + data.colorData.b + ');',
-        dataColorHover = 'rgba(' + data.colorData.r + ',' + data.colorData.g + ',' + data.colorData.b + ',.8);)';
+    if (data.colorData) {
+      var dataColorRgb = 'rgb(' + data.colorData.r + ',' + data.colorData.g + ',' + data.colorData.b + ');',
+          dataColorHover = 'rgba(' + data.colorData.r + ',' + data.colorData.g + ',' + data.colorData.b + ',.8);)';
 
-    if (data.colorData.lightness !== 1) {
-      // Dark colors.
-      $('#preview-style').html('
-        .summary {
-          background-color: ' + data.color + ';
-        }
-        .content-formatted .form_submit input {
-          background-color: ' + dataColorRgb + ';
-        }
-
-        .menu-main .menu-link.active,
-        .menu-main .menu-link.active:hover {
-          border-bottom: solid 1px ' + dataColorRgb + ';
-          box-shadow: inset 0 -3px 0 ' + dataColorRgb + ';
-        }
-
-        .menu-main .menu-link:hover {
-          border-bottom: solid 1px ' + dataColorHover + ';;
-          box-shadow: inset 0 -3px 0 ' + dataColorHover + ';
-        }
-
-        @media screen and (max-width: 900px) {
-          .menu-main.expanded .menu-link.active,
-          .menu-main.expanded .menu-link.active:hover {
-            color: ' + dataColorRgb + ';
-          }
-        }
-
-        .content-formatted a,
-        .menu-pagination .menu-item.active .menu-link,
-        .menu-pagination .menu-item .menu-link:hover {
-          color: ' + dataColorRgb + ';
-        }
-
-        .content-formatted .form_submit input {
-          background-color: ' + dataColorRgb + ';
-        }
-
-        .content-formatted .form_submit input:hover {
-          background-color: ' + dataColorHover + ';
-        }
-      ');
+      if (data.colorData.lightness !== 1) {
+        // Dark colors.
+        $('#preview-style').html(
+          '.summary {\
+            background-color: ' + data.color + ';\
+          }\
+          .content-formatted .custom-btn {\
+            background-color: ' + dataColorRgb + ';\
+          }\
+          .content-formatted .custom-btn:hover {\
+            background-color: ' + dataColorHover + ';\
+          }\
+          .content-formatted .form_submit input {\
+            background-color: ' + dataColorRgb + ';\
+          }\
+          .menu-main .menu-link.active,\
+          .menu-main .menu-link.active:hover {\
+            border-bottom: solid 1px ' + dataColorRgb + ';\
+            box-shadow: inset 0 -3px 0 ' + dataColorRgb + ';\
+          }\
+          .menu-main .menu-link:hover {\
+            border-bottom: solid 1px ' + dataColorHover + ';\
+            box-shadow: inset 0 -3px 0 ' + dataColorHover + ';\
+          }\
+          @media screen and (max-width: 900px) {\
+            .menu-main.expanded .menu-link.active,\
+            .menu-main.expanded .menu-link.active:hover {\
+              color: ' + dataColorRgb + ';\
+            }\
+          }\
+          .content-formatted a:not(.custom-btn),\
+          .menu-pagination .menu-item.active .menu-link,\
+          .menu-pagination .menu-item .menu-link:hover {\
+            color: ' + dataColorRgb + ';\
+          }\
+          .content-formatted .form_submit input {\
+            background-color: ' + dataColorRgb + ';\
+          }\
+          .content-formatted .form_submit input:hover {\
+            background-color: ' + dataColorHover + ';\
+          }');
+      } else {
+        // Light colors.
+        $('#preview-style').html(
+          '.summary {\
+            background-color: ' + data.color + ';\
+          }\
+          .content-formatted .custom-btn {\
+            background-color: #e4ac00;\
+          }\
+          .content-formatted .custom-btn:hover {\
+            background-color: rgba(228, 172, 0, 0.8);\
+          }\
+          .content-formatted .form_submit input {\
+            background-color: #e4ac00sssss;\
+          }\
+          .menu-main .menu-link.active,\
+          .menu-main .menu-link.active:hover {\
+            border-bottom: solid 1px #e4ac00;\
+            box-shadow: inset 0 -3px 0 #e4ac00;\
+          }\
+          .menu-main .menu-link:hover {\
+            border-bottom: solid 1px rgba(228, 172, 0, 0.8);\
+            box-shadow: inset 0 -3px 0 rgba(228, 172, 0, 0.8);\
+          }\
+          @media screen and (max-width: 900px) {\
+            .menu-main.expanded .menu-link.active,\
+            .menu-main.expanded .menu-link.active:hover {\
+              color: #e4ac00;\
+            }\
+          }\
+          .content-formatted a:not(.custom-btn),\
+          .menu-pagination .menu-item.active .menu-link,\
+          .menu-pagination .menu-item .menu-link:hover {\
+            color: #e4ac00;\
+          }\
+          .content-formatted .form_submit input {\
+            background-color: #e4ac00;\
+          }\
+          .content-formatted .form_submit input:hover {\
+            background-color: rgba(228, 172, 0, 0.8);\
+          }');
+      };
     } else {
-      // Light colors.
-      $('#preview-style').html('
-        .summary {
-          background-color: ' + data.color + ';
-        }
-      ');
+      // No color
+      $('#preview-style').html(
+        '.summary {\
+          background-color: #e4ac00;\
+        }\
+        .content-formatted .custom-btn {\
+          background-color: #e4ac00;\
+        }\
+        .content-formatted .custom-btn:hover {\
+          background-color: rgba(228, 172, 0, 0.8);\
+        }\
+        .content-formatted .form_submit input {\
+          background-color: #e4ac00;\
+        }\
+        .menu-main .menu-link.active,\
+        .menu-main .menu-link.active:hover {\
+          border-bottom: solid 1px #e4ac00;\
+          box-shadow: inset 0 -3px 0 #e4ac00;\
+        }\
+        .menu-main .menu-link:hover {\
+          border-bottom: solid 1px #e4ac00;\
+          box-shadow: inset 0 -3px 0 #e4ac00;\
+        }\
+        @media screen and (max-width: 900px) {\
+          .menu-main.expanded .menu-link.active,\
+          .menu-main.expanded .menu-link.active:hover {\
+            color: #e4ac00;\
+          }\
+        }\
+        .content-formatted a:not(.custom-btn),\
+        .menu-pagination .menu-item.active .menu-link,\
+        .menu-pagination .menu-item .menu-link:hover {\
+          color: #e4ac00;\
+        }\
+        .content-formatted .form_submit input {\
+          background-color: #e4ac00;\
+        }\
+        .content-formatted .form_submit input:hover {\
+          background-color: #e4ac00;\
+        }');
     };
 
-    if (data.colorData.a >= .5) {
+    if (data.colorData && data.colorData.a >= .5) {
       $('.js-summary').addClass(data.colorData.lightness >= .5 ? 'light-background' : 'dark-background').removeClass(data.colorData.lightness >= .5 ? 'dark-background' : 'light-background');
     } else {
       $('.js-summary').addClass('light-background').removeClass('dark-background');
