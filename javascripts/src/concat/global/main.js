@@ -177,6 +177,7 @@
 
     if (colorExtractImageUrl) {
       if (headerBgImageSizesContains(headerBgImageSizes, headerBgImagePrevious)) {
+        headerBg.headerBgImageColor = headerBg.headerBgImageColor ? headerBg.headerBgImageColor : 'rgba(103,103,110,1)';
         headerBgCombinedLightness = getCombinedLightness(headerBg.headerBgImageColor, headerBgColor);
         handleHeaderImageLightnessClass();
       } else {
@@ -190,6 +191,7 @@
         });
       };
     } else {
+      headerBg.headerBgImageColor = 'rgba(255,255,255,1)';
       headerBgCombinedLightness = getCombinedLightness('rgba(255,255,255,1)', headerBgColor);
       handleHeaderImageLightnessClass();
     };
