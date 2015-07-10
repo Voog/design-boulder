@@ -258,7 +258,6 @@
         .summary {
           background-color: ' + data.color + ';
         }
-        .menu-btn .menu-stripe,
         .content-formatted .form_submit input {
           background-color: ' + dataColorRgb + ';
         }
@@ -285,11 +284,6 @@
         .menu-pagination .menu-item.active .menu-link,
         .menu-pagination .menu-item .menu-link:hover {
           color: ' + dataColorRgb + ';
-        }
-
-        .search-open-btn svg,
-        .search-close-btn svg {
-          fill: ' + dataColorRgb + ';
         }
 
         .content-formatted .form_submit input {
