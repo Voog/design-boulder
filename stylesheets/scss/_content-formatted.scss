@@ -190,7 +190,9 @@
 
   a {
     text-decoration: underline;
-    @include color($secondary-color);
+    &:not(.custom-btn) {
+      @include color($secondary-color);
+    }
 
     &:hover {
       text-decoration: none;
@@ -285,10 +287,6 @@
 
     &:hover {
       @include bg($secondary-color, 0.8);
-    }
-
-    a {
-      text-decoration: none;
     }
   }
 

@@ -440,6 +440,8 @@ body.search-open {
 }
 .content-formatted a {
   text-decoration: underline;
+}
+.content-formatted a:not(.custom-btn) {
   color: #e4ac00;
 }
 .content-formatted a:hover {
@@ -527,9 +529,6 @@ body.search-open {
 .content-formatted .custom-btn:hover {
   background-color: #E4AC00;
   background-color: rgba(228, 172, 0, 0.8);
-}
-.content-formatted .custom-btn a {
-  text-decoration: none;
 }
 .content-formatted .contacts::first-line {
   color: red !important;

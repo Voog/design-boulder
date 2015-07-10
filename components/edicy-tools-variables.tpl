@@ -98,7 +98,7 @@
     {% assign summary_background_type = 'dark-background' %}
   {% endif %}
 
-  {% if site.data.primary.color != nil %}
+  {% if site.data.primary.color != false %}
     {% assign site_primary_color = site.data.primary.color %}
     {% assign site_primary_color_rgb = 'rgb(' | append: site.data.primary.colorData.r | append: ',' | append: site.data.primary.colorData.g | append: ',' | append: site.data.primary.colorData.b  | append: ');' %}
     {% assign site_primary_color_rgb_hover = 'rgba(' | append: site.data.primary.colorData.r | append: ',' | append: site.data.primary.colorData.g | append: ',' | append: site.data.primary.colorData.b  | append: ',0.8);' %}

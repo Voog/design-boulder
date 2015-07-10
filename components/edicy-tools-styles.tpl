@@ -63,6 +63,14 @@
         background-color: {{ site_primary_color }};
       }
 
+      .content-formatted .custom-btn {
+        background-color: {{ site_primary_color_rgb }};
+      }
+
+      .content-formatted .custom-btn:hover {
+        background-color: {{ site_primary_color_rgb_hover }};
+      }
+
       /* Add back if decided so */
       /*.menu-btn .menu-stripe,*/
       .content-formatted .form_submit input {
@@ -87,7 +95,7 @@
         }
       }
 
-      .content-formatted a {
+      .content-formatted a:not(.custom-btn) {
         color: {{ site_primary_color }};
       }
 
