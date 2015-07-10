@@ -399,10 +399,7 @@ console.log(data.colorData.lightness);
     handleSearchSubmit();
     handleWindowResize();
     wrapTables();
-
-    $(document).ready(function() {
-      handleFooterPositioning();
-    });
+    handleFooterPositioning();
   };
 
   // Enables the usage of the initiations outside this file
