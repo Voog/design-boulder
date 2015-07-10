@@ -427,7 +427,12 @@ body.search-open {
 .quotation .content-formatted p:first-child {
   margin-top: 15px;
 }
-.header-bottom-inner .content-formatted ul, .header-bottom-inner
+.header-bottom-inner .content-formatted pre, .header-bottom-inner
+.content-formatted code, .header-bottom-inner
+.content-formatted iframe, .header-bottom-inner
+.content-formatted table, .header-bottom-inner
+.content-formatted form, .header-bottom-inner
+.content-formatted ul, .header-bottom-inner
 .content-formatted ol, .header-bottom-inner
 .content-formatted dl {
   text-align: left;
@@ -1432,6 +1437,7 @@ body.search-open {
 
 .header-bottom-inner {
   display: table;
+  table-layout: fixed;
   border-collapse: collapse;
   width: 100%;
   max-width: 900px;
