@@ -44,6 +44,7 @@
   }
 
   .inner {
+    padding: 48px 20px;
     box-sizing: border-box;
 
     &:empty {
@@ -52,7 +53,6 @@
 
     .flexbox & {
       @include flex(1);
-      @include align-self(center);
       min-width: 50%;
     }
 
@@ -63,14 +63,6 @@
         display: none;
       }
     }
-  }
-
-  .inner-left {
-    padding: 48px 20px;
-  }
-
-  .inner-right {
-    padding: 48px 20px 48px 50px;
   }
 
   @include query($mobile-1 - 58) {
@@ -96,16 +88,6 @@
       padding-top: 10px;
     }
   }
-}
-
-%front-page-content-left {
-  max-width: 468px;
-  padding: 48px 20px;
-}
-
-%front-page-content-right {
- max-width: 442px;
- padding: 48px 0 48px 50px;
 }
 
 .summary {
