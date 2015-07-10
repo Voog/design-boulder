@@ -11458,6 +11458,7 @@ console.log(data.colorData.lightness);
     $(document).ready(function() {
       footerHeight = $('.js-footer').height();
       $('.js-footer-positioner').css({'height' : footerHeight});
+      focusFormWithErrors();
     });
   };
 
@@ -11496,7 +11497,6 @@ console.log(data.colorData.lightness);
     handleFooterContentEdit();
     handleSearchPositionChange();
     handleSearchSubmit();
-    focusFormWithErrors();
     handleWindowResize();
     wrapTables();
 
