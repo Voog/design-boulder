@@ -252,8 +252,6 @@
     var dataColorRgb = 'rgb(' + data.colorData.r + ',' + data.colorData.g + ',' + data.colorData.b + ');',
         dataColorHover = 'rgba(' + data.colorData.r + ',' + data.colorData.g + ',' + data.colorData.b + ',.8);)';
 
-console.log(data.colorData.lightness);
-
     if (data.colorData.lightness !== 1) {
       // Dark colors.
       $('#preview-style').html('
@@ -304,7 +302,6 @@ console.log(data.colorData.lightness);
       ');
     } else {
       // Light colors.
-      console.log('sdafjknklj');
       $('#preview-style').html('
         .summary {
           background-color: ' + data.color + ';

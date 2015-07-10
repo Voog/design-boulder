@@ -11352,8 +11352,6 @@ MMCQ = (function() {
     var dataColorRgb = 'rgb(' + data.colorData.r + ',' + data.colorData.g + ',' + data.colorData.b + ');',
         dataColorHover = 'rgba(' + data.colorData.r + ',' + data.colorData.g + ',' + data.colorData.b + ',.8);)';
 
-console.log(data.colorData.lightness);
-
     if (data.colorData.lightness !== 1) {
       // Dark colors.
       $('#preview-style').html('
@@ -11404,7 +11402,6 @@ console.log(data.colorData.lightness);
       ');
     } else {
       // Light colors.
-      console.log('sdafjknklj');
       $('#preview-style').html('
         .summary {
           background-color: ' + data.color + ';
@@ -11499,10 +11496,7 @@ console.log(data.colorData.lightness);
     handleSearchSubmit();
     handleWindowResize();
     wrapTables();
-
-    $(document).ready(function() {
-      handleFooterPositioning();
-    });
+    handleFooterPositioning();
   };
 
   // Enables the usage of the initiations outside this file
