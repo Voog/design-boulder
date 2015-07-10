@@ -45,5 +45,8 @@
       }
     });
 
+    // Custom text styles
+    window.edy = window.edy || [];
+    edy.push(['texteditorStyles', {name: 'Button', tagname:'a', attribute: {'href': '#'}, classname: 'custom-btn', toggle: true}]);
   </script>
 {% endeditorjsblock %}
