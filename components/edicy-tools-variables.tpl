@@ -95,7 +95,7 @@
       {% assign summary_background_type = 'dark-background' %}
     {% endif %}
   {% else %}
-    {% assign summary_background_type = 'dark-background' %}
+    {% assign summary_background_type = 'light-background' %}
   {% endif %}
 
   {% if site.data.primary.color != false %}
