@@ -96,7 +96,7 @@
       }
 
       .content-formatted a:not(.custom-btn) {
-        color: {{ site_primary_color }};
+        color: {{ site_primary_color_rgb }};
       }
 
       .menu-pagination .menu-item.active .menu-link,
