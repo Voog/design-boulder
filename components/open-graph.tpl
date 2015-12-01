@@ -11,7 +11,7 @@
   {% if fallback_header_image != nil and fallback_header_image != '' and header_bg_image_sizes == nil %}
     {% assign og_image = fallback_header_image %}
   {% elsif header_bg_image_sizes != nil and header_bg_image_sizes != '' %}
-    {% assign og_image = header_bg_image_sizes[0] %}
+    {% assign og_image = header_bg_image_sizes[2] %}
   {% endif %}
 {% else %}
   {% if article %}
