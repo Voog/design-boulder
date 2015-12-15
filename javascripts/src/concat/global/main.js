@@ -21,31 +21,19 @@
     $('.js-container').on('mousedown', function(event) {
       if (!$(event.target).closest('.js-prevent-sideclick').length) {
         $('.js-popover').removeClass('expanded');
-        $('.js-search-close-btn').trigger('click');
+
+        $('body').removeClass('search-open');
+        $('.js-search-open-btn').removeClass('open');
+        $('.js-search-close-btn').removeClass('open');
+        $('.js-search').removeClass('active');
       };
     });
   };
 
   // Handles mouse clicks on different buttons and sections of the web page.
   var handleElementsClick = function() {
-    // Hides opened popups and modals if clicked on any other element.
-    // $('html').click(function() {
-    //   if ($('.js-btn').hasClass('open')) {
-    //     $('.js-btn').removeClass('open');
-    //   }
-
-    //   if ($('.js-popover').hasClass('expanded')) {
-    //     $('.js-popover').removeClass('expanded');
-    //   }
-
-    //   if ($('.js-search-close-btn').hasClass('open') && $('.voog-search-modal').length === 0) {
-    //     $('.js-search-close-btn').trigger('click');
-    //   }
-    // });
-
     // Toggles the popover main menu (visible on smalles screens).
-    $('.js-menu-btn').click(function(event) {
-      event.stopPropagation();
+    $('.js-menu-btn').click(function() {
       $(this).toggleClass('open');
       $('.js-menu-main').toggleClass('expanded');
 
@@ -55,14 +43,12 @@
     });
 
     // Toggles the popover language menu.
-    $('.js-menu-lang-btn').click(function(event) {
-      event.stopPropagation();
+    $('.js-menu-lang-btn').click(function() {
       $('.js-menu-lang-popover').toggleClass('expanded');
     });
 
     // Opens the search modal.
-    $('.js-search-open-btn').click(function(event) {
-      event.stopPropagation();
+    $('.js-search-open-btn').click(function() {
       if ($('.js-menu-main').hasClass('expanded')) {
         $('.js-menu-main').removeClass('expanded');
         $('.js-menu-btn').removeClass('open');
@@ -77,7 +63,7 @@
     });
 
     // Closes the search modal.
-    $('.js-search-close-btn').click(function(event) {
+    $('.js-search-close-btn').click(function() {
       $(this).removeClass('open');
       $('body').removeClass('search-open');
       $('.js-search-open-btn').removeClass('open');
@@ -85,8 +71,7 @@
     });
 
     // Prevents search modal closing on click
-    $('.js-search').click(function(event) {
-      event.stopPropagation();
+    $('.js-search').click(function() {
     });
   };
 
@@ -115,8 +100,7 @@
   };
 
   var toggleFlags = function() {
-    $('.js-option-toggle-flags').on('click', function(event) {
-      event.stopPropagation();
+    $('.js-option-toggle-flags').on('click', function() {
       if ($(this).hasClass('js-flag-disable-btn')) {
         var flagsState = false;
       } else {

@@ -10359,7 +10359,7 @@ return jQuery;
 	}
 
 	o.scrollIndicatorClassName = "overthrow";
-
+	
 	var doc = w.document,
 		docElem = doc.documentElement,
 		// o api
@@ -10374,11 +10374,11 @@ return jQuery;
 	o.closest = function( target, ascend ){
 		return !ascend && target.className && target.className.indexOf( scrollIndicatorClassName ) > -1 && target || o.closest( target.parentNode );
 	};
-
+		
 	// polyfill overflow
 	var enabled = false;
 	o.set = function(){
-
+			
 		set();
 
 		// If nativeOverflow or it doesn't look like the browser canBeFilledWithPoly, our job is done here. Exit viewport left.
@@ -10405,30 +10405,30 @@ return jQuery;
 		// From here down, all logic is associated with touch scroll handling
 			// elem references the overthrow element in use
 		var elem,
-
+			
 			// The last several Y values are kept here
 			lastTops = [],
-
+	
 			// The last several X values are kept here
 			lastLefts = [],
-
+			
 			// lastDown will be true if the last scroll direction was down, false if it was up
 			lastDown,
-
+			
 			// lastRight will be true if the last scroll direction was right, false if it was left
 			lastRight,
-
+			
 			// For a new gesture, or change in direction, reset the values from last scroll
 			resetVertTracking = function(){
 				lastTops = [];
 				lastDown = null;
 			},
-
+			
 			resetHorTracking = function(){
 				lastLefts = [];
 				lastRight = null;
 			},
-
+		
 			// On webkit, touch events hardly trickle through textareas and inputs
 			// Disabling CSS pointer events makes sure they do, but it also makes the controls innaccessible
 			// Toggling pointer events at the right moments seems to do the trick
@@ -10440,13 +10440,13 @@ return jQuery;
 					inputs[ i ].style.pointerEvents = val;
 				}
 			},
-
+			
 			// For nested overthrows, changeScrollTarget restarts a touch event cycle on a parent or child overthrow
 			changeScrollTarget = function( startEvent, ascend ){
 				if( doc.createEvent ){
 					var newTarget = ( !ascend || ascend === undefined ) && elem.parentNode || elem.touchchild || elem,
 						tEnd;
-
+							
 					if( newTarget !== elem ){
 						tEnd = doc.createEvent( "HTMLEvents" );
 						tEnd.initEvent( "touchend", true, true );
@@ -10457,7 +10457,7 @@ return jQuery;
 					}
 				}
 			},
-
+			
 			// Touchstart handler
 			// On touchstart, touchmove and touchend are freshly bound, and all three share a bunch of vars set by touchstart
 			// Touchend unbinds them again, until next time
@@ -10467,16 +10467,16 @@ return jQuery;
 				if( o.intercept ){
 					o.intercept();
 				}
-
+				
 				// Reset the distance and direction tracking
 				resetVertTracking();
 				resetHorTracking();
-
+				
 				elem = o.closest( e.target );
-
+					
 				if( !elem || elem === docElem || e.touches.length > 1 ){
 					return;
-				}
+				}			
 
 				setPointers( "none" );
 				var touchStartE = e,
@@ -10488,15 +10488,15 @@ return jQuery;
 					startX = e.touches[ 0 ].pageX,
 					scrollHeight = elem.scrollHeight,
 					scrollWidth = elem.scrollWidth,
-
+				
 					// Touchmove handler
 					move = function( e ){
-
+					
 						var ty = scrollT + startY - e.touches[ 0 ].pageY,
 							tx = scrollL + startX - e.touches[ 0 ].pageX,
 							down = ty >= ( lastTops.length ? lastTops[ 0 ] : 0 ),
 							right = tx >= ( lastLefts.length ? lastLefts[ 0 ] : 0 );
-
+							
 						// If there's room to scroll the current container, prevent the default window scroll
 						if( ( ty > 0 && ty < scrollHeight - height ) || ( tx > 0 && tx < scrollWidth - width ) ){
 							e.preventDefault();
@@ -10505,28 +10505,28 @@ return jQuery;
 						else {
 							changeScrollTarget( touchStartE );
 						}
-
+						
 						// If down and lastDown are inequal, the y scroll has changed direction. Reset tracking.
 						if( lastDown && down !== lastDown ){
 							resetVertTracking();
 						}
-
+						
 						// If right and lastRight are inequal, the x scroll has changed direction. Reset tracking.
 						if( lastRight && right !== lastRight ){
 							resetHorTracking();
 						}
-
+						
 						// remember the last direction in which we were headed
 						lastDown = down;
-						lastRight = right;
-
+						lastRight = right;							
+						
 						// set the container's scroll
 						elem.scrollTop = ty;
 						elem.scrollLeft = tx;
-
+					
 						lastTops.unshift( ty );
 						lastLefts.unshift( tx );
-
+					
 						if( lastTops.length > 3 ){
 							lastTops.pop();
 						}
@@ -10534,7 +10534,7 @@ return jQuery;
 							lastLefts.pop();
 						}
 					},
-
+				
 					// Touchend handler
 					end = function( e ){
 
@@ -10546,15 +10546,15 @@ return jQuery;
 						elem.removeEventListener( "touchmove", move, false );
 						elem.removeEventListener( "touchend", end, false );
 					};
-
+				
 				elem.addEventListener( "touchmove", move, false );
 				elem.addEventListener( "touchend", end, false );
 			};
-
+			
 		// Bind to touch, handle move and end within
 		doc.addEventListener( "touchstart", start, false );
 	};
-
+		
 })( this, this.overthrow );
 
 // quantize.js, Copyright 2012 Shao-Chung Chen.
@@ -10563,7 +10563,7 @@ return jQuery;
 // Basic CoffeeScript port of the (MMCQ) Modified Media Cut Quantization
 // algorithm from the Leptonica library (http://www.leptonica.com/).
 // Return a color map you can use to map original pixels to the reduced palette.
-//
+// 
 // Rewritten from the JavaScript port (http://gist.github.com/1104622)
 // developed by Nick Rabinowitz under the MIT license.
 
@@ -11121,31 +11121,19 @@ MMCQ = (function() {
     $('.js-container').on('mousedown', function(event) {
       if (!$(event.target).closest('.js-prevent-sideclick').length) {
         $('.js-popover').removeClass('expanded');
-        $('.js-search-close-btn').trigger('click');
+
+        $('body').removeClass('search-open');
+        $('.js-search-open-btn').removeClass('open');
+        $('.js-search-close-btn').removeClass('open');
+        $('.js-search').removeClass('active');
       };
     });
   };
 
   // Handles mouse clicks on different buttons and sections of the web page.
   var handleElementsClick = function() {
-    // Hides opened popups and modals if clicked on any other element.
-    // $('html').click(function() {
-    //   if ($('.js-btn').hasClass('open')) {
-    //     $('.js-btn').removeClass('open');
-    //   }
-
-    //   if ($('.js-popover').hasClass('expanded')) {
-    //     $('.js-popover').removeClass('expanded');
-    //   }
-
-    //   if ($('.js-search-close-btn').hasClass('open') && $('.voog-search-modal').length === 0) {
-    //     $('.js-search-close-btn').trigger('click');
-    //   }
-    // });
-
     // Toggles the popover main menu (visible on smalles screens).
-    $('.js-menu-btn').click(function(event) {
-      event.stopPropagation();
+    $('.js-menu-btn').click(function() {
       $(this).toggleClass('open');
       $('.js-menu-main').toggleClass('expanded');
 
@@ -11155,14 +11143,12 @@ MMCQ = (function() {
     });
 
     // Toggles the popover language menu.
-    $('.js-menu-lang-btn').click(function(event) {
-      event.stopPropagation();
+    $('.js-menu-lang-btn').click(function() {
       $('.js-menu-lang-popover').toggleClass('expanded');
     });
 
     // Opens the search modal.
-    $('.js-search-open-btn').click(function(event) {
-      event.stopPropagation();
+    $('.js-search-open-btn').click(function() {
       if ($('.js-menu-main').hasClass('expanded')) {
         $('.js-menu-main').removeClass('expanded');
         $('.js-menu-btn').removeClass('open');
@@ -11177,7 +11163,7 @@ MMCQ = (function() {
     });
 
     // Closes the search modal.
-    $('.js-search-close-btn').click(function(event) {
+    $('.js-search-close-btn').click(function() {
       $(this).removeClass('open');
       $('body').removeClass('search-open');
       $('.js-search-open-btn').removeClass('open');
@@ -11185,8 +11171,7 @@ MMCQ = (function() {
     });
 
     // Prevents search modal closing on click
-    $('.js-search').click(function(event) {
-      event.stopPropagation();
+    $('.js-search').click(function() {
     });
   };
 
@@ -11215,8 +11200,7 @@ MMCQ = (function() {
   };
 
   var toggleFlags = function() {
-    $('.js-option-toggle-flags').on('click', function(event) {
-      event.stopPropagation();
+    $('.js-option-toggle-flags').on('click', function() {
       if ($(this).hasClass('js-flag-disable-btn')) {
         var flagsState = false;
       } else {
