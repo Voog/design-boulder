@@ -11,11 +11,13 @@
   {% if fallback_header_image != nil and fallback_header_image != '' and header_bg_image_sizes == nil %}
     {% assign og_image = fallback_header_image %}
   {% elsif header_bg_image_sizes != nil and header_bg_image_sizes != '' %}
-    {% for imageSize in page.data.header_bg.imageSizes %}
+    {% for imageSize in header_bg_image_sizes %}
       {% if forloop.length >= 4 %}
         {% assign og_image = header_bg_image_sizes[2] %}
+        {% break %}
       {% else %}
         {% assign og_image = header_bg_image_sizes[0] %}
+        {% break %}
       {% endif %}
     {% endfor %}
   {% endif %}
