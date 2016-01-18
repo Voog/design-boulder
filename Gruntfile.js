@@ -245,7 +245,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-exec');
   
-  // grunt.registerTask('default', ['clean', 'copy', 'concat', 'uglify', 'sass', 'postcss', 'cssmin']);
   grunt.registerTask('default', ['clean', 'modernizr_builder', 'copy', 'concat', 'uglify', 'sass', 'postcss', 'cssmin', 'imagemin']);
 
   grunt.event.on('watch', function(action, filepath, target) {
