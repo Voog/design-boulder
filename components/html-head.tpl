@@ -26,6 +26,7 @@
 {% customstyle %}
   {% if front_page %}
     {% include "template-cs-main-styles-front" %}
+    {% include "template-cs-focus-area-front" %}
   {% endif %}
 
   {% comment %}

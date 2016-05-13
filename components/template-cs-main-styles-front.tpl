@@ -38,4 +38,14 @@
     ]
   */
   --third-color: #454545;
+  /* VoogStyle
+    "pathI18n": ["main_styles", "colors"],
+    "titleI18n": "fourth_color",
+    "editor": "colorPicker",
+    "featured": true,
+    "scope": "global",
+    "boundVariables": [
+    ]
+  */
+  --fourth-color: white;
 }

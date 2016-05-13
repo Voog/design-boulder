@@ -155,6 +155,13 @@
     {
       "content_type": "component",
       "component": true,
+      "file": "components/template-cs-focus-area-front.tpl",
+      "layout_name": "template-cs-focus-area-front",
+      "title": "template-cs-focus-area-front"
+    },
+    {
+      "content_type": "component",
+      "component": true,
       "file": "components/template-cs-main-styles-front.tpl",
       "layout_name": "template-cs-main-styles-front",
       "title": "template-cs-main-styles-front"
