@@ -71,8 +71,7 @@
         background-color: {{ site_primary_color_rgb_hover }};
       }
 
-      /* Add back if decided so */
-      /*.menu-btn .menu-stripe,*/
+      .menu-btn .menu-stripe,
       .content-formatted .form_submit input {
         background-color: {{ site_primary_color_rgb }};
       }
@@ -103,13 +102,11 @@
       .menu-pagination .menu-item .menu-link:hover {
         color: {{ site_primary_color_rgb_hover }}
       }
-      /* TODO: Add back if decided so */
-      /*
-        .search-open-btn svg,
-        .search-close-btn svg {
-          fill: {{ site_primary_color_rgb }};
-        }
-      */
+
+      .search-open-btn svg,
+      .search-close-btn svg {
+        fill: {{ site_primary_color_rgb }};
+      }
 
       .content-formatted .form_submit input {
         background-color: {{ site_primary_color_rbg }};
