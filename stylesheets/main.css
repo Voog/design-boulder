@@ -31,7 +31,7 @@ body {
   font-family: 'Arvo', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   font-weight: 400;
   font-size: 18px;
-  line-height: 1.7em;
+  line-height: 1.7;
   color: #000000;
   color: rgba(0, 0, 0, 0.73);
   background-position: center;
@@ -91,7 +91,7 @@ body.search-open {
 .btn {
   display: inline-block;
   padding: 10px 40px;
-  line-height: 1.3em;
+  line-height: 1.3;
   font-style: normal;
   font-size: 24px;
   background-color: #e4ac00;
@@ -246,7 +246,7 @@ body.search-open {
   color: white;
 }
 .main-feature .content-formatted, .quotation .content-formatted {
-  line-height: 1.4em;
+  line-height: 1.4;
 }
 .quotation .content-formatted {
   width: 100%;
@@ -259,7 +259,7 @@ body.search-open {
   font-size: 20px;
 }
 .content-formatted.header-body {
-  line-height: 1.5em;
+  line-height: 1.5;
   font-style: italic;
   font-size: 30px;
 }
@@ -357,7 +357,7 @@ body.search-open {
   text-align: center;
 }
 .content-formatted h1 {
-  line-height: 1.3em;
+  line-height: 1.3;
   font-size: 36px;
 }
 .contacts .content-formatted h1 {
@@ -431,9 +431,6 @@ body.search-open {
   color: #FFFFFF;
   color: rgba(255, 255, 255, 0.5);
 }
-.content-formatted span[style*="font-size"] {
-  line-height: 1.7em;
-}
 .content-formatted pre,
 .content-formatted code,
 .content-formatted iframe,
@@ -497,7 +494,7 @@ body.search-open {
 .content-formatted .custom-btn {
   display: inline-block;
   padding: 15px 40px;
-  line-height: 1.3em;
+  line-height: 1.3;
   text-decoration: none;
   font-style: normal;
   font-size: 24px;
@@ -520,7 +517,7 @@ body.search-open {
   display: block;
   padding: 4px;
   font-size: 13px;
-  line-height: 1.4em;
+  line-height: 1.4;
   content: attr(data-title);
 }
 .content-formatted .table-container {
@@ -589,7 +586,7 @@ body.search-open {
 }
 .contacts .content-formatted table {
   font-size: 24px;
-  line-height: 1em;
+  line-height: 1;
 }
 .contacts .content-formatted table tr td {
   padding: 0 25px;
@@ -816,7 +813,7 @@ body.search-open {
 }
 .menu-sub .menu-item {
   margin-right: 12px;
-  line-height: 1.3em;
+  line-height: 1.3;
 }
 .menu-sub .menu-item:last-child {
   margin-right: 0;
@@ -936,7 +933,7 @@ body.search-open {
   margin-left: 13px;
   display: inline-block;
   vertical-align: middle;
-  line-height: 1em;
+  line-height: 1;
 }
 .menu-main .menu-lang {
   display: none;
@@ -950,7 +947,7 @@ body.search-open {
   position: relative;
   display: block;
   padding: 5px 40px 5px 13px;
-  line-height: 1em;
+  line-height: 1;
   color: #000000;
   color: rgba(0, 0, 0, 0.73);
 }
@@ -988,7 +985,7 @@ body.search-open {
 @media screen and (max-width: 900px) {
   .menu-lang {
     display: none;
-    line-height: 1.3em;
+    line-height: 1.3;
   }
   .menu-main.expanded .menu-lang {
     top: 0;
@@ -1385,7 +1382,7 @@ body.search-open {
   top: 1px;
   min-height: 40px;
   margin-right: 40px;
-  line-height: 1.3em;
+  line-height: 1.3;
   font-weight: 700;
   font-size: 30px;
 }
@@ -1631,7 +1628,7 @@ body.search-open {
 }
 .front-page .post-date {
   display: block;
-  line-height: 1em;
+  line-height: 1;
   font-size: 14px;
   color: #FFFFFF;
   color: rgba(255, 255, 255, 0.5);
@@ -1651,7 +1648,7 @@ body.search-open {
   min-width: 100px;
   margin: 0;
   padding-bottom: 2px;
-  line-height: 1.2em;
+  line-height: 1.2;
   border-bottom: solid 1px #000000;
   border-bottom: solid 1px rgba(0, 0, 0, 0.23);
   box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.23);
@@ -1681,7 +1678,7 @@ body.search-open {
   display: block;
   margin-top: 5px;
   text-align: center;
-  line-height: 1.3em;
+  line-height: 1.3;
   font-size: 18px;
   color: #000000;
   color: rgba(0, 0, 0, 0.1);
@@ -1727,7 +1724,7 @@ body.search-open {
   vertical-align: middle;
   margin-left: 18px;
   height: 30px;
-  line-height: 1em;
+  line-height: 1;
   background-color: #e5e5e5;
 }
 @media screen and (max-width: 900px) {
@@ -1827,7 +1824,7 @@ body.search-open {
   padding-right: 30px;
   font-family: inherit;
   font-size: 18px;
-  line-height: 1em;
+  line-height: 1;
   color: #000000;
   color: rgba(0, 0, 0, 0.73);
   background-color: #e5e5e5;
@@ -1845,7 +1842,7 @@ body.search-open {
 }
 .search-input::-webkit-input-placeholder {
   padding: 2px 0 4px 0;
-  line-height: 1em;
+  line-height: 1;
 }
 @media screen and (max-width: 640px) {
   .search-input {
@@ -1926,7 +1923,7 @@ body.search-open {
   padding: 20px;
   text-align: left;
   font-size: 14px;
-  line-height: 1.5em;
+  line-height: 1.5;
   background-color: white;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
   overflow-x: hidden;
@@ -2059,7 +2056,7 @@ body.search-open {
   display: inline;
   padding-left: 2px;
   font-weight: 400;
-  line-height: 1.3em;
+  line-height: 1.3;
   cursor: pointer;
 }
 .content-formatted .form_field label:after {
@@ -2192,7 +2189,7 @@ body.search-open {
   padding: 14px 24px;
   font-size: 18px;
   color: white;
-  line-height: 1em;
+  line-height: 1;
   background-color: #e4ac00;
   border: none;
   cursor: pointer;
@@ -2427,7 +2424,7 @@ body.search-open {
   font-size: 10px;
   color: #E4AC00;
   color: rgba(228, 172, 0, 0.75);
-  line-height: 1em;
+  line-height: 1;
   background-color: white;
   border: 1px solid #000000;
   border: 1px solid rgba(0, 0, 0, 0.1);
