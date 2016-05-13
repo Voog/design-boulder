@@ -29,6 +29,11 @@
     {% include "template-cs-focus-area-front" %}
   {% endif %}
 
+  {% if content_page %}
+  {% include "template-cs-main-styles" %}
+    {% include "template-cs-content" %}
+  {% endif %}
+
   {% comment %}
   {% include "template-cs-header" %}
   {% include "template-cs-headings" %}

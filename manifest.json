@@ -36,9 +36,9 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/menu-lang.tpl",
-      "layout_name": "menu-lang",
-      "title": "menu-lang"
+      "file": "components/menu-level-1.tpl",
+      "layout_name": "menu-level-1",
+      "title": "menu-level-1"
     },
     {
       "content_type": "component",
@@ -92,16 +92,16 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/comment-form.tpl",
-      "layout_name": "comment-form",
-      "title": "comment-form"
+      "file": "components/menu-lang.tpl",
+      "layout_name": "menu-lang",
+      "title": "menu-lang"
     },
     {
       "content_type": "component",
       "component": true,
-      "file": "components/menu-level-1.tpl",
-      "layout_name": "menu-level-1",
-      "title": "menu-level-1"
+      "file": "components/comment-form.tpl",
+      "layout_name": "comment-form",
+      "title": "comment-form"
     },
     {
       "content_type": "component",
@@ -155,6 +155,13 @@
     {
       "content_type": "component",
       "component": true,
+      "file": "components/template-cs-content.tpl",
+      "layout_name": "template-cs-content",
+      "title": "template-cs-content"
+    },
+    {
+      "content_type": "component",
+      "component": true,
       "file": "components/template-cs-focus-area-front.tpl",
       "layout_name": "template-cs-focus-area-front",
       "title": "template-cs-focus-area-front"
@@ -165,6 +172,13 @@
       "file": "components/template-cs-main-styles-front.tpl",
       "layout_name": "template-cs-main-styles-front",
       "title": "template-cs-main-styles-front"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/template-cs-main-styles.tpl",
+      "layout_name": "template-cs-main-styles",
+      "title": "template-cs-main-styles"
     },
     {
       "content_type": "component",
