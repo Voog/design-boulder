@@ -28,7 +28,7 @@ body {
   position: relative;
   margin: 0;
   padding: 0;
-  font-family: 'Arvo', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-family: "Arvo", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.7;
@@ -1578,6 +1578,9 @@ body.search-open {
   }
 }
 
+.map {
+  overflow-x: hidden;
+}
 .map .embed-container {
   min-height: 270px;
 }

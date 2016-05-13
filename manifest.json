@@ -36,9 +36,9 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/javascripts.tpl",
-      "layout_name": "javascripts",
-      "title": "javascripts"
+      "file": "components/menu-lang.tpl",
+      "layout_name": "menu-lang",
+      "title": "menu-lang"
     },
     {
       "content_type": "component",
@@ -85,16 +85,16 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/comment-form.tpl",
-      "layout_name": "comment-form",
-      "title": "comment-form"
+      "file": "components/javascripts.tpl",
+      "layout_name": "javascripts",
+      "title": "javascripts"
     },
     {
       "content_type": "component",
       "component": true,
-      "file": "components/menu-lang.tpl",
-      "layout_name": "menu-lang",
-      "title": "menu-lang"
+      "file": "components/comment-form.tpl",
+      "layout_name": "comment-form",
+      "title": "comment-form"
     },
     {
       "content_type": "component",
@@ -151,6 +151,20 @@
       "file": "components/tags-post.tpl",
       "layout_name": "tags-post",
       "title": "tags-post"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/template-cs-main-styles-front.tpl",
+      "layout_name": "template-cs-main-styles-front",
+      "title": "template-cs-main-styles-front"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/template-cs-style-rules.tpl",
+      "layout_name": "template-cs-style-rules",
+      "title": "template-cs-style-rules"
     },
     {
       "content_type": "component",

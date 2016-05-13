@@ -186,6 +186,8 @@
 }
 
 .map {
+  overflow-x: hidden;
+
   .embed-container {
     min-height: 270px;
   }
