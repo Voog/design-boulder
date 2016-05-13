@@ -1,5 +1,12 @@
 :root {
   /* VoogStyle
+    "pathI18n": ["content"],
+    "titleI18n": "background_color",
+    "editor": "colorPicker",
+    "scope": "global"
+  */
+  --content-background-color: transparent;
+  /* VoogStyle
     "pathI18n": ["content", "text"],
     "titleI18n": "size",
     "editor": "rangePicker",

@@ -1,3 +1,7 @@
+.content {
+  background-color: var(--content-background-color);
+}
+
 .content-formatted {
   font-family: var(--main-font-family);
   font-size: var(--content-body-font-size);
@@ -25,4 +29,8 @@
   color: var(--content-link-hover-color);
   text-decoration: var(--content-link-hover-text-decoration);
   text-transform: var(--content-link-hover-text-transform);
+}
+
+.menu-sub {
+  background-color: var(--content-background-color);
 }
