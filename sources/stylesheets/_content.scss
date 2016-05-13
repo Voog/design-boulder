@@ -33,7 +33,7 @@
 .main-feature {
   .wrap {
     .flexbox & {
-      @include display(flex);
+      display: flex;
     }
 
     .no-flexbox & {
@@ -52,7 +52,7 @@
     }
 
     .flexbox & {
-      @include flex(1);
+      flex: 1;
       min-width: 50%;
     }
 
@@ -95,7 +95,7 @@
 
   .wrap {
     .flexbox & {
-      @include display(flex);
+      display: flex;
     }
 
     .no-flexbox & {
@@ -107,7 +107,7 @@
 
   .inner {
     .flexbox & {
-      @include flex(1);
+      flex: 1;
     }
 
     .no-flexbox & {

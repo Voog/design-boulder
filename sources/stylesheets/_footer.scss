@@ -32,8 +32,8 @@
     padding: 24px 20px 22px;
 
     .flexbox & {
-      @include display(flex);
-      @include flex-wrap(wrap);
+      display: flex;
+      flex-wrap: wrap;
       @include justify-content(flex-end);
     }
   }
@@ -50,7 +50,7 @@
 
     .flexbox & {
       max-width: 100%;
-      @include flex(1 0 auto);
+      flex: 1 0 auto;
     }
 
     .no-flexbox & {
