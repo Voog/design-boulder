@@ -15,6 +15,7 @@
     "featured": true,
     "scope": "global",
     "boundVariables": [
+      "--content-body-color"
     ]
   */
   --primary-color: rgba(0, 0, 0, 0.73);
@@ -25,6 +26,8 @@
     "featured": true,
     "scope": "global",
     "boundVariables": [
+      "--content-link-color",
+      "--content-link-hover-color"
     ]
   */
   --secondary-color: #e4ac00;
