@@ -1,4 +1,4 @@
-{% if site.has_language_tags? %}
+{% if blog.has_tags? %}
   {% assign with_submenu = true %}
   <nav class="menu-sub">
     <div class="wrap">
@@ -6,7 +6,7 @@
         <li class="menu-item">
           <a class="menu-link js-tags-all" href="/{{ page.path }}">{{ 'all_posts' | lc }}</a>
         </li>
-        {% for tag in site.language_tags %}
+        {% for tag in blog.tags %}
           {% assign activestr = " " %}
           {% for tmptag in tags %}
             {% if tmptag.name == tag.name %}
