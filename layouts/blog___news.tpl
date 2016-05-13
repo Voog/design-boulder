@@ -12,23 +12,25 @@
     <div class="loader-cube loader-cube-2"></div>
   </div>
 
-  <div class="container">
-    {% include "header" %}
-    {% include "tags-blog" %}
+  <div class="container-wrap">
+    <div class="container">
+      {% include "header" %}
+      {% include "tags-blog" %}
 
-    <main class="content" role="main">
-      <div class="wrap{% if editmode or with_submenu == true %} with-submenu{% endif %}">
-        {% if editmode %}<div class="post-add-btn">{% addbutton %}</div>{% endif %}
+      <main class="content" role="main">
+        <div class="wrap{% if editmode or with_submenu == true %} with-submenu{% endif %}">
+          {% if editmode %}<div class="post-add-btn">{% addbutton %}</div>{% endif %}
 
-        <section class="blog-articles js-blog-articles">
-          {% for article in articles limit: 3 %}
-            {% include "post-box" %}
-          {% endfor %}
-        </section>
-      </div>
-    </main>
+          <section class="blog-articles js-blog-articles">
+            {% for article in articles limit: 3 %}
+              {% include "post-box" %}
+            {% endfor %}
+          </section>
+        </div>
+      </main>
 
-    {% include "footer" %}
+      {% include "footer" %}
+    </div>
   </div>
 
   {% include "javascripts" %}

@@ -24,13 +24,8 @@
   src: url("../assets/arvo-bold-italic.eot?#iefix") format("embedded-opentype"), url("../assets/arvo-bold-italic.woff2") format("woff2"), url("../assets/arvo-bold-italic.woff") format("woff"), url("../assets/arvo-bold-italic.ttf") format("truetype"), url("../assets/arvo-bold-italic.svg#Arvo") format("svg");
 }
 /* GENERAL */
-html.editmode, html.public {
-  height: 100%;
-}
-
 body {
   position: relative;
-  min-height: 100%;
   margin: 0;
   padding: 0;
   font-family: 'Arvo', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
@@ -42,9 +37,6 @@ body {
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
-}
-.public body, .editmode body {
-  height: auto;
 }
 body.search-open {
   position: fixed;
@@ -205,11 +197,24 @@ body.search-open {
   z-index: -1;
 }
 
+.container-wrap {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .container {
-  min-height: 100%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
 }
 .editmode .container {
-  min-height: calc(100% - 40px);
+  min-height: calc(100vh - 40px);
 }
 .search-open .container {
   position: static;
@@ -1431,6 +1436,9 @@ body.search-open {
 /* CONTENT */
 .content {
   background-color: white;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 .content .wrap {
   padding: 60px 20px;
@@ -2354,20 +2362,6 @@ body.search-open {
 }
 
 /* FOOTER */
-.footer-positioner {
-  height: 80px;
-}
-
-.footer {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-.editmode .footer {
-  bottom: 40px;
-}
-
 .footer-inner {
   min-height: 80px;
   color: #FFFFFF;

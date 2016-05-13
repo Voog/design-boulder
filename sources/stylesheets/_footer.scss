@@ -1,20 +1,5 @@
 /* FOOTER */
 // Styling rules for the site's footer. These rules affect the entire site.
-.footer-positioner {
-  height: 80px;
-}
-
-.footer {
-  position:absolute;
-  left:0;
-  right: 0;
-  bottom:0;
-
-  .editmode & {
-    bottom: 40px;
-  }
-}
-
 .footer-inner {
   min-height: 80px;
   @include color($white, 0.5);

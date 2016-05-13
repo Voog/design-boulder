@@ -7,40 +7,42 @@
 </head>
 
 <body class="post-page content-page{% if editmode or site.has_many_languages? %} multilingual{% endif %}">
-  <div class="container">
-    {% include "header" %}
-    {% include "tags-post" %}
+  <div class="container-wrap">
+    <div class="container">
+      {% include "header" %}
+      {% include "tags-post" %}
 
-    <main class="content" role="main">
-      {% include "post-box" with "article" %}
-    </main>
+      <main class="content" role="main">
+        {% include "post-box" with "article" %}
+      </main>
 
-    <div class="comments content-formatted">
-      <div class="wrap">
-        <h2 class="comments-title">
-        {% case article.comments_count %}
-          {% when 0 %}{{ "write_first_comment" | lc }}
-          {% else %}{{ 'post_has_replies' | lcc : article.comments_count }}
-        {% endcase %}
-        </h2>
+      <div class="comments content-formatted">
+        <div class="wrap">
+          <h2 class="comments-title">
+          {% case article.comments_count %}
+            {% when 0 %}{{ "write_first_comment" | lc }}
+            {% else %}{{ 'post_has_replies' | lcc : article.comments_count }}
+          {% endcase %}
+          </h2>
 
-        {% if article.comments_count > 0 %}
-          <div class="comment-messages">
-            {% for comment in article.comments %}
-            <div class="comment edy-site-blog-comment">
-              <div class="comment-body">{{ comment.body_html }}</div>
-              <div class="comment-author">{{ comment.author }}</div>
-              <div class="comment-date">{{ comment.created_at | format_date: "long" }}{% removebutton %}</div>
+          {% if article.comments_count > 0 %}
+            <div class="comment-messages">
+              {% for comment in article.comments %}
+              <div class="comment edy-site-blog-comment">
+                <div class="comment-body">{{ comment.body_html }}</div>
+                <div class="comment-author">{{ comment.author }}</div>
+                <div class="comment-date">{{ comment.created_at | format_date: "long" }}{% removebutton %}</div>
+              </div>
+              {% endfor %}
             </div>
-            {% endfor %}
-          </div>
-        {% endif %}
+          {% endif %}
 
-        {% include "comment-form" %}
+          {% include "comment-form" %}
+        </div>
       </div>
-    </div>
 
-    {% include "footer" %}
+      {% include "footer" %}
+    </div>
   </div>
 
   {% include "javascripts" %}

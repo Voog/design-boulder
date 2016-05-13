@@ -10788,21 +10788,6 @@ MMCQ = (function() {
     }
   };
 
-  // Sets the position of the footer to the bottom of the page
-  var handleFooterPositioning = function() {
-    $(document).ready(function() {
-      footerHeight = $('.js-footer').height();
-      $('.js-footer-positioner').css({'height' : footerHeight});
-      focusFormWithErrors();
-    });
-  };
-
-  var handleFooterContentEdit = function() {
-    $('.js-footer').find('.text_partial').keydown(function() {
-      handleFooterPositioning();
-    });
-  };
-
   // Initiates the table horisontal scroll function when window is resized
   var handleWindowResize = function() {
     $(window).resize(debounce(handleSearchPositionChange, 1000));
@@ -10829,12 +10814,11 @@ MMCQ = (function() {
     // ADD SITE WIDE FUNCTIONS HERE
     bindSideClicks();
     handleElementsClick();
-    handleFooterContentEdit();
     handleSearchPositionChange();
     handleSearchSubmit();
     handleWindowResize();
     wrapTables();
-    handleFooterPositioning();
+    focusFormWithErrors();
   };
 
   // Enables the usage of the initiations outside this file

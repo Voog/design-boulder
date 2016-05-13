@@ -1,5 +1,3 @@
-<div class="footer-positioner js-footer-positioner"></div>
-
 <footer class="footer js-footer">
   {% if blog and articles.size > 3 %}
     <div class="menu-pagination-wrap js-menu-pagination-wrap"></div>

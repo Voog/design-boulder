@@ -2,6 +2,7 @@
 // Styling rules for the site's main content area. These rules affect the entire site.
 .content {
   @include bg($white);
+  flex-grow: 1;
 
   .wrap {
     padding: 60px 20px;
