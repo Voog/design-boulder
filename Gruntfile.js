@@ -6,55 +6,22 @@ module.exports = function(grunt) {
 
     // Removes old files.
     clean: {
-      assets: ['assets'],
-      images: ['images'],
-      javascripts: ['javascripts'],
-      stylesheets: ['stylesheets']
+      reset: {
+        src: ['assets', 'images', 'javascripts', 'stylesheets']
+      },
+
+      remove: {
+        src: ['sources/components/custom-styles/tmp']
+      }
     },
 
     modernizr_builder: {
       build: {
         options: {
           config: 'modernizr-config.json',
-          dest: 'javascripts/modernizr.js',
-          uglify: false
+          dest: 'javascripts/modernizr-custom.min.js',
+          uglify: true
         }
-      }
-    },
-
-    // Copys the files from the source folders to the layout folders.
-    copy: {
-      assets: {
-        files: [
-          {
-            expand: true,
-            cwd: 'sources/assets/copy',
-            src: '*',
-            dest: 'assets/'
-          }
-        ]
-      },
-
-      images: {
-        files: [
-          {
-            expand: true,
-            cwd: 'sources/images/copy',
-            src: '*',
-            dest: 'images/'
-          }
-        ]
-      },
-
-      javascripts: {
-        files: [
-          {
-            expand: true,
-            cwd: 'sources/javascripts/copy',
-            src: '*',
-            dest: 'javascripts/'
-          }
-        ]
       }
     },
 
@@ -75,7 +42,7 @@ module.exports = function(grunt) {
           'sources/javascripts/concat/blog-and-news/*.js'
         ],
         dest: 'javascripts/blog-and-news-application.js'
-      },
+      }
     },
 
     // Minifies the javascript files.
@@ -96,7 +63,7 @@ module.exports = function(grunt) {
 
     // Compiles the stylesheet files.
     sass: {
-      build: {
+      build_main: {
         options: {
           style: 'expanded',
           sourcemap: 'none'
@@ -108,6 +75,21 @@ module.exports = function(grunt) {
           dest: 'stylesheets/',
           ext: '.css'
         }]
+      },
+
+      // Builds custom style components to temporary folder.
+      build_custom_styles: {
+        options: {
+          style: 'expanded',
+          sourcemap: 'none'
+        },
+        files: [{
+          expand: true,
+          cwd: 'sources/components/custom-styles',
+          src: '*.scss',
+          dest: 'sources/components/custom-styles/tmp',
+          ext: '.css'
+        }]
       }
     },
 
@@ -117,10 +99,15 @@ module.exports = function(grunt) {
           require('autoprefixer')({browsers: 'last 4 versions'})
         ]
       },
-      dist: {
+      main_styles: {
         src: [
           'stylesheets/*.css',
           'stylesheets/!*.min.css'
+        ]
+      },
+      custom_styles: {
+        src: [
+          'sources/components/custom-styles/tmp/*.css'
         ]
       }
     },
@@ -160,6 +147,56 @@ module.exports = function(grunt) {
       }
     },
 
+    // Copys the files from the source folders to the layout folders.
+    copy: {
+      assets: {
+        files: [
+          {
+            expand: true,
+            cwd: 'sources/assets/copy',
+            src: '*',
+            dest: 'assets/'
+          }
+        ]
+      },
+
+      images: {
+        files: [
+          {
+            expand: true,
+            cwd: 'sources/images/copy',
+            src: '*',
+            dest: 'images/'
+          }
+        ]
+      },
+
+      javascripts: {
+        files: [
+          {
+            expand: true,
+            cwd: 'sources/javascripts/copy',
+            src: '*',
+            dest: 'javascripts/'
+          }
+        ]
+      },
+
+      // Copies the compiled css files from temporary folder to "components"
+      // folder and renames the files to ""*.tpl".
+      custom_styles: {
+        files: [
+          {
+            expand: true,
+            cwd: 'sources/components/custom-styles/tmp',
+            src: '*.css',
+            dest: 'components',
+            ext: '.tpl'
+          }
+        ]
+      }
+    },
+
     // Executes the Voog Kit toolkit manifest generation and file upload commands.
     exec: {
       kitmanifest: {
@@ -196,12 +233,17 @@ module.exports = function(grunt) {
         tasks: ['concat:build', 'uglify:build', 'exec:kitmanifest']
       },
 
-      css: {
+      css_main: {
         files: [
           'sources/stylesheets/*.scss',
-          'sources/stylesheets/*/*.scss'
+          'sources/stylesheets/*/*.scss',
         ],
-        tasks: ['sass:build', 'postcss', 'cssmin:build', 'exec:kitmanifest']
+        tasks: ['sass:build_main', 'postcss', 'cssmin:build', 'exec:kitmanifest']
+      },
+
+      custom_styles: {
+        files: 'sources/components/custom-styles/*.scss',
+        tasks: ['sass:build_custom_styles', 'postcss:custom_styles', 'copy:custom_styles', 'clean:remove', 'exec:kitmanifest']
       },
 
       img_copy: {
@@ -224,6 +266,7 @@ module.exports = function(grunt) {
         tasks: ['imagemin:build_assets', 'exec:kitmanifest']
       },
 
+
       voog: {
         files: ['javascripts/*.js', 'stylesheets/*.css', 'layouts/*.tpl', 'components/*.tpl'],
         options: {
@@ -235,17 +278,17 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-modernizr-builder');
-  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-postcss');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-exec');
-  
-  grunt.registerTask('default', ['clean', 'modernizr_builder', 'copy', 'concat', 'uglify', 'sass', 'postcss', 'cssmin', 'imagemin']);
+
+  grunt.registerTask('default', ['clean:reset', 'modernizr_builder', 'concat', 'copy', 'uglify', 'sass', 'postcss:main_styles', 'cssmin', 'imagemin', 'postcss:custom_styles', 'clean:remove']);
 
   grunt.event.on('watch', function(action, filepath, target) {
     if (target == 'voog') {
