@@ -123,7 +123,19 @@ body {
     //   @include color($white, 0.5);
     // }
   }
+
+  ul,
+  ol,
+  dl {
+    font-size: var(--list-font-size);
+    font-style: var(--list-font-style);
+    font-weight: var(--list-font-weight);
+    color: var(--list-color);
+    text-decoration: var(--list-text-decoration);
+    text-transform: var(--list-text-transform);
+  }
 }
+
 
 // MENUS
 .menu-main {

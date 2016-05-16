@@ -81,6 +81,16 @@
   text-transform: var(--content-button-hover-text-transform);
   background-color: var(--content-button-hover-background-color);
 }
+.content-formatted ul,
+.content-formatted ol,
+.content-formatted dl {
+  font-size: var(--list-font-size);
+  font-style: var(--list-font-style);
+  font-weight: var(--list-font-weight);
+  color: var(--list-color);
+  text-decoration: var(--list-text-decoration);
+  text-transform: var(--list-text-transform);
+}
 
 .menu-main .menu-link {
   font-size: var(--menu-main-font-size);

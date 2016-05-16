@@ -190,6 +190,13 @@
     {
       "content_type": "component",
       "component": true,
+      "file": "components/template-cs-list.tpl",
+      "layout_name": "template-cs-list",
+      "title": "template-cs-list"
+    },
+    {
+      "content_type": "component",
+      "component": true,
       "file": "components/template-cs-main-styles-front.tpl",
       "layout_name": "template-cs-main-styles-front",
       "title": "template-cs-main-styles-front"
