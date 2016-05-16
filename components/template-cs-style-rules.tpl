@@ -91,6 +91,13 @@
   text-decoration: var(--list-text-decoration);
   text-transform: var(--list-text-transform);
 }
+.content-formatted table tr th,
+.content-formatted table tr td {
+  padding: calc(var(--table-padding) - 4px) var(--table-padding);
+  font-size: var(--table-font-size);
+  border-top-style: var(--table-border-style);
+  border-bottom-style: var(--table-border-style);
+}
 
 .menu-main .menu-link {
   font-size: var(--menu-main-font-size);

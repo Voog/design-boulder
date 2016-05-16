@@ -36,6 +36,7 @@
     {% include "template-cs-content" %}
     {% include "template-cs-button" %}
     {% include "template-cs-list" %}
+    {% include "template-cs-table" %}
   {% endif %}
 
   {% comment %}
@@ -43,7 +44,6 @@
   {% if template-head == "blog_listing_page" %}
     {% include "template-cs-blog-list" %}
   {% endif %}
-  {% include "template-cs-table" %}
   {% include "template-cs-form" %}
   {% include "template-cs-footer" %}
   {% endcomment %}

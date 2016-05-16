@@ -114,14 +114,6 @@ body {
       }
       // scss-lint:enable NestingDepth
     }
-
-    // .main-feature & {
-    //   font-style: italic;
-    // }
-    //
-    // .footer & {
-    //   @include color($white, 0.5);
-    // }
   }
 
   ul,
@@ -133,6 +125,18 @@ body {
     color: var(--list-color);
     text-decoration: var(--list-text-decoration);
     text-transform: var(--list-text-transform);
+  }
+
+  table {
+    tr {
+      th,
+      td {
+        padding: calc(var(--table-padding) - 4px) var(--table-padding);
+        font-size: var(--table-font-size);
+        border-top-style: var(--table-border-style);
+        border-bottom-style: var(--table-border-style);
+      }
+    }
   }
 }
 
