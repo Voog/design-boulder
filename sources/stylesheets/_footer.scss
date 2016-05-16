@@ -19,7 +19,7 @@
     .flexbox & {
       display: flex;
       flex-wrap: wrap;
-      @include justify-content(flex-end);
+      @include justify-content(flex-start);
     }
   }
 

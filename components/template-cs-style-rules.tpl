@@ -197,3 +197,12 @@
   text-transform: var(--content-button-hover-text-transform);
   background-color: var(--content-button-hover-background-color);
 }
+
+.footer .content-formatted {
+  font-size: var(--footer-body-font-size);
+  font-style: var(--footer-body-font-style);
+  font-weight: var(--footer-body-font-weight);
+  color: var(--footer-body-color);
+  text-decoration: var(--footer-body-text-decoration);
+  text-transform: var(--footer-body-text-transform);
+}
