@@ -32,12 +32,12 @@
   {% if content_page %}
     {% include "template-cs-main-styles" %}
     {% include "template-cs-header" %}
+    {% include "template-cs-headings" %}
     {% include "template-cs-content" %}
   {% endif %}
 
   {% comment %}
   {% include "template-cs-header" %}
-  {% include "template-cs-headings" %}
   {% if template-head == "blog_listing_page" %}
     {% include "template-cs-blog-list" %}
   {% endif %}

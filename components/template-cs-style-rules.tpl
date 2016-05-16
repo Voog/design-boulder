@@ -16,6 +16,39 @@
   text-decoration: var(--focus-area-body-text-decoration);
   text-transform: var(--focus-area-body-text-transform);
 }
+.content-formatted h1 {
+  font-size: var(--headings-title-font-size);
+  font-style: var(--headings-title-font-style);
+  font-weight: var(--headings-title-font-weight);
+  line-height: var(--headings-title-line-height);
+  color: var(--headings-title-color);
+  text-align: var(--headings-title-text-alignment);
+  text-decoration: var(--headings-title-text-decoration);
+  text-transform: var(--headings-title-text-transform);
+}
+.content-formatted h2 {
+  font-size: var(--headings-heading-font-size);
+  font-style: var(--headings-heading-font-style);
+  font-weight: var(--headings-heading-font-weight);
+  line-height: var(--headings-heading-line-height);
+  color: var(--headings-heading-color);
+  text-align: var(--headings-heading-text-alignment);
+  text-decoration: var(--headings-heading-text-decoration);
+  text-transform: var(--headings-heading-text-transform);
+}
+.content-formatted h3,
+.content-formatted h4,
+.content-formatted h5,
+.content-formatted h6 {
+  font-size: var(--headings-subheading-font-size);
+  font-style: var(--headings-subheading-font-style);
+  font-weight: var(--headings-subheading-font-weight);
+  line-height: var(--headings-subheading-line-height);
+  color: var(--headings-subheading-color);
+  text-align: var(--headings-subheading-text-alignment);
+  text-decoration: var(--headings-subheading-text-decoration);
+  text-transform: var(--headings-subheading-text-transform);
+}
 .content-formatted a:not(.custom-btn) {
   font-style: var(--content-link-font-style);
   font-weight: var(--content-link-font-weight);
