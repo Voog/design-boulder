@@ -158,7 +158,27 @@
   text-transform: var(--header-body-text-transform);
 }
 
-/* FORMS */
+.content-formatted .edy-fe-label,
+.content-formatted .form_field_label {
+  font-size: var(--form-label-font-size);
+  font-style: var(--form-label-font-style);
+  font-weight: var(--form-label-font-weight);
+  color: var(--form-label-color);
+  text-decoration: var(--form-label-text-decoration);
+  text-transform: var(--form-label-text-transform);
+}
+.content-formatted .form_field_textfield,
+.content-formatted .form_field_textarea,
+.content-formatted .form_field_select,
+.content-formatted .form_field_file,
+.content-formatted .edy-fe-fieldinputs label,
+.content-formatted .form_field label {
+  font-style: var(--form-field-font-style);
+  font-weight: var(--form-field-font-weight);
+  color: var(--form-field-color);
+  text-decoration: var(--form-field-text-decoration);
+  text-transform: var(--form-field-text-transform);
+}
 .content-formatted .form_submit input {
   padding: calc(var(--content-button-padding) - 10px) var(--content-button-padding);
   font-size: var(--content-button-font-size);
