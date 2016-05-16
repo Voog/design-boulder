@@ -3,7 +3,7 @@
 .footer-inner {
   min-height: 80px;
   @include color($white, 0.5);
-  @include bg($primary-color, 0.73);
+  @include bg($third-color, 1);
 
   &.dark-backrgound {
     .content-formatted {

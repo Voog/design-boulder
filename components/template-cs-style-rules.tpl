@@ -34,3 +34,13 @@
 .menu-sub {
   background-color: var(--content-background-color);
 }
+
+.header-title,
+.header-title a {
+  font-size: var(--header-body-font-size);
+  font-style: var(--header-body-font-style);
+  font-weight: var(--header-body-font-weight);
+  color: var(--header-body-color);
+  text-decoration: var(--header-body-text-decoration);
+  text-transform: var(--header-body-text-transform);
+}

@@ -30,7 +30,8 @@
   {% endif %}
 
   {% if content_page %}
-  {% include "template-cs-main-styles" %}
+    {% include "template-cs-main-styles" %}
+    {% include "template-cs-header" %}
     {% include "template-cs-content" %}
   {% endif %}
 

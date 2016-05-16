@@ -1399,8 +1399,7 @@ body.search-open {
   color: rgba(0, 0, 0, 0.73);
 }
 .header-title a:hover {
-  color: #000000;
-  color: rgba(0, 0, 0, 0.5);
+  opacity: .5;
 }
 
 .header-bottom-inner {
@@ -2366,8 +2365,7 @@ body.search-open {
   min-height: 80px;
   color: #FFFFFF;
   color: rgba(255, 255, 255, 0.5);
-  background-color: #000000;
-  background-color: rgba(0, 0, 0, 0.73);
+  background-color: #454545;
 }
 .footer-inner.dark-backrgound .content-formatted {
   color: #FFFFFF;
