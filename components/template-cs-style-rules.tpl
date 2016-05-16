@@ -56,12 +56,30 @@
   text-decoration: var(--content-link-text-decoration);
   text-transform: var(--content-link-text-transform);
 }
-.content-formatted a:hover {
+.content-formatted a:not(.custom-btn):hover {
   font-style: var(--content-link-hover-font-style);
   font-weight: var(--content-link-hover-font-weight);
   color: var(--content-link-hover-color);
   text-decoration: var(--content-link-hover-text-decoration);
   text-transform: var(--content-link-hover-text-transform);
+}
+.content-formatted a.custom-btn {
+  padding: calc(var(--content-button-padding) - 10px) var(--content-button-padding);
+  font-size: var(--content-button-font-size);
+  font-style: var(--content-button-font-style);
+  font-weight: var(--content-button-font-weight);
+  color: var(--content-button-color);
+  text-decoration: var(--content-button-text-decoration);
+  text-transform: var(--content-button-text-transform);
+  background-color: var(--content-button-background-color);
+}
+.content-formatted a.custom-btn:hover {
+  font-style: var(--content-button-hover-font-style);
+  font-weight: var(--content-button-hover-font-weight);
+  color: var(--content-button-hover-color);
+  text-decoration: var(--content-button-hover-text-decoration);
+  text-transform: var(--content-button-hover-text-transform);
+  background-color: var(--content-button-hover-background-color);
 }
 
 .menu-main .menu-link {
@@ -121,4 +139,24 @@
   color: var(--header-body-color);
   text-decoration: var(--header-body-text-decoration);
   text-transform: var(--header-body-text-transform);
+}
+
+/* FORMS */
+.content-formatted .form_submit input {
+  padding: calc(var(--content-button-padding) - 10px) var(--content-button-padding);
+  font-size: var(--content-button-font-size);
+  font-style: var(--content-button-font-style);
+  font-weight: var(--content-button-font-weight);
+  color: var(--content-button-color);
+  text-decoration: var(--content-button-text-decoration);
+  text-transform: var(--content-button-text-transform);
+  background-color: var(--content-button-background-color);
+}
+.content-formatted .form_submit input:hover {
+  font-style: var(--content-button-hover-font-style);
+  font-weight: var(--content-button-hover-font-weight);
+  color: var(--content-button-hover-color);
+  text-decoration: var(--content-button-hover-text-decoration);
+  text-transform: var(--content-button-hover-text-transform);
+  background-color: var(--content-button-hover-background-color);
 }

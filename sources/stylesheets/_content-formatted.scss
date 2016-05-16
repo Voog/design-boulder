@@ -274,12 +274,20 @@
 
   .custom-btn {
     display: inline-block;
-    padding: 15px 40px;
+    padding: 14px 24px;
     line-height: 1.3;
     text-decoration: none;
     font-style: normal;
-    font-size: 24px;
+    font-size: 18px;
+    color: rgba($white, 1);
     @include bg($secondary-color);
+    line-height: 1;
+
+    .header-bottom & {
+      padding: 15px 40px;
+      font-size: 24px;
+      line-height: 1.3;
+    }
 
     &:hover {
       @include bg($secondary-color, 0.8);
