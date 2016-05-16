@@ -48,7 +48,7 @@
     "icon": "underline",
     "scope": "global"
   */
-  --header-body-text-decoration: none;
+  --header-body-border-style: none;
   /* VoogStyle
     "pathI18n": ["header", "title", "normal"],
     "titleI18n": "text_transform",
@@ -81,7 +81,7 @@
     "featured": true,
     "scope": "global"
   */
-  --menu-main-font-size: 13px;
+  --menu-main-font-size: 18px;
   /* VoogStyle
     "pathI18n": ["header", "main_menu", "normal"],
     "titleI18n": "font_size",
@@ -176,52 +176,6 @@
   --menu-main-active-font-style: normal;
   /* VoogStyle
     "pathI18n": ["header", "main_menu", "normal"],
-    "titleI18n": "text_decoration",
-    "type": "button",
-    "editor": "toggleIcon",
-    "states": {
-      "on": "underline",
-      "off": "none"
-    },
-    "icon": "underline",
-    "scope": "global",
-    "boundVariables": [
-      "--menu-main-hover-text-decoration",
-      "--menu-main-active-text-decoration"
-    ]
-  */
-  --menu-main-text-decoration: none;
-  /* VoogStyle
-    "pathI18n": ["header", "main_menu", "hover"],
-    "titleI18n": "text_decoration",
-    "type": "button",
-    "editor": "toggleIcon",
-    "states": {
-      "on": "underline",
-      "off": "none"
-    },
-    "icon": "underline",
-    "scope": "global",
-    "boundVariables": [
-      "--menu-main-active-text-decoration"
-    ]
-  */
-  --menu-main-hover-text-decoration: none;
-  /* VoogStyle
-    "pathI18n": ["header", "main_menu", "active"],
-    "titleI18n": "text_decoration",
-    "type": "button",
-    "editor": "toggleIcon",
-    "states": {
-      "on": "underline",
-      "off": "none"
-    },
-    "icon": "underline",
-    "scope": "global"
-  */
-  --menu-main-active-text-decoration: none;
-  /* VoogStyle
-    "pathI18n": ["header", "main_menu", "normal"],
     "titleI18n": "text_transform",
     "type": "button",
     "editor": "toggleIcon",
@@ -236,7 +190,7 @@
       "--menu-main-active-text-transform"
     ]
   */
-  --menu-main-text-transform: uppercase;
+  --menu-main-text-transform: none;
   /* VoogStyle
     "pathI18n": ["header", "main_menu", "hover"],
     "titleI18n": "text_transform",
@@ -252,7 +206,7 @@
       "--menu-main-active-text-transform"
     ]
   */
-  --menu-main-hover-text-transform: uppercase;
+  --menu-main-hover-text-transform: none;
   /* VoogStyle
     "pathI18n": ["header", "main_menu", "active"],
     "titleI18n": "text_transform",
@@ -265,7 +219,7 @@
     "icon": "uppercase",
     "scope": "global"
   */
-  --menu-main-active-text-transform: uppercase;
+  --menu-main-active-text-transform: none;
   /* VoogStyle
     "pathI18n": ["header", "main_menu", "normal"],
     "titleI18n": "color",

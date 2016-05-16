@@ -31,6 +31,26 @@
   text-transform: var(--content-link-hover-text-transform);
 }
 
+.menu-main .menu-link {
+  font-size: var(--menu-main-font-size);
+  font-style: var(--menu-main-font-style);
+  font-weight: var(--menu-main-font-weight);
+  color: var(--menu-main-color);
+  text-transform: var(--menu-main-text-transform);
+}
+.menu-main .menu-link:hover {
+  font-style: var(--menu-main-hover-font-style);
+  font-weight: var(--menu-main-hover-font-weight);
+  color: var(--menu-main-hover-color);
+  text-transform: var(--menu-main-hover-text-transform);
+}
+.menu-main .menu-link.active, .menu-main .menu-link.active:hover {
+  font-style: var(--menu-main-active-font-style);
+  font-weight: var(--menu-main-active-font-weight);
+  color: var(--menu-main-active-color);
+  text-transform: var(--menu-main-active-text-transform);
+}
+
 .menu-sub {
   background-color: var(--content-background-color);
 }
