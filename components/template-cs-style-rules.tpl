@@ -54,6 +54,31 @@
 .menu-sub {
   background-color: var(--content-background-color);
 }
+.menu-sub .menu {
+  text-align: right;
+}
+.menu-sub .menu-link {
+  font-size: var(--menu-sub-font-size);
+  font-style: var(--menu-sub-font-style);
+  font-weight: var(--menu-sub-font-weight);
+  color: var(--menu-sub-color);
+  text-decoration: var(--menu-sub-text-decoration);
+  text-transform: var(--menu-sub-text-transform);
+}
+.menu-sub .menu-link.active {
+  font-style: var(--menu-sub-active-font-style);
+  font-weight: var(--menu-sub-active-font-weight);
+  color: var(--menu-sub-active-color);
+  text-decoration: var(--menu-sub-active-text-decoration);
+  text-transform: var(--menu-sub-active-text-transform);
+}
+.menu-sub .menu-link:not(.active):hover {
+  font-style: var(--menu-sub-hover-font-style);
+  font-weight: var(--menu-sub-hover-font-weight);
+  color: var(--menu-sub-hover-color);
+  text-decoration: var(--menu-sub-hover-text-decoration);
+  text-transform: var(--menu-sub-hover-text-transform);
+}
 
 .header-title,
 .header-title a {
