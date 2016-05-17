@@ -46,6 +46,7 @@
     "featured": true,
     "scope": "global",
     "boundVariables": [
+      "--footer-body-background-color"
     ]
   */
   --third-color: #454545;

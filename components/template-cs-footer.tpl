@@ -1,6 +1,14 @@
 :root {
   /* VoogStyle
     "pathI18n": ["footer"],
+    "titleI18n": "background_color",
+    "editor": "colorPicker",
+    "featured": true,
+    "scope": "global"
+  */
+  --footer-body-background-color: #454545;
+  /* VoogStyle
+    "pathI18n": ["footer"],
     "titleI18n": "size",
     "editor": "rangePicker",
     "min": 8,

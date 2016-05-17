@@ -18,6 +18,15 @@
 // =============================================================================
 :root {
   // scss-lint:disable Comment, Indentation
+  
+  /* VoogStyle
+    "pathI18n": ["footer"],
+    "titleI18n": "background_color",
+    "editor": "colorPicker",
+    "featured": true,
+    "scope": "global"
+  */
+  --footer-body-background-color: rgba($third-color, 1);  
 
   /* VoogStyle
     "pathI18n": ["footer"],

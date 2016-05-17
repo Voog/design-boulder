@@ -206,3 +206,7 @@
   text-decoration: var(--footer-body-text-decoration);
   text-transform: var(--footer-body-text-transform);
 }
+
+.footer-inner {
+  background-color: var(--footer-body-background-color);
+}
