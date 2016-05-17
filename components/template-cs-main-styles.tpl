@@ -15,7 +15,15 @@
     "featured": true,
     "scope": "global",
     "boundVariables": [
-      "--content-body-color"
+      "--header-body-color",
+      "--headings-title-color",
+      "--headings-heading-color",
+      "--headings-subheading-color",
+      "--list-color",
+      "--menu-sub-color",
+      "--content-body-color",
+      "--form-label-color",
+      "--form-field-color"
     ]
   */
   --primary-color: rgba(0, 0, 0, 0.73);
@@ -27,7 +35,7 @@
     "scope": "global",
     "boundVariables": [
       "--content-link-color",
-      "--content-link-hover-color"
+      "--content-button-background-color"
     ]
   */
   --secondary-color: #e4ac00;
@@ -48,6 +56,7 @@
     "featured": true,
     "scope": "global",
     "boundVariables": [
+      "--content-button-color"
     ]
   */
   --fourth-color: white;

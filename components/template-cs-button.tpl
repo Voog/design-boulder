@@ -18,10 +18,7 @@
     "max": 100,
     "unit": "px",
     "featured": true,
-    "scope": "global",
-    "boundVariables": [
-      "--content-button-hover-font-size"
-    ]
+    "scope": "global"
   */
   --content-button-font-size: 18px;
   /* VoogStyle

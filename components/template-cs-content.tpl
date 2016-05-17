@@ -14,11 +14,7 @@
     "max": 100,
     "unit": "px",
     "featured": true,
-    "scope": "global",
-    "boundVariables": [
-      "--menu-sub-hover-font-size",
-      "--menu-sub-active-font-size"
-    ]
+    "scope": "global"
   */
   --menu-sub-font-size: 16px;
   /* VoogStyle

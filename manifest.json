@@ -258,7 +258,7 @@
       "filename": "arvo-bold-italic.svg"
     },
     {
-      "content_type": "application/x-font-truetype",
+      "content_type": "application/font-sfnt",
       "file": "assets/arvo-bold-italic.ttf",
       "kind": "assets",
       "filename": "arvo-bold-italic.ttf"
@@ -270,7 +270,7 @@
       "filename": "arvo-bold-italic.woff"
     },
     {
-      "content_type": "text/unknown",
+      "content_type": "application/font-woff",
       "file": "assets/arvo-bold-italic.woff2",
       "kind": "assets",
       "filename": "arvo-bold-italic.woff2"
@@ -288,7 +288,7 @@
       "filename": "arvo-bold.svg"
     },
     {
-      "content_type": "application/x-font-truetype",
+      "content_type": "application/font-sfnt",
       "file": "assets/arvo-bold.ttf",
       "kind": "assets",
       "filename": "arvo-bold.ttf"
@@ -300,7 +300,7 @@
       "filename": "arvo-bold.woff"
     },
     {
-      "content_type": "text/unknown",
+      "content_type": "application/font-woff",
       "file": "assets/arvo-bold.woff2",
       "kind": "assets",
       "filename": "arvo-bold.woff2"
@@ -318,7 +318,7 @@
       "filename": "arvo-italic.svg"
     },
     {
-      "content_type": "application/x-font-truetype",
+      "content_type": "application/font-sfnt",
       "file": "assets/arvo-italic.ttf",
       "kind": "assets",
       "filename": "arvo-italic.ttf"
@@ -330,7 +330,7 @@
       "filename": "arvo-italic.woff"
     },
     {
-      "content_type": "text/unknown",
+      "content_type": "application/font-woff",
       "file": "assets/arvo-italic.woff2",
       "kind": "assets",
       "filename": "arvo-italic.woff2"
@@ -348,7 +348,7 @@
       "filename": "arvo-regular.svg"
     },
     {
-      "content_type": "application/x-font-truetype",
+      "content_type": "application/font-sfnt",
       "file": "assets/arvo-regular.ttf",
       "kind": "assets",
       "filename": "arvo-regular.ttf"
@@ -360,7 +360,7 @@
       "filename": "arvo-regular.woff"
     },
     {
-      "content_type": "text/unknown",
+      "content_type": "application/font-woff",
       "file": "assets/arvo-regular.woff2",
       "kind": "assets",
       "filename": "arvo-regular.woff2"
