@@ -36,9 +36,9 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/search.tpl",
-      "layout_name": "search",
-      "title": "search"
+      "file": "components/post-box.tpl",
+      "layout_name": "post-box",
+      "title": "post-box"
     },
     {
       "content_type": "component",
@@ -120,16 +120,16 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/post-box.tpl",
-      "layout_name": "post-box",
-      "title": "post-box"
+      "file": "components/comment-form.tpl",
+      "layout_name": "comment-form",
+      "title": "comment-form"
     },
     {
       "content_type": "component",
       "component": true,
-      "file": "components/comment-form.tpl",
-      "layout_name": "comment-form",
-      "title": "comment-form"
+      "file": "components/search.tpl",
+      "layout_name": "search",
+      "title": "search"
     },
     {
       "content_type": "component",
@@ -207,13 +207,6 @@
       "file": "components/template-cs-list.tpl",
       "layout_name": "template-cs-list",
       "title": "template-cs-list"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/template-cs-main-styles-front.tpl",
-      "layout_name": "template-cs-main-styles-front",
-      "title": "template-cs-main-styles-front"
     },
     {
       "content_type": "component",
