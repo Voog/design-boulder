@@ -8,6 +8,9 @@
   line-height: var(--content-body-line-height);
   color: var(--content-body-color);
 }
+.dark-background .content-formatted {
+  color: var(--fourth-color);
+}
 .content-formatted.header-body {
   font-size: var(--focus-area-body-font-size);
   font-style: var(--focus-area-body-font-style);
@@ -15,6 +18,9 @@
   line-height: var(--focus-area-body-line-height);
   text-decoration: var(--focus-area-body-text-decoration);
   text-transform: var(--focus-area-body-text-transform);
+}
+.dark-background .content-formatted h1, .dark-background .content-formatted h2, .dark-background .content-formatted h3, .dark-background .content-formatted h4, .dark-background .content-formatted h5, .dark-background .content-formatted h6, .dark-background .content-formatted p, .dark-background .content-formatted ul, .dark-background .content-formatted ol, .dark-background .content-formatted pre, .dark-background .content-formatted code, .dark-background .content-formatted table {
+  color: var(--fourth-color);
 }
 .content-formatted h1 {
   font-size: var(--headings-title-font-size);
@@ -156,6 +162,29 @@
   color: var(--header-body-color);
   text-decoration: var(--header-body-text-decoration);
   text-transform: var(--header-body-text-transform);
+}
+
+.front-page .blog-title {
+  color: var(--fourth-color);
+}
+.front-page .light-background .blog-title,
+.front-page .light-background .post-date {
+  color: var(--primary-color);
+}
+.front-page .light-background .post-title {
+  border-bottom-color: var(--primary-color);
+}
+.front-page .light-background .post-title, .front-page .light-background .post-title a {
+  color: var(--primary-color);
+}
+.front-page .post-title {
+  border-bottom-color: var(--fourth-color);
+}
+.front-page .post-title, .front-page .post-title a {
+  color: var(--fourth-color);
+}
+.front-page .post-date {
+  color: var(--fourth-color);
 }
 
 .content-formatted .edy-fe-label,

@@ -1597,13 +1597,13 @@ body.search-open {
   font-weight: 400;
   font-style: italic;
   font-size: 20px;
-  color: #FFFFFF;
-  color: rgba(255, 255, 255, 0.5);
+  color: white;
+  opacity: .5;
 }
 .front-page .light-background .blog-title,
 .front-page .light-background .post-date {
-  color: #000000;
-  color: rgba(0, 0, 0, 0.5);
+  color: black;
+  opacity: .5;
 }
 .front-page .light-background .post-title {
   border-bottom: 1px solid #000000;
@@ -1639,8 +1639,8 @@ body.search-open {
   display: block;
   line-height: 1;
   font-size: 14px;
-  color: #FFFFFF;
-  color: rgba(255, 255, 255, 0.5);
+  color: white;
+  opacity: .5;
 }
 
 .blog-page .post:first-child,

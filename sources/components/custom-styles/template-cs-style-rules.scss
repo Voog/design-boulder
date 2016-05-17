@@ -31,6 +31,10 @@ body {
   line-height: var(--content-body-line-height);
   color: var(--content-body-color);
 
+  .dark-background & {
+    color: var(--fourth-color);
+  }
+
   &.header-body {
     font-size: var(--focus-area-body-font-size);
     font-style: var(--focus-area-body-font-style);
@@ -38,6 +42,12 @@ body {
     line-height: var(--focus-area-body-line-height);
     text-decoration: var(--focus-area-body-text-decoration);
     text-transform: var(--focus-area-body-text-transform);
+  }
+
+  h1, h2, h3, h4, h5, h6, p, ul, ol, pre, code, table {
+    .dark-background & {
+      color: var(--fourth-color);
+    }
   }
 
   h1 {
@@ -203,7 +213,6 @@ body {
   //     @include border(top, 1px, solid, $primary-color, 0.2);
   //   }
   // }
-
 }
 
 .menu-sub {
@@ -259,6 +268,43 @@ body {
     color: var(--header-body-color);
     text-decoration: var(--header-body-text-decoration);
     text-transform: var(--header-body-text-transform);
+  }
+}
+
+// BLOG
+.front-page {
+  .blog-title {
+    color: var(--fourth-color);
+  }
+
+  .light-background {
+    .blog-title,
+    .post-date {
+      color: var(--primary-color);
+    }
+
+    .post-title {
+      // @include border(bottom, 1px, solid, $primary-color, 0.73);
+      border-bottom-color: var(--primary-color);
+
+      &, & a {
+        color: var(--primary-color);
+        // @include color($primary-color, 0.73);
+      }
+    }
+  }
+
+  .post-title {
+    // @include border(bottom, 1px, solid, $white);
+    border-bottom-color: var(--fourth-color);
+
+    &, & a {
+      color: var(--fourth-color);
+    }
+  }
+
+  .post-date {
+    color: var(--fourth-color);
   }
 }
 

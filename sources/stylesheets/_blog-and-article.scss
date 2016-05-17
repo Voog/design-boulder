@@ -12,13 +12,15 @@
     font-weight: 400;
     font-style: italic;
     font-size: 20px;
-    @include color($white, 0.5);
+    color: rgba($white, 1);
+    opacity: .5;
   }
 
   .light-background {
     .blog-title,
     .post-date {
-      @include color($primary-color, 0.5);
+      color: rgba($primary-color, 1);
+      opacity: .5;
     }
 
     .post-title {
@@ -62,7 +64,8 @@
     display: block;
     line-height: 1;
     font-size: 14px;
-    @include color($white, 0.5);
+    color: rgba($white, 1);
+    opacity: .5;
   }
 }
 
@@ -158,5 +161,3 @@
     margin-top: 47px;
   }
 }
-
-
