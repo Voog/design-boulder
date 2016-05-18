@@ -10616,158 +10616,6 @@ MMCQ = (function() {
     return color;
   };
 
-  var primaryColorPreview = function(data, container) {
-    if (data.colorData) {
-      var dataColorRgb = 'rgb(' + data.colorData.r + ',' + data.colorData.g + ',' + data.colorData.b + ');',
-          dataColorHover = 'rgba(' + data.colorData.r + ',' + data.colorData.g + ',' + data.colorData.b + ',.8);)';
-
-      if (data.colorData.lightness !== 1) {
-        // Dark colors.
-        $('#preview-style').html(
-          '.summary {\
-            background-color: ' + data.color + ';\
-          }\
-          .content-formatted .custom-btn {\
-            background-color: ' + dataColorRgb + ';\
-          }\
-          .content-formatted .custom-btn:hover {\
-            background-color: ' + dataColorHover + ';\
-          }\
-          .content-formatted .form_submit input {\
-            background-color: ' + dataColorRgb + ';\
-          }\
-          .menu-main .menu-link.active,\
-          .menu-main .menu-link.active:hover {\
-            border-bottom: solid 1px ' + dataColorRgb + ';\
-            box-shadow: inset 0 -3px 0 ' + dataColorRgb + ';\
-          }\
-          .menu-main .menu-link:hover {\
-            border-bottom: solid 1px ' + dataColorHover + ';\
-            box-shadow: inset 0 -3px 0 ' + dataColorHover + ';\
-          }\
-          @media screen and (max-width: 900px) {\
-            .menu-main.expanded .menu-link.active,\
-            .menu-main.expanded .menu-link.active:hover {\
-              color: ' + dataColorRgb + ';\
-            }\
-          }\
-          .content-formatted a:not(.custom-btn),\
-          .menu-pagination .menu-item.active .menu-link,\
-          .menu-pagination .menu-item .menu-link:hover {\
-            color: ' + dataColorRgb + ';\
-          }\
-          .content-formatted .form_submit input {\
-            background-color: ' + dataColorRgb + ';\
-          }\
-          .content-formatted .form_submit input:hover {\
-            background-color: ' + dataColorHover + ';\
-          }');
-      } else {
-        // Light colors.
-        $('#preview-style').html(
-          '.summary {\
-            background-color: ' + data.color + ';\
-          }\
-          .content-formatted .custom-btn {\
-            background-color: #e4ac00;\
-          }\
-          .content-formatted .custom-btn:hover {\
-            background-color: rgba(228, 172, 0, 0.8);\
-          }\
-          .content-formatted .form_submit input {\
-            background-color: #e4ac00sssss;\
-          }\
-          .menu-main .menu-link.active,\
-          .menu-main .menu-link.active:hover {\
-            border-bottom: solid 1px #e4ac00;\
-            box-shadow: inset 0 -3px 0 #e4ac00;\
-          }\
-          .menu-main .menu-link:hover {\
-            border-bottom: solid 1px rgba(228, 172, 0, 0.8);\
-            box-shadow: inset 0 -3px 0 rgba(228, 172, 0, 0.8);\
-          }\
-          @media screen and (max-width: 900px) {\
-            .menu-main.expanded .menu-link.active,\
-            .menu-main.expanded .menu-link.active:hover {\
-              color: #e4ac00;\
-            }\
-          }\
-          .content-formatted a:not(.custom-btn),\
-          .menu-pagination .menu-item.active .menu-link,\
-          .menu-pagination .menu-item .menu-link:hover {\
-            color: #e4ac00;\
-          }\
-          .content-formatted .form_submit input {\
-            background-color: #e4ac00;\
-          }\
-          .content-formatted .form_submit input:hover {\
-            background-color: rgba(228, 172, 0, 0.8);\
-          }');
-      };
-    } else {
-      // No color
-      $('#preview-style').html(
-        '.summary {\
-          background-color: #e4ac00;\
-        }\
-        .content-formatted .custom-btn {\
-          background-color: #e4ac00;\
-        }\
-        .content-formatted .custom-btn:hover {\
-          background-color: rgba(228, 172, 0, 0.8);\
-        }\
-        .content-formatted .form_submit input {\
-          background-color: #e4ac00;\
-        }\
-        .menu-main .menu-link.active,\
-        .menu-main .menu-link.active:hover {\
-          border-bottom: solid 1px #e4ac00;\
-          box-shadow: inset 0 -3px 0 #e4ac00;\
-        }\
-        .menu-main .menu-link:hover {\
-          border-bottom: solid 1px #e4ac00;\
-          box-shadow: inset 0 -3px 0 #e4ac00;\
-        }\
-        @media screen and (max-width: 900px) {\
-          .menu-main.expanded .menu-link.active,\
-          .menu-main.expanded .menu-link.active:hover {\
-            color: #e4ac00;\
-          }\
-        }\
-        .content-formatted a:not(.custom-btn),\
-        .menu-pagination .menu-item.active .menu-link,\
-        .menu-pagination .menu-item .menu-link:hover {\
-          color: #e4ac00;\
-        }\
-        .content-formatted .form_submit input {\
-          background-color: #e4ac00;\
-        }\
-        .content-formatted .form_submit input:hover {\
-          background-color: #e4ac00;\
-        }');
-    };
-
-    if (data.colorData && data.colorData.a >= .5) {
-      $('.js-summary').addClass(data.colorData.lightness >= .5 ? 'light-background' : 'dark-background').removeClass(data.colorData.lightness >= .5 ? 'dark-background' : 'light-background');
-    } else {
-      $('.js-summary').addClass('light-background').removeClass('dark-background');
-    };
-  };
-
-  var primaryColorCommit = function(data, dataName) {
-    var primary = [];
-
-    var color = (data.color && data.color !== '') ? data.color : 'transparent',
-        colorData = (data.colorData && data.colorData !== '') ? data.colorData : null;
-
-    primary.push({
-      color: data.color,
-      color_data: data.colorData
-    });
-
-    siteData.set(dataName, data);
-  };
-
   // scrolls to the comment-form if comment submit failed (to show the error messages to the user)
   var focusFormWithErrors = function() {
     $(document).ready(function() {
@@ -10786,6 +10634,11 @@ MMCQ = (function() {
           $(this).wrap('<div class="table-container overthrow"></div>');
       });
     }
+  };
+  
+  var bindCustomTexteditorStyles = function(button) {
+    window.edy = window.edy || [];
+    edy.push(['texteditorStyles', {name: button, tagname:'a', attribute: {'href': '#'}, classname: 'custom-btn', toggle: true}]);
   };
 
   // Initiates the table horisontal scroll function when window is resized
@@ -10830,8 +10683,7 @@ MMCQ = (function() {
     toggleFlags: toggleFlags,
     headerBgPreview: headerBgPreview,
     headerBgCommit: headerBgCommit,
-    primaryColorPreview: primaryColorPreview,
-    primaryColorCommit: primaryColorCommit
+    bindCustomTexteditorStyles: bindCustomTexteditorStyles
   });
 
   init();

@@ -251,6 +251,11 @@
       });
     }
   };
+  
+  var bindCustomTexteditorStyles = function(buttonTranslation) {
+    window.edy = window.edy || [];
+    edy.push(['texteditorStyles', {name: buttonTranslation, tagname:'a', attribute: {'href': '#'}, classname: 'custom-btn', toggle: true}]);
+  };
 
   // Initiates the table horisontal scroll function when window is resized
   var handleWindowResize = function() {
@@ -293,7 +298,8 @@
     initFrontPage: initFrontPage,
     toggleFlags: toggleFlags,
     headerBgPreview: headerBgPreview,
-    headerBgCommit: headerBgCommit
+    headerBgCommit: headerBgCommit,
+    bindCustomTexteditorStyles: bindCustomTexteditorStyles
   });
 
   init();
