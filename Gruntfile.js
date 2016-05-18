@@ -245,9 +245,14 @@ module.exports = function(grunt) {
         tasks: ['copy:javascripts', 'exec:kitmanifest', 'exec:kit:javascripts/*.js']
       },
 
-      js_concat: {
-        files: 'sources/javascripts/concat/*.js',
-        tasks: ['concat:build', 'uglify:build', 'exec:kitmanifest', 'exec:kit:javascripts/*.js']
+      js_concat_build_global: {
+        files: 'sources/javascripts/concat/global/*.js',
+        tasks: ['concat:build_global', 'uglify:build', 'exec:kitmanifest', 'exec:kit:javascripts/*.js']
+      },
+      
+      js_concat_build_blog_and_news: {
+        files: 'sources/javascripts/concat/blog-and-news/*.js',
+        tasks: ['concat:build_blog_and_news', 'uglify:build', 'exec:kitmanifest', 'exec:kit:javascripts/*.js']
       },
 
       css_main: {
