@@ -508,8 +508,7 @@ body.search-open {
   line-height: 1.3;
 }
 .content-formatted .custom-btn:hover {
-  background-color: #E4AC00;
-  background-color: rgba(228, 172, 0, 0.8);
+  opacity: .8;
 }
 .content-formatted .contacts::first-line {
   color: red !important;
