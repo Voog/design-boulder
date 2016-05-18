@@ -1,3 +1,7 @@
+body {
+  font-family: var(--main-font-family);
+}
+
 .content {
   background-color: var(--content-background-color);
 }
@@ -7,7 +11,6 @@
 }
 
 .content-formatted {
-  font-family: var(--main-font-family);
   font-size: var(--content-body-font-size);
   line-height: var(--content-body-line-height);
   color: var(--content-body-color);
@@ -190,17 +193,37 @@
 }
 
 .front-page .blog-title {
+  font-size: var(--blog-list-label-font-size);
+  font-style: var(--blog-list-label-font-style);
+  font-weight: var(--blog-list-label-font-weight);
+  line-height: var(--blog-list-label-line-height);
   color: var(--fourth-color);
+  text-decoration: var(--blog-list-label-text-decoration);
+  text-transform: var(--blog-list-label-text-transform);
 }
 .front-page .light-background .blog-title,
 .front-page .light-background .post-date {
   color: var(--primary-color);
 }
 .front-page .light-background .post-title {
+  font-size: var(--blog-list-headings-font-size);
+  font-style: var(--blog-list-headings-font-style);
+  font-weight: var(--blog-list-headings-font-weight);
+  line-height: var(--blog-list-headings-line-height);
+  text-transform: var(--blog-list-headings-text-transform);
   border-bottom-color: var(--primary-color);
+  border-bottom-style: var(--blog-list-headings-border-bottom-style);
 }
-.front-page .light-background .post-title, .front-page .light-background .post-title a {
+.front-page .light-background .post-title,
+.front-page .light-background .post-title a {
   color: var(--primary-color);
+}
+.front-page .light-background .post-date {
+  font-size: var(--blog-list-date-font-size);
+  font-style: var(--blog-list-date-font-style);
+  font-weight: var(--blog-list-date-font-weight);
+  text-decoration: var(--blog-list-date-text-decoration);
+  text-transform: var(--blog-list-date-text-transform);
 }
 .front-page .post-title {
   border-bottom-color: var(--fourth-color);

@@ -33,10 +33,17 @@
   {% include "template-cs-header" %}
   {% include "template-cs-headings" %}
   {% include "template-cs-content" %}
+
+  {% if front_page %}
+    {% include "template-cs-blog-list-front" %}
+  {% endif %}
+
   {% include "template-cs-button" %}
   {% include "template-cs-list" %}
   {% include "template-cs-table" %}
   {% include "template-cs-form" %}
+
+
   {% include "template-cs-footer" %}
 
   {% include "template-cs-style-rules" %}
