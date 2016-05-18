@@ -387,7 +387,7 @@
       "--content-link-hover-color"
     ]
   */
-  --content-link-color: #e4ac00;
+  --content-link-color: {% if site.data.primary.color == nil %}#e4ac00{% else %}{{ site.data.primary.color }}{% endif %};
   /* VoogStyle
     "pathI18n": ["content", "link", "hover"],
     "titleI18n": "color",
@@ -395,5 +395,5 @@
     "editor": "colorPicker",
     "scope": "global"
   */
-  --content-link-hover-color: #e4ac00;
+  --content-link-hover-color: {% if site.data.primary.color == nil %}#e4ac00{% else %}{{ site.data.primary.color }}{% endif %};
 }

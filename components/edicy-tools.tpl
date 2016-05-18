@@ -29,22 +29,6 @@
       }
     });
 
-
-    // Basic color picker.
-    var primaryColor = new Edicy.BgPicker($('.js-bgpicker-site-primary-color-settings'), {
-        picture: false,
-        color: true,
-        showAlpha: true,
-
-      preview: function(data) {
-        site.primaryColorPreview(data, '.js-summary');
-      },
-
-      commit: function(data) {
-        site.primaryColorCommit(data, 'primary');
-      }
-    });
-
     // Custom text styles
     window.edy = window.edy || [];
     edy.push(['texteditorStyles', {name: 'Button', tagname:'a', attribute: {'href': '#'}, classname: 'custom-btn', toggle: true}]);

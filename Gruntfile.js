@@ -147,6 +147,23 @@ module.exports = function(grunt) {
       }
     },
 
+    replace: {
+      custom_styles: {
+        src: ['sources/components/custom-styles/tmp/*.css'],
+        overwrite: true,
+        replacements: [
+          {
+            from: '/*_LIQUID ',
+            to: ''
+          },
+          {
+            from: ' LIQUID_*/',
+            to: ''
+          }
+        ]
+      }
+    },
+
     // Copys the files from the source folders to the layout folders.
     copy: {
       assets: {
@@ -243,7 +260,7 @@ module.exports = function(grunt) {
 
       custom_styles: {
         files: 'sources/components/custom-styles/*.scss',
-        tasks: ['sass:build_custom_styles', 'postcss:custom_styles', 'copy:custom_styles', 'clean:remove', 'exec:kitmanifest']
+        tasks: ['sass:build_custom_styles', 'postcss:custom_styles', 'replace', 'copy:custom_styles', 'clean:remove', 'exec:kitmanifest']
       },
 
       img_copy: {
@@ -284,11 +301,12 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
+  grunt.loadNpmTasks('grunt-text-replace');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-exec');
 
-  grunt.registerTask('default', ['clean:reset', 'modernizr_builder', 'concat', 'copy:assets', 'copy:images', 'copy:javascripts', 'uglify', 'sass', 'postcss:main_styles', 'cssmin', 'imagemin', 'postcss:custom_styles', 'copy:custom_styles', 'clean:remove']);
+  grunt.registerTask('default', ['clean:reset', 'modernizr_builder', 'concat', 'copy:assets', 'copy:images', 'copy:javascripts', 'uglify', 'sass', 'postcss:main_styles', 'cssmin', 'imagemin', 'postcss:custom_styles', 'replace', 'copy:custom_styles', 'clean:remove']);
 
   // grunt.event.on('watch', function(action, filepath, target) {
   //   if (target == 'voog') {

@@ -173,7 +173,8 @@
   display: none;
 
   svg {
-    fill: rgba($secondary-color, .67);
+    fill: rgba($secondary-color, 1);
+    opacity: .67;
   }
 }
 

@@ -38,7 +38,7 @@
       "--content-button-background-color"
     ]
   */
-  --secondary-color: #e4ac00;
+  --secondary-color: {% if site.data.primary.color == nil %}#e4ac00{% else %}{{ site.data.primary.color }}{% endif %};
   /* VoogStyle
     "pathI18n": ["main_styles", "colors"],
     "titleI18n": "third_color",

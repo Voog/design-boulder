@@ -30,9 +30,6 @@
     {% include "template-cs-focus-area-front" %}
   {% endif %}
 
-  {% if content_page %}
-  {% endif %}
-
   {% include "template-cs-header" %}
   {% include "template-cs-headings" %}
   {% include "template-cs-content" %}

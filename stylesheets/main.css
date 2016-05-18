@@ -651,8 +651,8 @@ body.search-open {
   width: 23px;
   height: 4px;
   margin: 4px auto 0;
-  background-color: #E4AC00;
-  background-color: rgba(228, 172, 0, 0.67);
+  background-color: #e4ac00;
+  opacity: .67;
   border-radius: 5px;
 }
 .menu-btn .menu-stripe:first-child {
@@ -736,15 +736,9 @@ body.search-open {
   color: #000000;
   color: rgba(0, 0, 0, 0.73);
 }
-.menu-main .menu-link.active, .menu-main .menu-link.active:hover
-.menu-main .menu-link:hover {
+.menu-main .menu-link.active, .menu-main .menu-link:hover {
   border-bottom: solid 1px #e4ac00;
   box-shadow: inset 0 -3px 0 #E4AC00;
-}
-.menu-main .menu-link:hover {
-  border-bottom: solid 1px #E4AC00;
-  border-bottom: solid 1px rgba(228, 172, 0, 0.8);
-  box-shadow: inset 0 -3px 0 rgba(228, 172, 0, 0.8);
 }
 @media screen and (max-width: 900px) {
   .menu-main {
@@ -1877,7 +1871,8 @@ body.search-open {
 }
 .search-open-btn svg,
 .search-close-btn svg {
-  fill: rgba(228, 172, 0, 0.67);
+  fill: #e4ac00;
+  opacity: .67;
 }
 
 @media screen and (max-width: 640px) {
