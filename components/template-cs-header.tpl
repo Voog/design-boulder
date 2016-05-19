@@ -238,10 +238,7 @@
     "titleI18n": "color",
     "type": "button",
     "editor": "colorPicker",
-    "scope": "global",
-    "boundVariables": [
-      "--menu-main-active-color"
-    ]
+    "scope": "global"
   */
   --menu-main-hover-color: rgba(0, 0, 0, 0.8);
   /* VoogStyle

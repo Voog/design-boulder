@@ -275,10 +275,7 @@
         "titleI18n": "color",
         "type": "button",
         "editor": "colorPicker",
-        "scope": "global",
-        "boundVariables": [
-          "--menu-main-active-color"
-        ]
+        "scope": "global"
       */
       --menu-main-hover-color: rgba($primary-color, .8);
 
