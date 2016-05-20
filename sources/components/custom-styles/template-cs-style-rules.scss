@@ -323,9 +323,14 @@ body {
     .post-title {
       border-bottom-style: var(--blog-list-headings-border-bottom-style);
 
+      // scss-lint:disable NestingDepth
       &:hover {
-        border-bottom-style: none;
+        font-style: var(--blog-list-headings-hover-font-style);
+        font-weight: var(--blog-list-headings-hover-font-weight);
+        text-transform: var(--blog-list-headings-hover-text-transform);
+        border-bottom-style: var(--blog-list-headings-hover-border-bottom-style);
       }
+      // scss-lint:enable NestingDepth
     }
   }
   // scss-lint:enable SingleLinePerSelector

@@ -52,7 +52,7 @@
     @include border(bottom, 1px, solid, $white);
 
     &:hover {
-      border: none;
+      border-bottom-style: none;
     }
 
     &, & a {

@@ -196,7 +196,10 @@ body {
   border-bottom-style: var(--blog-list-headings-border-bottom-style);
 }
 .front-page .light-background .post-title:hover, .front-page .dark-background .post-title:hover {
-  border-bottom-style: none;
+  font-style: var(--blog-list-headings-hover-font-style);
+  font-weight: var(--blog-list-headings-hover-font-weight);
+  text-transform: var(--blog-list-headings-hover-text-transform);
+  border-bottom-style: var(--blog-list-headings-hover-border-bottom-style);
 }
 .front-page .light-background .blog-title,
 .front-page .light-background .post-date {

@@ -1623,7 +1623,7 @@ body.search-open {
   border-bottom: 1px solid white;
 }
 .front-page .post-title:hover {
-  border: none;
+  border-bottom-style: none;
 }
 .front-page .post-title, .front-page .post-title a {
   color: white;
