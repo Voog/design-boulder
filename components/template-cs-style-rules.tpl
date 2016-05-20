@@ -271,14 +271,6 @@ body {
   text-transform: var(--content-button-text-transform);
   background-color: var(--content-button-background-color);
 }
-.content-formatted .form_submit input:hover {
-  font-style: var(--content-button-hover-font-style);
-  font-weight: var(--content-button-hover-font-weight);
-  color: var(--content-button-hover-color);
-  text-decoration: var(--content-button-hover-text-decoration);
-  text-transform: var(--content-button-hover-text-transform);
-  background-color: var(--content-button-hover-background-color);
-}
 
 .footer .content-formatted {
   font-size: var(--footer-body-font-size);

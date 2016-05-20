@@ -200,7 +200,7 @@
       @include inputiosreset;
 
       &:hover {
-        @include bg($secondary-color, 0.8);
+        opacity: .8;
       }
     }
   }

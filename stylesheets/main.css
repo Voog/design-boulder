@@ -2200,8 +2200,7 @@ body.search-open {
   border-radius: 0;
 }
 .content-formatted .form_submit input:hover {
-  background-color: #E4AC00;
-  background-color: rgba(228, 172, 0, 0.8);
+  opacity: .8;
 }
 .content-formatted .form_field_required .form_field_label:after {
   content: ' * \a';
