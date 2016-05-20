@@ -1,4 +1,4 @@
-h{% comment %}IE SETTINGS{% endcomment %}
+{% comment %}IE SETTINGS{% endcomment %}
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 
 {% comment %}META INFO{% endcomment %}
