@@ -1,4 +1,4 @@
-{% comment %}IE SETTINGS{% endcomment %}
+h{% comment %}IE SETTINGS{% endcomment %}
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 
 {% comment %}META INFO{% endcomment %}
@@ -32,7 +32,12 @@
 
   {% include "template-cs-header" %}
   {% include "template-cs-headings" %}
-  {% include "template-cs-content" %}
+
+  {% if front_page %}
+    {% include "template-cs-content-front" %}
+  {% else %}
+    {% include "template-cs-content" %}
+  {% endif %}
 
   {% if front_page %}
     {% include "template-cs-blog-list-front" %}
