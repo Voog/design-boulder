@@ -5,6 +5,9 @@ body {
 .content {
   background-color: var(--content-background-color);
 }
+.content-page .content .wrap {
+  max-width: var(--content-max-width);
+}
 
 .summary {
   background-color: var(--secondary-color);
@@ -240,6 +243,10 @@ body {
 }
 .front-page .post-date {
   color: var(--fourth-color);
+}
+
+.blog-page .post-content {
+  max-width: var(--content-max-width);
 }
 
 .search-open-btn svg,

@@ -1,6 +1,17 @@
 :root {
   /* VoogStyle
     "pathI18n": ["content"],
+    "titleI18n": "maximum_width",
+    "editor": "rangePicker",
+    "min": 300,
+    "max": 1000,
+    "step": 1,
+    "unit": "px",
+    "scope": "global"
+  */
+  --content-max-width: 600px;
+  /* VoogStyle
+    "pathI18n": ["content"],
     "titleI18n": "background_color",
     "editor": "colorPicker",
     "scope": "global"

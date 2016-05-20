@@ -24,6 +24,12 @@ body {
 
 .content {
   background-color: var(--content-background-color);
+
+  .wrap {
+    .content-page & {
+      max-width: var(--content-max-width);
+    }
+  }
 }
 
 .summary {
@@ -391,6 +397,12 @@ body {
 
   .post-date {
     color: var(--fourth-color);
+  }
+}
+
+.blog-page {
+  .post-content {
+    max-width: var(--content-max-width);
   }
 }
 
