@@ -19,7 +19,7 @@
   --menu-sub-font-size: 16px;
   /* VoogStyle
     "pathI18n": ["content", "sub_menu", "normal"],
-    "titleI18n": "font_size",
+    "titleI18n": "font_weight",
     "type": "button",
     "editor": "toggleIcon",
     "states": {
@@ -36,7 +36,7 @@
   --menu-sub-font-weight: 400;
   /* VoogStyle
     "pathI18n": ["content", "sub_menu", "hover"],
-    "titleI18n": "font_size",
+    "titleI18n": "font_weight",
     "type": "button",
     "editor": "toggleIcon",
     "states": {
@@ -52,7 +52,7 @@
   --menu-sub-hover-font-weight: 400;
   /* VoogStyle
     "pathI18n": ["content", "sub_menu", "active"],
-    "titleI18n": "font_size",
+    "titleI18n": "font_weight",
     "type": "button",
     "editor": "toggleIcon",
     "states": {
