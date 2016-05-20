@@ -2260,7 +2260,7 @@ body.search-open {
 
 /* COMMENTS */
 .comments {
-  margin-top: 16px;
+  padding-top: 16px;
   border-top: 1px solid #000000;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
@@ -2358,6 +2358,10 @@ body.search-open {
   display: block;
   width: 600px;
   padding: 10px;
+}
+
+.comments {
+  background-color: var(--content-background-color);
 }
 
 /* FOOTER */
