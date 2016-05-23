@@ -79,10 +79,7 @@
           "off": "400"
         },
         "icon": "bold",
-        "scope": "global",
-        "boundVariables": [
-          "--menu-sub-active-font-weight"
-        ]
+        "scope": "global"
       */
       --menu-sub-hover-font-weight: 400;
 
@@ -130,10 +127,7 @@
           "off": "normal"
         },
         "icon": "italic",
-        "scope": "global",
-        "boundVariables": [
-          "--menu-sub-active-font-style"
-        ]
+        "scope": "global"
       */
       --menu-sub-hover-font-style: normal;
 
@@ -179,10 +173,7 @@
           "off": "none"
         },
         "icon": "underline",
-        "scope": "global",
-        "boundVariables": [
-          "--menu-sub-active-text-decoration"
-        ]
+        "scope": "global"
       */
       --menu-sub-hover-text-decoration: none;
 
@@ -229,10 +220,7 @@
           "off": "none"
         },
         "icon": "uppercase",
-        "scope": "global",
-        "boundVariables": [
-          "--menu-sub-active-text-transform"
-        ]
+        "scope": "global"
       */
       --menu-sub-hover-text-transform: none;
 
@@ -269,10 +257,7 @@
         "titleI18n": "color",
         "type": "button",
         "editor": "colorPicker",
-        "scope": "global",
-        "boundVariables": [
-          "--menu-sub-active-color"
-        ]
+        "scope": "global"
       */
       --menu-sub-hover-color: rgba($primary-color, .73);
 
