@@ -196,13 +196,13 @@ body {
 }
 
 .front-page .light-background .post-title, .front-page .dark-background .post-title {
-  border-bottom-style: var(--blog-list-headings-border-bottom-style);
+  border-bottom-style: var(--blog-list-front-headings-border-bottom-style);
 }
 .front-page .light-background .post-title:hover, .front-page .dark-background .post-title:hover {
-  font-style: var(--blog-list-headings-hover-font-style);
-  font-weight: var(--blog-list-headings-hover-font-weight);
-  text-transform: var(--blog-list-headings-hover-text-transform);
-  border-bottom-style: var(--blog-list-headings-hover-border-bottom-style);
+  font-style: var(--blog-list-front-headings-hover-font-style);
+  font-weight: var(--blog-list-front-headings-hover-font-weight);
+  text-transform: var(--blog-list-front-headings-hover-text-transform);
+  border-bottom-style: var(--blog-list-front-headings-hover-border-bottom-style);
 }
 .front-page .light-background .blog-title,
 .front-page .light-background .post-date {
@@ -218,31 +218,70 @@ body {
   color: var(--fourth-color);
 }
 .front-page .blog-title {
-  font-size: var(--blog-list-label-font-size);
-  font-style: var(--blog-list-label-font-style);
-  font-weight: var(--blog-list-label-font-weight);
-  line-height: var(--blog-list-label-line-height);
+  font-size: var(--blog-list-front-label-font-size);
+  font-style: var(--blog-list-front-label-font-style);
+  font-weight: var(--blog-list-front-label-font-weight);
+  line-height: var(--blog-list-front-label-line-height);
   color: var(--fourth-color);
-  text-decoration: var(--blog-list-label-text-decoration);
-  text-transform: var(--blog-list-label-text-transform);
+  text-decoration: var(--blog-list-front-label-text-decoration);
+  text-transform: var(--blog-list-front-label-text-transform);
 }
 .front-page .post-title {
-  font-size: var(--blog-list-headings-font-size);
-  font-style: var(--blog-list-headings-font-style);
-  font-weight: var(--blog-list-headings-font-weight);
-  line-height: var(--blog-list-headings-line-height);
-  text-transform: var(--blog-list-headings-text-transform);
+  font-size: var(--blog-list-front-headings-font-size);
+  font-style: var(--blog-list-front-headings-font-style);
+  font-weight: var(--blog-list-front-headings-font-weight);
+  line-height: var(--blog-list-front-headings-line-height);
+  text-transform: var(--blog-list-front-headings-text-transform);
   border-bottom-color: var(--primary-color);
 }
 .front-page .post-date {
-  font-size: var(--blog-list-date-font-size);
-  font-style: var(--blog-list-date-font-style);
-  font-weight: var(--blog-list-date-font-weight);
-  text-decoration: var(--blog-list-date-text-decoration);
-  text-transform: var(--blog-list-date-text-transform);
-}
-.front-page .post-date {
+  font-size: var(--blog-list-front-date-font-size);
+  font-style: var(--blog-list-front-date-font-style);
+  font-weight: var(--blog-list-front-date-font-weight);
   color: var(--fourth-color);
+  text-decoration: var(--blog-list-front-date-text-decoration);
+  text-transform: var(--blog-list-front-date-text-transform);
+}
+
+.blog-page .post-header,
+.post-page .post-header {
+  text-align: var(--blog-headings-text-alignment);
+}
+.blog-page .post-title,
+.post-page .post-title {
+  border-bottom: solid 1px var(--blog-headings-underline-color);
+  box-shadow: inset 0 -3px 0 var(--blog-headings-underline-color);
+}
+.blog-page .post-title:hover,
+.post-page .post-title:hover {
+  border-bottom: solid 1px var(--blog-headings-hover-underline-color);
+  box-shadow: inset 0 -3px 0 var(--blog-headings-hover-underline-color);
+}
+.blog-page .post-title, .blog-page .post-title a,
+.post-page .post-title,
+.post-page .post-title a {
+  font-size: var(--blog-headings-font-size);
+  line-height: var(--blog-headings-line-height);
+  font-weight: var(--blog-headings-font-weight);
+  font-style: var(--blog-headings-font-style);
+  color: var(--blog-headings-color);
+  text-transform: var(--blog-headings-text-transform);
+}
+.blog-page .post-title a:hover,
+.post-page .post-title a:hover {
+  font-weight: var(--blog-headings-hover-font-weight);
+  font-style: var(--blog-headings-hover-font-style);
+  color: var(--blog-headings-hover-color);
+  text-transform: var(--blog-headings-hover-text-transform);
+}
+.blog-page .post-date,
+.post-page .post-date {
+  font-size: var(--blog-date-font-size);
+  color: var(--blog-date-color);
+  font-weight: var(--blog-date-font-weight);
+  font-style: var(--blog-date-font-style);
+  text-decoration: var(--blog-date-text-decoration);
+  text-transform: var(--blog-date-text-transform);
 }
 
 .blog-page .post-content {

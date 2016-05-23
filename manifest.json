@@ -36,9 +36,9 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/sidebar.tpl",
-      "layout_name": "sidebar",
-      "title": "sidebar"
+      "file": "components/tags-blog.tpl",
+      "layout_name": "tags-blog",
+      "title": "tags-blog"
     },
     {
       "content_type": "component",
@@ -134,6 +134,13 @@
     {
       "content_type": "component",
       "component": true,
+      "file": "components/sidebar.tpl",
+      "layout_name": "sidebar",
+      "title": "sidebar"
+    },
+    {
+      "content_type": "component",
+      "component": true,
       "file": "components/comment-form.tpl",
       "layout_name": "comment-form",
       "title": "comment-form"
@@ -141,16 +148,16 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/tags-blog.tpl",
-      "layout_name": "tags-blog",
-      "title": "tags-blog"
+      "file": "components/tags-post.tpl",
+      "layout_name": "tags-post",
+      "title": "tags-post"
     },
     {
       "content_type": "component",
       "component": true,
-      "file": "components/tags-post.tpl",
-      "layout_name": "tags-post",
-      "title": "tags-post"
+      "file": "components/template-cs-blog-front.tpl",
+      "layout_name": "template-cs-blog-front",
+      "title": "template-cs-blog-front"
     },
     {
       "content_type": "component",
@@ -169,9 +176,23 @@
     {
       "content_type": "component",
       "component": true,
+      "file": "components/template-cs-blog.tpl",
+      "layout_name": "template-cs-blog",
+      "title": "template-cs-blog"
+    },
+    {
+      "content_type": "component",
+      "component": true,
       "file": "components/template-cs-button.tpl",
       "layout_name": "template-cs-button",
       "title": "template-cs-button"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/template-cs-content-blog.tpl",
+      "layout_name": "template-cs-content-blog",
+      "title": "template-cs-content-blog"
     },
     {
       "content_type": "component",

@@ -35,12 +35,11 @@
 
   {% if front_page %}
     {% include "template-cs-content-front" %}
+    {% include "template-cs-blog-front" %}
+  {% elsif blog_page %}
+    {% include "template-cs-blog" %}
   {% else %}
     {% include "template-cs-content" %}
-  {% endif %}
-
-  {% if front_page %}
-    {% include "template-cs-blog-list-front" %}
   {% endif %}
 
   {% include "template-cs-button" %}
