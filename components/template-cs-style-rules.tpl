@@ -336,6 +336,10 @@ body {
   background-color: var(--content-button-background-color);
 }
 
+.comments {
+  background-color: var(--content-background-color);
+}
+
 .footer .content-formatted {
   font-size: var(--footer-body-font-size);
   font-style: var(--footer-body-font-style);
