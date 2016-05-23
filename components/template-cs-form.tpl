@@ -132,11 +132,4 @@
     "featured": true
   */
   --form-field-color: rgba(0, 0, 0, 0.73);
-  /* VoogStyle
-    "pathI18n": ["form", "text"],
-    "titleI18n": "background_color",
-    "editor": "colorPicker",
-    "scope": "global"
-  */
-  --form-field-background-color: white;
 }
