@@ -303,8 +303,8 @@ body {
   fill: var(--secondary-color);
 }
 
-.content-formatted .edy-fe-label,
-.content-formatted .form_field_label {
+.content-formatted .form_field .edy-fe-label,
+.content-formatted .form_field .form_field_label {
   font-size: var(--form-label-font-size);
   font-style: var(--form-label-font-style);
   font-weight: var(--form-label-font-weight);

@@ -473,14 +473,16 @@ body {
 .content-formatted {
   // scss-lint:disable SelectorFormat
 
-  .edy-fe-label,
-  .form_field_label {
-    font-size: var(--form-label-font-size);
-    font-style: var(--form-label-font-style);
-    font-weight: var(--form-label-font-weight);
-    color: var(--form-label-color);
-    text-decoration: var(--form-label-text-decoration);
-    text-transform: var(--form-label-text-transform);
+  .form_field {
+    .edy-fe-label,
+    .form_field_label {
+      font-size: var(--form-label-font-size);
+      font-style: var(--form-label-font-style);
+      font-weight: var(--form-label-font-weight);
+      color: var(--form-label-color);
+      text-decoration: var(--form-label-text-decoration);
+      text-transform: var(--form-label-text-transform);
+    }
   }
 
   .form_field_textfield,
