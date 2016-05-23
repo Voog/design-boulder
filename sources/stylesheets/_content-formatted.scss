@@ -378,16 +378,28 @@
 
         &:first-child {
           @include border(left, 1px, solid, $primary-color, 0.1);
+
+          .contacts & {
+            border-right-style: none;
+          }
         }
 
         &:last-child {
           @include border(right, 1px, solid, $primary-color, 0.1);
+
+          .contacts & {
+            border-right-style: none;
+          }
         }
       }
 
       &:last-child {
         td {
           @include border(bottom, 1px, solid, $primary-color, 0.1);
+
+          .contacts & {
+            border-bottom-style: none;
+          }
         }
       }
     }

@@ -314,14 +314,14 @@ body {
   // scss-lint:disable SingleLinePerSelector
   .light-background, .dark-background {
     .post-title {
-      border-bottom-style: var(--blog-list-front-headings-border-bottom-style);
+      border-bottom-style: var(--blog-front-headings-border-bottom-style);
 
       // scss-lint:disable NestingDepth
       &:hover {
-        font-style: var(--blog-list-front-headings-hover-font-style);
-        font-weight: var(--blog-list-front-headings-hover-font-weight);
-        text-transform: var(--blog-list-front-headings-hover-text-transform);
-        border-bottom-style: var(--blog-list-front-headings-hover-border-bottom-style);
+        font-style: var(--blog-front-headings-hover-font-style);
+        font-weight: var(--blog-front-headings-hover-font-weight);
+        text-transform: var(--blog-front-headings-hover-text-transform);
+        border-bottom-style: var(--blog-front-headings-hover-border-bottom-style);
       }
       // scss-lint:enable NestingDepth
     }
@@ -356,31 +356,31 @@ body {
   }
 
   .blog-title {
-    font-size: var(--blog-list-front-label-font-size);
-    font-style: var(--blog-list-front-label-font-style);
-    font-weight: var(--blog-list-front-label-font-weight);
-    line-height: var(--blog-list-front-label-line-height);
+    font-size: var(--blog-front-label-font-size);
+    font-style: var(--blog-front-label-font-style);
+    font-weight: var(--blog-front-label-font-weight);
+    line-height: var(--blog-front-label-line-height);
     color: var(--fourth-color);
-    text-decoration: var(--blog-list-front-label-text-decoration);
-    text-transform: var(--blog-list-front-label-text-transform);
+    text-decoration: var(--blog-front-label-text-decoration);
+    text-transform: var(--blog-front-label-text-transform);
   }
 
   .post-title {
-    font-size: var(--blog-list-front-headings-font-size);
-    font-style: var(--blog-list-front-headings-font-style);
-    font-weight: var(--blog-list-front-headings-font-weight);
-    line-height: var(--blog-list-front-headings-line-height);
-    text-transform: var(--blog-list-front-headings-text-transform);
+    font-size: var(--blog-front-headings-font-size);
+    font-style: var(--blog-front-headings-font-style);
+    font-weight: var(--blog-front-headings-font-weight);
+    line-height: var(--blog-front-headings-line-height);
+    text-transform: var(--blog-front-headings-text-transform);
     border-bottom-color: var(--primary-color);
   }
 
   .post-date {
-    font-size: var(--blog-list-front-date-font-size);
-    font-style: var(--blog-list-front-date-font-style);
-    font-weight: var(--blog-list-front-date-font-weight);
+    font-size: var(--blog-front-date-font-size);
+    font-style: var(--blog-front-date-font-style);
+    font-weight: var(--blog-front-date-font-weight);
     color: var(--fourth-color);
-    text-decoration: var(--blog-list-front-date-text-decoration);
-    text-transform: var(--blog-list-front-date-text-transform);
+    text-decoration: var(--blog-front-date-text-decoration);
+    text-transform: var(--blog-front-date-text-transform);
   }
 }
 

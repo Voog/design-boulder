@@ -24,7 +24,8 @@
     }
 
     .post-title {
-      @include border(bottom, 1px, solid, $primary-color, 0.73);
+      border-bottom-style: solid;
+      border-bottom-width: 1px;
 
       &, & a {
         @include color($primary-color, 0.73);
