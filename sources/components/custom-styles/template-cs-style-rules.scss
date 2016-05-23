@@ -55,11 +55,13 @@ body {
     text-transform: var(--focus-area-body-text-transform);
   }
 
+  // scss-lint:disable SingleLinePerSelector
   h1, h2, h3, h4, h5, h6, p, ul, ol, pre, code, table {
     .dark-background & {
       color: var(--fourth-color);
     }
   }
+  // scss-lint:enable SingleLinePerSelector
 
   h1 {
     font-size: var(--headings-title-font-size);
@@ -105,6 +107,7 @@ body {
       text-decoration: var(--content-link-text-decoration);
       text-transform: var(--content-link-text-transform);
 
+      // scss-lint:disable NestingDepth
       &:hover {
         font-style: var(--content-link-hover-font-style);
         font-weight: var(--content-link-hover-font-weight);
@@ -112,6 +115,7 @@ body {
         text-decoration: var(--content-link-hover-text-decoration);
         text-transform: var(--content-link-hover-text-transform);
       }
+      // scss-lint:enable NestingDepth
     }
 
     &.custom-btn {
@@ -139,6 +143,7 @@ body {
 
   table {
     tr {
+      // scss-lint:disable NestingDepth, SelectorDepth
       th,
       td {
         padding: calc(var(--table-padding) - 4px) var(--table-padding);
@@ -153,16 +158,18 @@ body {
           border-right-style: var(--table-border-style);
         }
       }
+      // scss-lint:enable NestingDepth, SelectorDepth
 
+      // scss-lint:disable NestingDepth, SelectorDepth
       &:last-child {
         td {
           border-bottom-style: var(--table-border-style);
         }
       }
+      // scss-lint:enable NestingDepth, SelectorDepth
     }
   }
 }
-
 
 // MENUS
 .menu-btn {
@@ -170,6 +177,7 @@ body {
     background-color: var(--secondary-color);
   }
 }
+
 .menu-main {
   .menu-link {
     font-size: var(--menu-main-font-size);
@@ -205,52 +213,22 @@ body {
 
   }
 
+  // scss-lint:disable DeclarationOrder
   @include query($tablet-2) {
     display: none;
 
     &.expanded {
       .menu-link {
+        // scss-lint:disable NestingDepth
         &.active,
         &.active:hover {
           color: var(--secondary-color);
         }
+        // scss-lint:enable NestingDepth
       }
     }
   }
-
-  // @include query($tablet-2) {
-  //   &.expanded {
-  //     .menu-item {
-  //       @include border(bottom, 1px, solid, $primary-color, 0.1);
-  //     }
-  //
-  //     .menu-link {
-  //       &.active,
-  //       &.active:hover,
-  //       &:hover {
-  //         border: none;
-  //         box-shadow: none;
-  //       }
-  //
-  //       &.active,
-  //       &.active:hover {
-  //         @include color($secondary-color);
-  //       }
-  //
-  //       &:hover {
-  //         @include color($primary-color, 0.3);
-  //         border-bottom: none;
-  //         box-shadow: none;
-  //       }
-  //     }
-  //   }
-  // }
-
-  // @include query($mobile-1) {
-  //   &.expanded {
-  //     @include border(top, 1px, solid, $primary-color, 0.2);
-  //   }
-  // }
+  // scss-lint:enable DeclarationOrder
 }
 
 .menu-sub {
@@ -284,40 +262,36 @@ body {
       text-transform: var(--menu-sub-hover-text-transform);
     }
   }
-  //
-  // @include query($tablet-2) {
-  //   .menu {
-  //     text-align: left;
-  //
-  //     .multilingual & {
-  //       margin-right: 0;
-  //     }
-  //   }
-  // }
 }
 
 .menu-pagination {
   .menu-item {
     &.disabled {
+      // scss-lint:disable NestingDepth
       .menu-link {
         &:hover {
           color: var(--primary-color);
         }
       }
+      // scss-lint:enable NestingDepth
     }
 
     &.active {
+      // scss-lint:disable NestingDepth
       .menu-link {
         color: var(--secondary-color);
       }
+      // scss-lint:enable NestingDepth
     }
 
     .menu-link {
       color: var(--primary-color);
 
+      // scss-lint:disable NestingDepth
       &:hover {
         color: var(--secondary-color);
       }
+      // scss-lint:enable NestingDepth
     }
   }
 }
@@ -426,30 +400,34 @@ body {
       box-shadow: inset 0 -3px 0 var(--blog-headings-hover-underline-color);
     }
 
+    // scss-lint:disable SingleLinePerSelector
     &, a {
       font-size: var(--blog-headings-font-size);
-      line-height: var(--blog-headings-line-height);
-      font-weight: var(--blog-headings-font-weight);
       font-style: var(--blog-headings-font-style);
+      font-weight: var(--blog-headings-font-weight);
+      line-height: var(--blog-headings-line-height);
       color: var(--blog-headings-color);
       text-transform: var(--blog-headings-text-transform);
     }
+    // scss-lint:enable SingleLinePerSelector
 
     a {
+      // scss-lint:disable NestingDepth
       &:hover {
-        font-weight: var(--blog-headings-hover-font-weight);
         font-style: var(--blog-headings-hover-font-style);
+        font-weight: var(--blog-headings-hover-font-weight);
         color: var(--blog-headings-hover-color);
         text-transform: var(--blog-headings-hover-text-transform);
       }
+      // scss-lint:enable NestingDepth
     }
   }
 
   .post-date {
     font-size: var(--blog-date-font-size);
-    color: var(--blog-date-color);
-    font-weight: var(--blog-date-font-weight);
     font-style: var(--blog-date-font-style);
+    font-weight: var(--blog-date-font-weight);
+    color: var(--blog-date-color);
     text-decoration: var(--blog-date-text-decoration);
     text-transform: var(--blog-date-text-transform);
   }
@@ -470,6 +448,7 @@ body {
 }
 
 // FORMS
+// scss-lint:disable MergeableSelector
 .content-formatted {
   // scss-lint:disable SelectorFormat
 
@@ -514,6 +493,7 @@ body {
 
   // scss-lint:enable SelectorFormat
 }
+// scss-lint:enable MergeableSelector
 
 // FOOTER
 .footer {

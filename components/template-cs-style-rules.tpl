@@ -271,25 +271,25 @@ body {
 .post-page .post-title,
 .post-page .post-title a {
   font-size: var(--blog-headings-font-size);
-  line-height: var(--blog-headings-line-height);
-  font-weight: var(--blog-headings-font-weight);
   font-style: var(--blog-headings-font-style);
+  font-weight: var(--blog-headings-font-weight);
+  line-height: var(--blog-headings-line-height);
   color: var(--blog-headings-color);
   text-transform: var(--blog-headings-text-transform);
 }
 .blog-page .post-title a:hover,
 .post-page .post-title a:hover {
-  font-weight: var(--blog-headings-hover-font-weight);
   font-style: var(--blog-headings-hover-font-style);
+  font-weight: var(--blog-headings-hover-font-weight);
   color: var(--blog-headings-hover-color);
   text-transform: var(--blog-headings-hover-text-transform);
 }
 .blog-page .post-date,
 .post-page .post-date {
   font-size: var(--blog-date-font-size);
-  color: var(--blog-date-color);
-  font-weight: var(--blog-date-font-weight);
   font-style: var(--blog-date-font-style);
+  font-weight: var(--blog-date-font-weight);
+  color: var(--blog-date-color);
   text-decoration: var(--blog-date-text-decoration);
   text-transform: var(--blog-date-text-transform);
 }
