@@ -167,6 +167,14 @@
   --blog-headings-hover-text-transform: none;
   /* VoogStyle
     "pathI18n": ["blog", "date"],
+    "titleI18n": "alignment",
+    "editor": "listPicker",
+    "list": {{ base_alignment_set }},
+    "scope": "global"
+  */
+  --blog-date-text-alignment: center;
+  /* VoogStyle
+    "pathI18n": ["blog", "date"],
     "titleI18n": "size",
     "editor": "rangePicker",
     "min": 8,

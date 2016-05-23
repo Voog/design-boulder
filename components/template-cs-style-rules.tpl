@@ -290,6 +290,7 @@ body {
   font-style: var(--blog-date-font-style);
   font-weight: var(--blog-date-font-weight);
   color: var(--blog-date-color);
+  text-align: var(--blog-date-text-alignment);
   text-decoration: var(--blog-date-text-decoration);
   text-transform: var(--blog-date-text-transform);
 }
