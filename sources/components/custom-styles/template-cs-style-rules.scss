@@ -144,7 +144,20 @@ body {
         padding: calc(var(--table-padding) - 4px) var(--table-padding);
         font-size: var(--table-font-size);
         border-top-style: var(--table-border-style);
-        border-bottom-style: var(--table-border-style);
+
+        &:first-child {
+          border-left-style: var(--table-border-style);
+        }
+
+        &:last-child {
+          border-right-style: var(--table-border-style);
+        }
+      }
+
+      &:last-child {
+        td {
+          border-bottom-style: var(--table-border-style);
+        }
       }
     }
   }

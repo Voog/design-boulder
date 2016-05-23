@@ -322,9 +322,6 @@
 
   // Container around editable content-area table.
   .table-container {
-    @include border(left, 1px, solid, $primary-color, 0.1);
-    @include border(right, 1px, solid, $primary-color, 0.1);
-
     .content & {
       margin-bottom: 35px;
     }
@@ -378,7 +375,20 @@
 
       td {
         @include border(top, 1px, solid, $primary-color, 0.1);
-        @include border(bottom, 1px, solid, $primary-color, 0.1);
+
+        &:first-child {
+          @include border(left, 1px, solid, $primary-color, 0.1);
+        }
+
+        &:last-child {
+          @include border(right, 1px, solid, $primary-color, 0.1);
+        }
+      }
+
+      &:last-child {
+        td {
+          @include border(bottom, 1px, solid, $primary-color, 0.1);
+        }
       }
     }
 

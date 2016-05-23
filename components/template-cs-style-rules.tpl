@@ -104,6 +104,16 @@ body {
   padding: calc(var(--table-padding) - 4px) var(--table-padding);
   font-size: var(--table-font-size);
   border-top-style: var(--table-border-style);
+}
+.content-formatted table tr th:first-child,
+.content-formatted table tr td:first-child {
+  border-left-style: var(--table-border-style);
+}
+.content-formatted table tr th:last-child,
+.content-formatted table tr td:last-child {
+  border-right-style: var(--table-border-style);
+}
+.content-formatted table tr:last-child td {
   border-bottom-style: var(--table-border-style);
 }
 
