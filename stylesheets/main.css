@@ -1036,7 +1036,7 @@ body.search-open {
 }
 
 .lang-flag:after {
-  background-position: -189px -60px;
+  background-position: 0 -75px;
 }
 
 .lang-flag-sq:after {
@@ -1203,16 +1203,20 @@ body.search-open {
   background-position: -21px -60px;
 }
 
-.lang-flag-en-gb:after {
-  background-position: -63px -60px;
-}
-
 .lang-flag-pt:after {
   background-position: -84px -60px;
 }
 
 .lang-flag-sr:after {
-  background-position: -126px;
+  background-position: -126px -60px;
+}
+
+.lang-flag-bn:after {
+  background-position: -147px -60px;
+}
+
+.lang-flag-th:after {
+  background-position: -189px -60px;
 }
 
 .lang-options {
