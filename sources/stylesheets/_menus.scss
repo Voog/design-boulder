@@ -277,11 +277,11 @@
     display: block;
     width: 21px;
     height: 15px;
-    content: '';
   }
 
   &:before {
     @include bg($primary-color);
+    content: '';
   }
 
   &:after {
@@ -440,7 +440,15 @@
 
 .lang-flag {
   &:after {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    font-size: 9px;
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
     background-position: 0 -75px;
+    content: attr(data-lang-code);
+    box-sizing: border-box;
   }
 }
 
@@ -503,7 +511,10 @@ $flags:
 ;
 
 @each $flag, $pos in $flags {
-  .lang-flag-#{$flag}:after { background-position: $pos; }
+  .lang-flag-#{$flag}:after {
+    background-position: $pos;
+    content: '';
+  }
 }
 
 .lang-options {
