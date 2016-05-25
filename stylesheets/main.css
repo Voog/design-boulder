@@ -55,7 +55,6 @@ body.search-open {
 .menu-sub .menu-item, .header-title, .post-title, .post-title a, .comments .comment-messages {
   word-break: break-word;
   -webkit-hyphens: auto;
-  -moz-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
 }
@@ -238,7 +237,6 @@ body.search-open {
   word-break: break-word;
   word-wrap: break-word;
   -webkit-hyphens: auto;
-  -moz-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
 }
@@ -439,7 +437,6 @@ body.search-open {
   word-break: normal;
   word-wrap: normal;
   -webkit-hyphens: none;
-  -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
 }
@@ -723,7 +720,6 @@ body.search-open {
   word-break: break-word;
   word-wrap: break-word;
   -webkit-hyphens: auto;
-  -moz-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
 }
