@@ -14,7 +14,7 @@
 
       <main class="content" role="main">
         <div class="wrap{% if editmode or with_sumbenu == true %} with-submenu{% endif %}">
-          <section class="content-body content-formatted">{% content %}</section>
+          <section class="content-body content-formatted" {{ edy_intro_edit_text }}>{% content %}</section>
         </div>
       </main>
 

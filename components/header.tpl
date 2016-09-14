@@ -46,7 +46,7 @@
 
         {% if editmode or site.has_many_languages? %}
           <nav class="menu-lang js-menu-lang js-prevent-sideclick {% if flags_state %}flags-enabled{% else %}flags-disabled{% endif %}">
-            <button class="menu-lang-btn js-menu-lang-btn lang-flag lang-flag-{{ page.language_code }}" data-lang-code="{{ page.language_code }}">
+            <button class="menu-lang-btn js-menu-lang-btn lang-flag lang-flag-{{ page.language_code }}" data-lang-code="{{ page.language_code }}" {{ edy_intro_add_lang }}>
               {% if editmode or flags_state == false %}
                 <span class="lang-title">
                   {% for language in site.languages %}{% if language.selected? %}{{ language.title }}{% endif %}{% endfor %}
@@ -70,7 +70,7 @@
 
       <div class="header-bottom-inner">
         <div class="wrap">
-          <div class="header-body content-formatted">{% content name="header" %}</div>
+          <div class="header-body content-formatted" {{ edy_intro_edit_text }}>{% content name="header" %}</div>
         </div>
       </div>
     </div>
