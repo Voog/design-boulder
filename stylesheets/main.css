@@ -249,7 +249,8 @@ body.search-open {
 .quotation .content-formatted {
   width: 100%;
   -webkit-align-self: center;
-          align-self: center;
+  -ms-grid-row-align: center;
+      align-self: center;
   -ms-flex-item-align: center;
 }
 .contacts .content-formatted {
