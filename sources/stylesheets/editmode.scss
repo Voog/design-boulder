@@ -15,11 +15,6 @@
 
 // Draggable placeholder for content area blocks.
 .edy-empty-bordered {
-  .dark-background & {
-    @include color($white, 0.5);
-    @include border(all, 1px, dashed, $white, 0.5);
-  }
-
   .header-body & {
     padding: 100px 40px;
   }
@@ -44,22 +39,8 @@
   }
 }
 
-%editor-border {
-  .dark-background & {
-    @include border(all, 1px, solid, $white, 0.5);
-  }
-
-  .light-background & {
-    @include border(all, 1px, solid, $primary-color, 0.3);
-  }
-}
-
 // Text editor
 .content-formatted {
-  .edy-content-element-hover {
-    @extend %editor-border;
-  }
-
   &.header-body {
     .edy-texteditor-view {
       min-height: 51px;
