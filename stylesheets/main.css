@@ -505,6 +505,10 @@ body.search-open {
   font-size: 24px;
   line-height: 1.3;
 }
+.content-formatted .custom-btn::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
 .content-formatted .custom-btn:hover {
   opacity: .8;
 }
@@ -2518,4 +2522,25 @@ body.search-open {
   .footer-inner .footer-right {
     margin-top: 5px;
   }
+}
+
+.public .edy-ecommerce-shopping-cart-button {
+  background-color: #e4ac00;
+  top: 94px;
+  right: 20px;
+  display: inline-block;
+  padding: 10px;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 1;
+  color: white;
+  text-decoration: none;
+  border: 0;
+}
+.public .edy-ecommerce-shopping-cart-button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+.public .edy-ecommerce-shopping-cart-button:hover {
+  opacity: .8;
 }
