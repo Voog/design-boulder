@@ -117,17 +117,17 @@ body {
       }
       // scss-lint:enable NestingDepth
     }
+  }
 
-    &.custom-btn {
-      padding: calc(var(--content-button-padding) - 10px) var(--content-button-padding);
-      font-size: var(--content-button-font-size);
-      font-style: var(--content-button-font-style);
-      font-weight: var(--content-button-font-weight);
-      color: var(--content-button-color);
-      text-decoration: var(--content-button-text-decoration);
-      text-transform: var(--content-button-text-transform);
-      background-color: var(--content-button-background-color);
-    }
+  .custom-btn {
+    padding: calc(var(--content-button-padding) - 10px) var(--content-button-padding);
+    font-size: var(--content-button-font-size);
+    font-style: var(--content-button-font-style);
+    font-weight: var(--content-button-font-weight);
+    color: var(--content-button-color);
+    text-decoration: var(--content-button-text-decoration);
+    text-transform: var(--content-button-text-transform);
+    background-color: var(--content-button-background-color);
   }
 
   ul,
@@ -515,4 +515,18 @@ body {
 
 .footer-inner {
   background-color: var(--footer-body-background-color);
+}
+
+//==============================================================================
+// ECOMMERCE
+//==============================================================================
+.public {
+  .edy-ecommerce-shopping-cart-button {
+    font-style: var(--content-button-font-style);
+    font-weight: var(--content-button-font-weight);
+    color: var(--content-button-color);
+    text-decoration: var(--content-button-text-decoration);
+    text-transform: var(--content-button-text-transform);
+    background-color: var(--content-button-background-color);
+  }
 }

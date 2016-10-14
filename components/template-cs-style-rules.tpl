@@ -79,7 +79,7 @@ body {
   text-decoration: var(--content-link-hover-text-decoration);
   text-transform: var(--content-link-hover-text-transform);
 }
-.content-formatted a.custom-btn {
+.content-formatted .custom-btn {
   padding: calc(var(--content-button-padding) - 10px) var(--content-button-padding);
   font-size: var(--content-button-font-size);
   font-style: var(--content-button-font-style);
@@ -351,4 +351,13 @@ body {
 
 .footer-inner {
   background-color: var(--footer-body-background-color);
+}
+
+.public .edy-ecommerce-shopping-cart-button {
+  font-style: var(--content-button-font-style);
+  font-weight: var(--content-button-font-weight);
+  color: var(--content-button-color);
+  text-decoration: var(--content-button-text-decoration);
+  text-transform: var(--content-button-text-transform);
+  background-color: var(--content-button-background-color);
 }
