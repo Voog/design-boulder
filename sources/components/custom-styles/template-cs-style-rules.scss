@@ -440,6 +440,14 @@ body {
   }
 }
 
+.post-nav {
+  max-width: var(--content-max-width);
+}
+
+.post-nav-direction {
+  color: var(--content-link-color);
+}
+
 // SEARCH
 .search-open-btn,
 .search-close-btn {

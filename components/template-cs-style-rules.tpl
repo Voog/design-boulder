@@ -299,6 +299,14 @@ body {
   max-width: var(--content-max-width);
 }
 
+.post-nav {
+  max-width: var(--content-max-width);
+}
+
+.post-nav-direction {
+  color: var(--content-link-color);
+}
+
 .search-open-btn svg,
 .search-close-btn svg {
   fill: var(--secondary-color);
