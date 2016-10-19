@@ -759,7 +759,7 @@ body.search-open {
   }
   .menu-main.expanded {
     position: absolute;
-    z-index: 50;
+    z-index: 500001;
     top: 60px;
     right: 10px;
     display: block;
