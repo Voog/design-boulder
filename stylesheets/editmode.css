@@ -5,12 +5,6 @@
   margin-top: 0;
 }
 
-.dark-background .edy-empty-bordered {
-  color: #FFFFFF;
-  color: rgba(255, 255, 255, 0.5);
-  border: 1px dashed #FFFFFF;
-  border: 1px dashed rgba(255, 255, 255, 0.5);
-}
 .header-body .edy-empty-bordered {
   padding: 100px 40px;
 }
@@ -27,15 +21,6 @@
 .dark-background .placeholder {
   color: #FFFFFF;
   color: rgba(255, 255, 255, 0.5);
-}
-
-.dark-background .content-formatted .edy-content-element-hover, .content-formatted .dark-background .edy-content-element-hover {
-  border: 1px solid #FFFFFF;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-}
-.light-background .content-formatted .edy-content-element-hover, .content-formatted .light-background .edy-content-element-hover {
-  border: 1px solid #000000;
-  border: 1px solid rgba(0, 0, 0, 0.3);
 }
 
 .content-formatted.header-body .edy-texteditor-view {

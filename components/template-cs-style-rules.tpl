@@ -307,6 +307,10 @@ body {
   color: var(--content-link-color);
 }
 
+.tags-editor {
+  color: var(--content-body-color);
+}
+
 .search-open-btn svg,
 .search-close-btn svg {
   fill: var(--secondary-color);
