@@ -27,6 +27,10 @@
     width: 30px;
     height: 30px;
 
+    .edy-checkout-button-visible.search-open & {
+      top: 25px + 41px; // 41 is the height of the checkout button.
+    }
+
     &.open,
     &:hover {
       .menu-stripe {

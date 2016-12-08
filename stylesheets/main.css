@@ -678,6 +678,9 @@ body.search-open {
     width: 30px;
     height: 30px;
   }
+  .edy-checkout-button-visible.search-open .menu-btn {
+    top: 66px;
+  }
   .menu-btn.open .menu-stripe, .menu-btn:hover .menu-stripe {
     opacity: 0.47;
   }
@@ -1905,6 +1908,9 @@ body.search-open {
     left: 0;
     right: 0;
   }
+  .edy-checkout-button-visible .search-form {
+    top: 101px;
+  }
   .search-form, .search-form.active {
     max-width: 100%;
     margin: 0 auto;
@@ -1936,6 +1942,9 @@ body.search-open {
     position: absolute;
     top: 25px;
     right: 50px;
+  }
+  .edy-checkout-button-visible.search-open .search-btn {
+    top: 66px;
   }
 }
 .search-btn svg {
@@ -2057,6 +2066,9 @@ body.search-open {
   }
   .editmode .voog-search-modal {
     bottom: 40px;
+  }
+  .edy-checkout-button-visible .voog-search-modal {
+    top: 141px;
   }
 }
 
