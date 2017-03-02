@@ -15,6 +15,7 @@
       <div class="post-excerpt content-formatted" {{ edy_intro_edit_text }}>{% if post-box == "article" %}{% editable article.excerpt %}{% else %}{{ article.excerpt }}{% endif %}</div>
       {% if post-box == "article" %}
         <div class="post-body content-formatted">{% editable article.body %}</div>
+        <div class="post-body content-formatted">{% content name="additional_body" bind="Article" %}</div>
       {% endif %}
     </div>
   {% if post-box == "article" %}</div>{% endif %}
