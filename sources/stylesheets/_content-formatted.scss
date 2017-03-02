@@ -6,6 +6,10 @@
   @extend %clearfix;
   @include hyphenate(true);
 
+  &:empty {
+    display: none;
+  }
+
   .dark-background & {
     @include color($white);
   }
@@ -53,17 +57,21 @@
   p,
   ul,
   ol,
+  dl,
+  table,
   pre,
   code,
-  .edy-positionable-container-center,
-  .edy-positionable-container-left-block,
-  .edy-positionable-container-right-block,
-  .edy-texteditor-container-wrapper-center,
-  .edy-texteditor-container-wrapper-left-block,
-  .edy-texteditor-container-wrapper-right-block,
-  .embed-container,
+  iframe,
+  table,
+  form,
   .table-container,
-  .editmode & table {
+  .edy-positionable-container-left-block,
+  .edy-positionable-container-center-block,
+  .edy-positionable-container-right-block,
+  .edy-texteditor-container-wrapper-left-block,
+  .edy-texteditor-container-wrapper-center,
+  .edy-texteditor-container-wrapper-right-block,
+  .edy-positionable-container-maxwidth {
     &:first-child {
       margin-top: 0;
     }
