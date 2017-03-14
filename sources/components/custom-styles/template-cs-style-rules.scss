@@ -438,6 +438,15 @@ body {
   .post-content {
     max-width: var(--content-max-width);
   }
+
+  .post-read-more-btn {
+    font-style: var(--content-button-font-style);
+    font-weight: var(--content-button-font-weight);
+    color: var(--content-button-color);
+    text-decoration: var(--content-button-text-decoration);
+    text-transform: var(--content-button-text-transform);
+    background-color: var(--content-button-background-color);
+  }
 }
 
 .post-nav {

@@ -1791,6 +1791,25 @@ body.search-open {
   border-bottom: 1px solid #000000;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
+.blog-page .post-content .post-excerpt {
+  margin-bottom: 32px;
+}
+.blog-page .post-readmore {
+  text-align: center;
+}
+.blog-page .post-read-more-btn {
+  display: inline-block;
+  padding: 14px 24px;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 1;
+  color: white;
+  text-decoration: none;
+  background-color: #e4ac00;
+}
+.blog-page .post-read-more-btn:hover {
+  opacity: .8;
+}
 
 .editmode .post-page .post-title {
   display: inline-block;

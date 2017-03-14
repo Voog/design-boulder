@@ -13,6 +13,11 @@
 
     <div class="post-content">
       <div class="post-excerpt content-formatted" {{ edy_intro_edit_text }}>{% if post-box == "article" %}{% editable article.excerpt %}{% else %}{{ article.excerpt }}{% endif %}</div>
+
+      {% if list_item %}
+        <div class="post-readmore"><a class="post-read-more-btn" href="{{ article.url }}">{{ "read_more" | lc }}</a></div>
+      {% endif %}
+
       {% if post-box == "article" %}
         <div class="post-body content-formatted">{% editable article.body %}</div>
         <div class="post-body content-formatted">{% content name="additional_body" bind="Article" %}</div>
