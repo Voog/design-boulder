@@ -49,6 +49,7 @@
 
       <div class="post-content">
         <div class="post-excerpt content-formatted">[[excerpt]]</div>
+        <div class="post-readmore"><a class="post-read-more-btn" href="[[url]]">{{ "read_more" | lc }}</a></div>
       </div>
     </article>
   </script>
