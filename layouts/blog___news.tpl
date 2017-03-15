@@ -23,7 +23,7 @@
 
           <section class="blog-articles js-blog-articles">
             {% for article in articles limit: 3 %}
-              {% include "post-box" %}
+              {% include "post-box" list_item: true %}
             {% endfor %}
           </section>
         </div>
@@ -49,6 +49,7 @@
 
       <div class="post-content">
         <div class="post-excerpt content-formatted">[[excerpt]]</div>
+        <div class="post-readmore"><a class="post-read-more-btn" href="[[url]]">{{ "read_more" | lc }}</a></div>
       </div>
     </article>
   </script>
