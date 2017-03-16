@@ -117,16 +117,24 @@ body {
       }
       // scss-lint:enable NestingDepth
     }
+  }
 
+  a,
+  div {
     &.custom-btn {
       padding: calc(var(--content-button-padding) - 10px) var(--content-button-padding);
       font-size: var(--content-button-font-size);
       font-style: var(--content-button-font-style);
       font-weight: var(--content-button-font-weight);
-      color: var(--content-button-color);
       text-decoration: var(--content-button-text-decoration);
       text-transform: var(--content-button-text-transform);
-      background-color: var(--content-button-background-color);
+
+      // scss-lint:disable NestingDepth
+      &:not(.custom-btn-disabled) {
+        color: var(--content-button-color);
+        background-color: var(--content-button-background-color);
+      }
+      // scss-lint:enable NestingDepth
     }
   }
 

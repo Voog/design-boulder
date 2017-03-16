@@ -11,14 +11,6 @@
     }
   }
 
-  .form_field {
-    margin-top: 20px;
-
-    &:first-child {
-      margin-top: 0;
-    }
-  }
-
   .form_field,
   .edy-fe-label {
     font-size: 16px;
@@ -34,6 +26,17 @@
   }
 
   .form_field {
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+
     label {
       position: relative;
       display: inline;

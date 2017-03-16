@@ -79,14 +79,18 @@ body {
   text-decoration: var(--content-link-hover-text-decoration);
   text-transform: var(--content-link-hover-text-transform);
 }
-.content-formatted a.custom-btn {
+.content-formatted a.custom-btn,
+.content-formatted div.custom-btn {
   padding: calc(var(--content-button-padding) - 10px) var(--content-button-padding);
   font-size: var(--content-button-font-size);
   font-style: var(--content-button-font-style);
   font-weight: var(--content-button-font-weight);
-  color: var(--content-button-color);
   text-decoration: var(--content-button-text-decoration);
   text-transform: var(--content-button-text-transform);
+}
+.content-formatted a.custom-btn:not(.custom-btn-disabled),
+.content-formatted div.custom-btn:not(.custom-btn-disabled) {
+  color: var(--content-button-color);
   background-color: var(--content-button-background-color);
 }
 .content-formatted ul,

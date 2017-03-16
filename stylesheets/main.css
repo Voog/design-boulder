@@ -518,8 +518,12 @@ body.search-open {
   font-size: 24px;
   line-height: 1.3;
 }
-.content-formatted .custom-btn:hover {
+.content-formatted .custom-btn:not(.custom-btn-disabled):hover {
   opacity: .8;
+}
+.public .content-formatted .custom-btn-disabled {
+  cursor: default;
+  background-color: #ccc;
 }
 .content-formatted .contacts::first-line {
   color: red !important;
@@ -2218,12 +2222,6 @@ body.search-open {
   margin-left: 0;
   margin-right: 0;
 }
-.content-formatted .form_field {
-  margin-top: 20px;
-}
-.content-formatted .form_field:first-child {
-  margin-top: 0;
-}
 .content-formatted .form_field,
 .content-formatted .edy-fe-label {
   font-size: 16px;
@@ -2237,6 +2235,16 @@ body.search-open {
 .header-bottom .content-formatted .form_field, .header-bottom
 .content-formatted .edy-fe-label {
   font-style: normal;
+}
+.content-formatted .form_field {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.content-formatted .form_field:first-child {
+  padding-top: 0;
+}
+.content-formatted .form_field:last-child {
+  padding-bottom: 0;
 }
 .content-formatted .form_field label {
   position: relative;
