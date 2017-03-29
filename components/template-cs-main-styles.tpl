@@ -7,7 +7,7 @@
     "featured": true,
     "scope": "global"
   */
-  --main-font-family: "Arvo", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  --main-font-family: "Arvo", serif;
   /* VoogStyle
     "pathI18n": ["main_styles", "colors"],
     "titleI18n": "primary_color",
