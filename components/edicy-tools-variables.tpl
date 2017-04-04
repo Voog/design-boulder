@@ -119,12 +119,42 @@
     [
       {
         "type": "group",
-        "title": "Sans Serif",
+        "title": "Serif",
         "list": [
           {
             "title": "Arvo",
             "value": "\"Arvo\", \"Helvetica Neue\", \"Helvetica\", \"Arial\", sans-serif"
           },
+          {
+            "title": "Crimson Text",
+            "value": "\"Crimson Text\", serif"
+          },
+          {
+            "title": "Lora",
+            "value": "\"Lora\", serif"
+          },
+          {
+            "title": "Noto Serif",
+            "value": "\"Noto Serif\", serif"
+          },
+          {
+            "title": "Playfair Display",
+            "value": "\"Playfair Display\", serif"
+          },
+          {
+            "title": "PT Serif",
+            "value": "\"PT Serif\", serif"
+          },
+          {
+            "title": "Roboto Slab",
+            "value": "\"Roboto Slab\", serif"
+          }
+        ]
+      },
+      {
+        "type": "group",
+        "title": "Sans Serif",
+        "list": [
           {
             "title": "Avenir Next",
             "value": "\"Avenir Next\", \"Helvetica Neue\", \"Helvetica\", \"Segoe UI\", sans-serif"
@@ -156,40 +186,6 @@
           {
             "title": "Ubuntu",
             "value": "\"Ubuntu\", sans-serif"
-          }
-        ]
-      },
-      {
-        "type": "group",
-        "title": "Serif",
-        "list": [
-          {
-            "title": "Arvo",
-            "value": "\"Arvo\", serif"
-          },
-          {
-            "title": "Crimson Text",
-            "value": "\"Crimson Text\", serif"
-          },
-          {
-            "title": "Lora",
-            "value": "\"Lora\", serif"
-          },
-          {
-            "title": "Noto Serif",
-            "value": "\"Noto Serif\", serif"
-          },
-          {
-            "title": "Playfair Display",
-            "value": "\"Playfair Display\", serif"
-          },
-          {
-            "title": "PT Serif",
-            "value": "\"PT Serif\", serif"
-          },
-          {
-            "title": "Roboto Slab",
-            "value": "\"Roboto Slab\", serif"
           }
         ]
       },
