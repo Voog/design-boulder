@@ -100,7 +100,13 @@
     }
   }
 
+  .form_field_textfield,
+  .form_field_textarea {
+    padding: 5px;
+  }
+
   .form_field_select {
+    padding: 5px 25px 5px 5px;
     text-indent: 0.01px;
     text-overflow: '';
     background-position: top 16px right 10px;
