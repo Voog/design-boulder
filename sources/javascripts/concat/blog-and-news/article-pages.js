@@ -3,7 +3,15 @@
     template: "#article-template",
     perPage: 3,
     dateFormat: function(date) {
-      return moment(date.getFullYear() + "-" + (date.getMonth()+1) + "-" + date.getDate(), 'YYYY-MM-DD').locale(langCode).format('LL');
+      var currentYear = new Date().getFullYear()
+          articleYear = date.getFullYear(),
+          articleDateFormat = moment.localeData().longDateFormat('LL');
+
+      if (currentYear === articleYear) {
+        articleDateFormat = articleDateFormat.replace(/Y/g,'').replace(/^\W|\W$|\W\W/, '');
+      }
+
+      return moment(articleYear + "-" + (date.getMonth()+1) + "-" + date.getDate(), 'YYYY-MM-DD').locale(langCode).format(articleDateFormat);
     },
     dateAttrFormat: function(date) {
       return date.getFullYear() + "-" + (date.getMonth()+1) + "-" + date.getDate();
