@@ -26,7 +26,8 @@ body {
   font-style: var(--focus-area-body-font-style);
   font-weight: var(--focus-area-body-font-weight);
   line-height: var(--focus-area-body-line-height);
-  text-decoration: var(--focus-area-body-text-decoration);
+  -webkit-text-decoration: var(--focus-area-body-text-decoration);
+          text-decoration: var(--focus-area-body-text-decoration);
   text-transform: var(--focus-area-body-text-transform);
 }
 .dark-background .content-formatted h1, .dark-background .content-formatted h2, .dark-background .content-formatted h3, .dark-background .content-formatted h4, .dark-background .content-formatted h5, .dark-background .content-formatted h6, .dark-background .content-formatted p, .dark-background .content-formatted ul, .dark-background .content-formatted ol, .dark-background .content-formatted pre, .dark-background .content-formatted code, .dark-background .content-formatted table {
@@ -39,7 +40,8 @@ body {
   line-height: var(--headings-title-line-height);
   color: var(--headings-title-color);
   text-align: var(--headings-title-text-alignment);
-  text-decoration: var(--headings-title-text-decoration);
+  -webkit-text-decoration: var(--headings-title-text-decoration);
+          text-decoration: var(--headings-title-text-decoration);
   text-transform: var(--headings-title-text-transform);
 }
 .content-formatted h2 {
@@ -49,7 +51,8 @@ body {
   line-height: var(--headings-heading-line-height);
   color: var(--headings-heading-color);
   text-align: var(--headings-heading-text-alignment);
-  text-decoration: var(--headings-heading-text-decoration);
+  -webkit-text-decoration: var(--headings-heading-text-decoration);
+          text-decoration: var(--headings-heading-text-decoration);
   text-transform: var(--headings-heading-text-transform);
 }
 .content-formatted h3,
@@ -62,21 +65,24 @@ body {
   line-height: var(--headings-subheading-line-height);
   color: var(--headings-subheading-color);
   text-align: var(--headings-subheading-text-alignment);
-  text-decoration: var(--headings-subheading-text-decoration);
+  -webkit-text-decoration: var(--headings-subheading-text-decoration);
+          text-decoration: var(--headings-subheading-text-decoration);
   text-transform: var(--headings-subheading-text-transform);
 }
 .content-formatted a:not(.custom-btn) {
   font-style: var(--content-link-font-style);
   font-weight: var(--content-link-font-weight);
   color: var(--content-link-color);
-  text-decoration: var(--content-link-text-decoration);
+  -webkit-text-decoration: var(--content-link-text-decoration);
+          text-decoration: var(--content-link-text-decoration);
   text-transform: var(--content-link-text-transform);
 }
 .content-formatted a:not(.custom-btn):hover {
   font-style: var(--content-link-hover-font-style);
   font-weight: var(--content-link-hover-font-weight);
   color: var(--content-link-hover-color);
-  text-decoration: var(--content-link-hover-text-decoration);
+  -webkit-text-decoration: var(--content-link-hover-text-decoration);
+          text-decoration: var(--content-link-hover-text-decoration);
   text-transform: var(--content-link-hover-text-transform);
 }
 .content-formatted a.custom-btn,
@@ -85,7 +91,8 @@ body {
   font-size: var(--content-button-font-size);
   font-style: var(--content-button-font-style);
   font-weight: var(--content-button-font-weight);
-  text-decoration: var(--content-button-text-decoration);
+  -webkit-text-decoration: var(--content-button-text-decoration);
+          text-decoration: var(--content-button-text-decoration);
   text-transform: var(--content-button-text-transform);
 }
 .content-formatted a.custom-btn:not(.custom-btn-disabled),
@@ -100,7 +107,8 @@ body {
   font-style: var(--list-font-style);
   font-weight: var(--list-font-weight);
   color: var(--list-color);
-  text-decoration: var(--list-text-decoration);
+  -webkit-text-decoration: var(--list-text-decoration);
+          text-decoration: var(--list-text-decoration);
   text-transform: var(--list-text-transform);
 }
 .content-formatted table tr th,
@@ -134,7 +142,8 @@ body {
 }
 .menu-main .menu-link.active, .menu-main .menu-link:hover {
   border-bottom-color: var(--secondary-color);
-  box-shadow: inset 0 -3px 0 var(--secondary-color);
+  -webkit-box-shadow: inset 0 -3px 0 var(--secondary-color);
+          box-shadow: inset 0 -3px 0 var(--secondary-color);
 }
 .menu-main .menu-link:hover {
   font-style: var(--menu-main-hover-font-style);
@@ -168,21 +177,24 @@ body {
   font-style: var(--menu-sub-font-style);
   font-weight: var(--menu-sub-font-weight);
   color: var(--menu-sub-color);
-  text-decoration: var(--menu-sub-text-decoration);
+  -webkit-text-decoration: var(--menu-sub-text-decoration);
+          text-decoration: var(--menu-sub-text-decoration);
   text-transform: var(--menu-sub-text-transform);
 }
 .menu-sub .menu-link.active {
   font-style: var(--menu-sub-active-font-style);
   font-weight: var(--menu-sub-active-font-weight);
   color: var(--menu-sub-active-color);
-  text-decoration: var(--menu-sub-active-text-decoration);
+  -webkit-text-decoration: var(--menu-sub-active-text-decoration);
+          text-decoration: var(--menu-sub-active-text-decoration);
   text-transform: var(--menu-sub-active-text-transform);
 }
 .menu-sub .menu-link:not(.active):hover {
   font-style: var(--menu-sub-hover-font-style);
   font-weight: var(--menu-sub-hover-font-weight);
   color: var(--menu-sub-hover-color);
-  text-decoration: var(--menu-sub-hover-text-decoration);
+  -webkit-text-decoration: var(--menu-sub-hover-text-decoration);
+          text-decoration: var(--menu-sub-hover-text-decoration);
   text-transform: var(--menu-sub-hover-text-transform);
 }
 
@@ -205,7 +217,8 @@ body {
   font-style: var(--header-body-font-style);
   font-weight: var(--header-body-font-weight);
   color: var(--header-body-color);
-  text-decoration: var(--header-body-text-decoration);
+  -webkit-text-decoration: var(--header-body-text-decoration);
+          text-decoration: var(--header-body-text-decoration);
   text-transform: var(--header-body-text-transform);
 }
 
@@ -237,7 +250,8 @@ body {
   font-weight: var(--blog-front-label-font-weight);
   line-height: var(--blog-front-label-line-height);
   color: var(--fourth-color);
-  text-decoration: var(--blog-front-label-text-decoration);
+  -webkit-text-decoration: var(--blog-front-label-text-decoration);
+          text-decoration: var(--blog-front-label-text-decoration);
   text-transform: var(--blog-front-label-text-transform);
 }
 .front-page .post-title {
@@ -253,7 +267,8 @@ body {
   font-style: var(--blog-front-date-font-style);
   font-weight: var(--blog-front-date-font-weight);
   color: var(--fourth-color);
-  text-decoration: var(--blog-front-date-text-decoration);
+  -webkit-text-decoration: var(--blog-front-date-text-decoration);
+          text-decoration: var(--blog-front-date-text-decoration);
   text-transform: var(--blog-front-date-text-transform);
 }
 
@@ -264,12 +279,14 @@ body {
 .blog-page .post-title,
 .post-page .post-title {
   border-bottom: solid 1px var(--blog-headings-underline-color);
-  box-shadow: inset 0 -3px 0 var(--blog-headings-underline-color);
+  -webkit-box-shadow: inset 0 -3px 0 var(--blog-headings-underline-color);
+          box-shadow: inset 0 -3px 0 var(--blog-headings-underline-color);
 }
 .blog-page .post-title:hover,
 .post-page .post-title:hover {
   border-bottom: solid 1px var(--blog-headings-hover-underline-color);
-  box-shadow: inset 0 -3px 0 var(--blog-headings-hover-underline-color);
+  -webkit-box-shadow: inset 0 -3px 0 var(--blog-headings-hover-underline-color);
+          box-shadow: inset 0 -3px 0 var(--blog-headings-hover-underline-color);
 }
 .blog-page .post-title, .blog-page .post-title a,
 .post-page .post-title,
@@ -295,7 +312,8 @@ body {
   font-weight: var(--blog-date-font-weight);
   color: var(--blog-date-color);
   text-align: var(--blog-date-text-alignment);
-  text-decoration: var(--blog-date-text-decoration);
+  -webkit-text-decoration: var(--blog-date-text-decoration);
+          text-decoration: var(--blog-date-text-decoration);
   text-transform: var(--blog-date-text-transform);
 }
 
@@ -306,7 +324,8 @@ body {
   font-style: var(--content-button-font-style);
   font-weight: var(--content-button-font-weight);
   color: var(--content-button-color);
-  text-decoration: var(--content-button-text-decoration);
+  -webkit-text-decoration: var(--content-button-text-decoration);
+          text-decoration: var(--content-button-text-decoration);
   text-transform: var(--content-button-text-transform);
   background-color: var(--content-button-background-color);
 }
@@ -334,7 +353,8 @@ body {
   font-style: var(--form-label-font-style);
   font-weight: var(--form-label-font-weight);
   color: var(--form-label-color);
-  text-decoration: var(--form-label-text-decoration);
+  -webkit-text-decoration: var(--form-label-text-decoration);
+          text-decoration: var(--form-label-text-decoration);
   text-transform: var(--form-label-text-transform);
 }
 .content-formatted .form_field_textfield,
@@ -346,7 +366,8 @@ body {
   font-style: var(--form-field-font-style);
   font-weight: var(--form-field-font-weight);
   color: var(--form-field-color);
-  text-decoration: var(--form-field-text-decoration);
+  -webkit-text-decoration: var(--form-field-text-decoration);
+          text-decoration: var(--form-field-text-decoration);
   text-transform: var(--form-field-text-transform);
 }
 .content-formatted .form_submit input {
@@ -355,7 +376,8 @@ body {
   font-style: var(--content-button-font-style);
   font-weight: var(--content-button-font-weight);
   color: var(--content-button-color);
-  text-decoration: var(--content-button-text-decoration);
+  -webkit-text-decoration: var(--content-button-text-decoration);
+          text-decoration: var(--content-button-text-decoration);
   text-transform: var(--content-button-text-transform);
   background-color: var(--content-button-background-color);
 }
@@ -369,7 +391,8 @@ body {
   font-style: var(--footer-body-font-style);
   font-weight: var(--footer-body-font-weight);
   color: var(--footer-body-color);
-  text-decoration: var(--footer-body-text-decoration);
+  -webkit-text-decoration: var(--footer-body-text-decoration);
+          text-decoration: var(--footer-body-text-decoration);
   text-transform: var(--footer-body-text-transform);
 }
 
