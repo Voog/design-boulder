@@ -21,7 +21,7 @@
 
   .quotation & {
     width: 100%;
-    @include align-self(center);
+    align-self: center;
   }
 
   .contacts & {

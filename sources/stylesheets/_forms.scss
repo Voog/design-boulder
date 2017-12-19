@@ -222,7 +222,7 @@
   .form_field_with_errors {
     .form_field_textfield,
     .form_field_textarea {
-      @include placeholder {
+      &::placeholder {
         @include color($red);
       }
 
