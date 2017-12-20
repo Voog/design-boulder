@@ -116,7 +116,7 @@ body {
 
   &:not(.hidden) {
     .loader-cube {
-      @include transition(opacity 0.5s ease-in 1.5s);
+      transition: opacity 0.5s ease-in 1.5s;
     }
   }
 
@@ -136,7 +136,7 @@ body {
   margin-top: -52px;
   margin-left: -26px;
   @include bg($primary-color, 0.5);
-  @include animation(cubemove 1.8s infinite ease-in-out);
+  animation: cubemove 1.8s infinite ease-in-out;
 
   .hidden & {
     opacity: 0;
@@ -144,32 +144,24 @@ body {
 }
 
 .loader-cube-2 {
-  @include animation-delay(-0.9s);
+  animation-delay: -0.9s;
 }
 
-@include keyframes(cubemove) {
+@keyframes cubemove {
   25% {
-    @include transform(
-      translateX(42px) rotate(-90deg) scale(0.5)
-      );
+    transform: translateX(42px) rotate(-90deg) scale(0.5);
   }
 
   50% {
-    @include transform(
-      translateX(42px) translateY(42px) rotate(-180deg)
-      );
+    transform: translateX(42px) translateY(42px) rotate(-180deg);
   }
 
   75% {
-    @include transform(
-      translateX(0px) translateY(42px) rotate(-270deg) scale(0.5)
-      );
+    transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
   }
 
   100% {
-    @include transform(
-      rotate(-360deg)
-      );
+    transform: rotate(-360deg);
   }
 }
 

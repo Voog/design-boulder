@@ -32,7 +32,7 @@
     .flexbox & {
       display: flex;
       flex-wrap: wrap;
-      @include justify-content(flex-end);
+      justify-content: flex-end;
     }
   }
 }

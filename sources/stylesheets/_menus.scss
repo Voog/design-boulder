@@ -365,11 +365,11 @@
 
     &.active,
     &.active:hover {
-      @include filter(grayscale(100%));
+      filter: grayscale(100%);
     }
 
     &:hover {
-      @include filter(grayscale(50%));
+      filter: grayscale(50%);
     }
   }
 
