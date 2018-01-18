@@ -19,8 +19,9 @@
       {% include "tags-blog" %}
 
       <main class="content" role="main">
-        <div style="padding-bottom: 20px" class="wrap content-formatted" data-search-indexing-allowed="true" {{ edy_intro_edit_text }}>{% content %}</div>
         <div class="wrap{% if editmode or with_submenu == true %} with-submenu{% endif %}">
+          <section class="content-body content-formatted post-intro-content" data-search-indexing-allowed="true" {{ edy_intro_edit_text }}>{% content %}</section>
+          
           {% if editmode %}<div class="post-add-btn">{% addbutton %}</div>{% endif %}
 
           <section class="blog-articles js-blog-articles">
