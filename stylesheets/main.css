@@ -2499,6 +2499,10 @@ body.search-open {
   }
 }
 
+.content-formatted .comment_form_textfield_wrap {
+  padding-top: 0;
+}
+
 .comment_form_textfield_wrap {
   float: left;
   max-width: 290px;

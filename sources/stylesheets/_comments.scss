@@ -78,6 +78,12 @@
   }
 }
 
+.comment_form_textfield_wrap{
+  .content-formatted & {
+    padding-top: 0;
+  }
+}
+
 .comment_form_textfield_wrap {
   float: left;
   max-width: 290px;
