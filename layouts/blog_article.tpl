@@ -70,6 +70,7 @@
     </div>
   </div>
 
+  {% include "site-signout" %}
   {% include "javascripts" %}
   {% include "edicy-tools" %}
   <script>site.initArticlePage();</script>
