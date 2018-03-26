@@ -69,18 +69,17 @@
 .comment_form_textarea_wrap {
   .content-formatted & {
     margin-top: 0;
+    padding-top: 0;
+
+    &:last-child{
+      padding-top: 20px;
+    }
   }
 
   @include query($tablet-5) {
     .content-formatted & {
       padding-top: 20px;
     }
-  }
-}
-
-.comment_form_textfield_wrap{
-  .content-formatted & {
-    padding-top: 0;
   }
 }
 
