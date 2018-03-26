@@ -29,8 +29,6 @@ module.exports = function(grunt) {
     concat: {
       build_global: {
         src: [
-          'bower_components/jquery/dist/jquery.js',
-          'bower_components/overthrow/src/overthrow-polyfill.js',
           'sources/javascripts/concat/global/*.js'
         ],
         dest: 'javascripts/global-application.js'
