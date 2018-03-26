@@ -9,4 +9,4 @@
 {% endif %}
 
 
-{% unless editmode %}{{ site.analytics }}{% endunless %} 
+{% unless editmode %}{{ site.analytics }}{% endunless %}

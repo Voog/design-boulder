@@ -792,7 +792,7 @@ MMCQ = (function() {
       });
     }
   };
-  
+
   var bindCustomTexteditorStyles = function(buttonTranslation) {
     window.edy = window.edy || [];
     edy.push(['texteditorStyles', {name: buttonTranslation, tagname:'a', attribute: {'href': '#'}, classname: 'custom-btn', toggle: true}]);
@@ -852,7 +852,7 @@ MMCQ = (function() {
         // String for feedback if no results are found.
         noResults: noResultsString
       });
-    }  
+    }
   };
 
   // Enables the usage of the initiations outside this file
