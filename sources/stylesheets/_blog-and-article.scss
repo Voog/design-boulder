@@ -1,4 +1,8 @@
 /* BLOG & BLOG ARTICLE */
+.post-intro-content {
+  padding-bottom: 35px;
+} 
+
 .post-title {
   &, & a {
     @extend %hyphenate;
