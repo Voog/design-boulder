@@ -1650,6 +1650,10 @@ body.search-open {
 }
 
 /* BLOG & BLOG ARTICLE */
+.post-intro-content {
+  padding-bottom: 35px;
+}
+
 .front-page .blog-title {
   margin: 0;
   font-weight: 400;
@@ -2492,6 +2496,11 @@ body.search-open {
 .content-formatted .comment_form_textfield_wrap,
 .content-formatted .comment_form_textarea_wrap {
   margin-top: 0;
+  padding-top: 0;
+}
+.content-formatted .comment_form_textfield_wrap:last-child,
+.content-formatted .comment_form_textarea_wrap:last-child {
+  padding-top: 20px;
 }
 @media screen and (max-width: 660px) {
   .content-formatted .comment_form_textfield_wrap, .content-formatted .comment_form_textarea_wrap {
