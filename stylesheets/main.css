@@ -2633,6 +2633,9 @@ body.search-open {
     margin-top: 5px;
   }
 }
+.footer-inner .signout-btn-margin {
+  margin-bottom: 25px;
+}
 
 .signout-btn-wrap {
   position: fixed;
@@ -2676,8 +2679,4 @@ body.search-open {
 }
 .signout-btn-wrap .signout-svg {
   margin-top: 3px;
-}
-
-.signout-btn-pad {
-  padding-top: 23px;
 }
