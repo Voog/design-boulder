@@ -22,6 +22,7 @@
     </div>
   </div>
 
+  {% include "site-signout" %}
   {% include "javascripts" %}
   {% include "edicy-tools" %}
   <script type="text/javascript">site.initCommonPage();</script>
