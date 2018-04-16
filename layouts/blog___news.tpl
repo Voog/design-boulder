@@ -20,6 +20,8 @@
 
       <main class="content" role="main">
         <div class="wrap{% if editmode or with_submenu == true %} with-submenu{% endif %}">
+          <section class="content-body content-formatted post-intro-content" data-search-indexing-allowed="true" {{ edy_intro_edit_text }}>{% content %}</section>
+          
           {% if editmode %}<div class="post-add-btn">{% addbutton %}</div>{% endif %}
 
           <section class="blog-articles js-blog-articles">
@@ -34,6 +36,7 @@
     </div>
   </div>
 
+  {% include "site-signout" %}
   {% include "javascripts" %}
   {% include "edicy-tools" %}
   <script>var langCode ='{% if page.language_code == 'zh'%}zh-cn{% else %}{{ page.language_code }}{% endif %}';</script>

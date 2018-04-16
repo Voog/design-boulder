@@ -74,6 +74,7 @@
       </div>
     </div>
 
+    {% include "site-signout" %}
     {% include "javascripts" %}
     {% include "edicy-tools" %}
     <script>site.initFrontPage();</script>
