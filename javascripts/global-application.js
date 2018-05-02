@@ -792,7 +792,7 @@ MMCQ = (function() {
       });
     }
   };
-  
+
   var bindCustomTexteditorStyles = function(buttonTranslation) {
     window.edy = window.edy || [];
     edy.push(['texteditorStyles', {name: buttonTranslation, tagname:'a', attribute: {'href': '#'}, classname: 'custom-btn', toggle: true}]);
@@ -831,6 +831,30 @@ MMCQ = (function() {
     focusFormWithErrors();
   };
 
+  // ===========================================================================
+  // Binds site search functionality.
+  // ===========================================================================
+  var bindSiteSearch = function(searchForm, languageCode, noResultsString) {
+    if (searchForm) {
+      var search = new VoogSearch(searchForm, {
+        // This defines the number of results per query.
+        per_page: 10,
+        // Language code for restricting the search to page language.
+        lang: languageCode,
+        // If given, an DOM element results are rendered inside that element
+        resultsContainer: $('.js-voog-search-modal-inner').get(0),
+        // Defines if modal should close on sideclick.
+        sideclick: true,
+        // Mobile checkpoint.
+        mobileModeWidth: 640,
+        // Updates results on every keypress.
+        updateOnKeypress: true,
+        // String for feedback if no results are found.
+        noResults: noResultsString
+      });
+    }
+  };
+
   // Enables the usage of the initiations outside this file
   window.site = $.extend(window.site || {}, {
     initBlogPage: initBlogPage,
@@ -840,7 +864,8 @@ MMCQ = (function() {
     toggleFlags: toggleFlags,
     headerBgPreview: headerBgPreview,
     headerBgCommit: headerBgCommit,
-    bindCustomTexteditorStyles: bindCustomTexteditorStyles
+    bindCustomTexteditorStyles: bindCustomTexteditorStyles,
+    bindSiteSearch: bindSiteSearch
   });
 
   init();
