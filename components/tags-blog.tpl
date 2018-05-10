@@ -4,7 +4,7 @@
     <div class="wrap">
       <ul class="menu">
         <li class="menu-item">
-          <a class="menu-link js-tags-all" href="/{{ page.path }}">{{ 'all_posts' | lc }}</a>
+          <a class="menu-link js-tags-all" href="/{{ blog.page.path_with_lang }}">{{ 'all_posts' | lc }}</a>
         </li>
         {% for tag in blog.tags %}
           {% assign activestr = " " %}
@@ -14,7 +14,7 @@
             {% endif %}
           {% endfor %}
           <li class="menu-item">
-            <a class="menu-link{{ activestr }}" href="/{{ page.path }}/tagged/{{ tag.path }}">{{ tag.name }}</a>
+            <a class="menu-link{{ activestr }}" href="/{{ blog.page.path_with_lang }}/tagged/{{ tag.path }}">{{ tag.name }}</a>
           </li>
         {% endfor %}
       </ul>
