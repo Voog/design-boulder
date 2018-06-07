@@ -10,7 +10,7 @@
   <div class="container-wrap">
     <div class="container">
       {% include "header" %}
-      {% include "menu-level-2" %}
+      {% include "menu-level-2" exclude_products: true %}
 
       <main class="content" role="main">
         <div class="wrap{% if editmode or with_sumbenu == true %} with-submenu{% endif %}">
