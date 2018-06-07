@@ -1658,9 +1658,6 @@ body.search-open {
   }
 }
 
-.map {
-  overflow-x: hidden;
-}
 .map .embed-container {
   min-height: 270px;
 }
