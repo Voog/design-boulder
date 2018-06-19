@@ -1130,8 +1130,8 @@ MMCQ = (function() {
     headerBgCommit: headerBgCommit,
     bindCustomTexteditorStyles: bindCustomTexteditorStyles,
     bindRootItemSettings: bindRootItemSettings,
-      bindContentItemImgDropAreas: bindContentItemImgDropAreas,
-      bindContentItemImageCropToggle: bindContentItemImageCropToggle,
+    bindContentItemImgDropAreas: bindContentItemImgDropAreas,
+    bindContentItemImageCropToggle: bindContentItemImageCropToggle,
     bindSiteSearch: bindSiteSearch
   });
 
