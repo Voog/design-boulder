@@ -17,6 +17,7 @@
 
 {% comment %}STYLESHEETS{% endcomment %}
 {% if editmode %}{% stylesheet_link "editmode.min.css" %}{% endif %}
+{% if editmode %}<link rel="stylesheet" href="{{ site.static_asset_host }}/libs/edicy-tools/latest/edicy-tools.css">{% endif %}
 {% stylesheet_link "main.min.css" %}
 <!--[if lt IE 9]>{% stylesheet_link "ie8.min.css" %}<![endif]-->
 
