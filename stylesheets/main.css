@@ -732,6 +732,9 @@ body.search-open {
 .menu-main .menu-item:first-child {
   margin-left: 0;
 }
+.menu-main .menu-item.is-hidden {
+  display: none;
+}
 .menu-main .edit-btn {
   position: relative;
   top: -1px;

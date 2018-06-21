@@ -82,6 +82,10 @@
     &:first-child {
       margin-left: 0;
     }
+
+    &.is-hidden {
+      display: none;
+    }
   }
 
   .edit-btn {
