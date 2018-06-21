@@ -505,6 +505,12 @@
       "file": "stylesheets/ie8.min.css",
       "kind": "stylesheets",
       "filename": "ie8.min.css"
+    },
+    {
+      "content_type": "image/svg+xml",
+      "kind": "assets",
+      "file": "assets/loader.svg",
+      "filename": "loader.svg"
     }
   ]
 }
