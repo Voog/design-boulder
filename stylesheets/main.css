@@ -3017,6 +3017,7 @@ body.search-open {
 .menu-horizontal.menu-breadcrumbs .menu-item a {
   color: #000;
   opacity: .43;
+  text-decoration: none;
 }
 .menu-horizontal.menu-breadcrumbs .menu-item a:hover {
   color: #000;
@@ -3025,6 +3026,7 @@ body.search-open {
 .menu-horizontal.menu-breadcrumbs .current.menu-item a {
   color: #000;
   opacity: 1;
+  text-decoration: none;
 }
 .menu-horizontal .menu-item {
   display: inline-block;
