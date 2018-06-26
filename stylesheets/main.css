@@ -2708,6 +2708,8 @@ body.search-open {
 .item-list-page .content-item-box {
   padding-top: 15px;
   padding-bottom: 15px;
+  text-align: center;
+  text-decoration: none !important;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -2934,6 +2936,8 @@ body.search-open {
 }
 
 .item-title {
+  font-style: inherit !important;
+  display: inline-block;
   -webkit-hyphens: auto;
       -ms-hyphens: auto;
           hyphens: auto;
@@ -2944,10 +2948,16 @@ body.search-open {
 }
 .item-title .item-link {
   color: inherit !important;
-  font-weight: 700 !important;
+  font-weight: inherit !important;
+  font-style: inherit !important;
+  text-decoration: inherit !important;
 }
 .item-title .item-link:hover {
   opacity: .7;
+  color: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: inherit;
 }
 .content-item-box > .item-title {
   margin-top: 15px;

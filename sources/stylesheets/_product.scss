@@ -4,6 +4,8 @@
   .item-list-page & {
     padding-top: 15px;
     padding-bottom: 15px;
+    text-align: center;
+    text-decoration: none !important;
     box-sizing: border-box;
 
     @media screen and (max-width: $nano) {
@@ -250,17 +252,25 @@
   }
 }
 
-.item-title {
-  @include hyphenate;
-  margin-top: 0;
-  margin-bottom: 0;
+  .item-title {
+    font-style: inherit !important;
+    display: inline-block;
+    @include hyphenate;
+    margin-top: 0;
+    margin-bottom: 0;
 
   .item-link {
     color: inherit !important;
-    font-weight: 700 !important;
+    font-weight: inherit !important;
+    font-style: inherit !important;
+    text-decoration: inherit !important;
 
     &:hover {
       opacity: .7;
+      color: inherit;
+      font-weight: inherit;
+      font-style: inherit;
+      text-decoration: inherit;
     }
   }
 

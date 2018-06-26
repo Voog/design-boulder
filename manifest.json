@@ -358,6 +358,12 @@
     },
     {
       "content_type": "image/svg+xml",
+      "file": "assets/loader.svg",
+      "kind": "assets",
+      "filename": "loader.svg"
+    },
+    {
+      "content_type": "image/svg+xml",
       "file": "assets/ico-flags.svg",
       "kind": "assets",
       "filename": "ico-flags.svg"
@@ -505,12 +511,6 @@
       "file": "stylesheets/ie8.min.css",
       "kind": "stylesheets",
       "filename": "ie8.min.css"
-    },
-    {
-      "content_type": "image/svg+xml",
-      "kind": "assets",
-      "file": "assets/loader.svg",
-      "filename": "loader.svg"
     }
   ]
 }

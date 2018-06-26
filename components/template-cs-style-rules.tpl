@@ -399,3 +399,8 @@ body {
 .footer-inner {
   background-color: var(--footer-body-background-color);
 }
+
+.item-title:hover {
+  -webkit-box-shadow: inset 0 -3px 0 var(--headings-subheading-color);
+          box-shadow: inset 0 -3px 0 var(--headings-subheading-color);
+}
