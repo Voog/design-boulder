@@ -404,3 +404,11 @@ body {
   -webkit-box-shadow: inset 0 -3px 0 var(--headings-subheading-color);
           box-shadow: inset 0 -3px 0 var(--headings-subheading-color);
 }
+
+.menu-horizontal.menu-breadcrumbs .menu-item a,
+.menu-horizontal.menu-breadcrumbs .menu-item a:hover {
+  color: var(--headings-subheading-color);
+}
+.menu-horizontal.menu-breadcrumbs .current.menu-item a {
+  color: var(--headings-subheading-color);
+}
