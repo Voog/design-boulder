@@ -419,3 +419,7 @@ body {
 .item-top .top-inner .item-placeholder {
   color: var(--headings-subheading-color);
 }
+
+.content-formatted .edy-buy-button-variants .form_field_select {
+  border: 1px solid var(--content-body-color);
+}
