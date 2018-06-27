@@ -405,6 +405,9 @@ body {
           box-shadow: inset 0 -3px 0 var(--headings-subheading-color);
 }
 
+.menu-horizontal .menu-separator {
+  color: var(--headings-subheading-color);
+}
 .menu-horizontal.menu-breadcrumbs .menu-item a,
 .menu-horizontal.menu-breadcrumbs .menu-item a:hover {
   color: var(--headings-subheading-color);

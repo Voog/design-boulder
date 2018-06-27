@@ -3002,7 +3002,6 @@ body.search-open {
 .menu-horizontal .menu-separator {
   opacity: .36;
   font-size: 12px;
-  color: rgba(0, 0, 0, 0.8);
 }
 .menu-horizontal .menu-separator:first-child {
   display: none;

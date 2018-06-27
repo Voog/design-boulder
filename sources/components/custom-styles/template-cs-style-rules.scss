@@ -555,6 +555,11 @@ body {
 
 // BREADCRUMBS MENU
 .menu-horizontal {
+
+  .menu-separator {
+    color: var(--headings-subheading-color);
+  }
+
   &.menu-breadcrumbs {
     .menu-item {
       a,
