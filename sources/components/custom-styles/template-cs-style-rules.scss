@@ -577,3 +577,12 @@ body {
     }
   }
 }
+
+// PRODUCT LIST, PRODUCT TITLE PLACEHOLDER COLOR 
+.item-top {
+  .top-inner {
+    .item-placeholder {
+      color: var(--headings-subheading-color);
+    }
+  }
+}

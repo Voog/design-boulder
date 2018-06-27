@@ -415,3 +415,7 @@ body {
 .menu-horizontal.menu-breadcrumbs .current.menu-item a {
   color: var(--headings-subheading-color);
 }
+
+.item-top .top-inner .item-placeholder {
+  color: var(--headings-subheading-color);
+}
