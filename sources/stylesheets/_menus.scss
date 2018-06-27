@@ -200,7 +200,7 @@
 
   .menu-item {
     @extend %hyphenate;
-    margin-right: 12px;
+    margin-left: 12px;
     line-height: 1.3;
 
     &:last-child {
