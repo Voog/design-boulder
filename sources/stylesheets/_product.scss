@@ -252,12 +252,12 @@
   }
 }
 
-  .item-title {
-    font-style: inherit !important;
-    display: inline-block;
-    @include hyphenate;
-    margin-top: 0;
-    margin-bottom: 0;
+.item-title {
+  font-style: italic;
+  display: inline-block;
+  @include hyphenate;
+  margin-top: 0;
+  margin-bottom: 0;
 
   .item-link {
     color: inherit !important;
