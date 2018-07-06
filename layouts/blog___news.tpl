@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 {% include "blog-article-variables" %}
+{% include "template-variables" %}
+
 <html class="{% if editmode %}editmode{% else %}public{% endif %}" lang="{{ page.language_code }}">
 <head prefix="og: http://ogp.me/ns#">
   {% include "edicy-tools-variables" %}
@@ -21,7 +23,7 @@
       <main class="content" role="main">
         <div class="wrap{% if editmode or with_submenu == true %} with-submenu{% endif %}">
           <section class="content-body content-formatted post-intro-content" data-search-indexing-allowed="true" {{ edy_intro_edit_text }}>{% content %}</section>
-          
+
           {% if editmode %}<div class="post-add-btn">{% addbutton %}</div>{% endif %}
 
           <section class="blog-articles js-blog-articles">
