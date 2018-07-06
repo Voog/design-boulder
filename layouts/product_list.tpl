@@ -20,6 +20,8 @@
 
       <main class="content content-body content-formatted" role="main">
         <div class="wrap{% if editmode or with_sumbenu == true %} with-submenu{% endif %}">
+          <div class="content-formatted intro-content" data-search-indexing-allowed="true">{% content %}</div>
+
           {% include "menu-breadcrumbs" %}
           <section class="content-item-boxes">
             {% if site.root_item.selected? %}
