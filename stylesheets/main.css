@@ -2331,6 +2331,9 @@ body.search-open {
 .svg .content-formatted .form_field_select {
   background-image: url("../images/ico-arrow-down.png");
 }
+.content-formatted select::-ms-expand {
+  display: none;
+}
 .content-formatted .form_field_checkbox,
 .content-formatted .form_field_radio {
   visibility: hidden;
