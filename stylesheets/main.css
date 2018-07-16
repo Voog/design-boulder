@@ -733,7 +733,7 @@ body.search-open {
   margin-left: 0;
 }
 .menu-main .menu-item.is-hidden {
-  display: none;
+  display: none !important;
 }
 .menu-main .edit-btn {
   position: relative;
