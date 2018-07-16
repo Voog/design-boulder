@@ -22,11 +22,15 @@
       a {
         opacity: .43;
         text-decoration: none;
-      }
+        text-transform: none;
+        font-weight: normal;
 
-      a:hover {
+        &:hover {
         color: #000;
         opacity: 1;
+        text-transform: none;
+        font-weight: normal;
+        }
       }
     }
 

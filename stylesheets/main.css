@@ -2954,6 +2954,7 @@ body.search-open {
   font-weight: inherit !important;
   font-style: inherit !important;
   text-decoration: inherit !important;
+  text-transform: none !important;
 }
 .item-title .item-link:hover {
   opacity: .7;
@@ -3019,10 +3020,14 @@ body.search-open {
 .menu-horizontal.menu-breadcrumbs .menu-item a {
   opacity: .43;
   text-decoration: none;
+  text-transform: none;
+  font-weight: normal;
 }
 .menu-horizontal.menu-breadcrumbs .menu-item a:hover {
   color: #000;
   opacity: 1;
+  text-transform: none;
+  font-weight: normal;
 }
 .menu-horizontal.menu-breadcrumbs .current.menu-item a {
   color: #000;
