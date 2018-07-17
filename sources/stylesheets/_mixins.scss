@@ -2,21 +2,15 @@
 // Comment out the "_mixins.scss" partial in the "main.scss" file if not used.
 
 // HYPHENATE
-@mixin hyphenate($boolean) {
+@mixin hyphenate($boolean: true) {
   @if $boolean == true {
+    hyphens: auto;
     word-break: break-word;
     word-wrap: break-word;
-    -webkit-hyphens: auto;
-    -moz-hyphens: auto;
-    -ms-hyphens: auto;
-    hyphens: auto;
   } @else {
+    hyphens: none;
     word-break: normal;
     word-wrap: normal;
-    -webkit-hyphens: none;
-    -moz-hyphens: none;
-    -ms-hyphens: none;
-    hyphens: none;
   }
 }
 
@@ -92,6 +86,26 @@
   opacity: $value;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$IEValue+")";
   filter: alpha(opacity=$IEValue);
+}
+
+// ASPECT RATIO
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+
+  &::before {
+    display: block;
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+    content: '';
+  }
+
+  > .aspect-ratio-inner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
 }
 
 // MEDIA QUERY

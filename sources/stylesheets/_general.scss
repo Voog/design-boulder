@@ -165,11 +165,6 @@ body {
   }
 }
 
-.vg-bg-picker-btn {
-  @extend %button;
-  position: absolute;
-}
-
 .background-image,
 .background-color {
   position: absolute;

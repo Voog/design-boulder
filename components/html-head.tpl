@@ -16,8 +16,9 @@
 {% if site.data.touch_icon %}<link rel="apple-touch-icon" href="{{ site.data.touch_icon }}">{% endif %}
 
 {% comment %}STYLESHEETS{% endcomment %}
-{% stylesheet_link "main.min.css" %}
 {% if editmode %}{% stylesheet_link "editmode.min.css" %}{% endif %}
+{% if editmode %}<link rel="stylesheet" href="{{ site.static_asset_host }}/libs/edicy-tools/latest/edicy-tools.css">{% endif %}
+{% stylesheet_link "main.min.css" %}
 <!--[if lt IE 9]>{% stylesheet_link "ie8.min.css" %}<![endif]-->
 
 {% comment %}Google fonts for Design Editor{% endcomment %}

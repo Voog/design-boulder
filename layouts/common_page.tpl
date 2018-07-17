@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+{% include "template-variables" %}
+
 <html class="{% if editmode %}editmode{% else %}public{% endif %}" lang="{{ page.language_code }}">
 <head prefix="og: http://ogp.me/ns#">
   {% include "edicy-tools-variables" %}
@@ -10,7 +12,7 @@
   <div class="container-wrap">
     <div class="container">
       {% include "header" %}
-      {% include "menu-level-2" %}
+      {% include "menu-level-2" exclude_products: true %}
 
       <main class="content" role="main">
         <div class="wrap{% if editmode or with_sumbenu == true %} with-submenu{% endif %}">

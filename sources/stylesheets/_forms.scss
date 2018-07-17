@@ -122,6 +122,10 @@
     }
   }
 
+select::-ms-expand {
+  display: none;
+}
+
   .form_field_checkbox,
   .form_field_radio {
     visibility: hidden;
