@@ -301,32 +301,21 @@ body.search-open {
 .content-formatted .edy-positionable-container-maxwidth:last-child {
   margin-bottom: 0;
 }
-.dark-background .content-formatted h1, .dark-background
-.content-formatted h2, .dark-background
-.content-formatted h3, .dark-background
-.content-formatted h4, .dark-background
-.content-formatted h5, .dark-background
-.content-formatted h6, .dark-background
-.content-formatted p, .dark-background
-.content-formatted ul, .dark-background
-.content-formatted ol, .dark-background
-.content-formatted pre, .dark-background
-.content-formatted code, .dark-background
-.content-formatted table {
+.dark-background .content-formatted h1,
+.dark-background .content-formatted h2,
+.dark-background .content-formatted h3,
+.dark-background .content-formatted h4,
+.dark-background .content-formatted h5,
+.dark-background .content-formatted h6,
+.dark-background .content-formatted p,
+.dark-background .content-formatted ul,
+.dark-background .content-formatted ol,
+.dark-background .content-formatted pre,
+.dark-background .content-formatted code,
+.dark-background .content-formatted table {
   color: white;
 }
-.footer-inner.dark-background .content-formatted h1, .footer-inner.dark-background
-.content-formatted h2, .footer-inner.dark-background
-.content-formatted h3, .footer-inner.dark-background
-.content-formatted h4, .footer-inner.dark-background
-.content-formatted h5, .footer-inner.dark-background
-.content-formatted h6, .footer-inner.dark-background
-.content-formatted p, .footer-inner.dark-background
-.content-formatted ul, .footer-inner.dark-background
-.content-formatted ol, .footer-inner.dark-background
-.content-formatted pre, .footer-inner.dark-background
-.content-formatted code, .footer-inner.dark-background
-.content-formatted table {
+.footer-inner.dark-background .content-formatted h1, .footer-inner.dark-background .content-formatted h2, .footer-inner.dark-background .content-formatted h3, .footer-inner.dark-background .content-formatted h4, .footer-inner.dark-background .content-formatted h5, .footer-inner.dark-background .content-formatted h6, .footer-inner.dark-background .content-formatted p, .footer-inner.dark-background .content-formatted ul, .footer-inner.dark-background .content-formatted ol, .footer-inner.dark-background .content-formatted pre, .footer-inner.dark-background .content-formatted code, .footer-inner.dark-background .content-formatted table {
   color: #FFFFFF;
   color: rgba(255, 255, 255, 0.5);
 }
@@ -365,17 +354,14 @@ body.search-open {
 .contacts .content-formatted h2 {
   font-size: 28px;
 }
-.content-formatted h3,
-.content-formatted h4,
-.content-formatted h5,
-.content-formatted h6 {
+.content-formatted h3, .content-formatted h4, .content-formatted h5, .content-formatted h6 {
   font-style: italic;
   font-size: 18px;
 }
-.contacts .content-formatted h3, .contacts
-.content-formatted h4, .contacts
-.content-formatted h5, .contacts
-.content-formatted h6 {
+.contacts .content-formatted h3,
+.contacts .content-formatted h4,
+.contacts .content-formatted h5,
+.contacts .content-formatted h6 {
   font-weight: 400;
   font-size: 24px;
 }
@@ -389,15 +375,15 @@ body.search-open {
 .quotation .content-formatted p:first-child {
   margin-top: 15px;
 }
-.header-bottom-inner .content-formatted pre, .header-bottom-inner
-.content-formatted code, .header-bottom-inner
-.content-formatted iframe, .header-bottom-inner
-.content-formatted table, .header-bottom-inner
-.content-formatted form, .header-bottom-inner
-.content-formatted .form, .header-bottom-inner
-.content-formatted ul, .header-bottom-inner
-.content-formatted ol, .header-bottom-inner
-.content-formatted dl {
+.header-bottom-inner .content-formatted pre,
+.header-bottom-inner .content-formatted code,
+.header-bottom-inner .content-formatted iframe,
+.header-bottom-inner .content-formatted table,
+.header-bottom-inner .content-formatted form,
+.header-bottom-inner .content-formatted .form,
+.header-bottom-inner .content-formatted ul,
+.header-bottom-inner .content-formatted ol,
+.header-bottom-inner .content-formatted dl {
   text-align: left;
 }
 .content-formatted a {
@@ -915,17 +901,15 @@ body.search-open {
   background-color: black;
   content: '';
 }
-.menu-lang-btn:after,
-.menu-lang .menu-item .lang-flag:after {
+.menu-lang-btn:after, .menu-lang .menu-item .lang-flag:after {
   opacity: 0.95;
   background-repeat: no-repeat;
 }
-.no-svg .menu-lang-btn:after, .no-svg
-.menu-lang .menu-item .lang-flag:after {
+.no-svg .menu-lang-btn:after,
+.no-svg .menu-lang .menu-item .lang-flag:after {
   background-image: url("../images/ico-flags.png");
 }
-.svg .menu-lang-btn:after, .svg
-.menu-lang .menu-item .lang-flag:after {
+.svg .menu-lang-btn:after, .svg .menu-lang .menu-item .lang-flag:after {
   background-image: url("../assets/ico-flags.svg");
 }
 
@@ -1059,228 +1043,263 @@ body.search-open {
           box-sizing: border-box;
 }
 
-.lang-flag-sq:after {
+[data-lang-code^="sq"]:after {
   background-position: 0 0;
   content: '';
 }
 
-.lang-flag-hy:after {
+[data-lang-code^="hy"]:after {
   background-position: -21px 0;
   content: '';
 }
 
-.lang-flag-bn:after {
+[data-lang-code^="bn"]:after {
   background-position: -42px 0;
   content: '';
 }
 
-.lang-flag-bg:after {
+[data-lang-code^="bg"]:after {
   background-position: -84px 0;
   content: '';
 }
 
-.lang-flag-zh:after {
+[data-lang-code^="zh"]:after {
   background-position: -105px 0;
   content: '';
 }
 
-.lang-flag-hr:after {
+[data-lang-code^="hr"]:after {
   background-position: -126px 0;
   content: '';
 }
 
-.lang-flag-da:after {
+[data-lang-code^="da"]:after {
   background-position: -147px 0;
   content: '';
 }
 
-.lang-flag-cs:after {
+[data-lang-code^="cs"]:after {
   background-position: -168px 0;
   content: '';
 }
 
-.lang-flag-et:after {
+[data-lang-code^="et"]:after {
   background-position: -189px 0;
   content: '';
 }
 
-.lang-flag-fi:after {
+[data-lang-code^="fi"]:after {
   background-position: 0 -15px;
   content: '';
 }
 
-.lang-flag-fr:after {
+[data-lang-code^="fr"]:after {
   background-position: -21px -15px;
   content: '';
 }
 
-.lang-flag-ka:after {
+[data-lang-code^="ka"]:after {
   background-position: -42px -15px;
   content: '';
 }
 
-.lang-flag-de:after {
+[data-lang-code^="de"]:after {
   background-position: -63px -15px;
   content: '';
 }
 
-.lang-flag-el:after {
+[data-lang-code^="el"]:after {
   background-position: -84px -15px;
   content: '';
 }
 
-.lang-flag-hu:after {
+[data-lang-code^="hu"]:after {
   background-position: -105px -15px;
   content: '';
 }
 
-.lang-flag-is:after {
+[data-lang-code^="is"]:after {
   background-position: -126px -15px;
   content: '';
 }
 
-.lang-flag-hi:after {
+[data-lang-code^="hi"]:after {
   background-position: -147px -15px;
   content: '';
 }
 
-.lang-flag-id:after {
+[data-lang-code^="id"]:after {
   background-position: -168px -15px;
   content: '';
 }
 
-.lang-flag-fa:after {
+[data-lang-code^="fa"]:after {
   background-position: -189px -15px;
   content: '';
 }
 
-.lang-flag-he:after {
+[data-lang-code^="he"]:after {
   background-position: 0 -30px;
   content: '';
 }
 
-.lang-flag-it:after {
+[data-lang-code^="it"]:after {
   background-position: -21px -30px;
   content: '';
 }
 
-.lang-flag-ja:after {
+[data-lang-code^="ja"]:after {
   background-position: -42px -30px;
   content: '';
 }
 
-.lang-flag-ko:after {
+[data-lang-code^="ko"]:after {
   background-position: -63px -30px;
   content: '';
 }
 
-.lang-flag-lv:after {
+[data-lang-code^="lv"]:after {
   background-position: -84px -30px;
   content: '';
 }
 
-.lang-flag-lt:after {
+[data-lang-code^="lt"]:after {
   background-position: -105px -30px;
   content: '';
 }
 
-.lang-flag-ms:after {
+[data-lang-code^="ms"]:after {
   background-position: -126px -30px;
   content: '';
 }
 
-.lang-flag-nl:after {
+[data-lang-code^="nl"]:after {
   background-position: -147px -30px;
   content: '';
 }
 
-.lang-flag-no:after {
+[data-lang-code^="no"]:after {
   background-position: -168px -30px;
   content: '';
 }
 
-.lang-flag-ur:after {
+[data-lang-code^="ur"]:after {
   background-position: -189px -30px;
   content: '';
 }
 
-.lang-flag-fil:after {
+[data-lang-code^="fil"]:after {
   background-position: 0 -45px;
   content: '';
 }
 
-.lang-flag-pl:after {
+[data-lang-code^="pl"]:after {
   background-position: -21px -45px;
   content: '';
 }
 
-.lang-flag-ro:after {
+[data-lang-code^="ro"]:after {
   background-position: -42px -45px;
   content: '';
 }
 
-.lang-flag-ru:after {
+[data-lang-code^="ru"]:after {
   background-position: -63px -45px;
   content: '';
 }
 
-.lang-flag-ar:after {
+[data-lang-code^="ar"]:after {
   background-position: -84px -45px;
   content: '';
 }
 
-.lang-flag-sk:after {
+[data-lang-code^="sk"]:after {
   background-position: -105px -45px;
   content: '';
 }
 
-.lang-flag-sl:after {
+[data-lang-code^="sl"]:after {
   background-position: -126px -45px;
   content: '';
 }
 
-.lang-flag-es:after {
+[data-lang-code^="es"]:after {
   background-position: -147px -45px;
   content: '';
 }
 
-.lang-flag-sv:after {
+[data-lang-code^="sv"]:after {
   background-position: -168px -45px;
   content: '';
 }
 
-.lang-flag-tr:after {
+[data-lang-code^="tr"]:after {
   background-position: -189px -45px;
   content: '';
 }
 
-.lang-flag-uk:after {
+[data-lang-code^="uk"]:after {
   background-position: 0 -60px;
   content: '';
 }
 
-.lang-flag-en:after {
+[data-lang-code^="en"]:after {
   background-position: -21px -60px;
   content: '';
 }
 
-.lang-flag-pt:after {
+[data-lang-code^="pt"]:after {
   background-position: -84px -60px;
   content: '';
 }
 
-.lang-flag-sr:after {
+[data-lang-code^="sr"]:after {
   background-position: -126px -60px;
   content: '';
 }
 
-.lang-flag-bn:after {
+[data-lang-code^="bn"]:after {
   background-position: -147px -60px;
   content: '';
 }
 
-.lang-flag-th:after {
+[data-lang-code^="th"]:after {
   background-position: -189px -60px;
+  content: '';
+}
+
+[data-lang-code^="en_US"]:after {
+  background-position: -21px -60px;
+  content: '';
+}
+
+[data-lang-code^="en_GB"]:after {
+  background-position: -63px -60px;
+  content: '';
+}
+
+[data-lang-code^="en_AU"]:after {
+  background-position: -168px -60px;
+  content: '';
+}
+
+[data-lang-code^="en_CA"]:after {
+  background-position: -105px -60px;
+  content: '';
+}
+
+[data-lang-code^="pt_BR"]:after {
+  background-position: -63px 0;
+  content: '';
+}
+
+[data-lang-code^="pt_PT"]:after {
+  background-position: -63px 0;
+  content: '';
+}
+
+[data-lang-code^="fr_IC"]:after {
+  background-position: -42px -60px;
   content: '';
 }
 
@@ -2215,27 +2234,24 @@ body.search-open {
 }
 
 /* FORMS */
-.content-formatted form,
-.content-formatted .form {
+.content-formatted form, .content-formatted .form {
   max-width: 100%;
 }
-.main-feature .content-formatted form, .main-feature
-.content-formatted .form {
+.main-feature .content-formatted form,
+.main-feature .content-formatted .form {
   margin-left: 0;
   margin-right: 0;
 }
-.content-formatted .form_field,
-.content-formatted .edy-fe-label {
+.content-formatted .form_field, .content-formatted .edy-fe-label {
   font-size: 16px;
   color: #000000;
   color: rgba(0, 0, 0, 0.73);
 }
-.dark-background .content-formatted .form_field, .dark-background
-.content-formatted .edy-fe-label {
+.dark-background .content-formatted .form_field,
+.dark-background .content-formatted .edy-fe-label {
   color: white;
 }
-.header-bottom .content-formatted .form_field, .header-bottom
-.content-formatted .edy-fe-label {
+.header-bottom .content-formatted .form_field, .header-bottom .content-formatted .edy-fe-label {
   font-style: normal;
 }
 .content-formatted .form_field {
@@ -2290,9 +2306,7 @@ body.search-open {
 .content-formatted .form_submit input:focus {
   outline: none;
 }
-.content-formatted .form_field_textfield,
-.content-formatted .form_field_textarea,
-.content-formatted .form_field_select {
+.content-formatted .form_field_textfield, .content-formatted .form_field_textarea, .content-formatted .form_field_select {
   width: 200px;
   margin: 0;
   padding: 5px;
@@ -2303,9 +2317,9 @@ body.search-open {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-.header-bottom .content-formatted .form_field_textfield, .header-bottom
-.content-formatted .form_field_textarea, .header-bottom
-.content-formatted .form_field_select {
+.header-bottom .content-formatted .form_field_textfield,
+.header-bottom .content-formatted .form_field_textarea,
+.header-bottom .content-formatted .form_field_select {
   color: #000000;
   color: rgba(0, 0, 0, 0.73);
   background-color: white;
@@ -2516,18 +2530,17 @@ body.search-open {
   color: rgba(0, 0, 0, 0.8);
 }
 
-.content-formatted .comment_form_textfield_wrap, .content-formatted
-.comment_form_textarea_wrap {
+.content-formatted .comment_form_textfield_wrap,
+.content-formatted .comment_form_textarea_wrap {
   margin-top: 0;
   padding-top: 0;
 }
-.content-formatted .comment_form_textfield_wrap:last-child, .content-formatted
-.comment_form_textarea_wrap:last-child {
+.content-formatted .comment_form_textfield_wrap:last-child,
+.content-formatted .comment_form_textarea_wrap:last-child {
   padding-top: 20px;
 }
 @media screen and (max-width: 660px) {
-  .content-formatted .comment_form_textfield_wrap, .content-formatted
-  .comment_form_textarea_wrap {
+  .content-formatted .comment_form_textfield_wrap, .content-formatted .comment_form_textarea_wrap {
     padding-top: 20px;
   }
 }
@@ -3159,7 +3172,7 @@ body.search-open {
 .not-loaded .loader, .is-loaded .loader {
   margin-top: calc((20px / 2) * -1);
   margin-left: calc((20px / 2) * -1);
-  border: 1px solid transparent;
+  border: 1px solid rgba(0, 0, 0, 0);
   -webkit-animation: rotation .7s infinite linear;
   animation: rotation .7s infinite linear;
 }

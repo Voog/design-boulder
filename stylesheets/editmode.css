@@ -38,12 +38,12 @@
 .light-background .content-formatted .edy-texteditor-active {
   outline: 1px solid rgba(0, 0, 0, 0.5);
 }
-.dark-background .content-formatted .edy-texteditor-active table td, .dark-background
-.content-formatted .edy-texteditor-active table th {
+.dark-background .content-formatted .edy-texteditor-active table td,
+.dark-background .content-formatted .edy-texteditor-active table th {
   outline: 1px dotted rgba(255, 255, 255, 0.5);
 }
-.dark-background .content-formatted .edy-texteditor-active table td.wysiwyg-tmp-selected-cell, .dark-background
-.content-formatted .edy-texteditor-active table th.wysiwyg-tmp-selected-cell {
+.dark-background .content-formatted .edy-texteditor-active table td.wysiwyg-tmp-selected-cell,
+.dark-background .content-formatted .edy-texteditor-active table th.wysiwyg-tmp-selected-cell {
   outline: 1px solid rgba(255, 255, 255, 0.8);
 }
 
