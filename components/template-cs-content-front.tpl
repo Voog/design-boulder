@@ -53,17 +53,17 @@
   */
   --content-link-font-weight: 400;
   /* VoogStyle
-    "pathI18n": ["content", "link", "hover"],
-    "titleI18n": "font_size",
-    "type": "button",
-    "editor": "toggleIcon",
-    "states": {
-      "on": "700",
-      "off": "400"
-    },
-    "icon": "bold",
-    "scope": "global"
-  */
+        "pathI18n": ["content", "link", "hover"],
+        "titleI18n": "font_size",
+        "type": "button",
+        "editor": "toggleIcon",
+        "states": {
+          "on": "700",
+          "off": "400"
+        },
+        "icon": "bold",
+        "scope": "global"
+      */
   --content-link-hover-font-weight: 400;
   /* VoogStyle
     "pathI18n": ["content", "link", "normal"],
@@ -82,17 +82,17 @@
   */
   --content-link-font-style: normal;
   /* VoogStyle
-    "pathI18n": ["content", "link", "hover"],
-    "titleI18n": "font_style",
-    "type": "button",
-    "editor": "toggleIcon",
-    "states": {
-      "on": "italic",
-      "off": "normal"
-    },
-    "icon": "italic",
-    "scope": "global"
-  */
+        "pathI18n": ["content", "link", "hover"],
+        "titleI18n": "font_style",
+        "type": "button",
+        "editor": "toggleIcon",
+        "states": {
+          "on": "italic",
+          "off": "normal"
+        },
+        "icon": "italic",
+        "scope": "global"
+      */
   --content-link-hover-font-style: normal;
   /* VoogStyle
     "pathI18n": ["content", "link", "normal"],
@@ -108,17 +108,17 @@
   */
   --content-link-text-decoration: underline;
   /* VoogStyle
-    "pathI18n": ["content", "link", "hover"],
-    "titleI18n": "text_decoration",
-    "type": "button",
-    "editor": "toggleIcon",
-    "states": {
-      "on": "underline",
-      "off": "none"
-    },
-    "icon": "underline",
-    "scope": "global"
-  */
+        "pathI18n": ["content", "link", "hover"],
+        "titleI18n": "text_decoration",
+        "type": "button",
+        "editor": "toggleIcon",
+        "states": {
+          "on": "underline",
+          "off": "none"
+        },
+        "icon": "underline",
+        "scope": "global"
+      */
   --content-link-hover-text-decoration: none;
   /* VoogStyle
     "pathI18n": ["content", "link", "normal"],
@@ -137,17 +137,17 @@
   */
   --content-link-text-transform: none;
   /* VoogStyle
-    "pathI18n": ["content", "link", "hover"],
-    "titleI18n": "text_transform",
-    "type": "button",
-    "editor": "toggleIcon",
-    "states": {
-      "on": "uppercase",
-      "off": "none"
-    },
-    "icon": "uppercase",
-    "scope": "global"
-  */
+        "pathI18n": ["content", "link", "hover"],
+        "titleI18n": "text_transform",
+        "type": "button",
+        "editor": "toggleIcon",
+        "states": {
+          "on": "uppercase",
+          "off": "none"
+        },
+        "icon": "uppercase",
+        "scope": "global"
+      */
   --content-link-hover-text-transform: none;
   /* VoogStyle
     "pathI18n": ["content", "link", "normal"],
@@ -162,11 +162,11 @@
   */
   --content-link-color: {% if site.data.primary.color == nil %}#e4ac00{% else %}{{ site.data.primary.color }}{% endif %};
   /* VoogStyle
-    "pathI18n": ["content", "link", "hover"],
-    "titleI18n": "color",
-    "type": "button",
-    "editor": "colorPicker",
-    "scope": "global"
-  */
+        "pathI18n": ["content", "link", "hover"],
+        "titleI18n": "color",
+        "type": "button",
+        "editor": "colorPicker",
+        "scope": "global"
+      */
   --content-link-hover-color: {% if site.data.primary.color == nil %}#e4ac00{% else %}{{ site.data.primary.color }}{% endif %};
 }
