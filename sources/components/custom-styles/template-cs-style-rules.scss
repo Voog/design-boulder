@@ -11,8 +11,8 @@
 // =============================================================================
 // Modules
 // =============================================================================
-@import '../../stylesheets/mixins';
-@import '../../stylesheets/variables';
+@import "../../stylesheets/mixins";
+@import "../../stylesheets/variables";
 
 // =============================================================================
 // Default stylesheet override styles.
@@ -56,7 +56,18 @@ body {
   }
 
   // scss-lint:disable SingleLinePerSelector
-  h1, h2, h3, h4, h5, h6, p, ul, ol, pre, code, table {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ul,
+  ol,
+  pre,
+  code,
+  table {
     .dark-background & {
       color: var(--fourth-color);
     }
@@ -218,7 +229,6 @@ body {
       }
       // scss-lint:enable NestingDepth
     }
-
   }
 
   // scss-lint:disable DeclarationOrder
@@ -320,7 +330,8 @@ body {
 // BLOG
 .front-page {
   // scss-lint:disable SingleLinePerSelector
-  .light-background, .dark-background {
+  .light-background,
+  .dark-background {
     .post-title {
       border-bottom-style: var(--blog-front-headings-border-bottom-style);
 
@@ -344,7 +355,8 @@ body {
 
     .post-title {
       // scss-lint:disable NestingDepth, SelectorDepth, SingleLinePerSelector
-      &, a {
+      &,
+      a {
         color: var(--primary-color);
       }
       // scss-lint:enable NestingDepth, SelectorDepth, SingleLinePerSelector
@@ -356,7 +368,8 @@ body {
       border-bottom-color: var(--fourth-color);
 
       // scss-lint:disable NestingDepth, SelectorDepth, SingleLinePerSelector
-      &, a {
+      &,
+      a {
         color: var(--fourth-color);
       }
       // scss-lint:enable NestingDepth, SelectorDepth, SingleLinePerSelector
@@ -409,7 +422,8 @@ body {
     }
 
     // scss-lint:disable SingleLinePerSelector
-    &, a {
+    &,
+    a {
       font-size: var(--blog-headings-font-size);
       font-style: var(--blog-headings-font-style);
       font-weight: var(--blog-headings-font-weight);
@@ -507,7 +521,6 @@ body {
     text-transform: var(--form-field-text-transform);
   }
 
-
   .form_submit {
     input {
       padding: calc(var(--content-button-padding) - 10px) var(--content-button-padding);
@@ -555,7 +568,6 @@ body {
 
 // BREADCRUMBS MENU
 .menu-horizontal {
-
   .menu-separator {
     color: var(--headings-subheading-color);
   }

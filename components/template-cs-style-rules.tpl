@@ -5,6 +5,7 @@ body {
 .content {
   background-color: var(--content-background-color);
 }
+
 .content-page .content .wrap {
   max-width: var(--content-max-width);
 }
@@ -18,9 +19,11 @@ body {
   line-height: var(--content-body-line-height);
   color: var(--content-body-color);
 }
+
 .dark-background .content-formatted {
   color: var(--fourth-color);
 }
+
 .content-formatted.header-body {
   font-size: var(--focus-area-body-font-size);
   font-style: var(--focus-area-body-font-style);
@@ -30,9 +33,22 @@ body {
           text-decoration: var(--focus-area-body-text-decoration);
   text-transform: var(--focus-area-body-text-transform);
 }
-.dark-background .content-formatted h1, .dark-background .content-formatted h2, .dark-background .content-formatted h3, .dark-background .content-formatted h4, .dark-background .content-formatted h5, .dark-background .content-formatted h6, .dark-background .content-formatted p, .dark-background .content-formatted ul, .dark-background .content-formatted ol, .dark-background .content-formatted pre, .dark-background .content-formatted code, .dark-background .content-formatted table {
+
+.dark-background .content-formatted h1, .dark-background
+.content-formatted h2, .dark-background
+.content-formatted h3, .dark-background
+.content-formatted h4, .dark-background
+.content-formatted h5, .dark-background
+.content-formatted h6, .dark-background
+.content-formatted p, .dark-background
+.content-formatted ul, .dark-background
+.content-formatted ol, .dark-background
+.content-formatted pre, .dark-background
+.content-formatted code, .dark-background
+.content-formatted table {
   color: var(--fourth-color);
 }
+
 .content-formatted h1 {
   font-size: var(--headings-title-font-size);
   font-style: var(--headings-title-font-style);
@@ -44,6 +60,7 @@ body {
           text-decoration: var(--headings-title-text-decoration);
   text-transform: var(--headings-title-text-transform);
 }
+
 .content-formatted h2 {
   font-size: var(--headings-heading-font-size);
   font-style: var(--headings-heading-font-style);
@@ -55,6 +72,7 @@ body {
           text-decoration: var(--headings-heading-text-decoration);
   text-transform: var(--headings-heading-text-transform);
 }
+
 .content-formatted h3,
 .content-formatted h4,
 .content-formatted h5,
@@ -69,6 +87,7 @@ body {
           text-decoration: var(--headings-subheading-text-decoration);
   text-transform: var(--headings-subheading-text-transform);
 }
+
 .content-formatted a:not(.custom-btn) {
   font-style: var(--content-link-font-style);
   font-weight: var(--content-link-font-weight);
@@ -77,6 +96,7 @@ body {
           text-decoration: var(--content-link-text-decoration);
   text-transform: var(--content-link-text-transform);
 }
+
 .content-formatted a:not(.custom-btn):hover {
   font-style: var(--content-link-hover-font-style);
   font-weight: var(--content-link-hover-font-weight);
@@ -85,6 +105,7 @@ body {
           text-decoration: var(--content-link-hover-text-decoration);
   text-transform: var(--content-link-hover-text-transform);
 }
+
 .content-formatted a.custom-btn,
 .content-formatted div.custom-btn {
   padding: calc(var(--content-button-padding) - 10px) var(--content-button-padding);
@@ -95,11 +116,13 @@ body {
           text-decoration: var(--content-button-text-decoration);
   text-transform: var(--content-button-text-transform);
 }
+
 .content-formatted a.custom-btn:not(.custom-btn-disabled),
 .content-formatted div.custom-btn:not(.custom-btn-disabled) {
   color: var(--content-button-color);
   background-color: var(--content-button-background-color);
 }
+
 .content-formatted ul,
 .content-formatted ol,
 .content-formatted dl {
@@ -111,20 +134,24 @@ body {
           text-decoration: var(--list-text-decoration);
   text-transform: var(--list-text-transform);
 }
+
 .content-formatted table tr th,
 .content-formatted table tr td {
   padding: calc(var(--table-padding) - 4px) var(--table-padding);
   font-size: var(--table-font-size);
   border-top-style: var(--table-border-style);
 }
+
 .content-formatted table tr th:first-child,
 .content-formatted table tr td:first-child {
   border-left-style: var(--table-border-style);
 }
+
 .content-formatted table tr th:last-child,
 .content-formatted table tr td:last-child {
   border-right-style: var(--table-border-style);
 }
+
 .content-formatted table tr:last-child td {
   border-bottom-style: var(--table-border-style);
 }
@@ -140,23 +167,27 @@ body {
   color: var(--menu-main-color);
   text-transform: var(--menu-main-text-transform);
 }
+
 .menu-main .menu-link.active, .menu-main .menu-link:hover {
   border-bottom-color: var(--secondary-color);
   -webkit-box-shadow: inset 0 -3px 0 var(--secondary-color);
           box-shadow: inset 0 -3px 0 var(--secondary-color);
 }
+
 .menu-main .menu-link:hover {
   font-style: var(--menu-main-hover-font-style);
   font-weight: var(--menu-main-hover-font-weight);
   color: var(--menu-main-hover-color);
   text-transform: var(--menu-main-hover-text-transform);
 }
+
 .menu-main .menu-link.active, .menu-main .menu-link.active:hover {
   font-style: var(--menu-main-active-font-style);
   font-weight: var(--menu-main-active-font-weight);
   color: var(--menu-main-active-color);
   text-transform: var(--menu-main-active-text-transform);
 }
+
 @media screen and (max-width: 900px) {
   .menu-main {
     display: none;
@@ -169,9 +200,11 @@ body {
 .menu-sub {
   background-color: var(--content-background-color);
 }
+
 .menu-sub .menu {
   text-align: right;
 }
+
 .menu-sub .menu-link {
   font-size: var(--menu-sub-font-size);
   font-style: var(--menu-sub-font-style);
@@ -181,6 +214,7 @@ body {
           text-decoration: var(--menu-sub-text-decoration);
   text-transform: var(--menu-sub-text-transform);
 }
+
 .menu-sub .menu-link.active {
   font-style: var(--menu-sub-active-font-style);
   font-weight: var(--menu-sub-active-font-weight);
@@ -189,6 +223,7 @@ body {
           text-decoration: var(--menu-sub-active-text-decoration);
   text-transform: var(--menu-sub-active-text-transform);
 }
+
 .menu-sub .menu-link:not(.active):hover {
   font-style: var(--menu-sub-hover-font-style);
   font-weight: var(--menu-sub-hover-font-weight);
@@ -201,12 +236,15 @@ body {
 .menu-pagination .menu-item.disabled .menu-link:hover {
   color: var(--primary-color);
 }
+
 .menu-pagination .menu-item.active .menu-link {
   color: var(--secondary-color);
 }
+
 .menu-pagination .menu-item .menu-link {
   color: var(--primary-color);
 }
+
 .menu-pagination .menu-item .menu-link:hover {
   color: var(--secondary-color);
 }
@@ -222,28 +260,38 @@ body {
   text-transform: var(--header-body-text-transform);
 }
 
-.front-page .light-background .post-title, .front-page .dark-background .post-title {
+.front-page .light-background .post-title,
+.front-page .dark-background .post-title {
   border-bottom-style: var(--blog-front-headings-border-bottom-style);
 }
-.front-page .light-background .post-title:hover, .front-page .dark-background .post-title:hover {
+
+.front-page .light-background .post-title:hover,
+.front-page .dark-background .post-title:hover {
   font-style: var(--blog-front-headings-hover-font-style);
   font-weight: var(--blog-front-headings-hover-font-weight);
   text-transform: var(--blog-front-headings-hover-text-transform);
   border-bottom-style: var(--blog-front-headings-hover-border-bottom-style);
 }
+
 .front-page .light-background .blog-title,
 .front-page .light-background .post-date {
   color: var(--primary-color);
 }
-.front-page .light-background .post-title, .front-page .light-background .post-title a {
+
+.front-page .light-background .post-title,
+.front-page .light-background .post-title a {
   color: var(--primary-color);
 }
+
 .front-page .dark-background .post-title {
   border-bottom-color: var(--fourth-color);
 }
-.front-page .dark-background .post-title, .front-page .dark-background .post-title a {
+
+.front-page .dark-background .post-title,
+.front-page .dark-background .post-title a {
   color: var(--fourth-color);
 }
+
 .front-page .blog-title {
   font-size: var(--blog-front-label-font-size);
   font-style: var(--blog-front-label-font-style);
@@ -254,6 +302,7 @@ body {
           text-decoration: var(--blog-front-label-text-decoration);
   text-transform: var(--blog-front-label-text-transform);
 }
+
 .front-page .post-title {
   font-size: var(--blog-front-headings-font-size);
   font-style: var(--blog-front-headings-font-style);
@@ -262,6 +311,7 @@ body {
   text-transform: var(--blog-front-headings-text-transform);
   border-bottom-color: var(--primary-color);
 }
+
 .front-page .post-date {
   font-size: var(--blog-front-date-font-size);
   font-style: var(--blog-front-date-font-style);
@@ -276,19 +326,23 @@ body {
 .post-page .post-header {
   text-align: var(--blog-headings-text-alignment);
 }
+
 .blog-page .post-title,
 .post-page .post-title {
   border-bottom: solid 1px var(--blog-headings-underline-color);
   -webkit-box-shadow: inset 0 -3px 0 var(--blog-headings-underline-color);
           box-shadow: inset 0 -3px 0 var(--blog-headings-underline-color);
 }
+
 .blog-page .post-title:hover,
 .post-page .post-title:hover {
   border-bottom: solid 1px var(--blog-headings-hover-underline-color);
   -webkit-box-shadow: inset 0 -3px 0 var(--blog-headings-hover-underline-color);
           box-shadow: inset 0 -3px 0 var(--blog-headings-hover-underline-color);
 }
-.blog-page .post-title, .blog-page .post-title a,
+
+.blog-page .post-title,
+.blog-page .post-title a,
 .post-page .post-title,
 .post-page .post-title a {
   font-size: var(--blog-headings-font-size);
@@ -298,6 +352,7 @@ body {
   color: var(--blog-headings-color);
   text-transform: var(--blog-headings-text-transform);
 }
+
 .blog-page .post-title a:hover,
 .post-page .post-title a:hover {
   font-style: var(--blog-headings-hover-font-style);
@@ -305,6 +360,7 @@ body {
   color: var(--blog-headings-hover-color);
   text-transform: var(--blog-headings-hover-text-transform);
 }
+
 .blog-page .post-date,
 .post-page .post-date {
   font-size: var(--blog-date-font-size);
@@ -320,6 +376,7 @@ body {
 .blog-page .post-content {
   max-width: var(--content-max-width);
 }
+
 .blog-page .post-read-more-btn {
   font-style: var(--content-button-font-style);
   font-weight: var(--content-button-font-weight);
@@ -357,6 +414,7 @@ body {
           text-decoration: var(--form-label-text-decoration);
   text-transform: var(--form-label-text-transform);
 }
+
 .content-formatted .form_field_textfield,
 .content-formatted .form_field_textarea,
 .content-formatted .form_field_select,
@@ -370,6 +428,7 @@ body {
           text-decoration: var(--form-field-text-decoration);
   text-transform: var(--form-field-text-transform);
 }
+
 .content-formatted .form_submit input {
   padding: calc(var(--content-button-padding) - 10px) var(--content-button-padding);
   font-size: var(--content-button-font-size);
@@ -408,10 +467,12 @@ body {
 .menu-horizontal .menu-separator {
   color: var(--headings-subheading-color);
 }
+
 .menu-horizontal.menu-breadcrumbs .menu-item a,
 .menu-horizontal.menu-breadcrumbs .menu-item a:hover {
   color: var(--headings-subheading-color);
 }
+
 .menu-horizontal.menu-breadcrumbs .current.menu-item a {
   color: var(--headings-subheading-color);
 }
