@@ -17,7 +17,7 @@
             {% endfor %}
             {% if editmode %}
               {% if item.hidden_children.size > 0 %}<li class="edy-btn">{% menubtn item.hidden_children %}</li>{% endif %}
-              <li class="edy-btn">{% menuadd parent="item"%}</li>
+              <li class="edy-btn">{% menuadd parent="item" %}</li>
             {% endif %}
           </ul>
         {% endif %}
