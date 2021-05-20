@@ -1,6 +1,9 @@
-{%- assign add_product_label = 'add_product' | lce -%}
-{%- assign add_product_title = 'add_product_page' | lce -%}
-<li class="menu-item menu-item-cms">
+{%- if _isAddProductTitle == true -%}
+  {%- assign add_product_label = 'add_product' | lce -%}
+  {%- assign add_product_title = 'add_product_page' | lce -%}
+{%- endif -%}
+
+<li class="{{ _wrapperClassName }}">
   {%- if _menuItem.layout_title == product_list_layout -%}
     {% menuadd parent=_menuItem label=add_product_label title=add_product_title layout_title=product_layout %}
   {%- else -%}

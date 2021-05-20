@@ -13,7 +13,8 @@
         {% endif %}
 
         {% unless item.layout_title == product_layout %}
-          {% include 'add-page-button', _menuItem: item %}
+          {%- assign wrapperClass = 'menu-item menu-item-cms' -%}
+          {% include 'add-page-button', _menuItem: item, _isAddProductTitle: true, _wrapperClassName: wrapperClass %}
         {% endunless %}
       {% endif %}
     {% endif %}
