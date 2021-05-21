@@ -18,8 +18,7 @@
       {% endif %}
 
       {% unless site.root_item.layout_title == product_layout %}
-        {%- assign wrapperClass = 'menu-item menu-item-cms' -%}
-        {% include 'add-page-button', _menuItem: site.root_item, _isAddProductTitle: true, _wrapperClassName: wrapperClass %}
+        {% include 'add-page-button', _menuItem: site.root_item, _isAddProductTitle: true, _wrapperClassName: 'menu-item menu-item-cms' %}
       {% endunless %}
 
       {% if site.root_item.selected? and site.root_item.layout_title == product_list_layout %}
