@@ -18,7 +18,7 @@
       {% endif %}
 
       {% unless site.root_item.layout_title == product_layout %}
-        <li class="menu-item menu-item-cms">{% menuadd %}</li>
+        {% include 'add-page-button', _menuItem: site.root_item, _isAddProductTitle: true, _wrapperClassName: 'menu-item menu-item-cms' %}
       {% endunless %}
 
       {% if site.root_item.selected? and site.root_item.layout_title == product_list_layout %}
