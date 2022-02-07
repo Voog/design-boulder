@@ -43,7 +43,7 @@
       <main class="content content-formatted product-content" role="main">
         <div class="wrap{% if editmode or with_sumbenu == true %} with-submenu{% endif %}">
           <section class="content-body content-formatted">
-          {% include "menu-breadcrumbs" %}
+          {% include "menu-breadcrumbs-sd" %}
 
             <div class="items-body">
               <div class="flex-col">
