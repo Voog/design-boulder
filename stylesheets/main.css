@@ -556,7 +556,8 @@ body.search-open {
   opacity: .8;
 }
 
-.public .content-formatted .custom-btn-disabled {
+.public .content-formatted .custom-btn-disabled,
+.product-page .content-formatted .custom-btn-disabled {
   cursor: default;
   background-color: #ccc;
 }
@@ -3500,6 +3501,65 @@ body.search-open {
 
 .menu-item-cms.float-right {
   float: right;
+}
+
+.item-page .content-item-title:not(.product-item-title) {
+  margin-bottom: 15px;
+}
+
+.item-page .product-price {
+  padding-bottom: 24px;
+}
+
+.item-page .product-price-divider {
+  margin: 0 4px;
+}
+
+.item-page .content-product-description {
+  margin-bottom: 12px;
+}
+
+.item-page .product-content .without-image .item-top {
+  background-image: url("../assets/ico-placeholder.svg");
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #F2F2F2;
+}
+
+.item-page .product-content .item-top .top-inner {
+  background-color: transparent;
+}
+
+.item-page .product-content .item-top .top-inner .item-image {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.item-page .product-content .buy-btn-content {
+  margin-bottom: 24px;
+}
+
+.item-page .flex-col {
+  width: 100%;
+}
+
+.item-page .flex-col-left {
+  max-width: 520px;
+}
+
+.item-page .flex-col .content-body {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 104px;
+}
+
+@media screen and (min-width: 641px) {
+  .item-page .flex-col.product-right-content {
+    max-width: 50%;
+  }
 }
 
 .svg-spritesheet {
