@@ -39,6 +39,9 @@
     {% include "template-cs-blog-front" %}
   {% elsif blog_page %}
     {% include "template-cs-blog" %}
+  {% elsif product_page %}
+    {% include "template-cs-product" %}
+    {% include "template-cs-content" %}
   {% else %}
     {% include "template-cs-content" %}
   {% endif %}

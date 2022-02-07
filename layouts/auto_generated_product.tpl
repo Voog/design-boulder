@@ -10,7 +10,7 @@
 <html class="{% if editmode %}editmode{% else %}public{% endif %}" lang="{{ page.language_code }}">
 <head prefix="og: http://ogp.me/ns#">
   {% include "edicy-tools-variables" %}
-  {% include "html-head" %}
+  {% include "html-head" product_page: true %}
   {% include "edicy-tools-styles" %}
 </head>
 
@@ -36,9 +36,6 @@
   <div class="container-wrap">
     <div class="container">
       {% include "header" %}
-      {% if page.level != 0 %}
-        {% include "submenu-for-current" exclude_products: true %}
-      {% endif %}
 
       <main class="content content-formatted product-content" role="main">
         <div class="wrap{% if editmode or with_sumbenu == true %} with-submenu{% endif %}">
