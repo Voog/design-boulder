@@ -39,6 +39,9 @@
     {% include "template-cs-blog-front" %}
   {% elsif blog_page %}
     {% include "template-cs-blog" %}
+  {% elsif product_page %}
+    {% include "template-cs-product" %}
+    {% include "template-cs-content" %}
   {% else %}
     {% include "template-cs-content" %}
   {% endif %}
@@ -64,7 +67,10 @@
 {% include "template-meta" %}
 
 {% comment %}BREADCRUMBS{% endcomment %}
-{% sd_breadcrumbs %}
+{%- capture breadcrumbsScript -%}
+  {%- sd_breadcrumbs -%}
+{%- endcapture -%}
+{{ breadcrumbsScript }}
 
 {% comment %}MISCELLANEOUS{% endcomment %}
 {% if blog %}{{ blog.rss_link }}{% endif %}

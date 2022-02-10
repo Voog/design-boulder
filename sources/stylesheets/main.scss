@@ -19,6 +19,10 @@
 @import 'site-signout';
 @import 'product';
 @import 'navigation-menus';
+@import 'auto-generated-product';
+
+// Browser hacks
+@import 'browser-hacks';
 
 .svg-spritesheet {
   display: none;
