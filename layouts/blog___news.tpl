@@ -42,7 +42,7 @@
   {% include "javascripts" %}
   {% include "edicy-tools" %}
   <script>var langCode ='{% if page.language_code == 'zh'%}zh-cn{% else %}{{ page.language_code }}{% endif %}';</script>
-  <script src="{{ javascripts_path }}/blog-and-news-application.js?v=boulder-2.2.3"></script>
+  <script src="{{ javascripts_path }}/blog-and-news-application.js?v=boulder-2.3.0"></script>
 
   <script type="text/html" id="article-template">
     <article class="post">

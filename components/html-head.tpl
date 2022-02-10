@@ -16,9 +16,9 @@
 {% if site.data.touch_icon %}<link rel="apple-touch-icon" href="{{ site.data.touch_icon }}">{% endif %}
 
 {% comment %}STYLESHEETS{% endcomment %}
-{% if editmode %}{% stylesheet_link "editmode.min.css?v=boulder-2.2.3" %}{% endif %}
+{% if editmode %}{% stylesheet_link "editmode.min.css?v=boulder-2.3.0" %}{% endif %}
 {% if editmode %}<link rel="stylesheet" href="{{ site.static_asset_host }}/libs/edicy-tools/latest/edicy-tools.css">{% endif %}
-{% stylesheet_link "main.min.css?v=boulder-2.2.3" %}
+{% stylesheet_link "main.min.css?v=boulder-2.3.0" %}
 <!--[if lt IE 9]>{% stylesheet_link "ie8.min.css?v=1" %}<![endif]-->
 
 {% comment %}Google fonts for Design Editor{% endcomment %}
