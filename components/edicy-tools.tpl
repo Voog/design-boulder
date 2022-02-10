@@ -26,21 +26,23 @@
     // Initiates language flag toggleing functionality.
     site.toggleFlags();
 
-    // Front page header banner background picker.
-    var headerBg = new Edicy.BgPicker($('.js-bgpicker-header-settings'), {
-        picture: true,
-        target_width: 600,
-        color: true,
-        showAlpha: true,
+    {% if front_page %}
+      // Front page header banner background picker.
+      var headerBg = new Edicy.BgPicker($('.js-bgpicker-header-settings'), {
+          picture: true,
+          target_width: 600,
+          color: true,
+          showAlpha: true,
 
-      preview: function(data) {
-        site.headerBgPreview(data, '.js-header');
-      },
+        preview: function(data) {
+          site.headerBgPreview(data, '.js-header');
+        },
 
-      commit: function(data) {
-        site.headerBgCommit(data, 'header_bg');
-      }
-    });
+        commit: function(data) {
+          site.headerBgCommit(data, 'header_bg');
+        }
+      });
+    {% endif %}
 
     site.bindCustomTexteditorStyles('{{ "button" | lc: editor_locale }}');
   </script>

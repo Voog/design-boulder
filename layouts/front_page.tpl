@@ -75,7 +75,7 @@
 
     {% include "site-signout" %}
     {% include "javascripts" %}
-    {% include "edicy-tools" %}
+    {% include "edicy-tools" front_page: true %}
     <script>site.initFrontPage();</script>
   </body>
 </html>
