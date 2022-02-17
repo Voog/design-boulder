@@ -282,7 +282,7 @@
   }
 }
 
-.item-page {
+.item-page:not(.product-page) {
   .content-header {
     margin-bottom: 20px;
 

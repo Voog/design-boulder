@@ -3411,11 +3411,11 @@ body.search-open {
   text-align: center;
 }
 
-.item-page .content-header {
+.item-page:not(.product-page) .content-header {
   margin-bottom: 20px;
 }
 
-.item-page .content-header .content-item-title h1 {
+.item-page:not(.product-page) .content-header .content-item-title h1 {
   text-align: left;
 }
 
@@ -3558,12 +3558,17 @@ body.search-open {
   position: -webkit-sticky;
   position: sticky;
   top: 104px;
+  z-index: 10601;
 }
 
 @media screen and (min-width: 641px) {
   .item-page .flex-col.product-right-content {
     max-width: 50%;
   }
+}
+
+.product-page .content-header {
+  margin-bottom: 20px;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
