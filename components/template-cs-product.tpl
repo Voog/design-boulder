@@ -64,7 +64,7 @@
     "featured": true,
     "scope": "global"
   */
-  --product-title-color: black;
+  --product-title-color: rgba(0, 0, 0, 0.73);
   /* VoogStyle
     "pathI18n": ["product", "price"],
     "titleI18n": "size",
@@ -122,7 +122,7 @@
     "featured": true,
     "scope": "global"
   */
-  --product-price-color: black;
+  --product-price-color: rgba(0, 0, 0, 0.73);
   /* VoogStyle
     "pathI18n": ["product", "description"],
     "titleI18n": "size",
