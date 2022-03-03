@@ -27,6 +27,11 @@
   .contacts & {
     text-align: center;
     font-size: 20px;
+
+    .edy-product-widget-grid,
+    .edy-product-widget-list {
+      text-align: left;
+    }
   }
 
   &.header-body {
@@ -191,7 +196,9 @@
   .form,
   ul,
   ol,
-  dl {
+  dl,
+  .edy-product-widget-grid,
+  .edy-product-widget-list {
     .header-bottom-inner & {
       text-align: left;
     }
@@ -280,7 +287,8 @@
     }
   }
 
-  .custom-btn {
+  .custom-btn,
+  .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn {
     display: inline-block;
     padding: 14px 24px;
     line-height: 1.3;

@@ -255,6 +255,11 @@ body.search-open {
   font-size: 20px;
 }
 
+.contacts .content-formatted .edy-product-widget-grid,
+.contacts .content-formatted .edy-product-widget-list {
+  text-align: left;
+}
+
 .content-formatted.header-body {
   line-height: 1.5;
   font-style: italic;
@@ -440,7 +445,9 @@ body.search-open {
 .content-formatted .form, .header-bottom-inner
 .content-formatted ul, .header-bottom-inner
 .content-formatted ol, .header-bottom-inner
-.content-formatted dl {
+.content-formatted dl, .header-bottom-inner
+.content-formatted .edy-product-widget-grid, .header-bottom-inner
+.content-formatted .edy-product-widget-list {
   text-align: left;
 }
 
@@ -534,7 +541,8 @@ body.search-open {
   margin-top: 0;
 }
 
-.content-formatted .custom-btn {
+.content-formatted .custom-btn,
+.content-formatted .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn {
   display: inline-block;
   padding: 14px 24px;
   line-height: 1.3;
@@ -546,18 +554,23 @@ body.search-open {
   line-height: 1;
 }
 
-.header-bottom .content-formatted .custom-btn {
+.header-bottom .content-formatted .custom-btn, .header-bottom
+.content-formatted .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn {
   padding: 15px 40px;
   font-size: 24px;
   line-height: 1.3;
 }
 
-.content-formatted .custom-btn:not(.custom-btn-disabled):hover {
+.content-formatted .custom-btn:not(.custom-btn-disabled):hover,
+.content-formatted .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn:not(.custom-btn-disabled):hover {
   opacity: .8;
 }
 
 .public .content-formatted .custom-btn-disabled,
-.product-page .content-formatted .custom-btn-disabled {
+.product-page .content-formatted .custom-btn-disabled, .public
+.content-formatted .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn-disabled,
+.product-page
+.content-formatted .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn-disabled {
   cursor: default;
   background-color: #ccc;
 }
