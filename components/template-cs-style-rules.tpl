@@ -563,3 +563,14 @@ body {
   border: 1px solid var(--fourth-color);
   opacity: .5;
 }
+
+.edy-product-widget-filter-sort option {
+  color: var(--primary-color);
+}
+
+.dark-background .edy-product-widget-filter-name,
+.dark-background .edy-product-widget-filter-sort,
+.dark-background .edy-product-widget-filter-label,
+.dark-background .edy-product-widget-filter-search-input {
+  color: var(--fourth-color);
+}
