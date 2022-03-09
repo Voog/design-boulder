@@ -1,16 +1,25 @@
 {% comment %}TEMPLATE META DATA{% endcomment %}
 {% comment %}https://developers.facebook.com/tools/debug - Debug after each modification{% endcomment %}
 {% if site.data.fb_admin %}<meta property="fb:admins" content="{{ site.data.fb_admin }}">{% endif %}
+
+{%- if article -%}
+  {%- assign og_obj = article -%}
+{%- elsif product -%}
+  {%- assign og_obj = product -%}
+{%- else -%}
+  {%- assign og_obj = page -%}
+{%- endif -%}
+
 <meta property="og:type" content="{% if article %}article{% else %}website{% endif %}">
-<meta property="og:url" content="{{ site.url }}{% if article %}{{ article.url | remove_first:'/' }}{% elsif product %}{{ product.url | remove_first:'/' }}{% else %}{{ page.url | remove_first:'/' }}{% endif %}">
+<meta property="og:url" content="{{ site.url }}{{ og_obj.url | remove_first:'/' }}">
 <meta property="og:title" content="{% title %}">
 <meta property="og:site_name" content="{{ page.site_title | escape }}">
 
 {% comment %}Open Graph image{% endcomment %}
 {% if page.image == nil and front_page %}
-  {% if fallback_header_image != nil and fallback_header_image != '' and header_bg_image_sizes == nil %}
+  {% if fallback_header_image != blank and header_bg_image_sizes == nil %}
     {% assign og_image = fallback_header_image %}
-  {% elsif header_bg_image_sizes != nil and header_bg_image_sizes != '' %}
+  {% elsif header_bg_image_sizes != blank %}
     {% for imageSize in header_bg_image_sizes %}
       {% if forloop.length >= 4 %}
         {% assign og_image = header_bg_image_sizes[2] %}
@@ -22,16 +31,8 @@
     {% endfor %}
   {% endif %}
 {% else %}
-  {% if article %}
-    {% if article.image? %}
-      {% assign og_image = article.image.for-width-1200 %}
-    {% endif %}
-  {% elsif product %}
-    {% if product.image? %}
-      {% assign og_image = product.image.for-width-1200 %}
-    {% endif %}
-  {% elsif page.image? %}
-    {% assign og_image = page.image.for-width-1200 %}
+  {% if og_obj.image? %}
+    {% assign og_image = og_obj.image.for-width-1200 %}
   {% endif %}
 {% endif %}
 
@@ -43,16 +44,10 @@
 {% endif %}
 
 {% comment %}Open Graph description{% endcomment %}
-{% if article %}
-  {% assign description = article.description %}
-{% else %}
-  {% assign description = page.description %}
-{% endif %}
-
-{% if description != nil and description != '' %}
-  <meta property="og:description" content="{{ description | escape }}">
-  <meta name="description" content="{{ description | escape }}">
-{% endif %}
+{%- if og_obj.description != blank -%}
+  <meta property="og:description" content="{{ og_obj.description | strip_html | escape_once }}">
+  <meta name="description" content="{{ og_obj.description | strip_html | escape_once }}">
+{%- endif -%}
 
 {% comment %}SEO pagination for blog articles.{% endcomment %}
 {% if article %}
