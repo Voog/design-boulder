@@ -16,6 +16,8 @@
     <div class="container-wrap">
       <div class="container js-container">
         {% include "header" with "content" %}
+        {%- assign content_default_title = "content" | lce -%}
+        {%- assign content_default_title_tooltip = "content_tooltip_specific_page" | lce -%}
 
         <main class="content" role="main">
           {% comment %}Set variables to detect if "feature content areas" have content{% endcomment %}
@@ -26,8 +28,12 @@
 
           <div class="main-feature">
             <div class="wrap">
-              <div class="feature-left inner inner-left content-formatted{% if editmode %} narrow-feature{% else %}{% unless feature_right_size contains '-' %} narrow-feature{% endunless %}{% endif %}">{% content name="feature_left" %}</div>
-              <div class="feature-right inner inner-right content-formatted{% if editmode %} narrow-feature{% else %}{% unless feature_left_size contains '-' %} narrow-feature{% endunless %}{% endif %}">{% content name="feature_right" %}</div>
+              <div class="feature-left inner inner-left content-formatted{% if editmode %} narrow-feature{% else %}{% unless feature_right_size contains '-' %} narrow-feature{% endunless %}{% endif %}">
+                {% content name="feature_left" title=content_default_title title_tooltip=content_default_title_tooltip %}
+              </div>
+              <div class="feature-right inner inner-right content-formatted{% if editmode %} narrow-feature{% else %}{% unless feature_left_size contains '-' %} narrow-feature{% endunless %}{% endif %}">
+                {% content name="feature_right" title=content_default_title title_tooltip=content_default_title_tooltip %}
+              </div>
             </div>
           </div>
 
@@ -54,13 +60,20 @@
               {% endif %}
 
               <section class="quotation inner inner-right">
-                <div class="content-formatted">{% content name="quotation" %}</div>
+                <div class="content-formatted">
+                  {% content name="quotation" title=content_default_title title_tooltip=content_default_title_tooltip %}
+                </div>
               </section>
             </div>
           </div>
 
+          {%- assign additional_content_title = "additional_content" | lce -%}
+          {%- assign additional_content_title_tooltip = "content_tooltip_additional_information" | lce -%}
+
           <div class="contacts">
-            <div class="wrap content-formatted js-custom-content-formatted">{% content name="contacts" %}</div>
+            <div class="wrap content-formatted js-custom-content-formatted">
+              {% content name="contacts" title=additional_content_title title_tooltip=additional_content_title_tooltip %}
+            </div>
           </div>
 
           <div class="map">

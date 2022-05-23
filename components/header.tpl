@@ -70,7 +70,11 @@
 
       <div class="header-bottom-inner">
         <div class="wrap">
-          <div class="header-body content-formatted" {{ edy_intro_edit_text }}>{% content name="header" %}</div>
+          <div class="header-body content-formatted">
+            {%- assign content_header_information = "content" | lce -%}
+            {%- assign content_header_information_tooltip = "content_tooltip_important_information" | lce -%}
+            {% content name="header" title=content_header_information title_tooltip=content_header_information_tooltip %}
+          </div>
         </div>
       </div>
     </div>
