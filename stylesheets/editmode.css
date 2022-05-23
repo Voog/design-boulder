@@ -6,22 +6,6 @@
   margin-top: 0;
 }
 
-.header-body .edy-empty-bordered {
-  padding: 100px 40px;
-}
-
-.main-feature .edy-empty-bordered {
-  padding: 101px 40px;
-}
-
-.quotation .edy-empty-bordered {
-  padding: 92px 40px;
-}
-
-.map .edy-empty-bordered {
-  padding: 125px 40px;
-}
-
 .dark-background .placeholder {
   color: #FFFFFF;
   color: rgba(255, 255, 255, 0.5);
