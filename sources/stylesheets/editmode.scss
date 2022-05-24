@@ -13,25 +13,6 @@
   }
 }
 
-// Draggable placeholder for content area blocks.
-.edy-empty-bordered {
-  .header-body & {
-    padding: 100px 40px;
-  }
-
-  .main-feature & {
-    padding: 101px 40px;
-  }
-
-  .quotation & {
-    padding: 92px 40px;
-  }
-
-  .map & {
-    padding: 125px 40px;
-  }
-}
-
 // Editable content area placeholders.
 .placeholder {
   .dark-background & {
