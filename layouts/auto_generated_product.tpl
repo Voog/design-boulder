@@ -13,6 +13,8 @@
   {% include "edicy-tools-variables" %}
   {% include "html-head" product_page: true %}
   {% include "edicy-tools-styles" %}
+
+  {% sd_product %}
 </head>
 
 <body class="item-page product-page content-page{% if editmode or site.has_many_languages? %} multilingual{% endif %}">
