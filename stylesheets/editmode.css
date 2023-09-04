@@ -1,7 +1,6 @@
 .edy-ca {
   margin-top: 20px;
 }
-
 .edy-ca:first-child {
   margin-top: 0;
 }
@@ -14,45 +13,37 @@
 .content-formatted.header-body .edy-texteditor-view {
   min-height: 51px;
 }
-
 .content-formatted .edy-texteditor-view {
   min-height: 25px;
 }
-
 .map .content-formatted .edy-texteditor-view {
   min-height: 272px;
 }
-
 .dark-background .content-formatted .edy-texteditor-active {
   outline: 1px solid rgba(255, 255, 255, 0.8);
 }
-
 .light-background .content-formatted .edy-texteditor-active {
   outline: 1px solid rgba(0, 0, 0, 0.5);
 }
-
-.dark-background .content-formatted .edy-texteditor-active table td, .dark-background
-.content-formatted .edy-texteditor-active table th {
+.dark-background .content-formatted .edy-texteditor-active table td,
+.dark-background .content-formatted .edy-texteditor-active table th {
   outline: 1px dotted rgba(255, 255, 255, 0.5);
 }
-
-.dark-background .content-formatted .edy-texteditor-active table td.wysiwyg-tmp-selected-cell, .dark-background
-.content-formatted .edy-texteditor-active table th.wysiwyg-tmp-selected-cell {
+.dark-background .content-formatted .edy-texteditor-active table td.wysiwyg-tmp-selected-cell,
+.dark-background .content-formatted .edy-texteditor-active table th.wysiwyg-tmp-selected-cell {
   outline: 1px solid rgba(255, 255, 255, 0.8);
 }
 
 .edy-img-drop-area {
-  font-family: 'Avenir Next', 'AvenirX', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-family: "Avenir Next", "AvenirX", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-weight: 500;
 }
-
 .edy-img-drop-area .edy-img-drop-area-placeholder {
   display: table-cell;
   vertical-align: middle;
   color: #000000;
   color: rgba(0, 0, 0, 0.53);
 }
-
 .editmode .edy-img-drop-area .edy-img-drop-area-placeholder {
   margin: 0;
   padding: 10px;

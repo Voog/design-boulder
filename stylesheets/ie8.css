@@ -3,8 +3,8 @@
   margin-left: -1px;
 }
 
-.no-svg .menu-lang-btn:after, .no-svg
-.menu-lang .menu-item .lang-flag:after {
+.no-svg .menu-lang-btn:after,
+.no-svg .menu-lang .menu-item .lang-flag:after {
   background-image: url("../images/ico-flags.png");
 }
 
@@ -26,7 +26,6 @@
 .search {
   border: 1px solid #e5e5e5;
 }
-
 .search .search-left {
   line-height: 1.5;
 }
@@ -38,7 +37,6 @@
   padding-left: 0;
   top: 2px;
 }
-
 .content-formatted .form_field_checkbox + .form_control_indicator,
 .content-formatted .form_field_radio + .form_control_indicator {
   display: none;
