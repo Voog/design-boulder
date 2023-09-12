@@ -383,7 +383,7 @@
       "--content-link-hover-color"
     ]
   */
-  /*_LIQUID --content-link-color: {% if site.data.primary.color == nil %}#e4ac00{% else %}{{ site.data.primary.color }}{% endif %}; LIQUID_*/
+  --content-link-color: {% if site.data.primary.color == nil %}#e4ac00{% else %}{{ site.data.primary.color }}{% endif %};
   /* VoogStyle
     "pathI18n": ["content", "link", "hover"],
     "titleI18n": "color",
@@ -391,5 +391,5 @@
     "editor": "colorPicker",
     "scope": "global"
   */
-  /*_LIQUID --content-link-hover-color: {% if site.data.primary.color == nil %}#e4ac00{% else %}{{ site.data.primary.color }}{% endif %}; LIQUID_*/
+  --content-link-hover-color: {% if site.data.primary.color == nil %}#e4ac00{% else %}{{ site.data.primary.color }}{% endif %};
 }

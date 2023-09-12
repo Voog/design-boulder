@@ -38,7 +38,7 @@
       "--content-button-background-color"
     ]
   */
-  /*_LIQUID --secondary-color: {% if site.data.primary.color == nil %}#e4ac00{% else %}{{ site.data.primary.color }}{% endif %}; LIQUID_*/
+  --secondary-color: {% if site.data.primary.color == nil %}#e4ac00{% else %}{{ site.data.primary.color }}{% endif %};
   /* VoogStyle
     "pathI18n": ["main_styles", "colors"],
     "titleI18n": "third_color",

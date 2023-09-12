@@ -36,7 +36,7 @@
     "featured": true,
     "scope": "global"
   */
-  /*_LIQUID --content-button-background-color: {% if site.data.primary.color == nil %}#e4ac00{% else %}{{ site.data.primary.color }}{% endif %}; LIQUID_*/
+  --content-button-background-color: {% if site.data.primary.color == nil %}#e4ac00{% else %}{{ site.data.primary.color }}{% endif %};
   /* VoogStyle
     "pathI18n": ["button", "normal"],
     "titleI18n": "font_size",
