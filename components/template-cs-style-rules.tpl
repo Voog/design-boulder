@@ -476,6 +476,8 @@ body {
   font-size: var(--product-price-size);
   font-weight: var(--product-price-font-weight);
   font-style: var(--product-price-font-style);
+}
+.product-page .product-price .product-price-final {
   -webkit-text-decoration: var(--product-price-font-text-decoration);
           text-decoration: var(--product-price-font-text-decoration);
 }
