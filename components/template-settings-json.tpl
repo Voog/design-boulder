@@ -1,3 +1,3 @@
 {
-  "version": "boulder-2.3.5"
+  "version": "boulder-2.4.0"
 }
